@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+        <record id="climaqua_download_page_view" model="ir.ui.view">
+            <field name="name">Climaqua download</field>
+            <field name="type">qweb</field>
+            <field name="key">website.climaqua_download_page</field>
+            <field name="arch" type="xml">
+                <t name="Home" t-name="website.climaqua_download_page">
+                    <t t-name="website.download">
+                        <t t-call="website.layout">
+                            <div id="wrap" class="oe_structure oe_empty media">
+                                <div class="container">
+                                    <div class="row justify-content-center">
+                                        <div class="col-md-11">
+                                            <section class="pt32 pb32">
+                                                <div class="container">
+                                                    <div class="row s_nb_column_fixed">
+                                                        <div class="col-lg-12 s_title pt16 pb16 text-center header2">
+                                                            <h1 class="s_title_default font-weight-normal">MEDIA DOWNLOAD</h1>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </section>
+                                            <section class="s_three_columns pt32 pb32 oe_custom_bg" style="background-position: 0% 0%;">
+                                                <div class="container">
+                                                    <div class="row d-flex align-items-stretch">
+                                                        <div class="col-lg-3 pb16 pt16">
+                                                            <div class="bg-white card">
+                                                                <img class="card-img-top" src="dynco_base/static/src/img/climaqua_img/climaqua_footer_imgs/CLIMAQUA-Fountains-LIV-L-77838-mood_Cinemagraph-72x.webp" alt="Odoo – Beispiel 1 für drei Spalten" data-original-title="" title="" aria-describedby="tooltip630705" />
+                                                                <div class="card-body">
+                                                                    <h3 class="card-title">Fountains </h3>
+                                                                    <p class="card-text">&amp;nbsp;</p>
+                                                                    <div class="pb0 pt16 s_btn text-left" data-name="Button">
+                                                                        <a href="https://srv100.dynco.ch/s/MmH7C883F7LdB8w" class="btn btn-outline-dark btn-sm" data-original-title="" title="" style="font-weight: normal;">DOWNLOAD </a>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                        <div class="pt16 pb16 col-lg-3">
+                                                            <div class="card bg-white">
+                                                                <img class="card-img-top" src="dynco_base/static/src/img/climaqua_img/climaqua_footer_imgs/CLIMAQUA-Planter-Recto-60A-5602-mood%201-72x-srgb.webp" alt="Odoo – Beispiel 2 für drei Spalten" />
+                                                                <div class="card-body">
+                                                                    <h3 class="card-title">Planters</h3>
+                                                                    <p class="card-text">&amp;nbsp;</p>
+                                                                    <div class="s_btn text-left pb0 pt16" data-name="Button">
+                                                                        <a href="https://srv100.dynco.ch/s/S5CNMdeGDLEHXcJ" class="btn btn-outline-dark btn-sm" data-original-title="" title="" style="font-weight: normal;">DOWNLOAD</a>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                        <div class="pt16 pb16 col-lg-3">
+                                                            <div class="card bg-white">
+                                                                <img class="card-img-top" src="dynco_base/static/src/img/climaqua_img/climaqua_footer_imgs/CLIMAQUA-Flambo-Muscat-77520-Jardi-50-5613-mood-1-72x-cinemagraph.gif" alt="Odoo – Beispiel 3 für drei Spalten" data-original-title="" title="" aria-describedby="tooltip229283" />
+                                                                <div class="card-body">
+                                                                    <h3 class="card-title">Flames</h3>
+                                                                    <p class="card-text">
+                                                                        <br />
+                                                                    </p>
+                                                                    <div class="s_btn text-left pb0 pt16" data-name="Button">
+                                                                        <a href="https://srv100.dynco.ch/s/q595eoEFFRXJWgz" class="btn btn-outline-dark btn-sm" data-original-title="" title="">DOWNLOAD</a>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                        <div class="pt16 pb16 col-lg-3">
+                                                            <div class="card bg-white">
+                                                                <img class="card-img-top" src="dynco_base/static/src/img/climaqua_img/climaqua_footer_imgs/Birdhouse_Cinemagraph-2.gif" alt="Odoo – Beispiel 3 für drei Spalten" data-original-title="" title="" aria-describedby="tooltip496075" />
+                                                                <div class="card-body">
+                                                                    <h3 class="card-title">Boutique</h3>
+                                                                    <p class="card-text">
+                                                                        <br />
+                                                                    </p>
+                                                                    <div class="s_btn text-left pb0 pt16" data-name="Button">
+                                                                        <a href="https://srv100.dynco.ch/s/JdoebcSjgiTNbRH" class="btn btn-outline-dark btn-sm" data-original-title="" title="" style="font-weight: normal;">DOWNLOAD</a>
+                                                                        <br />
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </section>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </t>
+                    </t>
+                </t>
+            </field>
+        </record>
+        <record id="climaqua_download_page" model="website.page">
+            <field name="url">/download</field>
+            <field name="website_published">True</field>
+            <field name="view_id" ref="climaqua_download_page_view" />
+        </record>
+    </data>
+</odoo>

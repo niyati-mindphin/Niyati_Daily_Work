@@ -1,0 +1,546 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+        <template id="climaqua_eu_return_policy_view" name="Climaque EU: Return Policy">
+            <t t-call="website.layout">
+                <div id="wrap" class="oe_structure oe_empty oe_website_sale">
+                    <section class="pt32 pb32">
+                        <div class="container">
+                            <div class="row s_nb_column_fixed">
+                                <div class="col-lg-12 s_title pt16 pb16" style="text-align: center;" data-snippet="s_title">
+                                    <h1 class="s_title_default">
+                                        <font style="font-size: 62px;">RETOUREN</font>
+                                    </h1>
+                                </div>
+                            </div>
+                        </div>
+                    </section>
+                    <section class="s_text_block pb32 pt0" data-snippet="s_text_block">
+                        <div class="container">
+                            <div class="row">
+                                <div class="col-lg-10 offset-lg-1 pt48 pb0" style="text-align: center;">
+                                    <h2>
+                                        <img class="img-fluid o_we_custom_image" src="/web/image/43500/csm_shutterstock_684342199_af34d2a5ea.jpg"/>
+                                        <br/>
+                                    </h2>
+                                    <h2>
+                                        <br/>
+                                    </h2>
+                                </div>
+                            </div>
+                        </div>
+                    </section>
+                    <section class="s_text_block pb32 pt0" data-snippet="s_text_block">
+                        <div class="container">
+                            <div class="row">
+                                <div class="col-lg-10 offset-lg-1 pt32 pb8">
+                                    <h1>NICHT HAPPY?
+                                        <br/>
+                                    </h1>
+                                    <font style="font-size: 18px;">
+                                        <br/>
+                                    </font>
+                                    <font style="font-size: 18px;">Wir helfen Dir. Der Umwelt und des Geldes wegen, möchten wir Rücksendungen auf ein absolutes Minimum reduzieren.</font>
+                                    <br/>
+                                    <br/>
+                                    <font style="font-size: 18px;">Bevor Du eine Rücksendung tätigst, lass uns bitte wissen, was das Problem ist. Möglicherweise gibt es eine andere Lösung.&amp;nbsp;</font>
+                                    <br/>
+                                </div>
+                            </div>
+                        </div>
+                    </section>
+                    <section class="s_text_block pt0 pb4" data-snippet="s_text_block">
+                        <div class="container">
+                            <div class="row">
+                                <div class="col-lg-10 offset-lg-1 pb32 pt8">
+                                    <div style="text-align: center;">
+                                        <font style="font-size: 18px;">telefonisch</font>
+                                        <font style="font-size: 18px;">
+                                            <br/>
+                                        </font>
+                                        <b>
+                                            <font style="font-size: 18px;">+41 31 921 88 44</font>
+                                        </b>
+                                        <font style="font-size: 18px;">
+                                            <br/>
+                                        </font>
+                                        <br/>
+                                        <font style="font-size: 18px;">per E-Mail</font>
+                                        <font style="font-size: 18px;">
+                                            <br/>
+                                        </font>
+                                        <font style="font-size: 18px;">
+                                            <b>
+                                                <a href="mailto:rep@climaqua.swiss" data-original-title="" title="" class="flat btn-lg">rep@climaqua.swiss</a>
+                                            </b>
+                                        </font>
+                                        <br/>
+                                        <br/>
+                                        <font style="font-size: 18px;">oder per
+                                            <br/>
+                                        </font>
+                                        <a href="https://climaqua.at/en_US/helpdesk/climaqua-climaqua-support-dynco-ch-2" class="btn btn-outline-primary">KONTAKTFORMULAR </a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </section>
+                    <section class="s_faq_collapse pt48 pb0" data-snippet="s_faq_collapse">
+                        <div class="container">
+                            <div class="row s_col_no_bgcolor">
+                                <div class="col-lg-10 offset-lg-1 pt0 pb0">
+                                    <font style="font-size: 18px;">
+                                        <font style="font-size: 18px;">
+                                            <br/>
+                                        </font>
+                                    </font>
+                                    <font style="font-size: 18px;">
+                                        <font style="font-size: 18px;">Besondere Fälle:
+                                            <br/>
+                                        </font>
+                                    </font>
+                                    <font style="font-size: 18px;">
+                                        <br/>
+                                    </font>
+                                </div>
+                                <div class="pt16 pb16 offset-lg-1 col-lg-10">
+                                    <div id="myCollapse" class="accordion" role="tablist">
+                                        <div class="card bg-white">
+                                            <a href="#" role="tab" data-toggle="collapse" aria-expanded="true" class="card-header" data-parent="#myCollapse" data-target="#myCollapseTab1585083417368" data-original-title="" title="" aria-describedby="tooltip356641">
+                                                <font style="font-size: 18px;">
+                                                    <font style="font-size: 18px;" data-original-title="" title="" aria-describedby="tooltip668985">Transportschaden</font>
+                                                </font>
+                                            </a>
+                                            <div class="collapse show" role="tabpanel" id="myCollapseTab1585083417368" style="">
+                                                <div class="card-body">
+                                                    <p class="card-text">
+                                                        <font style="font-size: 18px;">
+                                                            <font style="font-size: 18px;">Bitte prüfe bei der Annahme des Produktes UNBEDINGT, ob ein Transportschaden vorliegt. Ist die gelieferte Verpackung sichtbar beschädigt? Bitte fotografiere diese. Wird der Artikel beschädigt geliefert, muss uns dies innerhalb von 48h nach Annahme per E-Mail oder Kontaktformular gemeldet werden. Wird ein Produkt ohne Kommentar angenommen, gilt das Produkt als schadenfrei geliefert und kann zu einem späteren Zeitpunkt nicht auf Transportschaden bemängelt werden. </font>
+                                                        </font>
+                                                    </p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="card bg-white">
+                                            <a href="#" role="tab" data-toggle="collapse" aria-expanded="true" class="card-header" data-parent="#myCollapse" data-target="#myCollapseTab1585083417369" data-original-title="" title="" aria-describedby="tooltip956503">
+                                                <font style="font-size: 18px;">
+                                                    <font style="font-size: 18px;" data-original-title="" title="" aria-describedby="tooltip803183">Produktionsfehler</font>
+                                                </font>
+                                            </a>
+                                            <div class="collapse show" role="tabpanel" id="myCollapseTab1585083417369" style="">
+                                                <div class="card-body">
+                                                    <font style="font-size: 18px;">
+                                                        <font style="font-size: 18px;">Liegt ein Produktionsfehler vor, tauschen wir defekte Einzelteile (Pumpe, Led etc.) wenn immer möglich aus. In diesem Fall sind die Ersatzteile kostenlos. </font>
+                                                    </font>
+                                                    <br/>
+                                                    <font style="font-size: 18px;">
+                                                        <font style="font-size: 18px;">
+                                                            <font style="font-size: 18px;">Farbe, Maserung und Muster sind von Mutter Natur gegeben und sind keine Produktionsfehler. Bitte akzeptiere und respektiere die Launen der Natur und betrachte Dein Objekt als ganz persönliches Unikat. </font>
+                                                        </font>
+                                                    </font>
+                                                    <font style="font-size: 18px;">
+                                                        <font style="font-size: 18px;">
+                                                            <br/>
+                                                        </font>
+                                                    </font>
+                                                    <font style="font-size: 18px;">
+                                                        <font style="font-size: 18px;">
+                                                            <br/>
+                                                        </font>
+                                                    </font>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </section>
+                    <section class="s_text_block pt0 pb0" data-snippet="s_text_block">
+                        <div class="container">
+                            <div class="row">
+                                <div class="col-lg-10 offset-lg-1 pt32 pb16">
+                                    <font style="font-size: 18px;">
+                                        <font style="font-size: 18px;">Falls es in Rücksprache mit uns dennoch zu einer Rücksendung kommt, gelten folgende Richtlinien: 
+                                            <br/>
+                                        </font>
+                                    </font>
+                                </div>
+                            </div>
+                        </div>
+                    </section>
+                    <section class="s_text_block pb32 pt0" data-snippet="s_text_block">
+                        <div class="container">
+                            <div class="row"/></div>
+                    </section>
+                    <section class="s_text_block pb32 pt0" data-snippet="s_text_block">
+                        <div class="container">
+                            <div class="row">
+                                <div class="col-lg-10 offset-lg-1 pt32 pb32">
+                                    <h1 class="s_title_default" style="text-align: left;">RÜCKSENDE RICHTLINIEN EU</h1>
+                                    <br/>
+                                    <br/>
+                                    <font style="font-size: 18px;">Bitte hilf uns, unnötige Schäden zu vermeiden und das Produkt durch die Rücksendung nicht zu beschädigen.
+                                        <br/>
+                                        <br/>1 -&amp;nbsp; Notiere den Rücksendegrund auf einen Handzettel und lege diesen bitte bei. 
+                                        <br/>
+                                        <br/>2 - Prüfe sorgfältig, ob der gesamte Lieferumfang (vgl. technische Zeichnung in der Bedienungsanleitung) eingepackt ist.
+                                        <br/>
+                                        <br/>3-&amp;nbsp; Die Produktverpackung muss in einen grossen Umkarton gelegt werden und von allen Seiten mit viel Stopfmaterial geschützt sein. Verwende für die Rücksendung die original Verpackung, inkl. CLIMAQUA Umkarton und das originale Stopfmaterial. 
+                                        <br/>Wichtig: KEINE Produktverpackungen ohne Umkarton auf die Post geben! Das Produkt ginge so garantiert kaputt.
+                                        <br/>
+                                        <br/>4 -&amp;nbsp; Mache den SCHÜTTELTEST mit dem fertigen Paket: Wenn sich der Inhalt beim Schütteln des Pakets nicht bewegt, dann hast Du die Ware gut verpackt. Ansonsten bitte das Paket nochmal öffnen und mehr Stopfmaterial verwenden (Zeitungen, Altpapier, etc..). Beschädigte Ware aufgrund mangelhafter Verpackung wird weder angenommen noch erstattet.
+                                        <br/>
+                                        <br/>5 -&amp;nbsp; Die Kosten der Rücksendung gehen gemäss AGB's zu deinen Lasten.
+                                        <br/>
+                                        <br/>6 - Retouren an folgende Adresse:
+                                        <br/>
+                                        <b>
+                                            <br/>
+                                        </b>
+                                    </font>
+                                    <font style="font-size: 18px;">
+                                        <b>Hendrix Dekorationen &amp;amp; Events
+                                            <br/>Retoure CLIMAQUA
+                                            <br/>Halskestrasse 9a
+                                            <br/>DE-47877 Willich
+                                        </b>
+                                        <br/>
+                                        <br/>
+                                    </font>
+                                    <font style="font-size: 18px;">
+                                        <br/>
+                                    </font>
+                                    <font style="font-size: 18px;">7 - Bitte keine Retouren an unsere Büroadresse DYNCO AG schicken. Pakete werden dort nicht angenommen und zu den Lasten des Absenders an ihn zurückgeschickt. 
+                                        <br/>
+                                        <br/>8 - Geld zurück? Ohne besondere Absprache, erhältst Du eine entsprechende Gutschrift auf Dein CLIMAQUA Kundenkonto.
+                                    </font>
+                                </div>
+                            </div>
+                        </div>
+                    </section>
+                    <section class="s_text_block pb32 pt0" data-snippet="s_text_block">
+                        <div class="container">
+                            <div class="row">
+                                <div class="col-lg-10 offset-lg-1 pt0 pb0">
+                                    <font style="font-size: 18px;">Wir prüfen alle Retouren genau. Wenn wir einen Schaden wegen nicht Einhaltung der oben genannten Anweisungen feststellen, behalten wir uns gemäss AGB's vor, € 30.- Bearbeitungsgebühren + 20%&amp;nbsp; des Warenwertes zu belasten. Hier gehts zu den</font>
+                                    <font style="font-size: 18px;">
+                                        <br/>
+                                    </font>
+                                    <font style="font-size: 18px;">
+                                        <br/>
+                                    </font>
+                                    <div style="text-align: center;">
+                                        <font style="font-size: 18px;">
+                                            <a href="/agb" class="btn btn-outline-primary btn-lg" data-original-title="" title="" aria-describedby="tooltip286384">AGB's</a>
+                                        </font>
+                                        <br/>
+                                    </div>
+                                    <br/>
+                                    <font style="font-size: 18px;">
+                                        <br/>
+                                    </font>
+                                </div>
+                            </div>
+                        </div>
+                    </section>
+                    <section class="s_text_block pb32 pt0" data-snippet="s_text_block">
+                        <div class="container">
+                            <div class="row">
+                                <div class="col-lg-10 offset-lg-1 pb32 pt32" style="text-align: center;">
+                                    <h6>
+                                        <span class="fa fa-heart fa-2x" style="" data-original-title="" title="" aria-describedby="tooltip831976">
+                                            <br/>
+                                        </span>
+                                    </h6>
+                                    <h6>
+                                        <font style="font-size: 36px;">
+                                            <br/>&amp;nbsp;HERZLICHEN DANK FÜR DEINE KOOPERATION 
+                                        </font>
+                                        <font style="font-size: 36px;">
+                                            <br/>
+                                        </font>
+                                    </h6>
+                                    <h6>
+                                        <br/>
+                                    </h6>
+                                </div>
+                            </div>
+                        </div>
+                    </section>
+                </div>
+            </t>
+        </template>
+        <template id="climaqua_swiss_return_policy_view" name="Climaque Swiss: Return Policy">
+            <t t-call="website.layout">
+                <div id="wrap" class="oe_structure oe_empty oe_website_sale">
+                    <section class="pt32 pb32">
+                        <div class="container">
+                            <div class="row s_nb_column_fixed">
+                                <div class="col-lg-12 s_title pt16 pb16" style="text-align: center;" data-snippet="s_title">
+                                    <h1 class="s_title_default">
+                                        <font style="font-size: 62px;">RETOUREN</font>
+                                    </h1>
+                                </div>
+                            </div>
+                        </div>
+                    </section>
+                    <section class="s_text_block pb32 pt0" data-snippet="s_text_block">
+                        <div class="container">
+                            <div class="row">
+                                <div class="col-lg-10 offset-lg-1 pt48 pb0" style="text-align: center;">
+                                    <h2>
+                                        <img class="img-fluid o_we_custom_image" src="/web/image/43500/csm_shutterstock_684342199_af34d2a5ea.jpg"/>
+                                        <br/>
+                                    </h2>
+                                    <h2>
+                                        <br/>
+                                    </h2>
+                                </div>
+                            </div>
+                        </div>
+                    </section>
+                    <section class="s_text_block pb32 pt0" data-snippet="s_text_block">
+                        <div class="container">
+                            <div class="row">
+                                <div class="col-lg-10 offset-lg-1 pt32 pb8">
+                                    <h1>NICHT HAPPY?
+                                        <br/>
+                                    </h1>
+                                    <font style="font-size: 18px;">
+                                        <br/>
+                                    </font>
+                                    <font style="font-size: 18px;">Wir helfen Dir. Der Umwelt und des Geldes wegen, möchten wir Rücksendungen auf ein absolutes Minimum reduzieren.</font>
+                                    <br/>
+                                    <br/>
+                                    <font style="font-size: 18px;">Bevor Du eine Rücksendung tätigst, lass uns bitte wissen, was das Problem ist. Möglicherweise gibt es eine andere Lösung.&amp;nbsp;</font>
+                                    <br/>
+                                </div>
+                            </div>
+                        </div>
+                    </section>
+                    <section class="s_text_block pt0 pb4" data-snippet="s_text_block">
+                        <div class="container">
+                            <div class="row">
+                                <div class="col-lg-10 offset-lg-1 pb32 pt8">
+                                    <div style="text-align: center;">
+                                        <font style="font-size: 18px;">telefonisch</font>
+                                        <font style="font-size: 18px;">
+                                            <br/>
+                                        </font>
+                                        <b>
+                                            <font style="font-size: 18px;">+41 31 555 79 77</font>
+                                        </b>
+                                        <font style="font-size: 18px;">
+                                            <br/>
+                                        </font>
+                                        <br/>
+                                        <font style="font-size: 18px;">per E-Mail</font>
+                                        <font style="font-size: 18px;">
+                                            <br/>
+                                        </font>
+                                        <font style="font-size: 18px;">
+                                            <b>
+                                                <a href="mailto:rep@climaqua.swiss" data-original-title="" title="" class="flat btn-lg">climaqua_support@dynco.ch</a>
+                                            </b>
+                                        </font>
+                                        <br/>
+                                        <br/>
+                                        <font style="font-size: 18px;">oder per
+                                            <br/>
+                                        </font>
+                                        <a href="https://climaqua.swiss/helpdesk/climaqua-climaqua-support-dynco-ch-2#scrollTop=0" class="btn btn-outline-primary">KONTAKTFORMULAR </a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </section>
+                    <section class="s_faq_collapse pt48 pb0" data-snippet="s_faq_collapse">
+                        <div class="container">
+                            <div class="row s_col_no_bgcolor">
+                                <div class="col-lg-10 offset-lg-1 pt0 pb0">
+                                    <font style="font-size: 18px;">
+                                        <font style="font-size: 18px;">
+                                            <br/>
+                                        </font>
+                                    </font>
+                                    <font style="font-size: 18px;">
+                                        <font style="font-size: 18px;">Besondere Fälle:
+                                            <br/>
+                                        </font>
+                                    </font>
+                                    <font style="font-size: 18px;">
+                                        <br/>
+                                    </font>
+                                </div>
+                                <div class="pt16 pb16 offset-lg-1 col-lg-10">
+                                    <div id="myCollapse" class="accordion" role="tablist">
+                                        <div class="card bg-white">
+                                            <a href="#" role="tab" data-toggle="collapse" aria-expanded="true" class="card-header" data-parent="#myCollapse" data-target="#myCollapseTab1585083417368" data-original-title="" title="" aria-describedby="tooltip356641">
+                                                <font style="font-size: 18px;">
+                                                    <font style="font-size: 18px;" data-original-title="" title="" aria-describedby="tooltip668985">Transportschaden</font>
+                                                </font>
+                                            </a>
+                                            <div class="collapse show" role="tabpanel" id="myCollapseTab1585083417368" style="">
+                                                <div class="card-body">
+                                                    <p class="card-text">
+                                                        <font style="font-size: 18px;">
+                                                            <font style="font-size: 18px;">Bitte prüfe bei der Annahme des Produktes UNBEDINGT, ob ein Transportschaden vorliegt. Ist die gelieferte Verpackung sichtbar beschädigt? Bitte fotografiere diese. Wird der Artikel beschädigt geliefert, muss uns dies innerhalb von 48h nach Annahme per E-Mail oder Kontaktformular gemeldet werden. Wird ein Produkt ohne Kommentar angenommen, gilt das Produkt als schadenfrei geliefert und kann zu einem späteren Zeitpunkt nicht auf Transportschaden bemängelt werden. </font>
+                                                        </font>
+                                                    </p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="card bg-white">
+                                            <a href="#" role="tab" data-toggle="collapse" aria-expanded="true" class="card-header" data-parent="#myCollapse" data-target="#myCollapseTab1585083417369" data-original-title="" title="" aria-describedby="tooltip956503">
+                                                <font style="font-size: 18px;">
+                                                    <font style="font-size: 18px;" data-original-title="" title="" aria-describedby="tooltip803183">Produktionsfehler</font>
+                                                </font>
+                                            </a>
+                                            <div class="collapse show" role="tabpanel" id="myCollapseTab1585083417369" style="">
+                                                <div class="card-body">
+                                                    <font style="font-size: 18px;">
+                                                        <font style="font-size: 18px;">Liegt ein Produktionsfehler vor, tauschen wir defekte Einzelteile (Pumpe, Led etc.) wenn immer möglich aus. In diesem Fall sind die Ersatzteile kostenlos. </font>
+                                                    </font>
+                                                    <br/>
+                                                    <font style="font-size: 18px;">
+                                                        <font style="font-size: 18px;">
+                                                            <font style="font-size: 18px;">Farbe, Maserung und Muster sind von Mutter Natur gegeben und sind keine Produktionsfehler. Bitte akzeptiere und respektiere die Launen der Natur und betrachte Dein Objekt als ganz persönliches Unikat. </font>
+                                                        </font>
+                                                    </font>
+                                                    <font style="font-size: 18px;">
+                                                        <font style="font-size: 18px;">
+                                                            <br/>
+                                                        </font>
+                                                    </font>
+                                                    <font style="font-size: 18px;">
+                                                        <font style="font-size: 18px;">
+                                                            <br/>
+                                                        </font>
+                                                    </font>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </section>
+                    <section class="s_text_block pt0 pb0" data-snippet="s_text_block">
+                        <div class="container">
+                            <div class="row">
+                                <div class="col-lg-10 offset-lg-1 pt32 pb16">
+                                    <font style="font-size: 18px;">
+                                        <font style="font-size: 18px;">Falls es in Rücksprache mit uns dennoch zu einer Rücksendung kommt, gelten folgende Richtlinien: 
+                                            <br/>
+                                        </font>
+                                    </font>
+                                </div>
+                            </div>
+                        </div>
+                    </section>
+                    <section class="s_text_block pb32 pt0" data-snippet="s_text_block">
+                        <div class="container">
+                            <div class="row"/></div>
+                    </section>
+                    <section class="s_text_block pb32 pt0" data-snippet="s_text_block">
+                        <div class="container">
+                            <div class="row">
+                                <div class="col-lg-10 offset-lg-1 pb32 pt32">
+                                    <h1 class="s_title_default" style="text-align: left;">RÜCKSENDE RICHTLINIEN</h1>
+                                    <br/>
+                                    <br/>
+                                    <font style="font-size: 18px;">Bitte hilf uns, unnötige Schäden zu vermeiden und das Produkt durch die Rücksendung nicht zu beschädigen.
+                                        <br/>
+                                        <br/>1 -&amp;nbsp; Notiere den Rücksendegrund auf einen Handzettel und lege diesen bitte bei. 
+                                        <br/>
+                                        <br/>2 - Prüfe sorgfältig, ob der gesamte Lieferumfang (vgl. technische Zeichnung in der Bedienungsanleitung) eingepackt ist.
+                                        <br/>
+                                        <br/>3-&amp;nbsp; Die Produktverpackung muss in einen grossen Umkarton gelegt werden und von allen Seiten mit viel Stopfmaterial geschützt sein. Verwende für die Rücksendung die original Verpackung, inkl. CLIMAQUA Umkarton und das originale Stopfmaterial. 
+                                        <br/>Wichtig: KEINE Produktverpackungen ohne Umkarton auf die Post geben! Das Produkt ginge so garantiert kaputt.
+                                        <br/>
+                                        <br/>4 -&amp;nbsp; Mache den SCHÜTTELTEST mit dem fertigen Paket: Wenn sich der Inhalt beim Schütteln des Pakets nicht bewegt, dann hast Du die Ware gut verpackt. Ansonsten bitte das Paket nochmal öffnen und mehr Stopfmaterial verwenden (Zeitungen, Altpapier, etc..). Beschädigte Ware aufgrund mangelhafter Verpackung wird weder angenommen noch erstattet.
+                                        <br/>
+                                        <br/>5 -&amp;nbsp; Die Kosten der Rücksendung gehen gemäss AGB's zu deinen Lasten.
+                                        <br/>
+                                        <br/>6 - Retouren bitte an folgende Adresse:
+                                        <br/>
+                                        <b>
+                                            <br/>
+                                        </b>
+                                    </font>
+                                    <font style="font-size: 18px;">
+                                        <b>Streck Transport AG
+                                            <br/>Halle H4 / DYNCO 
+                                            <br/>CLIMAQUA RETOURE
+                                            <br/>Industriestrasse 17
+                                            <br/>4313 Möhlin
+                                            <br/>
+                                        </b>
+                                        <br/>
+                                    </font>
+                                    <font style="font-size: 18px;">
+                                        <br/>
+                                    </font>
+                                    <font style="font-size: 18px;"> 7 - Bitte keine Retouren an unsere Büroadresse DYNCO AG schicken. Pakete werden dort nicht angenommen und zu den Lasten des Absenders an ihn zurückgeschickt. 
+                                        <br/>
+                                        <br/>8 - Geld zurück? Ohne besondere Absprache, erhältst Du eine entsprechende Gutschrift auf Dein CLIMAQUA Kundenkonto.
+                                    </font>
+                                </div>
+                            </div>
+                        </div>
+                    </section>
+                    <section class="s_text_block pb32 pt0" data-snippet="s_text_block">
+                        <div class="container">
+                            <div class="row">
+                                <div class="col-lg-10 offset-lg-1 pt0 pb0">
+                                    <font style="font-size: 18px;">Wir prüfen alle Retouren genau. Wenn wir einen Schaden wegen nicht Einhaltung der oben genannten Anweisungen feststellen, behalten wir uns gemäss AGB's vor, CHF/ € 30.- Bearbeitungsgebühren + 20%&amp;nbsp; des Warenwertes zu belasten. Hier gehts zu den</font>
+                                    <font style="font-size: 18px;">
+                                        <br/>
+                                    </font>
+                                    <font style="font-size: 18px;">
+                                        <br/>
+                                    </font>
+                                    <div style="text-align: center;">
+                                        <font style="font-size: 18px;">
+                                            <a href="/agb" class="btn btn-outline-primary btn-lg" data-original-title="" title="" aria-describedby="tooltip286384">AGB's</a>
+                                        </font>
+                                        <br/>
+                                    </div>
+                                    <br/>
+                                    <font style="font-size: 18px;">
+                                        <br/>
+                                    </font>
+                                </div>
+                            </div>
+                        </div>
+                    </section>
+                    <section class="s_text_block pb32 pt0" data-snippet="s_text_block">
+                        <div class="container">
+                            <div class="row">
+                                <div class="col-lg-10 offset-lg-1 pb32 pt32" style="text-align: center;">
+                                    <h6>
+                                        <span class="fa fa-heart fa-2x" style="" data-original-title="" title="" aria-describedby="tooltip831976">
+                                            <br/>
+                                        </span>
+                                    </h6>
+                                    <h6>
+                                        <font style="font-size: 36px;">
+                                            <br/>&amp;nbsp;HERZLICHEN DANK FÜR DEINE KOOPERATION 
+                                        </font>
+                                        <font style="font-size: 36px;">
+                                            <br/>
+                                        </font>
+                                    </h6>
+                                    <h6>
+                                        <br/>
+                                    </h6>
+                                </div>
+                            </div>
+                        </div>
+                    </section>
+                </div>
+            </t>
+        </template>
+    </data>
+</odoo>

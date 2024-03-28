@@ -1,0 +1,486 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+        <record id="climaqua_faq_page_view" model="ir.ui.view">
+            <field name="name">Climaqua faqs</field>
+            <field name="type">qweb</field>
+            <field name="key">website.climaqua_faqs_page</field>
+            <field name="arch" type="xml">
+                <t name="Home" t-name="website.climaqua_faqs_page">
+                    <t t-name="website.faq-s">
+                        <t t-call="website.layout">
+                            <div id="wrap" class="oe_structure oe_empty oe_website_sale faq">
+                                <div class="container">
+                                    <div class="row justify-content-center">
+                                        <div class="col-md-10">
+                                            <section class="s_text_block pt32 pb32">
+                                                <div class="container">
+                                                    <div class="row justify-content-center">
+                                                        <div class="col-md-12 pt32 pb32 heading header2">
+                                                            <h1 class="lead text-center">
+                                                                <font class="font-weight-normal" style="font-size: 36px;">HÄUFIG GESTELLTE FRAGEN</font>
+                                                                <br />
+                                                            </h1>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </section>
+                                            <section class="s_text_block pt32 pb0">
+                                                <div class="container">
+                                                    <div class="col-md-12 pb0 pt32">
+                                                        <p class="lead">Hier beantworten wir die Fragen, die uns am häufigsten gestellt werden. Auch wenn Du keine konkrete Frage hast, lohnt es sich die Infos durchzulesen, um besser über CLIMAQUA® informiert zu sein. <br />
+                                                        </p>
+                                                        <div class="header2 allgemein">
+                                                            <h1 class="font-weight-normal">ALLGEMEIN</h1>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </section>
+                                            <section class="s_faq_collapse pb32 pt0">
+                                                <div class="container">
+                                                    <div class="col-md-12 pb-2">
+                                                        <div class="panel">
+                                                            <div class="panel-group" id="accordion">
+                                                                <div class="panel panel-default">
+                                                                    <div class="panel-heading">
+                                                                        <h4 class="panel-title">
+                                                                            <a href="#collapse1" data-toggle="collapse" class="accordion-toggle collapsed" data-parent="#accordion" >Wie lange gewährt CLIMAQUA® Garantie?</a>
+                                                                        </h4>
+                                                                    </div>
+                                                                    <div id="collapse1" class="panel-collapse collapse in">
+                                                                        <div class="panel-body">
+                                                                            <div>
+                                                                                <font>Gemäss Schweizer Gesetz ( OR 2010, 1): 2 Jahre.</font>
+                                                                            </div><br />
+                                                                            <div>
+                                                                                <font>Aus Kulanz: Melde einfach Deinen Fall und wir offerieren Dir eine grosszügige Lösung, selbst wenn die Garantie abgelaufen ist, also egal wie alt das Produkt ist.</font>
+                                                                            </div>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                        <div class="panel">
+                                                            <div class="panel-group" id="accordion">
+                                                                <div class="panel panel-default">
+                                                                    <div class="panel-heading">
+                                                                        <h4 class="panel-title mt-3">
+                                                                            <a href="#collapse2" data-toggle="collapse" class="accordion-toggle collapsed" data-parent="#accordion" >Wird fair und verantwortungsvoll produziert?</a>
+                                                                        </h4>
+                                                                    </div>
+                                                                    <div id="collapse2" class="panel-collapse collapse">
+                                                                        <div class="panel-body">
+                                                                            <p class="panel-text">
+                                                                                <font>Wir nehmen als Hersteller von Konsumgüter unsere Verantwortung sehr ernst und hinterfragen soziale Fairness und Gerechtigkeit, produzieren umweltverträglich und engagieren uns an internationalen Programmen wie BSCI (business social compliance initiative,&amp;nbsp;</font>
+                                                                                <a href="https://www.amfori.org" data-original-title="" title="" aria-describedby="tooltip386770">
+                                                                                    <font>https://www.amfori.org</font>
+                                                                                </a>
+                                                                                <font>) oder der Renaturierung durch den grossflächigen Anbau von Bäumen.</font>
+                                                                            </p>
+                                                                            <p class="panel-text">
+                                                                                <font>CLIMAQUA® Produkte werden in China, in der Nähe von Xiamen hergestellt. Die Fabrik ist lokal verankert, alle Mitarbeitenden wohnen in der näheren Umgebung und arbeiten Teil- oder Vollzeit. </font>
+                                                                            </p>
+                                                                            <p class="panel-text">
+                                                                                <font>In dieser Kleinstadt gilt unsere Fabrik aufgrund der gesunden Entwicklung und modernen Arbeitsweise als Vorzeigeunternehmen und als beliebter Arbeitgeber. So können wir die talentiertesten Arbeitskräfte rekrutieren und kontinuierlich motivieren. Der weite Weg in die Grossstadt, wo riesige Fabrikhallen warten, bleibt dadurch erspart. Das lokale Gewerbe wird unterstützt.</font>
+                                                                            </p>
+                                                                            <p class="panel-text">
+                                                                                <font>Wir achten speziell auf hohe Sicherheits- und Qualitätsanforderungen bei der Arbeit.</font>
+                                                                                <br />
+                                                                            </p>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                        <div class="panel">
+                                                            <div class="panel-group" id="accordion">
+                                                                <div class="panel panel-default">
+                                                                    <div class="panel-heading">
+                                                                        <h4 class="panel-title mt-3">
+                                                                            <a href="#collapse3" data-toggle="collapse" class="accordion-toggle collapsed" data-parent="#accordion" >Wie werden CLIMAQUA® Produkte produziert?</a>
+                                                                        </h4>
+                                                                    </div>
+                                                                    <div id="collapse3" class="panel-collapse collapse">
+                                                                        <div class="panel-body">
+                                                                            <p class="panel-text">
+                                                                                <font>Die meisten Produkte von CLIMAQUA® sind natürliche Unikate. Jedes Stück unterscheidet sich vom anderen. Jedes Objekt hat schöne und unschöne Seiten, so ist die Natur. CLIMAQUA® setzt diese Imperfektion bewusst ein. Natürliche Flecken im Stein, ungewohnte Farbgebung oder brüchige Stellen sind, solange sie die Funktion des Produktes nicht beeinträchtigen, keine Fabrikationsfehler und fallen nicht unter Garantie. CLIMAQUA® Produkte werden von Hand gefertigt und nicht in maschineller Serienproduktion – eine weitere Komponente die dem Objekt seinen ganz eigenen Charakter verleiht. Wer bei</font>
+                                                                                <font>CLIMAQUA® Produkten Unregelmässigkeiten sucht, findet sie.</font>
+                                                                            </p>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </section>
+                                            <section class="s_text_block pt32 pb0">
+                                                <div class="container">
+                                                    <div class="col-md-12 pb0 pt32 header2">
+                                                        <h1 class="font-weight-normal">FOUNTAINS</h1>
+                                                    </div>
+                                                </div>
+                                            </section>
+                                            <section class="s_faq_collapse pb32 pt0">
+                                                <div class="container">
+                                                    <div class="col-md-12 pb-2">
+                                                        <div class="panel">
+                                                            <div class="panel-group" id="accordion">
+                                                                <div class="panel panel-default">
+                                                                    <div class="panel-heading">
+                                                                        <h4 class="panel-title">
+                                                                            <a href="#collapse4" data-toggle="collapse" class="accordion-toggle collapsed" data-parent="#accordion" >Hat der Brunnen wirklich eine positive Auswirkung auf das geistige Wohlbefinden?</a>
+                                                                        </h4>
+                                                                    </div>
+                                                                    <div id="collapse4" class="panel-collapse collapse in">
+                                                                        <div class="panel-body">
+                                                                            <p class="panel-text">
+                                                                                <font>Ja! Dass Wasser im Raum auf Geist und Körper beruhigend wirkt, wird nicht nur in unserer westlichen Wissenschaft diskutiert und bestätigt, sondern auch in Feng Shui (die Lehre beschäftigt sich mit Fluss der Lebensenergie - das Chì.) und u.a. auch in der Chinesischen Medizin. Man ist sich einig, dass die Natur, insbesondere Wasser (Seen, Flüsse, Bäche) dem Menschen bevorzugte Bedingungen schafft, die Gedanken zu sammeln und zu ordnen. Ein Indoor Brunnen regt die Sinne ebenso an, weil er dem Gehirn visuell und akustische Signale sendet, von Natur umgeben zu sein.&amp;nbsp;</font>
+                                                                                <br />
+                                                                            </p>
+                                                                            <p class="panel-text">
+                                                                                <font>In der Natur fühlen wir uns geborgen. Es ist kein Zufall, dass in vielen Räumen, in denen wir uns auf den Geist konzentrieren (wie beispielsweise Yoga-, Meditiations- oder Massagestudios) Wasserspiele in der Raumgestaltung eine zentrale Rolle einnehmen.</font>
+                                                                                <br />
+                                                                            </p>
+                                                                            <p class="panel-text">
+                                                                                <font>Plätscherndes Wasser (nicht alle Brunnen plätschern laut) kann zudem unangenehme Geräusche wie Lüftungsanlagen, Ventilatoren (z.B. laute Computer / Server), Strassenlärm oder tickende Uhren, sowie aber auch einen Tinitus wohltuend übertönen.</font>
+                                                                                <br />
+                                                                            </p>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                        <div class="panel">
+                                                            <div class="panel-group" id="accordion">
+                                                                <div class="panel panel-default">
+                                                                    <div class="panel-heading">
+                                                                        <h4 class="panel-title mt-3">
+                                                                            <a href="#collapse5" data-toggle="collapse" class="accordion-toggle collapsed" data-parent="#accordion" >Dient ein Zimmerbrunnen wirklich als Luftbefeuchter?</a>
+                                                                        </h4>
+                                                                    </div>
+                                                                    <div id="collapse5" class="panel-collapse collapse">
+                                                                        <div class="panel-body">
+                                                                            <p class="panel-text">
+                                                                                <font>Ja. Speziell in geheizten Räumen verdampft Wasser schnell und befeuchtet so spürbar die Luft. Je nach Modell ist dieser Effekt unterschiedlich gross. Je grösser die wasserbedeckte Fläche, umso stärker tritt der Effekt ein. Sehr effektive Luftbefeuchter sind&amp;nbsp;</font>
+                                                                                <a href="/shop/category/water-wall-29" data-original-title="" title="" class="btn btn-outline-primary btn-sm">
+                                                                                    <font>CLIMAQUA® WATER WALLS</font>
+                                                                                </a>
+                                                                                <font>&amp;nbsp;.</font>
+                                                                            </p>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                        <div class="panel">
+                                                            <div class="panel-group" id="accordion">
+                                                                <div class="panel panel-default">
+                                                                    <div class="panel-heading">
+                                                                        <h4 class="panel-title mt-3">
+                                                                            <a href="#collapse6" data-toggle="collapse" class="accordion-toggle collapsed" data-parent="#accordion" >Dient ein Zimmerbrunnen als Luftreiniger</a>
+                                                                        </h4>
+                                                                    </div>
+                                                                    <div id="collapse6" class="panel-collapse collapse">
+                                                                        <div class="panel-body">
+                                                                            <p class="panel-text">
+                                                                                <font>Ja. Das fliessende Wasser zieht Schmutz- und Staubteilchen aus seinem Umfeld magnetisch an und reinigt so die Luft. Der Schmutz gerät in den Wasserfluss und landet schlussendlich im Tank. Dieser sollte deshalb regelmässig gereinigt werden. Ein verbessertes Raumklima wirkt sich positiv auf die Gesundheit aus. Je grösser der Brunnen, umso stärker der Effekt. Es gibt kaum bessere natürliche Luftreiniger, als die&amp;nbsp;&amp;nbsp;</font>
+                                                                                <a href="/shop/category/water-wall-29" data-original-title="" title="" class="btn btn-outline-primary btn-sm">
+                                                                                    <font>CLIMAQUA® WATER WALLS</font>
+                                                                                </a>
+                                                                                <font>&amp;nbsp;.</font>
+                                                                            </p>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                        <div class="panel">
+                                                            <div class="panel-group" id="accordion">
+                                                                <div class="panel panel-default">
+                                                                    <div class="panel-heading">
+                                                                        <h4 class="panel-title mt-3">
+                                                                            <a href="#collapse7" data-toggle="collapse" class="accordion-toggle collapsed" data-parent="#accordion" >Wie gehe ich am besten gegen Kalkspuren vor?</a>
+                                                                        </h4>
+                                                                    </div>
+                                                                    <div id="collapse7" class="panel-collapse collapse">
+                                                                        <div class="panel-body">
+                                                                            <font>Besonders in städtischen Gegenden kämpfen wir im Leitungswasser mit dem Problem Kalk. Es gibt jedoch viele Möglichkeiten, den Brunnen perfekt vor Verkalkung zu schützen.</font>
+                                                                            <br />
+                                                                            <br />
+                                                                            <font>1. Lass den Brunnen wenn möglich permanent mit Wasser laufen. So zirkuliert das Wasser stetig, Kalk und Schmutz können nicht im Stein eintrocknen.</font>
+                                                                            <br />
+                                                                            <br />
+                                                                            <font>2. Reinige den Brunnen mindestens alle 3 Monate &amp;nbsp;und tausche das Wasser aus. Wichtig: Keine Seife verwenden, kann Schaum auslösen.</font>
+                                                                            <br />
+                                                                            <br />
+                                                                            <font>2.&amp;nbsp;</font>
+                                                                            <a href="/shop/product/climaqua-aqua-soft-against-lime-500ml-10419" class="btn btn-outline-primary btn-sm">
+                                                                                <font>CLIMAQUA® AQUA SOFT</font>
+                                                                            </a>
+                                                                            <font>&amp;nbsp;ist unser Mittel gegen Kalk: 2 Verschlusskappen auf 1 L Wasser AQUA SOFT, wechsle das Wasser</font>
+                                                                            <font>und wasche den Wassertank 4x Mal jährlich - bei sehr hartem Wasser einmal alle 2 Monate.</font>
+                                                                            <br />
+                                                                            <br />
+                                                                            <font>3. Lebst Du auf dem Land hast Du weniger sorgen: dort hat das Leitungswasser meist eine geringe Wasserhärte und kann direkt aus der Leitung in den Tank abgefüllt werden.</font>
+                                                                            <br />
+                                                                            <br />
+                                                                            <font>4. Verwende Regenwasser, das enthält keinen Kalk.</font>
+                                                                            <br />
+                                                                            <br />
+                                                                            <font>5. Verwende destilliertes oder destillatgleiches Wasser (im Baumarkt oder der Tankstelle erhältlich).</font>
+                                                                            <br />
+                                                                            <br />
+                                                                            <font>6. Verwende einen Wasserfilter wie beispielsweise Osmosefilter oder BRITA.</font>
+                                                                            <br />
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                        <div class="panel">
+                                                            <div class="panel-group" id="accordion">
+                                                                <div class="panel panel-default">
+                                                                    <div class="panel-heading">
+                                                                        <h4 class="panel-title mt-3">
+                                                                            <a href="#collapse8" data-toggle="collapse" class="accordion-toggle collapsed" data-parent="#accordion" >Wie gehe ich am besten gegen Algen vor?</a>
+                                                                        </h4>
+                                                                    </div>
+                                                                    <div id="collapse8" class="panel-collapse collapse">
+                                                                        <div class="panel-body">
+                                                                            <p class="panel-text">
+                                                                                <font>Wo bei manchen das Grün als Stilmittel gefördert und gelebt wird, möchten es andere möglichst steril. Auch hierfür bieten wir Dir Lösungen:</font>
+                                                                            </p>
+                                                                            <p class="panel-text">
+                                                                                <font>1.&amp;nbsp;</font>
+                                                                                <a href="/shop/product/climaqua-algicid-against-algae-500ml-10418" class="btn btn-outline-primary btn-sm">
+                                                                                    <font>CLIMAQUA® ALGICID</font>
+                                                                                </a>
+                                                                                <font>&amp;nbsp;ist ein Antialgenmittel und hilft zur Reinhaltung deines Brunnens. Anwendung: wöchentlich 2 Verschlusskappen (3cl) pro 1 Liter Wasser bei.</font>
+                                                                            </p>
+                                                                            <p class="panel-text">
+                                                                                <font>2. Reinige den Brunnen mindestens alle 3 Monate und tausche das
+                                                                                    Wasser aus. Wichtig: Keine Seife verwenden, kann Schaum auslösen.</font>
+                                                                            </p>
+                                                                            <p class="panel-text">
+                                                                                <font>3. Verwende destilliertes oder destillatgleiches Wasser (im Baumarkt oder der Tankstelle erhältlich).</font>
+                                                                            </p>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                        <div class="panel">
+                                                            <div class="panel-group" id="accordion">
+                                                                <div class="panel panel-default">
+                                                                    <div class="panel-heading">
+                                                                        <h4 class="panel-title mt-3">
+                                                                            <a href="#collapse9" data-toggle="collapse" class="accordion-toggle collapsed" data-parent="#accordion" >Problemlösung: Es läuft kein Wasser</a>
+                                                                        </h4>
+                                                                    </div>
+                                                                    <div id="collapse9" class="panel-collapse collapse">
+                                                                        <div class="panel-body">
+                                                                            <p class="panel-text">
+                                                                                <font>Grundsätzlich gilt zunächst immer:<br /><br />1.&amp;nbsp; Stecker ausziehen<br />2. Steckverbindung von Kindern und Tieren fernhalten<br /></font>
+                                                                            </p>
+                                                                            <p class="panel-text">
+                                                                                <font>Sind an der Pumpe Vibrationen zu spüren? Wenn ja, ist das ein gutes Zeichen, sie läuft noch! Wenn nein, bitte folgende Punkte überprüfen:&amp;nbsp;</font>
+                                                                                <br />
+                                                                            </p>
+                                                                            <p class="panel-text">
+                                                                                <font>• Ist der Stecker mit Strom verbunden?</font>
+                                                                                <br />
+                                                                                <font>• Funktioniert der Ein/Aus Schalter am Kabel?</font>
+                                                                                <br />
+                                                                                <font>• Hat der Brunnen genügend Wasser im Tank? Der Wasserstand sollte mind. 2-3cm über der Pumpe liegen.</font>
+                                                                                <br />
+                                                                                <font>• Ist die Durchflussregulierung (Rad an Pumpe und/oder Regulator) am Schlauch offen?</font>
+                                                                                <br />
+                                                                                <font>• Ist der Schlauch geknickt oder gebrochen?</font>
+                                                                                <br />
+                                                                                <font>• ist die Pumpe möglicherweise verstopft (Pumpe vorne öffnen und Propeller säubern) oder defekt?</font>
+                                                                            </p>
+                                                                            <p class="panel-text">
+                                                                                <font>Besteht das Problem weiterhin, muss möglicherweise die Pumpe ausgewechselt werden. Vielleicht ist sie trocken gelaufen und durchgebrannt.&amp;nbsp;</font>
+                                                                            </p>
+                                                                            <p class="panel-text">
+                                                                                <font>Hier gehts zu den&amp;nbsp;</font>
+                                                                                <a href="https://shop.climaqua.swiss/shop/category/accessories-31" class="btn btn-outline-primary btn-sm">
+                                                                                    <font>CLIMAQUA® PUMPS</font>
+                                                                                </a>
+                                                                            </p>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                        <div class="panel">
+                                                            <div class="panel-group" id="accordion">
+                                                                <div class="panel panel-default">
+                                                                    <div class="panel-heading">
+                                                                        <h4 class="panel-title mt-3">
+                                                                            <a href="#collapse10" data-toggle="collapse" class="accordion-toggle collapsed" data-parent="#accordion" >Kann ich den Brunnen non-stop laufen lassen?</a>
+                                                                        </h4>
+                                                                    </div>
+                                                                    <div id="collapse10" class="panel-collapse collapse">
+                                                                        <div class="panel-body">
+                                                                            <p class="panel-text">
+                                                                                <font>Ja. Der Brunnen kann ohne Pause betrieben werden. Es tut dem Brunnen gut, wenn das Wasser immer im Umlauf ist. So setzt weniger Kalk und Schmutz (Algen) an der Oberfläche an. Zudem ist dies die beste Möglichkeit um das Raumklima mit dem Brunnen positiv zu beeinflussen. Prüfe aber regelmässig den Wasserstand, und stelle sicher, dass immer genügend Wasser im Tank ist.</font>
+                                                                                <br />
+                                                                            </p>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                        <div class="panel">
+                                                            <div class="panel-group" id="accordion">
+                                                                <div class="panel panel-default">
+                                                                    <div class="panel-heading">
+                                                                        <h4 class="panel-title mt-3">
+                                                                            <a href="#collapse11" data-toggle="collapse" class="accordion-toggle collapsed" data-parent="#accordion" >Darf die Pumpe trocken laufen?</a>
+                                                                        </h4>
+                                                                    </div>
+                                                                    <div id="collapse11" class="panel-collapse collapse">
+                                                                        <div class="panel-body">
+                                                                            <p class="panel-text">
+                                                                                <font>Nein. Läuft die Pumpe im trockenen, brennt sie durch und wird stark beschädigt.</font>
+                                                                            </p>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                        <div class="panel">
+                                                            <div class="panel-group" id="accordion">
+                                                                <div class="panel panel-default">
+                                                                    <div class="panel-heading">
+                                                                        <h4 class="panel-title mt-3">
+                                                                            <a href="#collapse12" data-toggle="collapse" class="accordion-toggle collapsed" data-parent="#accordion" >Kann ich kaputte Teile einfach ersetzen?</a>
+                                                                        </h4>
+                                                                    </div>
+                                                                    <div id="collapse12" class="panel-collapse collapse">
+                                                                        <div class="panel-body">
+                                                                            <p class="panel-text">
+                                                                                <font>Ja. CLIMAQUA® FOUNTAINS werden alle mit stecksystemen Gebaut, so dass 95 % aller Teile ausgetauscht werden können.</font>
+                                                                                <br />
+                                                                            </p>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </section>
+                                            <section class="s_text_block pt32 pb0">
+                                                <div class="container">
+                                                    <div class="col-md-12 pb0 pt32 header2">
+                                                        <h1 class="font-weight-normal">FLAMES</h1>
+                                                    </div>
+                                                </div>
+                                            </section>
+                                            <section class="s_faq_collapse pb32 pt0">
+                                                <div class="container">
+                                                    <div class="col-md-12 pb-2">
+                                                        <div class="panel">
+                                                            <div class="panel-group" id="accordion">
+                                                                <div class="panel panel-default">
+                                                                    <div class="panel-heading">
+                                                                        <h4 class="panel-title">
+                                                                            <a href="#collapse13" data-toggle="collapse" class="accordion-toggle collapsed" data-parent="#accordion" >Was ist Bioethanol und wie funktionieren die CLIMAQUA® Flames?</a>
+                                                                        </h4>
+                                                                    </div>
+                                                                    <div id="collapse13" class="panel-collapse collapse in">
+                                                                        <div class="panel-body">
+                                                                            <p class="card-text">
+                                                                                <font>Die Dekofeuer CLIMAQUA® Flames werden mit flüssigem Bioethanol (Ethanol = Alkohol, Bio = Art des Anbaus) betrieben. Der Brennstoff wird mit Hilfe des mitgelieferten Messbechers in die (kalte) Brennkammer abgefüllt und dann mit einem Streichholz oder Sicherheitsfeuerzeug entzündet.&amp;nbsp;</font>
+                                                                                <br />
+                                                                                <a href="/shop/category/accessories-231" class="btn btn-outline-primary btn-sm">
+                                                                                    <font>CLIMAQUA® Bioethanol</font>
+                                                                                </a>
+                                                                                <font>&amp;nbsp;kaufst Du etweder bei uns im Shop oder in jedem Baumarkt, Gartencenter oder an der Tankstelle.</font>
+                                                                            </p>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                        <div class="panel">
+                                                            <div class="panel-group" id="accordion">
+                                                                <div class="panel panel-default">
+                                                                    <div class="panel-heading">
+                                                                        <h4 class="panel-title mt-3">
+                                                                            <a href="#collapse14" data-toggle="collapse" class="accordion-toggle collapsed" data-parent="#accordion" >Wie lange brennen CLIMAQUA® Flames</a>
+                                                                        </h4>
+                                                                    </div>
+                                                                    <div id="collapse14" class="panel-collapse collapse">
+                                                                        <div class="panel-body">
+                                                                            <p class="card-text">
+                                                                                <font>Eine Füllung Brennt ca. 2 Stunden (gilt für 150ml und 400ml)</font>
+                                                                                <br />
+                                                                            </p>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                        <div class="panel">
+                                                            <div class="panel-group" id="accordion">
+                                                                <div class="panel panel-default">
+                                                                    <div class="panel-heading">
+                                                                        <h4 class="panel-title mt-3">
+                                                                            <a href="#collapse15" data-toggle="collapse" class="accordion-toggle collapsed" data-parent="#accordion" >Welches sind die Vorteile einer Bioethanol Flamme?</a>
+                                                                        </h4>
+                                                                    </div>
+                                                                    <div id="collapse15" class="panel-collapse collapse">
+                                                                        <div class="panel-body">
+                                                                            <p class="card-text">
+                                                                                <font>Der Brennstoff Bioethanol hat viele Vorteile. Er verbrennt emissionsfrei, rückstandslos, geruchlos, russfrei und hinterlässt keine Asche oder flüssigen Wachs. Die Flamme ist im Vergleich zu einer Kerze lebendiger und grösser. Bioethanol is kostengünstig, einfach und sicher in der Handhabung.</font>
+                                                                            </p>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                        <div class="panel">
+                                                            <div class="panel-group" id="accordion">
+                                                                <div class="panel panel-default">
+                                                                    <div class="panel-heading">
+                                                                        <h4 class="panel-title mt-3">
+                                                                            <a href="#collapse16" data-toggle="collapse" class="accordion-toggle collapsed" data-parent="#accordion" >Wie sicher sind CLIMAQUA® Flames?</a>
+                                                                        </h4>
+                                                                    </div>
+                                                                    <div id="collapse16" class="panel-collapse collapse">
+                                                                        <div class="panel-body">
+                                                                            <p class="card-text">
+                                                                                <font>CLIMAQUA® Flames sind sicher gebaut, so dass der flüssige Brennstoff nicht auslaufen kann. Das Bioethanol wird mit einem Messbecher (im Lieferumfang) in die Kammer eingefüllt, der eingebaute Keramikfaserschwamm saugt die Flüssigkeit sofort auf und speichert sie. </font>
+                                                                            </p>
+                                                                            <p class="card-text">
+                                                                                <font>Bei ungewolltem Umkippen der CLIMAQUA® Flamme, bleibt das Feuer jederzeit</font>&amp;nbsp;k<font>ontrollierbar, da der Keramikfaserschwamm den Brennstoff kompakt im Tank zurückhält. CLIMAQUA® Bioethanolfeuergeräte werden nach der DIN Norm EN 16647, dem europäischen Sicherheitsstandard für Bioethanol Feuergeräte mit Füllmenge unter 500ml gebaut. In einigen Aspekten gehen die «CLIMAQUA® Safety for Ethanol» Sicherheitsmassnahmen sogar noch einen Schritt weiter. Dies macht die CLIMAQUA®</font><br />
+                                                                                <font>Flames in mancher Hinsicht sicherer als eine Kerze.</font><br />
+                                                                            </p>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </section>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </t>
+                    </t>
+                </t>
+            </field>
+        </record>
+        <record id="climaqua_faqs_page" model="website.page">
+            <field name="url">/faq-s</field>
+            <field name="website_published">True</field>
+            <field name="view_id" ref="climaqua_faq_page_view" />
+        </record>
+    </data>
+</odoo>

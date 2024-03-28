@@ -1,0 +1,268 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+        <record id="climaqua_privacy_page_view" model="ir.ui.view">
+            <field name="name">Climaqua payment privacy</field>
+            <field name="type">qweb</field>
+            <field name="key">website.climaqua_payment_privacy_page</field>
+            <field name="arch" type="xml">
+                <t name="Home" t-name="website.climaqua_payment_privacy_page">
+                    <t t-name="website.datenschutz">
+                        <t t-call="website.layout">
+                            <div id="wrap" class="oe_structure oe_empty oe_website_sale privacy">
+                                <div class="container">
+                                    <div class="row justify-content-center">
+                                        <div class="col-md-10">
+                                            <section class="s_text_block pt32 pb32 text-center">
+                                                <div class="container">
+                                                    <div class="row">
+                                                        <div class="col-md-12 pt32 pb0 header2">
+                                                            <h1 class="lead">
+                                                                <font class="font-weight-normal" style="font-size: 48px;">DATENSCHUTZ</font>
+                                                            </h1>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </section>
+                                            <section class="s_text_block pb32 pt0">
+                                                <div class="container">
+                                                    <div class="col-md-12 pt32 pb32">
+                                                        <p class="lead">
+                                                            <font>1. Geltung</font>
+                                                            <br />
+                                                            <br />
+                                                            <font>Diese Datenschutzerklärung regelt den Umgang von DYNCO AG, shop.climaqua.ch&amp;nbsp; ("climaqua.ch“, „wir“), Bolligenstrasse 90, 3065 Bolligen, Schweiz, mit den Personendaten von Kundinnen und Kunden sowie Besucherinnen und Besuchern („Sie“) ihrer Websites und mobilen Anwendungen, z.B. Apps, („Website“), gleich ob diese von der betroffenen Person selber oder von Dritten stammen, und ob die Personendaten über die Website oder über einen anderen Weg an climaqua.com übermittelt werden.</font>
+                                                            <br />
+                                                            <font>
+                                                                <br />
+                                                            </font>
+                                                        </p>
+                                                        <p class="lead">
+                                                            <font>2. Kontakt</font>
+                                                            <br />
+                                                            <br />
+                                                            <font>Sie können uns auf folgenden Wegen kontaktieren:</font>
+                                                            <br />
+                                                            <br />
+                                                            <font>DYNCO AG</font>
+                                                            <br />
+                                                            <font>www.climaqua.com</font>
+                                                            <br />
+                                                            <font>Bolligenstrasse 90</font>
+                                                            <br />
+                                                            <font>CH-3065 Bolligen</font>
+                                                            <br />
+                                                            <font>Geschäftsleitung: Yves Durrer</font>
+                                                            <br />
+                                                            <br />
+                                                            <font>Unseren Datenschutzbeauftragten erreichen Sie wie folgt:</font>
+                                                            <br />
+                                                            <br />
+                                                            <font>DYNCO AG</font>
+                                                            <br />
+                                                            <font>www.climaqua.com</font>
+                                                            <br />
+                                                            <font>Datenschutzbeauftragter</font>
+                                                            <br />
+                                                            <font>Bolligenstrasse 90</font>
+                                                            <br />
+                                                            <font>CH-3065 Bolligen</font>
+                                                            <br />
+                                                            <br />
+                                                            <font>Email für Datenschutz-Anfragen: datenschutz@dynco.ch</font>
+                                                            <br />
+                                                            <br />
+                                                            <br />
+                                                            <font>Allgemeines</font>
+                                                            <br />
+                                                            <br />
+                                                            <font>Dynco AG, climaqua.com beachtet die gesetzlichen Bestimmungen des Datenschutzes. Alle im Rahmen der Anmeldung erfassten bzw. während der Nutzung entstehenden und durch das schweizerische Datenschutzgesetz (nachfolgend „DSG“) bzw. die Europäische Datenschutz-Grundverordnung (nachfolgend „EU DSGVO“) geschützten Personendaten werden ausschliesslich für den Zweck der Vertragserfüllung genutzt, soweit nicht, insbesondere gemäss dieser Datenschutzerklärung, Ihr ausdrückliches Einverständnis zu einer darüber hinausgehenden Nutzung vorliegt oder das anwendbare Recht diese erlaubt. Unsere Mitarbeiter/-innen sind verpflichtet, Personendaten vertraulich zu behandeln.</font>
+                                                            <br />
+                                                            <br />
+                                                            <font>Da wir die meisten Personendaten elektronisch bearbeiten, haben wir angemessene organisatorische und technische Massnahmen (z.B. IT-Sicherheitsmassnahmen) getroffen, um sicherzustellen, dass Ihre Personendaten geschützt sind. Wir schulen unsere Mitarbeiter zudem regelmässig in Bezug auf Datenschutz und Informationssicherheit.</font>
+                                                            <br />
+                                                            <br />
+                                                            <font>&amp;nbsp;</font>
+                                                            <br />
+                                                            <font>3. Welche Personendaten zu welchem Zweck gesammelt werden</font>
+                                                            <br />
+                                                            <br />
+                                                            <font>Wir können von Ihnen Stammdaten (ggf. Firmenname, Name, Adresse, E-mail, usw.), Personendaten über die von Ihnen bezogenen Dienstleistungen, Ihre Zahlungsverkehrsdaten, Ihre Online-Präferenzen und Ihr Kunden-Feedback erheben.</font>
+                                                            <br />
+                                                            <br />
+                                                            <font>Wir verwenden diese Personendaten zur Kommunikation mit Ihnen, zum Abschluss und zur Abwicklung der Geschäfte mit Ihnen, zum Betrieb der Website, zur Abrechnung, zur Marktforschung und für Marketing, etwa zur Analyse unseres Kundenstamms oder um Sie per Post, E-Mail oder Textnachrichten zu kontaktieren.</font>
+                                                            <br />
+                                                            <br />
+                                                            <font>Eingabefelder für Personendaten, die für die Nutzung unseres Angebotes zwingend nötig sind, werden bei der Erhebung entsprechend gekennzeichnet. Die Angabe von Personendaten in anderen Feldern erfolgt freiwillig. Sie können uns jederzeit mitteilen, dass Sie die Verarbeitung dieser freiwillig mitgeteilten Personendaten nicht mehr wünschen (vgl. Ziffer 13, Ihre Rechte).</font>
+                                                            <br />
+                                                            <br />
+                                                            <font>Sie willigen ein, dass wir Personendaten über Ihre Kreditwürdigkeit erheben.</font>
+                                                            <br />
+                                                            <br />
+                                                            <font>Sodann werden Ihre Surf- und Nutzungsdaten erhoben. Dabei handelt es sich beispielsweise um die Information, mit welchem Browser und welcher Browserversion Sie die Website wann besucht haben, welches Betriebssystem Sie verwenden, von welcher Website aus Sie über einen Link unsere Website aufgerufen haben, und welche Elemente der Website Sie wie verwenden. Diese Personendaten werden zusammen mit der IP-Adresse Ihres Zugangsgeräts gespeichert. Sie dienen dazu, unsere Website korrekt darzustellen und zu optimieren, gegen Angriffe oder andere Rechtsverletzungen zu schützen und die Website für Sie zu personalisieren. Wir ziehen von diesen Surf- und Nutzungsdaten keine Rückschlüsse auf die betroffenen Personen und werten die Personendaten einzig anonym aus, ausser wenn wir die Personendaten zur Klärung von Rechtsverletzungen benötigen.</font>
+                                                            <br />
+                                                            <br />
+                                                            <font>&amp;nbsp;</font>
+                                                            <br />
+                                                            <font>4. Aufbewahrungsdauer</font>
+                                                            <br />
+                                                            <br />
+                                                            <font>Wir bearbeiten personenbezogene Personendaten nur so lange, wie dies für den jeweiligen Zweck nötig oder von Gesetzes wegen vorgeschrieben ist.</font>
+                                                            <br />
+                                                            <br />
+                                                            <font>Wenn Sie bei uns ein Konto eingerichtet haben, bewahren wir die hierbei angegebenen Stammdaten unbeschränkt auf. Sie können jedoch jederzeit die Löschung des Kontos verlangen (vgl. Ziffer 13, Ihre Rechte). Wir werden die Stammdaten löschen, sofern wir nicht durch das Gesetz zur Aufbewahrung verpflichtet sind.</font>
+                                                            <br />
+                                                            <br />
+                                                            <font>Bei einer Bestellung ohne Konto werden Ihre Stammdaten nach dem Ablauf der Garantiefrist oder dem Ende der Dienstleistung insoweit gelöscht, als wir nicht durch das Gesetz zur Aufbewahrung verpflichtet sind. Diese Löschung kann umgehend oder im Rahmen periodisch durchgeführter Löschdurchläufe erfolgen.</font>
+                                                            <br />
+                                                            <br />
+                                                            <font>Sofern wir aufgrund von Missbräuchen, Zahlungsausfällen oder anderen legitimen Gründen weitere Geschäftskontakte mit einer betroffenen Person verweigern wollen, bewahren wir entsprechende Personendaten während fünf Jahren, im Wiederholungsfalle während zehn Jahren auf.</font>
+                                                            <br />
+                                                            <br />
+                                                            <font>&amp;nbsp;</font>
+                                                            <br />
+                                                            <font>5. Verarbeitung durch Dritte und im Ausland</font>
+                                                            <br />
+                                                            <br />
+                                                            <font>Wir dürfen Personendaten zu den genannten Zwecken auch durch Konzerngesellschaften oder Dritte bearbeiten lassen.</font>
+                                                            <br />
+                                                            <br />
+                                                            <font>Bei diesen Unternehmen handelt es sich um Marketing- und Marktforschungsunternehmen, um Unternehmen, die den technischen Betrieb unserer Informationstechnologie für uns vornehmen (Outsourcingpartner, Wartungsdienstleister, Hostingdienstleister, Clouddienstleister), um Analysedienste (vgl. Ziff. 8) um Finanzdienstleister, um Inkassounternehmen oder um Rechtsanwälte und Behörden. Wenn wir Konzerngesellschaften oder Dritte mit der Bearbeitung von Personendaten beauftragen, wird der Dritte sorgfältig ausgewählt und muss angemessene Sicherheitsmassnahmen treffen, um die Vertraulichkeit und Sicherheit Ihrer Personendaten zu garantieren.</font>
+                                                            <br />
+                                                            <br />
+                                                            <font>Sie willigen ein, dass wir Ihre Daten mit Kreditauskunfteien austauschen, damit diese uns und Dritte vor Zahlungsausfällen schützen können.</font>
+                                                            <br />
+                                                            <br />
+                                                            <font>Die Verarbeitung durch uns oder die genannten Dritten kann auch im europäischen oder nichteuropäischen Ausland stattfinden. Wir sorgen dabei für ausreichende vertragliche Garantien, dass ein solcher Dritter die Personendaten im Einklang mit den gesetzlichen Vorgaben und ausschliesslich im Interesse von climaqua.com verwendet. Diese Garantien richten sich nach den (auch in der Schweiz anerkannten) Standards der Europäischen Kommission. Sie haben ein Recht auf Einsicht in die entsprechenden Garantien in den jeweiligen Verträgen.</font>
+                                                            <br />
+                                                            <br />
+                                                            <font>&amp;nbsp;</font>
+                                                            <br />
+                                                            <font>6. Analysedienste</font>
+                                                            <br />
+                                                            <br />
+                                                            <font>Wir nutzen Dienste dritter Unternehmen zur Analyse des Surfverhaltens. Wir binden zum Teil auch Inhalte von anderen Websites ein.</font>
+                                                            <br />
+                                                            <br />
+                                                            <font>Mittels der Analysedienste messen wir die Nutzung der Website und werten diese aus. bzw. lassen diese messen und auswerten. Hierzu können die Dritt-Unternehmer ebenfalls permanente Cookies, Pixel-Tags oder ähnliche Technologien (siehe Ziffer 10) einsetzen. Der Dritt-Unternehmer kann Ihre Nutzung unserer Website verfolgen, diese Angaben mit Daten anderer Websites, die Sie besucht haben und ebenfalls vom Dritt-Unternehmer verfolgt werden, kombinieren, und diese Erkenntnisse für eigene Zwecke (z.B. Steuerung von Werbung) verwenden.</font>
+                                                            <br />
+                                                            <br />
+                                                            <font>Diese Website verwendet Google Analytics.</font>
+                                                            <br />
+                                                            <br />
+                                                            <font>Sie willigen ein, dass wir Analysedienste in diesem Sinne auf unseren Websites einsetzen.</font>
+                                                            <br />
+                                                            <br />
+                                                            <font>&amp;nbsp;</font>
+                                                            <br />
+                                                            <font>7. Einbindung von Elementen Dritter auf der Website von climaqua.com</font>
+                                                            <br />
+                                                            <br />
+                                                            <font>Auf unserer Website sind Inhalte verschiedener Drittanbieter eingebunden, so beispielsweise Videos von Videoplattformen wie Youtube oder Buttons von Social Media Plattformen (wie Facebook oder Twitter). Diese Inhalte ermöglichen es den Besucherinnen und Besuchern, auf unserer Website Inhalte von jenen Plattformen zu konsumieren oder unsere Inhalte einfach in den betreffenden sozialen Netzwerken zu teilen.</font>
+                                                            <br />
+                                                            <br />
+                                                            <font>Beim Surfen auf unserer Website wird, wenn ein solcher Inhalt als Teil der Website angezeigt wird, automatisch eine Verbindung zu den Servern des Drittanbieters hergestellt. Dabei werden Personendaten über Ihren Website-Besuch, insbesondere Ihre IP-Adresse, an diesen Drittanbieter übermittelt. Wenn Sie sich beim jeweiligen Drittanbieter zum Zeitpunkt des Besuchs angemeldet haben (beispielsweise mit einem Facebook- oder Google-Konto), ist es daher möglich, dass dieser Dritte feststellen kann, dass Sie unsere Website besucht haben.</font>
+                                                            <br />
+                                                            <br />
+                                                            <font>Sie autorisieren uns hiermit, diese Informationen an den Drittanbieter, bei dem Sie Ihr Konto halten, weiterzugeben.</font>
+                                                            <br />
+                                                            <br />
+                                                            <font>Die Informationen zum Zweck und Umfang der Datenverarbeitung durch solche Drittanbieter sowie Ihre diesbezüglichen Rechte und Einstellungsmöglichkeiten erhalten Sie von den betreffenden Drittanbietern.</font>
+                                                            <br />
+                                                            <br />
+                                                            <font>&amp;nbsp;</font>
+                                                            <br />
+                                                            <font>8. Cookies und Pixel-Tags&amp;nbsp;</font>
+                                                            <br />
+                                                            <br />
+                                                            <font>Wir nutzen Cookies und Pixel-Tags auf unserer Website.</font>
+                                                            <br />
+                                                            <br />
+                                                            <font>Cookies sind Datenpakete, die vom Webserver unserer Website an Ihren Browser gesendet, auf Ihrem Computer gespeichert und bei einem späteren Besuch vom Webserver wieder abgerufen werden können. Cookies speichern Informationen über die Online-Präferenzen von Besucherinnen oder Besuchern unserer Website und ermöglichen es uns, die Besuchererfahrung zu verbessern.</font>
+                                                            <br />
+                                                            <br />
+                                                            <font>Man unterscheidet Session Cookies und permanente Cookies. Session Cookies dienen dazu, während einem bestimmten Besuch auf unserer Website (z.B. im Online-Shop) serverseitig gespeicherte Informationen bei jedem Besuch eindeutig Ihnen bzw. Ihrem Internet-Browser zuzuordnen (z.B. damit der Warenkorb-Inhalt nicht verloren geht). Session Cookies werden nach dem Schliessen Ihres Internet-Browsers gelöscht.&amp;nbsp; Permanente Cookies dienen dazu, Ihre Voreinstellungen (z.B. die Sprache der Website) über mehrere Besuche auf unsere Website hinweg, d.h. auch nach Schliessung Ihres Internet-Browsers, zu speichern oder ein automatisches Login zu ermöglichen. Permanente Cookies werden erst nach der gemäss den Einstellung Ihres Internet-Browsers gelöscht (z.B. einen Monat nach dem letzten Besuch).</font>
+                                                            <br />
+                                                            <br />
+                                                            <font>Mit der Nutzung unserer Website willigen Sie in den Einsatz von Cookies ein.</font>
+                                                            <br />
+                                                            <br />
+                                                            <font>Sie können bestehende Session oder permanente Cookies jederzeit in Ihrem Internet-Browser löschen und das Setzen weiterer Cookies in den Einstellungen Ihres Browsers deaktivieren. Die Deaktivierung kann jedoch eine Beeinträchtigung von Funktionen unserer Website mit sich bringen.</font>
+                                                            <br />
+                                                            <br />
+                                                            <font>Pixel-Tags (auch Zählpixel, Web-Beacons, Clear-GIFS, oder Canvas) sind kleine für den Besucher unsichtbare Grafiken, die beim Aufruf unserer Website in Ihren Internet-Browser geladen werden. Beim Aufruf des Pixel-Tags durch Ihren Internet-Browser wird in den Logfiles des betreffenden Servers bestimmte Information gespeichert (z.B. Datum und Uhrzeit Ihres Webbesuchs oder bestimmte Daten zu Ihrem Endgerät, wie die Bildschirmauflösung oder dessen IP-Adresse).</font>
+                                                            <br />
+                                                            <br />
+                                                            <font>&amp;nbsp;</font>
+                                                            <br />
+                                                            <font>9. Rechtsgrundlagen der Verarbeitung</font>
+                                                            <br />
+                                                            <br />
+                                                            <font>Die Rechtsgrundlagen für Verarbeitung von Personendaten durch uns liegen in der Regel in Artikel 13 Absatz 2 Buchstabe a DSG (Verarbeitung in unmittelbarem Zusammenhang mit dem Abschluss oder der Abwicklung eines Vertrags; entspricht Artikel 6 Absatz 1 Buchstabe b EU DSGVO) sowie in Artikel 13 Absatz 1 DSG (Einwilligung der betroffenen Person oder Verpflichtung zur Verarbeitung durch Gesetz; entspricht Artikel 6 Absatz 1 Buchstabe a EU DSGVO).</font>
+                                                            <br />
+                                                            <br />
+                                                            <font>In Fällen, in denen wir aufgrund von Missbrauch, Zahlungsausfall oder aus ähnlichen legitimen Gründen den Abschluss von Verträgen mit betroffenen Personen künftig verweigern wollen, behalten wir uns vor, gestützt auf Artikel 13 Absatz 1 DSG (entspricht Artikel 6 Absatz 1 Buchstabe f EU DSGVO) Namen, Vornamen, Adresse und E-Mail-Adresse einer betroffenen Person sowie die Personendaten zu den Umständen des entsprechenden Falles aus eigenem Interesse aufzubewahren.</font>
+                                                            <br />
+                                                            <br />
+                                                            <font>Eine Bearbeitung Ihrer Personendaten durch andere Konzerngesellschaften erfolgt ebenfalls gestützt auf Art. 13 Abs. 1 DSG (entspricht Artikel 6 Absatz 1 Buchstabe f EU DSGVO).</font>
+                                                            <br />
+                                                            <br />
+                                                            <font>&amp;nbsp;</font>
+                                                            <br />
+                                                            <font>10. Ihre Rechte</font>
+                                                            <br />
+                                                            <br />
+                                                            <font>Auf Antrag erteilen wir jeder betroffenen Person Auskunft darüber, ob und ggf. welche personenbezogenen Personendaten über sie bearbeitet werden (Recht auf Bestätigung, Recht auf Auskunft).</font>
+                                                            <br />
+                                                            <br />
+                                                            <font>Auf Ihren Antrag hin:</font>
+                                                            <br />
+                                                            <br />
+                                                            <font>&amp;gt; Verzichten wir teilweise oder ganz auf die Verarbeitung von Personendaten (Recht auf Widerruf Ihrer Einwilligung zur Verarbeitung von nicht zwingend nötigen Personendaten; Recht auf Vergessenwerden). Ihren Antrag auf Vergessenwerden teilen wir auch Dritten mit, denen wir Ihre Personendaten zuvor weitergeleitet haben.</font>
+                                                            <br />
+                                                            <font>&amp;gt; berichtigen wir die entsprechenden Personendaten (Recht auf Berichtigung);</font>
+                                                            <br />
+                                                            <font>&amp;gt; schränken wir die Verarbeitung der entsprechenden Personendaten ein (Recht auf Einschränkung der Verarbeitung; diesfalls werden wir Ihre Personendaten nur noch speichern oder sie zum Schutz von unserer Rechtsansprüche oder von Rechten einer anderen Person verwenden);</font>
+                                                            <br />
+                                                            <font>&amp;gt; erhalten Sie die betreffenden personenbezogenen Personendaten in einem strukturierten, gängigen und maschinenlesbaren Format ausgehändigt (Recht auf Datenübertragbarkeit).</font>
+                                                            <br />
+                                                            <br />
+                                                            <font>Um einen derartigen Antrag zur Ausübung eines in diesem Abschnitt beschriebenen Rechtes zu stellen, beispielsweise wenn Sie von uns keine E-Mail-Newsletter mehr empfangen oder Ihr Konto löschen möchten, nutzen Sie die entsprechende Funktion auf unserer Website oder kontaktieren Sie unsere/n Datenschutzbeauftragte/n oder eine/n Mitarbeiter/-in gemäss den Angaben unter Ziffer 2 (Kontakt).</font>
+                                                            <br />
+                                                            <br />
+                                                            <font>Wenn wir einem Antrag nicht Folge leisten, informieren wir Sie über die Gründe hierfür. Wir dürfen beispielsweise in rechtlich zulässiger Weise die Löschung verweigern, wenn Ihre Personendaten für die ursprünglichen Zwecke nach wie vor benötigt werden (etwa wenn Sie von uns nach wie vor eine Dienstleistung beziehen), wenn die Verarbeitung auf einer zwingenden gesetzlichen Grundlage beruht (beispielsweise auf gesetzlichen Rechnungslegungsvorschriften), oder wenn wir ein überwiegendes eigenes Interesse haben (so etwa im Fall eines Rechtsstreits gegen die betroffene Person).</font>
+                                                            <br />
+                                                            <br />
+                                                            <font>Wenn wir Ihnen gegenüber ein überwiegendes Interesse an der Verarbeitung von Personendaten geltend machen, haben Sie das Recht, der Verarbeitung dennoch zu widersprechen, sofern sich aus Ihrer im Vergleich zu anderen betroffenen Personen besonderen Situation eine andere Interessenabwägung ergibt (Recht auf Widerspruch). Dies könnte beispielsweise der Fall sein, wenn Sie eine Person von öffentlichem Interesse sind oder durch die Verarbeitung das Risiko begründet wird, dass Sie durch Dritte geschädigt werden.</font>
+                                                            <br />
+                                                            <br />
+                                                            <font>Sollten Sie mit unserer Reaktion auf Ihren Antrag nicht zufrieden sein, steht Ihnen das Recht zu, bei einer zuständigen Aufsichtsbehörde, beispielsweise in ihrem Wohnsitzland oder am Sitz von climaqua.com, Beschwerde einzulegen (Recht auf Beschwerde).</font>
+                                                            <br />
+                                                            <br />
+                                                            <font>&amp;nbsp;</font>
+                                                            <br />
+                                                            <font>11. Anwendbares Recht und Gerichtsstand</font>
+                                                            <br />
+                                                            <br />
+                                                            <font>Die vorliegende Datenschutzerklärung und die Verträge, die basierend auf oder im Zusammenhang mit dieser Datenschutzerklärung geschlossen werden, unterliegen schweizerischem Recht, sofern nicht zwingend das Recht eines anderen Staates anwendbar ist. Gerichtsstand ist am Sitz von Dynco AG, climaqua.com, sofern nicht zwingend ein anderer Gerichtsstand vorgegeben ist.</font>
+                                                            <br />
+                                                        </p>
+                                                    </div>
+                                                </div>
+                                            </section>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </t>
+                    </t>
+                </t>
+            </field>
+        </record>
+        <record id="climaqua_payment_privacy_page" model="website.page">
+            <field name="url">/datenschutz</field>
+            <field name="website_published">True</field>
+            <field name="view_id" ref="climaqua_privacy_page_view" />
+        </record>
+    </data>
+</odoo>

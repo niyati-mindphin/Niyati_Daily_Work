@@ -1,0 +1,311 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+    <data>
+        <record id="lechuza_agb_page_view" model="ir.ui.view">
+            <field name="name">Lechuza agb</field>
+            <field name="type">qweb</field>
+            <field name="key">website.lechuza_agb_page</field>
+            <field name="arch" type="xml">
+                <t name="Home" t-name="website.lechuza_agb_page">
+                    <t t-name="website.agb">
+                        <t t-call="website.layout">
+                            <div id="wrap" class="oe_structure oe_empty oe_website_sale lechuzaagb">
+                                <div class="container">
+                                    <div class="row justify-content-center s_nb_column_fixed">
+                                        <div class="col-md-12">
+                                            <section class="pt32 pb0">
+                                                <div class="col-md-12 s_title pt16 pb16 text-center">
+                                                    <font class="main-header fontweight">
+                                                        <h1>AGB</h1>
+                                                    </font>
+                                                    <font class="font-weight">
+                                                        <h2>Allgemeine Geschäftsbedingungen (AGB) der DYNCO AG</h2>
+                                                    </font>
+                                                </div>
+                                            </section>
+                                            <section class="s_text_block pt32 pb32">
+                                                <div class="container">
+                                                    <div class="row justify-content-center">
+                                                        <div class="col-md-10 pt32 pb32 abg_font">
+                                                            <div class="col-xs-12 col-m-12 gutter-xxl">
+                                                                <div class="content spc-m-top">
+                                                                    <font class="font-weight-bold">1.0 Vertragsgegenstand</font>
+                                                                    <br />
+                                                                    <font>
+                                                                        Diese Allgemeinen Geschäftsbedingungen regeln das Vertragsverhältnis
+                                                                        zwischen der DYNCO AG und dem/der Käufer/-in von Waren und
+                                                                        Dienstleistungen über den Online-Shop, sowie den Abholstandorten der
+                                                                        DYNCO AG.</font>
+                                                                    <br />
+                                                                    <br />
+                                                                </div>
+                                                                <div class="content spc-m-top">
+                                                                    <font class="font-weight-bold">2.0 Anwendungsbereich und Geltung</font>
+                                                                    <br />
+                                                                    <font>
+                                                                        Die AGB gelten für alle Geschäftsbeziehungen zwischen der DYNCO AG und
+                                                                        dem/der Käufer/-in, insbesondere für die Lieferung von Produkten und die
+                                                                        Erbringung von Dienstleistungen, soweit nichts Abweichendes schriftlich
+                                                                        vereinbart wurde.</font>
+                                                                    <br />
+                                                                    <br />
+                                                                    <font>
+                                                                        Änderungen werden auf der Website www.lechuza.ch AG bekannt gegeben.
+                                                                        Produkte sind von der DYNCO AG offerierte und vertriebene Produkte wie
+                                                                        Einrichtungsgegenstände, Accessoires und Möbel, sowie Dienstleistungen.</font>
+                                                                    <br />
+                                                                    <br />
+                                                                </div>
+                                                                <div class="content spc-m-top">
+                                                                    <font class="font-weight-bold">3.0 Preise</font>
+                                                                    <br />
+                                                                    <font>
+                                                                        Die Preise der Produkte und Dienstleistungen verstehen sich rein Netto
+                                                                        in Schweizer Franken inklusive MwSt. Neben-/Lieferkosten und Verpackung
+                                                                        werden in einer separaten Position in Rechnung gestellt. Die Preise der
+                                                                        Produkte werden zum Zeitpunkt der Auftragsbestätigung durch die DYNCO AG
+                                                                        berechnet.</font>
+                                                                    <br />
+                                                                    <br />
+                                                                </div>
+                                                                <div class="content spc-m-top">
+                                                                    <font class="font-weight-bold">4.0 Lieferbedingungen</font>
+                                                                    <br />
+                                                                    <font>
+                                                                        Die angegebenen Lieferzeiten beruhen auf Angaben des Produzenten und
+                                                                        sind unverbindlich. Es können in keinem Fall Schadenersatzansprüche oder
+                                                                        ein Rücktritt vom Vertrag gegenüber der DYNCO AG geltend gemacht
+                                                                        werden. Wird bei der Bestellung durch den/die Käufer/-in nichts
+                                                                        Gegenteiliges angegeben, so behält sich die DYNCO AG vor, wahlweise
+                                                                        Teil- oder Komplettlieferungen zu machen. In der Regel erfolgen
+                                                                        Komplettlieferungen.</font>
+                                                                    <br />
+                                                                    <br />
+                                                                    <b>
+                                                                        <font>Hinweis:</font>
+                                                                    </b>
+                                                                    <font>&amp;nbsp;Ist der/die Käufer/-in aus früheren Lieferungen in
+                                                                        Zahlungsverzug, so behält sich die DYNCO AG das Recht vor, Lieferungen
+                                                                        bis zur Begleichung aller Schulden zurück zu behalten.</font>
+                                                                    <br />
+                                                                    <br />
+                                                                    <font>
+                                                                        Falls ein bestimmter Artikel nicht verfügbar ist, behalten die DYNCO AG
+                                                                        sich die Nichtlieferung vor. Über eine Nichtlieferbarkeit informiert die
+                                                                        DYNCO AG unverzüglich den/die Käufer/-in und wird die Belastung auf dem
+                                                                        entsprechenden Zahlungsmittel stornieren. In diesem Fall entsteht kein
+                                                                        Anspruch auf Schadenersatz oder Auftragserfüllung.</font>
+                                                                    <br />
+                                                                    <br />
+                                                                    <font>
+                                                                        Die Entsorgung der Palette ist Sache des/der Käufer/-in.</font>
+                                                                    <br />
+                                                                    <br />
+                                                                </div>
+                                                                <div class="content spc-m-top">
+                                                                    <font class="font-weight-bold">5.0 Transport und Versicherung</font>
+                                                                    <br />
+                                                                    <font>
+                                                                        Die DYNCO AG liefert ausschliesslich an gültige Postadressen innerhalb
+                                                                        der Schweiz. Der/die Käufer/-in überprüft die gelieferte Ware beim
+                                                                        Erhalt umgehend. Sichtbare Fehler und Transportschäden müssen sofort,
+                                                                        aber spätestens innerhalb von 5 Werktagen nach Lieferung schriftlich
+                                                                        gemeldet werden. Trifft die Lieferung beim Käufer/-in beschädigt ein, so
+                                                                        ist der der/die Käufer/-in verpflichtet, direkt das liefernde
+                                                                        Unternehmen (Post, Kurier) darüber zu informieren und einen Vermerk beim
+                                                                        Empfangsschein zu registrieren.</font>
+                                                                    <br />
+                                                                    <br />
+                                                                    <font>
+                                                                        Der/die Käufer/-in hat sämtliches Verpackungsmaterial aufzubewahren, bis der Fall geregelt wurde.</font>
+                                                                    <br />
+                                                                    <br />
+                                                                </div>
+                                                                <div class="content spc-m-top">
+                                                                    <font class="font-weight-bold">6.0 Zahlungsbedingungen</font>
+                                                                    <br />
+                                                                    <font>
+                                                                        Die DYNCO AG bietet verschiedene Zahlungsmöglichkeiten an. Massgebend
+                                                                        sind die Bedingungen der Kasse des Onlineshops "Zahlungsweise
+                                                                        auswählen". Die DYNCO AG entscheidet,
+                                                                        welche Zahlungsart zutrifft. Teillieferungen sind im Umfang der
+                                                                        einzelnen Lieferung zu bezahlen. Zahlungstermine sind auch dann
+                                                                        einzuhalten, wenn die Lieferung oder Abnahme der
+                                                                        Waren aus Gründen verzögert wird, welche die DYNCO AG nicht zu vertreten
+                                                                        hat. Zahlungen dürfen aufgrund von Beanstandungen oder nicht
+                                                                        akzeptierten Forderungen nicht gekürzt oder verweigert werden.
+                                                                        Bei Zahlungsverzug ist die DYNCO AG berechtigt ab der zweiten Mahnung
+                                                                        eine Mahngebühr von CHF 30 und allenfalls weitere entstandene Kosten in
+                                                                        Rechnung zu stellen.</font>
+                                                                    <br />
+                                                                    <br />
+                                                                </div>
+                                                                <div class="content spc-m-top">
+                                                                    <font class="font-weight-bold">7.0 Mängel</font>
+                                                                    <br />
+                                                                    <font>
+                                                                        Der/die Käufer/-in hat die Ware auf Vollständigkeit zu prüfen und Mängel
+                                                                        (Transportschaden siehe Punkt 6) unmittelbar nach Erhalt, spätestens
+                                                                        nach 5 Tagen der DYNCO AG zu melden. Ansonsten gilt die Lieferung als
+                                                                        durch den/die Käufer/-in angenommen.</font>
+                                                                    <br />
+                                                                    <br />
+                                                                    <font>
+                                                                        Sollte die gelieferte Ware einen von uns zu vertretenden Mangel
+                                                                        aufweisen, habt der/die Käufer/-in ein Recht auf kostenlose
+                                                                        Nachbesserung oder Nachlieferung bzw. Austausch. Wird ein Mangel
+                                                                        innerhalb angemessener Frist nicht behoben, hat den/die Käufer/-in nach
+                                                                        Wahl auch Anspruch auf Rückgängigmachung des Kaufes (Wandlung) oder
+                                                                        Herabsetzung des Kaufpreises (Minderung). Die Gewährleistungsfrist
+                                                                        beträgt zwei Jahre und beginnt mit Eingang der Ware bei dem/der
+                                                                        Käufer/-in.</font>
+                                                                    <br />
+                                                                    <br />
+                                                                </div>
+                                                                <div class="content spc-m-top">
+                                                                    <font class="font-weight-bold">8.0 Rücktritt vom Vertrag / Rückgaberecht</font>
+                                                                    <br />
+                                                                    <font>
+                                                                        Rücktrittsrecht: Bei Zahlungsverzug des/der Käufers/-in ist die DYNCO AG
+                                                                        ausdrücklich berechtigt gemäß Art. 214 Abs. 3 OR, vom Vertrag
+                                                                        zurückzutreten und/oder Schadensersatz zu verlangen.</font>
+                                                                    <br />
+                                                                    <br />
+                                                                    <font>
+                                                                        In Fällen von Schreib- oder Rechenfehlern ist die DYNCO AG zum Rücktritt
+                                                                        vom Vertrag berechtigt. Dies trifft auch zu, wenn die Preise von der
+                                                                        DYNCO AG falsch berechnet wurden. Es besteht grundsätzlich kein
+                                                                        Rückgaberecht von gelieferten Waren. Die DYNCO AG ist bestrebt in
+                                                                        Ausnahmen kulant zu handeln.</font>
+                                                                    <br />
+                                                                    <br />
+                                                                    <font>
+                                                                        Ein Rücktritt vom Vertrag durch den/die Käufer/-in, nachdem die
+                                                                        Bestellung durch die DYNCO AG akzeptiert wurde, ist unter folgenden
+                                                                        Bedingungen möglich:</font>
+                                                                    <br />
+                                                                    <br />
+                                                                </div>
+                                                                <div class="content spc-m-top spc-xl-left">
+                                                                    <font class="font-weight-bold">8.1 Lieferverzug</font>
+                                                                    <br />
+                                                                    <font>
+                                                                        Wenn die Ware nicht bis spätestens 4 Wochen nach Angabe des ersten
+                                                                        unverbindlichen Liefertermins durch die DYNCO AG beschafft werden kann
+                                                                        und an Lager genommen wird, ist der/die Käufer/-in berechtigt, die
+                                                                        Lieferung ohne Kostenfolge zu stornieren.&amp;nbsp;</font>
+                                                                    <br />
+                                                                    <br />
+                                                                </div>
+                                                                <div class="content spc-m-top spc-xl-left">
+                                                                    <font class="font-weight-bold">8.2 Rücktritt durch den/die Käufer/-in</font>
+                                                                    <br />
+                                                                    <font>
+                                                                        Bezahlung einer Bearbeitungsgebühr von CHF 30.00 plus 20% des
+                                                                        Warenwertes, oder die effektiv der DYNCO AG entstandenen Kosten. Die
+                                                                        DYNCO AG entscheidet, welche Art zutrifft.&amp;nbsp;</font>
+                                                                    <br />
+                                                                    <br />
+                                                                </div>
+                                                                <div class="content spc-m-top spc-xl-left">
+                                                                    <font class="font-weight-bold">8.3 Geöffnete Pakete</font>
+                                                                    <br />
+                                                                    <font>
+                                                                        Bei Rückgabe von geöffneten Paketen durch den/die Käufer/-in kommt der Punkt "Rücktritt durch den/die Käufer/-in" zur Anwendung.</font>
+                                                                    <br />
+                                                                    <br />
+                                                                </div>
+                                                                <div class="content spc-m-top spc-xl-left">
+                                                                    <font class="font-weight-bold">8.4 Waren auf Abholung</font>
+                                                                    <br />
+                                                                    <font>
+                                                                        Wird von dem/der Käufer/-in Ware auf Abholung nicht abgeholt, so wird
+                                                                        diese nach 2 Wochen zum Verkauf freigegeben. Nichtabholung der Ware wird
+                                                                        einem Rücktritt vom Vertrag durch den den/die Käufer/-in gleichgesetzt.
+                                                                        Es fallen die Gebühren unter dem Punkt "Rücktritt durch den/die
+                                                                        Käufer/-in " an.</font>
+                                                                    <br />
+                                                                    <br />
+                                                                </div>
+                                                                <div class="content spc-m-top spc-xl-left">
+                                                                    <font class="font-weight-bold">8.5 Rücksendung / Annahmeverweigerung</font>
+                                                                    <br />
+                                                                    <font>
+                                                                        Die Rücksendung / Annahmeverweigerung wird einem Rücktritt vom Vertrag
+                                                                        durch den/die Käufer/-in gleichgesetzt. Es fallen die Gebühren unter dem
+                                                                        Punkt "Rücktritt durch den/die Käufer/-in " an. Sollte der/die
+                                                                        Käufer/-in einen 2. Versand wünschen, so wird dies mit einer
+                                                                        Versandpauschale von CHF 20.00 durchgeführt. Der/die Käufer/-in muss
+                                                                        innerhalb von 5 Tagen die DYNCO AG darüber informieren.&amp;nbsp;</font>
+                                                                    <br />
+                                                                    <br />
+                                                                </div>
+                                                                <div class="content spc-m-top">
+                                                                    <font class="font-weight-bold">9.0 Gewährleistung</font>
+                                                                    <br />
+                                                                    <font>
+                                                                        Die Garantie beträgt zwei Jahre und beginnt mit Eingang der Ware bei dem/der Käufer/-in.</font>
+                                                                    <br />
+                                                                    <br />
+                                                                    <font>
+                                                                        Reklamationen werden kulant behandelt. Die Lieferkosten an die DYNCO AG
+                                                                        hat der/die Käufer/-in zu tragen. Die Kosten zur Rücksendung an den/die
+                                                                        Käufer/-in werden durch die DYNCO AG übernommen. Die Mängelbehebung
+                                                                        erfolgt nach Wahl der DYNCO AG durch Austausch, Ersetzen des
+                                                                        fehlerhaften Teils oder Reparatur des Produktes. Stellt sich bei der
+                                                                        Begutachtung des bemängelten Produktes heraus, dass der Mangel durch
+                                                                        den/die Käufer/-in selbst verursacht wurde, so kann der/die Käufer/-in
+                                                                        das Produkt kostenpflichtig reparieren lassen. Der/die Käufer/-in wird
+                                                                        darüber schriftlich informiert.</font>
+                                                                    <br />
+                                                                    <br />
+                                                                    <font>
+                                                                        Für direkte oder indirekte Schäden, die allenfalls durch Mängel
+                                                                        entstehen, übernimmt die DYNCO AG innerhalb der gesetzlichen Schranken
+                                                                        keinerlei Haftung.</font>
+                                                                    <br />
+                                                                    <br />
+                                                                </div>
+                                                                <div class="content spc-m-top">
+                                                                    <font class="font-weight-bold">10.0 Anwendbares Recht und Gerichtsstand</font>
+                                                                    <br />
+                                                                    <font>
+                                                                        Es gelten die Bestimmungen des schweizerischen Rechtes. Gerichtsstand
+                                                                        für alle Ansprüche (unter Vorbehalt abweichender zwingender
+                                                                        Gerichtsstände des Bundesrechts) im Zusammenhang mit vertraglichen
+                                                                        Vereinbarungen mit der DYNCO AG ist Bern.</font>
+                                                                    <br />
+                                                                    <br />
+                                                                </div>
+                                                                <div class="content spc-m-top text-bold agb_border mt-3 mb-3 p-3">
+                                                                    <h4 class="heading-4">Im Falle von Reklamationen und Rücksendungen wenden Sie sich bitte an:</h4>
+                                                                    <div>
+                                                                        <div class="pb-3">
+                                                                            <div>DYNCO AG</div>
+                                                                            <div>Bolligenstrasse 90</div>
+                                                                            <div>CH - 3065 Bolligen</div>
+                                                                            <div>Tel.: +41 31 921 88 44</div>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </section>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </t>
+                    </t>
+                </t>
+            </field>
+        </record>
+        <record id="lechuza_agb_page" model="website.page">
+            <field name="url">/agb</field>
+            <field name="website_published">True</field>
+            <field name="view_id" ref="lechuza_agb_page_view" />
+        </record>
+    </data>
+</odoo>

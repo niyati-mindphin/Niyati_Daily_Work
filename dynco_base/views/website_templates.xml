@@ -1,0 +1,1631 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <template id="knk_website_sale_stock_product_inherit" inherit_id="website_sale_stock.website_sale_stock_product">
+        <xpath expr="//div[hasclass('availability_messages')]" position="replace"/>
+    </template>
+    <template id="address_kanban_inh" inherit_id="website_sale.address_kanban" name="Kanban address">
+        <xpath expr="//t[@t-esc='contact']" position="replace">
+            <t t-if="contact.type == 'delivery'">
+                <t t-esc="contact.name"/>
+                <t t-esc="contact" t-options="dict(widget='contact', fields=['address'], no_marker=True)"/>
+            </t>
+            <t t-else="">
+                <t t-esc="contact" t-options="dict(widget='contact', fields=['name', 'address'], no_marker=True)"/>
+            </t>
+        </xpath>
+    </template>
+    <template id="products_categ_description" inherit_id="website_sale.products" name="Products Category Description">
+        <xpath expr="//div[@id='products_grid']" position="inside">
+            <t t-if="category">
+                <div class="category_bottom_description" t-field="category.categ_bottom_description" />
+            </t>
+        </xpath>
+        <xpath expr="//div[@t-field='category.website_description']/.." position="replace" />
+    </template>
+    <record id="theme_prime_producs_inherit" model="ir.ui.view">
+        <field name="name">Products</field>
+        <field name="type">qweb</field>
+        <field name="key">dynco_base.theme_prime_products_inherit</field>
+        <field name="inherit_id" search="[('key', '=', 'theme_prime.products')]" />
+        <field name="arch" type="xml">
+            <xpath expr="//t[@t-call='theme_prime.category_pills']" position="before">
+                <t t-if="category">
+                    <t t-set='editor_msg'>Drag building blocks here to customize the header for "<t t-esc='category.name'/>" category.</t>
+                    <div class="mb16" id="category_header" t-att-data-editor-message="editor_msg" t-field="category.website_description"/>
+                </t>
+            </xpath>
+        </field>
+    </record>
+
+    <template id="s_mega_menu_thumbnails_lechuza" name="Menu - Thumbnails Lechuza" groups="base.group_user">
+        <section class="s_mega_menu_thumbnails pt24 o_colored_level o_cc o_cc1">
+            <div class="container">
+                <div class="row justify-content-center">
+                    <div class="col-12 col-sm col-md-12 col-lg px-0">
+                        <div class="container">
+                            <div class="row oe_structure">
+                                <div class="col-md-3 col-sm text-center py-2 ">
+                                    <a href="#" class="nav-link o_default_snippet_text p-0 tp-animation-scale" data-name="Menu Item">
+                                        <img class="img-fluid rounded" src="/dynco_base/static/src/img/lechuza_img/mega_menu/image.jpg" alt=""/>
+                                        <br/>
+                                        <span class="d-block p-2">
+                                            <b>
+                                                <font style="font-size:14px;">BALKON</font>
+                                            </b>
+                                        </span>
+                                    </a>
+                                </div>
+                                <div class="col-md-3 col-sm text-center py-2 ">
+                                    <a href="#" class="nav-link o_default_snippet_text p-0 tp-animation-scale" data-name="Menu Item">
+                                        <img class="img-fluid rounded" src="/dynco_base/static/src/img/lechuza_img/mega_menu/image(1).jpg" alt=""/>
+                                        <br/>
+                                        <span class="d-block p-2">
+                                            <b>
+                                                <font style="font-size:14px;">GROSSGEFÄSSE</font>
+                                            </b>
+                                        </span>
+                                    </a>
+                                </div>
+                                <div class="col-md-3 col-sm text-center py-2 ">
+                                    <a href="#" class="nav-link o_default_snippet_text p-0 tp-animation-scale" data-name="Menu Item">
+                                        <img class="img-fluid rounded" src="/dynco_base/static/src/img/lechuza_img/mega_menu/image.jpg" alt=""/>
+                                        <br/>
+                                        <span class="d-block p-2">
+                                            <b>
+                                                <font style="font-size:14px;">BALKON</font>
+                                            </b>
+                                        </span>
+                                    </a>
+                                </div>
+                                <div class="col-md-3 col-sm text-center py-2 ">
+                                    <a href="#" class="nav-link o_default_snippet_text p-0 tp-animation-scale" data-name="Menu Item">
+                                        <img class="img-fluid rounded" src="/dynco_base/static/src/img/lechuza_img/mega_menu/image(1).jpg" alt=""/>
+                                        <br/>
+                                        <span class="d-block p-2">
+                                            <b>
+                                                <font style="font-size:14px;">GROSSGEFÄSSE</font>
+                                            </b>
+                                        </span>
+                                    </a>
+                                </div>
+                                <div class="col-md-3 col-sm text-center py-2 ">
+                                    <a href="#" class="nav-link o_default_snippet_text p-0 tp-animation-scale" data-name="Menu Item">
+                                        <img class="img-fluid rounded" src="/dynco_base/static/src/img/lechuza_img/mega_menu/image.jpg" alt=""/>
+                                        <br/>
+                                        <span class="d-block p-2">
+                                            <b>
+                                                <font style="font-size:14px;">BALKON</font>
+                                            </b>
+                                        </span>
+                                    </a>
+                                </div>
+                                <div class="col-md-3 col-sm text-center py-2 ">
+                                    <a href="#" class="nav-link o_default_snippet_text p-0 tp-animation-scale" data-name="Menu Item">
+                                        <img class="img-fluid rounded" src="/dynco_base/static/src/img/lechuza_img/mega_menu/image(1).jpg" alt=""/>
+                                        <br/>
+                                        <span class="d-block p-2">
+                                            <b>
+                                                <font style="font-size:14px;">GROSSGEFÄSSE</font>
+                                            </b>
+                                        </span>
+                                    </a>
+                                </div>
+                                <div class="col-md-3 col-sm text-center py-2 ">
+                                    <a href="#" class="nav-link o_default_snippet_text p-0 tp-animation-scale" data-name="Menu Item">
+                                        <img class="img-fluid rounded" src="/dynco_base/static/src/img/lechuza_img/mega_menu/image.jpg" alt=""/>
+                                        <br/>
+                                        <span class="d-block p-2">
+                                            <b>
+                                                <font style="font-size:14px;">BALKON</font>
+                                            </b>
+                                        </span>
+                                    </a>
+                                </div>
+                                <div class="col-md-3 col-sm text-center py-2 ">
+                                    <a href="#" class="nav-link o_default_snippet_text p-0 tp-animation-scale" data-name="Menu Item">
+                                        <img class="img-fluid rounded" src="/dynco_base/static/src/img/lechuza_img/mega_menu/image(1).jpg" alt=""/>
+                                        <br/>
+                                        <span class="d-block p-2">
+                                            <b>
+                                                <font style="font-size:14px;">GROSSGEFÄSSE</font>
+                                            </b>
+                                        </span>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="s_mega_menu_thumbnails_footer px-0">
+                <div class="container row mx-auto px-0 w-100 align-items-center">
+                    <div class="col-12 col-md-6 col-lg d-flex justify-content-center align-items-center py-2">
+                        <p class="text-muted align-middle m-0">
+                            <i class="s_mega_menu_thumbnails_icon fa fa-cube mr-2"></i> Free returns
+                        </p>
+                    </div>
+                    <div class="col-12 col-md-6 col-lg d-flex justify-content-center align-items-center py-2">
+                        <p class="text-muted align-middle m-0">
+                            <i class="s_mega_menu_thumbnails_icon fa fa-shopping-basket mr-2"></i> Pickup in store
+                        </p>
+                    </div>
+                    <div class="col-12 col-md-6 col-lg d-flex justify-content-center align-items-center py-2">
+                        <p class="text-muted align-middle m-0">
+                            <i class="s_mega_menu_thumbnails_icon fa fa-truck mr-2"></i> Express delivery
+                        </p>
+                    </div>
+                    <div class="col-12 col-md-6 col-lg py-2">
+                        <a href="#" class="btn btn-secondary d-block o_default_snippet_text">
+                            <i class="s_mega_menu_thumbnails_icon fa fa-comments mr-2"></i> Contact us
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </template>
+
+    <template id="s_mega_menu_thumbnails_item_inherit" inherit_id="website.s_mega_menu_thumbnails_item" name="s_mega_menu_thumbnails_item inherit">
+        <xpath expr="//div" position="replace">
+            <div class="col-6 col-sm text-center py-2 ">
+                <a href="#" class="nav-link o_default_snippet_text p-0 tp-animation-scale" data-name="Menu Item">
+                    <img class="img-fluid rounded shadow" t-att-src="_img_src" alt=""/>
+                    <br/>
+                    <span class="d-block p-2">
+                        <b>
+                            <font style="font-size:14px;" t-esc="_text"/>
+                        </b>
+                    </span>
+                </a>
+            </div>
+        </xpath>
+    </template>
+            
+    <record id="website.s_mega_menu_thumbnails_000_scss" model="ir.asset">
+        <field name="name">Menu - Thumbnails 000 SCSS</field>
+        <field name="bundle">web.assets_frontend</field>
+        <field name="path">website/static/src/snippets/s_mega_menu_thumbnails/000.scss</field>
+    </record>
+
+    <template id="option_o_header_hamburger" inherit_id="website.layout" website_id="website.default_website">
+        <xpath expr="//div[@id='wrapwrap']" position="inside">
+            <a href="#" class="header_hamburger_dynco d-none d-md-none d-lg-block" title="Header Hamburger">
+                <i class="fa fa-bars"/>
+            </a>
+        </xpath>
+    </template>
+
+    <template id="sd_product_avail_variants" name="Product Available Variants">
+        <t t-set="product_avail_variants" t-value="website.get_product_avail_variants(product)"/>
+        <hr/>
+        <div class="dropdown dynco_avail_variants show">
+            <a class="btn btn-primary dropdown-toggle" href="#" role="button" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                Available Variants
+            </a>
+            <div class="dropdown-menu" aria-labelledby="dropdownMenuLink">
+                <div class="col-12">
+                    <t t-foreach="product_avail_variants" t-as="prod_avail">
+                        <div class="row">
+                            <div class="col-3 text-center dynco_prod_img">
+                                <img t-attf-src="/web/image/product.template/#{prod_avail.id}/image_1024" class="tp_user_image" height="100" width="100" t-att-alt="prod_avail.name"/>
+                            </div>
+                            <div class="col-7 dynco_prod_name text-left" t-att-data-product-product-id="prod_avail.id">
+                                <a t-att-href="keep('/shop/product/%s' % slug(prod_avail))" target="_blank">
+                                    <span t-esc="prod_avail.name"/>
+                                    <p class="mb-0 font-weight-bold" t-field="prod_avail.list_price" t-options='{"widget": "monetary","display_currency":website.currency_id,}' />
+                                </a>
+                            </div>
+                            <div class="col-2 dynco_cart">
+                                <form action="/shop/cart/update" method="post">
+                                    <t t-set="product_variant_id" t-value="prod_avail._get_first_possible_variant_id()"/>
+                                    <input name="product_id" t-att-value="product_variant_id" type="hidden"/>
+                                    <t t-if="product_variant_id">
+                                        <a href="#" id="available_add_to_cart" role="button" class="btn btn-primary-soft" t-att-data-product-product-id="product_variant_id" aria-label="Shopping cart" title="Shopping cart">
+                                            <span class="fa fa-shopping-cart" />
+                                        </a>
+                                    </t>
+                                </form>
+                            </div>
+                        </div>
+                        <hr class="pt-0 pb-0 mt-1 mb-1"/>
+                    </t>
+                </div>
+            </div>
+        </div>
+    </template>
+
+    <template id="product_inherit_extra_services_inherit" inherit_id="website_product_addon.product_inherit_extra_services">
+        <xpath expr="//t[@t-call='website_product_addon.sd_product_extra_services']" position="before">
+            <!-- product stock availability_messages -->
+            <!-- <div class="availability_messages o_not_editable"/> -->
+            <!-- <div class="terms_and_condition" t-if="request.env.ref('stock_dropshipping.route_drop_shipping').id not in product.sudo().route_ids.ids">
+                <hr/>
+                <div class="row">
+                    <div class="col-auto mb-2">
+                        <img class="img-fluid" src="/dynco_base/static/src/img/content/delivery_truck_black.svg"/>
+                        <div class="mt-2">
+                            <t t-if="product.sudo().allow_out_of_stock_order and combination_info['free_qty'] &lt;= 0">
+                                <span>Dieser Artikel ist zurzeit nicht auf Lager, die Lieferzeit kann bis zu 60 Tagen dauern.</span>
+                            </t>
+                            <t t-elif="product.sudo().qty_available and combination_info['free_qty'] &gt; 0">
+                                <span t-if="product.sudo().sale_delay">Du erhälst deine Bestellung innert 2 - <t t-esc="round(product.sudo().sale_delay)"/> Tage.</span>
+                                <span t-else="">Du erhälst deine Bestellung innert 2-4 Tage.</span>
+                            </t>
+                            <t t-else="">
+                                <span>Dieses Produkt kann zurzeit nicht geliefert werden.</span>
+                            </t>
+                        </div>
+                    </div>
+                </div>
+            </div> -->
+            <!-- product available variants -->
+            <!-- <t t-call="dynco_base.sd_product_avail_variants"/> -->
+            <!-- product marketing text -->
+            <hr t-if="product.webshop_marketing_text != '&lt;p&gt;&lt;br&gt;&lt;/p&gt;' and product.webshop_marketing_text" />
+            <div class="panel" t-if="product.sudo().product_icon_ids">
+                <div class="panel-group" id="accordion">
+                    <div class="panel panel-default">
+                        <div class="panel-heading d-none">
+                            <h4 class="panel-title">
+                                <a href="#tp-product-characteristics-tab" data-toggle="collapse" class="accordion-toggle text-uppercase" data-parent="#accordion" style="color:Black;" aria-expanded="true">eigenschaften</a>
+                            </h4>
+                        </div>
+                        <div id="tp-product-characteristics-tab" class="panel-collapse collapse show">
+                            <div class="panel-body">
+                                <div class="row">
+                                    <t t-foreach="product.sudo().product_icon_ids" t-as="product_icon">
+                                        <div class="col-3 col-lg-2 col-md-2 col-sm-2 pt-2 pb-3 px-1">
+                                            <div class="product-icon">
+                                                <img class="img img-responsive lazyload img-fluid" t-attf-src="/web/image?model=product.icon&amp;id=#{product_icon.id}&amp;field=icon" t-att-alt="product_icon.name" data-aos="fade-zoom-in" data-aos-easing="ease-in-back" data-aos-delay="300" data-aos-offset="0" />
+                                            </div>
+                                        </div>
+                                    </t>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <hr t-if="product.sudo().product_icon_ids"/>
+            <table class="table border mb32" t-if="website.id == 20 and website.name == 'climaqua.com'">
+                <tbody>
+                    <tr>
+                        <th scope="row">PRODUKT GRÖSSE</th>
+                        <td>
+                            <span>Länge</span>
+                            <span t-esc="product.sudo().product_l"/>
+                            <span t-esc="product.sudo().product_l_uom_id.name"/>
+                            <span>/</span>
+                            <span>Breite</span>
+                            <span t-esc="product.sudo().product_b"/>
+                            <span t-esc="product.sudo().product_b_uom_id.name"/>
+                            <span>/</span>
+                            <span>Höhe</span>
+                            <span t-esc="product.sudo().product_h"/>
+                            <span t-esc="product.sudo().product_h_uom_id.name"/>
+                        </td>
+                    </tr>
+                    <tr>
+                        <th scope="row">MATERIAL</th>
+                        <td>
+                            <span t-esc="product.sudo().ch_material"/>
+                        </td>
+                    </tr>
+                    <tr>
+                        <th scope="row">FARBE</th>
+                        <td>
+                            <span t-esc="product.sudo().ch_color"/>
+                        </td>
+                    </tr>
+                    <tr>
+                        <th scope="row">KATEGORIE</th>
+                        <td>
+                            <span t-esc="product.sudo().ch_subcategory"/>
+                        </td>
+                    </tr>
+                    <tr>
+                        <th scope="row">GEWICHT (Netto-Gewicht)</th>
+                        <td>
+                            <span t-esc="product.sudo().product_net_weight"/>
+                            <span t-esc="product.sudo().product_nw_uom_id.name"/>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+            <div t-if="product.webshop_marketing_text != '&lt;p&gt;&lt;br&gt;&lt;/p&gt;' and product.webshop_marketing_text" class="panel-body">
+                <div class="webshop_marketing_text">
+                    <div class="product_text_div text_limited_lines" t-if="product.webshop_marketing_text">
+                        <t t-esc="product.webshop_marketing_text" />
+                    </div>
+                    <div class="read_more_less_btn mt16" t-if="product.webshop_marketing_text">
+                        <button type="button" class="btn btn-primary read_more_btn">Weiterlesen</button>
+                        <button type="button" class="btn btn-primary read_less_btn d-none">Weniger Lesen</button>
+                    </div>
+                </div>
+            </div>
+            <t t-call="theme_prime.product_tabs"/>
+        </xpath>
+    </template>
+
+    <!-- <record id="product_quantity_inh_prod_avail_variants" model="ir.ui.view">
+        <field name="name">product available variants</field>
+        <field name="type">qweb</field>
+        <field name="key">dynco_base.product_quantity_inh_prod_avail_variants</field>
+        <field name="inherit_id" search="[('key', '=', 'website_product_addon.product_quantity_inh_prod_extra_services')]" />
+        <field name="arch" type="xml">
+            <xpath expr="//t[@t-call='website_product_addon.sd_product_extra_services']" position="before">
+                <hr t-if="product.webshop_marketing_text != '&lt;p&gt;&lt;br&gt;&lt;/p&gt;' and product.webshop_marketing_text" />
+                <div t-if="product.webshop_marketing_text != '&lt;p&gt;&lt;br&gt;&lt;/p&gt;' and product.webshop_marketing_text" class="panel-body">
+                    <t t-esc="product.webshop_marketing_text" />
+                </div>
+                <t t-call="dynco_base.sd_product_avail_variants"/>
+            </xpath>
+        </field>
+    </record> -->
+
+    <!-- <record id="product_share_buttons_inherit" model="ir.ui.view">
+        <field name="name">Social Media Share Buttons</field>
+        <field name="type">qweb</field>
+        <field name="key">dynco_base.product_share_buttons_inherit</field>
+        <field name="inherit_id" search="[('key', '=', 'theme_prime.product_price')]" />
+        <field name="arch" type="xml">
+            <xpath expr="//div[hasclass('product_price')]" position="after">
+                social media share buttons
+                <div t-if="is_view_active('website_sale.product_share_buttons')" class="row no-gutters align-items-center">
+                    <div class="col-auto">
+                        <h6 class="mr-2 mb-0">Share :</h6>
+                    </div>
+                    <div class="col-auto">
+                        <t t-snippet-call="website.s_share">
+                            <t t-set="_exclude_share_links" t-value="['whatsapp', 'linkedin']"/>
+                            <t t-set="_no_title" t-value="True"/>
+                            <t t-set="_classes" t-valuef="d-inline-block"/>
+                            <t t-set="_link_classes" t-valuef="d-inline-block"/>
+                        </t>
+                    </div>
+                </div>
+            </xpath>
+        </field>
+    </record> -->
+
+    <record id="theme_prime_product_inherit" model="ir.ui.view">
+        <field name="name">Product Detail</field>
+        <field name="type">qweb</field>
+        <field name="key">dynco_base.theme_prime_product_inherit</field>
+        <field name="inherit_id" search="[('key', '=', 'theme_prime.product')]" />
+        <field name="arch" type="xml">
+            <!-- social media share buttons replace -->
+            <xpath expr="//div[hasclass('row', 'no-gutters', 'align-items-center')]" position="replace"/>
+            <xpath expr="//div[hasclass('tp-hook-product-tabs')]" position="replace"/>
+            <!-- <xpath expr="//a[@id='add_to_cart']" position="after">
+                <a role="button" class="btn btn-primary-soft btn-lg mt-3 mt-md-0 d-block d-md-inline-block w-md-auto ml-0 ml-md-2 js_check_product a-submit o_we_buy_now climaqua_buy_now_btn" href="#">
+                    <i class="dri dri-bolt"/> Buy Now
+                </a>
+            </xpath> -->
+        </field>
+    </record>
+
+    <record id="theme_prime_cart_lines_inherit" model="ir.ui.view">
+        <field name="name">Shopping Cart Lines</field>
+        <field name="type">qweb</field>
+        <field name="key">dynco_base.theme_prime_cart_lines_inherit</field>
+        <field name="inherit_id" search="[('key', '=', 'theme_prime.cart_lines')]" />
+        <field name="arch" type="xml">
+            <xpath expr="//td[hasclass('td-product_name')]/t[@t-call='website_sale.cart_line_description_following_lines']" position="replace">
+            </xpath>
+        </field>
+    </record>
+    <template id="cart_lines_inherit" inherit_id="website_sale.cart_lines" name="Shopping Cart Lines inherit dynco">
+        <xpath expr="//table[@id='cart_products']" position="after">
+            <div t-if="suggested_products">
+                <a role="button" class="btn btn-primary float-right mb-2 d-md-block d-lg-none" href="/shop/checkout?express=1">Zur Kasse</a>
+            </div>
+        </xpath>
+        <xpath expr="//t[@groups='account.group_show_line_subtotals_tax_excluded']" position="before">
+            <t t-if="line.product_id.is_product_multi_price">
+                <t t-set="pricelist" t-value="website.get_current_pricelist()"/>
+                <t t-set="price_rule" t-value="pricelist.get_product_price_rule(line.product_id, 1, request.env.user.partner_id)[1]"/>
+                <t t-if="price_rule">
+                    <t t-set="price_rule" t-value="request.env['product.pricelist.item'].browse(price_rule)"/>
+                    <t t-if="price_rule and price_rule.md_fixed_price">
+                      <t t-set="list_price_converted" t-value="price_rule.md_fixed_price"/>
+                      <t t-set="has_discounted_price" t-value="pricelist.currency_id.compare_amounts(price_rule.md_fixed_price, combination_info['price']) == 1"/>
+                    </t>
+                </t>
+            </t>
+        </xpath>
+        <xpath expr="//t[@groups='account.group_show_line_subtotals_tax_excluded']" position="replace">
+            <t t-if="price_rule and price_rule.md_fixed_price">
+                <t groups="account.group_show_line_subtotals_tax_excluded" t-if="(website_sale_order.pricelist_id.discount_policy == 'without_discount' and has_discounted_price)" name="order_line_discount">
+                    <del t-attf-class="#{'text-danger mr8'}" style="white-space: nowrap;" t-esc="list_price_converted" t-options="{'widget': 'monetary', 'display_currency': website_sale_order.currency_id}"/>
+                </t>
+            </t>
+            <t t-else="">
+                <t groups="account.group_show_line_subtotals_tax_excluded" t-if="(website_sale_order.pricelist_id.discount_policy == 'without_discount' and website_sale_order.currency_id.compare_amounts(list_price_converted, line.price_reduce_taxexcl) == 1) or website_sale_order.currency_id.compare_amounts(line.price_unit, line.price_reduce) == 1" name="order_line_discount">
+                    <del t-attf-class="#{'text-danger mr8'}" style="white-space: nowrap;" t-esc="list_price_converted" t-options="{'widget': 'monetary', 'display_currency': website_sale_order.currency_id}"/>
+                </t>
+            </t>
+        </xpath>
+        <xpath expr="//t[@groups='account.group_show_line_subtotals_tax_included']" position="replace">
+            <t t-if="price_rule and price_rule.md_fixed_price">
+                <t groups="account.group_show_line_subtotals_tax_included" t-if="(website_sale_order.pricelist_id.discount_policy == 'without_discount' and has_discounted_price)" name="order_line_discount">
+                    <del t-attf-class="#{'text-danger mr8'}" style="white-space: nowrap;" t-esc="list_price_converted" t-options="{'widget': 'monetary', 'display_currency': website_sale_order.currency_id}"/>
+                </t>
+            </t>
+            <t t-else="">
+                <t groups="account.group_show_line_subtotals_tax_included" t-if="(website_sale_order.pricelist_id.discount_policy == 'without_discount' and website_sale_order.currency_id.compare_amounts(list_price_converted, line.price_reduce_taxinc) == 1) or website_sale_order.currency_id.compare_amounts(line.price_unit, line.price_reduce) == 1" name="order_line_discount">
+                    <del t-attf-class="#{'text-danger mr8'}" style="white-space: nowrap;" t-esc="list_price_converted" t-options="{'widget': 'monetary', 'display_currency': website_sale_order.currency_id}"/>
+                </t>
+            </t>
+        </xpath>
+    </template>
+
+    <record id="product_tabs_inherit" model="ir.ui.view">
+        <field name="name">Theme Prime: Product Tabs</field>
+        <field name="type">qweb</field>
+        <field name="key">dynco_base.product_tabs_inherit</field>
+        <field name="inherit_id" search="[('key', '=', 'theme_prime.product_tabs')]" />
+        <field name="arch" type="xml">
+            <!-- social media share buttons replace -->
+            <xpath expr="//div[hasclass('tp-product-details-tab')]" position="replace">
+                <div class="tp-product-details-tab dynco_custom container">
+                    <div class="row">
+                        <div class="col-12 col-lg-12 pb-2">
+                            <!-- Video -->
+                            <t t-set="video_ids" t-value="product.product_video_ids"/>
+                            <div class="panel" t-if="len(video_ids)">
+                                <div class="panel-group" id="accordion">
+                                    <div class="panel panel-default">
+                                        <div class="panel-heading">
+                                            <h4 class="panel-title">
+                                                <a href="#product_video" data-toggle="collapse" class="accordion-toggle text-uppercase" data-parent="#accordion" style="color:Black;">Video</a>
+                                            </h4>
+                                        </div>
+                                        <div id="product_video" class="panel-collapse collapse show">
+                                            <div class="panel-body">
+                                              <div class="owl-carousel product_video_popup_le owl-theme">
+                                                  <t t-foreach="video_ids" t-as="product_v">
+                                                      <t t-set="video_url" t-value="product_v.video_url"/>
+                                                      <t t-set="domain" t-value="video_url.split('/')[2]"/>
+                                                      <div class="item">
+                                                        <t t-if="domain == 'player.vimeo.com'">
+                                                          <a tabindex="0" role="button" class="video_play_url_main_popup_cl_le" t-att-data-src="video_url">
+                                                            <img t-attf-src="data:image/png;base64,{{product_v.image}}"/>
+                                                          </a>
+                                                        </t>
+                                                        <t t-if="domain == 'www.youtube.com'">
+                                                          <a tabindex="0" role="button" class="video_play_url_main_popup_cl_le" t-att-data-src="video_url.replace('watch?v=', 'embed/')">
+                                                            <img t-attf-src="data:image/png;base64,{{product_v.image}}"/>
+                                                          </a>
+                                                        </t>
+                                                      </div>
+                                                  </t>
+                                              </div>
+                                            </div>
+                                        </div>
+                                        <div class="modal fade" id="myModalvideopopupcl" tabindex="-1" role="dialog" aria-hidden="true">
+                                          <div class="modal-dialog" role="document">
+                                              <div class="modal-content">
+                                                <div class="modal-body">
+                                                   <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                                      <span>&amp;times;</span>
+                                                    </button>
+                                                <div class="embed-responsive embed-responsive-16by9">
+                                                  <iframe class="embed-responsive-item" src="" id="video" allowFullScreen="allowFullScreen"></iframe>
+                                                </div>
+                                                </div>
+                                              </div>
+                                          </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- Technical Data -->
+                            <div class="panel" t-if="product.sudo().product_l or product.sudo().product_b or product.sudo().product_h or product.sudo().product_gross_weight or product.sudo().product_net_weight or product.sudo().customer_unit or product.sudo().cu_l or product.sudo().cu_b or product.sudo().cu_h or product.sudo().volume or product.sudo().weight or product.sudo().net_weight_cu">
+                                <div class="panel-group" id="accordion">
+                                    <div class="panel panel-default">
+                                        <div class="panel-heading">
+                                            <h4 class="panel-title">
+                                                <a href="#tp-product-technical-data-tab" data-toggle="collapse" class="accordion-toggle collapsed text-uppercase" data-parent="#accordion" style="color:Black;">Technical Data</a>
+                                            </h4>
+                                        </div>
+                                        <div id="tp-product-technical-data-tab" class="panel-collapse collapse">
+                                            <div class="panel-body">
+                                                <table class='table table-condensed' style="border: 1px solid #dee2e6;">
+                                                    <tr>
+                                                        <th colspan="2" style="font-size: 16px;text-align: center;background-color: rgba(0, 0, 0, 0.05);">Product</th>
+                                                    </tr>
+                                                    <tr t-if="product.sudo().product_l" class="product_l" t-att-id="'product_l-%s' % product.sudo().id" t-att-value="'%s' % product.sudo().product_l">
+                                                        <td>
+                                                            <b>Product Length</b>
+                                                        </td>
+                                                        <td>
+                                                          <span t-esc="product.sudo().product_l"/>
+                                                          <span t-esc="product.sudo().product_l_uom_id.name"/>
+                                                        </td>
+                                                    </tr>
+                                                    <tr t-if="product.sudo().product_b" class="product_b" t-att-id="'product_b-%s' % product.sudo().id" t-att-value="'%s' % product.sudo().product_b">
+                                                        <td>
+                                                            <b>Product Breadth</b>
+                                                        </td>
+                                                        <td>
+                                                          <span t-esc="product.sudo().product_b"/>
+                                                          <span t-esc="product.sudo().product_b_uom_id.name"/>
+                                                        </td>
+                                                    </tr>
+                                                    <tr t-if="product.sudo().product_h" class="product_h" t-att-id="'product_h-%s' % product.sudo().id" t-att-value="'%s' % product.sudo().product_h">
+                                                        <td>
+                                                            <b>Product Height</b>
+                                                        </td>
+                                                        <td>
+                                                          <span t-esc="product.sudo().product_h"/>
+                                                          <span t-esc="product.sudo().product_h_uom_id.name"/>
+                                                        </td>
+                                                    </tr>
+                                                    <tr t-if="product.sudo().product_gross_weight" class="product_gross_weight" t-att-id="'product_gross_weight-%s' % product.sudo().id" t-att-value="'%s' % product.sudo().product_gross_weight">
+                                                        <td>
+                                                            <b>Product Gross Weight</b>
+                                                        </td>
+                                                        <td>
+                                                          <span t-esc="product.sudo().product_gross_weight"/>
+                                                          <span t-esc="product.sudo().product_gw_uom_id.name"/>
+                                                        </td>
+                                                    </tr>
+                                                    <tr t-if="product.sudo().product_net_weight" class="product_net_weight" t-att-id="'product_net_weight-%s' % product.sudo().id" t-att-value="'%s' % product.sudo().product_net_weight">
+                                                        <td>
+                                                            <b>Product Net Weight</b>
+                                                        </td>
+                                                        <td>
+                                                          <span t-esc="product.sudo().product_net_weight"/>
+                                                          <span t-esc="product.sudo().product_nw_uom_id.name"/>
+                                                        </td>
+                                                    </tr>
+                                                    <!-- <tr>
+                                                        <th colspan="2" style="font-size: 16px;text-align: center;background-color: rgba(0, 0, 0, 0.05);">Packaging</th>
+                                                    </tr>
+                                                    <tr t-if="product.sudo().customer_unit" class="customer_unit" t-att-id="'customer_unit-%s' % product.sudo().id" t-att-value="'%s' % product.sudo().customer_unit">
+                                                        <td>
+                                                            <b>CU Quantity of Products</b>
+                                                        </td>
+                                                        <td>
+                                                            <span t-esc="product.sudo().customer_unit" />
+                                                            <span t-esc="product.sudo().customer_unit_uom_id.name" />
+                                                        </td>
+                                                    </tr>
+                                                    <tr t-if="product.sudo().cu_l" class="cu_l" t-att-id="'cu_l-%s' % product.sudo().id" t-att-value="'%s' % product.sudo().cu_l">
+                                                        <td>
+                                                            <b>CU Length</b>
+                                                        </td>
+                                                        <td>
+                                                            <span t-esc="product.sudo().cu_l" />
+                                                            <span t-esc="product.sudo().cu_l_uom_id.name" />
+                                                        </td>
+                                                    </tr>
+                                                    <tr t-if="product.sudo().cu_b" class="cu_b" t-att-id="'cu_b-%s' % product.sudo().id" t-att-value="'%s' % product.sudo().cu_b">
+                                                        <td>
+                                                            <b>CU Width</b>
+                                                        </td>
+                                                        <td>
+                                                            <span t-esc="product.sudo().cu_b" />
+                                                            <span t-esc="product.sudo().cu_b_uom_id.name" />
+                                                        </td>
+                                                    </tr>
+                                                    <tr t-if="product.sudo().cu_h" class="cu_h" t-att-id="'cu_h-%s' % product.sudo().id" t-att-value="'%s' % product.sudo().cu_h">
+                                                        <td>
+                                                            <b>CU Height</b>
+                                                        </td>
+                                                        <td>
+                                                            <span t-esc="product.sudo().cu_h" />
+                                                            <span t-esc="product.sudo().cu_h_uom_id.name" />
+                                                        </td>
+                                                    </tr>
+                                                    <tr t-if="product.sudo().volume" class="volume" t-att-id="'volume-%s' % product.sudo().id" t-att-value="'%s' % product.sudo().volume">
+                                                        <td>
+                                                            <b>CU Volume</b>
+                                                        </td>
+                                                        <td>
+                                                            <span t-esc="product.sudo().volume" />
+                                                            <span>m³</span>
+                                                        </td>
+                                                    </tr>
+                                                    <tr t-if="product.sudo().weight" class="weight" t-att-id="'weight-%s' % product.sudo().id" t-att-value="'%s' % product.sudo().weight">
+                                                        <td>
+                                                            <b>CU Gross weight</b>
+                                                        </td>
+                                                        <td>
+                                                            <span t-esc="product.sudo().weight" />
+                                                            <span t-esc="product.sudo().weight_uom_id.name" />
+                                                        </td>
+                                                    </tr>
+                                                    <tr t-if="product.sudo().net_weight_cu" class="net_weight_cu" t-att-id="'net_weight_cu-%s' % product.sudo().id" t-att-value="'%s' % product.sudo().net_weight_cu">
+                                                        <td>
+                                                            <b>CU Net weight</b>
+                                                        </td>
+                                                        <td>
+                                                            <span t-esc="product.sudo().net_weight_cu" />
+                                                            <span t-esc="product.sudo().net_weight_cu_uom_id.name" />
+                                                        </td>
+                                                    </tr> -->
+                                                </table>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- Characteristics -->
+                            <div class="panel" t-if="product.sudo().product_icon_ids">
+                                <div class="panel-group" id="accordion">
+                                    <div class="panel panel-default">
+                                        <div class="panel-heading">
+                                            <h4 class="panel-title">
+                                                <a href="#tp-product-characteristics-tab" data-toggle="collapse" class="accordion-toggle collapsed text-uppercase" data-parent="#accordion" style="color:Black;">Characteristics</a>
+                                            </h4>
+                                        </div>
+                                        <div id="tp-product-characteristics-tab" class="panel-collapse collapse">
+                                            <div class="panel-body">
+                                                <div class="row">
+                                                    <t t-foreach="product.sudo().product_icon_ids" t-as="product_icon">
+                                                        <div class="col-3 col-lg-2 col-md-2 col-sm-2 pt-2 pb-3">
+                                                            <div class="product-icon">
+                                                                <img class="img img-responsive lazyload img-fluid" t-attf-src="/web/image?model=product.icon&amp;id=#{product_icon.id}&amp;field=icon" t-att-alt="product_icon.name" data-aos="fade-zoom-in" data-aos-easing="ease-in-back" data-aos-delay="300" data-aos-offset="0" />
+                                                            </div>
+                                                        </div>
+                                                    </t>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- Documents -->
+                            <t t-set="product_documents_ids" t-value="product.sudo().dr_document_ids"/>
+                            <div class="panel" t-if="product_documents_ids">
+                                <div class="panel-group" id="accordion">
+                                    <div class="panel panel-default">
+                                        <div class="panel-heading">
+                                            <h4 class="panel-title">
+                                                <a href="#tp-product-documents-tab" data-toggle="collapse" class="accordion-toggle collapsed text-uppercase" data-parent="#accordion" style="color:Black;">Documents</a>
+                                            </h4>
+                                        </div>
+                                        <div id="tp-product-documents-tab" class="panel-collapse collapse">
+                                            <div class="panel-body">
+                                                <div class="container">
+                                                    <div class="row pb-2">
+                                                        <t t-foreach="product_documents_ids" t-as="document">
+                                                            <div class="col-12 col-sm-6 col-md-4 col-lg-3 my-2">
+                                                                <div class="d-flex align-items-center p-2 border">
+                                                                    <div class="o_image" t-att-data-mimetype="document.mimetype"/>
+                                                                    <div class="ml-2 text-truncate">
+                                                                        <div t-field="document.name" t-att-title="document.name"/>
+                                                                        <a t-attf-href="/web/content/#{document.id}?download=true" class="btn btn-primary-soft btn-sm mt-1">
+                                                                            <i class="fa fa-download"/> Download
+                                                                        </a>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </t>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- Additional Information -->
+                            <div class="panel" t-if="product.sudo().additional_info != '&lt;p&gt;&lt;br&gt;&lt;/p&gt;' and product.sudo().additional_info">
+                                <div class="panel-group" id="accordion">
+                                    <div class="panel panel-default">
+                                        <div class="panel-heading">
+                                            <h4 class="panel-title">
+                                                <a href="#tp-product-additional_info-tab" data-toggle="collapse" class="accordion-toggle collapsed text-uppercase" data-parent="#accordion" style="color:Black;">Additional Information</a>
+                                            </h4>
+                                        </div>
+                                        <div id="tp-product-additional_info-tab" class="panel-collapse collapse">
+                                            <div class="panel-body">
+                                                <t t-esc="product.additional_info" />
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- Specifications -->
+                            <div class="panel" t-if="is_view_active('website_sale_comparison.product_attributes_body')">
+                                <div class="panel-group" id="accordion">
+                                    <div class="panel panel-default">
+                                        <div class="panel-heading">
+                                            <h4 class="panel-title">
+                                                <a href="#tp-product-specification-tab" data-toggle="collapse" class="accordion-toggle collapsed text-uppercase" data-parent="#accordion" style="color:Black;">Specifications</a>
+                                            </h4>
+                                        </div>
+                                        <div id="tp-product-specification-tab" class="panel-collapse collapse">
+                                            <div class="panel-body">
+                                                <section class="container border-0" id="product_full_spec">
+                                                    <t t-set="categories" t-value="product.valid_product_template_attribute_line_ids._prepare_categories_for_display()"/>
+                                                    <t t-if="categories">
+                                                        <div class="row py-4">
+                                                            <div class="col-12 col-lg-8 offset-lg-2" id="product_specifications">
+                                                                <table class="table mb-0 border">
+                                                                    <t t-foreach="categories" t-as="categ">
+                                                                        <t t-if="len(categories) > 1">
+                                                                            <tr class="shadow-sm bg-light">
+                                                                                <th class="text-left" t-att-colspan="2">
+                                                                                    <span t-if="categ" t-field="categ.name"/>
+                                                                                    <span t-else="">Uncategorized</span>
+                                                                                </th>
+                                                                            </tr>
+                                                                        </t>
+                                                                        <tr t-foreach="categories[categ].filtered(lambda l: len(l.value_ids) > 1)" t-as="ptal">
+                                                                            <td><span t-field="ptal.attribute_id.name"/></td>
+                                                                            <td>
+                                                                                <t t-foreach="ptal.value_ids" t-as="pav">
+                                                                                    <span t-field="pav.name"/><t t-if="not pav_last"> or</t>
+                                                                                </t>
+                                                                            </td>
+                                                                        </tr>
+                                                                        <t t-set="single_value_attributes" t-value="categories[categ]._prepare_single_value_for_display()"/>
+                                                                        <tr t-foreach="single_value_attributes" t-as="attribute">
+                                                                            <td><span t-field="attribute.name"/></td>
+                                                                            <td>
+                                                                                <t t-foreach="single_value_attributes[attribute]" t-as="ptal">
+                                                                                    <span t-field="ptal.product_template_value_ids._only_active().name"/><t t-if="not ptal_last">, </t>
+                                                                                </t>
+                                                                            </td>
+                                                                        </tr>
+                                                                    </t>
+                                                                </table>
+                                                            </div>
+                                                        </div>
+                                                    </t>
+                                                    <div class="p-4 text-center" t-else="">
+                                                        No Specifications
+                                                    </div>
+                                                </section>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- Reviews and Rating -->
+                            <!-- <div class="panel" t-if="is_view_active('website_sale.product_comment')">
+                                <div class="panel-group" id="accordion">
+                                    <div class="panel panel-default">
+                                        <div class="panel-heading">
+                                            <h4 class="panel-title">
+                                                <a href="#tp-product-rating-tab" data-toggle="collapse" class="accordion-toggle collapsed text-uppercase" data-parent="#accordion" style="color:Black;">Reviews &amp; Rating</a>
+                                            </h4>
+                                        </div>
+                                        <div id="tp-product-rating-tab" class="panel-collapse collapse">
+                                            <div class="panel-body">
+                                                <div class="o_shop_discussion_rating container">
+                                                    <section class="container">
+                                                        <div class="row mt-4">
+                                                            <div class="col-lg-8 offset-lg-2">
+                                                                <t t-call="portal.message_thread">
+                                                                    <t t-set="object" t-value="product"/>
+                                                                    <t t-set="display_rating" t-value="True"/>
+                                                                </t>
+                                                            </div>
+                                                        </div>
+                                                    </section>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div> -->
+                            <!-- Dynamic Tabs -->
+                            <div t-foreach="product.dr_product_tab_ids" t-as="tab" class="panel">
+                                <div class="panel-group" id="accordion">
+                                    <div class="panel panel-default">
+                                        <div class="panel-heading">
+                                            <h4 class="panel-title">
+                                                <a t-attf-href="#tp-product-tab-#{tab.id}" data-toggle="collapse" class="accordion-toggle collapsed text-uppercase" data-parent="#accordion" style="color:Black;"><span t-field="tab.name"/></a>
+                                            </h4>
+                                        </div>
+                                        <div t-attf-id="tp-product-tab-#{tab.id}" class="panel-collapse collapse">
+                                            <div class="panel-body">
+                                                <div class="container-fluid">
+                                                    <div class="row m-0 py-2">
+                                                        <div class="col-12">
+                                                            <div t-field="tab.content"/>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </xpath>
+        </field>
+    </record>
+
+    <record id="tp_product_quick_view_inherit" model="ir.ui.view">
+        <field name="name">Product Quick View</field>
+        <field name="type">qweb</field>
+        <field name="key">dynco_base.tp_product_quick_view_inherit</field>
+        <field name="inherit_id" search="[('key', '=', 'theme_prime.tp_product_quick_view')]" />
+        <field name="arch" type="xml">
+            <xpath expr="//ul[hasclass('tp-share')]" position="replace"/>
+            <xpath expr="//h6[hasclass('d-inline-block', 'mr-2')]" position="replace"/>
+            <xpath expr="//h3[@t-field='product.name']" position="replace">
+                <h3 t-if="product.webshop_product_name" class="text-truncate" itemprop="name" t-field="product.webshop_product_name">Webshop Product Name</h3>
+                <h3 t-else="" class="text-truncate" itemprop="name" t-field="product.name">Product Name</h3>
+            </xpath>
+        </field>
+    </record>
+    
+    <template id="product_details_inherit" inherit_id="website_sale.product">
+        <xpath expr="//h1[@t-field='product.name']" position="replace">
+            <t t-set="product_ribbon" t-value="product._get_website_ribbon()"/>
+            <div class="product_ribbon" t-if="product_ribbon">
+                <span t-attf-class="tp-product-label-style-1 mb-1 flat px-3 py-1 #{product_ribbon.html_class}" t-attf-style="background-color: rgba(#{product_ribbon.bg_color}, .8); color: #{product_ribbon.text_color}; transform: unset !important;">
+                    <span t-field="product_ribbon.html"/>
+                </span>
+            </div>
+            <t t-set="availability_check"  t-value="website.get_product_stock_available(product)" />
+            <t t-if="availability_check.get('is_out_of_stock') and not product.allow_out_of_stock_order and not product.sudo().avail_only_specific_countries">
+                <span class="tp-product-label-style-1 mb-1 flat px-2 py-1" style="background-color: red; color: #FFFFFF;">
+                    <strong>OUT OF STOCK</strong>
+                </span>
+            </t>
+            <t t-if="product.sudo().avail_only_specific_countries">
+                <t t-if="product.check_available_country()">
+                    <t t-if="product.sudo().stock_availability_for_warehouse">
+                        <t t-set="availability_check" t-value="website.check_add_to_cart_product_stock(product)" />
+                        <t t-set="available_threshold" t-value="website.check_available_threshold(product)" />
+
+                        <t t-if="available_threshold.get('available_threshold')">
+                        </t>
+                        <t t-elif="available_threshold.get('prevent_inventory_out')">
+                            <span class="tp-product-label-style-1 mb-1 flat px-2 py-1" style="background-color: red; color: #FFFFFF;">OUT OF STOCK</span>
+                        </t>
+                        <t t-elif="available_threshold.get('prevent_inventory_in')">
+                        </t>
+                        <t t-else="">
+                            <t t-if="availability_check.get('is_out_of_stock')">
+                                <span class="tp-product-label-style-1 mb-1 flat px-2 py-1" style="background-color: red; color: #FFFFFF;">OUT OF STOCK</span>
+                            </t>
+                        </t>
+                    </t>
+                </t>
+                <t t-else="">
+                    <span class="tp-product-label-style-1 mb-1 flat px-2 py-1 not_avail_in_you_country" style="background-color: red; color: #FFFFFF;">
+                    NOT AVAILABLE</span>
+                </t>
+            </t>
+            <t t-if="request.website.id == 9">
+                <t t-set="product_pricelist_offer" t-value="product._get_product_pricelist_offer()"/>
+                <t t-if="product_pricelist_offer">
+                    <h6 t-field="product_pricelist_offer['rule'].dr_offer_msg"/>
+                </t>
+            </t>
+            <div class="dynco_webshop_name lechuza">
+                <t t-if="product.webshop_product_name">
+                    <h1 itemprop="name" t-field="product.webshop_product_name">Product Name</h1>
+                </t>
+                <t t-else="">
+                    <h1 itemprop="name" t-field="product.name">Product Name</h1>
+                </t>
+            </div>
+        </xpath>
+        <xpath expr="//p[@t-field='product.description_sale']" position="replace"/>
+        <xpath expr="//div[@id='o_product_terms_and_share']" position="before">
+            <!-- Reviews and Rating -->
+            <div id="o_product_page_reviews" t-if="is_view_active('website_sale.product_comment')">
+                <div class="">
+                    <div class="">
+                        <div class="">
+                            <h4 class="text-uppercase">
+                                Reviews &amp; Rating
+                            </h4>
+                        </div>
+                        <div id="tp-product-rating-tab-ih" class="">
+                            <div class="">
+                                <div class="o_shop_discussion_rating container">
+                                    <section class="container">
+                                        <div class="row mt-4">
+                                            <div class="col-md-12">
+                                                <t t-call="portal.message_thread">
+                                                    <t t-set="object" t-value="product"/>
+                                                    <t t-set="display_rating" t-value="True"/>
+                                                </t>
+                                            </div>
+                                        </div>
+                                    </section>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="mb-3" t-if="user_id._is_public()">
+                            <p>Anmelden, um eine Bewertung zu schreiben.</p>
+                            <a role="button" t-att-href="'/web/login?redirect=/shop/%s#o_product_page_reviews' % slug(product)" class="btn btn-primary loging_button_product my-1 mr-1 px-5 flex-grow-1">Log In</a>
+                            <hr/>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <hr t-if="not user_id._is_public()" />
+            <form t-if="product._is_add_to_cart_possible()" action="/shop/cart/update" method="POST">
+                <input type="hidden" name="csrf_token" t-att-value="request.csrf_token()" />
+                <div class="js_product js_main_product mb-3">
+                    <t t-placeholder="select">
+                        <input type="hidden" class="product_id" name="product_id" t-att-value="product_variant.id" />
+                        <input type="hidden" class="product_template_id" name="product_template_id" t-att-value="product.id" />
+                        <input t-if="product.public_categ_ids.ids" type="hidden" class="product_category_id" name="product_category_id" t-att-value="product.public_categ_ids.ids[0]" />
+                        <t t-if="combination" t-call="sale.variants">
+                            <t t-set="ul_class" t-valuef="flex-column" />
+                            <t t-set="parent_combination" t-value="None" />
+                        </t>
+                        <t t-else="">
+                            <ul class="d-none js_add_cart_variants" t-att-data-attribute_exclusions="{'exclusions: []'}"/>
+                        </t>
+                    </t>
+                    <div id="add_to_cart_wrap" class="d-inline">
+                        <!-- <p>Mach dich glücklich und hol dir die Natur ins Haus!</p> -->
+                        <!-- <t t-call="website_sale_product_avail_country.product_avail_by_country_add_to_cart_button" /> -->
+                        <div id="product_option_block" class="d-inline-block align-middle"/>
+                    </div>
+                </div>
+            </form>
+        </xpath>
+        <!-- <xpath expr="//div//t[@t-call='website_sale.shop_product_carousel']" position="after">
+            <t t-call="theme_prime.product_tabs"/>
+        </xpath> -->
+    </template>
+
+    <record id="knk_plus_shipping_and_handling" model="ir.ui.view">
+        <field name="name">plus shipping and handling</field>
+        <field name="name">qweb</field>
+        <field name="key">dynco_base.product</field>
+        <field name="inherit_id" search="[('key', '=', 'website_sale.product_price')]" />
+        <field name="arch" type="xml">
+            <xpath expr="//div[hasclass('product_price')]" position="before">
+                <div>
+                    <tr t-if="product.sudo().default_code">
+                        <td>
+                            Item No:&amp;nbsp
+                        </td>
+                        <td t-esc="product.sudo().default_code" />
+                    </tr>
+                </div>
+            </xpath>
+        </field>
+    </record>
+
+    <record id="knk_product_delivery_time" model="ir.ui.view">
+        <field name="name">theme prime delivery time</field>
+        <field name="type">qweb</field>
+        <field name="key">dynco_base.product</field>
+        <field name="inherit_id" search="[('key', '=', 'theme_prime.product')]" />
+        <field name="arch" type="xml">
+            <xpath expr="//div[hasclass('col-auto', 'text-center', 'my-1')][3]" position="replace"/>
+            <xpath expr="//div[hasclass('col-auto', 'text-center', 'my-1')][2]" position="replace"/>
+            <xpath expr="//div[hasclass('col-auto', 'text-center', 'my-1')][1]" position="replace">
+                <div class="col-auto text-center my-1">
+                    <img class="img-fluid" src="/dynco_base/static/src/img/content/delivery_truck.svg"/>
+                    <div class="mt-2">
+                        <span t-if="product.sale_delay">Delivery time <t t-esc="round(product.sale_delay)"/> Days</span>
+                        <span t-else="" t-esc="website.delivey_time"/>
+                    </div>
+                </div>
+            </xpath>
+        </field>
+    </record>
+
+    <record id="md_product_hide_accessory_products" model="ir.ui.view">
+        <field name="name">theme prime hide accessory products</field>
+        <field name="type">qweb</field>
+        <field name="key">dynco_base.md_product_hide_accessory_products</field>
+        <field name="inherit_id" search="[('key', '=', 'theme_prime.product'), ('website_id', '=', 20)]" />
+        <field name="website_id" search="[('id', '=', 20)]"/>
+        <field name="arch" type="xml">
+            <xpath expr="//t[@t-set='has_accessory_products']" position="replace">
+                <t t-set="has_accessory_products" t-value="false"></t>
+            </xpath>
+        </field>
+    </record>
+
+    <record id="cart_banner_removed_inherit" model="ir.ui.view">
+        <field name="name">Shopping Cart Banner Removed</field>
+        <field name="type">qweb</field>
+        <field name="key">dynco_base.cart_banner_removed_inherit</field>
+        <field name="inherit_id" search="[('key', '=', 'theme_prime.cart')]" />
+        <field name="arch" type="xml">
+            <xpath expr="//div[@id='oe_structure_website_sale_cart_1']" position="replace"/>
+        </field>
+    </record>
+
+    <!-- Website Address form -->
+    <template id="lechuza_website_address_inh" inherit_id="website_sale.address" name="Lechuza Website Address Form" website_id="dynco_multi_website.lechuza_website_spt">
+        <xpath expr="//select[@id='country_id']" position="replace">
+            <select id="country_id" name="country_id" t-attf-class="form-control #{error.get('country_id') and 'is-invalid' or ''}" t-att-mode="mode[1]">
+                <option value="">Country...</option>
+                <t t-foreach="countries" t-as="c">
+                    <option t-if="c.code in ['LI', 'CH']" t-att-value="c.id" t-att-selected="c.id == (country and country.id or -1)">
+                        <t t-esc="c.name"/>
+                    </option>
+                </t>
+            </select>
+        </xpath>
+        <xpath expr="//select[@name='state_id']//.." position="attributes">
+            <attribute name="t-attf-class" add="lechuza_state" separator=" "/>
+        </xpath>
+    </template>
+
+    <template id="climaqua_website_address_inh" inherit_id="website_sale.address" name="climaqua Website Address Form" website_id="__export__.website_20_e3037958">
+        <xpath expr="//div[contains(@t-attf-class, 'div_name')]" position="replace">
+            <div t-attf-class="form-group #{error.get('name') and 'o_has_error' or ''} col-lg-6 div_name">
+                <label class="col-form-label" for="name">Name</label>
+                <input type="text" name="name" t-attf-class="form-control #{error.get('name') and 'is-invalid' or ''}" t-att-value="'name' in checkout and checkout['name'].strip().split(' ')[0] or ''" />
+            </div>
+            <div t-attf-class="form-group #{error.get('name') and 'o_has_error' or ''} col-lg-6 div_name">
+                <label class="col-form-label" for="last_name">Vorname</label>
+                <input type="text" name="last_name" t-attf-class="form-control #{error.get('name') and 'is-invalid' or ''}" t-att-value="'name' in checkout and (len(checkout['name'].strip().split(' ')) > 1 and checkout['name'].strip().split(' ')[1] or '') or ''" />
+            </div>
+        </xpath>
+        <xpath expr="//div[@id='div_phone']/label" position="after">
+            <span><small>(damit wir dich für die pünktliche Zustellung der Ware, insbesondere bei grösseren Lieferungen, erreichen können. Danke!)</small></span>
+        </xpath>
+        <xpath expr="//select[@id='country_id']" position="replace">
+            <select id="country_id" name="country_id" t-attf-class="form-control #{error.get('country_id') and 'is-invalid' or ''}" t-att-mode="mode[1]">
+                <option value="">Country...</option>
+                <t t-foreach="countries" t-as="c">
+                    <option t-if="c.code in ['CH', 'DE', 'AT', 'LI', 'NL', 'BE', 'LU', 'FR', 'DK', 'PL', 'CZ', 'IT']" t-att-value="c.id" t-att-selected="c.id == (country and country.id or -1)">
+                        <t t-esc="c.name"/>
+                    </option>
+                </t>
+            </select>
+        </xpath>
+    </template>
+
+    <template id="pelletray_website_address_inh" inherit_id="website_sale.address" name="pelletray Website Address Form" website_id="dynco_base.pelletray_website">
+        <xpath expr="//select[@id='country_id']" position="replace">
+            <select id="country_id" name="country_id" t-attf-class="form-control #{error.get('country_id') and 'is-invalid' or ''}" t-att-mode="mode[1]">
+                <option value="">Country...</option>
+                <t t-foreach="countries" t-as="c">
+                    <option t-if="c.code in ['CH', 'DE', 'AT', 'LI', 'NL', 'BE', 'LU', 'FR', 'DK', 'PL', 'CZ', 'IT']" t-att-value="c.id" t-att-selected="c.id == (country and country.id or -1)">
+                        <t t-esc="c.name"/>
+                    </option>
+                </t>
+            </select>
+        </xpath>
+    </template>
+
+    <template id="clima_website_address_inh" inherit_id="website_sale.address" name="Climaqua Website Address Form">
+        <xpath expr="//input[@name='name']/.." position="before">
+            <!-- <t t-if=""> -->
+            <!-- <div class="custom-control custom-radio custom-control-inline">
+                <input type="radio" class="custom-control-input" id="defaultInline1" name="company_type" t-att-checked="'checked' if 'company_type' in checkout and checkout['company_type'] == 'person' else None" value="person" />
+                <label class="custom-control-label" for="defaultInline1">Private</label>
+            </div>
+            <div class="custom-control custom-radio custom-control-inline">
+                <input type="radio" class="custom-control-input" id="defaultInline2" name="company_type" t-att-checked="'checked' if 'company_type' in checkout and checkout['company_type'] == 'company' else None" value="company" />
+                <label class="custom-control-label" for="defaultInline2">Company</label>
+            </div> -->
+            <!-- </t> -->
+        </xpath>
+        <xpath expr="//input[@name='field_required']" position="replace">
+            <input type="hidden" name="field_required" t-att-value="'name'"/>
+        </xpath>
+        <xpath expr="//div[@id='div_phone']//label" position="attributes">
+            <attribute name="class" add="label-optional" separator=" "/>
+        </xpath>
+        <xpath expr="//label[@for='name']" position="after">
+            <font style="vertical-align: inherit;"> *</font>
+        </xpath>
+        <xpath expr="//label[@for='email']" position="after">
+            <font style="vertical-align: inherit;"> *</font>
+        </xpath>
+        <xpath expr="//label[@for='street']" position="after">
+            <font style="vertical-align: inherit;"> *</font>
+        </xpath>
+        <xpath expr="//label[@for='zip']" position="after">
+            <font style="vertical-align: inherit;"> *</font>
+        </xpath>
+        <xpath expr="//label[@for='city']" position="after">
+            <font style="vertical-align: inherit;"> *</font>
+        </xpath>
+    </template>
+
+    <template id="knk_payment_confirmation_status_inh" inherit_id="website_sale.payment_confirmation_status">
+        <xpath expr="//div[hasclass('card-header')]" position="replace">
+            <div class="card-header knk_qrcode_info" t-att-style="'background-color:#ffffff !important;color: #000000 !important;' if order.get_portal_last_transaction().acquirer_id.show_qrcode else None">
+                <t t-if="order.qrcode_qrbill and order.get_portal_last_transaction().acquirer_id.provider == 'transfer' and order.get_portal_last_transaction().acquirer_id.show_qrcode">
+                </t>
+                <t t-else="">
+                    <a role="button" groups="base.group_system" class="btn btn-sm btn-link text-white float-right" target="_blank" aria-label="Edit" title="Edit" t-att-href="'/web#model=%s&amp;id=%s&amp;action=%s&amp;view_type=form' % ('payment.acquirer', payment_tx_id.acquirer_id.id, 'payment.action_payment_acquirer')">
+                        <i class="fa fa-pencil"></i>
+                    </a>
+                </t>
+                <t t-if="payment_tx_id.state == 'pending'">
+                    <t t-if="order.qrcode_qrbill and order.get_portal_last_transaction().acquirer_id.provider == 'transfer' and order.get_portal_last_transaction().acquirer_id.show_qrcode">
+                        <div class="col-12">
+                            <div class="row">
+                                <h3>Please make a payment to:</h3><br />
+                            </div>
+                        </div>
+                        <div class="col-12">
+                            <div class="row">
+                                <div class="col-xs-12 col-md-6 col-lg-6 py-2">
+                                    <img class="swissqr" t-attf-src="data:image/png;base64,{{order.qrcode_qrbill}}" alt="QR-Invoice" style="height: 57.5mm;width: 57.5mm;" />
+                                </div>
+                                <div class="col-xs-12 col-md-6 col-lg-6 py-2">
+                                    <span class="title font-weight-bold">Account Holder</span><br/>
+                                    <span class="content" t-field="order.partner_bank_id.partner_id.name"/><br/><br/>
+                                    <span class="title font-weight-bold">Account / Payable to</span><br />
+                                    <span class="content" t-field="order.partner_bank_id.acc_number" /><br />
+                                    <span class="content" t-field="order.company_id.name" /><br />
+                                    <span class="content" t-field="order.company_id.street" /><br />
+                                    <span class="content" t-field="order.company_id.country_id.code" />
+                                    <span class="content" t-field="order.company_id.zip" />
+                                    <span class="content" t-field="order.company_id.city" /><br /><br />
+                                    <span class="title font-weight-bold">Sobald wir die Zahlung erhalten haben, wird deine Bestellung verschickt. Damit sich die Lieferung nicht verzögert, begleiche den offenen Betrag bitte innert den nächsten 5 Tagen.</span><br />
+                                    <span class="content" t-field="order.partner_id.commercial_partner_id.name" /><br />
+                                    <span class="content" t-field="order.partner_id.street"> </span>
+                                    <span class="content" t-field="order.partner_id.street2" /><br />
+                                    <span class="content" t-field="order.partner_id.country_id.code" />
+                                    <span class="content" t-field="order.partner_id.zip" />
+                                    <span class="content" t-field="order.partner_id.city" /><br />
+                                </div>
+                            </div>
+                        </div>
+                    </t>
+                    <t t-else="">
+                        <t t-raw="payment_tx_id.acquirer_id.pending_msg" />
+                    </t>
+                </t>
+                <t t-if="payment_tx_id.state == 'done'">
+                    <span t-if='payment_tx_id.acquirer_id.done_msg' t-raw="payment_tx_id.acquirer_id.done_msg" />
+                </t>
+                <t t-if="payment_tx_id.state == 'cancel'">
+                    <t t-raw="payment_tx_id.acquirer_id.cancel_msg" />
+                </t>
+                <t t-if="payment_tx_id.state == 'authorized'">
+                    <span>Your payment has been authorized.</span>
+                </t>
+                <t t-if="payment_tx_id.state == 'error'">
+                    <span t-esc="payment_tx_id.state_message" />
+                </t>
+            </div>
+        </xpath>
+    </template>
+    <record id="product_item_2_inherit_webshop_product_name" model="ir.ui.view">
+        <field name="name">Webshop Product name</field>
+        <field name="type">qweb</field>
+        <field name="key">dynco_base.product_item_2</field>
+        <field name="inherit_id" search="[('key', '=', 'theme_prime.product_item_2')]" />
+        <field name="arch" type="xml">
+            <xpath expr="//a[@t-field='product.name']" position="replace">
+                <t t-if="product.webshop_product_name">
+                    <a class="tp-link-dark d-block text-truncate" t-att-title="product.webshop_product_name" itemprop="name" t-att-href="product_href" t-att-content="product.webshop_product_name" t-field="product.webshop_product_name" />
+                </t>
+                <t t-else="">
+                    <a class="tp-link-dark d-block text-truncate" t-att-title="product.name" itemprop="name" t-att-href="product_href" t-att-content="product.name" t-field="product.name" />
+                </t>
+            </xpath>
+        </field>
+    </record>
+    
+    <!-- Lechuza team -->
+    <record id="lechuza_team_inherit" model="ir.ui.view">
+        <field name="name">Lechuza Helpdesk Team Inherit</field>
+        <field name="type">qweb</field>
+        <field name="key">dynco_base.team</field>
+        <field name="inherit_id" search="[('key', '=', 'website_helpdesk.team'), ('website_id', '=', 9)]" />
+        <!-- <field name="website_id">9</field> -->
+        <field name="website_id" ref="dynco_multi_website.lechuza_website_spt"/>
+        <field name="arch" type="xml">
+            <xpath expr="//div[hasclass('container', 'mt16')]" position="attributes">
+                <attribute name="class">container mt16 d-none</attribute>
+            </xpath>
+        </field>
+    </record>
+    <record id="lechuza_team_form_3_inherit" model="ir.ui.view">
+        <field name="name">Lechuza website_helpdesk_form.team_form_3 Inherit</field>
+        <field name="type">qweb</field>
+        <field name="key">dynco_base.team_form_3</field>
+        <field name="inherit_id" search="[('key', '=', 'website_helpdesk_form.team_form_3'), ('website_id', '=', 9)]" />
+        <field name="website_id" ref="dynco_multi_website.lechuza_website_spt"/>
+        <field name="arch" type="xml">
+            <xpath expr="//form[@id='helpdesk_ticket_form']//input[@id='helpdesk5']//.." position="replace">
+                <div class="col-sm col-xs-12 dynco_upload_btn_wrapper">
+                    <button class="btnr" title="No file chosen">Choose files</button>
+                    <span>No file chosen</span>
+                    <input type="file" class="form-control s_website_form_input" name="attachments" id="helpdesk5" data-fill-with="undefined" title="No file chosen" accept="image/*,application/pdf,video/*"/>
+                </div>
+            </xpath>
+        </field>
+    </record>
+    <!-- Climaqua team -->
+    <record id="climaqua_team_inherit" model="ir.ui.view">
+        <field name="name">Climaqua Helpdesk Team Inherit</field>
+        <field name="type">qweb</field>
+        <field name="key">dynco_base.team</field>
+        <field name="inherit_id" search="[('key', '=', 'website_helpdesk.team'), ('website_id', '=', 20)]" />
+        <!-- <field name="website_id">8</field> -->
+        <field name="website_id" ref="__export__.website_20_e3037958"/>
+        <field name="arch" type="xml">
+            <xpath expr="//div[hasclass('container', 'mt16')]" position="attributes">
+                <attribute name="class">container mt16 d-none</attribute>
+            </xpath>
+        </field>
+    </record>
+    <record id="climaqua_team_form_2_inherit" model="ir.ui.view">
+        <field name="name">Climaqua website_helpdesk_form.team_form_2 Inherit</field>
+        <field name="type">qweb</field>
+        <field name="key">dynco_base.team_form_2</field>
+        <field name="inherit_id" search="[('key', '=', 'website_helpdesk_form.team_form_2')]" />
+        <field name="website_id" ref="__export__.website_20_e3037958"/>
+        <field name="arch" type="xml">
+            <xpath expr="//form[@id='helpdesk_ticket_form']//input[@id='helpdesk5']//.." position="replace">
+                <div class="col-sm col-xs-12 dynco_upload_btn_wrapper">
+                    <button class="btnr" title="No file chosen">Choose files</button>
+                    <span>No file chosen</span>
+                    <input type="file" class="form-control s_website_form_input" name="attachments" id="helpdesk5" data-fill-with="undefined" title="No file chosen" accept="image/*,application/pdf,video/*"/>
+                </div>
+            </xpath>
+        </field>
+    </record>
+
+    <template id="dynco_ticket_submit_form_inherit" inherit_id="website_helpdesk_form.ticket_submit_form" name="Dynco: Helpdesk: Submit a Ticket Form">
+        <xpath expr="//form[@id='helpdesk_ticket_form']//input[@id='helpdesk5']//.." position="replace">
+            <div class="col-sm col-xs-12 dynco_upload_btn_wrapper">
+                <button class="btnr" title="haga clic para cargar el archivo">Seleccionar archivos</button>
+                <span>No hay archivos elegidos</span>
+                <input type="file" class="form-control s_website_form_input" name="attachments" id="ow2tu4fixzt9" data-fill-with="undefined" title="haga clic para cargar el archivo" accept="image/*,application/pdf,video/*"/>
+            </div>
+        </xpath>
+    </template>
+    <!-- Job detail page -->
+    <template id="dynco_job_detail_inh" inherit_id="website_hr_recruitment.detail" name="Dynco Job Detail" website_id="website.default_website">
+        <xpath expr="//h1[@t-field='job.name']//..//div" position="attributes">
+            <attribute name="class">dynco_job_apply_btn clearfix</attribute>
+        </xpath>
+        <xpath expr="//h1[@t-field='job.name']//..//div//a" position="attributes">
+            <attribute name="class">btn btn-fill-primary btn-lg</attribute>
+        </xpath>
+    </template>
+
+    <template id="climaqua_product_details_inherit" inherit_id="website_sale.product" website_id="__export__.website_20_e3037958">
+        <xpath expr="//*[hasclass('oe_structure')][@id='oe_structure_website_sale_product_2']" position="replace">
+            <div class="oe_structure" />
+            <div class="oe_structure oe_empty oe_structure_not_nearest mt16" id="oe_structure_website_sale_product_2" data-editor-message="DROP BUILDING BLOCKS HERE TO MAKE THEM AVAILABLE ACROSS ALL PRODUCTS">
+                <div class="oe_structure" />
+                <section class="s_heading_4 pt16 o_colored_level bg-200 pb0" data-snippet="s_heading_4" data-name="Heading - 4" style="background-image: none;">
+                    <div class="container">
+                        <div class="row justify-content-center s_col_no_bgcolor s_nb_column_fixed">
+                            <div class="col-12 text-center col-lg-12 pt32">
+                                <h2 style="text-align: center;">Unser Service für dich<br/></h2>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+                <div class="oe_structure" />
+                <section class="s_icon_block_2 pt16 pb16 o_colored_level o_cc o_cc2 o_snippet_invisible o_conditional_hidden" data-snippet="s_icon_block_2" data-name="Icon Block - 2" style="background-image: none;">
+                    <div class="container">
+                        <div class="row">
+                            <div class="col-12 col-lg-4 py-3 text-center o_colored_level pt24">
+                                <h5 class="mt-3">&amp;nbsp;<img class="img-fluid o_we_custom_image" src="/web/image/1713502-47afeb22/1792671.png" alt="" data-original-id="1713502" data-original-src="/web/image/1713502-47afeb22/1792671.png" data-mimetype="image/png" data-original-title="" title="" aria-describedby="tooltip999009" style="width: 25% !important;" loading="lazy" /><br /></h5>
+                                <h3 class="mt-3">&amp;nbsp; <strong>ab DEUTSCHLAND-Lager</strong><br />
+                                </h3>
+                                <p>Vormittags bestellt und am nächsten Tag verschickt.<br /></p>
+                            </div>
+                            <div class="col-12 col-lg-4 py-3 text-center o_colored_level pt4">
+                                <h3>&amp;nbsp;<br /><span class="fa fa-credit-card text-o-color-1 fa-4x" data-original-title="" title="" aria-describedby="tooltip891044" contenteditable="false">​</span><br /><strong><br />keine Gebühren</strong></h3>
+                                <p>Profitiere von unseren vielen Zahlmöglichkeiten. Die Gebühren übernehmen wir für dich.<br /><br /></p>
+                            </div>
+                            <div class="col-12 col-lg-4 py-3 text-center o_colored_level pt8">
+                                <h3>
+                                    <br />
+                                    <br />
+                                    <span class="fa fa-cc-mastercard fa-2x" style="font-size: 2em;color: rgb(33, 37, 41)" contenteditable="false">​</span>
+                                    <span style="color: rgb(33, 37, 41);font-size: 14px">&amp;nbsp;<span class="fa fa-cc-visa fa-3x" data-original-title="" title="" aria-describedby="tooltip983457" contenteditable="false">​</span>&amp;nbsp;</span>
+                                    <span class="fa fa-cc-paypal fa-2x" style="font-size: 2em;color: rgb(33, 37, 41)" data-original-title="" title="" aria-describedby="tooltip475813" contenteditable="false">​</span>
+                                    <span style="color: rgb(33, 37, 41);font-size: 14px">&amp;nbsp;&amp;nbsp;</span>
+                                    <span class="fa fa-qrcode fa-2x" style="font-size: 2em;color: rgb(33, 37, 41)" contenteditable="false">​</span>
+                                    <br />
+                                    <strong><br />viele Zahlungsmöglichkeiten</strong>
+                                </h3>
+                                <p>Bezahle mit deiner Lieblingszahlungsmöglichkeit, wie zum Beispiel Paypal, Kreditkarte, Banküberweisung.</p>
+                            </div>
+                            <div class="col-12 col-lg-4 py-3 text-center o_colored_level pt4"><br />&amp;nbsp;<br /><i class="fa text-o-color-1 fa-bullhorn fa-5x" data-original-title="" title="" aria-describedby="tooltip824135" contenteditable="false">​</i>
+                                <h3 class="mt-3"><strong><br />Gratis Versand ab € 100.-</strong></h3>
+                                <p class="mt-3">Ab € 100.- Bestellwert übernehmen wir die kompletten Lieferkosten für dich.<br /></p>
+                            </div>
+                            <div class="col-12 col-lg-4 py-3 text-center o_colored_level pt8"><br />&amp;nbsp;<br /><i class="fa text-o-color-1 fa-5x fa-thumbs-up" data-original-title="" title="" aria-describedby="tooltip824135" contenteditable="false">​</i>
+                                <h3 class="mt-3"><strong><br />Persönlicher Service<br /></strong></h3>
+                                <p class="mt-3">Wir beantworten Deine Fragen persönlich und helfen Dir in jedem Fall unkompliziert und schnell.<br /></p>
+                            </div>
+                            <div class="col-12 col-lg-4 py-3 text-center o_colored_level pt4"><br />&amp;nbsp;<br /><i class="fa text-o-color-1 fa-5x fa-star-o text-o-color-1 fa-5x" data-original-title="" title="" aria-describedby="tooltip824135" contenteditable="false">​</i>
+                                <h3 class="mt-3"><strong><br />2 Jahre Garantie​</strong><br /></h3>
+                                <p class="mt-3">Qualität zeichnet CLIMAQUA aus. 2 Jahre Garantie ist für uns selbstverständlich. Darüber hinaus zeigen wir uns kulant und hilfsbereit.<br /></p>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+                <div class="oe_structure" />
+                <section class="s_icon_block_2 o_colored_level pb72 pt56 o_cc o_cc2 bg-200" data-snippet="s_icon_block_2" data-name="Icon Block - 2" style="background-image: none;" data-visibility="conditional" data-visibility-id="country_o_128_43">
+                    <div class="container">
+                        <div class="row">
+                            <div class="col-12 col-lg-4 py-3 text-center o_colored_level pt0">
+                                <h4 class="mt-3">
+                                    <img class="img-fluid o_we_custom_image" src="/web/image/1752923-a926d666/Shopicons_Light_FastDelivery1.svg" alt="" data-original-title="" title="" aria-describedby="tooltip999009" style="width: 25% !important;" loading="lazy" data-original-id="1752923" data-original-src="/web/image/1752923-a926d666/Shopicons_Light_FastDelivery1.svg" data-mimetype="image/svg+xml" data-resize-width="512" />
+                                    <strong>
+                                        <br />
+                                    </strong>
+                                    <span style="font-weight: normal;">ab DE-Lager für EU</span>
+                                    <br />
+                                </h4>
+                                <h4>
+                                    <span style="font-weight: normal;">ab CH-Lager für CH und LIE</span>
+                                </h4>
+                                <h5>
+                                    <br />
+                                </h5>
+                            </div>
+                            <div class="col-12 col-lg-4 py-3 text-center o_colored_level pt8">
+                                <h3>
+                                    <img class="img-fluid o_we_custom_image text-o-color-1 fa-4x" src="/web/image/1752950-e7081c9e/Group%201.svg" alt="" style="width: 25% !important;" data-original-title="" title="" aria-describedby="tooltip829322" loading="lazy" data-original-id="1752950" data-original-src="/web/image/1752950-e7081c9e/Group%201.svg" data-mimetype="image/svg+xml" data-resize-width="undefined" />
+                                    <strong>
+                                        <br />
+                                    </strong>
+                                </h3>
+                                <h4>
+                                    <span style="font-weight: normal;">keine Gebühren</span>
+                                    <strong style="font-weight: bolder">
+                                        <br />
+                                        <br />
+                                    </strong>
+                                </h4>
+                                <h5>
+                                    <br />
+                                </h5>
+                            </div>
+                            <div class="col-12 col-lg-4 py-3 text-center o_colored_level pt0">
+                                <p><img class="img-fluid o_we_custom_image fa-2x" src="/web/image/1752925-4c044c2c/Shopicons_Light_Payment.svg" alt="" data-original-id="1752925" data-original-src="/web/image/1752925-4c044c2c/Shopicons_Light_Payment.svg" data-mimetype="image/svg+xml" style="width: 25% !important;" data-original-title="" title="" aria-describedby="tooltip783642" loading="lazy" />&amp;nbsp;<br /></p>
+                                <h4>
+                                    <span style="font-weight: normal;">viele Zahlungsmöglichkeiten</span>
+                                    <br />
+                                    <br />
+                                </h4>
+                            </div>
+                            <div class="col-12 col-lg-4 py-3 text-center o_colored_level pt0">
+                                <h4>&amp;nbsp;<img class="img-fluid o_we_custom_image text-o-color-1 fa-5x" src="/web/image/1752926-93315f0d/Shopicons_Light_Gift.svg" alt="" data-original-id="1752926" data-original-src="/web/image/1752926-93315f0d/Shopicons_Light_Gift.svg" data-mimetype="image/svg+xml" style="width: 25% !important;" data-original-title="" title="" aria-describedby="tooltip326644" loading="lazy" /><strong><br /></strong><span style="font-weight: normal;">Gratis Versand ab CHF 100.-</span></h4>
+                            </div>
+                            <div class="col-12 col-lg-4 py-3 text-center o_colored_level pt0">
+                                <h4>&amp;nbsp;<img class="img-fluid o_we_custom_image text-o-color-1 fa-5x" src="/web/image/1752927-40053e9b/Shopicons_Light_Service.svg" alt="" data-original-id="1752927" data-original-src="/web/image/1752927-40053e9b/Shopicons_Light_Service.svg" data-mimetype="image/svg+xml" style="width: 25% !important;" data-original-title="" title="" aria-describedby="tooltip150325" loading="lazy" /><strong><br /></strong><span style="font-weight: normal;">Persönlicher Service</span></h4>
+                            </div>
+                            <div class="col-12 col-lg-4 py-3 text-center o_colored_level pt0">
+                                <h4>
+                                    <img class="img-fluid o_we_custom_image text-o-color-1 fa-5x" src="/web/image/1752928-329a2910/Shopicons_Light_Shield.svg" alt="" data-original-id="1752928" data-original-src="/web/image/1752928-329a2910/Shopicons_Light_Shield.svg" data-mimetype="image/svg+xml" style="width: 25% !important;" data-original-title="" title="" aria-describedby="tooltip704798" loading="lazy" />
+                                    <strong>
+                                        <br />
+                                    </strong>
+                                    <span style="font-weight: normal;">2 Jahre Garantie​</span>
+                                </h4>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+                <div class="oe_structure" />
+                <section class="s_heading_4 pt16 pb16 o_colored_level" data-snippet="s_heading_4" data-name="Heading - 4" style="background-image: none;">
+                    <div class="container">
+                        <div class="row justify-content-center s_col_no_bgcolor s_nb_column_fixed">
+                            <div class="col-12 text-center pt16 col-lg-12">
+                                <h2 style="text-align: left;">Kundenstimmen<br /></h2>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+                <div class="oe_structure" />
+                <t t-set="rating_ids" t-value="website.get_rating_from_product(product)" />
+                <section class="s_testimonial_5 pb16 o_colored_level pt0" data-snippet="s_testimonial_5" style="background-image: none;" data-name="Benutzerdef. Testimonial - 5">
+                    <div class="container">
+                        <div class="row s_col_no_bgcolor">
+                            <t t-foreach="rating_ids" t-as="rating_id">
+                                <div class="py-3 col-lg-4">
+                                    <blockquote class="lead font-weight-light p-4 position-relative shadow border-primary">
+                                        <img t-attf-src="data:image/jpg;base64,{{ rating_id.resource_ref.image_1920 }}" class="o_user_avatar review_product_image_climaqua" />
+                                        <a class="btn btn-outline-primary mb-1 mt-3" t-att-href="rating_id.resource_ref.website_url" title="">
+                                            <t t-esc="rating_id.resource_ref.name" />
+                                        </a>
+                                        <div class="mt-2">
+                                            <span style="color: black; font-size: 18px;">
+                                                <t t-esc="rating_id.feedback" />
+                                            </span>
+                                        </div>
+                                    </blockquote>
+                                    <div class="media align-items-center mt-5">
+                                        <div class="media-body">
+                                            <h5>
+                                                <span>
+                                                    <div class="small o_website_rating_static">
+                                                        <t t-foreach="range(0, int(rating_id.priority))" t-as="num">
+                                                            <span class="fa fa-star o_default_snippet_text" />
+                                                        </t>
+                                                    </div>
+                                                </span>
+                                            </h5>
+                                            <h5>
+                                                <strong>
+                                                    <span style="font-size: 18px;">
+                                                        <img t-if="rating_id.partner_id.image_1920" t-attf-src="data:image/jpg;base64,{{ rating_id.partner_id.image_1920 }}" class="rounded-circle o_user_avatar review_image_climaqua d-none" />
+                                                        <span t-else="" class="fa fa-github-alt o_default_snippet_text d-none" />
+                                                        <t t-esc="rating_id.partner_id.name if ' ' not in rating_id.partner_id.name else ' '.join([rating_id.partner_id.name.split()[:-1][0], rating_id.partner_id.name.split()[-1][0] + '.'])"/>
+                                                    </span>
+                                                </strong>
+                                            </h5>
+                                            <span style="font-size: 18px;">
+                                                <t t-esc="rating_id.partner_id.city" />
+                                                <t t-if="rating_id.partner_id.city">,</t>
+                                                <t t-esc="rating_id.partner_id.country_id.name" />
+                                            </span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </t>
+                        </div>
+                    </div>
+                </section>
+                <div class="oe_structure" />
+                <section class="s_heading_4 pt16 pb16 o_colored_level bg-100 o_editable" data-snippet="s_heading_4" data-name="Heading - 4" style="" data-original-title="" title="" aria-describedby="tooltip990959">
+                    <div class="container">
+                        <div class="row justify-content-center s_col_no_bgcolor s_nb_column_fixed" data-original-title="" title="" aria-describedby="tooltip21092">
+                            <div class="col-12 text-center col-lg-12" style="text-align: left;">
+                                <h2 class="mt-3" style="text-align: left;"><br />Unser Engagement - hilf mit!<br /></h2>
+                                <p class="mt-3" style="text-align: left;">
+                                    <span style="font-size: 18px">&amp;nbsp;<br />CLIMAQUA®&amp;nbsp;engagiert sich für Mensch und Umwelt. Unsere Produkte werden aus hochwertigen, natürlichen
+                                        Materialien hergestellt und sind extrem langlebig. Wir achten auf sehr
+                                        gute Arbeitsbedingungen in den Produktionsstätten (BSCI), legen grossen Wert auf
+                                        Transparenz und eine direkte Lieferkette.&amp;nbsp;</span>
+                                </p>
+                                <p>
+                                    <span style="font-size: 18px">
+                                    </span>
+                                </p>
+                                <p class="mt-3" style="text-align: left;" data-original-title="" title="" aria-describedby="tooltip442801">
+                                    <span style="font-size: 18px;">Unser Umweltengagement zeigt sich darin, dass wir unter anderem seit vielen Jahren regelmässig Bäume pflanzen. Unser "CLIMAQUA®
+                                        Wald" umfasst bereits über 10.000 Bäume in verschiedenen Projekten rund um
+                                        den Globus. Erfahre hier mehr über das schöne Projekt und wenn du magst,
+                                        kannst du dich selbst auch direkt mit weiteren Bäumen beteiligen.<br /><br /></span>
+                                </p>
+                                <p class="mt-3" style="text-align: center;" data-original-title="" title="" aria-describedby="tooltip679759">
+                                    <a href="https://tree-nation.com/profile/dynco-ag" target="_blank" class="btn btn-primary btn-lg" data-original-title="" title=""><span data-o-link-zws="start" contenteditable="false">​</span>CLIMAQUA Waldprojekt</a>
+                                    <span data-o-link-zws="after" contenteditable="false">​</span>
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+                <div class="oe_structure" />
+                <section class="s_text_image pt32 o_colored_level pb4 o_we_force_no_transition o_editable" data-snippet="s_image_text" data-name="Image - Text" style="background-image: none;" data-original-title="" title="" aria-describedby="tooltip249370">
+                    <div class="container">
+                        <div class="row align-items-center" data-original-title="" title="" aria-describedby="tooltip815422">
+                            <div class="col-lg-6 pt16 pb16 o_colored_level">
+                                <img src="/web/image/1742142-456abd3b/polaroid-mockup-by-PhotoshopSupply%20copy.png" class="img img-fluid mx-auto" alt="" loading="lazy" data-original-title="" title="" aria-describedby="tooltip472604" data-original-id="1694423" data-original-src="/web/image/1694423-a2e3f2eb/CA-Team.png" data-mimetype="image/png" data-resize-width="690" />
+                            </div>
+                            <div class="col-lg-6 pt16 pb16 o_colored_level o_we_force_no_transition" data-original-title="" title="" aria-describedby="tooltip416724">
+                                <h2>WIR</h2>
+                                <p data-original-title="" title="" aria-describedby="tooltip829320">
+                                    <br />
+                                    <span style="color: rgb(33, 37, 41);font-size: 18px">
+                                        <span style="color: rgb(33, 37, 41);font-size: 18px">Mit viel Elan und Engagement entwickeln und bauen wir tagtäglich an den Produkten von CLIMAQUA. Wir möchten die Menschen davon&amp;nbsp;begeistern, dass es sich mit Natur in den eigenen Lebensräumen einfach besser leben lässt.&amp;nbsp;Ruhe, Gelassenheit, Wohlfühlen, Ambiente, Inspiration, Frische.... die&amp;nbsp;Positivity-Liste ist lang,&amp;nbsp;der wertvolle&amp;nbsp;Impact&amp;nbsp;auf unsere Gesundheit und&amp;nbsp;unser&amp;nbsp;Wohlbefinden&amp;nbsp;ist unbestritten. CLIMAQUA® bzw. die</span>
+                                        <a href="https://www.dynco.swiss/">
+                                            <span data-o-link-zws="start" contenteditable="false">​</span>
+                                            <u>dynco</u>
+                                        </a>
+                                        <span data-o-link-zws="after" contenteditable="false">​</span>
+                                        <span style="color: rgb(33, 37, 41);font-size: 18px">&amp;nbsp;ist ein Familienunternehmen.</span>
+                                        <br />
+                                        <span style="color: rgb(33, 37, 41);font-size: 18px">Wir leben und arbeiten alle im Raum&amp;nbsp;Bern, Schweiz.</span>
+                                    </span>
+                                </p>
+                                <p data-original-title="" title="" aria-describedby="tooltip251093">
+                                    <a href="/kontakt" class="mb-2 btn btn-primary" data-original-title="" title=""><span data-o-link-zws="start" contenteditable="false">​</span>Kontakt aufnehmen</a>
+                                    <span data-o-link-zws="after" contenteditable="false">​</span>
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+                <div class="oe_structure" />
+                <section class="s_testimonial_3 o_colored_level o_editable" data-snippet="s_testimonial_3" data-name="Testimonial - 3" style="background-image: none;">
+                    <div class="s_carousel tp-custom-carousel s_carousel_rounded carousel slide" data-interval="10000" id="myCarousel1683038999291" style="background-image: none;">
+                        <ol class="carousel-indicators o_we_no_overlay">
+                            <li data-slide-to="0" data-target="#myCarousel1683038999291" class="active" />
+                            <li data-slide-to="1" data-target="#myCarousel1683038999291" />
+                            <li data-target="#myCarousel1683038999291" data-slide-to="2" />
+                            <li data-target="#myCarousel1683038999291" data-slide-to="3" />
+                            <li data-target="#myCarousel1683038999291" data-slide-to="4" />
+                        </ol>
+                        <div class="carousel-inner">
+                            <div class="carousel-item pb48 o_colored_level pt24 active" data-name="Slide" style="background-image: none; min-height: 273.038px;">
+                                <div class="container">
+                                    <div class="row content justify-content-center text-center s_col_no_bgcolor s_nb_column_fixed">
+                                        <div class="carousel-content col-12 col-md-10"><img class="img img-fluid o_image_128_max rounded-circle shadow" src="/web/image/1694414-0c83a539/ttD6ZafE_400x400.jpeg" alt="" loading="lazy" data-original-title="" title="" aria-describedby="tooltip784794" data-original-id="1694412" data-original-src="/web/image/1694412-1b7e2907/ttD6ZafE_400x400.jpeg" data-mimetype="image/jpeg" data-resize-width="400" />
+                                            <blockquote class="lead font-weight-light font-italic mt-3 border-white">
+                                                "Wir wollen mit natürlichen, nachhaltigen, langlebigen und schönen Produkten die Natur den Menschen in die Lebensräume bringen und so ihr Wohlbefinden und ihre Gesundheit verbessern"<br /></blockquote>
+                                            <h5><strong>Yves</strong></h5>
+                                            Gründer, Entwickler und Designer&amp;nbsp;<br />bei CLIMAQUA®
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="carousel-item pb48 o_colored_level pt0" data-name="Slide" style="background-image: none; min-height: 273.038px;">
+                                <div class="container">
+                                    <div class="row content justify-content-center text-center s_col_no_bgcolor s_nb_column_fixed">
+                                        <div class="carousel-content col-12 col-md-10"><img class="img img-fluid o_image_128_max rounded-circle shadow" src="/web/image/1696751-e5450d53/Ste%CC%81phanie.png" alt="" loading="lazy" data-original-id="1696750" data-original-src="/web/image/1696750-719799ee/Ste%CC%81phanie.png" data-mimetype="image/png" data-resize-width="690" />
+                                            <blockquote class="lead font-weight-light font-italic mt-3 border-white">
+                                                "Ich kümmere mich um den Vertrieb von CLIMAQUA®. Die Produkte sind für alle da – sie werden&amp;nbsp;von Kindern, Erwachsenen und Grosseltern gleichermassen geliebt. So wie eben auch die Natur geliebt wird. CLIMAQUA® passt überall hin und wird wohl auch ewig passend bleiben."</blockquote>
+                                            <h5><strong>Stéphanie</strong></h5>
+                                            Kundenberaterin und Busines Development&amp;nbsp;<br />bei CLIMAQUA®
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="carousel-item pt48 pb48 o_colored_level" data-name="Slide" style="background-image: none; min-height: 273.038px;">
+                                <div class="container">
+                                    <div class="row content justify-content-center text-center s_col_no_bgcolor s_nb_column_fixed">
+                                        <div class="carousel-content col-12 col-md-10"><img class="img img-fluid o_image_128_max rounded-circle shadow" src="/web/image/1696752-734c840c/Mergim.png" alt="" loading="lazy" data-original-title="" title="" aria-describedby="tooltip491750" data-original-id="1696743" data-original-src="/web/image/1696743-616db0fd/Mergim.png" data-mimetype="image/png" data-resize-width="690" />
+                                            <blockquote class="lead font-weight-light font-italic mt-3 border-white">
+                                                "Meistens beantworte ich deine Tickets oder Kontaktanfragen. Ich bin für dich da, wenn Fragen zu Bestellungen, zu Produkten zum Webshop oder anderen Dingen auftauchen."</blockquote>
+                                            <h5><strong>Mergim</strong><br /></h5>
+                                            Kundenberaterin B2C<br />bei CLIMAQUA®
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="carousel-item pt48 pb48 o_colored_level" data-name="Slide" style="background-image: none; min-height: 273.038px;">
+                                <div class="container">
+                                    <div class="row content justify-content-center text-center s_col_no_bgcolor s_nb_column_fixed">
+                                        <div class="carousel-content col-12 col-md-10"><img class="img img-fluid o_image_128_max rounded-circle shadow" src="/web/image/1696753-78401790/Simon.png" alt="" loading="lazy" data-original-title="" title="" aria-describedby="tooltip839137" data-original-id="1696742" data-original-src="/web/image/1696742-1fb4a377/Simon.png" data-mimetype="image/png" data-resize-width="690" />
+                                            <blockquote class="lead font-weight-light font-italic mt-3 border-white">
+                                                "Ich kümmere mich um das Content Management und darum, dass CLIMAQUA® im Internet von möglichst vielen Menschen gesehen und verstanden wird."<br /></blockquote>
+                                            <h5><strong>Simon</strong><br /></h5>
+                                            Online Manger&amp;nbsp;<br />bei CLIMAQUA®
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="carousel-item pt48 pb48 o_colored_level" data-name="Slide" style="background-image: none; min-height: 273.038px;">
+                                <div class="container">
+                                    <div class="row content justify-content-center text-center s_col_no_bgcolor s_nb_column_fixed">
+                                        <div class="carousel-content col-12 col-md-10"><img class="img img-fluid o_image_128_max rounded-circle shadow" src="/web/image/1694951-195d8cfd/Mai.png" alt="" loading="lazy" data-original-title="" title="" aria-describedby="tooltip839137" data-original-id="1694950" data-original-src="/web/image/1694950-6e7d9511/Mai.png" data-mimetype="image/png" data-resize-width="690" />
+                                            <blockquote class="lead font-weight-light font-italic mt-3 border-white">
+                                                "Als Product Managerin erstelle und sammle ich sämtliche Datenblätter, überwache die Produktion und kümmere mich um die Qualitätssicherung."<br /></blockquote>
+                                            <h5>&amp;nbsp;&amp;nbsp;<strong>Mai</strong></h5>
+                                            Product Managerin&amp;nbsp;<br />bei CLIMAQUA®
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <a class="carousel-control-prev o_not_editable o_we_no_overlay" data-slide="prev" role="img" aria-label="Previous" title="Previous" href="#myCarousel1683038999291">
+                            <span class="fa fa-chevron-left" />
+                            <span class="sr-only o_default_snippet_text">Previous</span>
+                        </a>
+                        <a class="carousel-control-next o_not_editable o_we_no_overlay" data-slide="next" role="img" aria-label="Next" title="Next" href="#myCarousel1683038999291">
+                            <span class="fa fa-chevron-right" data-original-title="" title="" aria-describedby="tooltip815798" />
+                            <span class="sr-only o_default_snippet_text">Next</span>
+                        </a>
+                    </div>
+                </section>
+                <div class="oe_structure" />
+            </div>
+        </xpath>
+    </template>
+    <template id="product_quantity_inhrit" inherit_id="website_sale.product_quantity" name="Select Quantity Inherit">
+        <xpath expr="//div[hasclass('css_quantity')]" position="before">
+            <div class="availability_messages o_not_editable mb8"/>
+            <t t-set="availability_check" t-value="website.get_product_stock_available(product)" />
+            <t t-if="availability_check.get('is_out_of_stock') or (product.sudo().avail_only_specific_countries and not product.check_available_country())"/>
+            <t t-else="">
+                <div t-if="product.sale_delay" class="mb8">
+                  <span>aktuelle Lieferzeit : <t t-esc="round(product.sale_delay)"/> Tage</span>
+                </div>
+            </t>
+        </xpath>
+    </template>
+</odoo>

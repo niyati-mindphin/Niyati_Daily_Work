@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<templates>
+    <t t-name="dynco_base.LanguageDropdown">
+        <t t-set="language_info" t-value="widget.languagedata" />
+        <div class="dropdown">
+            <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                <img class="o_lang_flag" t-attf-src="#{language_info['data'][language_info['current_active']]['img_url']}?height=25" />
+                <t t-esc="language_info['data'][language_info['current_active']]['name']" />
+            </button>
+            <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                <t t-foreach="language_info['data']" t-as="language">
+                    <a class="dropdown-item language_dropdown_item" t-att-data-lang_id="language" href="#">
+                        <img class="o_lang_flag" t-attf-src="#{language_info['data'][language]['img_url']}?height=25" />
+                        <t t-esc="language_info['data'][language]['name'].split('/').pop()" />
+                    </a>
+                </t>
+                <a t-attf-class="dropdown-item add_language d-none #{dropdown and 'd-sm-block dropdown-item' or 'd-sm-inline-block list-inline-item'}">
+                    <i class="fa fa-plus-circle" />
+                    <span>Add a language</span>
+                </a>
+            </div>
+        </div>
+    </t>
+</templates>

@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+
+    <template id="base_portal_inherit" inherit_id="portal.portal_docs_entry">
+        <xpath expr="//a" position="attributes">
+            <attribute name="t-if">request.env.user.has_group('dynco_base.group_portal_docs') or url in ['/my/purchase', '/my/invoices', '/my/tickets']</attribute>
+        </xpath>
+    </template>
+
+	<template id="portal_record_sidebar_inherit" inherit_id="portal.portal_record_sidebar">
+	    <xpath expr="//div[@id='sidebar_content']" position="after">
+	        <div class="attachment_download" t-if="invoice">
+	            <form action="/attachment/download/portal" method="post">
+	                <input type="hidden" name="csrf_token" t-att-value="request.csrf_token()" />
+	                <input type="hidden" name="invoice_id" t-att-value="invoice.id" />
+	                <input type="hidden" name="model" t-att-value="invoice._name" />
+	                <button type="submit" class="btn btn-primary w-100" id="attachment_download_portal" t-att-data-invoice-id="invoice.id" t-att-data-model="invoice._name">
+	                    <i class="fa fa-download"></i>
+	                    Attachment
+	                </button>
+	            </form>
+	        </div>
+	    </xpath>
+	</template>
+</odoo>

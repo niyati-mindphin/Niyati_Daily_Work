@@ -1,0 +1,24 @@
+body, h1, h2, h3, h4, h5, h6, .h1, .h2, .h3, .h4, .h5, .h6 {
+    font-family: "Hind", sans-serif;
+}
+
+* {
+ font-family: "Hind", sans-serif;
+}
+
+.lechuza_header .text-secondary {
+    color: #FFFFFF !important;
+}
+
+.lechuza_mobile_header a.dropdown-toggle.d-flex.align-items-center {
+    height: 40px;
+}
+
+.lechuza_mobile_header .dropdown-toggle::after{
+    color: white;
+}
+
+.lechuza_mobile_header .dropdown-menu {
+    left: inherit !important;
+    right: 0 !important;
+}

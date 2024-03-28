@@ -1,0 +1,8 @@
+.qrinv-img > img {
+	height: 6cm;
+	width: 6cm;
+	image-rendering: pixelated;
+}
+.o_list_view .o_list_table tbody > tr > td:not(.o_list_record_selector):not(.o_handle_cell):not(.o_list_button):not(.o_state_selection_cell) a.o_knk_multi_line {
+	white-space: break-spaces;
+}

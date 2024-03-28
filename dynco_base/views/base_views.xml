@@ -1,0 +1,335 @@
+<odoo>
+    <record id="email_message_tree_view_inherit" model="ir.ui.view">
+        <field name="name">mail.mail.form.attachment</field>
+        <field name="model">mail.mail</field>
+        <field name="inherit_id" ref="mail.view_mail_form"/>
+        <field name="arch" type="xml">
+            <field name="attachment_ids" position="replace">
+                <field name="attachment_ids">
+                    <tree>
+                        <field name="name"/>
+                        <field name="website_id"/>
+                        <field name="res_model"/>
+                        <field name="type"/>
+                        <field name="file_size"/>
+                        <field name="company_id"/>
+                        <field name="create_uid"/>
+                        <field name="create_date"/>
+                        <field name="datas" filename="document_fname" widget="binary"/>
+                    </tree>
+                </field>
+            </field>
+        </field>
+    </record>
+    <record id="view_company_form_inherit_sd_gs1" model="ir.ui.view">
+        <field name="name">res.company.form.inherit.sd_gs1</field>
+        <field name="model">res.company</field>
+        <field name="inherit_id" ref="base.view_company_form" />
+        <field name="arch" type="xml">
+            <xpath expr="//field[@name='favicon']" position="after">
+                <field name="background_image" widget="image"/>
+            </xpath>
+            <xpath expr="//div[hasclass('o_address_format')]" position="after">
+                <field name='ogln' />
+            </xpath>
+            <xpath expr="//notebook" position="inside">
+                <page name="comp_product_brand_lead_ids" string="Brand/Delivery Lead Time">
+                    <field name="comp_product_brand_lead_ids">
+                        <tree editable="bottom">
+                            <field name="product_brand_lead" options="{'no_create': True}"/>
+                            <field name="delivery_lead_time"/>
+                        </tree>
+                    </field>
+                </page>
+            </xpath>
+        </field>
+    </record>
+    <record id="crm.crm_lead_action_pipeline" model="ir.actions.act_window">
+        <field name="context">{'default_type': 'opportunity'}</field>
+    </record>
+    <record id="crm_lead_inherit_views" model="ir.ui.view">
+        <field name="name">crm.lead.inherit.views</field>
+        <field name="model">crm.lead</field>
+        <field name="inherit_id" ref="crm.crm_lead_view_form" />
+        <field name="arch" type="xml">
+            <xpath expr="//div[@name='button_box']" position="inside">
+                <button name="action_view_forecast" type="object" class="oe_stat_button" icon="fa-history" attrs="{'invisible': [('is_forecasting', '=', False)]}">
+                    <div class="o_stat_info">
+                        <span class="o_stat_text"> Forecast</span>
+                    </div>
+                </button>
+            </xpath>
+            <xpath expr="//group[@name='opportunity_partner']/.." position="after">
+                <group string="Forecasting Details">
+                    <group>
+                        <field name="brand" />
+                        <field name="year" />
+                    </group>
+                    <group>
+                        <field name="target_amount" />
+                        <field name="is_forecasting" invisible="1" />
+                    </group>
+                </group>
+            </xpath>
+        </field>
+    </record>
+    <record id="crm_lead_kanban_view_inherit" model="ir.ui.view">
+        <field name="name">crm.lead.kanban.view.inherit</field>
+        <field name="model">crm.lead</field>
+        <field name="inherit_id" ref="crm.crm_case_kanban_view_leads" />
+        <field name="arch" type="xml">
+            <xpath expr="//div[hasclass('oe_kanban_content')]" position="inside">
+                <div>
+                    <field name="year" /> -
+                    <field name="brand" />
+                </div>
+            </xpath>
+        </field>
+    </record>
+    <record id="crm_lead_search_view_inherit" model="ir.ui.view">
+        <field name="name">crm.lead.search.view.inherit</field>
+        <field name="model">crm.lead</field>
+        <field name="inherit_id" ref="crm.view_crm_case_opportunities_filter" />
+        <field name="arch" type="xml">
+            <xpath expr="//filter[@name='unassigned']" position="before">
+                <filter string="My Pipeline Customer" name="mypipeline customer" domain="[('is_forecasting', '=', True)]"/>
+            </xpath>
+            <xpath expr="//filter[@name='assigned_to_me']" position="attributes">
+                <attribute name="string">My Pipeline Lead</attribute>
+                <attribute name="domain">[('is_forecasting', '=', False)]</attribute>
+                    <group string="Forecasting Details">
+                        <group>
+                            <field name="brand"/>
+                            <field name="year"/>
+                        </group>
+                        <group>
+                            <field name="target_amount"/>
+                            <field name="is_forecasting" invisible="1"/>
+                        </group>
+                    </group>
+                    <group>
+                        <field name="target_amount" />
+                        <field name="is_forecasting" invisible="1" />
+                    </group>
+            </xpath>
+        </field>
+    </record>
+    <record id="crm_lead_kanban_view_inherit" model="ir.ui.view">
+        <field name="name">crm.lead.kanban.view.inherit</field>
+        <field name="model">crm.lead</field>
+        <field name="inherit_id" ref="crm.crm_case_kanban_view_leads" />
+        <field name="arch" type="xml">
+            <xpath expr="//div[hasclass('oe_kanban_content')]" position="inside">
+                <div>
+                    <field name="year" /> -
+                    <field name="brand" />
+                </div>
+            </xpath>
+        </field>
+    </record>
+    <record id="crm_lead_search_view_inherit" model="ir.ui.view">
+        <field name="name">crm.lead.search.view.inherit</field>
+        <field name="model">crm.lead</field>
+        <field name="inherit_id" ref="crm.view_crm_case_opportunities_filter" />
+        <field name="arch" type="xml">
+            <xpath expr="//filter[@name='unassigned']" position="before">
+                <filter string="My Pipeline Customer" name="mypipeline customer" domain="[('is_forecasting', '=', True)]"/>
+            </xpath>
+            <xpath expr="//filter[@name='assigned_to_me']" position="attributes">
+                <attribute name="string">My Pipeline Lead</attribute>
+                <attribute name="domain">[('is_forecasting', '=', False)]</attribute>
+            </xpath>
+        </field>
+    </record>
+    <record id="view_partner_form_inherit_knk" model="ir.ui.view">
+        <field name="name">res.partner.form.inherit.knk</field>
+        <field name="model">res.partner</field>
+        <field name="inherit_id" ref="base.view_partner_form" />
+        <field name="arch" type="xml">
+            <field name="ref" position="replace" />
+            <field name="company_type" position="after">
+                <div name="partner_numbering">
+                    <div>
+                        <label for="ref" string="Partner ID" />
+                        <field name="ref" />
+                    </div>
+                </div>
+            </field>
+            <xpath expr="//div[@name='button_box']" position="inside">
+                <button name="action_survey_user_input_completed" type="object" class="oe_stat_button" icon="fa-pencil-square-o">
+                    <field string="Answers" name="survey_answer_count" widget="statinfo"/>
+                </button>
+            </xpath>
+            <xpath expr="//field[@name='category_id']" position="after">
+                <field name="survey_id" />
+                <field name="is_portal_user" invisible="1"/>
+            </xpath>
+            <xpath expr="//div[1]" position="before">
+                <header>
+                    <button name="action_open_survey" string="Start Survey" type="object" attrs="{'invisible': [('survey_id', '=', False)]}" />
+                    <button name="btn_impersonate_user" string="Impersonate" type="object" attrs="{'invisible': [('is_portal_user', '=', False)]}" groups="dynco_base.customer_impersonate_admin_group"/>
+                </header>
+            </xpath>
+            <xpath expr="//h1" position="after">
+                <h2>
+                    <field name="division_name" placeholder="Additional Name" />
+                </h2>
+            </xpath>
+            <xpath expr="//field[@name='vat']" position="after">
+                <field name='gln' />
+                <field name="eori_no" placeholder="EORI"/>
+                <field name="supplier_no" placeholder="0000A0"/>
+                <field name="is_assemble_partner"/>
+            </xpath>
+            <xpath expr="//page[@name='sales_purchases']//field[@name='user_id']" position="before">
+                <field name="business_type" />
+            </xpath>
+            <xpath expr="//page[@name='sales_purchases']" position="inside">
+                <group string="B2B Delivery Method">
+                    <field name="b2b_delivery_method_id" nolabel="1">
+                        <tree editable="bottom">
+                            <field name="available_carrier_ids" invisible="1"/>
+                            <field name="brand_id"/>
+                            <field name="delivery_id" domain="[('id', 'in', available_carrier_ids)]"/>
+                        </tree>
+                    </field>
+                </group>
+            </xpath>
+            <xpath expr="//page[@name='sales_purchases']" position="after">
+                <page name="product_brand_delviery_lead" string="Brand/Delivery Lead Time">
+                    <button name="action_customer_forecast" string="Compute Forecast" type="object" class="btn-primary"/>
+                    <group col="4">
+                        <field name="fc_start_date"/>
+                        <field name="fc_end_date"/>
+                    </group>
+                    <group>
+                        <field name="product_brand_lead_ids" nolabel="1">
+                            <tree editable="bottom" decoration-bf="delivery_lead_time==0">
+                                <field name="sequence" widget="handle"/>
+                                <field name="fc_year"/>
+                                <field name="product_brand_lead" options="{'no_create': True}"/>
+                                <field name="delivery_lead_time" optional="show"/>
+                                <field name="target_value" widget="monetary" optional="show"/>
+                                <field name="invoiced_untaxed_amt" widget="monetary" optional="show"/>
+                                <field name="percentage_value" optional="show"/>
+                                <field name="delivered_untaxed_amt" widget="monetary" optional="show"/>
+                                <field name="untaxed_amnt_total" widget="monetary" optional="show"/>
+                                <field name="credit_note_total" widget="monetary" optional="show"/>
+                                <field name="total_amount" widget="monetary" optional="show"/>
+                                <!-- <field name="compute_margin" optional="show"/>
+                                <field name="compute_margin_per" optional="show"/> -->
+                                <field name="target_margin" invisible="1" optional="show"/>
+                                <field name="target_margin_percentage" invisible="1" optional="show"/>
+                                <field name="currency_id" invisible="1" optional="show"/>
+                            </tree>
+                        </field>
+                    </group>
+                </page>
+            </xpath>
+        </field>
+    </record>
+    <record id="view_partner_tree_inherit" model="ir.ui.view">
+        <field name="name">res.partner.tree</field>
+        <field name="model">res.partner</field>
+        <field name="inherit_id" ref="base.view_partner_tree"/>
+        <field name="arch" type="xml">
+            <field name="email" position="after">
+                <field name="business_type"/>
+            </field>
+        </field>
+    </record>
+    <record id="res_config_settings_view_form" model="ir.ui.view">
+        <field name="name">res.config.settings.view.form.inherit.contract.halls</field>
+        <field name="model">res.config.settings</field>
+        <field name="priority" eval="40"/>
+        <field name="inherit_id" ref="base.res_config_settings_view_form"/>
+        <field name="arch" type="xml">
+            <xpath expr="//div[hasclass('settings')]" position="inside">
+                <div class="app_settings_block" data-string="Dynco Configuration" string="Dynco Configuration" data-key="dynco_base">
+                    <h2>Dynco</h2>
+                    <div class="row mt16 o_settings_container">
+                        <div class="col-12 col-lg-6 o_setting_box">
+                            <div class="o_setting_right_pane">
+                                <label for="delivey_time"/>
+                                <span title="Values set here are company-specific." aria-label="Values set here are company-specific." groups="base.group_multi_company" role="img"/>
+                                <div class="text-muted">
+                                    Delivery lead time, in days. It's the number of days, promised to the customer, between the confirmation of the order and the delivery
+                                    "Example : Delivery time: 5-6 Days"
+                                </div>
+                                <div>
+                                    <field name="delivey_time"/>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </xpath>
+        </field>
+    </record>
+    <record id="action_contract_config_settings" model="ir.actions.act_window">
+        <field name="name">Settings</field>
+        <field name="type">ir.actions.act_window</field>
+        <field name="res_model">res.config.settings</field>
+        <field name="view_id" ref="res_config_settings_view_form" />
+        <field name="view_mode">form</field>
+        <field name="target">inline</field>
+        <field name="context">{'module' : 'dynco_base'}</field>
+    </record>
+    <menuitem id="menu_contract_config" name="Configuration" sequence="10" />
+    <record id="website_menus_form_viewinherit" model="ir.ui.view">
+        <field name="name">website.menu.form.mega</field>
+        <field name="model">website.menu</field>
+        <field name="inherit_id" ref="website.website_menus_form_view" />
+        <field name="arch" type="xml">
+            <field name="name" position="after">
+                <field name="menu_icon" />
+            </field>
+        </field>
+    </record>
+    <record model="ir.ui.view" id="knk_acquirer_form_webiste_inh">
+        <field name="name">knk.payment.acquirer</field>
+        <field name="model">payment.acquirer</field>
+        <field name="inherit_id" ref="website_payment.acquirer_form_website"/>
+        <field name="arch" type="xml">
+            <xpath expr="//field[@name='website_id']" position="after">
+                <field name="show_qrcode"/>
+            </xpath>
+        </field>
+    </record>
+    <record model="ir.ui.view" id="website_form_view_inh">
+        <field name="name">website.pre.header.form</field>
+        <field name="model">website</field>
+        <field name="inherit_id" ref="website.view_website_form" />
+        <field name="priority">10</field>
+        <field name="arch" type="xml">
+            <xpath expr="//div[@name='other']" position="after">
+                <div name="website_pre_header">
+                    <group string="Pre Header" name="pre_header">
+                        <field name="is_top_header" string="Is Pre Header"/>
+                        <field name="top_header_content" string="Pre Header Content" attrs="{'invisible': [('is_top_header', '=', False)]}" options="{'codeview': true}"/>
+                    </group>
+                </div>
+            </xpath>
+        </field>
+    </record>
+    <record id="survey_user_input_view_form" model="ir.ui.view">
+        <field name="name">survey.user_input.view.form.inherit</field>
+        <field name="model">survey.user_input</field>
+        <field name="inherit_id" ref="survey.survey_user_input_view_form" />
+        <field name="arch" type="xml">
+            <field name="partner_id" position="after">
+                <field name="partner_survey_id" />
+            </field>
+        </field>
+    </record>
+    <record id="survey_user_input_view_tree" model="ir.ui.view">
+        <field name="name">survey.user_input.view.tree.inherit</field>
+        <field name="model">survey.user_input</field>
+        <field name="inherit_id" ref="survey.survey_user_input_view_tree" />
+        <field name="arch" type="xml">
+            <field name="partner_id" position="after">
+                <field name="partner_survey_id" />
+            </field>
+        </field>
+    </record>
+</odoo>

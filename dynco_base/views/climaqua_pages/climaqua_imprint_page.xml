@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+        <record id="climaqua_imprint_page_view" model="ir.ui.view">
+            <field name="name">Climaqua imprint</field>
+            <field name="type">qweb</field>
+            <field name="key">website.climaqua_imprint_page</field>
+            <field name="arch" type="xml">
+                <t name="Home" t-name="website.climaqua_imprint_page">
+                    <t t-name="website.impressum">
+                        <t t-call="website.layout">
+                            <div id="wrap" class="oe_structure oe_empty oe_website_sale">
+                                <div class="container">
+                                    <div class="row justify-content-center">
+                                        <div class="col-md-10">
+                                            <section class="pt32 pb0">
+                                                <div class="container">
+                                                    <div class="row s_nb_column_fixed">
+                                                        <div class="col-md-12 s_title pt16 pb16 text-center header2">
+                                                            <h1 class="s_title_default font-weight-normal">
+                                                                <font style="font-size: 48px;">IMPRESSUM</font>
+                                                            </h1>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </section>
+                                            <section class="s_text_block pt32 pb32">
+                                                <div class="container">
+                                                    <div class="row justify-content-center">
+                                                        <div class="col-md-11 pb32 pt32 text-left">
+                                                            <h3 class="font-weight-normal">Alle Rechte vorbehalten </h3>
+                                                            <p class="text-left font-weight-normal">Alle Rechte vorbehalten der Dynco AG (2012). Alle Texte, Bilder, Graphiken, Sound-, Animations- und Videodateien sowie ihre Anordnung unterliegen dem Urheberrecht und anderen Gesetzen zum Schutz des geistigen Eigentums. Der Inhalt dieser Website darf weder für Handelszwecke noch zur Weitergabe kopiert, verändert, verbreitet oder sonst Dritten zugänglich gemacht werden. Auch eine Nutzung auf anderen Websites ist unzulässig.&amp;nbsp;Diese Webseite und alle Inhalte sind nach schweizerischem Gesetz geschützt.Sie dürfen sich den Inhalt der Website ausschließlich für Ihren persönlichen, nicht kommerziellen privaten Gebrauch herunterladen, vorausgesetzt, dass Sie alle Urheberrechts-, Marken- und andere Schutzrechtshinweise unberührt lassen, insbesondere diese Hinweise nicht löschen oder sonst unkenntlich machen. Alle Änderungen oder der Gebrauch des Inhaltes unserer Website für irgendeinen anderen Zweck stellt eine Verletzung unserer Rechte dar und ist strengstens untersagt. </p><br/>
+                                                            <h3 class="text-left font-weight-normal">Gewährleistung</h3>
+                                                            <p class="text-left font-weight-normal">Unser Webshop wurde mit grösstmöglicher Sorgfalt zusammengestellt. Auch wenn wir davon ausgehen, dass die von uns gegebenen Informationen zutreffend sind, können sie dennoch Fehler oder Ungenauigkeiten enthalten. Wir stellen die Informationen daher ohne jegliche Zusicherung oder Gewährleistung jeglicher Art, sei sie ausdrücklich oder stillschweigend, zur Verfügung. Ausgeschlossen sind auch alle stillschweigenden Gewährleistungen betreffend die Handelsfähigkeit, die Eignung für bestimmte Zwecke oder den Nichtverstoss gegen Gesetze und Patente. Wir schliessen jegliche Haftung für Schäden, die direkt oder indirekt aus der Benutzung dieser Website entstehen, aus, soweit diese nicht auf Vorsatz oder grober Fahrlässigkeit von uns beruhen. Insbesondere übernehmen wir auch keine Garantie dafür, dass unsere Website, deren Inhalt und/oder der Server, auf dem sie hinterlegt ist, frei von Viren sind. Ausserdem weisen wir darauf hin, dass wir andere Websites, die einen Link zu unserer Website besitzen, nicht überwachen und nicht verantwortlich für deren Inhalt sind. </p><br/>
+                                                            <h3 class="text-left font-weight-normal">Lizenzrechte
+                                                            </h3>
+                                                            <p class="text-left">CLIMAQUA<strong>®</strong>
+                                                                möchte sich Ihnen mit einem innovativen und informativen
+                                                                Internet-Programm präsentieren. Wir hoffen deshalb, dass Ihnen der
+                                                                Besuch unserer Website Freude bereitet. Das darin enthaltene geistige
+                                                                Eigentum wie Patente, Marken und Urheberrechte ist geschützt, und durch
+                                                                diese Website wird keine Lizenz zur Nutzung des geistigen Eigentums von
+                                                                CLIMAQUA<strong>®</strong> oder Dritten erteilt.
+                                                            </p>
+                                                            <p class="text-left font-weight-normal">Ihre
+                                                                Meinung Gerne lernen wir Ihre Meinung über unsere Produkte und unsere
+                                                                Website kennen. Wir weisen jedoch darauf hin, dass wir alle von Ihnen
+                                                                erhaltenen Mitteilungen als nichtvertraulich betrachten. Ferner sind wir
+                                                                berechtigt, Ihre Informationen in jeder Weise und ohne jede
+                                                                Verpflichtung Ihnen gegenüber zu nutzen. Die Informationen gehen mit der
+                                                                Übermittlung in das Eigentum von der Dynco AG über und wir sind
+                                                                berechtigt, alle Ideen, Konzepte, Know-how oder technische Informationen
+                                                                für jedwede Zwecke zu nutzen einschliesslich der Entwicklung, der
+                                                                Herstellung und des Vertriebs von Produkten, ohne dass hierfür eine
+                                                                Vergütung an Sie zu bezahlen ist.
+                                                            </p><br/>
+                                                            <h3 class="text-left font-weight-normal">Bilder und Angabe von Massen
+                                                            </h3>
+                                                            <p class="text-left font-weight-normal">Bitte
+                                                                beachten Sie: Alle auf dieser Website angegebenen Masse sind
+                                                                circa-Masse und ohne Gewähr. Jedes Bild&amp;nbsp;steht repräsentativ für das
+                                                                gemeinte Produkt. Weiterentwicklungen oder naturbedingte Abweichungen -
+                                                                von Mutter Natur oder durch Handarbeit - der dargestellten Modelle sind
+                                                                vorbehalten.
+                                                            </p>
+                                                            <p class="text-left">Design und Konzept dieser Website von <a href="http://www.dynco.ch">Dynco AG</a>.</p>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </section>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </t>
+                    </t>
+                </t>
+            </field>
+        </record>
+        <record id="climaqua_imprint_page" model="website.page">
+            <field name="url">/impressum</field>
+            <field name="website_published">True</field>
+            <field name="view_id" ref="climaqua_imprint_page_view" />
+        </record>
+    </data>
+</odoo>

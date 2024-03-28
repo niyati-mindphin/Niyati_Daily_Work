@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <menuitem id="base_setup.menu_config" name="General Settings" parent="base.menu_administration" sequence='0' action="base_setup.action_general_configuration" groups="dynco_base.group_general_settings,dynco_base.group_sale_settings,dynco_base.group_crm_settings,dynco_base.group_accounting_settings,dynco_base.group_project_settings,dynco_base.group_purchase_settings,dynco_base.group_inventory_settings,dynco_base.group_manufacturing_settings,dynco_base.group_website_settings,dynco_base.group_employees_settings,dynco_base.group_expenses_settings,dynco_base.group_attendances_settings,dynco_base.group_timesheet_settings,dynco_base.group_recruitment_settings,dynco_base.group_email_debranding_settings,dynco_base.group_email_marketing_settings,dynco_base.group_social_media_settings,dynco_base.group_dynco_settings"/>
+    <record id="base.res_config_settings_view_form" model="ir.ui.view">
+        <field name="groups_id" eval="[(4, ref('dynco_base.group_general_settings'))]"/>
+    </record>
+    <record id="base_setup.res_config_settings_view_form" model="ir.ui.view">
+        <field name="groups_id" eval="[(4, ref('dynco_base.group_general_settings'))]"/>
+    </record>
+    <record id="portal.res_config_settings_view_form" model="ir.ui.view">
+        <field name="groups_id" eval="[(4, ref('dynco_base.group_general_settings'))]"/>
+    </record>
+    <record id="planning.res_config_settings_view_form" model="ir.ui.view">
+        <field name="groups_id" eval="[(4, ref('dynco_base.group_general_settings'))]"/>
+    </record>
+    <record id="sale.res_config_settings_view_form" model="ir.ui.view">
+        <field name="groups_id" eval="[(4, ref('dynco_base.group_sale_settings'))]"/>
+    </record>
+    <record id="crm.res_config_settings_view_form" model="ir.ui.view">
+        <field name="groups_id" eval="[(4, ref('dynco_base.group_crm_settings'))]"/>
+    </record>
+    <record id="account.res_config_settings_view_form" model="ir.ui.view">
+        <field name="groups_id" eval="[(4, ref('dynco_base.group_accounting_settings'))]"/>
+    </record>
+    <record id="project.res_config_settings_view_form" model="ir.ui.view">
+        <field name="groups_id" eval="[(4, ref('dynco_base.group_project_settings'))]"/>
+    </record>
+    <record id="purchase.res_config_settings_view_form_purchase" model="ir.ui.view">
+        <field name="groups_id" eval="[(4, ref('dynco_base.group_purchase_settings'))]"/>
+    </record>
+    <record id="stock.res_config_settings_view_form" model="ir.ui.view">
+        <field name="groups_id" eval="[(4, ref('dynco_base.group_inventory_settings'))]"/>
+    </record>
+    <record id="mrp.res_config_settings_view_form" model="ir.ui.view">
+        <field name="groups_id" eval="[(4, ref('dynco_base.group_manufacturing_settings'))]"/>
+    </record>
+    <record id="website.res_config_settings_view_form" model="ir.ui.view">
+        <field name="groups_id" eval="[(4, ref('dynco_base.group_website_settings'))]"/>
+    </record>
+    <record id="hr.res_config_settings_view_form" model="ir.ui.view">
+        <field name="groups_id" eval="[(4, ref('dynco_base.group_employees_settings'))]"/>
+    </record>
+    <record id="hr_expense_extract.res_config_settings_view_form" model="ir.ui.view">
+        <field name="groups_id" eval="[(4, ref('dynco_base.group_expenses_settings'))]"/>
+    </record>
+    <record id="hr_expense.res_config_settings_view_form" model="ir.ui.view">
+        <field name="groups_id" eval="[(4, ref('dynco_base.group_expenses_settings'))]"/>
+    </record>
+    <record id="hr_attendance.res_config_settings_view_form" model="ir.ui.view">
+        <field name="groups_id" eval="[(4, ref('dynco_base.group_attendances_settings'))]"/>
+    </record>
+    <record id="hr_timesheet.res_config_settings_view_form" model="ir.ui.view">
+        <field name="groups_id" eval="[(4, ref('dynco_base.group_timesheet_settings'))]"/>
+    </record>
+    <record id="hr_recruitment.res_config_settings_view_form" model="ir.ui.view">
+        <field name="groups_id" eval="[(4, ref('dynco_base.group_recruitment_settings'))]"/>
+    </record>
+    <record id="email_branding_knk.res_config_settings_view_form" model="ir.ui.view">
+        <field name="groups_id" eval="[(4, ref('dynco_base.group_email_debranding_settings'))]"/>
+    </record>
+    <record id="mass_mailing.res_config_settings_view_form" model="ir.ui.view">
+        <field name="groups_id" eval="[(4, ref('dynco_base.group_email_marketing_settings'))]"/>
+    </record>
+    <record id="social_facebook.res_config_settings_view_form" model="ir.ui.view">
+        <field name="groups_id" eval="[(4, ref('dynco_base.group_social_media_settings'))]"/>
+    </record>
+    <record id="social_instagram.res_config_settings_view_form" model="ir.ui.view">
+        <field name="groups_id" eval="[(4, ref('dynco_base.group_social_media_settings'))]"/>
+    </record>
+    <record id="social_linkedin.res_config_settings_view_form" model="ir.ui.view">
+        <field name="groups_id" eval="[(4, ref('dynco_base.group_social_media_settings'))]"/>
+    </record>
+    <record id="social_push_notifications.res_config_settings_view_form" model="ir.ui.view">
+        <field name="groups_id" eval="[(4, ref('dynco_base.group_social_media_settings'))]"/>
+    </record>
+    <record id="social_twitter.res_config_settings_view_form" model="ir.ui.view">
+        <field name="groups_id" eval="[(4, ref('dynco_base.group_social_media_settings'))]"/>
+    </record>
+    <record id="social_youtube.res_config_settings_view_form" model="ir.ui.view">
+        <field name="groups_id" eval="[(4, ref('dynco_base.group_social_media_settings'))]"/>
+    </record>
+    <record id="social.res_config_settings_view_form" model="ir.ui.view">
+        <field name="groups_id" eval="[(4, ref('dynco_base.group_social_media_settings'))]"/>
+    </record>
+    <record id="dynco_base.res_config_settings_view_form" model="ir.ui.view">
+        <field name="groups_id" eval="[(4, ref('dynco_base.group_dynco_settings'))]"/>
+    </record>
+</odoo>
+

@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <record id="product_prices_tree_button" model="ir.ui.view">
+        <field name="name">product.price.tree.button</field>
+        <field name="model">product.pricelist.item</field>
+        <field name="inherit_id" ref="website_product_multi_price.product_prices_tree_view" />
+        <field name="arch" type="xml">
+            <xpath expr="//tree" position="attributes">
+                <attribute name="js_class">button_in_tree</attribute>
+            </xpath>
+        </field>
+    </record>
+    <record id="dy_product_pricelist_item_tree_view" model="ir.ui.view">
+        <field name="name">product.pricelist.item.tree.price.rules</field>
+        <field name="model">product.pricelist.item</field>
+        <field name="priority">10</field>
+        <field name="arch" type="xml">
+            <tree string="Price Rules">
+                <field name="product_tmpl_id" />
+                <field name="fixed_price" string="Promo Price"/>
+                <field name="md_fixed_price" string="Fixed Price" readonly="True"/>
+                <field name="min_quantity" colspan="4" />
+                <field name="date_start" optional="show" />
+                <field name="date_end" optional="show" />
+                <button name="action_delete_price_rule" icon="fa-trash" type="object" title="Delete"/>
+            </tree>
+        </field>
+    </record>
+    <record id="add_discount_form_md" model="ir.ui.view">
+        <field name="name">add.discount.form.md</field>
+        <field name="model">add.discount</field>
+        <field name="arch" type="xml">
+            <form>
+                <sheet>
+                    <group>
+                        <group>
+                            <field name="discount_percentage" widget="percentage" />
+                            <field name="product_template_ids" widget="many2many_tags" />
+                        </group>
+                        <group>
+                            <field name="pricelist_id" />
+                            <label for="start_date" string="Validity" />
+                            <div class="o_row">
+                                <field name="start_date" widget="daterange" options="{&quot;related_end_date&quot;: &quot;end_date&quot;}" />
+                                <i class="fa fa-long-arrow-right mx-2 oe_edit_only" aria-label="Arrow icon" title="Arrow" />
+                                <field name="end_date" widget="daterange" options="{&quot;related_start_date&quot;: &quot;start_date&quot;}" />
+                            </div>
+                        </group>
+                    </group>
+                    <button name="get_price_rules" string="Check Discounts" type="object" class="btn btn-primary" />
+                    <field name="price_rules_ids" context="{'tree_view_ref': 'dynco_base.dy_product_pricelist_item_tree_view'}" readonly="1"/>
+                    <footer>
+                        <button name="create_dicounts" string="Confirm" type="object" class="btn-primary" />
+                    </footer>
+                </sheet>
+            </form>
+        </field>
+    </record>
+    <record id="add_discount_action_md" model="ir.actions.act_window">
+        <field name="name">add.discount</field>
+        <field name="type">ir.actions.act_window</field>
+        <field name="res_model">add.discount</field>
+        <field name="view_mode">form</field>
+        <field name="target">new</field>
+    </record>
+</odoo>

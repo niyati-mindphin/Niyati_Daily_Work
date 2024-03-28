@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+       <record model="ir.ui.view" id="base_stock_valuation_layer_tree_inh">
+            <field name="name">base.stock.valuation.layer.tree.inh</field>
+            <field name="model">stock.valuation.layer</field>
+            <field name="inherit_id" ref="stock_account.stock_valuation_layer_tree"/>
+            <field name="arch" type="xml">
+                <xpath expr="//tree//field[@name='value']" position="before">
+					<field name="ch_currency_id" invisible="1"/>
+	                <field name="vendor_id"/>
+                    <field name="unit_price" avg="Avg. of price"/>
+                    <field name="ch_value" sum="CH Total Value"/>
+					<field name="eur_currency_id" invisible="1"/>
+	                <field name="eur_value" sum="CH Total Value"/>
+					<field name="usd_currency_id" invisible="1"/>
+	                <field name="usd_value" sum="CH Total Value"/>
+                </xpath>
+            </field>
+        </record>
+    </data>
+</odoo>

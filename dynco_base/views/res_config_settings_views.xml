@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+        <record id="res_config_settings_view_form_login_background" model="ir.ui.view">
+            <field name="name">res.config.settings.form.inherit</field>
+            <field name="model">res.config.settings</field>
+            <field name="inherit_id" ref="website.res_config_settings_view_form"/>
+            <field name="arch" type="xml">
+                <xpath expr="//div[@id='domain_setting']//div[hasclass('content-group')]" position="inside">
+                    <div class="row">
+                        <label class="col-lg-3 o_light_label" for="login_background_image" />
+                        <field name="login_background_image" widget="image" class="float-left oe_avatar"/>
+                    </div>
+                </xpath>
+            </field>
+        </record>
+
+        <record id="res_config_settings_view_form_for_partner_test" model="ir.ui.view">
+            <field name="name">res.config.settings.form.inherit</field>
+            <field name="model">res.config.settings</field>
+            <field name="inherit_id" ref="stock.res_config_settings_view_form"/>
+            <field name="arch" type="xml">
+                <xpath expr="//field[@name='stock_move_email_validation']/../.." position="before">
+                    <div class="col-6 o_setting_box" id="dropship_delivery_partner_id">
+                        <div class="o_setting_right_pane">
+                            <label for="dropship_delivery_partner_id"/>
+                            <div class="content-group">
+                                <field name="dropship_delivery_partner_id" class="o_light_label" modifiers="{}"/>
+                            </div>
+                        </div>
+                    </div>
+                </xpath>
+            </field>
+        </record>
+    </data>
+</odoo>

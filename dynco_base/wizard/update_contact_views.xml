@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+        <record id="view_update_contact" model="ir.ui.view">
+            <field name="name">Compute Forecast</field>
+            <field name="model">update.contact</field>
+            <field name="arch" type="xml">
+                <form string="Sales Delivery Lead Advance">
+                    <group>
+                        <field name="fc_start_date"/>
+                        <field name="fc_end_date"/>
+                    </group>
+                    <footer>
+                        <button name="action_confirm" string="Confirm" type="object"
+                            class="btn-primary"/>
+                        <button string="Cancel" class="btn-secondary" special="cancel"/>
+                    </footer>
+                </form>
+            </field>
+        </record>
+
+        <record id="action_update_contact" model="ir.actions.act_window">
+            <field name="name">Compute Forecast</field>
+            <field name="type">ir.actions.act_window</field>
+            <field name="res_model">update.contact</field>
+            <field name="view_mode">form</field>
+            <field name="target">new</field>
+            <field name="binding_model_id" ref="model_res_partner"/>
+            <field name="binding_view_types">list</field>
+        </record>
+
+    </data>
+</odoo>

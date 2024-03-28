@@ -1,0 +1,131 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+        <record model="ir.ui.view" id="knk_view_partner_property_form_inh">
+            <field name="name">knk.res.partner_bank.form</field>
+            <field name="model">res.partner</field>
+            <field name="inherit_id" ref="account.view_partner_property_form"/>
+            <field name="arch" type="xml">
+                <xpath expr="//group[@name='accounting_entries']" position="after">
+                    <group>
+                        <field name="preferred_bank_id"/>
+                    </group>
+                </xpath>
+            </field>
+        </record>
+        <record id="view_in_invoice_bill_tree_inherit" model="ir.ui.view">
+            <field name="name">account.out.invoice.tree.inherit</field>
+            <field name="model">account.move</field>
+            <field name="inherit_id" ref="account.view_in_invoice_bill_tree" />
+            <field name="arch" type="xml">
+                <xpath expr="//field[@name='ref']" position="after">
+                    <field name="vednor_2_ref" string="2. Ref."/>
+                </xpath>
+            </field>
+        </record>
+
+        <record id="view_is_default_b2b_fiscal_position_inherit" model="ir.ui.view">
+            <field name="name">view.is.default.b2b.fiscal.position.inherit</field>
+            <field name="model">account.fiscal.position</field>
+            <field name="inherit_id" ref="account.view_account_position_form" />
+            <field name="arch" type="xml">
+                <xpath expr="//field[@name='vat_required']" position="after">
+                    <field name="is_deafult_b2b" />
+                </xpath>
+            </field>
+        </record>
+
+        <!-- Accounting Entries -->
+        <!-- <record model="ir.ui.menu" id="account.menu_finance_entries_accounting_entries">
+            <field name="groups_id" eval="[(6,0,[ref('dynco_base.group_user_menu_accounting')])]"/>
+        </record>
+ -->        <!-- Management -->
+        <record model="ir.ui.menu" id="account.menu_finance_entries_management">
+            <field name="groups_id" eval="[(6,0,[ref('dynco_base.group_user_menu_accounting')])]"/>
+        </record>
+        <!-- Actions -->
+        <record model="ir.ui.menu" id="account.menu_finance_entries_actions">
+            <field name="groups_id" eval="[(6,0,[ref('dynco_base.group_user_menu_accounting')])]"/>
+        </record>
+        <!-- Generate Entries -->
+        <record model="ir.ui.menu" id="account.menu_finance_entries_generate_entries">
+            <field name="groups_id" eval="[(6,0,[ref('dynco_base.group_user_menu_accounting')])]"/>
+        </record>
+        
+        <!-- Reporting Generic Statements -->
+        <record model="ir.ui.menu" id="account.account_reports_legal_statements_menu">
+            <field name="groups_id" eval="[(6,0,[ref('dynco_base.group_user_menu_acc_reporting')])]"/>
+        </record>
+        <!-- Partner Reports -->
+        <record model="ir.ui.menu" id="account_reports.account_reports_partners_reports_menu">
+            <field name="groups_id" eval="[(6,0,[ref('dynco_base.group_user_menu_reporting')])]"/>
+        </record>
+        <!-- Audit Reports -->
+        <record model="ir.ui.menu" id="account_reports.account_reports_audit_reports_menu">
+            <field name="groups_id" eval="[(6,0,[ref('dynco_base.group_user_menu_acc_reporting')])]"/>
+        </record>
+        <!-- Management -->
+        <record model="ir.ui.menu" id="account.menu_action_account_invoice_report_all">
+            <field name="groups_id" eval="[(6,0,[ref('dynco_base.group_user_menu_reporting')])]"/>
+        </record>
+        <!-- Assests -->
+        <record model="ir.ui.menu" id="account_asset.menu_action_account_report_assets">
+            <field name="groups_id" eval="[(6,0,[ref('dynco_base.group_user_menu_acc_reporting')])]"/>
+        </record>
+        <!-- <record model="ir.ui.menu" id="account_asset.menu_action_asset_asset_report">
+            <field name="groups_id" eval="[(6,0,[ref('dynco_base.group_user_menu_acc_reporting')])]"/>
+        </record> -->
+        <!-- Deferred Revenues -->
+        <!-- <record model="ir.ui.menu" id="account_deferred_revenue.menu_action_asset_revenue_report">
+            <field name="groups_id" eval="[(6,0,[ref('dynco_base.group_user_menu_acc_reporting')])]"/>
+        </record> -->
+        <!-- Switzerland -->
+        <record model="ir.ui.menu" id="l10n_ch.account_reports_ch_statements_menu">
+            <field name="groups_id" eval="[(6,0,[ref('dynco_base.group_user_menu_acc_reporting')])]"/>
+        </record>
+
+        <record id="knk_view_account_journal_form_inherit" model="ir.ui.view">
+            <field name="name">knk.account.journal.form.inherit</field>
+            <field name="model">account.journal</field>
+            <field name="inherit_id" ref="account.view_account_journal_form"/>
+            <field name="arch" type="xml">
+                <xpath expr="//field[@name='bank_account_id']" position="after">
+                    <field name="sd_account_number_camt"/>
+                </xpath>
+            </field>
+        </record>
+
+        <record id="view_invoice_tree_inherit" model="ir.ui.view">
+            <field name="name">account.invoice.tree.inherit</field>
+            <field name="model">account.move</field>
+            <field name="inherit_id" ref="account.view_invoice_tree" />
+            <field name="arch" type="xml">
+                <xpath expr="//field[@name='invoice_date']" position="before">
+                    <field name="narration" string="Notes"/>
+                </xpath>
+            </field>
+        </record>
+
+        <record id="view_move_form_inherit" model="ir.ui.view">
+            <field name="name">account.move.form.inherit</field>
+            <field name="model">account.move</field>
+            <field name="inherit_id" ref="account.view_move_form" />
+            <field name="arch" type="xml">
+                <xpath expr="//div[@name='journal_div']" position="after">
+                    <xpath expr="//field[@name='narration']" position="move"/>
+                </xpath>
+                <xpath expr="//field[@name='narration']" position="attributes">
+                    <attribute name="string">Notes</attribute>
+                    <attribute name="nolabel">0</attribute>
+                </xpath>
+                <xpath expr="//field[@name='invoice_line_ids']/tree/field[@name='quantity']" position="before">
+                    <field name="notes" attrs="{'column_invisible': [('parent.move_type', '!=', 'in_invoice')]}" optional="show"/>
+                </xpath>
+                <xpath expr="//field[@name='line_ids']/tree/field[@name='quantity']" position="after">
+                    <field name="notes" invisible="1"/>
+                </xpath>
+            </field>
+        </record>
+    </data>
+</odoo>
+

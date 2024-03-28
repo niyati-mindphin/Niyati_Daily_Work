@@ -1,0 +1,113 @@
+<?xml version="1.0"?>
+<odoo>
+    <data noupdate="1">
+        <!-- Users Groups -->
+        <record model="res.groups" id="group_user_menu_accounting">
+            <field name="name">Accounting Only</field>
+        </record>
+        <record model="res.groups" id="group_user_menu_acc_reporting">
+            <field name="name">Accounting Reporting</field>
+        </record>
+        <record model="res.groups" id="group_user_menu_reporting">
+            <field name="name">Account Part of Report</field>
+        </record>
+        <record id="customer_impersonate_admin_group" model="res.groups">
+            <field name="name">Impersonate All Customers (Including restricted Customer)</field>
+            <field name="comment">Beware, All Customers can be impersonated including restricted Customer(Exept Internal Users).</field>
+            <field name="implied_ids" eval="[(4, ref('impersonate_user.impersonate_user_group'))]"/>
+            <field name="category_id" ref="dynco_base.module_category_dynco_extra"/>
+        </record>
+        <record id="project_selected_users_rule" model="ir.rule">
+            <field name="name">Project: users: selected users only</field>
+            <field name="model_id" ref="model_project_project" />
+            <field name="domain_force">
+            ['|',
+                ('user_id', '=', user.id),
+                '|',
+                    ('privacy_visibility', '!=', 'private_users'),
+                    ('private_project_users', 'in', [user.id])
+            ]
+            </field>
+        </record>
+        <record model="ir.module.category" id="module_category_dynco_extra">
+            <field name="name">Dyno Extra Rights</field>
+            <field name="sequence">103</field>
+        </record>
+        <record id="group_general_settings" model="res.groups">
+            <field name="name">Allow General Settings</field>
+            <field name="category_id" ref="dynco_base.module_category_dynco_extra"/>
+        </record>
+        <record id="group_sale_settings" model="res.groups">
+            <field name="name">Allow Sale Settings</field>
+            <field name="category_id" ref="dynco_base.module_category_dynco_extra"/>
+        </record>
+        <record id="group_accounting_settings" model="res.groups">
+            <field name="name">Allow Accounting Settings</field>
+            <field name="category_id" ref="dynco_base.module_category_dynco_extra"/>
+        </record>
+        <record id="group_crm_settings" model="res.groups">
+            <field name="name">Allow CRM Settings</field>
+            <field name="category_id" ref="dynco_base.module_category_dynco_extra"/>
+        </record>
+        <record id="group_project_settings" model="res.groups">
+            <field name="name">Allow Project Settings</field>
+            <field name="category_id" ref="dynco_base.module_category_dynco_extra"/>
+        </record>
+        <record id="group_timesheet_settings" model="res.groups">
+            <field name="name">Allow Timesheet Settings</field>
+            <field name="category_id" ref="dynco_base.module_category_dynco_extra"/>
+        </record>
+        <record id="group_website_settings" model="res.groups">
+            <field name="name">Allow Website Settings</field>
+            <field name="category_id" ref="dynco_base.module_category_dynco_extra"/>
+        </record>
+        <record id="group_purchase_settings" model="res.groups">
+            <field name="name">Allow Purchase Settings</field>
+            <field name="category_id" ref="dynco_base.module_category_dynco_extra"/>
+        </record>
+        <record id="group_inventory_settings" model="res.groups">
+            <field name="name">Allow Inventory Settings</field>
+            <field name="category_id" ref="dynco_base.module_category_dynco_extra"/>
+        </record>
+        <record id="group_social_media_settings" model="res.groups">
+            <field name="name">Allow Social Media Settings</field>
+            <field name="category_id" ref="dynco_base.module_category_dynco_extra"/>
+        </record>
+        <record id="group_email_debranding_settings" model="res.groups">
+            <field name="name">Allow Email Debranding Settings</field>
+            <field name="category_id" ref="dynco_base.module_category_dynco_extra"/>
+        </record>
+        <record id="group_email_marketing_settings" model="res.groups">
+            <field name="name">Allow Email Marketing Settings</field>
+            <field name="category_id" ref="dynco_base.module_category_dynco_extra"/>
+        </record>
+        <record id="group_manufacturing_settings" model="res.groups">
+            <field name="name">Allow Manufacturing Settings</field>
+            <field name="category_id" ref="dynco_base.module_category_dynco_extra"/>
+        </record>
+        <record id="group_employees_settings" model="res.groups">
+            <field name="name">Allow Employees Settings</field>
+            <field name="category_id" ref="dynco_base.module_category_dynco_extra"/>
+        </record>
+        <record id="group_attendances_settings" model="res.groups">
+            <field name="name">Allow Attendances Settings</field>
+            <field name="category_id" ref="dynco_base.module_category_dynco_extra"/>
+        </record>
+        <record id="group_recruitment_settings" model="res.groups">
+            <field name="name">Allow Recruitment Settings</field>
+            <field name="category_id" ref="dynco_base.module_category_dynco_extra"/>
+        </record>
+        <record id="group_expenses_settings" model="res.groups">
+            <field name="name">Allow Expenses Settings</field>
+            <field name="category_id" ref="dynco_base.module_category_dynco_extra"/>
+        </record>
+        <record id="group_dynco_settings" model="res.groups">
+            <field name="name">Allow Dynco Settings</field>
+            <field name="category_id" ref="dynco_base.module_category_dynco_extra"/>
+        </record>
+        <record id="group_portal_docs" model="res.groups">
+            <field name="name">Allow Portal Documents</field>
+            <field name="category_id" ref="dynco_base.module_category_dynco_extra"/>
+        </record>
+    </data>
+</odoo>

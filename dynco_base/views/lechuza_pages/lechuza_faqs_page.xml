@@ -1,0 +1,1282 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+    <data>
+        <record id="lechuza_faqs_page_view" model="ir.ui.view">
+            <field name="name">Lechuza faqs</field>
+            <field name="type">qweb</field>
+            <field name="key">website.lechuza_faqs_page</field>
+            <field name="arch" type="xml">
+                <t name="Home" t-name="website.lechuza_faqs_page">
+                    <t t-name="website.faq-s">
+                        <t t-call="website.layout">
+                            <div id="wrap" class="oe_structure oe_empty oe_website_sale faq2">
+                                <div class="container">
+                                    <div class="row justify-content-center s_nb_column_fixed">
+                                        <div class="col-md-12">
+                                            <section class="pt32 pb8">
+                                                <div class="col-lg-12 s_title pt16 pb16 text-center">
+                                                    <font class="main-header fontweight">
+                                                        <h1>FAQ</h1>
+                                                    </font>
+                                                </div>
+                                            </section>
+                                            <section class="s_faq_collapse pt48 pb32">
+                                                <div class="container">
+                                                    <div class="row justify-content-center s_nb_column_fixed">
+                                                        <div class="col-md-12 s_title pb16 pt0">
+                                                            <h2 class="heading font-weight-normal">Antworten auf Ihre häufigsten Fragen:</h2>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </section>
+                                            <section class="s_faq_collapse pb32 pt0">
+                                                <div class="container">
+                                                    <div class="row justify-content-center s_nb_column_fixed">
+                                                        <div class="col-md-12 pb-2 ">
+                                                            <div class="panel">
+                                                                <div class="panel-group" id="accordion">
+                                                                    <div class="panel panel-default">
+                                                                        <div class="panel-heading">
+                                                                            <h4 class="panel-title">
+                                                                                <a href="#collapse1" data-toggle="collapse" class="accordion-toggle collapsed" data-parent="#accordion">Der Name LECHUZA</a>
+                                                                            </h4>
+                                                                        </div>
+                                                                        <div id="collapse1" class="panel-collapse collapse in">
+                                                                            <div class="panel-body">
+                                                                                <p class="card-text">
+                                                                                    <b>Was bedeutet der Name LECHUZA?</b>
+                                                                                </p>
+                                                                                <p class="card-text">LECHUZA (sprich ledschusa) ist spanisch für „Eule“. So wie die weisen
+                                                                                    und wachsamen Eulen wacht die LECHUZA Erd-Bewässerung über Ihre Pflanzen
+                                                                                    und sorgt dafür, dass diese rundum gleichmäßig und gut versorgt sind. </p>
+                                                                                <div class="spc-m-top">
+                                                                                    <a href="https://www.lechuza.ch/de/unternehmen/company.html" target="_blank" class="link-primary btn btn-outline-dark" data-original-title="" title="" aria-describedby="tooltip510201">Zum Unternehmensporträt</a>
+                                                                                </div>
+                                                                                <p class="card-text" />
+                                                                            </div>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                            <div class="panel">
+                                                                <div class="panel-group" id="accordion">
+                                                                    <div class="panel panel-default">
+                                                                        <div class="panel-heading">
+                                                                            <h4 class="panel-title mt-3">
+                                                                                <a href="#collapse2" data-toggle="collapse" class="accordion-toggle collapsed" data-parent="#accordion">Umweltbewusstsein bei LECHUZA</a>
+                                                                            </h4>
+                                                                        </div>
+                                                                        <div id="collapse2" class="panel-collapse collapse">
+                                                                            <div class="panel-body">
+                                                                                <p class="card-text">
+                                                                                    <b>Wie umweltfreundlich ist LECHUZA?</b>
+                                                                                </p>
+                                                                                <p class="card-text">Umweltbewusstes und ressourcenschonendes Denken und Handeln ist ein essentieller Baustein der langfristigen Weiterentwicklung unseres Unternehmens. Wir stellen uns der Herausforderung und der Verantwortung, weder Mensch noch Umwelt auf unserem Weg in eine erfolgreiche Zukunft zu gefährden. Unsere Umweltpolitik - von Inhaber, Geschäftsführung und Mitarbeitern umgesetzt - bietet die Grundlage dafür.<br /><br />
+                                                                                    LECHUZA Pflanzgefäße sind <b>„made in Germany“</b> und zu <b>100 Prozent recycelbar</b>. Mit der erfolgreichen <b>Zertifizierung nach DIN EN ISO 14001:2009</b>,
+                                                                                    einem branchenübergreifenden anerkannten Zertifikat, haben wir ein
+                                                                                    gemeinsames leistungsfähiges Umweltmanagementsystem für die Marken
+                                                                                    PLAYMOBIL und LECHUZA eingeführt, welches alle Ebenen des Unternehmens
+                                                                                    angefangen bei der Entwicklung über die Herstellung und den Vertrieb
+                                                                                    unserer Produkte umfasst. Das Familienunternehmen geobra Brandstätter
+                                                                                    Stiftung &amp;amp; Co. KG verpflichtet sich damit, die Umweltauswirkungen
+                                                                                    unserer Produktion zum Schutz der natürlichen Ressourcen anhand
+                                                                                    konkreter Ziele zu verbessern, Umweltbelastungen zu vermeiden sowie alle
+                                                                                    geltenden rechtlichen Verpflichtungen einzuhalten und, wo möglich, eine
+                                                                                    Übererfüllung anzustreben. </p>
+                                                                                <div class="spc-m-top">
+                                                                                    <a href="https://www.lechuza.ch/de/umwelt-und-energiepolitik-lechuza/company_umweltmanagement.html" target="_blank" class="link-primary btn btn-outline-dark">Zur Umwelt-und Energiepolitik von LECHUZA</a>
+                                                                                </div>
+                                                                            </div>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                            <div class="panel">
+                                                                <div class="panel-group" id="accordion">
+                                                                    <div class="panel panel-default">
+                                                                        <div class="panel-heading">
+                                                                            <h4 class="panel-title mt-3">
+                                                                                <a href="#collapse3" data-toggle="collapse" class="accordion-toggle collapsed" data-parent="#accordion">Allgemeines über LECHUZA-Pflanzgefäße</a>
+                                                                            </h4>
+                                                                        </div>
+                                                                        <div id="collapse3" class="panel-collapse collapse">
+                                                                            <div class="panel-body">
+                                                                                <p class="panel-text">
+                                                                                    <ul class="accordion-sub">
+                                                                                        <li>
+                                                                                            <b>
+                                                                                                <a>Kann ich LECHUZA-Pflanzgefäße sowohl drinnen als auch draußen verwenden?</a>
+                                                                                            </b>
+                                                                                        </li>
+                                                                                        <div id="faq41">
+                                                                                            <div class="bg-off-white p-3">
+                                                                                                <div class="grid-row">
+                                                                                                    <div class="col-xs-12 col-s-12 col-m-12">
+                                                                                                        <div class="panel panel-vertical">
+                                                                                                            LECHUZA Pflanzgefäße können sowohl im Innen- als auch im Außenbereich verwendet werden.<br /><br />
+                                                                                                            <b>Im Haus:</b> Beim Einsatz im Haus muss die rote Dichtschraube im
+                                                                                                            Boden des Gefäßes handfest angezogen sein. Bitte vor dem erstmaligen
+                                                                                                            Gebrauch den festen Sitz der Schraube prüfen, ggf. nachziehen.<br /><br />
+                                                                                                            <b>Im Freien:</b> Im Außenbereich Dichtschraube entfernen, damit
+                                                                                                            überschüssiges Regenwasser ablaufen kann. Bei den Säulengefäßen muss
+                                                                                                            auch die Schraube im Pflanzeinsatz entfernt werden.
+                                                                                                            <div class="pt-3">
+                                                                                                                <div class="amp amp-image"><img src="https://media.playmobil.com/i/lechuza/le_faq_gefaessfunktionen_INOUTDOOR?locale=de-CH,de,*&amp;strip=true&amp;fmt.jpeg.interlaced=true" style="width: auto;" alt="CUBICO In and Outdoor" title="le_faq_gefaessfunktionen_INOUTDOOR" /></div>
+                                                                                                            </div>
+                                                                                                            <div class="spc-m-top"><b>Wir empfehlen</b>, LECHUZA-Pflanzgefäße ohne
+                                                                                                                Überlauf und Bodenschraube - wie z.B. Tischpflanzgefäße - nur im
+                                                                                                                Innenbereich anzuwenden, da überschüssiges Regenwasser bei diesen
+                                                                                                                Gefäßen nicht ablaufen kann.</div>
+                                                                                                        </div>
+                                                                                                    </div>
+                                                                                                </div>
+                                                                                            </div>
+                                                                                        </div>
+                                                                                        <li>
+                                                                                            <b>
+                                                                                                <a>Aus welchem Material werden LECHUZA-Pflanzgefäße hergestellt?</a>
+                                                                                            </b>
+                                                                                        </li>
+                                                                                        <div id="faq42">
+                                                                                            <div class="bg-off-white p-3">
+                                                                                                LECHUZA-Pflanzgefäße werden hauptsächlich aus Polypropylen (PP)
+                                                                                                hergestellt. Die Premium-Gefäße werden zusätzlich hochwertig lackiert.
+                                                                                                Auch das LECHUZA-Zubehör, die Pflanzeinsätze inkl. Tragegriffe und das
+                                                                                                Bewässerungs-System werden zum Großteil aus PP gefertigt.<br />
+                                                                                                <br />Die lackierten Tischgefäße sowie die lackierten Griffrahmen der
+                                                                                                herausnehmbaren Pflanzeinsätze bestehen aus
+                                                                                                Acrylnitril-Butadien-Styrol-Copolymerisat (ABS). Der durchsichtige
+                                                                                                Skalenanzeiger des Wasserstandsanzeigers wird nicht aus Glas, sondern
+                                                                                                aus Polycarbonat (PC) hergestellt.
+                                                                                            </div>
+                                                                                        </div>
+                                                                                        <li>
+                                                                                            <b>
+                                                                                                <a>Sind LECHUZA-Pflanzgefäße frost- und UV-beständig?</a>
+                                                                                            </b>
+                                                                                        </li>
+                                                                                        <div id="faq43">
+                                                                                            <div class="bg-off-white p-3">
+                                                                                                Der Einsatz hochwertiger, robuster Kunststoffe – witterungsbeständig
+                                                                                                gegen UV-Strahlung und Frost – gewährleistet eine lange Freude an den
+                                                                                                Produkten.
+                                                                                            </div>
+                                                                                        </div>
+                                                                                        <li>
+                                                                                            <b>
+                                                                                                <a>Sind LECHUZA-Pflanzgefäße bruchsicher?</a>
+                                                                                            </b>
+                                                                                        </li>
+                                                                                        <div id="faq44">
+                                                                                            <div class="bg-off-white p-3">
+                                                                                                Der stabile Kunststoff bricht selbst dann nicht, wenn das Gefäß wider
+                                                                                                Erwarten einmal stürzt. Bei Verwendung im Außenbereich empfehlen wir die
+                                                                                                Säulengefäße zusätzlich zu beschweren, um ihnen noch mehr Stabilität zu
+                                                                                                verleihen. Hierfür füllen Sie nach dem Einbau der Stützrohre, jedoch
+                                                                                                vor dem Einsetzen des Pflanzeinsatzes, beispielsweise groben Kies oder
+                                                                                                Steine in das Pflanzgefäß.
+                                                                                            </div>
+                                                                                        </div>
+                                                                                        <li>
+                                                                                            <b>
+                                                                                                <a>Wie reinige ich LECHUZA-Pflanzgefäße am besten?</a>
+                                                                                            </b>
+                                                                                        </li>
+                                                                                        <div id="faq45">
+                                                                                            <div class="bg-off-white p-3">
+                                                                                                LECHUZA-Pflanzgefäße reinigen Sie am besten mit einem weichen Tuch und
+                                                                                                sanftem Spülmittel. Der Lack der Pflanzgefäße ist in seiner
+                                                                                                Hochwertigkeit vergleichbar mit Autolack, weshalb Sie bei den
+                                                                                                Gefäßoberflächen keine scharfen Reiniger bzw. Reinigungsutensilien
+                                                                                                verwenden sollten.
+                                                                                            </div>
+                                                                                        </div>
+                                                                                    </ul>
+                                                                                </p>
+                                                                            </div>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                            <div class="panel">
+                                                                <div class="panel-group" id="accordion">
+                                                                    <div class="panel panel-default">
+                                                                        <div class="panel-heading">
+                                                                            <h4 class="panel-title mt-3">
+                                                                                <a href="#collapse4" data-toggle="collapse" class="accordion-toggle collapsed" data-parent="#accordion">Zubehör</a>
+                                                                            </h4>
+                                                                        </div>
+                                                                        <div id="collapse4" class="panel-collapse collapse">
+                                                                            <div class="panel-body">
+                                                                                <p class="panel-text">
+                                                                                    <ul class="accordion-sub">
+                                                                                        <li>
+                                                                                            <b>
+                                                                                                <a>Für welche Gefäße bietet LECHUZA Rollen an?</a>
+                                                                                            </b>
+                                                                                        </li>
+                                                                                        <div id="faq46">
+                                                                                            <div class="bg-off-white p-3">
+                                                                                                <div class="grid-row">
+                                                                                                    <div class="col-xs-12 col-s-12 col-m-12">
+                                                                                                        <div class="panel panel-vertical">
+                                                                                                            <div>
+                                                                                                                <img src="https://www.lechuza.ch/on/demandware.static/-/Library-Sites-Default/de/dw608db5d1/static/images/faq/FAQ_Rollen.png" alt="Lechuza Rolluntersetzer" />
+                                                                                                                <br />
+                                                                                                                <br />
+                                                                                                            </div>
+                                                                                                            <div class="spc-m-top">Für CANTO, CLASSICO, CUBE und QUADRO ab der Größe 40 ist der <a href="https://www.lechuza.ch/de/zubehoer-classico/rolluntersetzer-fuer-classico-43-quadro-43-puro-50/19880.html" target="_blank" class="link-primary">LECHUZA Rolluntersetzer</a>
+                                                                                                                erhältlich, der wie unsichtbar unter dem Gefäß verschwindet und auf
+                                                                                                                seinen 5 stabilen Rollen mühelos bis zu 180 kg bewegt. Auch für CUBICO
+                                                                                                                30 und 40 der PREMIUM Collection gibt es den <a href="https://www.lechuza.ch/de/zubehoer-cubico/rolluntersetzer-fuer-cubico-30-anthrazit/13427.html" target="_blank" class="link-primary">Rolluntersetzer CUBICO</a>.</div>
+                                                                                                            <div class="spc-m-top">Wie bei den bisherigen LECHUZA-Rolluntersetzern
+                                                                                                                sind die Räder unsichtbar unter dem Pflanzgefäß verborgen. Ein
+                                                                                                                Schmuckrahmen erzeugt bei dem neuen eckigen Modell den Eindruck, dass
+                                                                                                                das Pflanzgefäß mit dem Rolluntersetzer verbunden ist.</div>
+                                                                                                            <div class="spc-m-top">Für <a href="https://www.lechuza.ch/de/pflanzgefaesse/cararo-weiss-hochglanz/18800.html" target="_blank" class="link-primary">CARARO</a>
+                                                                                                                sind passende Rollen im Lieferumfang bereits enthalten. Bringen Sie
+                                                                                                                einfach die zwei stabilen Rollen vor dem Bepflanzen am Gefäßboden an und
+                                                                                                                Ihr CARARO lässt sich so mühelos hin und her bewegen.</div>
+                                                                                                        </div>
+                                                                                                    </div>
+                                                                                                </div>
+                                                                                            </div>
+                                                                                        </div>
+                                                                                        <li>
+                                                                                            <b>
+                                                                                                <a>Gibt es Gießhilfen für den Wassereinfüllschacht?</a>
+                                                                                            </b>
+                                                                                        </li>
+                                                                                        <div id="faq47">
+                                                                                            <div class="bg-off-white p-3">
+                                                                                                <div class="grid-row">
+                                                                                                    <div class="col-xs-12 col-s-12 col-m-12">
+                                                                                                        <div class="panel panel-vertical">
+                                                                                                            <div>
+                                                                                                                <div class="amp amp-image">
+                                                                                                                    <img src="https://media.playmobil.com/i/lechuza/le_pico_product_addi_02?locale=de-CH,de,*&amp;strip=true&amp;fmt.jpeg.interlaced=true" style="width: 300px;" alt="Gießhilfe PICO" title="le_pico_product_addi_02" />
+                                                                                                                    <br />
+                                                                                                                    <br />
+                                                                                                                </div>
+                                                                                                            </div>
+                                                                                                            <div class="spc-m-top">Sollten Sie mit großen Gießkannen Schwierigkeiten
+                                                                                                                haben, den Einfüllschacht Ihres LECHUZA-Pflanzgefäßes zu treffen,
+                                                                                                                nutzen Sie einfach unsere <a href="https://www.lechuza.ch/de/zubehoer/giesshilfe-pico-gruen/19916.html" target="_blank" class="link-primary">Gießhilfe PICO</a>. Der Aufsatz kann bei allen handelsüblichen Gießkannen verwendet werden.</div>
+                                                                                                        </div>
+                                                                                                    </div>
+                                                                                                </div>
+                                                                                            </div>
+                                                                                        </div>
+                                                                                        <li>
+                                                                                            <b>
+                                                                                                <a>Wie kann ich überschüssiges Wasser aus dem Wassereinfüllschacht entfernen?</a>
+                                                                                            </b>
+                                                                                        </li>
+                                                                                        <div id="faq48">
+                                                                                            <div class="bg-off-white p-3">
+                                                                                                <div class="grid-row">
+                                                                                                    <div class="col-xs-12 col-s-12 col-m-12">
+                                                                                                        <div class="panel panel-vertical">
+                                                                                                            <div>
+                                                                                                                <div class="amp amp-image">
+                                                                                                                    <img src="https://media.playmobil.com/i/lechuza/le_handpumpe_product_addi_01?locale=de-CH,de,*&amp;strip=true&amp;fmt.jpeg.interlaced=true" style="width: 300px;" alt="Handpumpe LECHUZA" title="le_handpumpe_product_addi_01" />
+                                                                                                                    <br />
+                                                                                                                    <br />
+                                                                                                                </div>
+                                                                                                            </div>
+                                                                                                            <div class="spc-m-top">Wenn Sie über den maximalen Wasserstand gegossen haben, können Sie mit Hilfe der <a href="https://www.lechuza.ch/de/zubehoer/handpumpe/19711.html" target="_blank" class="link-primary">Handpumpe für LECHUZA-Pflanzgefäße</a>
+                                                                                                                überschüssiges Wasser abpumpen. Führen Sie hierfür die Handpumpe in den
+                                                                                                                Einfüllschacht und pumpen Sie das überschüssige Wasser ab.</div>
+                                                                                                        </div>
+                                                                                                    </div>
+                                                                                                </div>
+                                                                                            </div>
+                                                                                        </div>
+                                                                                    </ul>
+                                                                                </p>
+                                                                            </div>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                            <div class="panel">
+                                                                <div class="panel-group" id="accordion">
+                                                                    <div class="panel panel-default">
+                                                                        <div class="panel-heading">
+                                                                            <h4 class="panel-title mt-3">
+                                                                                <a href="#collapse5" data-toggle="collapse" class="accordion-toggle collapsed" data-parent="#accordion">Das LECHUZA Erd-Bewässerungssystem</a>
+                                                                            </h4>
+                                                                        </div>
+                                                                        <div id="collapse5" class="panel-collapse collapse">
+                                                                            <div class="panel-body">
+                                                                                <p class="panel-text">
+                                                                                    <ul class="accordion-sub">
+                                                                                        <li>
+                                                                                            <b>
+                                                                                                <a>Kann das LECHUZA Erd-Bewässerungssystem für alle Pflanzen angewendet werden?</a>
+                                                                                            </b>
+                                                                                        </li>
+                                                                                        <div id="faq49">
+                                                                                            <div class="bg-off-white p-3">
+                                                                                                Prinzipiell ist jede Pflanzenart, die in Erde kultiviert wird, für das LECHUZA Erd-Bewässerungssystem geeignet.</div>
+                                                                                        </div>
+                                                                                        <li>
+                                                                                            <b>
+                                                                                                <a>Ist das LECHUZA Erd-Bewässerungssystem das Gleiche wie Hydrokultur?</a>
+                                                                                            </b>
+                                                                                        </li>
+                                                                                        <div id="faq50">
+                                                                                            <div class="bg-off-white p-3">
+                                                                                                Nein, denn mit dem LECHUZA Erd-Bewässerungssystem können Sie prinzipiell
+                                                                                                alle Erdpflanzen bewässern. Sie benötigen somit keine teureren, eigens
+                                                                                                für Hydrokultur gezüchteten Hydropflanzen, sondern können aus dem großen
+                                                                                                Angebot an Erdpflanzen Ihren Favorit auswählen. Diesen pflanzen Sie
+                                                                                                dann einfach nach Anleitung, die dem Bewässerungsset beiliegt, in
+                                                                                                Qualitäts-Kübelpflanzenerde oder alternativ in das LECHUZA-PON
+                                                                                                Pflanzsubstrat. Das LECHUZA Bewässerungsset sowie der dazugehörige
+                                                                                                Wasserstandsanzeiger sind nicht zum Gebrauch mit Hydrokultur geeignet.</div>
+                                                                                        </div>
+                                                                                        <li>
+                                                                                            <b>
+                                                                                                <a>Wie wird das LECHUZA Bewässerungssystem montiert?</a>
+                                                                                            </b>
+                                                                                        </li>
+                                                                                        <div id="faq51">
+                                                                                            <div class="bg-off-white p-3">
+                                                                                                Die Montage des LECHUZA Erd-Bewässerungssystems wird ausführlich in den Pflanzanleitungen beschrieben, die Sie in den <a href="https://www.lechuza.ch/de/mediathek/mediathek.html" target="_blank" class="link-primary">Downloads</a> finden.</div>
+                                                                                        </div>
+                                                                                        <li>
+                                                                                            <b>
+                                                                                                <a>Kann das Erd-Bewässerungs-Set in den Säulengefäßen auch ohne Pflanzeinsatz benutzt werden?</a>
+                                                                                            </b>
+                                                                                        </li>
+                                                                                        <div id="faq52">
+                                                                                            <div class="bg-off-white p-3">
+                                                                                                Zum Einsatz des Bewässerungssets in den Säulengefäßen benötigen Sie
+                                                                                                unbedingt den Pflanzeinsatz. Ein Einbau des Bewässerungssets direkt in
+                                                                                                das Säulengefäß ist nicht möglich.</div>
+                                                                                        </div>
+                                                                                        <li>
+                                                                                            <b>
+                                                                                                <a>Sind Ersatzteile für das LECHUZA Erd-Bewässerungs-Set erhältlich?</a>
+                                                                                            </b>
+                                                                                        </li>
+                                                                                        <div id="faq53">
+                                                                                            <div class="bg-off-white p-3">
+                                                                                                Die Einzelteile des LECHUZA Bewässerungssets (Trennboden, Füllschacht,
+                                                                                                Füllschachtdeckel, Wasserstandsanzeiger und LECHUZA-PON) sowie der
+                                                                                                Pflanzeinsatz und ggf. die stabilisierenden Halterohre für
+                                                                                                Säulenpflanzgefäße können Sie einzeln in der Kategorie <a href="https://www.lechuza.ch/de/ersatzteile/" target="_blank" class="link-primary">Ersatzteile</a> nachkaufen.</div>
+                                                                                        </div>
+                                                                                    </ul>
+                                                                                </p>
+                                                                            </div>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                            <div class="panel">
+                                                                <div class="panel-group" id="accordion">
+                                                                    <div class="panel panel-default">
+                                                                        <div class="panel-heading">
+                                                                            <h4 class="panel-title mt-3">
+                                                                                <a href="#collapse6" data-toggle="collapse" class="accordion-toggle collapsed" data-parent="#accordion">Bepflanzung in LECHUZA</a>
+                                                                            </h4>
+                                                                        </div>
+                                                                        <div id="collapse6" class="panel-collapse collapse">
+                                                                            <div class="panel-body">
+                                                                                <p class="panel-text">
+                                                                                    <ul class="accordion-sub">
+                                                                                        <li>
+                                                                                            <b>Was ist die Angießphase, die Trockenphase und wie dünge ich am besten?</b>
+                                                                                        </li>
+                                                                                        <div class="bg-off-white p-3">
+                                                                                            <div class="grid-row">
+                                                                                                <div class="col-xs-12 col-s-12 col-m-12">
+                                                                                                    <div class="panel panel-vertical">
+                                                                                                        <div>
+                                                                                                            <img src="https://www.lechuza.ch/on/demandware.static/-/Library-Sites-Default/de/dw1cabdac9/static/images/faq/angiessphase.png" alt="Angiessphase" width="450" />
+                                                                                                            <br />
+                                                                                                            <br />
+                                                                                                        </div>
+                                                                                                    </div>
+                                                                                                </div>
+                                                                                            </div>
+                                                                                            <div class="spc-m-top">Gießen Sie die ersten Wochen von oben, bis die
+                                                                                                Wurzeln das Wasserreservoir erreichen (“Angießphase“). In dieser Zeit
+                                                                                                prüfen Sie die Pflanzenerde oder das LECHUZA-PON Granulat knapp unter
+                                                                                                der Oberfläche auf Feuchtigkeit und gießen, wenn es trocken ist.</div>
+                                                                                            <div class="spc-m-top"><b>Test:</b> Nach einigen Wochen füllen sie das
+                                                                                                Wasserreservoir zur Hälfte mit Wasser. Sinkt der Wasserstand in den
+                                                                                                nächsten Tagen, sind die Wurzeln in das Reservoir gewachsen. Füllen Sie
+                                                                                                dann das Wasserreservoir bis „max.“, LECHUZA sorgt ab sofort für Ihre
+                                                                                                Pflanzen! </div>
+                                                                                            <div class="spc-m-top">Zeigt der Wasserstandsanzeiger nach einigen Tagen bis Wochen "min." an, sollten Sie <b>noch nicht gleich nachgießen,</b> es ist noch ausreichend Feuchtigkeit im Granulat vorhanden.</div>
+                                                                                            <div class="spc-m-top"><b>Achtung:</b> Halten Sie eine "Trockenphase"
+                                                                                                ein! Sie ist bei jeder Pflanze anders und hängt von folgenden Faktoren
+                                                                                                ab: Art und Sorte des Gewächses, Standort, Luftfeuchtigkeits- und
+                                                                                                Wasserbedarf, Temperatur sowie Anforderungen an das Pflanzsubstrat. Wir
+                                                                                                empfehlen eine Trockenphase von 2-10 Tagen, bei Pflanzen wie z.B.
+                                                                                                Kakteen und Orchideen auch länger, mindestens aber 2 Wochen.</div>
+                                                                                            <div class="spc-m-top">Ab sofort benötigen Sie nur noch <b>einen einzigen Dünger</b> - der <a href="https://www.lechuza.ch/de/zubehoer-duenger/lechuza-duenger/19712.html" target="_blank" class="link-primary">LECHUZA-Dünger</a>
+                                                                                                ist optimal an die Nährstoffversorgung aller Pflanzen angepasst, wie
+                                                                                                z.B. Grün- und Blühpflanzen, Orchideen, Zitruspflanzen, Kräuter,
+                                                                                                Tomaten, Obststräucher, Kakteen, etc. Mit dem LECHUZA-Dünger versorgte
+                                                                                                Kräuter und Früchte können bedenkenlos verzehrt werden – der Dünger wird
+                                                                                                rückstandslos von den Pflanzen aufgenommen. Der Dünger kann während der
+                                                                                                gesamten Vegetationsperiode zugegeben werden, die Wirkungsdauer beträgt
+                                                                                                ca. 6 Monate. Wir empfehlen jeweils eine Düngung im Frühjahr und Mitte /
+                                                                                                Ende August. Eine Überdüngung sowie Pflanzenverbrennungen sind nicht
+                                                                                                möglich! Geben Sie die entsprechende Düngermenge einfach mit dem
+                                                                                                beiliegenden Dosierlöffel in den Wasserspeicher Ihrer LECHUZA-Gefäße.
+                                                                                                Ein Löffel Dünger pro Liter Wasser Ihres Pflanzgefäßes.
+                                                                                            </div>
+                                                                                        </div>
+                                                                                    </ul>
+                                                                                </p>
+                                                                            </div>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                            <div class="panel">
+                                                                <div class="panel-group" id="accordion">
+                                                                    <div class="panel panel-default">
+                                                                        <div class="panel-heading">
+                                                                            <h4 class="panel-title mt-3">
+                                                                                <a href="#collapse7" data-toggle="collapse" class="accordion-toggle collapsed" data-parent="#accordion">PON und TERRAPON</a>
+                                                                            </h4>
+                                                                        </div>
+                                                                        <div id="collapse7" class="panel-collapse collapse">
+                                                                            <div class="panel-body">
+                                                                                <p class="panel-text">
+                                                                                    <ul class="accordion-sub">
+                                                                                        <li>
+                                                                                            <b>
+                                                                                                <a>Was ist LECHUZA-PON und was LECHUZA-TERRAPON?</a>
+                                                                                            </b>
+                                                                                        </li>
+                                                                                        <div id="faq55">
+                                                                                            <div class="bg-off-white p-3">
+                                                                                                <div class="grid-row">
+                                                                                                    <div class="col-xs-12 col-s-12 col-m-12">
+                                                                                                        <div class="panel panel-vertical">
+                                                                                                            <div>
+                                                                                                                <div class="amp amp-image">
+                                                                                                                    <img src="https://media.playmobil.com/i/lechuza/le_pon_product_addi_01?locale=de-CH,de,*&amp;strip=true&amp;fmt.jpeg.interlaced=true" style="width: 300px;" alt="PON LECHUZA" title="le_pon_product_addi_01" />
+                                                                                                                </div>
+                                                                                                            </div>
+                                                                                                            <div class="spc-m-top"><a href="https://www.lechuza.ch/de/zubehoer-pflanzsubstrat/lechuza-pon-6-liter/19790.html" target="_blank" class="link-primary">LECHUZA-PON</a> ist das anorganische Pflanzsubstrat von LECHUZA für Zimmer- und Kübelpflanzen, <a href="https://www.lechuza.ch/de/zubehoer-pflanzsubstrat/lechuza-terrapon-15-liter/19710.html" target="_blank" class="link-primary">TERRAPON</a> ist das Pflanzsubstrat mit hochwertigem Torf.</div>
+                                                                                                        </div>
+                                                                                                    </div>
+                                                                                                </div>
+                                                                                            </div>
+                                                                                        </div>
+                                                                                        <li>
+                                                                                            <b>
+                                                                                                <a>Wie gewöhne ich meine Hydropflanze in LECHUZA-PON um?</a>
+                                                                                            </b>
+                                                                                        </li>
+                                                                                        <div id="faq56">
+                                                                                            <div class="bg-off-white p-3">
+                                                                                                Vom Hydrosystem auf ein neues Substrat umzustellen, ist für eine Pflanze
+                                                                                                nur unter großem Stress zu bewältigen. Berücksichtigen Sie hierbei das
+                                                                                                unterschiedliche Klima, insbesondere den Wasserhaushalt an der Wurzel
+                                                                                                und die jeweilige Art der Pflanze.<br />
+                                                                                                <br />In normaler Kübelpflanzenerde ist der Erfolg einer Umgewöhnung eher unwahrscheinlich. Einfacher gelingt es Ihnen im <a href="https://www.lechuza.ch/de/zubehoer-pflanzsubstrat/lechuza-pon-6-liter/19790.html" target="_blank" class="link-primary">LECHUZA-PON Granulat</a>.
+                                                                                                Zuerst befreien Sie die Hydropflanze möglichst gründlich vom
+                                                                                                Tonsubstrat, ohne dabei Wurzeln zu beschädigen. Sollte doch eine
+                                                                                                Verletzung passieren, schneiden Sie defekte Wurzeln mit einer scharfen,
+                                                                                                sauberen Pflanzenschere zurück. Setzen Sie Ihre Pflanze auf etwa der
+                                                                                                gleichen Höhe in Ihr LECHUZA-Gefäß ein, in der sie sich auch vorher wohl
+                                                                                                gefühlt hat.<br />
+                                                                                                <br /><b>Ein wichtiger Tipp:</b> Schneiden Sie Ihre Pflanze bis zu einem
+                                                                                                Viertel zurück. Das vermindert den Blattverlust, verhindert ihn aber
+                                                                                                leider nicht gänzlich. Der Rückschnitt hilft Ihrer Pflanze sich besser
+                                                                                                und schneller an das neue Umfeld zu gewöhnen.<br />
+                                                                                                <br /><b>Weitere Empfehlung:</b> Gießen Sie Ihre Pflanze anfangs immer nur
+                                                                                                von oben auf das Granulat und das in kurzen Abständen. Gießen Sie
+                                                                                                wenig, damit sich kein Wasser im Reservoir ansammelt - dieses kann Ihre
+                                                                                                Pflanze noch nicht aufnehmen.<br />
+                                                                                                <br />Untersuchen Sie Ihre Pflanze regelmäßig auf Schädlinge und
+                                                                                                Krankheiten, denn während der Umgewöhnung sind viele Gewächse besonders
+                                                                                                empfindlich. Erst nach einer Phase von mehreren Monaten sind die Wurzeln
+                                                                                                bis ins Wasserreservoir vorgedrungen und die Pflanze kann sich selbst
+                                                                                                versorgen. Füllen Sie nach 12 Wochen erstmals das Wasserreservoir auf.
+                                                                                                Der Wasserstandsanzeiger muss nicht bis zur "maximal" - Marke voll sein,
+                                                                                                es genügt, erst einmal ein Drittel des Reservoirs zu nutzen. Nun
+                                                                                                beobachten Sie, ob die rote Nadel in den nächsten Tagen absinkt. Ist
+                                                                                                dies der Fall, ist Ihre Pflanze ins Wasserreservoir eingewachsen.
+                                                                                                Beobachten Sie weiterhin aufmerksam, ob sich Ihre Hydropflanze komplett
+                                                                                                umgewöhnt hat. Möglicherweise benötigt sie noch immer Wassergaben von
+                                                                                                oben auf das PON.</div>
+                                                                                        </div>
+                                                                                        <li>
+                                                                                            <b>
+                                                                                                <a>Was kann ich gegen weißen Schimmel auf meinem LECHUZA-PON unternehmen?</a>
+                                                                                            </b>
+                                                                                        </li>
+                                                                                        <div id="faq57">
+                                                                                            <div class="bg-off-white p-3">
+                                                                                                Prinzipiell bietet LECHUZA-PON dem Schimmel keine Angriffsfläche, da es
+                                                                                                nicht aus organischem Material besteht – doch können abgestorbene
+                                                                                                Wurzeln oder Blätter bei hoher Luftfeuchtigkeit und feuchterer
+                                                                                                Substratoberfläche durchaus ein Nährboden für Pilze sein. Das gehäufte
+                                                                                                Auftreten in den Herbst- und Wintermonaten hängt mit der höheren
+                                                                                                relativen Luftfeuchtigkeit in Innenräumen zusammen.<br /><br />
+                                                                                                <h4 class="heading-4">Der Notfallplan</h4>
+                                                                                                Mit Schimmel überwachsendes Pflanzsubstrat entfernen Sie in einer
+                                                                                                Schichtstärke von ca. 5 cm von der Oberfläche, waschen es gründlich ab
+                                                                                                und kochen es in heißem Wasser. Anschließend geben Sie das getrocknete
+                                                                                                Substrat wieder in das Pflanzgefäß. Wichtig ist dabei, dass keine
+                                                                                                abgestorbenen Pflanzenteile im Substrat verbleiben und die Pflanze etwas
+                                                                                                trockener gehalten wird. Schimmelbildung können Sie auch vorbeugen,
+                                                                                                indem Sie stets abgefallene Blätter, abgestorbene oder kranke
+                                                                                                Pflanzenteile sofort entfernen und entsorgen.
+                                                                                            </div>
+                                                                                        </div>
+                                                                                    </ul>
+                                                                                </p>
+                                                                            </div>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                            <div class="panel">
+                                                                <div class="panel-group" id="accordion">
+                                                                    <div class="panel panel-default">
+                                                                        <div class="panel-heading">
+                                                                            <h4 class="panel-title mt-3">
+                                                                                <a href="#collapse8" data-toggle="collapse" class="accordion-toggle collapsed" data-parent="#accordion">Tipps zur Pflanzenpflege</a>
+                                                                            </h4>
+                                                                        </div>
+                                                                        <div id="collapse8" class="panel-collapse collapse">
+                                                                            <div class="panel-body">
+                                                                                <p class="panel-text">
+                                                                                    <ul class="accordion-sub">
+                                                                                        <li>
+                                                                                            <b>
+                                                                                                <a>Balkonblumen</a>
+                                                                                            </b>
+                                                                                        </li>
+                                                                                        <div id="faq58">
+                                                                                            <div class="bg-off-white p-3">
+                                                                                                <div class="grid-row">
+                                                                                                    <div class="col-xs-12 col-s-12 col-m-12">
+                                                                                                        <div class="panel panel-vertical">
+                                                                                                            <div class="pt-3">
+                                                                                                                <div class="amp amp-image">
+                                                                                                                    <img src="https://media.playmobil.com/i/lechuza/le_balconera-cottage80_product_addi_02?locale=de-CH,de,*&amp;strip=true&amp;fmt.jpeg.interlaced=true" style="width: 300px;" alt="BALCONERA Cottage" title="le_balconera-cottage80_product_addi_02" />
+                                                                                                                    <br />
+                                                                                                                    <br />
+                                                                                                                </div>
+                                                                                                            </div>
+                                                                                                            <div class="spc-m-top">Einjährige Dauerblüher selbst zu ziehen ist recht
+                                                                                                                einfach, wenn man sich an die Anleitung auf den Samentütchen hält.
+                                                                                                                Beginnen Sie im zeitigen Frühjahr mit der Anzucht auf der Fensterbank,
+                                                                                                                dann ziehen Sie sie ins Pflanzgefäß um. Erst wenn es ab Mitte, Ende Mai
+                                                                                                                keine Spätfröste mehr gibt, können Sie die Pflanzen ins Freie stellen.
+                                                                                                                Vorgezogene Ware aus dem Gartenhandel darf früher draußen stehen, bei
+                                                                                                                sehr kalten Nächten sollte man sie aber dennoch noch schützen.<br /><br />
+                                                                                                                LECHUZA-Pflanzgefäße sind der ideale Partner für Ihre Außenbepflanzung
+                                                                                                                mit Balkonblumen. Der eigens dafür entworfene Balkonkasten <a href="https://www.lechuza.ch/de/suchergebnis/?q=Balconera" target="_blank" class="link-primary">BALCONERA</a>
+                                                                                                                mit passendem Balkonkastenhalter als Zubehör kann an Wand und Geländer
+                                                                                                                befestigt werden. LECHUZA-Pflanzgefäße haben eine Dichtschraube für den
+                                                                                                                Regenüberlauf, die im Außenbereich entfernt werden muss. Die
+                                                                                                                Gießabstände richten sich nach Standort und Zuwachs der Pflanzen. Im
+                                                                                                                Hochsommer ist bei großer Hitze jeden Tag der Wasserstandsanzeiger zu
+                                                                                                                kontrollieren, eine Fingerprobe im Substrat bringt zusätzliche
+                                                                                                                Sicherheit. Mit vollem Reservoir ist es unwahrscheinlich, dass jeden Tag
+                                                                                                                früh und abends ein Bewässerungsgang nötig ist. Je nach Größe des
+                                                                                                                Gefäßes und Bewuchsdichte ist ein Turnus von ein bis fünf Tagen möglich,
+                                                                                                                bei bedecktem Himmel und Niederschlag entsprechend länger. Nach einer
+                                                                                                                kurzen Erfahrungszeit werden Sie wissen, wie viel Wasser Ihre Pflanzen
+                                                                                                                trinken.
+                                                                                                            </div>
+                                                                                                        </div>
+                                                                                                    </div>
+                                                                                                </div>
+                                                                                            </div>
+                                                                                        </div>
+                                                                                        <li>
+                                                                                            <b>
+                                                                                                <a>Kräuter</a>
+                                                                                            </b>
+                                                                                        </li>
+                                                                                        <div id="faq59">
+                                                                                            <div class="bg-off-white p-3">
+                                                                                                <div class="grid-row">
+                                                                                                    <div class="col-xs-12 col-s-12 col-m-12">
+                                                                                                        <div class="panel panel-vertical">
+                                                                                                            <div>
+                                                                                                                <div class="amp amp-image">
+                                                                                                                    <img src="https://media.playmobil.com/i/lechuza/le_cube-color-triple_product_addi_watering?locale=de-CH,de,*&amp;strip=true&amp;fmt.jpeg.interlaced=true" style="width: 300px;" alt="CUBE Color Triple" title="le_cube-color-triple_product_addi_watering" />
+                                                                                                                </div>
+                                                                                                            </div>
+                                                                                                            <div class="spc-m-top">Ganz einfach können Sie gekaufte Kräuter mitsamt ihrem Kulturtopf direkt in unsere LECHUZA Gefäße <a href="https://www.lechuza.ch/de/trend/canto-stone-14-steingrau/13470.html" target="_blank" class="link-primary">CANTO Stone 14</a>, <a href="https://www.lechuza.ch/de/trend/cube-color-14-weiss/13380.html" target="_blank" class="link-primary">CUBE Color</a>, <a href="https://www.lechuza.ch/de/sale/cube-glossy-14-weiss-highgloss/13510.html" target="_blank" class="link-primary">CUBE Glossy</a> und <a href="https://www.lechuza.ch/de/promo/cube-color-triple-weiss/13680.html" target="_blank" class="link-primary">CUBE Color Triple</a> sowie <a href="https://www.lechuza.ch/de/glossy/cube-glossy-triple-anthrazit-highgloss/13671.html" target="_blank" class="link-primary">CUBE Glossy Triple</a>
+                                                                                                                einsetzen. Kein Einpflanzen nötig - dank unseres
+                                                                                                                Docht-Bewässerungssystems erhalten Basilikum und Co. genau die richtige
+                                                                                                                Menge Wasser und bleiben so lange frisch.
+                                                                                                            </div>
+                                                                                                        </div>
+                                                                                                    </div>
+                                                                                                </div>
+                                                                                            </div>
+                                                                                        </div>
+                                                                                        <li>
+                                                                                            <b>
+                                                                                                <a>Orchideen</a>
+                                                                                            </b>
+                                                                                        </li>
+                                                                                        <div id="faq60">
+                                                                                            <div class="bg-off-white p-3">
+                                                                                                <div class="grid-row">
+                                                                                                    <div class="col-xs-12 col-s-12 col-m-12">
+                                                                                                        <div class="panel panel-vertical">
+                                                                                                            <div class="pt-3">
+                                                                                                                <div class="amp amp-image">
+                                                                                                                    <img src="https://media.playmobil.com/i/lechuza/le_deltini-10_product_addi_03?locale=de-CH,de,*&amp;strip=true&amp;fmt.jpeg.interlaced=true" style="width: 300px;" alt="MINI-DELTINI" title="le_deltini-10_product_addi_03" />
+                                                                                                                </div>
+                                                                                                            </div>
+                                                                                                            <div class="spc-m-top">Die meisten Orchideen, die Sie im Geschäft kaufen
+                                                                                                                können, sind sogenannte Epiphyten (Aufsitzer): Ihr ursprünglicher
+                                                                                                                Lebensraum befindet sich auf Bäumen des Regenwaldes. Dazu gehören die
+                                                                                                                Gattungen Phalaenopsis, Cattleya, Oncidium, Dendrobium oder Miltonia.
+                                                                                                                Von dieser ungewöhnlichen Lebensweise lässt sich ganz einfach auf die
+                                                                                                                Ansprüche der Orchideen schließen: <b>Sie mögen weder Erde noch Staunässe noch zu viel Dünger.</b> Schließlich sind auch die Nährstoffe auf einem Baum sehr begrenzt. <b>WICHTIG:</b> Pflanzen Sie Ihre Orchidee in <a href="https://www.lechuza.ch/de/zubehoer-pflanzsubstrat/lechuza-pon-6-liter/19790.html" target="_blank" class="link-primary">PON</a> oder in das im Orchideentopf <a href="https://www.lechuza.ch/de/trend/orchidea-weiss-matt/13960.html" target="_blank" class="link-primary">ORCHIDEA</a>
+                                                                                                                mitgelieferte Spezial-Substrat. Befreien Sie den Wurzelballen beim
+                                                                                                                Umtopfen - so gut es geht - von Holz- und Rindenstückchen: Nur so kann
+                                                                                                                Ihre Orchidee sprießen und gedeihen! LECHUZA-PON besteht aus Bims,
+                                                                                                                Zeolithe, Lava und Dünger. Es sorgt für Luftzirkulation um die Wurzeln
+                                                                                                                und speichert Wasser und Nährstoffe! Passende Gefäße finden Sie in den <a href="https://www.lechuza.ch/de/tischgefaesse/" target="_blank" class="link-primary">Tischgefäßen</a>.
+                                                                                                            </div>
+                                                                                                        </div>
+                                                                                                    </div>
+                                                                                                </div>
+                                                                                            </div>
+                                                                                        </div>
+                                                                                        <li>
+                                                                                            <b>
+                                                                                                <a>Weihnachtsbaum</a>
+                                                                                            </b>
+                                                                                        </li>
+                                                                                        <div id="faq61">
+                                                                                            <div class="bg-off-white p-3">
+                                                                                                <div class="grid-row">
+                                                                                                    <div class="col-xs-12 col-s-12 col-m-12">
+                                                                                                        <div class="panel panel-vertical">
+                                                                                                            <div>
+                                                                                                                <div class="amp amp-image">
+                                                                                                                    <img src="https://media.playmobil.com/i/lechuza/le_faq_weihnachten_40_w_Xmas_2017?locale=de-CH,de,*&amp;strip=true&amp;fmt.jpeg.interlaced=true" style="width: 266px;" alt="CUBICO Weihnachtsbaum" title="le_faq_weihnachten_40_w_Xmas_2017" />
+                                                                                                                </div>
+                                                                                                            </div>
+                                                                                                            <div class="spc-m-top">Holen Sie sich einen lebendigen Weihnachtsbaum
+                                                                                                                ins Wohnzimmer: Die LECHUZA-Pflanzgefäße sind die ideale Alternative zum
+                                                                                                                Baumständer – nachhaltig und individuell.
+                                                                                                                Von klassisch elegant bis ausgefallen rund ist für jeden Geschmack etwas
+                                                                                                                dabei. Und nach dem Fest können Sie die Bäume in die freie Natur
+                                                                                                                entlassen und im Garten einpflanzen. <a href="https://www.lechuza.ch/de/sale/mini-cubi-pastellviolett-hochglanz/18118.html" target="_blank" class="link-primary">Zum CUBICO</a>
+                                                                                                            </div>
+                                                                                                        </div>
+                                                                                                    </div>
+                                                                                                </div>
+                                                                                            </div>
+                                                                                        </div>
+                                                                                        <li>
+                                                                                            <b>
+                                                                                                <a>Weihnachtsstern</a>
+                                                                                            </b>
+                                                                                        </li>
+                                                                                        <div id="faq62">
+                                                                                            <div class="bg-off-white p-3">
+                                                                                                <div class="grid-row">
+                                                                                                    <div class="col-xs-12 col-s-12 col-m-12">
+                                                                                                        <div class="panel panel-vertical">
+                                                                                                            <div class="pt-3">
+                                                                                                                <div class="amp amp-image">
+                                                                                                                    <img src="https://media.playmobil.com/i/lechuza/le_faq_weihnachtsstern_MiniDLT_MiniSQ_srot_w_tp_Weihnachtsstern_Xmas_2017?locale=de-CH,de,*&amp;strip=true&amp;fmt.jpeg.interlaced=true" style="width: 389px;" alt="MINI-DELTINI Weihnachstssterne" title="le_faq_weihnachtsstern_MiniDLT_MiniSQ_srot_w_tp_Weihnachtsstern_Xmas_2017" />
+                                                                                                                </div>
+                                                                                                                <div class="spc-m-top">Weihnachtssterne verschönern Ihr Heim nicht nur zur Weihnachtszeit. Besonders schön kommen sie in den <a href="https://www.lechuza.ch/de/tischgefaesse/" target="_blank" class="link-primary">LECHUZA-Tischgefäßen</a>
+                                                                                                                    zur Geltung. Und dank des LECHUZA Erd-Bewässerungs-Systems währt Ihre
+                                                                                                                    Freude noch lange nach dem Fest. Beim Kauf sollten Sie auf ein paar
+                                                                                                                    Dinge achten: Der Weihnachtsstern sollte reichlich mit gesunden, grünen
+                                                                                                                    Blättern unter dem farbigen Stern der Hochblätter besetzt sein.
+                                                                                                                    Gelbliche Blätter zeugen von schlechter Pflege. Kaufen Sie keine
+                                                                                                                    Pflanzen, die im Freien standen – Weihnachtssterne hassen die Kälte und
+                                                                                                                    reagieren auf einen Kälteschock nach ein paar Tagen mit dem Verlust
+                                                                                                                    ihrer Blätter. Packen Sie die Pflanzen auch für den Heimweg gut ein.<br /><br />
+                                                                                                                    <b>So pflegen Sie Ihren Weihnachtsstern:</b>
+                                                                                                                    Achten Sie auf einen hellen Standort ohne Zugluft mit Temperaturen um
+                                                                                                                    die 20°C. Das LECHUZA Erd-Bewässerungs-System beugt einer Überwässerung
+                                                                                                                    vor, worunter Weihnachtssterne besonders leiden. Düngen Sie den
+                                                                                                                    Weihnachtsstern nicht während der Blütezeit.</div>
+                                                                                                            </div>
+                                                                                                        </div>
+                                                                                                    </div>
+                                                                                                </div>
+                                                                                            </div>
+                                                                                        </div>
+                                                                                    </ul>
+                                                                                </p>
+                                                                            </div>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                            <div class="panel">
+                                                                <div class="panel-group" id="accordion">
+                                                                    <div class="panel panel-default">
+                                                                        <div class="panel-heading">
+                                                                            <h4 class="panel-title">
+                                                                                <a href="#collapse9" data-toggle="collapse" class="accordion-toggle collapsed" data-parent="#accordion">Welche Pflanzen eignen sich für TRIO?</a>
+                                                                            </h4>
+                                                                        </div>
+                                                                        <div id="collapse9" class="panel-collapse collapse in">
+                                                                            <div class="panel-body">
+                                                                                <ul class="accordion-sub">
+                                                                                    <li>
+                                                                                        <b>
+                                                                                            <a>Welche Pflanzen eignen sich für TRIO?</a>
+                                                                                        </b>
+                                                                                    </li>
+                                                                                    <div id="faq63">
+                                                                                        <div class="bg-off-white p-3">
+                                                                                            <div class="grid-row pl-3">
+                                                                                                <div class="col-xs-12 col-s-12 col-m-12">
+                                                                                                    <div class="panel panel-vertical">
+                                                                                                        <div>
+                                                                                                            <div class="amp amp-image">
+                                                                                                                <img src="https://media.playmobil.com/i/lechuza/le_trio-cottage30_product_addi_02?locale=de-CH,de,*&amp;strip=true&amp;fmt.jpeg.interlaced=true" style="width: 300px;" alt="TRIO Cottage" title="le_trio-cottage30_product_addi_02" />
+                                                                                                            </div>
+                                                                                                        </div>
+                                                                                                        <div class="spc-m-top">
+                                                                                                            <a href="https://www.lechuza.ch/de/trend/trio-cottage-30-weiss/15000.html" target="_blank" class="link-primary">Zum TRIO Cottage</a>
+                                                                                                            <br />
+                                                                                                            <br />
+                                                                                                        </div>
+                                                                                                    </div>
+                                                                                                </div>
+                                                                                            </div>
+                                                                                            <div class="spc-m-top">
+                                                                                                <h4 class="heading-4">Einfach und unverwüstlich</h4>
+                                                                                                <ul class="bullet-list spc-m-left">
+                                                                                                    <li>Heidelbeeren und Vaccinium Sorten</li>
+                                                                                                    <li>Dicke Bohnen</li>
+                                                                                                    <li>Feuerbohnen</li>
+                                                                                                    <li>Himbeeren<br /><br /></li>
+                                                                                                </ul>
+                                                                                                <h4 class="heading-4">Bewährtes mit kleinem Pflegeaufwand</h4>
+                                                                                                <ul class="bullet-list spc-m-left">
+                                                                                                    <li>Zuckererbsen</li>
+                                                                                                    <li>Zucchini</li>
+                                                                                                    <li>Stangen-und Buschbohnen</li>
+                                                                                                    <li>Brombeeren<br /><br /></li>
+                                                                                                </ul>
+                                                                                            </div>
+                                                                                            <div class="spc-m-top">
+                                                                                                <h4 class="heading-4">Mehr Pflegeaufwand, der sich aber lohnt</h4>
+                                                                                                <ul class="bullet-list spc-m-left">
+                                                                                                    <li>Tomaten</li>
+                                                                                                    <li>Auberginen</li>
+                                                                                                    <li>Gurken</li>
+                                                                                                    <li>Kürbis</li>
+                                                                                                    <li>Paprika und Peperoni</li>
+                                                                                                    <li>Chili</li>
+                                                                                                    <li>Kiwi</li>
+                                                                                                    <li>Anden- oder Kapstachelbeere (Physalis)</li>
+                                                                                                    <li>Balkonmelone<br /><br /></li>
+                                                                                                </ul>
+                                                                                                <h4 class="heading-4">Für Kenner mit grünem Daumen</h4>
+                                                                                                <ul class="bullet-list spc-m-left">
+                                                                                                    <li>Gemüsemais</li>
+                                                                                                    <li>Feigen</li>
+                                                                                                    <li>alle Zitruspflanzen</li>
+                                                                                                </ul>
+                                                                                            </div>
+                                                                                        </div>
+                                                                                    </div>
+                                                                                    <li>
+                                                                                        <b>
+                                                                                            <a>Wann beginnt man mit der Bepflanzung?</a>
+                                                                                        </b>
+                                                                                    </li>
+                                                                                    <div id="faq64">
+                                                                                        <div class="bg-off-white p-3">
+                                                                                            Im zeitigen Frühjahr gibt es erste Pflanzensamen. Auf der sonnigen
+                                                                                            Fensterbank in kleinen Kunststofftöpfen (5-7 cm) oder in Einzelzellen
+                                                                                            aus dem Gartencenter erfolgt die Aussaat. Denken Sie daran, unbedingt
+                                                                                            kleine Schildchen wegen der Verwechslungsgefahr anzubringen. Wer sich
+                                                                                            die Anzucht ersparen möchte, kauft im Frühjahr vorgezogene Jungpflanzen
+                                                                                            oder beauftragt einen Gärtner seines Vertrauens mit dieser Arbeit.
+                                                                                        </div>
+                                                                                    </div>
+                                                                                    <li>
+                                                                                        <b>
+                                                                                            <a>Umsetzen und Hochbinden der Jungpflanzen</a>
+                                                                                        </b>
+                                                                                    </li>
+                                                                                    <div id="faq65">
+                                                                                        <div class="bg-off-white p-3">
+                                                                                            Achten Sie bei der Aufzucht immer auch auf die Anleitung auf den
+                                                                                            Samentütchen und natürlich auf die Anforderungen der Pflanze in Hinblick
+                                                                                            auf Substrat, Standort, Düngung und Wasserbedarf. Für einjährige
+                                                                                            Pflanzen verwenden Sie am besten Qualitäts-Kübelpflanzenerde, bei einer
+                                                                                            Dauerbepflanzung lohnt es sich, auf das <a href="https://www.lechuza.ch/de/zubehoer-pflanzsubstrat/lechuza-pon-6-liter/19790.html" target="_blank" class="link-primary">Pflanzsubstrat LECHUZA-PON</a> zurückzugreifen.<br />
+                                                                                            <br />Um Ihre Pflanze beim Hochwachsen zu stützen, verwenden Sie einfach die Pflanzenclips, die beim <a href="https://www.lechuza.ch/de/zubehoer-trio/rankgitter-fuer-trio-30/15011.html" target="_blank" class="link-primary">Rankgitter für den TRIO Cottage</a>
+                                                                                            dabei sind. Achten Sie darauf, Ihre Pflanze einerseits damit zu
+                                                                                            stabilisieren, andererseits aber nicht abzuschnüren oder abzubinden. Bei
+                                                                                            selbstklimmenden Pflanzen sollten Sie regelmäßig die Triebe
+                                                                                            kontrollieren und die Pflanzenclips dazu verwenden, sie in die richtige
+                                                                                            Wuchsrichtung zu leiten.
+                                                                                        </div>
+                                                                                    </div>
+                                                                                    <li>
+                                                                                        <b>
+                                                                                            <a>Gießen und Pflegen</a>
+                                                                                        </b>
+                                                                                    </li>
+                                                                                    <div id="faq66">
+                                                                                        <div class="bg-off-white p-3">
+                                                                                            Viele Pflanzen bevorzugen beim Gießen trockenes Blattwerk. Bis die
+                                                                                            Pflanze in das Wasserreservoir eingewachsen ist und sich selbst
+                                                                                            versorgen kann, achten Sie darauf, die Jungpflanzen mit Bedacht zu
+                                                                                            gießen. Eine Fingerprobe im Substrat verringert bis dahin
+                                                                                            Vernässungsgefahr und Blattfäulnis.<br />
+                                                                                            <br />Achten Sie auf Schädlinge und Schnecken – junge Gemüsepflanzen sind
+                                                                                            besonders anfällig. Wird die Pflanze zu groß, trennen Sie sich
+                                                                                            gegebenenfalls von einzelnen Trieben. Damit fördern Sie andere Triebe
+                                                                                            sowie die Blüten- und Fruchtbildung. Seiten- und Fruchtriebe können zu
+                                                                                            schwer für die Pflanze werden – binden Sie diese unterstützend fest,
+                                                                                            damit sie nicht brechen.
+                                                                                        </div>
+                                                                                    </div>
+                                                                                    <li>
+                                                                                        <b>
+                                                                                            <a>Tomaten</a>
+                                                                                        </b>
+                                                                                    </li>
+                                                                                    <div id="faq67">
+                                                                                        <div class="bg-off-white p-3">
+                                                                                            <div class="grid-row pl-3">
+                                                                                                <div class="col-xs-12 col-s-12 col-m-12">
+                                                                                                    <div class="panel panel-vertical">
+                                                                                                        <div>
+                                                                                                            <div class="amp amp-image">
+                                                                                                                <img src="https://media.playmobil.com/i/lechuza/le_faq_bepflanzung_tomaten_CTG30_gra_Tomato_BANDEROLE?locale=de-CH,de,*&amp;strip=true&amp;fmt.jpeg.interlaced=true" alt="TRIO Cottage Tomaten" title="le_faq_bepflanzung_tomaten_CTG30_gra_Tomato_BANDEROLE" />
+                                                                                                            </div>
+                                                                                                        </div>
+                                                                                                        <div class="spc-m-top">
+                                                                                                            <a href="https://www.lechuza.ch/de/trend/trio-cottage-30-weiss/15000.html" target="_blank" class="link-primary">Zum TRIO Cottage<br /><br /></a>
+                                                                                                        </div>
+                                                                                                    </div>
+                                                                                                </div>
+                                                                                            </div>
+                                                                                            <div class="spc-m-top">Eines der beliebtesten Gartengemüse ist die
+                                                                                                Tomate, lateinisch Lycopersicon, die in vielen Sorten, Wuchshöhen,
+                                                                                                Fruchtgrößen und Geschmacksvarianten auf dem Markt ist. Sie stammt aus
+                                                                                                Mittel- und Südamerika und ist verwandt mit der Familie Solanum, zu der
+                                                                                                auch die Aubergine und die Kartoffel gehören.<br /><br />
+                                                                                                Tomaten lieben fruchtbaren, durchlässigen Boden. Spezielle Tomaten- und
+                                                                                                Gemüseerde ist im Fachhandel erhältlich. Ab Mai ist das Angebot an
+                                                                                                vorgezogenen Jungpflanzen auf Märkten und in Gärtnereien riesig. Es gibt
+                                                                                                Stab- und Buschtomaten in verschiedenen Wuchsformen. Wer eher
+                                                                                                ungewöhnliche Sorten ernten will oder Spaß am Aussäen hat, stellt Töpfe
+                                                                                                mit Samen ab April auf eine sonnige Fensterbank. Auf den Samentütchen
+                                                                                                finden Sie nähere Hinweise zu Zeitpunkt und Verfahren der Aussaat.
+                                                                                                Wichtig dabei: Halten Sie das Substrat feucht und drehen Sie die
+                                                                                                Aussaattöpfchen regelmäßig, damit die Pflanzen nicht schief zum Licht
+                                                                                                wachsen.<br /><br />
+                                                                                                Pflanzen Sie jeweils einen kräftigen Sämling pro TRIO Cottage
+                                                                                                Pflanzeinsatz. Binden Sie die Pflanze vorerst mit dünnem Holz- oder
+                                                                                                Bambusstäbchen an. Ab Mitte Mai (wenn kein Frost mehr droht) dürfen die
+                                                                                                Tomaten ins Freie. Befestigen Sie die Pflanze, sobald sie groß genug
+                                                                                                ist, am <a href="https://www.lechuza.ch/de/zubehoer-trio/rankgitter-fuer-trio-30/15011.html" target="_blank" class="link-primary">TRIO Cottage Rankgitter</a>.
+                                                                                                Kürzen Sie bei Bedarf die Pflanze etwas ein, damit nicht zu viele
+                                                                                                Triebe stehen bleiben. Ein Schnitt begünstigt die übrigen Triebe und
+                                                                                                damit auch die Fruchtentwicklung. So gelangt mehr Sonne an Blätter und
+                                                                                                Früchte, außerdem können sich keine Krankheiten ausbreiten. Der Boden
+                                                                                                sollte feucht, aber nicht zu nass sein.<br /><br />
+                                                                                                Sobald sich kleine Früchte bilden, versorgen Sie die Pflanze am besten
+                                                                                                alle zwei Wochen mit Tomaten-Flüssigdünger. Unreife Früchte sind wie bei
+                                                                                                fast allen Nachschattenpflanzen giftig! Sehr viele Tomatensorten sind
+                                                                                                weitgehend resistent, jedoch sollten Sie Ihre Staude regelmäßig auf
+                                                                                                Schädlingsbefall und Krankheiten kontrollieren.
+                                                                                            </div>
+                                                                                        </div>
+                                                                                    </div>
+                                                                                    <li>
+                                                                                        <b>
+                                                                                            <a>Aubergine</a>
+                                                                                        </b>
+                                                                                    </li>
+                                                                                    <div id="faq68">
+                                                                                        <div class="bg-off-white p-3">
+                                                                                            <div class="grid-row">
+                                                                                                <div class="col-xs-12 col-s-12 col-m-12">
+                                                                                                    <div class="panel panel-vertical">
+                                                                                                        <div class="pt-3">
+                                                                                                            <div class="amp amp-image">
+                                                                                                                <img src="https://media.playmobil.com/i/lechuza/le_trio-cottage30_product_addi_03?locale=de-CH,de,*&amp;strip=true&amp;fmt.jpeg.interlaced=true" style="width: 300px;" alt="TRIO Cottage" title="le_trio-cottage30_product_addi_03" />
+                                                                                                            </div>
+                                                                                                        </div>
+                                                                                                        <div class="spc-m-top">
+                                                                                                            <a href="https://www.lechuza.ch/de/trend/trio-cottage-30-weiss/15000.html" target="_blank" class="link-primary">Zum TRIO Cottage</a>
+                                                                                                            <br />
+                                                                                                            <br />
+                                                                                                            <div class="spc-m-top">Die Solanum melongena ist eng verwandt mit allen
+                                                                                                                einjährigen Nachtschattengewächsen wie Tomate und Kartoffel.
+                                                                                                                Auberginenstauden stammen wahrscheinlich aus dem tropischen Asien und
+                                                                                                                gedeihen am besten an einem warmen Standort. Auch Auberginen sind als
+                                                                                                                vorgezogene Jungpflanzen im Fachhandel erhältlich. Ihre Aussaat
+                                                                                                                funktioniert genau wie bei Tomaten. Sie stehen gerne sehr sonnig und
+                                                                                                                windgeschützt und werden alle zwei Wochen mit Gemüsedünger im Gießwasser
+                                                                                                                gedüngt. Gutes Anbinden und Fixieren der Pflanztriebe ist besonders
+                                                                                                                wichtig, da die Früchte sehr schnell an Gewicht zulegen. Die Früchte
+                                                                                                                können geerntet werden, wenn sie auf Druck leicht nachgeben. Blattläuse
+                                                                                                                lassen sich gerne auf Auberginen nieder, achten Sie daher besonders auf
+                                                                                                                möglichen Befall.</div>
+                                                                                                        </div>
+                                                                                                    </div>
+                                                                                                </div>
+                                                                                            </div>
+                                                                                        </div>
+                                                                                        <li>
+                                                                                            <b>
+                                                                                                <a>Paprika und Chili</a>
+                                                                                            </b>
+                                                                                        </li>
+                                                                                        <div id="faq69">
+                                                                                            <div class="bg-off-white p-3">
+                                                                                                <div>Capsicum annuum (Spanischer Pfeffer, Paprika und Chili) und
+                                                                                                    Capsicum frutescens (Cayennepfeffer und Chili) stammen aus dem
+                                                                                                    tropischen Amerika und werden in allen Küchen dieser Welt verwendet.
+                                                                                                    Paprika- und Chilischoten sind ein- bis zweijährige Sommerstauden und
+                                                                                                    benötigen eine lange, warme und feuchte Wachstumsperiode.</div>
+                                                                                                <div class="spc-m-top">Auch hier werden im Gartenhandel viele
+                                                                                                    vorgezogene Sorten angeboten. Die Aussaat und Pflege seltener Exoten
+                                                                                                    erfolgt wie bei Tomaten und Auberginen. Schützen Sie bitte ihre Hände
+                                                                                                    und Augen bei Ernte und Verarbeitung von scharfen Chilis, da der
+                                                                                                    Pflanzensaft äußerst aggressiv ist und schwere Hautverbrennungen
+                                                                                                    hervorrufen kann. Beide Pflanzen werden von Blattläusen im Jungstadium
+                                                                                                    geliebt, Schnecken fressen gerne Löcher in die Früchte der Paprika.
+                                                                                                    Andere Insektenschädlinge und Virenerkrankungen sind selten, aber
+                                                                                                    möglich.</div>
+                                                                                            </div>
+                                                                                        </div>
+                                                                                        <li>
+                                                                                            <b>
+                                                                                                <a>Feuerbohne</a>
+                                                                                            </b>
+                                                                                        </li>
+                                                                                        <div id="faq70">
+                                                                                            <div class="bg-off-white p-3">
+                                                                                                Diese aus Südamerika stammende Hülsenfrucht wird aus Samen selbst
+                                                                                                gezogen. Phaseolus coccineus ist eine einjährige Staude, deren bis zu
+                                                                                                fünf Meter langen Triebe ein Rankgitter benötigen, um sich ordentlich
+                                                                                                entwickeln zu können.<br />
+                                                                                                <br />Im Frühjahr bringen Sie die Bohnensamen etwa fünf Zentimeter tief
+                                                                                                aus, je TRIO Cottage Pflanzeinsatz genügen zwei bis drei Samenkörner.
+                                                                                                Die Feuerbohne benötigt kein besonderes Substrat, sie keimt und wächst
+                                                                                                in allen Böden. Die Keimphase im Frühjahr muss nicht im Hause erfolgen,
+                                                                                                die Sämlinge sollten aber durch Abdecken vor starken Nachtfrösten
+                                                                                                geschützt werden. Erst bei frostfreien Nächten ab Mitte Mai besteht
+                                                                                                keine Gefahr des Erfrierens mehr.
+                                                                                                <div class="grid-row pl-3">
+                                                                                                    <div class="col-xs-12 col-s-12 col-m-12">
+                                                                                                        <div class="panel panel-vertical">
+                                                                                                            <div>
+                                                                                                                <div class="amp amp-image"><img src="https://media.playmobil.com/i/lechuza/le_faq_bepflanzung_feuerbohne_CTG30_gra_Phaseolus?locale=de-CH,de,*&amp;strip=true&amp;fmt.jpeg.interlaced=true" style="width: 340px;" alt="TRIO Cottage Feuerbohne" title="le_faq_bepflanzung_feuerbohne_CTG30_gra_Phaseolus" /></div>
+                                                                                                            </div>
+                                                                                                            <div class="spc-m-top"><a href="https://www.lechuza.ch/de/trend/trio-cottage-30-weiss/15000.html" target="_blank" class="link-primary">Zum TRIO Cottage<br /><br /></a></div>
+                                                                                                        </div>
+                                                                                                    </div>
+                                                                                                </div>
+                                                                                                <div class="spc-m-top">
+                                                                                                    Nach der Keimung fixieren Sie die Pflanze an Holzstäbchen. Zwei bis drei
+                                                                                                    Wochen später entfernen Sie die schwächsten Keimlinge und lassen nur
+                                                                                                    die beiden stärksten stehen. Danach kontrollieren Sie den Wuchs
+                                                                                                    regelmäßig und können bei guter Entwicklung die Triebe am <a href="https://www.lechuza.ch/de/zubehoer-trio/rankgitter-fuer-trio-30/15011.html" target="_blank" class="link-primary">TRIO Cottage Rankgitter</a>
+                                                                                                    bei Bedarf in die gewünschte Richtung leiten. Ein sonniger, aber auch
+                                                                                                    halbschattiger Standort begünstigt den Zuwachs der widerstandsfähigen
+                                                                                                    Pflanze. Der Wasserverbrauch ist bei heißen Temperaturen immens, deshalb
+                                                                                                    sollten Sie am besten regelmäßig und viel gießen. Verwelkte Blätter
+                                                                                                    sollten sofort entfernt werden, um die Blütenfülle zu steigern.</div>
+                                                                                                <div>Nur jung geerntete Bohnen in Hülsen von maximal 15 cm Länge sind
+                                                                                                    essbar, ungekochte Früchte sind leicht giftig. Andere essbare
+                                                                                                    Gartenbohnenarten wie Stangenbohnen, Buschbohnen und dicke Bohnen werden
+                                                                                                    im Frühsommer ausgesät (letztere auch im Herbst) und eignen sich
+                                                                                                    ebenfalls für den <a href="https://www.lechuza.ch/de/zubehoer-trio/rankgitter-fuer-trio-30/15011.html" target="_blank" class="link-primary">TRIO Cottage mit Rankgitter</a>. Achten Sie im Frühling besonders auf den Befall mit Blattläusen, auch Schnecken können ein Problem werden.</div>
+                                                                                            </div>
+                                                                                        </div>
+                                                                                        <li>
+                                                                                            <b>
+                                                                                                <a>Zitruspflanze</a>
+                                                                                            </b>
+                                                                                        </li>
+                                                                                        <div id="faq71">
+                                                                                            <div class="bg-off-white p-3">
+                                                                                                Die meisten Zitrusgewächse kommen ursprünglich aus Südostasien. Sie
+                                                                                                lassen sich in unseren Breitengraden nur schwer selbst ziehen.
+                                                                                                Vorgezogene Gewächse bekommen Sie im Fachhandel. Achten Sie auf einen
+                                                                                                windgeschützten Standort sowie sauren, lehmigen Boden mit gutem
+                                                                                                Wasserabzug. Zitruspflanzen benötigen ganztägig viel Sonne – vor allem
+                                                                                                der Blütenansatz ist auf volle Sonne angewiesen. Gießen Sie regelmäßig
+                                                                                                und, wenn möglich, mit kalkfreiem Wasser. Düngen Sie reichlich
+                                                                                                Stickstoff und Kalium, um die Blütenbildung zu fördern und die Pflanze
+                                                                                                gesund zu halten.
+                                                                                                <div class="grid-row pl-3">
+                                                                                                    <div class="col-xs-12 col-s-12 col-m-12">
+                                                                                                        <div class="panel panel-vertical">
+                                                                                                            <div>
+                                                                                                                <div class="amp amp-image"><img src="https://media.playmobil.com/i/lechuza/le_trio-cottage30_product_addi_02?locale=de-CH,de,*&amp;strip=true&amp;fmt.jpeg.interlaced=true" style="width: 300px;" alt="TRIO Cottage" title="le_trio-cottage30_product_addi_02" /></div>
+                                                                                                            </div>
+                                                                                                            <div class="spc-m-top"><a href="https://www.lechuza.ch/de/trend/trio-cottage-30-weiss/15000.html" target="_blank" class="link-primary">Zum TRIO Cottage<br /><br /></a></div>
+                                                                                                        </div>
+                                                                                                    </div>
+                                                                                                </div>
+                                                                                                Mitte bis Ende Oktober sollten Sie Ihre Zitruspflanze ins Hausinnere
+                                                                                                stellen, da die ersten stärkeren Nachtfröste beginnen. Das beste
+                                                                                                Winterquartier ist beispielsweise ein Wintergarten, in dem noch viel
+                                                                                                Sonne an die Pflanze gelangen kann. Die Früchte müssen zum Teil über ein
+                                                                                                Jahr reifen, daher ist ein heller Raum Voraussetzung für eine gute
+                                                                                                Fruchtreife.<br />
+                                                                                                <br />Zitruspflanzen sollten immer angebunden werden, damit sie aufrecht
+                                                                                                wachsen. Seitentriebe müssen dabei ebenfalls gestäbt werden. Das <a href="https://www.lechuza.ch/de/zubehoer-trio/rankgitter-fuer-trio-30/15011.html" target="_blank" class="link-primary">TRIO Cottage Rankgitter</a>
+                                                                                                ist eine gute Ergänzung zum Anbinden Ihrer Pflanzen. Achten Sie genau
+                                                                                                auf Befall durch Schädlinge. Abgestorbene und kranke Äste sollten sofort
+                                                                                                entfernt werden. Die Pflanzen vertragen auch einen starken Rückschnitt
+                                                                                                problemlos.
+                                                                                            </div>
+                                                                                        </div>
+                                                                                    </div>
+                                                                                </ul>
+                                                                            </div>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                            <div class="panel">
+                                                                <div class="panel-group" id="accordion">
+                                                                    <div class="panel panel-default">
+                                                                        <div class="panel-heading">
+                                                                            <h4 class="panel-title mt-3">
+                                                                                <a href="#collapse10" data-toggle="collapse" class="accordion-toggle collapsed" data-parent="#accordion">Tipps zur Überwinterung winterharter Kübelpflanzen</a>
+                                                                            </h4>
+                                                                        </div>
+                                                                        <div id="collapse10" class="panel-collapse collapse">
+                                                                            <div class="panel-body">
+                                                                                <p class="panel-text">
+                                                                                    <ul class="accordion-sub">
+                                                                                        <li>
+                                                                                            <b>
+                                                                                                <a>Welche Gefahren lauern im Winter auf meine Kübelpflanzen?</a>
+                                                                                            </b>
+                                                                                        </li>
+                                                                                        <div id="faq72">
+                                                                                            <div class="bg-off-white p-3">
+                                                                                                Kübelpflanzen, die winterfest sind, sollten auch in der kalten
+                                                                                                Jahreszeit draußen bleiben, da die Kältemonate oftmals wichtig für die
+                                                                                                weitere Entwicklung der Pflanzen sind. Dennoch sollten sie ausreichend
+                                                                                                geschützt werden, da ein Pflanzgefäß nicht so viel Schutz vor Kälte
+                                                                                                bieten kann wie der Erdboden. Kübelpflanzen bekommen leichter
+                                                                                                Erfrierungen an den Wurzeln oder leiden unter Frosttrocknis.<br /><br />
+                                                                                                Zuviel Sonne kann im Winter eine Gefahr werden, da durch
+                                                                                                Sonnenbestrahlung die Verdunstung der Pflanze gefördert wird und
+                                                                                                eingefrorene Wurzelballen dann nicht genügend Wasser nachliefern können.
+                                                                                                Vor allem immergrüne Pflanzen sind gefährdet, wie beispielsweise
+                                                                                                Kirschlorbeer, Zwerg- und Glanzmispel, (Cotoneaster, Photinia),
+                                                                                                Rhododendren, Buchs, Gräser und Bambusarten sowie alle Koniferen.
+                                                                                            </div>
+                                                                                        </div>
+                                                                                        <li>
+                                                                                            <b>
+                                                                                                <a>Wie bereite ich meine Kübelpflanzen am besten auf den Winter vor?</a>
+                                                                                            </b>
+                                                                                        </li>
+                                                                                        <div id="faq73">
+                                                                                            <div class="bg-off-white p-3">
+                                                                                                Bereiten Sie Ihre Pflanzen auf die frostigen Monate vor, indem Sie bis
+                                                                                                Ende August Schnitt und Düngung abgeschlossen haben – dann findet auch
+                                                                                                rechtzeitig ein Triebabschluss statt und die ausgereiften Wurzeln und
+                                                                                                Triebe kommen so besser über den Winter.
+                                                                                                <div class="grid-row pl-3">
+                                                                                                    <div class="col-xs-12 col-s-12 col-m-12">
+                                                                                                        <div class="panel panel-vertical">
+                                                                                                            <div><img src="https://www.lechuza.ch/on/demandware.static/-/Library-Sites-Default/de/dw2d080fa3/static/images/faq/ueberwinterung.png" alt="Pflanzen überwintern" /></div>
+                                                                                                        </div>
+                                                                                                    </div>
+                                                                                                </div>
+                                                                                                Der ideale Überwinterungsort ist vor Wind, Regen, Schnee und direkter
+                                                                                                Sonneneinstrahlung geschützt, wie etwa eine überdachte Terrasse. Rücken
+                                                                                                Sie mehrere Pflanzen eng zusammen, so halten sich diese gegenseitig
+                                                                                                warm. Verpacken Sie <a href="https://www.lechuza.ch/de/pflanzgefaesse/" target="_blank" class="link-primary">Ihre LECHUZA-Gefäße</a>
+                                                                                                mit Jute-, Filz- oder Vliesgeweben, Stroh-, Schilfrohr- oder
+                                                                                                Kokosmatten, um die Wurzeln vor zu hohen Temperaturschwankungen zu
+                                                                                                bewahren.<br />
+                                                                                                <br />Eine trockene Laubschicht, Stroh, Tannenreisig oder Mulchscheiben
+                                                                                                aus Kokosfasern schützen die Pflanzen vor dem Austrocknen und halten
+                                                                                                Regen fern. Achten Sie darauf, beim Abdecken nur luftdurchlässige
+                                                                                                Materialien zu verwenden. Um Ihre Kübelpflanzen vor Bodenkälte zu
+                                                                                                schützen, stellen Sie die Pflanzgefäße einfach auf Holz oder Styropor.
+                                                                                            </div>
+                                                                                        </div>
+                                                                                        <li>
+                                                                                            <b>
+                                                                                                <a>Wie versorge ich meine Kübelpflanzen während des Winters?</a>
+                                                                                            </b>
+                                                                                        </li>
+                                                                                        <div id="faq74">
+                                                                                            <div class="bg-off-white p-3">
+                                                                                                Auch im Winter verdunsten Immergrüne über Blätter und Nadeln sehr viel
+                                                                                                Wasser, das ergänzt werden muss. Bei besonders frostigen Temperaturen
+                                                                                                wird sich Ihre Pflanze nicht mehr über das Wasserreservoir des <a href="https://www.lechuza.ch/de/pflanzgefaesse/" target="_blank" class="link-primary">LECHUZA-Gefäßes</a>
+                                                                                                versorgen können, deshalb gießen Sie im Winter nur noch von oben auf
+                                                                                                das Granulat oder die Pflanzenerde und stimmen die Wassergaben auf den
+                                                                                                Verbrauch Ihrer Pflanze ab. Bitte gießen Sie nur an frostfreien Tagen
+                                                                                                und in Etappen. So sollte Ihre Pflanze gut über die kalten Monate
+                                                                                                kommen.
+                                                                                            </div>
+                                                                                        </div>
+                                                                                    </ul>
+                                                                                </p>
+                                                                            </div>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                            <div class="panel">
+                                                                <div class="panel-group" id="accordion">
+                                                                    <div class="panel panel-default">
+                                                                        <div class="panel-heading">
+                                                                            <h4 class="panel-title mt-3">
+                                                                                <a href="#collapse11" data-toggle="collapse" class="accordion-toggle collapsed" data-parent="#accordion">Pflanzenfeinde</a>
+                                                                            </h4>
+                                                                        </div>
+                                                                        <div id="collapse11" class="panel-collapse collapse">
+                                                                            <div class="panel-body">
+                                                                                <p class="panel-text">
+                                                                                    <ul class="accordion-sub">
+                                                                                        <li>
+                                                                                            <b>
+                                                                                                <a>Wie bekämpfe ich Schädlinge in LECHUZA?</a>
+                                                                                            </b>
+                                                                                        </li>
+                                                                                        <div id="faq75">
+                                                                                            <div class="bg-off-white p-3">
+                                                                                                Sogar wenn Sie komplett in das nahezu sterile Substrat <a href="https://www.lechuza.ch/de/zubehoer-pflanzsubstrat/lechuza-pon-6-liter/19790.html" target="_blank" class="link-primary">LECHUZA-PON</a>
+                                                                                                gepflanzt haben, können Ihre Pflanzen unter Umständen von Schädlingen
+                                                                                                befallen werden. Vor allem trockene Raumluft lässt viele Pflanzen
+                                                                                                anfällig werden. Daher empfehlen wir, sowohl für Zimmerpflanzen als auch
+                                                                                                für Balkonpflanzen, die zum Überwintern nach drinnen ziehen, vorbeugend
+                                                                                                ein Kombinationsmittel gegen diverse Schädlinge anzuwenden. Wenn Ihre
+                                                                                                Pflanzen dicht beieinander stehen, sollten Sie vorsichtshalber alle
+                                                                                                Pflanzen behandeln. Wenn Sie sich nicht sicher sind, welcher Schädling
+                                                                                                auf Ihrer Pflanze sein Unwesen treibt, fragen Sie beim Gärtner ihres
+                                                                                                Vertrauens nach und nehmen am besten ein befallenes Blatt mit.</div>
+                                                                                        </div>
+                                                                                        <li>
+                                                                                            <b>
+                                                                                                <a>Blatt- und Schildläuse</a>
+                                                                                            </b>
+                                                                                        </li>
+                                                                                        <div id="faq76">
+                                                                                            <div class="bg-off-white p-3">
+                                                                                                Wenn Ihre Pflanze von Läusen befallen ist, nehmen Sie den Pflanzeinsatz
+                                                                                                aus Ihrem LECHUZA-Gefäß heraus und duschen Sie sie unter fließendem
+                                                                                                Wasser gründlich ab. Entfernen Sie zudem alle befallenen Pflanzenteile.
+                                                                                                Anschließend behandeln Sie Ihre Pflanze mit Pflanzenschutz-Spray,
+                                                                                                -Stäbchen oder -Granulat. Dazu sprühen Sie das Spray direkt auf die
+                                                                                                Pflanze bzw. stecken das Stäbchen einfach in den Wurzelballen. Bevor Sie
+                                                                                                das Pflanzenschutz-Granulat auf das <a href="https://www.lechuza.ch/de/zubehoer-pflanzsubstrat/lechuza-pon-6-liter/19790.html" target="_blank" class="link-primary">PON Pflanzsubstrat</a>
+                                                                                                streuen und einarbeiten, gießen Sie trockene Wurzelballen, wenn nötig,
+                                                                                                von oben. Lesen Sie vor der erstmaligen Anwendung in jedem Fall die
+                                                                                                beiliegende Gebrauchsanweisung. Beachten Sie auch, dass, wenn Ihre
+                                                                                                Pflanze Früchte trägt, diese von Ihnen eine Weile lang nicht verzehrt
+                                                                                                werden sollten.</div>
+                                                                                        </div>
+                                                                                        <li>
+                                                                                            <b>
+                                                                                                <a>Trauermücken und schädliche Fliegen</a>
+                                                                                            </b>
+                                                                                        </li>
+                                                                                        <div id="faq77">
+                                                                                            <div class="bg-off-white p-3">
+                                                                                                Trauermücken und weiße Fliegen legen Ihre Eier gern in feuchter Blumenerde ab. Auch das <a href="https://www.lechuza.ch/de/zubehoer-pflanzsubstrat/lechuza-pon-6-liter/19790.html" target="_blank" class="link-primary">Pflanzsubstrat PON</a>
+                                                                                                kann, wenn es dauerhaft zu nass gehalten wird, als Verbreitungsherd
+                                                                                                dienen. Gegen umherfliegende Trauermücken helfen Gelbsticker oder
+                                                                                                Gelbtafeln, an denen die Schädlinge einfach festkleben. Gegen die
+                                                                                                wurzelschädigenden Larven gehen Sie mit entsprechendem Gießmittel vor.
+                                                                                                Dazu geben Sie den flüssigen Pflanzenschutz dem Gießwasser zu und
+                                                                                                befüllen damit über den praktischen Einfüllschacht den Wasserspeicher
+                                                                                                Ihres LECHUZA-Pflanzgefäßes.</div>
+                                                                                        </div>
+                                                                                        <li>
+                                                                                            <b>
+                                                                                                <a>Spinnmilben</a>
+                                                                                            </b>
+                                                                                        </li>
+                                                                                        <div id="faq78">
+                                                                                            <div class="bg-off-white p-3">
+                                                                                                Bei trockener Luft legen Spinnmilben besonders gerne an Zimmerpflanzen
+                                                                                                ihre feinen Spinnfäden. Nehmen Sie den Pflanzeinsatz aus ihrem
+                                                                                                LECHUZA-Gefäß heraus und duschen die Pflanze unter einem nicht zu
+                                                                                                schwachen Wasserstrahl gründlich ab. Spezielle Spinnmilben-Sprays und
+                                                                                                –Gießmittel schaffen Abhilfe.</div>
+                                                                                        </div>
+                                                                                        <li>
+                                                                                            <b>
+                                                                                                <a>Was kann ich gegen Schnecken tun, die meine Pflanzen anknabbern?</a>
+                                                                                            </b>
+                                                                                        </li>
+                                                                                        <div id="faq79">
+                                                                                            <div class="bg-off-white p-3">
+                                                                                                <div class="grid-row pl-3">
+                                                                                                    <div class="col-xs-12 col-s-12 col-m-12">
+                                                                                                        <div class="panel panel-vertical">
+                                                                                                            <div>
+                                                                                                                <div class="amp amp-image">
+                                                                                                                    <img src="https://media.playmobil.com/i/lechuza/le_cascada-color49-2_product_addi_02?locale=de-CH,de,*&amp;strip=true&amp;fmt.jpeg.interlaced=true" style="width: 300px;" alt="CASCADA Color 2er Turm" title="le_cascada-color49-2_product_addi_02" />
+                                                                                                                    <br />
+                                                                                                                    <br />
+                                                                                                                </div>
+                                                                                                            </div>
+                                                                                                            <div class="spc-m-top">Schnecken mögen Salat und andere weichblättrige
+                                                                                                                Pflanzen – so können Sie Ihre Pflanzen vor den Vielfraßen schützen:
+                                                                                                                Bepflanzen Sie einen <a href="https://www.lechuza.ch/de/sale/cascada-color-2er-turm-schiefergrau/14984-2.html" target="_blank" class="link-primary">CASCADA</a> oder <a href="https://www.lechuza.ch/de/sale/2er-turm-cascada-cascadino-schiefergrau/14994-2.html" target="_blank" class="link-primary">CASCADINO</a>
+                                                                                                                Color Turm zuunterst mit Gewächsen, die von Schnecken verschmäht
+                                                                                                                werden, wie zum Beispiel Oregano, Thymian, Kamille, Kapuzinerkresse,
+                                                                                                                Rosmarin, Schnittlauch, Bohnenkraut, Knoblauch, Salbei, Majoran,
+                                                                                                                Bärlauch und Currykraut. In den oberen Bereichen können dann Salat und
+                                                                                                                Co. ungestört gedeihen.</div>
+                                                                                                        </div>
+                                                                                                    </div>
+                                                                                                </div>
+                                                                                            </div>
+                                                                                        </div>
+                                                                                    </ul>
+                                                                                </p>
+                                                                            </div>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </section>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </t>
+                    </t>
+                </t>
+            </field>
+        </record>
+        <record id="lechuza_faqs_page" model="website.page">
+            <field name="url">/faq</field>
+            <field name="website_published">True</field>
+            <field name="view_id" ref="lechuza_faqs_page_view" />
+        </record>
+    </data>
+</odoo>

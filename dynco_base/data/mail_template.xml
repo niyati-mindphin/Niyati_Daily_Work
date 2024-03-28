@@ -1,0 +1,129 @@
+<?xml version='1.0' encoding='utf-8'?>
+<odoo><data noupdate="1">
+        <record id="mail_template_data_delivery_send_by_mail" model="mail.template">
+            <field name="name">Delivery: Send by Email</field>
+            <field name="model_id" ref="model_stock_picking" />
+            <field name="subject">{{ object.company_id.name }} Delivery Order (Ref {{ object.name or 'n/a' }})</field>
+            <field name="partner_to">{{ object.partner_id.email and object.partner_id.id or object.partner_id.parent_id.id }}</field>
+            <field name="body_html" type="html">
+                <table style="box-sizing:border-box;border-collapse:collapse;padding-top: 16px; background-color: #F1F1F1; font-family:Verdana, Arial,sans-serif; color: #454748; width: 100%; border-collapse:separate;" width="100%" cellspacing="0" cellpadding="0" border="0">
+                    <tbody>
+                        <tr>
+                            <td align="center">
+                                <table style="box-sizing:border-box;border-collapse:collapse;padding: 16px; background-color: white; color: #454748; border-collapse:separate;" width="590" cellspacing="0" cellpadding="0" border="0">
+                                    <tbody>
+                                        <tr>
+                                            <td style="min-width: 590px;" align="center">
+                                                <table style="box-sizing:border-box;border-collapse:collapse;min-width: 590px; background-color: white; padding: 0px 8px 0px 8px; border-collapse:separate;" width="590" cellspacing="0" cellpadding="0" border="0">
+                                                    <tbody>
+                                                        <tr>
+                                                            <td valign="middle">
+                                                                <span style="font-size: 10px;">Your
+                                                                    <t t-out="object.company_id.website_id.name" contenteditable="false" data-oe-t-inline="true"></t> Account</span><br />
+                                                                <span style="font-size: 20px; font-weight: bold;">
+                                                                    <t t-out="object.user_id.name" contenteditable="false" data-oe-t-inline="true"></t>
+                                                                </span>
+                                                            </td>
+                                                            <td valign="middle" align="right">
+                                                                <img style="box-sizing: border-box; border-style: none; vertical-align: middle; padding: 0px; margin: 0px; height: auto; width: 80px; object-fit: cover;" src="/logo.png" t-attf-alt="{{ object.company_id.website_id.name }}" width="80" height="auto" />
+                                                            </td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td colspan="2" style="text-align:center;">
+                                                                <hr style="overflow-wrap:unset;border-style:none;border-image-width:1;border-image-source:none;border-image-slice:100%;border-image-repeat:stretch;border-image-outset:0;border-left-color:currentcolor;border-bottom-color:currentcolor;border-right-color:currentcolor;margin:12px 0 12px 0;border-top-color:rgba(0, 0, 0, 0.1);border-top-style:solid;border-top-width:1px;border-left-width:0px;border-bottom-width:0px;border-right-width:0px;overflow-y:visible;overflow-x:visible;height:0px;box-sizing:content-box;background-color:#cccccc;border:medium none;clear:both;display:block;font-size:0px;min-height:1px;line-height:0; margin:16px 0px 16px 0px;" width="100%" contenteditable="false" />
+                                                            </td>
+                                                        </tr>
+                                                    </tbody>
+                                                </table>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td style="min-width: 590px;" align="center">
+                                                <table style="box-sizing:border-box;border-collapse:collapse;min-width: 590px; background-color: white; padding: 0px 8px 0px 8px; border-collapse:separate;" width="590" cellspacing="0" cellpadding="0" border="0">
+                                                    <tbody>
+                                                        <tr>
+                                                            <td style="font-size: 13px;" valign="top">
+                                                                <div style="margin: 0px; padding: 0px;">
+                                                                    <p style="margin: 0px; padding: 0px; font-size: 13px;">
+                                                                        Hello <t t-out="object.partner_id.name or ''">Brandon Freeman</t>,<br /><br />
+                                                                        We are glad to inform you that your order has been shipped.
+                                                                        <t t-if="hasattr(object, 'carrier_tracking_ref') and object.carrier_tracking_ref">
+                                                                            Your tracking reference is
+                                                                            <strong>
+                                                                                <t t-if="object.carrier_tracking_url">
+                                                                                    <t t-set="multiple_carrier_tracking" t-value="object.get_multiple_carrier_tracking()" />
+                                                                                    <t t-if="multiple_carrier_tracking">
+                                                                                        <t t-foreach="multiple_carrier_tracking" t-as="line">
+                                                                                            <br /><a t-att-href="line[1]" target="_blank" t-out="line[0] or ''"></a>
+                                                                                        </t>
+                                                                                    </t>
+                                                                                    <t t-else="">
+                                                                                        <a t-attf-href="{{ object.carrier_tracking_url }}" target="_blank" t-out="object.carrier_tracking_ref or ''"></a>.
+                                                                                    </t>
+                                                                                </t>
+                                                                                <t t-else="">
+                                                                                    <t t-out="object.carrier_tracking_ref or ''"></t>.
+                                                                                </t>
+                                                                            </strong>
+                                                                        </t>
+                                                                        <br /><br />
+                                                                        <span>Please find your delivery order attached for more details.<br /><br />
+                                                                            Thank you,</span>
+                                                                        <t t-if="user.signature">
+                                                                            <br />
+                                                                            <t t-out="user.signature or ''">--<br />Mitchell Admin</t>
+                                                                        </t>
+                                                                    </p>
+                                                                </div>
+                                                            </td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td style="text-align:center;">
+                                                                <hr style="overflow-wrap:unset;border-style:none;border-image-width:1;border-image-source:none;border-image-slice:100%;border-image-repeat:stretch;border-image-outset:0;border-left-color:currentcolor;border-bottom-color:currentcolor;border-right-color:currentcolor;margin:12px 0 12px 0;border-top-color:rgba(0, 0, 0, 0.1);border-top-style:solid;border-top-width:1px;border-left-width:0px;border-bottom-width:0px;border-right-width:0px;overflow-y:visible;overflow-x:visible;height:0px;box-sizing:content-box;background-color:#cccccc;border:medium none;clear:both;display:block;font-size:0px;min-height:1px;line-height:0; margin: 16px 0px 16px 0px;" width="100%" contenteditable="false" />
+                                                            </td>
+                                                        </tr>
+                                                    </tbody>
+                                                </table>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td style="min-width: 590px;" align="center">
+                                                <table style="box-sizing:border-box;border-collapse:collapse;min-width: 590px; background-color: white; font-size: 11px; padding: 0px 8px 0px 8px; border-collapse:separate;" width="590" cellspacing="0" cellpadding="0" border="0">
+                                                    <tbody>
+                                                        <tr>
+                                                            <td valign="middle" align="left">
+                                                                <t t-out="object.company_id.name" contenteditable="false" data-oe-t-inline="true"></t>
+                                                            </td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td style="opacity: 0.7;" valign="middle" align="left">
+                                                                <t t-if="object.company_id.email" data-oe-t-group="0" data-oe-t-group-active="true">
+                                                                    <a style="box-sizing:border-box;text-decoration:none;background-color:transparent;color:#008784; color: #454748;" t-attf-href="'mailto:%s' % {{ object.company_id.email }}">
+                                                                        <t t-out="object.company_id.email" contenteditable="false" data-oe-t-inline="true"></t>
+                                                                    </a>
+                                                                </t>
+                                                                <t t-if="object.company_id.website" data-oe-t-group="1" data-oe-t-group-active="true">
+                                                                    <a style="box-sizing:border-box;text-decoration:none;background-color:transparent;color:#008784; color: #454748;" t-attf-href="'%s' % {{ object.company_id.website }}">
+                                                                        <t t-out="object.company_id.website" contenteditable="false" data-oe-t-inline="true"></t>
+                                                                    </a>
+                                                                </t>
+                                                            </td>
+                                                        </tr>
+                                                    </tbody>
+                                                </table>
+                                            </td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </field>
+            <field name="report_template" ref="stock.action_report_delivery" />
+            <field name="report_name">{{ (object.name or '').replace('/','_') }}</field>
+            <field name="lang">{{ object.partner_id.lang }}</field>
+            <field name="auto_delete" eval="True" />
+        </record>
+    </data>
+</odoo>

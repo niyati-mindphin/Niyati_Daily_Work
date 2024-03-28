@@ -1,0 +1,840 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+    <data noupdate="1">
+        <record id="dynco_fellhof_page_view" model="ir.ui.view">
+            <field name="name">Fellhof</field>
+            <field name="type">qweb</field>
+            <field name="key">website.dynco_fellhof_page</field>
+            <field name="website_id" ref="website.default_website" />
+            <field name="arch" type="xml">
+                <t name="Home" t-name="website.dynco_fellhof_page">
+                    <t t-name="website.fellhof">
+                        <t t-call="website.layout">
+                            <div id="wrap" class="oe_structure oe_empty">
+                                <section class="s_title o_colored_level pb256 pt256 s_parallax_no_overflow_hidden oe_img_bg o_bg_img_center" data-vcss="001" data-snippet="s_title" data-name="Title" style="background-image: url(&quot;/dynco_base/static/src/img/dynco_homepage/dynco_brands/fellhof/main_banner.jpg&quot;);" data-scroll-background-ratio="0" data-original-id="83047" data-original-src="/web/image/83047-a0bce9f3/Fellhof-Auswahl-klein-173sRGB-1500x859-1500x654.jpg" data-mimetype="image/jpeg" data-resize-width="1500" data-quality="57">
+                                    <div class="o_we_bg_filter bg-black-25"/>
+                                    <div class="s_allow_columns container">
+                                        <h1 style="text-align: left;"/>
+                                        <h1 style="text-align: left;">
+                                            <font class="text-white">Der Experte für Produkte aus Lammfell, Kuhfell, Wolle und Leder ist FELLHOF</font>
+                                            <br/>
+                                            <font class="text-white">– by Fellhof&amp;nbsp;(Österreich)
+                                            </font>
+                                        </h1>
+                                        <p style="text-align: left;">
+                                            <br/>
+                                        </p>
+                                        <p style="text-align: left;">
+                                            <br/>
+                                        </p>
+                                    </div>
+                                    <a class="dynco_scroll_top_to_botton o_scroll_button mb-3 rounded-circle align-items-center justify-content-center mx-auto bg-primary o_not_editable" href="#" title="Scroll down to the next section">
+                                        <i class="fa fa-angle-down fa-3x"></i>
+                                    </a>
+                                </section>
+                                <section class="s_text_block pt40 o_colored_level pb0 o_half_screen_height oe_img_bg o_bg_img_center" data-snippet="s_text_block" data-name="Text" style="background-image: url(&quot;/dynco_base/static/src/img/dynco_homepage/dynco_brands/fellhof/s2_bg.png&quot;);" data-original-title="" title="" aria-describedby="tooltip52807" data-original-id="83007" data-original-src="/web/image/83007-a313b866/Transp.Lila.png" data-mimetype="image/png" data-resize-width="1728" data-gl-filter="blur">
+                                    <div class="s_allow_columns container" data-original-title="" title="" aria-describedby="tooltip352390">
+                                        <p>
+                                            <br/>
+                                        </p>
+                                        <p>
+                                            <span style="font-weight: bolder; font-size: 36px;">LECHUZA ist die weltweit führende Marke für Pflanzgefässe mit Bewässerungsystem.
+                                                
+                                                <br/>Beste Qualität, "made in Germany" und zahlreiche Preise für augezeichnetes Design, das ist LECHUZA.
+                                                
+                                                <br/>
+                                            </span>
+                                            <br/>
+                                            <span style="font-weight: bolder; font-size: 36px;">Deshalb ist LECHUZA outstanding. </span>
+                                            <br/>
+                                            <span style="font-weight: bolder;">
+                                                <br/>
+                                                <span style="font-weight: normal;">CLIMAQUA® wertet Wohnräume, Gartenbereiche oder Arbeitsumfelder auf und bringt die Natur überall dort hin, wo natürliches Ambiente gefragt ist. Das Sortiment hat einen positiven Einfluss auf Geist und Körper und sorgt für Ausgleich und Freude.</span>
+                                                <br/>
+                                            </span>
+                                        </p>
+                                        <h2 data-original-title="" title="" aria-describedby="tooltip656002">
+                                            <a href="https://www.climaqua.com" class="btn btn-fill-primary btn-lg" data-original-title="" title="" target="_blank" style="">
+                                                <font style="background-color: inherit;">​</font>
+                                                <font style="" class="text-black">​</font>
+                                                <font style="color: rgb(255, 156, 0);">​</font>
+                                                <font style="color: rgb(255, 231, 206);">​</font>
+                                                <font style="color: rgb(255, 198, 156);">​</font>
+                                                <font style="color: rgb(231, 156, 156);">​</font>
+                                                <font style="color: rgb(231, 99, 99);">​</font>
+                                                <font style="color: rgb(206, 0, 0);">​</font>
+                                                <font style="color: rgb(156, 0, 0);">​</font>
+                                                <font style="color: rgb(181, 99, 8);">​</font>
+                                                <font style="color: rgb(123, 57, 0);">​</font>Zum Webshop
+                                            
+                                            
+                                            </a>
+                                        </h2>
+                                        <p>
+                                            <br/>
+                                        </p>
+                                    </div>
+                                </section>
+                                <section class="s_title o_colored_level pb4 pt0" data-vcss="001" data-snippet="s_title" data-name="Title" style="background-image: none;">
+                                    <div class="s_allow_columns container">
+                                        <h1 style="text-align: center;">
+                                            <img class="img-fluid o_we_custom_image" src="/dynco_base/static/src/img/dynco_homepage/dynco_brands/fellhof/fellhof_lechuza_logo.png" alt="" data-original-title="" title="" aria-describedby="tooltip931221" style="width: 50% !important;" loading="lazy" data-original-id="83031" data-original-src="/web/image/83031-653dc489/lechuza-vector-logo.png" data-mimetype="image/png" data-resize-width="690"/>
+                                            <br/>
+                                        </h1>
+                                    </div>
+                                </section>
+                                <section class="s_image_gallery pt24 o_colored_level o_spc-medium o_masonry pb88 oe_img_bg o_bg_img_center" data-vcss="001" data-columns="3" style="overflow: hidden; background-image: url(&quot;/dynco_base/static/src/img/dynco_homepage/dynco_brands/fellhof/s3_bg.png&quot;);" data-snippet="s_images_wall" data-name="Images Wall" data-original-id="82998" data-original-src="/web/image/82998-25fc9cc6/Transp.Lila.png" data-mimetype="image/png" data-resize-width="1728">
+                                    <div class="container">
+                                        <div class="row s_nb_column_fixed">
+                                            <div class="o_masonry_col o_snippet_not_selectable col-lg-4">
+                                                <img class="img img-fluid d-block" src="/dynco_base/static/src/img/dynco_homepage/dynco_brands/fellhof/gallery/1.png" data-index="0" data-name="Image" loading="lazy" alt="" data-original-id="82845" data-original-src="/web/image/82845-b9bb2000/Card%20Lechuza_No%20Logo.png" data-mimetype="image/png" data-resize-width="440"/>
+                                                <img class="img img-fluid d-block" src="/dynco_base/static/src/img/dynco_homepage/dynco_brands/fellhof/gallery/2.jpeg" data-index="5" data-name="Image" loading="lazy" alt="" data-original-title="" title="" aria-describedby="tooltip756962" data-original-id="83033" data-original-src="/web/image/83033-e9519faf/le_cube-glossy_product_addi_04.jpeg" data-mimetype="image/jpeg" data-resize-width="690"/>
+                                            </div>
+                                            <div class="o_masonry_col o_snippet_not_selectable col-lg-4">
+                                                <img class="img img-fluid d-block" src="/dynco_base/static/src/img/dynco_homepage/dynco_brands/fellhof/gallery/3.jpg" data-index="1" data-name="Image" loading="lazy" data-original-title="" title="" aria-describedby="tooltip881789" alt="" data-original-id="83028" data-original-src="/web/image/83028-8025fba5/4008789181640_CUBICO_Premium_50_anthrazit_metallic_1.jpg" data-mimetype="image/jpeg" data-resize-width="undefined"/>
+                                                <img class="img img-fluid d-block" src="/dynco_base/static/src/img/dynco_homepage/dynco_brands/fellhof/gallery/4.jpeg" data-index="3" data-name="Image" loading="lazy" alt="" data-original-id="83035" data-original-src="/web/image/83035-a79f2747/le_sub-irrigation-system-733x1024.jpeg" data-mimetype="image/jpeg" data-resize-width="690"/>
+                                            </div>
+                                            <div class="o_masonry_col o_snippet_not_selectable col-lg-4">
+                                                <img class="img img-fluid d-block" src="/dynco_base/static/src/img/dynco_homepage/dynco_brands/fellhof/gallery/5.jpeg" data-index="2" data-name="Image" loading="lazy" data-original-title="" title="" aria-describedby="tooltip562839" alt="" data-original-id="83032" data-original-src="/web/image/83032-cb9bed5d/le_canto-stone-14_product_addi_03.jpeg" data-mimetype="image/jpeg" data-resize-width="690"/>
+                                                <img class="img img-fluid d-block" src="/dynco_base/static/src/img/dynco_homepage/dynco_brands/fellhof/gallery/6.jpeg" data-index="4" data-name="Image" loading="lazy" data-original-title="" title="" aria-describedby="tooltip689829" alt="" style="" data-original-id="83034" data-original-src="/web/image/83034-dcd7487d/le_nido-cottage_product_addi_01.jpeg" data-mimetype="image/jpeg" data-resize-width="690"/>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </section>
+                                <section class="s_text_block pt40 pb40 o_colored_level oe_img_bg o_bg_img_center" data-snippet="s_text_block" data-name="Text" style="background-image: url(&quot;dynco_base/static/src/img/dynco_homepage/dynco_brands/fellhof/s4_bg.png&quot;);" data-original-id="83003" data-original-src="/web/image/83003-e837e04b/Transp.Lila.png" data-mimetype="image/png" data-resize-width="1728" data-gl-filter="blur">
+                                    <div class="s_allow_columns container">
+                                        <h2>
+                                            <span style="font-weight: bolder">
+                                                <font style="background-image: linear-gradient(145.18deg, rgb(155, 178, 169) 17.39%, rgb(64, 96, 59) 181.86%);" class="text-gradient">Die Idee von LECHUZA®</font>
+                                            </span>
+                                        </h2>
+                                        <p>LECHUZA® verbindet ansprechendes, zeitgemässes Design mit höchster Funktionalität durch das einzigartige und revolutionäre Bewässerungs-System "AQUA SYSTEM". Die LECHUZA® -Pflanzgefässe sowie die Möbel bieten Qualität für höchste Ansprüche. Sie zeichnen sich durch hohe Funktionalität und Formenvielfalt aus und werden in Deutschland entwickelt und gefertigt.</p>
+                                        <h2>
+                                            <br/>
+                                            <font style="background-image: linear-gradient(145.18deg, rgb(155, 178, 169) 17.39%, rgb(64, 96, 59) 181.86%);" class="text-gradient">Das Sortiment von LECHUZA®</font>
+                                        </h2>
+                                        <p>
+                                            <span class="fa fa-check" style="color: rgb(140, 123, 198) !important"/>
+                                            <span style="font-weight: bolder;">Brunnen</span> (Innen &amp;amp; Aussen), 
+                                            
+                                            
+                                            <span style="font-weight: bolder;">Pflanzgefässe</span> (Innen &amp;amp; Aussen), 
+                                            
+                                            
+                                            <span style="font-weight: bolder;">Dekofeuer</span> und 
+                                            
+                                            
+                                            <span style="font-weight: bolder;">Boutique</span>-Artikel
+                                            
+                                            
+                                            <br/>
+                                            <span class="fa fa-check" style="color: rgb(140, 123, 198) !important"/> Aus echtem Material, vor allem Schieferstein (400 Mio. Jahre)
+                                            
+                                            
+                                            <br/>
+                                            <span class="fa fa-check" style="color: rgb(140, 123, 198) !important"/> Handgemachte Unikate
+                                            
+                                            
+                                            <br/>
+                                            <span class="fa fa-check" style="color: rgb(140, 123, 198) !important"/> stilvoll, hochwertig und sicher
+                                            
+                                            
+                                            <br/>
+                                            <span class="fa fa-check" style="color: rgb(140, 123, 198) !important"/> Weltweit einzigartig
+                                            
+                                            
+                                            <br/>
+                                            <span class="fa fa-check" style="color: rgb(140, 123, 198) !important"/> Zeitloses Design "from Switzerland"
+                                            
+                                            
+                                            <br/>
+                                            <br/>
+                                        </p>
+                                        <h2>
+                                            <br/>
+                                        </h2>
+                                        <h2>
+                                            <font style="background-image: linear-gradient(145.18deg, rgb(155, 178, 169) 17.39%, rgb(64, 96, 59) 181.86%);" class="text-gradient">Der Verkaufspunkt von LECHUZA®</font>
+                                        </h2>
+                                        <p>
+                                            <span class="fa fa-check" style="color: rgb(140, 123, 198) !important"/> Belebter und attraktiver Verkaufspunkt&amp;nbsp;(Produkte und Verkaufsförderung)
+                                            
+                                            
+                                            <br/>
+                                            <span class="fa fa-check" style="color: rgb(140, 123, 198) !important"/> in sich stimmiges und abgeschlossenes  Sortiment mit vielen Crosselling-Möglichkeiten
+                                            
+                                            
+                                            <br/>
+                                            <span class="fa fa-check" style="color: rgb(140, 123, 198) !important"/> Tiefe Brunnen-Kompetenz mit abgestuften Preisniveaus und diversen Zubehörerweiterungen
+                                            
+                                            
+                                            <br/>
+                                            <span class="fa fa-check" style="color: rgb(140, 123, 198) !important"/> Regelmässig Neuheiten
+                                            
+                                            
+                                            <br/>
+                                            <span class="fa fa-check" style="color: rgb(140, 123, 198) !important" data-original-title="" title="" aria-describedby="tooltip751522"/> POS Unterstützung durch dynco Aussendienst-Team (in der Schweiz)
+                                        
+                                        
+                                        </p>
+                                        <p>
+                                            <br/>
+                                        </p>
+                                        <section class="s_gallery tp-image-gallery pt32 pb32 o_colored_level" data-snippet="s_gallery_1" data-name="Gallery - 1" style="background-image: none;">
+                                            <div class="o_container_small">
+                                                <div class="row">
+                                                    <div class="col-12 col-sm-6 col-md-4 py-3 o_colored_level col-lg-6">
+                                                        <div class="gallery-image gallery-zoom-in-effect rounded">
+                                                            <img class="img-fluid" src="/dynco_base/static/src/img/dynco_homepage/dynco_brands/fellhof/gallery/pos1.jpg" title="Gallery Image 01" alt="" loading="lazy" data-original-id="83012" data-original-src="/web/image/83012-233c762b/Planters%20Outdoor%20copy.jpg" data-mimetype="image/jpeg" data-resize-width="690"/>
+                                                        </div>
+                                                        <div class="small mt-3"> CLIMAQUA POS -1
+                                                                
+                                                            
+                                                            <br/>
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-12 col-sm-6 col-md-4 py-3 o_colored_level col-lg-6">
+                                                        <div class="gallery-image gallery-zoom-in-effect rounded">
+                                                            <img class="img-fluid" src="/dynco_base/static/src/img/dynco_homepage/dynco_brands/fellhof/gallery/pos2.jpg" title="Gallery Image 02" alt="" loading="lazy" data-original-id="83013" data-original-src="/web/image/83013-17ca3fc0/Planters%20Indoor_1.jpg" data-mimetype="image/jpeg" data-resize-width="690"/>
+                                                        </div>
+                                                        <div class="small mt-3">CLIMAQUA POS -2
+                                                                
+                                                            
+                                                            <br/>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </section>
+                                        <p/>
+                                        <p>
+                                            <br/>
+                                        </p>
+                                        <h2>
+                                            <font style="background-image: linear-gradient(145.18deg, rgb(155, 178, 169) 17.39%, rgb(64, 96, 59) 181.86%);" class="text-gradient">Saisonale Höhepunkte von LECHUZA®</font>
+                                        </h2>
+                                        <table class="table table-bordered">
+                                            <tbody>
+                                                <tr>
+                                                    <td>
+                                                        <span style="font-weight: bolder;">
+                                                            <font style="background-image: linear-gradient(145.18deg, rgb(155, 178, 169) 17.39%, rgb(64, 96, 59) 181.86%);" class="text-gradient">Sortiment</font>
+                                                        </span>
+                                                    </td>
+                                                    <td>
+                                                        <span style="font-weight: bolder;">
+                                                            <font style="background-image: linear-gradient(145.18deg, rgb(155, 178, 169) 17.39%, rgb(64, 96, 59) 181.86%);" class="text-gradient">Jahreszeit</font>
+                                                        </span>
+                                                        <br/>
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td>
+                                                        <span style="font-weight: bolder">Indoor Pflanzgefässe</span>
+                                                        <br/>
+                                                    </td>
+                                                    <td>ganzes Jahr
+                                                        
+                                                        
+                                                        <br/>
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td>
+                                                        <span style="font-weight: bolder">Boutique Sortiment</span>
+                                                        <br/>
+                                                    </td>
+                                                    <td>ganzes Jahr
+                                                        
+                                                        
+                                                        <br/>
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td>
+                                                        <span style="font-weight: bolder">Zimmerbrunnen</span>
+                                                        <br/>
+                                                    </td>
+                                                    <td>Oktober bis Februar
+                                                        
+                                                        
+                                                        <br/>
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td>
+                                                        <span style="font-weight: bolder">Outdoor Pflanzgefässe und 
+                                                            
+                                                            
+                                                            <span style="font-weight: bolder">Gartenbrunnen</span>
+                                                        </span>
+                                                        <br/>
+                                                    </td>
+                                                    <td>März bis Juni
+                                                        
+                                                        
+                                                        <br/>
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td>
+                                                        <span style="font-weight: bolder">Dekofeuer</span>
+                                                        <br/>
+                                                    </td>
+                                                    <td>
+                                                        <span style="font-weight: bolder">
+                                                            <span style="font-weight: normal">ganzes Jahr</span>
+                                                        </span> (v.a. Balkon-/Terassenzeit und Weihnachtszeit)
+                                                        
+                                                        
+                                                        <br/>
+                                                    </td>
+                                                </tr>
+                                            </tbody>
+                                        </table>
+                                        <p>
+                                            <br/>
+                                        </p>
+                                        <h2>
+                                            <font style="background-image: linear-gradient(145.18deg, rgb(155, 178, 169) 17.39%, rgb(64, 96, 59) 181.86%);" class="text-gradient">Herstellung und Nachhaltigkeit von LECHUZA®</font>
+                                            <br/>
+                                        </h2>
+                                        <p>
+                                            <span class="fa fa-check" style="color: rgb(140, 123, 198) !important"/> Schweizer Idee – Design und Marke aus Bolligen b. Bern
+                                            
+                                            
+                                            <br/>
+                                            <span class="fa fa-check" style="color: rgb(140, 123, 198) !important"/> faire Produktionsbedingungen (BSCI zertifiziert)
+                                            
+                                            
+                                            <br/>
+                                            <span class="fa fa-check" style="color: rgb(140, 123, 198) !important"/> Sehr langlebige - und nicht zuletzt deshalb - nachhaltig produzierte Produkte
+                                            
+                                            
+                                            <br/>
+                                            <span class="fa fa-check" style="color: rgb(140, 123, 198) !important"/> Produktionsstandorte: Schweiz und China (Fujian, Xiangxi, Zhaoxing, Shenzen)
+                                        
+                                        
+                                        </p>
+                                    </div>
+                                </section>
+                                <section class="s_title pt40 pb40 o_colored_level" data-vcss="001" data-snippet="s_title" data-name="Title" style="background-image: none;">
+                                    <div class="container s_allow_columns">
+                                        <h2 style="text-align: left;">
+                                            <font style="background-image: linear-gradient(145.18deg, rgb(155, 178, 169) 17.39%, rgb(64, 96, 59) 181.86%);" class="text-gradient">Der Katalog von LECHUZA®</font>
+                                            <br/>
+                                        </h2>
+                                    </div>
+                                </section>
+                                <iframe allowfullscreen="allowfullscreen" scrolling="no" class="fp-iframe" src="https://heyzine.com/flip-book/388c78d415.html" style="border: 0px solid lightgray; width: 100%; height: 800px;"/>
+                                <section class="s_text_block o_colored_level pb56 pt104 oe_img_bg o_bg_img_center" data-snippet="s_text_block" data-name="Text" style="background-image: url(&quot;/dynco15/dynco_base/static/src/img/dynco_homepage/dynco_brands/fellhof/s5_bg.png&quot;);" data-original-title="" title="" aria-describedby="tooltip697648" data-original-id="82999" data-original-src="/web/image/82999-dedc7b14/Transp.Lila.png" data-mimetype="image/png" data-resize-width="1728">
+                                    <div class="s_allow_columns container">
+                                        <p>
+                                            <br/>
+                                        </p>
+                                        <h2>HOL DIR DIE NATUR INS HAUS!</h2>
+                                        <p>
+                                            <br/>In unserem hektischen Alltag freuen wir uns über entspannende Ruhepole in unserer Umgebung. CLIMAQUA® bietet ein Entschleunigungsprogramm. Aus natürlichen Materialien (hauptsächlich Schieferstein) kreieren wir Produkte, welche die Natur&amp;nbsp;stilvoll in unseren Wohn-/Arbeitsraum bringen:
+                                            
+                                            
+                                            <br/>
+                                            <br/>
+                                            <span style="font-weight: bolder;">Wasser</span> mit den 
+                                            
+                                            
+                                            <span style="font-weight: bolder;">CLIMAQUA® FOUNTAINS</span>
+                                            <br/>
+                                            <span style="font-weight: bolder;">Pflanzen</span> mit den 
+                                            
+                                            
+                                            <span style="font-weight: bolder;">CLIMAQUA® PLANTERS</span>
+                                            <br/>
+                                            <span style="font-weight: bolder;">Feuer</span> mit den 
+                                            
+                                            
+                                            <span style="font-weight: bolder;">CLIMAQUA® FLAMES</span>
+                                            <br/>
+                                            <span style="font-weight: bolder;">Accessoires</span> mit 
+                                            
+                                            
+                                            <span style="font-weight: bolder;">CLIMAQUA® BOUTIQUE</span>
+                                            <br/>
+                                            <br/>CLIMAQUA® fällt durch sein zeitloses und schlichtes Design auf. Die Formsprache ist sofort zugänglich, die Funktionsweise ist logisch anwendbar.
+                                            
+                                            
+                                            <br/>Das natürliche Material erscheint in seiner schönsten Form; der Naturstein wird sorgfältig von Hand verarbeitet und verleiht jedem Objekt seinen ganz unikaten Charakter. 
+                                            
+                                            
+                                            <br/>Knowhow, innovativeTechnik und Präzision führen zu einem Premium Produkt mit starkem Preis-/ Leistungverhältnis.
+                                            
+                                            
+                                            <br/>
+                                            <br/>Die Marke CLIMAQUA® hat es in den letzten Jahren national und international geschafft sich&amp;nbsp;in der grünen Branche zu etablieren und dennoch liegt noch sehr viel Potential in dieser "Perle". Wir arbeiten tagtäglich daran, die Distribtutionskanäle zu erweitern und die Markenbekanntheit zu erhöhen. 
+                                            
+                                            
+                                            <br/>
+                                        </p>
+                                        <p>
+                                            <br/>
+                                        </p>
+                                        <p data-original-title="" title="" aria-describedby="tooltip902773">
+                                            <a href="/#bottom" class="btn btn-fill-primary btn-lg" data-original-title="" title="">Jetzt LECHUZA® Händler werden</a>
+                                        </p>
+                                    </div>
+                                </section>
+                                <section class="s_title o_colored_level pb32 pt56" data-vcss="001" data-snippet="s_title" data-name="Title" style="background-image: none;">
+                                    <div class="s_allow_columns container">
+                                        <h2 style="text-align: left;">
+                                            <font style="background-image: linear-gradient(145.18deg, rgb(155, 178, 169) 17.39%, rgb(64, 96, 59) 181.86%);" class="text-gradient">Häufig gestellte Fragen zu LECHUZA®</font>
+                                            <br/>
+                                        </h2>
+                                    </div>
+                                </section>
+                                <section class="s_faq_collapse pt32 o_colored_level pb120" data-snippet="s_faq_collapse" data-name="Accordion" style="background-image: none;">
+                                    <div class="container">
+                                        <div id="myCollapse1661863815666" class="accordion" role="tablist">
+                                            <div class="card" data-name="Item" style="background-color: rgb(214, 214, 231) !important;">
+                                                <a href="#" role="tab" data-toggle="collapse" aria-expanded="false" class="card-header collapsed" data-target="#myCollapseTab1661863815667">Wo kann CLIMAQUA® gekauft werden?
+                                                    
+                                                    
+                                                    <br/>
+                                                </a>
+                                                <div class="collapse" data-parent="#myCollapse1661863815666" role="tabpanel" id="myCollapseTab1661863815667" style="">
+                                                    <div class="card-body">
+                                                        <p class="card-text">Diese Nutzungsbedingungen ("Bedingungen", "Vereinbarung") sind eine Vereinbarung zwischen der Website ("Websitebetreiber", "uns", "wir" oder "unser") und Ihnen ("Nutzer", "Sie" oder "Ihr"). Diese Vereinbarung legt die allgemeinen Bedingungen für Ihre Nutzung dieser Website und aller ihrer Produkte oder Dienstleistungen (zusammenfassend "Website" oder "Dienstleistungen") fest.</p>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="card" data-name="Item" style="background-color: rgb(214, 214, 231) !important;">
+                                                <a href="#" role="tab" data-toggle="collapse" aria-expanded="false" class="card-header collapsed" data-target="#myCollapseTab1661863815668">Weshalb werden CLIMAQUA® Produkte zum Teil in China produziert?</a>
+                                                <div class="collapse" data-parent="#myCollapse1661863815666" role="tabpanel" id="myCollapseTab1661863815668" style="">
+                                                    <div class="card-body">
+                                                        <p class="card-text o_default_snippet_text">Obwohl diese Website möglicherweise mit anderen Websites verlinkt ist, implizieren wir weder direkt noch indirekt eine Genehmigung, Vereinigung, Sponsoring, Unterstützung oder Zugehörigkeit zu einer verlinkten Website, es sei denn, es wird ausdrücklich darauf hingewiesen.</p>
+                                                        <p class="card-text o_default_snippet_text">Sie sollten die rechtlichen Erklärungen und sonstigen Nutzungsbedingungen jeder Website, auf die Sie über einen Link von dieser Website aus zugreifen, sorgfältig prüfen. Die Verlinkung zu anderen Off-Site-Seiten oder anderen Websites erfolgt auf Ihr eigenes Risiko.</p>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="card" data-name="Item" style="background-color: rgb(214, 214, 231) !important;">
+                                                <a href="#" role="tab" data-toggle="collapse" aria-expanded="false" class="card-header collapsed" data-target="#myCollapseTab1661863815669">Wie kann ich Händler werden?</a>
+                                                <div class="collapse" data-parent="#myCollapse1661863815666" role="tabpanel" id="myCollapseTab1661863815669" style="">
+                                                    <div class="card-body">
+                                                        <p class="card-text">Die Website kann Cookies verwenden, um die maximale Navigation des Benutzers durch diese Website zu personalisieren und zu erleichtern. Der Benutzer kann seinen Browser so konfigurieren, dass er die Installation der von uns gesendeten Cookies meldet und ablehnt.</p>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="card" data-name="Item" style="background-color: rgb(214, 214, 231) !important;">
+                                                <a href="#" role="tab" data-toggle="collapse" aria-expanded="false" class="card-header collapsed" data-target="#myCollapseTab1662301620548">Wann sind bei CLIMAQUA die saisonalen Höhepunkte?</a>
+                                                <div class="collapse" data-parent="#myCollapse1661863815666" role="tabpanel" id="myCollapseTab1662301620548" style="">
+                                                    <div class="card-body">
+                                                        <p class="card-text">Die Website kann Cookies verwenden, um die maximale Navigation des Benutzers durch diese Website zu personalisieren und zu erleichtern. Der Benutzer kann seinen Browser so konfigurieren, dass er die Installation der von uns gesendeten Cookies meldet und ablehnt.</p>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </section>
+                                <section class="s_testimonial_3 o_colored_level" data-snippet="s_testimonial_3" data-name="Testimonial - 3" style="background-image: none;">
+                                    <div class="s_carousel tp-custom-carousel s_carousel_rounded carousel slide" data-interval="10000" id="myCarousel1660576611282" style="background-image: none;">
+                                        <ol class="carousel-indicators o_we_no_overlay">
+                                            <li data-slide-to="0" data-target="#myCarousel1660576611282" class="active"/>
+                                            <li data-slide-to="1" data-target="#myCarousel1660576611282"/>
+                                            <li data-slide-to="2" data-target="#myCarousel1660576611282"/>
+                                            <li data-target="#myCarousel1660576611282" data-slide-to="3"/>
+                                            <li data-target="#myCarousel1660576611282" data-slide-to="4"/>
+                                            <li data-target="#myCarousel1660576611282" data-slide-to="5"/>
+                                            <li data-target="#myCarousel1660576611282" data-slide-to="6"/>
+                                        </ol>
+                                        <div class="carousel-inner">
+                                            <div class="carousel-item o_colored_level pb96 pt72 active" data-name="Slide" style="background-image: none;">
+                                                <div class="container">
+                                                    <div class="row content justify-content-center text-center s_col_no_bgcolor s_nb_column_fixed">
+                                                        <div class="carousel-content col-12 col-md-10">
+                                                            <img class="img img-fluid o_image_128_max shadow" src="/dynco_base/static/src/img/dynco_homepage/dynco_brands/fellhof/testimonials/1.png" alt="" loading="lazy" data-original-title="" title="" aria-describedby="tooltip89188" style="" data-original-id="82929" data-original-src="/web/image/82929-2177218d/Portrait%20Stephanie_Square%20Green.png" data-mimetype="image/png" data-resize-width="690"/>
+                                                            <blockquote class="lead font-weight-light font-italic mt-3 border-white">
+                                                            Gemeinsam evaluieren wir das passende Sortiment für Ihre Gegebenheiten im stationären Handel. Es&amp;nbsp;resultieren erfolgsorientierte Verkaufspunkte, die&amp;nbsp;Ihre Kunden inspirieren und begeistern.</blockquote>
+                                                            <h5>
+                                                                <span style="font-weight: bolder;">Stéphanie Hoppe</span>
+                                                                <br/>
+                                                            </h5>
+                                                            <span>Verkaufsberatung stationärer Handel</span>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="carousel-item pt48 pb48 o_colored_level" data-name="Slide" style="background-image: none;">
+                                                <div class="container">
+                                                    <div class="row content justify-content-center text-center s_col_no_bgcolor s_nb_column_fixed">
+                                                        <div class="carousel-content col-12 col-md-10">
+                                                            <img class="img img-fluid o_image_128_max shadow" src="/dynco_base/static/src/img/dynco_homepage/dynco_brands/fellhof/testimonials/2.png" alt="" loading="lazy" data-original-title="" title="" aria-describedby="tooltip439626" style="" data-original-id="82930" data-original-src="/web/image/82930-ee74da2b/Portrait%20Simon_Square%20Green.png" data-mimetype="image/png" data-resize-width="690"/>
+                                                            <blockquote class="lead font-weight-light font-italic mt-3 border-white">
+                                                            Verkaufen Sie&amp;nbsp;online? Dann bin ich der richtige&amp;nbsp;Ansprechspartner. Ich liefere Ihnen den best möglichen&amp;nbsp;Content für Ihr gewünschtes Sortiment.
+                                                                
+                                                                
+                                                                <br/>
+                                                            </blockquote>
+                                                            <h5>
+                                                                <span style="font-weight: bolder;">Simon Hirschi</span>
+                                                                <br/>
+                                                            </h5>
+                                                            <span>Verkaufsberatung digitale Kanäle</span>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="carousel-item pt48 pb48 o_colored_level" data-name="Slide" style="background-image: none;">
+                                                <div class="container">
+                                                    <div class="row content justify-content-center text-center s_col_no_bgcolor s_nb_column_fixed">
+                                                        <div class="carousel-content col-12 col-md-10">
+                                                            <img class="img img-fluid o_image_128_max shadow" src="/dynco_base/static/src/img/dynco_homepage/dynco_brands/fellhof/testimonials/3.png" alt="" loading="lazy" data-original-title="" title="" aria-describedby="tooltip587819" style="" data-original-id="82931" data-original-src="/web/image/82931-702aec5b/Portrait%20Yves_Square%20Green.png" data-mimetype="image/png" data-resize-width="690"/>
+                                                            <blockquote class="lead font-weight-light font-italic mt-3 border-white">
+                                                            Die Marke wurde mir sozusagen in die Wiege gelegt. Damals aber 
+                                                                
+                                                                
+                                                                <br/>
+                                                            </blockquote>
+                                                            <h5>
+                                                                <span style="font-weight: bolder;">Yves Durrer</span>
+                                                                <br/>
+                                                            </h5>
+                                                            <span>Design und Produktentwicklung von CLIMAQUA®</span>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="carousel-item pt48 o_colored_level pb72" data-name="Slide" style="background-image: none;">
+                                                <div class="container">
+                                                    <div class="row content justify-content-center text-center s_col_no_bgcolor s_nb_column_fixed">
+                                                        <div class="carousel-content col-12 col-md-10 pb40">
+                                                            <img class="img img-fluid o_image_128_max shadow" src="/dynco_base/static/src/img/dynco_homepage/dynco_brands/fellhof/testimonials/4.png" alt="" loading="lazy" data-original-title="" title="" aria-describedby="tooltip587819" style="" data-original-id="82932" data-original-src="/web/image/82932-bfbab6ea/Portrait%20Laura_Square%20Green.png" data-mimetype="image/png" data-resize-width="690"/>
+                                                            <blockquote class="lead font-weight-light font-italic mt-3 border-white">
+                                                            Saisonale Höhepunkte müssen erkannt und benutzt werden, um passende Produkte zur richtigen Zeit ins&amp;nbsp;Spotlight zu stellen. Ich kenne diese&amp;nbsp;und berate Sie bei&amp;nbsp;Umsetzungsmöglichkeiten.&amp;nbsp;
+                                                                
+                                                                
+                                                                <br/>
+                                                            </blockquote>
+                                                            <h5>
+                                                                <span style="font-weight: bolder;">Laura Ast</span>
+                                                                <br/>
+                                                            </h5>
+                                                            <span>Marketing</span>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="carousel-item pt48 pb48 o_colored_level" data-name="Slide" style="background-image: none;">
+                                                <div class="container">
+                                                    <div class="row content justify-content-center text-center s_col_no_bgcolor s_nb_column_fixed">
+                                                        <div class="carousel-content col-12 col-md-10">
+                                                            <img class="img img-fluid o_image_128_max shadow" src="/dynco_base/static/src/img/dynco_homepage/dynco_brands/fellhof/testimonials/5.png" alt="" loading="lazy" data-original-title="" title="" aria-describedby="tooltip587819" style="" data-original-id="83021" data-original-src="/web/image/83021-742062a1/Portrait%20Mergim_Square%20Green.png" data-mimetype="image/png" data-resize-width="690"/>
+                                                            <blockquote class="lead font-weight-light font-italic mt-3 border-white">
+                                                            Ich leiste die notwendige&amp;nbsp;Vorarbeit, damit Ihnen unsere Produkte bzw. Sortimente zum richtigen Zeitpunkt und in der richtigen Form&amp;nbsp;zur Verfügung stehen.
+                                                                
+                                                                
+                                                                <br/>
+                                                            </blockquote>
+                                                            <h5>
+                                                                <span style="font-weight: bolder;">Mergim Berisha</span>
+                                                                <br/>
+                                                            </h5>jr. Key Account Management
+                                                        
+                                                        
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="carousel-item pt48 pb48 o_colored_level" data-name="Slide" style="background-image: none;">
+                                                <div class="container">
+                                                    <div class="row content justify-content-center text-center s_col_no_bgcolor s_nb_column_fixed">
+                                                        <div class="carousel-content col-12 col-md-10">
+                                                            <img class="img img-fluid o_image_128_max shadow" src="/dynco_base/static/src/img/dynco_homepage/dynco_brands/fellhof/testimonials/6.png" alt="" loading="lazy" data-original-title="" title="" aria-describedby="tooltip587819" style="" data-original-id="83024" data-original-src="/web/image/83024-b107b83d/Portrait%20Vanessa_Square%20Green.png" data-mimetype="image/png" data-resize-width="690"/>
+                                                            <blockquote class="lead font-weight-light font-italic mt-3 border-white">
+                                                            Ein ansprechender POS ist goldwert. Für die Unterstützung der Umsetzung und Betreuung Ihrer individuellen Verkaufsflächen-Präsentation&amp;nbsp;bin ich für Sie da.&amp;nbsp;&amp;nbsp;
+                                                                
+                                                                
+                                                                <br/>
+                                                            </blockquote>
+                                                            <h5>
+                                                                <span style="font-weight: bolder;">Vanessa Hellinger</span>
+                                                                <br/>
+                                                            </h5>POS Managment
+                                                        
+                                                        
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="carousel-item pt48 pb48 o_colored_level" data-name="Slide" style="background-image: none;">
+                                                <div class="container">
+                                                    <div class="row content justify-content-center text-center s_col_no_bgcolor s_nb_column_fixed">
+                                                        <div class="carousel-content col-12 col-md-10">
+                                                            <img class="img img-fluid o_image_128_max shadow" src="/dynco_base/static/src/img/dynco_homepage/dynco_brands/fellhof/testimonials/7.png" alt="" loading="lazy" data-original-title="" title="" aria-describedby="tooltip587819" style="" data-original-id="83023" data-original-src="/web/image/83023-5baa6516/Portrait%20Ursula_Square%20Green.png" data-mimetype="image/png" data-resize-width="690"/>
+                                                            <blockquote class="lead font-weight-light font-italic mt-3 border-white">
+                                                            Ein ansprechender POS ist goldwert. Für die Unterstützung der Umsetzung und Betreuung Ihrer individuellen Verkaufsflächen-Präsentation&amp;nbsp;bin ich für Sie da.&amp;nbsp;&amp;nbsp;
+                                                                
+                                                                
+                                                                <br/>
+                                                            </blockquote>
+                                                            <h5>
+                                                                <span style="font-weight: bolder;">Ursula Zürcher</span>
+                                                                <br/>
+                                                            </h5>POS Managment
+                                                        
+                                                        
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <a class="carousel-control-next o_not_editable o_we_no_overlay" data-slide="next" role="img" aria-label="Next" title="Next" href="#myCarousel1660576611282"/>
+                                        <a class="carousel-control-prev o_not_editable o_we_no_overlay" data-slide="prev" role="img" aria-label="Previous" title="Previous" href="#myCarousel1660576611282"/>
+                                        <span class="sr-only o_default_snippet_text">Pre</span>
+                                        <span class="sr-only o_default_snippet_text">Next</span>
+                                    </div>
+                                </section>
+                                <section class="s_info_block_2 tp-editor-snippet-valign o_colored_level" data-snippet="s_info_block_2" data-name="Info Block - 2" style="background-image: linear-gradient(145.18deg, rgb(155, 178, 169) 17.39%, rgb(64, 96, 59) 181.86%);">
+                                    <div class="px-0 o_container_small">
+                                        <div class="row no-gutters s_nb_column_fixed align-items-center">
+                                            <div class="p-4 o_colored_level col-lg-12 pt224 pb208" data-original-title="" title="" aria-describedby="tooltip793223" style="">
+                                                <p>
+                                                    <span style="font-weight: bolder; font-size: 36px;">CLIMAQUA® ist eine Herzensangelegenheit.</span>
+                                                </p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </section>
+                                <section class="s_title pt40 pb40 o_colored_level" data-vcss="001" data-snippet="s_title" data-name="Title" style="background-image: none;" data-original-title="" title="" aria-describedby="tooltip653769">
+                                    <div class="s_allow_columns container">
+                                        <h2 style="text-align: left;">
+                                            <font style="background-color: inherit;">CLIMAQUA® Händler werden? 
+                                                Schreiben Sie uns
+                                            </font>
+                                            <br/>
+                                        </h2>
+                                        <section class="s_website_form pb16 pt48" data-vcss="001" data-snippet="s_website_form" data-name="Form" data-original-title="" title="" aria-describedby="tooltip310101">
+                                            <div class="container">
+                                                <form action="/website/form/" method="post" enctype="multipart/form-data" class="o_mark_required" data-mark="*" data-pre-fill="true" data-success-mode="redirect" data-success-page="/contactus-thank-you" data-model_name="mail.mail">
+                                                    <div class="s_website_form_rows row s_col_no_bgcolor">
+                                                        <div data-visibility-condition="" data-visibility-between="" class="form-group s_website_form_field col-12 s_website_form_custom s_website_form_required" data-type="char" data-name="Field">
+                                                            <div class="row s_col_no_resize s_col_no_bgcolor">
+                                                                <label class="col-form-label col-sm-auto s_website_form_label" style="width: 200px" for="oo6dm61ulkd">
+                                                                    <span class="s_website_form_label_content">Name</span>
+                                                                    <span class="s_website_form_mark">   *</span>
+                                                                </label>
+                                                                <div class="col-sm">
+                                                                    <input type="text" class="form-control s_website_form_input" name="Name" required="1" placeholder="" id="oo6dm61ulkd" data-fill-with="name"/>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                        <div data-visibility-condition="" data-visibility-between="" class="form-group s_website_form_field col-12 s_website_form_custom" data-type="tel" data-name="Field">
+                                                            <div class="row s_col_no_resize s_col_no_bgcolor">
+                                                                <label class="col-form-label col-sm-auto s_website_form_label " style="width: 200px" for="okp5vy717xz9">
+                                                                    <span class="s_website_form_label_content">Telefon</span>
+                                                                </label>
+                                                                <div class="col-sm">
+                                                                    <input type="tel" class="form-control s_website_form_input" name="Telefon" value="" placeholder="" id="okp5vy717xz9" data-fill-with="phone"/>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                        <div data-visibility-condition="" data-visibility-between="" class="form-group s_website_form_field col-12 s_website_form_model_required" data-type="char" data-name="Field">
+                                                            <div class="row s_col_no_resize s_col_no_bgcolor">
+                                                                <label class="col-form-label col-sm-auto s_website_form_label " style="width: 200px" for="obk9bpyxi93f">
+                                                                    <span class="s_website_form_label_content">Email</span>
+                                                                    <span class="s_website_form_mark">     *</span>
+                                                                </label>
+                                                                <div class="col-sm">
+                                                                    <input type="text" class="form-control s_website_form_input" name="email_from" required="true" placeholder="" id="obk9bpyxi93f" data-fill-with="email"/>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                        <div class="form-group s_website_form_field col-12 s_website_form_custom" data-type="char" data-name="Field" data-visibility-condition="" data-visibility-between="">
+                                                            <div class="row s_col_no_resize s_col_no_bgcolor">
+                                                                <label class="col-form-label col-sm-auto s_website_form_label " style="width: 200px" for="ova9vmglp3o">
+                                                                    <span class="s_website_form_label_content">Firma</span>
+                                                                </label>
+                                                                <div class="col-sm">
+                                                                    <input type="text" class="form-control s_website_form_input" name="Firma" data-fill-with="commercial_company_name" id="ova9vmglp3o"/>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                        <div class="form-group s_website_form_field col-12 s_website_form_model_required" data-type="char" data-name="Field" data-visibility-condition="" data-visibility-between="">
+                                                            <div class="row s_col_no_resize s_col_no_bgcolor">
+                                                                <label class="col-form-label col-sm-auto s_website_form_label " style="width: 200px" for="ov9v40mp6as9">
+                                                                    <span class="s_website_form_label_content">Thema</span>
+                                                                    <span class="s_website_form_mark"> *</span>
+                                                                </label>
+                                                                <div class="col-sm">
+                                                                    <input type="text" class="form-control s_website_form_input" name="subject" required="true" id="ov9v40mp6as9"/>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                        <div data-visibility-condition="" data-visibility-between="" class="form-group s_website_form_field col-12 s_website_form_custom s_website_form_required" data-type="text" data-name="Field">
+                                                            <div class="row s_col_no_resize s_col_no_bgcolor">
+                                                                <label class="col-form-label col-sm-auto s_website_form_label " style="width: 200px" for="oa34vfd85lm9">
+                                                                    <span class="s_website_form_label_content">Ihre Nachricht</span>
+                                                                    <span class="s_website_form_mark">       *</span>
+                                                                </label>
+                                                                <div class="col-sm">
+                                                                    <textarea class="form-control s_website_form_input" name="Ihre Nachricht" required="1" placeholder="" id="oa34vfd85lm9" rows="3"/>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                        <div class="form-group s_website_form_field col-12    s_website_form_dnone" data-name="Field">
+                                                            <div class="row s_col_no_resize s_col_no_bgcolor">
+                                                                <label class="col-form-label col-sm-auto s_website_form_label " style="width: 200px">
+                                                                    <span class="s_website_form_label_content"/>
+                                                                </label>
+                                                                <div class="col-sm">
+                                                                    <input type="hidden" class="form-control s_website_form_input" name="email_to" value="info@yourcompany.example.com"/>
+                                                                    <div class="s_website_form_field_description small form-text text-muted">E-Mail-Adressen durch ein Komma trennen.</div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                        <div class="form-group col-12 s_website_form_field" data-name="Field">
+                                                            <div class="row s_col_no_resize s_col_no_bgcolor">
+                                                                <label class="col-form-label col-sm-auto s_website_form_label" style="width: 200px">
+                                                                    <span class="s_website_form_label_content">Attachments</span>
+                                                                </label>
+                                                                <div class="col-sm dynco_upload_btn_wrapper">
+                                                                    <button class="btnr" title="No file chosen">Choose files</button>
+                                                                    <span>No file chosen</span>
+                                                                    <input type="file" widget="many2many_binary" multiple="true" class="form-control s_website_form_input" name="attachments" id="helpdesk5" data-fill-with="undefined" title="No file chosen">
+                                                                        <!-- <t t-esc="request.params.get('attachment', '')"/> -->
+                                                                    </input>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                        <div class="form-group col-12 s_website_form_submit" data-name="Submit Button" data-original-title="" title="" aria-describedby="tooltip912355">
+                                                            <div style="width: 200px;" class="s_website_form_label"/>
+                                                            <a href="#" role="button" class="s_website_form_send btn btn-fill-primary btn-lg" data-original-title="" title="">Jetzt absenden</a>
+                                                            <span id="s_website_form_result"/>
+                                                        </div>
+                                                    </div>
+                                                </form>
+                                            </div>
+                                        </section>
+                                    </div>
+                                </section>
+                                <!-- main footer activated -->
+                                <!-- <section class="oe_structure s_text_block pt64 pb32 dynco_homepage o_colored_level section_dynco_footer" data-name="Dynco fellhof Footer" data-snippet="s_dynco_fellhof_footer" style="background-image: linear-gradient(148.49deg, rgb(209, 196, 234) 11.41%, rgb(118, 87, 146) 126.62%);">
+                                    <div class="container">
+                                        <div class="row">
+                                            <div class="col-md-2 o_colored_level mb-3 pb0 pt0 col-lg-2" data-original-title="" title="" aria-describedby="tooltip832474" style="">
+                                                <a href="/" class="o_footer_logo logo" data-original-title="" title="">
+                                                    <img clas="img-fluid" src="/dynco_base/static/src/img/dynco_footer_logo.png" alt="" loading="lazy" data-original-title="" title="" aria-describedby="tooltip287345" data-original-id="428" data-original-src="/dynco_base/static/src/img/dynco_footer_logo.png" data-mimetype="image/svg+xml" data-resize-width="undefined" style="animation-play-state: paused; transition: none 0s ease 0s; transform: translateX(-21.6%) translateY(-19.3%) scaleX(0.58) scaleY(0.58) !important;" class="float-left"/>
+                                                </a>
+                                            </div>
+                                            <div class="col-md-3 f_heading col-6 o_colored_level mb-3">
+                                                <p class="p_small">Adresse</p>
+                                                <p class="p_regular">dynco ag
+                                                    
+                                                    
+                                                    <br/>Bolligenstrasse 90
+                                                    
+                                                    
+                                                    <br/>3065 Bolligen
+                                                    
+                                                    
+                                                    <br/>Schweiz
+                                                
+                                                
+                                                </p>
+                                            </div>
+                                            <div class="col-md-3 f_heading col-6 o_colored_level mb-3">
+                                                <p class="p_small">Portfolio</p>
+                                                <ul class="list-unstyled mb-0">
+                                                    <li class="my-1">
+                                                        <p><a href="/climaqua">CLIMAQUA</a><span style="font-size: 14px"><font class="text-800">&amp;nbsp; by dynco</font></span></p>
+                                                    </li>
+                                                    <li class="my-1">
+                                                        <p><a href="/lechuza">Lechuza</a></p>
+                                                    </li>
+                                                    <li class="my-1">
+                                                        <p><a href="/ndt">Passion for Pottery - NDT</a></p>
+                                                    </li>
+                                                    <li class="my-1">
+                                                        <p><a href="/keramik">Keramik</a><span style="font-size: 14px"><font class="text-800">&amp;nbsp; by dynco</font></span></p>
+                                                    </li>
+                                                    <li class="my-1">
+                                                        <p><a href="/fellhof">Fellhof</a></p>
+                                                    </li>
+                                                    <li class="my-1">
+                                                        <p><a href="/poetic">Poétic</a></p>
+                                                    </li>
+                                                    <li class="my-1">
+                                                        <p><a href="/esteras">Esteras</a></p>
+                                                    </li>
+                                                    <li class="my-1">
+                                                        <p><a href="/urbalive">Urbalive - Plastia</a></p>
+                                                    </li>
+                                                    <li class="my-1">
+                                                        <p><a href="/pelletray">Pelletray</a><span style="font-size: 14px"><font class="text-800">&amp;nbsp; by dynco</font></span></p>
+                                                    </li>
+                                                    <li class="my-1">
+                                                        <p><a href="/qflame">Q-Flame</a></p>
+                                                    </li>
+                                                </ul>
+                                            </div>
+                                            <div class="col-md-2 f_heading col-6 o_colored_level mb-3">
+                                                <p>E-Mail
+                                                    
+                                                    
+                                                    <br/>office@dynco.ch
+                                                    
+                                                    
+                                                    <br/>
+                                                    <br/>Telefon
+                                                    
+                                                    
+                                                    <br/>+41 31 921 88 44
+                                                
+                                                
+                                                </p>
+                                                <p class="p_small">Fax
+                                                    
+                                                    
+                                                    <br/>+41 31 921 60 88
+                                                    
+                                                    
+                                                    <br/>
+                                                </p>
+                                            </div>
+                                            <div class="col-md-2 f_heading col-6 o_colored_level mb-3" data-original-title="" title="" aria-describedby="tooltip678741">
+                                                <p class="p_small">Follow Us</p>
+                                                <a href="/website/social/facebook" target="_blank" data-original-title="" title="">
+                                                    <img class="img-fluid o_we_custom_image" src="/dynco_base/static/src/img/Facebook - Negative.svg" alt="" loading="lazy" data-original-id="461" data-original-src="/dynco_base/static/src/img/Facebook - Negative.svg" data-mimetype="image/svg+xml" data-original-title="" title="" aria-describedby="tooltip448352" style="transform: translateX(-12.1%) translateY(-3.4%) scaleX(0.76) scaleY(0.76); animation-play-state: paused; transition: none 0s ease 0s; padding: 5px !important;"/>
+                                                </a>
+                                                <a href="/website/social/twitter" target="_blank" data-original-title="" title="">
+                                                    <img class="img-fluid o_we_custom_image" src="/dynco_base/static/src/img/Group.svg" alt="" loading="lazy" data-original-id="462" data-original-src="/dynco_base/static/src/img/Group.svg" data-mimetype="image/svg+xml" data-original-title="" title="" aria-describedby="tooltip910564" style="transform: translateX(-16.7%) scaleX(0.82) scaleY(0.82); animation-play-state: paused; transition: none 0s ease 0s;"/>
+                                                </a>
+                                            </div>
+                                        </div>
+                                        <div class="o_footer_copyright tp-custom-copyright dynco_copyright" data-name="Copyright">
+                                            <div class="container">
+                                                <div class="row justify-content-between">
+                                                    <div class="col-12 col-md-auto text-center text-md-left">
+                                                      <div class="my-2"><a href="/agb">AGB</a> | <a href="/datenschutz">Datenschutz |</a><a href="/impressum">&amp;nbsp;Impressum</a></div>
+                                                    </div>
+                                                    <div class="col-12 col-md-auto text-center text-md-right">
+                                                      <div class="my-2">©dynco AG 2022</div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </section> -->
+                            </div>
+                        </t>
+                    </t>
+                </t>
+            </field>
+        </record>
+        <record id="dynco_fellhof_page" model="website.page">
+            <field name="name">Fellhof</field>
+            <field name="url">/fellhof</field>
+            <field name="website_published">True</field>
+            <field name="track">True</field>
+            <field name="cache_time">0</field>
+            <field name="view_id" ref="dynco_fellhof_page_view" />
+        </record>
+    </data>
+</odoo>

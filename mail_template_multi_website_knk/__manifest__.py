@@ -12,11 +12,14 @@
     'category': 'Productivity/Discuss',
     'author': 'Kanak Infosystems LLP.',
     'website': 'https://www.kanakinfosystems.com',
-    'depends': ['account', 'auth_signup', 'sale', 'mail', 'website'],
+    'depends': ['account', 'auth_signup', 'sale', 'mail', 'website','stock'],
     'data': [
+        'security/ir.model.access.csv',
         'data/mail_template_data.xml',
         'views/knk_mail_template_view.xml',
-        'views/res_config_settings_views.xml'
+        'views/res_config_settings_views.xml',
+        'views/stock_views.xml',
+        'wizard/scheduled_date_wizard.xml'
     ],
     'images': ['static/description/banner.jpg'],
     'installable': True,

@@ -1,0 +1,197 @@
+.lechuza_homepage {
+    .s_cover_2 {
+        .btn-secondary {
+            border-radius: 5px;
+            background: #fff;
+            color: #2d3a3a;
+            font-weight: 700;
+            padding: 7px 20px 5px;
+            border: 2px solid #4e4e4e;
+            padding-top: 15px;
+            padding-bottom: 15px;
+            font-size: 18px;
+        }
+        .display-text {
+            background-color: rgb(239, 239, 239);
+            font-size: 40px !important;
+            padding: 2px 6px 4px;
+        }
+    }
+    .s_banner_13,
+    .s_banner_14 {
+        a.btn-secondary {
+            letter-spacing: .4px;
+            line-height: 1.45 !important;
+            width: 100%;
+            max-width: 250px;
+            text-align: center;
+            border-radius: 5px;
+            color: #2d3a3a;
+            font-weight: 700;
+            padding: 7px 13px 5px;
+            border: 2px solid #4e4e4e;
+            font-size: 18px;
+        }
+    }
+    .rating {
+        span.h2 {
+            font-weight: lighter;
+        }
+    }
+    .s_newsletter_block {
+        h5 {
+            font-weight: lighter;
+        }
+        .btn-secondary.js_subscribe_btn {
+            border-color: black;
+        }
+    }
+    .lechuza_banner_image {
+        height: 210px;
+        object-fit: cover;
+    }
+    .btn_section_middle {
+        bottom: 50% !important;
+        top: 45% !important;
+        padding: 0px !important;
+    }
+    @media (min-width: 1647.50px) {
+        .lechuza_banner_image {
+            height: 245px;
+        }
+    }
+    @media (min-width: 768px) and (max-width: 1199.98px) {
+        .lechuza_banner_image {
+            height: 160px;
+        }
+    }
+}
+.lechuza_footer {
+    .lechuza_tp-icon-blocks {
+        background: #f9f9f9;
+    }
+    .btn-secondary.js_subscribe_btn {
+        border-color: black;
+    }
+}
+.lechuza_header {
+    .tp-account-info {
+        li .o_wsale_my_cart .my_cart_quantity.badge-primary,
+        li .o_wsale_my_wish .my_wish_quantity.badge-primary {
+            color: black;
+            background-color: white;
+        }
+        i.dri.dri-wishlist,
+        i.dri.dri-cart,
+        a.dropdown-toggle {
+            color: white;
+        }
+    }
+}
+.lechuza_search_box {
+    form {
+        input.oe_search_box {
+            margin-left: 15px;
+            border-color: transparent;
+            z-index: 1 !important;
+            background-color: transparent;
+            color: #ffffff;
+        }
+        input.oe_search_box:focus {
+            border-bottom: 1px solid black !important;
+        }
+        .oe_search_button {
+            position: absolute;
+            left: 0;
+            background: transparent;
+            border: none;
+        }
+        .oe_search_button:active:focus:hover {
+           background: transparent !important;
+           border: none !important;
+        }
+        i.fa.fa-search {
+            border: none;
+            position: absolute;
+            left: 0;
+            top: 9px;
+            background: none;
+            padding: 0;
+            font-size: 19px;
+            
+        }
+        i.fa.fa-search:hover:active:focus {
+            background: transparent !important;
+            border: none !important;
+        }
+        .oe_search_button.btn-primary:hover {
+            background: transparent !important;
+            background-color: transparent !important;
+            box-shadow: none !important;
+        }
+        .oe_search_button.btn-primary:focus {
+            box-shadow: none !important;
+        }
+    }
+}
+@media (max-width: 992px){
+    .lechuza_mobile_header {
+        .tp-account-info {
+            /* margin: auto; */
+            margin: 10px 5px 10px 5px;
+            float: right;
+        }
+    }
+    .lechuza_search_box {
+        .oe_search_button.btn-primary {
+            color: unset;
+        }
+        .o_searchbar_form.s_searchbar_input {
+            width: 75% !important;
+        }
+    }
+    .tp_mobile_header .navbar {
+        padding: 0rem !important;
+    }
+
+    .o_header_affixed .mobile_logo_header{
+        display: none;
+    }
+    #wrapwrap > header .show #top_menu {
+        background-color: white;
+    }
+
+    .bg_lechuza_mobile {
+        background-color: #000000 !important;
+        color: #FFFFFF;
+    }
+    .lechuza_mobile_header .icon-bar {
+        background-color: white !important;
+    }
+    .lechuza_mobile_header .tp-cart-sidebar-action.d-lg-none {
+        color: white !important;
+    }
+    .tp_mobile_header #top_menu_container {
+        display: unset !important;
+    }
+
+    .lechuza_mobile_header .tp-account-info a:not(.dropdown-item):hover{
+        color: white !important;
+    }
+    .lechuza_homepage .s_carousel .carousel-inner .carousel-item,
+    .lechuza_homepage .s_quotes_carousel .carousel-inner .carousel-item {
+        min-height: auto !important;
+        padding-bottom: 90px !important;
+        padding-top: 90px !important;
+    }
+    .lechuza_homepage .s_cover_2 .carousel-inner .display-text{
+        font-size: 14px !important;
+    }
+    .lechuza_homepage .s_cover_2 .carousel-inner .btn-secondary{
+        padding: 5px 15px 5px !important;
+        font-size: 14px !important;
+    }
+}
+.lechuza_state {
+    display: none;
+}

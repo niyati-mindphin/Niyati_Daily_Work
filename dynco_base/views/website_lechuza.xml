@@ -1,0 +1,653 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data noupdate="1">
+        <record id="lechuza_homepage_view" model="ir.ui.view">
+            <field name="name">Home - Lechuza</field>
+            <field name="type">qweb</field>
+            <field name="key">website.lechuza_homepage_view_page</field>
+            <field name="arch" type="xml">
+                <t name="Home" t-name="website.lechuza_homepage_view_page">
+                    <t t-call="website.layout">
+                        <div class="oe_structure lechuza_homepage">
+                            <div class="oe_structure">
+                                <section class="s_cover_2">
+                                    <div id="lechuza_myCarousel" class="s_carousel tp-custom-carousel s_carousel_rounded carousel slide" data-interval="10000">
+                                        <!-- Indicators -->
+                                        <ol class="carousel-indicators">
+                                            <li data-target="#lechuza_myCarousel" data-slide-to="0" class="active"/>
+                                            <li data-target="#lechuza_myCarousel" data-slide-to="1"/>
+                                        </ol>
+                                        <!-- Content -->
+                                        <div class="carousel-inner">
+                                            <!-- #01 -->
+                                            <div class="carousel-item active oe_img_bg o_bg_img_center pt256 pb256" style="background-image: url('/dynco_base/static/src/img/lechuza_img/desktop_slider1.jpeg');" data-name="Slide">
+                                                <div class="container">
+                                                    <div class="row content justify-content-center">
+                                                        <div class="carousel-content">
+                                                            <div class="col-lg-12">
+                                                                <h2 class="display-text font-weight-bold text-center">Innovative Gefässe, trendige Farben</h2>
+                                                                <div style="text-align: center;">
+                                                                    <a href="/shop" class="btn btn-secondary mt-2">Pila Color</a>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <!-- #02 -->
+                                            <div class="carousel-item oe_img_bg o_bg_img_center pt256 pb256" style="background-image: url('/dynco_base/static/src/img/lechuza_img/desktop_slider2.jpeg');" data-name="Slide">
+                                                <div class="container">
+                                                    <div class="row content justify-content-center">
+                                                        <div class="carousel-content">
+                                                            <div class="col-lg-12">
+                                                                <h2 class="display-text font-weight-bold text-center">10 % Rabatt auf das ganze Sortiment !</h2>
+                                                                <div style="text-align: center;">
+                                                                    <a href="/shop" class="btn btn-secondary mt-2">Code: MOM10</a>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <!-- Controls -->
+                                        <a class="carousel-control-prev o_not_editable" contenteditable="false" href="#lechuza_myCarousel" data-slide="prev" role="img" aria-label="Previous" title="Previous">
+                                            <span class="fa fa-chevron-left"></span>
+                                            <span class="sr-only">Previous</span>
+                                        </a>
+                                        <a class="carousel-control-next o_not_editable" contenteditable="false" href="#lechuza_myCarousel" data-slide="next" role="img" aria-label="Next" title="Next">
+                                            <span class="fa fa-chevron-right"></span>
+                                            <span class="sr-only">Next</span>
+                                        </a>
+                                    </div>
+                                </section>
+                            </div>
+                            <section class="pt32 pb32 oe_structure">
+                                <div class="container">
+                                    <div class="row s_nb_column_fixed">
+                                        <div class="col-lg-12 s_title pt16 pb16" style="text-align: center;">
+                                            <h1 class="s_title_default font-weight-bold">
+                                                Pflanzgefässe und Balkonkästen mit intelligenter Bewässerung von LECHUZA.<br/>Beste Qualität - made in Germany!
+                                            </h1>
+                                        </div>
+                                    </div>
+                                </div>
+                            </section>
+                            <section class="s_text_image oe_structure pt32 pb32">
+                                <div class="container">
+                                    <div class="row align-items-center">
+                                        <div class="pt16 pb16 col-lg-5">
+                                            <img src="/dynco_base/static/src/img/lechuza_img/Screenshot_19.png" class="img img-fluid mx-auto" alt=""/>
+                                        </div>
+                                        <div class="col-lg-6 pt16 pb16">
+                                            <h2><b>Kombi Angebote</b></h2>
+                                            <p style="font-size: 18px;">Entdecken Sie hier exklusive Angebote für Sets und erhalten Sie mehr für Ihr Geld. Bei der Bestellung eines Pflanzengefässes, erhälten Sie das passende Zubehör oder einen weiteren Topf in Kombination.</p>
+                                            <p style="font-size: 18px;">Profitieren Sie jetzt von den attraktiven Kombi-Preisen.</p>
+                                            <p><a href="/shop/category/set-angebote-lechuza-279" class="btn btn-outline-primary mb-2">Entdecken Sie mehr</a></p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </section>
+                            <section class="s_banner_13 pt16 pb16 oe_structure">
+                                <div class="container">
+                                    <div class="row s_col_no_bgcolor no-gutters s_nb_column_fixed">
+                                        <div class="col-12 col-lg-7 pr-md-3 pt-3">
+                                            <div class="position-relative">
+                                                <img src="/dynco_base/static/src/img/lechuza_img/CLASSICO_Premium_LS_28_taupe_hochglanz_3.jpg" class="w-100" alt="Banner Image 01"/>
+                                                <div class="tp-banner-content tp-editor-bg-color-n-shadow text-center btn_section_middle w-100">
+                                                    <h2 class="heading1">
+                                                        <font style="background-color: rgb(239, 239, 239); font-size: 24px;">Pflanze dazu kaufen</font>
+                                                    </h2>
+                                                    <a href="/category/lechuza-topf-mit-pflanze" class="btn btn-secondary">TOPF + PFLANZE</a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-12 col-lg-5 pt-3">
+                                            <div class="row s_col_no_bgcolor no-gutters s_nb_column_fixed">
+                                                <div class="col-lg-12 pl-md-3 pb-3">
+                                                    <div class="position-relative">
+                                                        <img src="/dynco_base/static/src/img/lechuza_img/CUBICO_Premium_50_anthrazit_metallic_1.jpg" class="w-100" alt="Banner Image 02"/>
+                                                        <div class="tp-banner-content tp-editor-bg-color-n-shadow text-center btn_section_middle w-100">
+                                                            <a href="/shop/category/pflanzgefasse-cubico-216" class="btn btn-secondary"> CUBICO PREMIUM </a>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="col-lg-12 pl-md-3 pt-3">
+                                                    <div class="position-relative">
+                                                        <img src="/dynco_base/static/src/img/lechuza_img/Bildschirmfoto 2022-03-31 um 21.51.29.jpg" class="w-100" alt="Banner Image 02"/>
+                                                        <div class="tp-banner-content tp-editor-bg-color-n-shadow text-center btn_section_middle w-100">
+                                                            <a href="/shop/category/pflanzgefasse-mini-cubi-und-maxi-cubi-123" class="btn btn-secondary">MINI CUBI</a>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </section>
+                            <section class="s_banner_14 pt16 pb16 oe_structure">
+                                <div class="container">
+                                    <div class="row s_col_no_bgcolor s_nb_column_fixed">
+                                        <div class="col-12 col-lg-6 mt-2 mb-2">
+                                            <div class="parallax s_parallax_is_fixed s_parallax_no_overflow_hidden pb48 pt48 px-4 oe_img_bg o_bg_img_center" data-scroll-background-ratio="0" style="background-image: url('/dynco_base/static/src/img/lechuza_img/le_banner_sub_irrigation_system.jpeg'); background-position: 50% 0;">
+                                                <div class="my-2 p-4 text-center">
+                                                    <h2 class="text-white"><b>Unser einzigartiges Bewässerungssystem</b></h2>
+                                                    <a class="btn btn-secondary" href="/lechuza-bewasserungssystem">Mehr erfahren</a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-12 col-lg-6 mt-2 mb-2">
+                                            <div class="d-flex flex-column h-100 justify-content-center oe_img_bg o_bg_img_center oe_custom_bg tp-editor-bg-both pb48 pt48" style="background-image:url('/dynco_base/static/src/img/lechuza_img/le_banner_themenwelten_primaklima.jpeg')">
+                                                <div class="my-2 p-4 text-center">
+                                                    <a class="btn btn-secondary" href="/shop?search=zubeh%C3%B6r">Passendes Zubehör</a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </section>
+                            <section class="s_banner_13 pt16 pb16 oe_structure">
+                                <div class="container">
+                                    <div class="row s_col_no_bgcolor no-gutters s_nb_column_fixed">
+                                        <div class="col-12 col-lg-7 pr-md-3 mt-3">
+                                            <div class="position-relative">
+                                                <img src="/dynco_base/static/src/img/lechuza_img/4008789156525_BalconeraStone_50_graphitschwarz.jpg" class="w-100" alt="Banner Image 01"/>
+                                                <div class="tp-banner-content tp-editor-bg-color-n-shadow text-center btn_section_middle w-100">
+                                                    <a href="/category/lechuza-topf-mit-pflanze" class="btn btn-secondary">TOPF + PFLANZE</a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-12 col-lg-5 mt-3">
+                                            <div class="row s_col_no_bgcolor no-gutters s_nb_column_fixed">
+                                                <div class="col-lg-12 pl-md-3 pb-3">
+                                                    <div class="position-relative">
+                                                        <img src="/dynco_base/static/src/img/lechuza_img/4008789152466_CUBICO_Cottage_40_weiss_5.jpg" class="w-100 lechuza_banner_image" alt="Banner Image 02"/>
+                                                        <div class="tp-banner-content tp-editor-bg-color-n-shadow text-center btn_section_middle w-100">
+                                                            <a href="/shop/category/pflanzgefasse-cubico-cottage-79" class="btn btn-secondary"> CUBICO PREMIUM </a>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="col-lg-12 pl-md-3 pt-3">
+                                                    <div class="position-relative">
+                                                        <img src="/dynco_base/static/src/img/lechuza_img/A_TRI_CTG40_gra_Sockel_Tomato_2020.jpg" class="w-100 lechuza_banner_image" alt="Banner Image 02"/>
+                                                        <div class="tp-banner-content tp-editor-bg-color-n-shadow text-center btn_section_middle w-100">
+                                                            <a href="/shop/category/pflanzgefasse-trio-cottage-96" class="btn btn-secondary">MINI CUBI</a>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </section>
+                            <section class="s_banner_13 pt16 pb16 oe_structure">
+                                <div class="container">
+                                    <div class="row s_col_no_bgcolor no-gutters s_nb_column_fixed">
+                                        <div class="col-12 col-lg-7 pr-md-3 mt-3">
+                                            <div class="position-relative">
+                                                <img src="/dynco_base/static/src/img/lechuza_img/4008789160454_CLASSICO_Premium_LS_28_taupe_hochglanz_2.jpg" class="w-100" alt="Banner Image 01"/>
+                                                <div class="tp-banner-content tp-editor-bg-color-n-shadow text-center btn_section_middle w-100">
+                                                    <a href="/shop/category/pflanzgefasse-classico-ls-125" class="btn btn-secondary">CLASSICO LS</a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-12 col-lg-5 mt-3">
+                                            <div class="row s_col_no_bgcolor no-gutters s_nb_column_fixed">
+                                                <div class="col-lg-12 pl-md-3 pb-3">
+                                                    <div class="position-relative">
+                                                        <img src="/dynco_base/static/src/img/lechuza_img/4008789165602_CUBE_Premium_50_weiss_hochglanz_1.jpg" class="w-100 lechuza_banner_image" alt="Banner Image 02"/>
+                                                        <div class="tp-banner-content tp-editor-bg-color-n-shadow text-center btn_section_middle w-100">
+                                                            <a href="/shop/category/pflanzgefasse-cubico-216" class="btn btn-secondary"> CUBICO PREMIUM </a>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="col-lg-12 pl-md-3 pt-3">
+                                                    <div class="position-relative">
+                                                        <img src="/dynco_base/static/src/img/lechuza_img/4008789133809_CUBE_Color_14_weiss_3.jpg" class="w-100 lechuza_banner_image" alt="Banner Image 02"/>
+                                                        <div class="tp-banner-content tp-editor-bg-color-n-shadow text-center btn_section_middle w-100">
+                                                            <a href="/shop/category/pflanzgefasse-cube-color-121" class="btn btn-secondary">CUBE COLOR 14</a>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </section>
+                            <section class="s_newsletter_block pt32 pb32 oe_structure">
+                                <div class="container">
+                                    <div class="row bg-200" style="background-color: #e1efee !important;margin: 0px;">
+                                        <div class="col-lg-8 offset-lg-2 pt24 pb24 text-center">
+                                            <h4 class="mt-2 mb-4"><b>Newsletter abonnieren - Nichts verpassen</b></h4>
+                                            <!--Newslatter update-->
+                                            <div class="s_newsletter_subscribe_form js_subscribe" data-vxml="001" data-list-id="8" data-name="Newsletter Form">
+                                                <div class="input-group" data-original-title="" title="" aria-describedby="tooltip654434">
+                                                    <input type="email" name="email" class="js_subscribe_email form-control" placeholder="your email..."/>
+                                                    <span class="input-group-append">
+                                                          <a role="button" href="#" class="js_subscribe_btn o_submit btn btn-primary" data-original-title="" title="">Abonnieren<br/></a>
+                                                          <a role="button" href="#" class="btn btn-success js_subscribed_btn d-none o_submit o_default_snippet_text" disabled="disabled" data-original-title="" title="">Abonniert – Merci!</a>
+                                                    </span>
+                                                </div>
+                                            </div>
+                                            <h5 class="mt-4 mb-3" style="text-align: center; ">Bei uns gibt es exklusive Aktionen, tolle Neuheiten und Deko-Tipps. Registrieren Sie sich jetzt und entdecken Sie die Welt von LECHUZA.</h5>
+                                        </div>
+                                    </div>
+                                </div>
+                            </section>
+                            <section class="s_team_1 pb16 pt16 oe_structure">
+                                <div class="container">
+                                    <div class="row">
+                                        <div class="col-lg-12 text-center">
+                                            <h1>
+                                                <b>Das Besondere an LECHUZA</b>
+                                            </h1>
+                                        </div>
+                                        <div class="col-6 col-sm-6 col-lg-3 py-2">
+                                            <div class="card border-0 h-100 bg-transparent">
+                                                <img src="/dynco_base/static/src/img/lechuza_img/le_usp_intelligentes_system.jpg" class="card-img-top" alt="Team Image"/>
+                                                <div class="py-4">
+                                                    <h3 class="card-title mb-0"><b>Intelligentes System</b></h3>
+                                                    <p class="mt-3">Das intelligente Erd-Bewässerungs-System versorgt Ihre Pflanzen optimal - keine Durststrecken, keine Staunässe.</p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-6 col-sm-6 col-lg-3 py-2">
+                                            <div class="card border-0 h-100 bg-transparent">
+                                                <img src="/dynco_base/static/src/img/lechuza_img/le_usp_hoechste_qualitaet.jpg" class="card-img-top" alt="Team Image"/>
+                                                <div class="py-4">
+                                                    <h3 class="card-title mb-0"><b>Höchste Qualität</b></h3>
+                                                    <p class="mt-3">Wir fertigen unsere Produkte nach modernsten Standards aus hochwertigen Materialien an - für jahrelang sichtbare Qualität.</p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-6 col-sm-6 col-lg-3 py-2">
+                                            <div class="card border-0 h-100 bg-transparent">
+                                                <img src="/dynco_base/static/src/img/lechuza_img/le_usp_preisgekroentes_design.jpg" class="card-img-top" alt="Team Image"/>
+                                                <div class="py-4">
+                                                    <h3 class="card-title mb-0"><b>Preisgekröntes Design</b></h3>
+                                                    <p class="mt-3">Unsere Produkte haben schon zahlreiche Designexperten überzeugt - und bereits viele Preise gewonnen.</p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-6 col-sm-6 col-lg-3 py-2">
+                                            <div class="card border-0 h-100 bg-transparent">
+                                                <img src="/dynco_base/static/src/img/lechuza_img/le_usp_made_in_germany.jpg" class="card-img-top" alt="Team Image"/>
+                                                <div class="py-4">
+                                                    <h3 class="card-title mb-0"><b>Made in Germany</b></h3>
+                                                    <p class="mt-3">Wir produzieren nachhaltig, umweltschonend und verantwortungsbewusst in einem regionalen, modernen Betrieb in Bayern.</p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </section>
+                            <section class="s_references pt32 pb32 o_mail_snippet_general oe_structure" data-snippet="s_references">
+                                <div class="container">
+                                    <h2 class="text-center pt16 pb32"><b>Ausgezeichnet mit</b></h2>
+                                    <div class="row">
+                                        <div class="col-md-12">
+                                            <div class="row justify-content-center align-items-center">
+                                                <img src="/dynco_base/static/src/img/lechuza_img/le_ho_german_design_award_2020_winner.png" class="img img-fluid mx-1 h-100" alt=""/>
+                                                <img src="/dynco_base/static/src/img/lechuza_img/le_german_innovation_award_2019_winner.png" class="img img-fluid mx-1 h-100" alt=""/>
+                                                <img src="/dynco_base/static/src/img/lechuza_img/le_pro-k_award_2019_winner.png" class="img img-fluid mx-1 h-100" alt=""/>
+                                                <img src="/dynco_base/static/src/img/lechuza_img/le_superbrands_award_2018_2019.png" class="img img-fluid mx-1 h-100" alt=""/>
+                                                <img src="/dynco_base/static/src/img/lechuza_img/le_hta19-20_signet_fipd_de.jpeg" class="img img-fluid mx-1 h-100" alt=""/>
+                                                <img src="/dynco_base/static/src/img/lechuza_img/le_if_design_award_2019_winner.png" class="img img-fluid mx-1 h-100" alt=""/>
+                                                <img src="/dynco_base/static/src/img/lechuza_img/le_iconic_award_2018.png" class="img img-fluid mx-1 h-100" alt=""/>
+                                                <img src="/dynco_base/static/src/img/lechuza_img/le_red_dot_award_2018_winner.png" class="img img-fluid mx-1 h-100" alt=""/>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </section>
+                            <section class="rating pt32 pb32 oe_structure" data-snippet="s_references">
+                                <div class="container">
+                                    <div class="row">
+                                        <div class="col-md-12">
+                                            <div class="row justify-content-center align-items-center text-center">
+                                                <img src="/dynco_base/static/src/img/lechuza_img/le_star_rating.png" class="img img-fluid mx-1 h-100" alt=""/>
+                                                <img src="/dynco_base/static/src/img/lechuza_img/le_star_rating.png" class="img img-fluid mx-1 h-100" alt=""/>
+                                                <img src="/dynco_base/static/src/img/lechuza_img/le_star_rating.png" class="img img-fluid mx-1 h-100" alt=""/>
+                                                <img src="/dynco_base/static/src/img/lechuza_img/le_star_rating.png" class="img img-fluid mx-1 h-100" alt=""/>
+                                                <img src="/dynco_base/static/src/img/lechuza_img/le_star2_rating.png" class="img img-fluid mx-1 h-100" alt=""/>
+                                                <span class="h2 mb0">96% von 100 Testern würden LECHUZA Ihren Freunden empfehlen </span>
+                                            </div>
+                                            <div class="row justify-content-center align-items-center">
+                                                <a class="h2" target="_blank" href="/">
+                                                    <b>www.trnd.com</b>
+                                                </a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </section>
+                        </div>
+                    </t>
+                </t>
+            </field>
+        </record>
+        <record id="lechuza_homepage" model="website.page">
+          <field name="url">/lechuza_homepage</field>
+          <field name="website_published">True</field>
+          <field name="view_id" ref="lechuza_homepage_view" />
+          <field name="website_id" ref="dynco_multi_website.lechuza_website_spt"/>
+        </record>
+        <record id="dynco_multi_website.lechuza_website_spt" model="website">
+          <field name="homepage_id" ref="lechuza_homepage" />
+        </record>
+        <record id="lechuza_scss" model="ir.asset">
+            <field name="name">Lechuza effect SCSS</field>
+            <field name="bundle">web.assets_frontend</field>
+            <field name="path">/dynco_base/static/src/scss/lechuza_font.scss</field>
+            <field name="website_id" ref="dynco_multi_website.lechuza_website_spt"/>
+        </record>
+        <!--language-->
+        <template id="component_language_selector_le" name="Component Language Lechuza">
+            <t t-set="language_selector_visible" t-value="len(languages) &gt; 1 or (website and (editable or translatable))"/>
+            <t t-set="active_lang" t-value="list(filter(lambda lg : lg[0] == lang, languages))[0]"/>
+            <t t-set="hide_country_flag" t-value="request.website._get_dr_theme_config('json_general_language_pricelist_selector')['hide_country_flag']"/>
+
+            <div t-if="language_selector_visible" t-attf-class="list-inline-item o_not_editable #{language_selector_visible and 'js_language_selector' or None} #{_classes} o_not_editable">
+                <a t-attf-class="dropdown-toggle d-flex align-items-center #{_dropdown_classes}" href="#" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
+                    <t t-if="not only_symbols">
+                        <t t-if="language_selector_visible and active_lang">
+                            <t t-if="hide_country_flag">
+                                <t t-out="active_lang[2].split('/').pop()"/>
+                            </t>
+                            <t t-else="">
+                                <img class="o_lang_flag" src="/base/static/img/country_flags/ch.png?height=25" loading="lazy"/>
+                            </t>
+                        </t>
+                    </t>
+                    <t t-else="">
+                        <t t-if="not hide_country_flag" t-call="website.lang_flag">
+                            <img class="o_lang_flag" src="/base/static/img/country_flags/ch.png?height=25" loading="lazy"/>
+                        </t>
+                        <t t-else="">
+                            <i class="tp-action-btn-icon fa fa-language"></i>
+                        </t>
+                    </t>
+                </a>
+                <div class="dropdown-menu" role="menu">
+                    <t t-if="language_selector_visible">
+                        <t t-foreach="languages" t-as="lg">
+                            <a t-att-href="url_for(request.httprequest.path + '?' + keep_query(), lang_code=lg[0])" t-attf-class="dropdown-item js_change_lang #{'active' if lg[0] == active_lang[0] else ''}" t-att-data-url_code="lg[1]">
+                                <t t-if="not hide_country_flag">
+                                    <img class="o_lang_flag" src="/base/static/img/country_flags/ch.png?height=25" loading="lazy"/>
+                                </t>
+                                <span t-out="lg[2].split('/').pop()"/>
+                            </a>
+                            <li class="dropdown-divider"/>
+                        </t>
+                    </t>
+                    <t t-call="website.language_selector_add_language">
+                        <t t-set="dropdown" t-value="True"/>
+                    </t>
+                </div>
+            </div>
+        </template>
+        <!-- header -->
+        <template id="template_header_style_13" inherit_id="website.layout" name="Header Style - 13" active="False">
+            <xpath expr="//header" position="before">
+                <!--Dynamic Pre header-->
+                <t t-if="website.is_top_header">
+                    <t t-raw="website.top_header_content"/>
+                </t>
+            </xpath>
+            <xpath expr="//header//nav" position="replace">
+                <div class="tp-header-box o_colored_level o_cc bg-primary lechuza_header">
+                    <div class="container-fluid">
+                        <div class="row justify-content-center justify-content-lg-between align-items-center">
+                            <div class="col-4 py-3">
+                                <div class="row align-items-center">
+                                    <div class="col-5 lechuza_search_box">
+                                        <t t-call="website.website_search_box_input">
+                                            <t t-set="_form_classes" t-valuef="mx-auto w-100 o_wsale_products_searchbar_form o_not_editable"/>
+                                            <t t-set="_classes" t-valuef=" "/>
+                                            <t t-set="search_type" t-valuef="products"/>
+                                            <t t-set="action" t-value="'/shop'"/>
+                                        </t>
+                                    </div>
+                                    <div class="col-7 px-0 text-secondary">
+                                        <span class="fa fa-phone text-secondary h5"/><span><b  class="mr-2">Service-Hotline</b>+ 41 31 555 79 79</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-4 text-center py-3">
+                                <!-- Brand -->
+                                <t t-call="website.placeholder_header_brand">
+                                    <t t-set="_link_class" t-value="'d-none d-lg-inline-block mx-auto'"/>
+                                </t>
+                            </div>
+                            <div class="col-4 py-3 text-right">
+                                <ul class="list-inline m-0 tp-account-info">
+                                    <t t-call="dynco_base.component_language_selector_le"/>
+                                    <t t-set="website_sale_order" t-value="website.sale_get_order()" />
+                                    <t t-call="theme_prime.tp_login_dropdown_component"></t>
+
+                                    <t t-set="wishcount" t-value="len(request.env['product.wishlist'].current())"/>
+                                    <li t-attf-class="list-inline-item o_not_editable #{item_class or ''}">
+                                        <a class="o_wsale_my_wish" href="/shop/wishlist">
+                                            <i class="dri dri-wishlist"/>
+                                            <sup t-out="wishcount" t-attf-class="my_wish_quantity o_animate_blink badge badge-primary"/>
+                                        </a>
+                                        <div t-if="show_title" class="mt-1 small">Wishlist</div>
+                                    </li>
+                                    <!-- language -->
+                                    <!-- <li></li> -->
+                                    <li t-attf-class="list-inline-item o_not_editable #{item_class or ''}">
+                                        <a class="o_wsale_my_cart tp-cart-sidebar-action" href="/shop/cart">
+                                            <i class="dri dri-cart"/>
+                                            <sup class="my_cart_quantity badge badge-primary mb-0 font-weight-bold" t-out="website_sale_order and website_sale_order.cart_quantity or '0'" t-att-data-order-id="website_sale_order and website_sale_order.id or ''"/>
+                                        </a>
+                                        <div t-if="show_title" class="mt-1 small">My Cart</div>
+                                    </li>
+
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="container tp_mobile_header">
+                    <t t-call="website.navbar">
+                        <!-- <t t-set="_navbar_classes" t-valuef="shadow-sm"/> -->
+                        <div id="top_menu_container" class="container justify-content-between">
+                            <div class="row justify-content-between bg_lechuza_mobile">
+                                <!-- <div class="col-md-12 text-center d-lg-none"> -->
+                                <div class="col-md-12 d-lg-none bg-black py-3 text-center d-lg-none mobile_logo_header">
+                                    <!-- Brand -->
+                                    <a href="/" t-attf-class="navbar-brand logo d-lg-none o_offcanvas_logo_container">
+                                        <span t-field="website.logo" t-options="{'widget': 'image'}" role="img" t-att-aria-label="'Logo of %s' % website.name" t-att-title="website.name"/>
+                                        <!-- <img t-attf-src="/website/image/website/#{request.website.id}/logo" role="img" t-att-aria-label="'Logo of %s' % website.name" t-att-title="website.name"/> -->
+                                    </a>
+                                </div>
+                                <div class="col-md-12 d-lg-none mx-3 my-1 lechuza_mobile_header">
+                                    <div class="row justify-content-between">
+                                        <!-- Navbar Toggler -->
+                                        <t t-call="theme_prime.component_navbar_toggler"/>
+                                        <div class="lechuza_search_box">
+                                            <t t-call="website.website_search_box_input">
+                                                <t t-set="_form_classes" t-valuef="mx-auto w-100 o_wsale_products_searchbar_form o_not_editable"/>
+                                                <t t-set="_classes" t-valuef=" "/>
+                                                <t t-set="search_type" t-valuef="products"/>
+                                                <t t-set="action" t-value="'/shop'"/>
+                                            </t>
+                                        </div>
+                                        <!-- Mobile Language Selection -->
+                                        <t t-call="dynco_base.component_language_selector_le"/>
+                                        <!-- Account Info -->
+                                        <!-- <t t-call="theme_prime.component_navbar_mobile_account_info"/> -->
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- Navbar Collapse -->
+                            <div id="top_menu_collapse" class="collapse navbar-collapse order-last order-lg-0">
+                                <t t-call="website.navbar_nav">
+                                    <t t-set="_nav_class" t-value="'mx-auto'"/>
+                                    <!-- Menu -->
+                                    <t t-foreach="website.menu_id.child_id" t-as="submenu">
+                                        <t t-call="website.submenu">
+                                            <t t-set="item_class" t-value="'nav-item'"/>
+                                            <t t-set="link_class" t-value="'nav-link'"/>
+                                        </t>
+                                    </t>
+                                </t>
+                                <li class="mobile_account_list list-inline-item o_not_editable mb-1 ml-1 mr-0">
+                                    <t t-if="not user_id._is_public()">
+                                        <a href="/web/session/logout?redirect=/" class="btn btn-primary">Logout</a>
+                                    </t>
+                                    <t t-else="">
+                                        <a href="web/login" class="btn btn-primary">Login</a>
+                                    </t>
+                                </li>
+                            </div>
+                        </div>
+                    </t>
+                </div>
+            </xpath>
+        </template>
+        <!-- footer -->
+        <template id="template_footer_style_13" inherit_id="website.layout" name="Footer Style - 13" active="False">
+            <xpath expr="//div[@id='footer']" position="replace">
+                <div id="footer" class="oe_structure oe_structure_solo lechuza_footer" t-ignore="true" t-if="not no_footer">
+                    <section class="s_text_block pt32 lechuza_tp-icon-blocks" data-snippet="s_text_block" data-name="Text">
+                        <div class="container">
+                            <div class="row py-4 tp-icon-blocks">
+                                <div class="col-12 col-sm-6 col-xl-4">
+                                    <div class="media">
+                                        <!-- <span class="fa fa-phone fa-2x text-primary"/> -->
+                                        <div class="media-body pl-3">
+                                            <span class="fa fa-phone fa-2x text-primary mr-2"/><span class="h6 mr-2 text-black"><b>Service-Hotline</b></span><span>+ 41 31 555 79 79</span>
+                                            <p class="mt-3"><i class="fa fa-chevron-right mr-2"></i>Zum Kontaktformular</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-12 col-sm-6 col-xl-4">
+                                    <div class="media">
+                                        <div class="media-body pl-3">
+                                            <span class="h6 text-black"><b>Mögliche Zahlungsmittel:</b></span>
+                                            <p class="mt-4"><img src="/dynco_base/static/src/img/lechuza_img/pay icons.png" class="img img-fluid h-100" alt=""/></p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-12 col-sm-6 col-xl-4">
+                                    <div class="media">
+                                        <div class="media-body pl-3">
+                                            <span class="h6 text-black"><b>Wir verschicken mit:</b></span>
+                                            <p class="mt-3 mb-2"><img src="/dynco_base/static/src/img/lechuza_img/le_ch_post_footer_logo.jpeg" class="img img-fluid mr-2 h-100" alt="" style="max-width: 45px;"/><span>Die Post (3-5 Werktage)</span></p>
+                                            <p><img src="/dynco_base/static/src/img/lechuza_img/le_ch_spedition_logo.png" class="img img-fluid mr-2 h-100" alt="" style="max-width: 45px;"/><span>Möbel-Spedition (5-10 Werktage)</span></p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </section>
+                    <section class="s_text_block pb48" data-snippet="s_text_block" data-name="Text">
+                        <div class="container">
+                            <div class="row pt-5">
+                                <div class="col-12 col-md-4 col-lg-2 mb-4">
+                                    <h6 class="mb-3 text-black">
+                                        <b>LECHUZA</b>
+                                    </h6>
+                                    <ul class="list-unstyled">
+                                        <li class="my-2">
+                                            <a href="/unternehmen">Unternehmen</a>
+                                        </li>
+                                        <li class="my-2">
+                                            <a href="/umwelt-und-energie">Umwelt- und <br/>Energiepolitik</a>
+                                        </li>
+                                        <li class="my-2">
+                                            <a href="/presse">Presse</a>
+                                        </li>
+                                    </ul>
+                                </div>
+                                <div class="col-12 col-md-4 col-lg-3 mb-4">
+                                    <h6 class="mb-3 text-black">
+                                        <b>Kundenservice</b>
+                                    </h6>
+                                    <ul class="list-unstyled">
+                                        <li class="my-2">
+                                            <a href="/faq-s">Häufige Fragen (FAQ)</a>
+                                        </li>
+                                        <li class="my-2">
+                                            <a href="/hilfe-zum-onlineshop">Hilfe zum Online-Shop</a>
+                                        </li>
+                                        <li class="my-2">
+                                            <a href="/zahlung-und-versand">Zahlung und Versand</a>
+                                        </li>
+                                        <li class="my-2">
+                                            <a href="/helpdesk/lechuza-support-3">Kontaktformular</a>
+                                        </li>
+                                    </ul>
+                                </div>
+                                <div class="col-12 col-md-4 col-lg-3 mb-4">
+                                    <h6 class="mb-3 text-black">
+                                        <b>Rechtliches</b>
+                                    </h6>
+                                    <ul class="list-unstyled">
+                                        <li class="my-2">
+                                            <a href="/agb">AGB</a>
+                                        </li>
+                                        <li class="my-2">
+                                            <a href="/gesetzliche-hinweise">Gesetzliche Hinweise</a>
+                                        </li>
+                                        <li class="my-2">
+                                            <a href="/datenschutz">Datenschutz</a>
+                                        </li>
+                                        <li class="my-2">
+                                            <a href="/impressum">Impressum</a>
+                                        </li>
+                                    </ul>
+                                </div>
+                                <div class="col-12 col-md-4 col-lg-4 mb-4">
+                                    <h6 class="mb-3 text-black">
+                                        <b>Für mich</b>
+                                    </h6>
+                                    <div>
+                                        <ul class="list-unstyled">
+                                            <li class="my-2">
+                                                <a href="/downloads">Downloads</a>
+                                            </li>
+                                            <li class="my-2">
+                                                <a href="#">Newsletter</a>
+                                            </li>
+                                        </ul>
+                                        <div class="s_newsletter_subscribe_form js_subscribe" data-vxml="001" data-list-id="8" data-name="Newsletter Form">
+                                          <div class="input-group" data-original-title="" title="" aria-describedby="tooltip654434">
+                                            <input type="email" name="email" class="js_subscribe_email form-control" placeholder="your email..."/>
+                                            <span class="input-group-append">
+                                              <a role="button" href="#" class="js_subscribe_btn o_submit btn btn-primary" data-original-title="" title="">jetzt anmelden!<br/></a>
+                                              <a role="button" href="#" class="btn btn-success js_subscribed_btn d-none o_submit o_default_snippet_text" disabled="disabled" data-original-title="" title="">Thanks</a>
+                                            </span>
+                                          </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </section>
+                </div>
+            </xpath>
+            <xpath expr="//div[hasclass('o_footer_copyright')]" position="attributes">
+                <attribute name="class" add="tp-custom-copyright" separator=" "/>
+            </xpath>
+            <xpath expr="//div[hasclass('o_footer_copyright')]/div[hasclass('container')]" position="attributes">
+                <attribute name="t-if">False</attribute>
+            </xpath>
+        </template>
+        
+        <record id="shop_product_carousel" model="ir.ui.view">
+            <field name="name">Lechuza shop_product_carousel</field>
+            <field name="inherit_id" search="[('key', '=', 'theme_prime.shop_product_carousel'), ('website_id', '=', 9)]"/>
+            <field name="type">qweb</field>
+            <field name="website_id">9</field>
+            <field name="priority">20</field>
+            <field name="key">dynco_base.shop_product_carousel</field>
+            <field name="arch" type="xml">
+                <xpath expr="//t[@t-set='product_images']" position="replace">
+                    <t t-set="product_images" t-value="product_variant._get_lechuza_images() if product_variant else product._get_lechuza_images()"/>
+                </xpath>
+            </field>
+        </record>
+    </data>
+</odoo>

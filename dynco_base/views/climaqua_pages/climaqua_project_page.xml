@@ -1,0 +1,128 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+        <record id="climaqua_project_page_view" model="ir.ui.view">
+            <field name="name">Climaqua project</field>
+            <field name="type">qweb</field>
+            <field name="key">website.climaqua_project_page</field>
+            <field name="arch" type="xml">
+                <t name="Home" t-name="website.climaqua_project_page">
+                    <t t-name="website.unser-wald-projekt-1">
+                        <t t-call="website.layout">
+                            <div id="wrap" class="oe_structure oe_empty project">
+                                <div class="container">
+                                    <div class="row justify-content-center">
+                                        <div class="col-md-10">
+                                            <section class="pt32 pb32">
+                                                <div class="container">
+                                                    <div class="row justify-content-center s_nb_column_fixed">
+                                                        <div class="col-md-12 s_title pb16 pt32 text-center">
+                                                            <h1 class="font-weight-normal">
+                                                                UNSER WALD PROJEKT</h1>
+                                                            <br />
+                                                            <br />
+                                                            <img class="img-fluid o_we_custom_image w-100" src="dynco_base/static/src/img/climaqua_img/climaqua_footer_imgs/madagaskar__regenwald.webp" />
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </section>
+                                            <section class="s_text_block pb32 pt8">
+                                                <div class="container">
+                                                    <div class="row justify-content-center">
+                                                        <div class="col-md-11 pb32 pt32 header2">
+                                                            <p>
+                                                                <font>Wir bei CLIMAQUA® legen einen enormen Wert auf eine klimaschonende Produktion und die Förderung von Umweltprojekten. Wir sind der Meinung, dass ein klimaneutrales Verhalten für jedes Unternehmen ein Muss sein sollte, um für zukünftige Generationen noch einen wunderschönen Planeten zu garantieren. In der Produktion ist es uns deswegen wichtig, diese Werten entsprechend zu gestalten. Ein Beispiel dafür ist, dass die CO2-Emissionen, die durch unsere Produktion freigesetzt werden, durch unser Engagement an Umwelt-Projekten ausgeglichen wird.&amp;nbsp;</font>
+                                                            </p>
+                                                            <h2 class="MsoNormal">
+                                                                <br />
+                                                            </h2>
+                                                            <h1 class="s_title_default text-center font-weight-normal">
+                                                                <span class="fontcolor">WÄLDER GEMEINSAM AUFFORSTEN MIT TREE-NATION</span>
+                                                            </h1>
+                                                            <h2 class="MsoNormal">
+                                                                <br />
+                                                            </h2>
+                                                            <font>Das Projekt, welches uns besonders am Herzen liegt, ist unser Wald. Tree-Nation ist eine Organisation, die es uns möglich macht, einen Schritt weiter in Richtung Nachhaltigkeit zu gehen. Die Organisation fasst Aufforstungsprojekte in aller Welt auf einer einheitlichen Plattform zusammen und koordiniert diese, damit alle Bürger*Innen und Unternehmen aktiv werden können. Wir haben auf der Plattform einen Wald erstellt, in den wir im Namen unseres Unternehmens Bäume pflanzen und unsere CO2-Emissionen ausgleichen.</font>
+                                                            <br />
+                                                            <br />
+                                                            <br />
+                                                            <h1 class="s_title_default text-center font-weight-normal">
+                                                                <span class="fontcolor">BÄUME PFLANZEN FÜR DAS KLIMA - VORTEILE FÜR MENSCH UND NATUR</span>
+                                                            </h1>
+                                                            <p class="MsoNormal" style="margin-top:12.0pt;margin-right:0cm;margin-bottom:&#10;0cm;margin-left:0cm;line-height:normal;background:white">
+                                                                <span style="background:white; color:#333333; mso-bidi-font-family:Calibri; mso-bidi-font-size:15.0pt; mso-bidi-theme-font: minor-latin;">
+                                                                    <font>
+                                                                        <br />
+                                                                    </font>
+                                                                    <font>Am 18. Dezember 2019 wurden unsere ersten 5.000 Bäume im Rahmen des Eden Projekts in Madagaskar gepflanzt. Gepflanzt wurden Bäume mit der Art Rhizophora Mucronata. Charakteristisch für diese Bäume ist, dass sie klein bis mittelgross werden und dass sie Luftwurzeln aufweisen. Die Bäume werden vor allem genutzt, um Tieren Nährstoffe zur Verfügung zu stellen und Schatten zu spenden. Sie weisen ebenfalls eine folkloristische und historische Bedeutung für die Einwohner auf. Die Bäume beschützen Küsten ausserdem vor Fluten und Stürmen, vermeiden Küstenerosionen und weissen ebenso medizinische Eigenschaften auf, welche zur Behandlung zahlreicher Krankheiten genutzt werden. Ein einzelner Baum sorgt für einen CO2-Ausgleich eines Kilos pro Jahr. Bei einer durchschnittlichen Lebensdauer von 25 Jahren und einem CO2-Ausgleichszeitraum von 0-20 Jahren vermag ein einziger Baum es über seine gesamte Lebenszeit einen CO2-Ausgleich von 20 Kilo zu ermöglichen. Hochgerechnet auf 2500 Bäume macht das 50 Tonnen CO2 Ausgleich. Zum Vergleich: Die CO2-Emission eines durchschnittlich konsumierenden Menschen in Westeuropa beträgt im Jahr ca. 15 Tonnen. Es gibt also noch viel zu tun!</font>
+                                                                </span>
+                                                            </p>
+                                                            <p class="MsoNormal" style="margin-top:12.0pt;margin-right:0cm;margin-bottom:&#10;0cm;margin-left:0cm;line-height:normal;background:white">
+                                                                <span style="&#10;mso-bidi-theme-font:minor-latin; color:#333333; mso-bidi-font-family:Calibri; mso-bidi-font-size:15.0pt; mso-fareast-font-family:&quot;Times New Roman&quot;; mso-fareast-language:DE;" />
+                                                            </p>
+                                                            <p class="MsoNormal">
+                                                                <span style="&#10;background:white; color:#333333; line-height:107%; mso-bidi-font-family:Calibri; mso-bidi-font-size:15.0pt; mso-bidi-theme-font:minor-latin;">
+                                                                    <font>So haben wir am</font>
+                                                                </span>
+                                                                <span style="color:#333333; line-height:107%; mso-bidi-font-family:&#10;Calibri; mso-bidi-font-size:15.0pt; mso-bidi-theme-font:minor-latin; mso-fareast-font-family:&quot;Times New Roman&quot;; mso-fareast-language:&#10;DE;">
+                                                                    <font>&amp;nbsp;21. Dezember 2020 in unserem Namen weitere 2.500 Bäume im Rahmen des Eden Projekts gepflanzt. Bevor das Projekt gestartet wurde, waren die Wälder in der Umgebung Madagaskars stark von Waldrodung betroffen. Gepflanzt wurden Bäume der Art Bruguiera Gymnorrhiza, die einen doppelt so hohen CO2-Ausgleich wie Rhizophora Mucronata aufweisen. Dies ist ein immergrüner Baum, welcher zumeist an Küsten oder matschigen Gebieten wächst, da diese gut bewässert sind. Die Art ist dafür bekannt, wasserfest, resistent und sehr hart zu sein. Ein einzelner Baum dieser Art sorgt für einen jährlichen CO2-Ausgleich von zwei Kilo. Während der gesamten Lebenszeit findet für nur einen Baum ein CO2-Ausgleich von 40 Kilo statt.</font>
+                                                                </span>
+                                                                <span style="&#10;background:white; color:#333333; line-height:107%; mso-bidi-font-family:Calibri; mso-bidi-font-size:15.0pt; mso-bidi-theme-font:minor-latin;" />
+                                                            </p>
+                                                            <p class="MsoNormal">
+                                                                <span style="&#10;mso-bidi-font-family:Calibri; &#10;mso-fareast-language:DE; color:#333333; mso-bidi-font-size:15.0pt; mso-bidi-theme-font:minor-latin; mso-fareast-font-family:&quot;Times New Roman&quot;;">
+                                                                    <font>Wir von CLIMAQUA® freuen wir uns darüber, dass mit Hilfe unserer Finanzierung bereits 7.500 Bäume gepflanzt werden konnten. Der Emissionsausgleich, der daraus resultieren wird, liegt bei ca. 200 Tonnen CO2-Emissionen.</font>
+                                                                </span>
+                                                                <br />
+                                                            </p>
+                                                            <h2 class="MsoNormal">
+                                                                <br />
+                                                            </h2>
+                                                            <h1 class="s_title_default text-center font-weight-normal">
+                                                                <span class="fontcolor">KLIMASCHUTZ UND NACHHALTIGKEIT STEHEN AN OBERSTER STELLE</span>
+                                                            </h1>
+                                                            <h2 class="MsoNormal">
+                                                                <br />
+                                                            </h2>
+                                                            <p class="MsoNormal">
+                                                                <font>Wir sehen es als unsere Verantwortung, möglichst klimaaktiv zu handeln und unseren Planeten zu schonen und schützen. Nachhaltigkeit war und wird immer eine Top Priorität in unserem Unternehmen sein.&amp;nbsp;</font>
+                                                                <br />
+                                                                <font>Auch du kannst aktiv werden und uns helfen, unseren Wald zu vergrössern. Du kannst entweder bei Tree-Nation selbst ein Konto eröffnen und deinen eigenen Wald aufbauen oder dich einfach bei unserem Projekt anschliessen, indem du hier auf den Button mit der Schaufel klickst:&amp;nbsp;</font>
+                                                                <u>
+                                                                    <a href="https://tree-nation.com/profile/dynco-ag" data-original-title="" title="" aria-describedby="tooltip897556">
+                                                                        <font>https://tree-nation.com/profile/dynco-ag</font>
+                                                                    </a>
+                                                                </u>
+                                                                <font>. Falls du noch Fragen zu unserem Wald Projekt oder unseren Produkten hast, dann&amp;nbsp;</font>
+                                                                <u>
+                                                                    <a href="https://climaqua.de/helpdesk/climaqua-climaqua-support-dynco-ch-2">
+                                                                        <font>kontaktiere</font>
+                                                                    </a>
+                                                                </u>
+                                                                <font>&amp;nbsp;uns gerne jederzeit.</font>
+                                                            </p>
+                                                            <p class="MsoNormal">
+                                                                <br />
+                                                                <a href="https://tree-nation.com/profile/dynco-ag" data-original-title="" title="" aria-describedby="tooltip655467" class="btn-sm">&amp;nbsp;<img class="img-fluid o_we_custom_image" src="dynco_base/static/src/img/climaqua_img/climaqua_footer_imgs/Logo_treenation.png" data-original-title="" title="" aria-describedby="tooltip529616" /></a>
+                                                                <br />
+                                                            </p>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </section>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </t>
+                    </t>
+                </t>
+            </field>
+        </record>
+        <record id="climaqua_project_page" model="website.page">
+            <field name="url">/responsibility</field>
+            <field name="website_published">True</field>
+            <field name="view_id" ref="climaqua_project_page_view" />
+        </record>
+    </data>
+</odoo>

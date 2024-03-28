@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <record id="website_extended_view" model="ir.ui.view">
+        <field name="name">website.extended.view</field>
+        <field name="model">website</field>
+        <field name="inherit_id" ref="website.view_website_form"/>
+        <field name="arch" type="xml">
+            <xpath expr="//field[@name='company_id']" position="before">
+                <field name="is_signup_view" string="Custom Signup"/>
+                <field name="show_tag_filter" />
+                <field name="webhook_url" string="Webhook URL"/>
+            </xpath>
+        </field>
+    </record>
+</odoo>

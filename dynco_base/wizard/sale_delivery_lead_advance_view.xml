@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+        <record id="view_sale_delivery_lead_advance" model="ir.ui.view">
+            <field name="name">Sales Delivery Lead Advance</field>
+            <field name="model">sale.delivery.lead.advance</field>
+            <field name="arch" type="xml">
+                <form string="Sales Delivery Lead Advance">
+                    <p class="oe_grey" attrs="{'invisible': [('is_delivered_wizard', '=', True)]}">
+                        You can manage the order with set Actual Date.
+                    </p>
+                    <p class="oe_grey" attrs="{'invisible': [('is_delivered_wizard', '=', False)]}">
+                        You can Add the Trasnsport Cost to Calculate the Margin AT.
+                    </p>
+                    <group>
+                        <field name="is_delivered_wizard" invisible="1"/>
+                        <label for="adv_actual_delivery_date" attrs="{'invisible': [('is_delivered_wizard', '=', True)]}"/>
+                        <field name="adv_actual_delivery_date" attrs="{'invisible': [('is_delivered_wizard', '=', True)]}"/>
+                        <group>
+                            <field name="transport_cost" attrs="{'invisible': [('is_delivered_wizard', '=', False)]}"/>
+                        </group>
+                    </group>
+                    <footer>
+                        <button name="advance_action_delivered" string="Delivered" type="object"
+                            class="btn-primary" attrs="{'invisible': [('is_delivered_wizard', '=', True)]}"/>
+                        <button name="advance_action_delivered" string="Add Transport Cost" type="object"
+                            class="btn-primary" attrs="{'invisible': [('is_delivered_wizard', '=', False)]}"/>
+                        <button string="Cancel" class="btn-secondary" special="cancel"/>
+                    </footer>
+                </form>
+            </field>
+        </record>
+
+        <record id="action_view_sale_delivery_lead_advance" model="ir.actions.act_window">
+            <field name="name">Sales Delivery Lead Advance</field>
+            <field name="type">ir.actions.act_window</field>
+            <field name="res_model">sale.delivery.lead.advance</field>
+            <field name="view_mode">form</field>
+            <field name="target">new</field>
+            <field name="binding_model_id" ref="model_sale_order"/>
+            <field name="binding_view_types">list</field>
+        </record>
+    </data>
+</odoo>

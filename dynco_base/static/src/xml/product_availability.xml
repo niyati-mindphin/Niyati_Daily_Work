@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<templates>
+	<t t-extend="website_sale_stock.product_availability">
+        <t
+            t-jquery="div[t-elif='show_availability and free_qty lte available_threshold']"
+            t-operation="attributes"
+        >
+            <attribute name="t-attf-class" value="availability_message_#{product_template} text-danger"/>
+        </t>
+    </t>
+</templates>

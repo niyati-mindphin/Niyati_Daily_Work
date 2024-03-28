@@ -1,0 +1,29 @@
+<?xml version="1.0" ?>
+<odoo>
+  <data>
+    <record id="auto_cancel_quotation" model="ir.cron">
+      <field name="interval_type">days</field>
+      <field name="name">Auto Cancel 10 days before Quotation</field>
+      <field name="numbercall">-1</field>
+      <field name="priority">5</field>
+      <field name="doall">False</field>
+      <field name="active">True</field>
+      <field name="interval_number">1</field>
+      <field name="model_id" ref="model_sale_order"/>
+      <field name="state">code</field>
+      <field name="code">model.auto_cancel_quotation()</field>
+    </record>
+    <record id="auto_remove_ecommerce_category" model="ir.cron">
+      <field name="interval_type">days</field>
+      <field name="name">Auto Remove eCommerce Category from Product Template</field>
+      <field name="numbercall">-1</field>
+      <field name="priority">5</field>
+      <field name="doall">False</field>
+      <field name="active">True</field>
+      <field name="interval_number">1</field>
+      <field name="model_id" ref="model_product_pricelist"/>
+      <field name="state">code</field>
+      <field name="code">model.remove_ecommerce_category()</field>
+    </record>
+  </data>
+</odoo>

@@ -1,0 +1,361 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data noupdate="1">
+        <record id="pelletray_website" model="website">
+            <field name="name">Pelletray</field>
+            <field name="company_id" ref="base.main_company" />
+            <field name="user_id" ref="base.public_user" />
+            <field name="logo" type="base64" file="dynco_base/static/src/img/pelletray_img/pelletray_logo.png" />
+        </record>
+        <record id="pelletray_homepage_view" model="ir.ui.view">
+            <field name="name">Home - Pelletray</field>
+            <field name="type">qweb</field>
+            <field name="key">website.pelletray_homepage</field>
+            <field name="arch" type="xml">
+                <t name="Home" t-name="dynco_base.pelletray_homepage">
+                    <t t-call="website.layout">
+                        <div id="wrap" class="oe_structure pelletray_homepage">
+                            <section class="s_cover parallax s_parallax_is_fixed bg-black-50 pt96 o_colored_level pb184" data-scroll-background-ratio="1" data-snippet="s_cover" data-name="Cover" style="background-image: none;">
+                                <span class="s_parallax_bg oe_img_bg o_bg_img_center" style="background-image: url('/dynco_base/static/src/img/pelletray_img/pelletray_1st_bg_banner.jpeg');"/>
+                                <div class="o_we_bg_filter bg-black-50" />
+                                <div class="s_allow_columns container" title="">
+                                    <h1 style="text-align: center;">
+                                        <br />
+                                    </h1>
+                                    <p style="text-align: center;">
+                                        <img class="img-fluid o_we_custom_image" src="/dynco_base/static/src/img/pelletray_img/pelletray_logo_on_banner.png" alt="" data-original-id="13348" data-original-src="/web/image/13348-70168162/Pelletray%20Logo%20frei.png" data-mimetype="image/png" title="" loading="lazy" />
+                                    </p>
+                                    <p style="text-align: center;">
+                                        <br />
+                                    </p>
+                                    <p style="text-align: center;">
+                                        <br />
+                                    </p>
+                                    <p style="text-align: center;">
+                                        <br />
+                                    </p>
+                                    <h1 style="text-align: center;">
+                                        <strong>
+                                            <font style="background-color: inherit;" class="text-o-color-3">Die richtige Art, ein Feuer zu entfachen ist </font>
+                                        </strong>
+                                        <br />
+                                        <strong>
+                                        </strong>
+                                        <strong>
+                                            <font style="background-color: inherit;" class="text-o-color-3">von oben nach unten.</font>
+                                        </strong>
+                                    </h1>
+                                </div>
+                            </section>
+                            <section data-snippet="s_dynamic_snippet" class="s_dynamic_snippet_products s_dynamic o_colored_level pt64 pb64 o_cc o_cc3 s_product_product_mini_price o_dynamic_empty" data-name="Products" style="background-image: none;" data-filter-id="5" data-template-key="website_sale.dynamic_filter_template_product_product_mini_price" data-product-category-id="all" data-number-of-elements="4" data-number-of-elements-small-devices="2" data-number-of-records="4" data-carousel-interval="5000">
+                                <div class="o_not_editable container">
+                                    <div class="css_non_editable_mode_hidden">
+                                        <div class="missing_option_warning alert alert-info rounded-0 fade show d-none d-print-none o_default_snippet_text">
+                                            Your Dynamic Snippet will be displayed here... This message is displayed because you did not provided both a filter and a template to use.<br />
+                                        </div>
+                                    </div>
+                                    <div class="dynamic_snippet_template" />
+                                </div>
+                            </section>
+                            <section class="s_text_image o_colored_level bg-black pt112 pb160" data-snippet="s_image_text" data-name="Image - Text" style="background-image: none;" title="">
+                                <div class="container">
+                                    <div class="row align-items-center">
+                                        <div class="col-lg-6 pt16 pb16 o_colored_level bg-black-15 o_animate o_anim_fade_in o_visible" style="border-color: rgb(255, 193, 7) !important;">
+                                            <img src="/dynco_base/static/src/img/pelletray_img/3rd_block_img.jpg" class="img img-fluid mx-auto" alt="" loading="lazy" title="" data-original-id="1629420" data-original-src="/web/image/1629420-f46cd4f7/Quadro%20brennt_web.jpg" data-mimetype="image/jpeg" data-resize-width="667" data-quality="100" />
+                                        </div>
+                                        <div class="col-lg-6 pt16 pb16 o_colored_level" title="">
+                                            <h2>
+                                                <strong>
+                                                    <font class="text-o-color-1">Unser Grundverständnis wie ein Feuer brennen sollte ist falsch. Hier erfährst Du weshalb:</font>
+                                                </strong>
+                                            </h2>
+                                            <p>
+                                                <br />
+                                            </p>
+                                            <h3>Der herkömmliche Ansatz ein Feuer zu starten ist, mit etwas Anzündholz und kleinen brennbaren Teile, dann mit grösseren Holzstücken die Flammen langsam aufzubauen.</h3>
+                                        </div>
+                                    </div>
+                                </div>
+                            </section>
+                            <section class="s_features_grid pt48 pb24 o_colored_level o_cc o_cc3" data-snippet="s_features_grid" data-name="Features Grid">
+                                <div class="container">
+                                    <div class="row">
+                                        <div class="col-lg-6 s_col_no_bgcolor pb24">
+                                            <div class="row">
+                                                <div class="col-lg-12 pb24 o_colored_level" data-name="Box">
+                                                    <h2 class="o_default_snippet_text">First list of Features</h2>
+                                                    <h5 class="o_default_snippet_text">Add a great slogan.</h5>
+                                                </div>
+                                                <div class="col-lg-12 pt16 pb16 o_colored_level" data-name="Box">
+                                                    <i class="fa fa-2x fa-font-awesome rounded-circle bg-primary s_features_grid_icon" />
+                                                    <div class="s_features_grid_content">
+                                                        <h4 class="o_default_snippet_text">Change Icons</h4>
+                                                        <p class="o_default_snippet_text">Double click an icon to replace it with one of your choice.</p>
+                                                    </div>
+                                                </div>
+                                                <div class="col-lg-12 pt16 pb16 o_colored_level" data-name="Box">
+                                                    <i class="fa fa-2x fa-files-o rounded-circle bg-primary s_features_grid_icon" />
+                                                    <div class="s_features_grid_content">
+                                                        <h4 class="o_default_snippet_text">Duplicate</h4>
+                                                        <p class="o_default_snippet_text">Duplicate blocks and columns to add more features.</p>
+                                                    </div>
+                                                </div>
+                                                <div class="col-lg-12 pt16 pb16 o_colored_level" data-name="Box">
+                                                    <i class="fa fa-2x fa-trash rounded-circle bg-primary s_features_grid_icon" />
+                                                    <div class="s_features_grid_content">
+                                                        <h4 class="o_default_snippet_text">Delete Blocks</h4>
+                                                        <p class="o_default_snippet_text">Select and delete blocks to remove features.</p>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-lg-6 s_col_no_bgcolor pb24">
+                                            <div class="row">
+                                                <div class="col-lg-12 pb24 o_colored_level" data-name="Box">
+                                                    <h2 class="o_default_snippet_text">Second list of Features</h2>
+                                                    <h5 class="o_default_snippet_text">Add a great slogan.</h5>
+                                                </div>
+                                                <div class="col-lg-12 pt16 pb16 o_colored_level" data-name="Box">
+                                                    <i class="fa fa-2x fa-magic rounded bg-secondary s_features_grid_icon" />
+                                                    <div class="s_features_grid_content">
+                                                        <h4 class="o_default_snippet_text">Great Value</h4>
+                                                        <p class="o_default_snippet_text">Turn every feature into a benefit for your reader.</p>
+                                                    </div>
+                                                </div>
+                                                <div class="col-lg-12 pt16 pb16 o_colored_level" data-name="Box">
+                                                    <i class="fa fa-2x fa-eyedropper rounded bg-secondary s_features_grid_icon" />
+                                                    <div class="s_features_grid_content">
+                                                        <h4 class="o_default_snippet_text">Edit Styles</h4>
+                                                        <p class="o_default_snippet_text">You can edit colors and backgrounds to highlight features.</p>
+                                                    </div>
+                                                </div>
+                                                <div class="col-lg-12 pt16 pb16 o_colored_level" data-name="Box">
+                                                    <i class="fa fa-2x fa-picture-o rounded bg-secondary s_features_grid_icon" />
+                                                    <div class="s_features_grid_content">
+                                                        <h4 class="o_default_snippet_text">Sample Icons</h4>
+                                                        <p class="o_default_snippet_text">All these icons are completely free for commercial use.</p>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </section>
+                            <section class="s_title pt40 pb40 o_colored_level bg-black" data-vcss="001" data-snippet="s_title" data-name="Title" style="background-image: none;">
+                                <div class="s_allow_columns container" data-original-title="" title="" aria-describedby="tooltip261285">
+                                    <div class="media_iframe_video" data-oe-expression="//www.youtube.com/embed/NW7Zpxs6ylE?autoplay=1&amp;mute=1&amp;enablejsapi=1&amp;rel=0&amp;loop=1&amp;playlist=NW7Zpxs6ylE&amp;controls=0">
+                                        <div class="css_editable_mode_display"></div>
+                                        <div class="media_iframe_video_size"></div>
+                                        <iframe src="//www.youtube.com/embed/NW7Zpxs6ylE?autoplay=1&amp;mute=1&amp;enablejsapi=1&amp;rel=0&amp;loop=1&amp;playlist=NW7Zpxs6ylE&amp;controls=0" frameborder="0" allowfullscreen="allowfullscreen"></iframe>
+                                    </div>
+                                </div>
+                            </section>
+                            <section class="s_image_gallery o_slideshow s_image_gallery_show_indicators s_image_gallery_indicators_rounded pt24 o_colored_level o_cc o_cc3 s_image_gallery_cover o_full_screen_height" data-vcss="001" data-columns="3" style="height: 500px; overflow: hidden;" data-snippet="s_image_gallery" data-name="Image Gallery" title="">
+                                <div class="container">
+                                    <div id="slideshow_1670271774267" class="carousel slide" data-ride="carousel" data-interval="0" style="margin: 0 12px;">
+                                        <div class="carousel-inner" style="padding: 0;">
+                                            <div class="carousel-item active">
+                                                <img class="img img-fluid d-block" src="/web/image/website.library_image_08" data-name="Image" data-index="0" loading="lazy" data-original-id="379" data-original-src="/website/static/src/img/library/mobile.jpg" data-mimetype="image/jpeg" title="" />
+                                            </div>
+                                            <div class="carousel-item">
+                                                <img class="img img-fluid d-block" src="/web/image/website.library_image_03" data-name="Image" data-index="1" loading="lazy" data-original-id="374" data-original-src="/website/static/src/img/library/clock.jpg" data-mimetype="image/jpeg" />
+                                            </div>
+                                            <div class="carousel-item">
+                                                <img class="img img-fluid d-block" src="/web/image/website.library_image_02" data-name="Image" data-index="2" loading="lazy" data-original-id="373" data-original-src="/website/static/src/img/library/deliver.jpg" data-mimetype="image/jpeg" />
+                                            </div>
+                                        </div>
+                                        <ul class="carousel-indicators">
+                                            <li class="o_indicators_left text-center d-none" aria-label="Previous" title="Previous">
+                                                <i class="fa fa-chevron-left">​</i>
+                                            </li>
+                                            <li data-target="#slideshow_1670271774267" data-slide-to="0" style="background-image: url(/web/image/website.library_image_08)" class="active" />
+                                            <li data-target="#slideshow_1670271774267" data-slide-to="1" style="background-image: url(/web/image/website.library_image_03)" />
+                                            <li data-target="#slideshow_1670271774267" data-slide-to="2" style="background-image: url(/web/image/website.library_image_02)" />
+                                            <li class="o_indicators_right text-center d-none" aria-label="Next" title="Next">
+                                                <i class="fa fa-chevron-right">​</i>
+                                            </li>
+                                        </ul>
+                                        <a class="carousel-control-prev o_we_no_overlay" href="#slideshow_1670271774267" data-slide="prev" aria-label="Previous" title="Previous">
+                                            <span class="fa fa-chevron-left fa-2x text-white" />
+                                            <span class="sr-only o_default_snippet_text">Previous</span>
+                                        </a>
+                                        <a class="carousel-control-next o_we_no_overlay" href="#slideshow_1670271774267" data-slide="next" aria-label="Next" title="Next">
+                                            <span class="fa fa-chevron-right fa-2x text-white" title="" />
+                                            <span class="sr-only o_default_snippet_text">Next</span>
+                                        </a>
+                                    </div>
+                                </div>
+                            </section>
+                            <section class="s_text_block pt40 pb40 o_colored_level bg-black" data-snippet="s_text_block" data-name="Text" style="background-image: none;">
+                                <div class="s_allow_columns container">
+                                    <p>
+                                    </p>
+                                    <p>Die Herangehensweise ist nicht nur in den Köpfen der Pfadfinder verankert, nach dieser Manier werden wohl auch 99% der Feuerstellen und Cheminées tagtäglich befeuert.</p>
+                                    <div class="s_hr text-left pt32 pb32" data-snippet="s_hr" data-name="Separator">
+                                        <p>
+                                        </p>
+                                        <hr class="w-100 mx-auto" style="border-top-width: 1px; border-top-style: solid;" />
+                                    </div>
+                                    <p><br />Es gibt jedoch eine deutlich bessere Lösung zu feuern:<br />Die Vorteile des von oben nach unten Feuern:</p>
+                                    <p><br />- Feuer brennt heisser<br />- Feuer brennt länger<br />- Weniger Emissionen (Russ und Asche)<br />- Weniger Verschmutzung an Feuerstelle/ Cheminée/ Kamin<br />- Schönere Farben der Flammen<br />- Einfachere Bewirtschaftung – keine dauernde Arrangierung der Scheite.&amp;nbsp;<br /><br />Fazit:</p>
+                                    <p>
+                                        die Verbrennung von oben nach unten es ist in jeder Hinsicht besser.
+                                        <br />
+                                        <br />
+                                        Damit ein Feuer von oben nach unten abbrennen kann, wurde das dazu notwendige Hilfsmittel PELLETRAY® entworfen.
+                                        <br />
+                                    </p>
+                                </div>
+                            </section>
+                            <section class="s_newsletter_block pt32 pb32 o_colored_level o_cc o_cc1 bg-200" data-snippet="s_newsletter_block" data-name="Newsletter block">
+                                <div class="container">
+                                    <div class="row" title="">
+                                        <div class="col-lg-8 offset-lg-2 pt24 pb24 o_colored_level">
+                                            <h2 class="o_default_snippet_text">Always First.</h2>
+                                            <p class="o_default_snippet_text">Be the first to find out all the latest news, products, and trends.</p>
+                                            <div class="s_newsletter_subscribe_form js_subscribe" data-vxml="001" data-list-id="3" data-name="Newsletter Form" data-snippet="s_newsletter_subscribe_form">
+                                                <div class="input-group">
+                                                    <input type="email" name="email" class="js_subscribe_email form-control" placeholder="your email..." />
+                                                    <span class="input-group-append">
+                                                        <a role="button" href="#" class="btn btn-primary js_subscribe_btn o_submit o_default_snippet_text">Subscribe</a>
+                                                        <a role="button" href="#" class="btn btn-success js_subscribed_btn o_submit o_default_snippet_text d-none" disabled="disabled">Thanks</a>
+                                                    </span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </section>
+                            <section class="s_company_team pt48 pb48 o_colored_level o_cc o_cc3" data-snippet="s_company_team" data-name="Team">
+                                <div class="container">
+                                    <div class="row s_nb_column_fixed">
+                                        <div class="col-lg-6 pt24 pb24 o_colored_level">
+                                            <div class="row s_col_no_resize s_col_no_bgcolor">
+                                                <div class="col-lg-4 pb16 o_not_editable">
+                                                    <img alt="" src="/web/image/website.s_company_team_image_1" class="img-fluid rounded-circle mx-auto" loading="lazy" data-original-id="416" data-original-src="/website/static/src/img/snippets_demo/s_team_member_1.png" data-mimetype="image/png" />
+                                                </div>
+                                                <div class="col-lg-8">
+                                                    <h4 class="o_default_snippet_text">Tony Fred, CEO</h4>
+                                                    <p class="o_default_snippet_text">
+                                                        Founder and chief visionary, Tony is the driving force behind the company. He loves
+                                                        to keep his hands full by participating in the development of the software,
+                                                        marketing, and customer experience strategies.
+                                                    </p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-lg-6 pt24 pb24 o_colored_level">
+                                            <div class="row s_col_no_resize s_col_no_bgcolor">
+                                                <div class="col-lg-4 pb16 o_not_editable">
+                                                    <img alt="" src="/web/image/website.s_company_team_image_2" class="img-fluid rounded-circle mx-auto" loading="lazy" data-original-id="417" data-original-src="/website/static/src/img/snippets_demo/s_team_member_2.png" data-mimetype="image/png" />
+                                                </div>
+                                                <div class="col-lg-8">
+                                                    <h4 class="o_default_snippet_text">Mich Stark, COO</h4>
+                                                    <p class="o_default_snippet_text">Mich loves taking on challenges. With his multi-year experience as Commercial Director in the software industry, Mich has helped the company to get where it is today. Mich is among the best minds.</p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-lg-6 pt24 pb24 o_colored_level">
+                                            <div class="row s_col_no_resize s_col_no_bgcolor">
+                                                <div class="col-lg-4 pb16 o_not_editable">
+                                                    <img alt="" src="/web/image/website.s_company_team_image_3" class="img-fluid rounded-circle mx-auto" loading="lazy" data-original-id="418" data-original-src="/website/static/src/img/snippets_demo/s_team_member_3.png" data-mimetype="image/png" />
+                                                </div>
+                                                <div class="col-lg-8">
+                                                    <h4 class="o_default_snippet_text">Aline Turner, CTO</h4>
+                                                    <p class="o_default_snippet_text">Aline is one of the iconic people in life who can say they love what they do. She mentors 100+ in-house developers and looks after the community of thousands of developers.</p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-lg-6 pt24 pb24 o_colored_level">
+                                            <div class="row s_col_no_resize s_col_no_bgcolor">
+                                                <div class="col-lg-4 pb16 o_not_editable">
+                                                    <img alt="" src="/web/image/website.s_company_team_image_4" class="img-fluid rounded-circle mx-auto" loading="lazy" data-original-id="419" data-original-src="/website/static/src/img/snippets_demo/s_team_member_4.png" data-mimetype="image/png" />
+                                                </div>
+                                                <div class="col-lg-8">
+                                                    <h4 class="o_default_snippet_text">Iris Joe, CFO</h4>
+                                                    <p>Iris, with her international experience, helps us easily understand the numbers and improves them. She is determined to drive success and delivers her professional acumen to bring the company to the next level.</p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </section>
+                            <section class="s_faq_collapse pt32 pb32 o_colored_level o_cc o_cc3" data-snippet="s_faq_collapse" data-name="Accordion">
+                                <div class="container">
+                                    <div id="myCollapse1670271664585" class="accordion" role="tablist">
+                                        <div class="card bg-white" data-name="Item">
+                                            <a href="#" role="tab" data-toggle="collapse" aria-expanded="true" class="card-header o_default_snippet_text" data-target="#myCollapseTab1670271664586">Terms of service</a>
+                                            <div class="collapse show" data-parent="#myCollapse1670271664585" role="tabpanel" id="myCollapseTab1670271664586">
+                                                <div class="card-body">
+                                                    <p class="card-text o_default_snippet_text">These terms of service ("Terms", "Agreement") are an agreement between the website ("Website operator", "us", "we" or "our") and you ("User", "you" or "your"). This Agreement sets forth the general terms and conditions of your use of this website and any of its products or services (collectively, "Website" or "Services").</p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="card bg-white" data-name="Item">
+                                            <a href="#" role="tab" data-toggle="collapse" aria-expanded="false" class="collapsed card-header o_default_snippet_text" data-target="#myCollapseTab1670271664587">Links to other Websites</a>
+                                            <div class="collapse" data-parent="#myCollapse1670271664585" role="tabpanel" id="myCollapseTab1670271664587">
+                                                <div class="card-body">
+                                                    <p class="card-text o_default_snippet_text">Although this Website may be linked to other websites, we are not, directly or indirectly, implying any approval, association, sponsorship, endorsement, or affiliation with any linked website, unless specifically stated herein.</p>
+                                                    <p class="card-text o_default_snippet_text">You should carefully review the legal statements and other conditions of use of any website which you access through a link from this Website. Your linking to any other off-site pages or other websites is at your own risk.</p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="card bg-white" data-name="Item">
+                                            <a href="#" role="tab" data-toggle="collapse" aria-expanded="false" class="collapsed card-header o_default_snippet_text" data-target="#myCollapseTab1670271664589">Use of Cookies</a>
+                                            <div class="collapse" data-parent="#myCollapse1670271664585" role="tabpanel" id="myCollapseTab1670271664589">
+                                                <div class="card-body">
+                                                    <p class="card-text o_default_snippet_text">Website may use cookies to personalize and facilitate maximum navigation of the User by this site. The User may configure his / her browser to notify and reject the installation of the cookies sent by us.</p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </section>
+                            <section class="s_references pt48 pb32 o_colored_level o_cc o_cc2" data-snippet="s_references" data-name="References">
+                                <div class="container">
+                                    <h2 style="text-align: center;" class="o_default_snippet_text">Our References</h2>
+                                    <p style="text-align: center;">We are in good company.</p>
+                                    <div class="row">
+                                        <div class="col-lg-2 pt16 pb16 o_colored_level">
+                                            <img src="/web/image/website.s_reference_demo_image_1" class="img img-fluid mx-auto" alt="" loading="lazy" data-original-id="411" data-original-src="/website/static/src/img/snippets_demo/s_references_1.png" data-mimetype="image/png" />
+                                        </div>
+                                        <div class="col-lg-2 pt16 pb16 o_colored_level">
+                                            <img src="/web/image/website.s_reference_demo_image_2" class="img img-fluid mx-auto" alt="" loading="lazy" data-original-id="412" data-original-src="/website/static/src/img/snippets_demo/s_references_2.png" data-mimetype="image/png" />
+                                        </div>
+                                        <div class="col-lg-2 pt16 pb16 o_colored_level">
+                                            <img src="/web/image/website.s_reference_demo_image_3" class="img img-fluid mx-auto" alt="" loading="lazy" data-original-id="413" data-original-src="/website/static/src/img/snippets_demo/s_references_3.png" data-mimetype="image/png" />
+                                        </div>
+                                        <div class="col-lg-2 pt16 pb16 o_colored_level">
+                                            <img src="/web/image/website.s_reference_demo_image_4" class="img img-fluid mx-auto" alt="" loading="lazy" data-original-id="414" data-original-src="/website/static/src/img/snippets_demo/s_references_4.png" data-mimetype="image/png" />
+                                        </div>
+                                        <div class="col-lg-2 pt16 pb16 o_colored_level">
+                                            <img src="/web/image/website.s_reference_demo_image_5" class="img img-fluid mx-auto" alt="" loading="lazy" data-original-id="415" data-original-src="/website/static/src/img/snippets_demo/s_references_5.png" data-mimetype="image/png" />
+                                        </div>
+                                        <div class="col-lg-2 pt16 pb16 o_colored_level">
+                                            <img src="/web/image/website.s_reference_default_image_6" class="img img-fluid mx-auto" alt="" loading="lazy" data-original-id="1606148" data-original-src="/website/static/src/img/snippets_demo/s_references_6.png" data-mimetype="image/png" />
+                                        </div>
+                                    </div>
+                                </div>
+                            </section>
+                        </div>
+                    </t>
+                </t>
+            </field>
+        </record>
+        <record id="pelletray_homepage" model="website.page">
+            <field name="url">/pelletray_homepage</field>
+            <field name="website_published">True</field>
+            <field name="view_id" ref="dynco_base.pelletray_homepage_view" />
+            <field name="website_id" ref="dynco_base.pelletray_website" />
+        </record>
+        <record id="dynco_base.pelletray_website" model="website">
+            <field name="homepage_id" ref="dynco_base.pelletray_homepage" />
+        </record>
+        <record id="pelletray_scss" model="ir.asset">
+            <field name="name">Pelletray effect SCSS</field>
+            <field name="bundle">web.assets_frontend</field>
+            <field name="path">/dynco_base/static/src/scss/pelletray_font.scss</field>
+            <field name="website_id" ref="dynco_base.pelletray_website"/>
+        </record>
+    </data>
+</odoo>

@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <record id="account_xls_list_output_view" model="ir.ui.view">
+        <field name="name">Excel Output List</field>
+        <field name="model">output.list</field>
+        <field name="arch" type="xml">
+            <form string="Invoce Excel">
+                <group>
+                    <field name="name" invisible="1" />
+                    <h1>
+                        <field name="xls_output" filename="name" />
+                    </h1>
+                </group>
+                <footer>
+                    <button special="cancel" string="Ok" />
+                </footer>
+            </form>
+        </field>
+    </record>
+</odoo>

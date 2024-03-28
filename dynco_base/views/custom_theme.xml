@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+    <data>
+        <template id="dynco_colorpicker_custom" inherit_id="web_editor.colorpicker" name="Color-Picker Custom">
+            <xpath expr="//colorpicker//div[hasclass('o_colorpicker_section')][4]" position="replace">
+                <div class="o_colorpicker_section" data-name="predefined_gradients">
+                    <t t-set="gradients" t-value="[
+                        'linear-gradient(145.18deg, #F4F2F1 -9.82%, #121321 145.73%)',
+                        'linear-gradient(145.18deg, #9BB2A9 17.39%, #40603B 181.86%)',
+                        'linear-gradient(180deg, #765792 0%, #D1C4EA 100%)',
+                        'linear-gradient(148.49deg, #D1C4EA 11.41%, #765792 126.62%)',
+                        'linear-gradient(149.86deg, #ECE8E6 -15.28%, #BDAFA8 150.06%)',
+                        'linear-gradient(61.22% 124.42% at 70.06% 50%, #F0ECF8 0%, #F4F2F1 100%)',
+                        'linear-gradient(63.08% 55.48% at 22.97% 64.53%, #F0ECF8 0%, #FFFFFF 100%)'
+                    ]"/>
+                    <t t-foreach="gradients" t-as="gradient">
+                        <button class="w-50" t-attf-style="background-image: #{gradient};" t-att-data-color="gradient"/>
+                    </t>
+                </div>
+            </xpath>
+        </template>
+    </data>
+</odoo>

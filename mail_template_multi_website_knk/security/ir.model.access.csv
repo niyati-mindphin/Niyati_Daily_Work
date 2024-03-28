@@ -1,0 +1,2 @@
+id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink
+mail_template_multi_website_knk.access_planned_date_wizard,access_planned_date_wizard,mail_template_multi_website_knk.model_planned_date_wizard,base.group_user,1,1,1,1

@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <record id="account_invoice_xls_list" model="ir.ui.view">
+        <field name="name">Invoice Report</field>
+        <field name="model">account.move.xls.list</field>
+        <field name="arch" type="xml">
+            <form string="Ageing Payable">
+                <group>
+                    <field name="name" invisible="1" />
+                    <h1>
+                        <label for="name" string="Do You want to print Invoice Report?" />
+                    </h1>
+                </group>
+                <footer>
+                    <button name="print_report" string="Print Invoice Excel" type="object" class="oe_highlight" />
+                    or
+                    <button string="Cancel" class="oe_link" special="cancel" />
+                </footer>
+            </form>
+        </field>
+    </record>
+    <record id="invoice_list_wizard_action" model="ir.actions.act_window">
+        <field name="name">Invoice List</field>
+        <field name="res_model">account.move.xls.list</field>
+        <field name="view_mode">form</field>
+        <field name="target">new</field>
+        <field name="binding_model_id" ref="account.model_account_move"/>
+        <field name="binding_view_types">list</field>
+    </record>
+</odoo>

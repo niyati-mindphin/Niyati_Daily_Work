@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+    <data>
+        <record id="lechuza_unternehmen_page_view" model="ir.ui.view">
+            <field name="name">Lechuza unternehmen</field>
+            <field name="type">qweb</field>
+            <field name="key">website.lechuza_unternehmen_page</field>
+            <field name="arch" type="xml">
+                <t name="Home" t-name="website.lechuza_unternehmen_page">
+                    <t t-name="website.unternehmen">
+                        <t t-call="website.layout">
+                            <div id="wrap" class="oe_structure oe_empty oe_website_sale unternehmen">
+                                <div class="container">
+                                    <div class="row justify-content-center">
+                                        <div class="col-md-10">
+                                            <section class="pt32 pb32">
+                                                <div class="col-md-12 s_title pt16 pb16 text-center">
+                                                    <div class="container">
+                                                        <div class="row justify-content-center s_nb_column_fixed headers1">
+                                                            <h1 class="s_title_default font-weight-normal">Unternehmen</h1>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </section>
+                                            <section class="s_text_block pt32 pb32">
+                                                <div class="container">
+                                                    <div class="row justify-content-center">
+                                                        <div class="col-md-11 pt32 pb0">
+                                                            <div class="spc-xxl-left spc-xxl-top">
+                                                                <h1 class="heading font-weight-normal">DYNCO AG</h1>
+                                                                <p class="heading">
+                                                                    <font>Die Dynco AG kümmert sich seit 2006 mit viel Engagement und Freude um die Distibution von Lechuza in der Schweiz. Das Familienunternehmen mit Sitz in Bolligen bei Bern wurde 1983 gegründet und wird heute in der zweiten Generation geführt. Die Dynco AG konzentriert sich auf den Vertrieb von Markenprodukten in der Schweiz. Weitere informationen unter&amp;nbsp;</font>
+                                                                </p>
+                                                                <p class="heading-1 text-center">
+                                                                    <a href="https://www.dynco.ch" class="btn btn-outline-dark">WWW.DYNCO.CH</a>
+                                                                    <br />
+                                                                </p><br />
+                                                                <h1 class="heading-1 font-weight-normal">LECHUZA - GEOBRA BRANDSTÄDTER GRUPPE<br /></h1>
+                                                                <h2 class="heading-2 font-weight-normal mt-20">Design, Innovation und Qualität</h2>
+                                                                <div class="spc-xxl-top">
+                                                                    <font>LECHUZA ist seit der Markteinführung im Jahr 2000 der Experte für schöne und funktionale Pflanzgefäße aus hochwertigem Kunststoff. Die langjährige Expertise der Firma geobra Brandstätter, dem Hersteller der bekannten PLAYMOBIL-Figuren, ist tief mit der Verarbeitung von Kunststoff verwurzelt. Somit zeichnen sich die Innovationen durch ihre ausgereifte Funktion, bewährte Qualität und eine ausgezeichnete Form aller Produktentwicklungen aus. Ob Tischdekoration oder Raumgestaltung – stimmige Größenvariationen in zahlreichen Formen ermöglichen es für jede Pflanze das richtige Gefäß zu finden.&amp;nbsp;</font>
+                                                                    <br />
+                                                                    <font>LECHUZA-Pflanzgefäße bieten eine farb- und formenreiche Vielfalt in Kombination mit einer absolut zuverlässigen Funktion – Indoor wie Outdoor. Das integrierte Erd-Bewässerungssystem sorgt für eine optimale Wasserversorgung der Pflanze. Im Jahr 2015 wurde das Sortiment um Design-Gartenmöbel mit moderner Flechtstruktur erweitert. Die Gefäße und Möbel werden im fränkischen Dietenhofen produziert und in über 70 Länder exportiert.&amp;nbsp;</font>
+                                                                </div>
+                                                                <div class="grid-row">
+                                                                    <div class="col-xs-12 col-s-8 col-m-6">
+                                                                        <div class="panel panel-vertical image">
+                                                                            <div class="amp amp-image">
+                                                                                <img class="img-fluid o_we_custom_image w-100" src="dynco_base/static/src/img/lechuza_img/lechuza_footer_image/Lechuza-Brandstaetter-Gruppe.jpg" />
+                                                                            </div>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                                <div class="spc-m-top text-bold">
+                                                                    <br />
+                                                                    <b>
+                                                                        <font>Das LECHUZA-Bewässerungssystem: Optimales Zusammenspiel von Wasser- und Nährstoffversorgung für kräftige und gesunde Pflanzen&amp;nbsp;</font>
+                                                                    </b>
+                                                                </div>
+                                                                <div class="spc-m-top">
+                                                                    <font>&amp;nbsp;Wasser ist das Lebenselixier jeder Pflanze – doch zu viel ist schädlich und zu wenig ebenso. Pflanzen wissen von Natur aus selbst am besten, wie viel Wasser sie für ein optimales Wachstum benötigen. Das LECHUZA-Bewässerungssystem unterstützt Pflanzen dabei, sich selbst nach dem Vorbild der Natur zu versorgen. Mit einem stets ausreichend gefüllten Wasserreservoir, das über einen Wasserstandsanzeiger kontrolliert wird, sind ausgetrocknete oder zu nasse Wurzelballen passé. Als Drainageschicht zwischen Wasserreservoir und Pflanzsubstrat fungiert LECHUZA-PON, ein Granulat, das die Wasserzufuhr zu den Wurzeln puffert. In den formschönen Gefäßen von LECHUZA sind Pflanzen ganz in ihrem Element.&amp;nbsp;</font>
+                                                                    <br />
+                                                                    <br />
+                                                                    <img class="img-fluid o_we_custom_image" src="dynco_base/static/src/img/lechuza_img/lechuza_footer_image/019902a1-f8a4-47b4-947b-16ce6d235b85.__CR0,0,220,220_PT0_SX220_V1___.jpg" aria-describedby="tooltip272361" />
+                                                                    <img class="img-fluid o_we_custom_image" src="dynco_base/static/src/img/lechuza_img/lechuza_footer_image/45b2d786-f1fc-4b17-b739-34829e3229f7.__CR0,0,220,220_PT0_SX220_V1___.jpg" aria-describedby="tooltip959941" />
+                                                                    <img class="img-fluid o_we_custom_image" src="dynco_base/static/src/img/lechuza_img/lechuza_footer_image/1cd255fa-c286-48e4-9390-f03826fd78a3.__CR0,0,220,220_PT0_SX220_V1___.jpg" aria-describedby="tooltip757551" />
+                                                                    <img class="img-fluid o_we_custom_image" src="dynco_base/static/src/img/lechuza_img/lechuza_footer_image/f69b091b-f50b-44d7-9345-13dcaeff28c9.__CR0,0,220,220_PT0_SX220_V1___.jpg" aria-describedby="tooltip714359" />
+                                                                    <br />
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </section>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </t>
+                    </t>
+                </t>
+            </field>
+        </record>
+        <record id="lechuza_unternehmen_page" model="website.page">
+            <field name="url">/unternehmen</field>
+            <field name="website_published">True</field>
+            <field name="view_id" ref="lechuza_unternehmen_page_view" />
+        </record>
+    </data>
+</odoo>

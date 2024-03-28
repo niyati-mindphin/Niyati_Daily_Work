@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+    <template id="dynco_snippet_options" inherit_id="website.snippet_options">
+        <!-- Header -->
+        <xpath expr="//we-select[@data-variable='header-template']/we-button[last()]" position="after">
+            <we-button title="Dynco Header Style - 11" data-name="dynco_header_style_11_opt" data-customize-website-views="dynco_base.template_header_style_11" data-customize-website-variable="'dynco_style_11'" data-img="/dynco_base/static/src/img/dynco_img/dynco-Website-header.png"/>
+            <we-button title="Lechuza Header Style - 12" data-name="lechuza_header_style_12_opt" data-customize-website-views="dynco_base.template_header_style_13" data-customize-website-variable="'prime_style_2'" data-img="/dynco_base/static/src/img/lechuza_img/Lechuza_header.png"/>
+            <we-button title="Climaqua Header Style - 13" data-name="climaqua_header_style_13_opt" data-customize-website-views="dynco_base.climaqua_header_style_14" data-customize-website-variable="'prime_style_2'" data-img="/dynco_base/static/src/img/climaqua_img/climaqua_header.png"/>
+        </xpath>
+        <!-- Footer -->
+        <xpath expr="//we-select[@data-variable='footer-template']/we-button[last()]" position="after">
+            <we-button title="Dynco Footer Style - 11" data-name="dynco_footer_style_11_opt" data-customize-website-views="dynco_base.template_footer_style_11" data-customize-website-variable="'dynco_style_11'" data-img="/dynco_base/static/src/img/dynco_img/footer_11.png" />
+            <we-button title="Lechuza Footer Style - 12" data-name="lechuza_footer_style_12_opt" data-customize-website-views="dynco_base.template_footer_style_13" data-customize-website-variable="'lechuza_style_12'" data-img="/dynco_base/static/src/img/lechuza_img/Lechuza_footer.png" />
+            <we-button title="Climaqua Footer Style - 13" data-name="climaqua_footer_style_13_opt" data-customize-website-views="dynco_base.climaqua_footer_style_14" data-customize-website-variable="'climaqua_style_13'" data-img="/dynco_base/static/src/img/climaqua_img/climaqua_footer.png" />
+        </xpath>
+        <!-- mega menu -->
+        <xpath expr="//div//we-select[@data-name='mega_menu_template_opt']/we-button[last()]" position="after">
+            <t t-set="_label">Lechuza Thumbnails</t>
+            <we-button t-att-data-select-label="_label" data-select-template="dynco_base.s_mega_menu_thumbnails_lechuza" data-img="/website/static/src/img/snippets_thumbs/s_mega_menu_thumbnails.svg" t-out="_label"/>
+        </xpath>
+    </template>
+
+    <!-- for climaqua snippets -->
+    <template id="s_d_products_snippet" name="Dynamic Products Cards">
+        <section class="tp-dynamic-snippet dr_not_editable s_d_products_snippet_wrapper text-center" data-tp-snippet-id="d_products_snippet">
+            <div class="s_d_products_snippet container o_not_editable"/>
+        </section>
+    </template>
+
+    <template id="climaque_products_snippet_card" name="Climaque Card">
+        <section class="s_banner_3 pt16 pb16">
+            <div class="container">
+                <div class="row s_col_no_bgcolor">
+                    <div class="col-12 col-lg-6 py-3">
+                        <div class="">
+                            <img src="/dynco_base/static/src/img/001.gif" class="w-100 image_size img-fluid" alt="Banner Image 01"/>
+                            <a href="#">
+                                <div class="tp-banner-content tp-editor-bg-color-n-shadow o_cc o_cc1 rounded">
+                                    <h5 class="text-center mb-0">FOUNTAINS</h5>
+                                </div>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="col-12 col-lg-6 py-3">
+                        <div class="">
+                            <img src="/dynco_base/static/src/img/002.jpg" class="w-100 image_size img-fluid" alt="Banner Image 02"/>
+                            <a href="#">
+                                <div class="tp-banner-content tp-editor-bg-color-n-shadow o_cc o_cc1 rounded">
+                                    <h5 class="text-center mb-0">PLANTERS</h5>
+                                </div>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </template>
+    <template id="climaque_text_snippet" name="Climaque Text">
+        <section class="s_text_block pt32 pb32">
+            <div class="container">
+                <div class="row">
+                    <div class="offset-lg-1 pb0 col-lg-10 pt40">
+                        <h1 class="s_title_default text-center mb-4">
+                          <span style="background-color: rgb(255, 198, 156); font-size: 18px; letter-spacing: 0.4rem;">CLIMAQUA® steht für Natur zu Hause</span>
+                        </h1>
+                        <p><font style="font-size: 18px;">Hol dir die Natur ins Haus! CLIMAQUA<sup>®</sup> hat es sich zur Aufgabe gemacht, die Natur zu dir nach Hause zu bringen. Mit stilvollen Produkten aus hochwertigen Materialien vereinst du in deiner engsten Umgebung die Natur – mit Wasser, Flora, Feuer und Stein. Gefahrlos und dennoch aus nächster Nähe. Kreier dir deine Wohlfühloase, geniesse sie mit allen Sinnen: Lausche dem sanften Wasserplätschern, rieche den Duft frischer Pflanzen, erlebe den Tanz des Feuers, spüre die Kraft des Steins. </font></p>
+                        <p><font style="font-size: 18px;">Schiefer, unser Hauptmaterial wird auf 250-400 Millionen (!) Jahre geschätzt – und findet nun vielleicht als unikates Bijou in Blumentopf-, Brunnen-, Dekofeuer- oder Accessoirform seinen neuen, ganz besonderen Platz bei dir Zuhause.</font></p>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </template>
+</odoo>

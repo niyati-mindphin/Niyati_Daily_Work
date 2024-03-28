@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<templates>
+    <!-- Card - 3 -->
+    <t t-name="s_card_style_3">
+        <div t-attf-class="card h-100 s_card_style_3 #{isForGridSnippet ? 'tp-has-count-down' : ''} tp_product_card">
+            <div class="d_product_box d-flex position-relative h-100 text-center">
+                <t t-call="tp_product_snippet_action_drawer"/>
+                <div class="d_img_block position-relative d-flex justify-content-center">
+                    <a t-att-href="item.website_url" t-att-class="hasTimer and 'h-100'">
+                        <img loading="lazy" t-att-alt="item.name" t-att-src="item.img_medium" t-attf-class="img img-fluid d-product-img #{hasTimer ? 'tp-has-timer-img' : ''}"/>
+                    </a>
+                    <t t-call="dr_s_lable_tmpl"></t>
+                    <t t-if="hasTimer">
+                        <div style="bottom:3px;" t-if="item.offer_data" class="style-4 position-center w-100 tp-light position-absolute tp_timer_center tp-countdown py-2 no-gutters" data-countdown-style="s_countdown_4" t-att-data-due-date="item.offer_data.date_end">
+                            <div class="mt-3 end_msg_container css_non_editable_mode_hidden">
+                                <h6 class="mb-0" t-out="item.offer_data.offer_finish_msg"/>
+                            </div>
+                        </div>
+                    </t>
+                </div>
+                <div class="d_product_info p-3">
+                    <div class="d_product_info_lev_2">
+                        <t t-call="tp_category_info"/>
+                        <h5 class="card-title mt-1 mb-1 text-truncate font-weight-light d-product-name">
+                            <a t-att-href="item.website_url">
+                                <t t-if="item.webshop_product_name" t-out="item.webshop_product_name"/>
+                                <t t-else="" t-out="item.name"/>
+                            </a>
+                        </h5>
+                        <t t-if="widget._isActionEnabled('rating')">
+                            <div class="small" t-out="item.rating"/>
+                        </t>
+                        <t t-call="tp-snippet-product-price"/>
+                        <div t-if="isForGridSnippet" class="d-add_to_cart_block mt-1">
+                            <button t-att-data-product-product-id="item.product_variant_id" data-toggle="tooltip" data-placement="bottom" class="btn btn-primary-soft w-100 d-flex align-items-center justify-content-center d_action_btn d_add_to_cart_btn" title="Add to Cart">
+                                <i class="d_action_btn_icon dri dri-cart pr-2"></i> Buy
+                            </button>
+                        </div>
+                        <div t-else=" " class="d-add_to_cart_block mt-1">
+                            <button t-if="widget._isActionEnabled('add_to_cart')" t-att-data-product-product-id="item.product_variant_id" data-toggle="tooltip" data-placement="bottom" class="btn btn-primary w-100 d_action_btn d_add_to_cart_btn" title="Add to Cart">
+                                <i class="d_action_btn_icon dri dri-cart"></i> ADD TO CART
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </t>
+    <!-- Card - 3 -->
+	<t t-name="s_card_style_7">
+        <div class="card h-100 border-0 s_card_style_7 tp_product_card">
+            <div class="d_product_box d-flex position-relative h-100 text-center">
+                <t t-call="tp_product_snippet_action_drawer"/>
+                <div class="d_img_block position-relative d-flex justify-content-center">
+                    <a t-att-href="item.website_url" t-att-class="hasTimer and 'h-100'">
+                        <img loading="lazy" t-att-alt="item.name" t-att-src="item.img_medium" class="img img-fluid d-product-img"/>
+                    </a>
+                    <t t-call="dr_s_lable_tmpl"></t>
+                    <div class="d-add_to_cart_block mt-1">
+                        <button t-if="widget._isActionEnabled('add_to_cart')" t-att-data-product-product-id="item.product_variant_id" data-toggle="tooltip" data-placement="bottom" class="btn btn-primary w-100 d_action_btn d_add_to_cart_btn py-2" title="Add to Cart">
+                            <i class="d_action_btn_icon dri dri-cart"></i> ADD TO CART
+                        </button>
+                    </div>
+                </div>
+                <div class="d_product_info p-3">
+                    <div class="d_product_info_lev_2 d-none">
+                        <t t-call="tp_category_info"/>
+                        <h5 t-if="item.webshop_product_name" class="card-title mt-1 mb-1 text-truncate font-weight-light d-product-name">
+                            <a t-att-href="item.website_url">
+                                <t t-out="item.webshop_product_name"/>
+                            </a>
+                        </h5>
+                        <h5 t-else="" class="card-title mt-1 mb-1 text-truncate font-weight-light d-product-name">
+                            <a t-att-href="item.website_url">
+                                <t t-out="item.name"/>
+                            </a>
+                        </h5>
+                        <t t-call="tp-snippet-colors-pills"/>
+                        <t t-if="widget._isActionEnabled('rating')">
+                            <div class="small" t-out="item.rating"/>
+                        </t>
+                        <!-- <t t-call="tp-snippet-product-price"/> -->
+                    </div>
+                </div>
+            </div>
+        </div>
+    </t>
+</templates>

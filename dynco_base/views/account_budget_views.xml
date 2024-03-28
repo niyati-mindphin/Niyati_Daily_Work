@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+        <record model="ir.ui.view" id="knk_crossovered_budget_view_form_inh">
+            <field name="name">knk.crossovered.budget.view.form.inh</field>
+            <field name="model">crossovered.budget</field>
+            <field name="inherit_id" ref="account_budget.crossovered_budget_view_form"/>
+            <field name="arch" type="xml">
+                <xpath expr="//field[@name='crossovered_budget_line']" position="attributes">
+                    <attribute name="widget">section_and_note_one2many</attribute>
+                </xpath>
+                <xpath expr="//field[@name='general_budget_id']" position="before">
+                    <control>
+                        <create string="Add a line"/>
+                        <create string="Add a section" context="{'default_display_type': 'line_section'}"/>
+                        <create string="Add a note" context="{'default_display_type': 'line_note'}"/>
+                    </control>
+                    <field name="name" optional="hide"/>
+                    <field name="display_type" invisible="1"/>
+                </xpath>
+                <xpath expr="//tree//field[@name='date_from']" position="attributes">
+                    <attribute name="attrs">{'required': [('display_type', '=', False)]}</attribute>
+                </xpath>
+                <xpath expr="//tree//field[@name='date_to']" position="attributes">
+                    <attribute name="attrs">{'required': [('display_type', '=', False)]}</attribute>
+                </xpath>
+            </field>
+        </record>
+        <record model="ir.ui.view" id="knk_view_budget_post_form_inh">
+            <field name="name">knk.account.budget.post.form.inh</field>
+            <field name="model">account.budget.post</field>
+            <field name="inherit_id" ref="account_budget.view_budget_post_form"/>
+            <field name="arch" type="xml">
+                <xpath expr="//tree" position="attributes">
+                    <attribute name="editable">bottom</attribute>
+                </xpath>
+                <xpath expr="//tree//field[@name='name']" position="after">
+                    <field name="target_2022" sum="Total"/>
+                    <field name="actual_2022" sum="Total"/>
+                    <field name="target_2023" sum="Total"/>
+                    <field name="actual_2023" sum="Total"/>
+                </xpath>
+            </field>
+        </record>
+    </data>
+</odoo>

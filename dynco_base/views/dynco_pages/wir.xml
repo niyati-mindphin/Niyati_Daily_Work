@@ -1,0 +1,507 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+    <data noupdate="1">
+        <record id="dynco_wir_page_view" model="ir.ui.view">
+            <field name="name">wir</field>
+            <field name="type">qweb</field>
+            <field name="key">website.dynco_wir_page</field>
+            <field name="website_id" ref="website.default_website" />
+            <field name="arch" type="xml">
+                <t name="Home" t-name="website.dynco_wir_page">
+                    <t t-name="website.wir">
+                        <t t-call="website.layout">
+                            <div id="wrap" class="oe_structure oe_empty">
+                                <section class="s_cover_5 parallax s_parallax_is_fixed o_full_screen_height pt168 pb144 s_parallax_no_overflow_hidden o_colored_level" data-scroll-background-ratio="1" style="background-image: none; background-position: 50% 0px;" data-snippet="s_cover_5" data-name="Cover - 5">
+                                    <span class="s_parallax_bg oe_img_bg o_bg_img_center" style="background-image: url(&quot;/dynco_base/static/src/img/dynco_homepage/wir/main_banner.jpg&quot;);" data-original-id="82965" data-original-src="/web/image/82965-75e38939/DasSindWir.jpg" data-mimetype="image/jpeg" data-resize-width="1920" />
+                                    <div class="container tp-cover-container">
+                                        <div class="row s_nb_column_fixed">
+                                            <div class="jumbotron rounded pt32 pb32 o_colored_level col-lg-10" data-name="Box">
+                                                <p class="display-4 font-weight-bold">
+                                                    <span style="font-size: 36px;">
+                                                        <font class="text-o-color-4">Über uns</font>
+                                                    </span>
+                                                    <br />
+                                                </p>
+                                                <h1 class="display-4 font-weight-bold">Was wir tun und wer wir sind</h1>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </section>
+                                <section class="s_info_block_2 tp-editor-snippet-valign o_colored_level" data-snippet="s_info_block_2" data-name="Info Block - 2" style="background-image: linear-gradient(0deg, rgb(240, 236, 248) 0%, rgb(255, 255, 255) 100%);">
+                                    <div class="px-0 container-fluid">
+                                        <div class="row no-gutters s_nb_column_fixed align-items-center">
+                                            <div class="p-4 o_colored_level col-lg-8 offset-lg-2 pt64" data-original-title="" title="" aria-describedby="tooltip793223" style="">
+                                                <h1 style="text-align: left;">
+                                                    <br />
+                                                </h1>
+                                                <h3 class="font-weight-bold">
+                                                    <span style="font-size: 36px;">Seit unserer Gründung im Jahr 1983 haben wir uns als familiengeführtes Grosshandelsunternehmen im Schweizer-, sowie in diversen internationalen Märkten, insbesondere im Bereich Garten und Wohnen, etabliert. </span>
+                                                    <br />
+                                                    <span />
+                                                    <br />
+                                                    <span style="font-size: 36px;">Unsere Eigenmarken CLIMAQUA© und PELLETRAY© entwickeln und vermarkten wir weltweit. Für Top Brands&amp;nbsp;wie LECHUZA, FELLHOF, PASSION FOR POTTERY und weitere sind wir Ansprech- und Vertriebspartner&amp;nbsp;in der Schweiz.<br />
+                                                        <br />Seit 1983 Jahren bilden wir das Bindeglied zwischen Produzent, Fachhändler&amp;nbsp;und Konsument.</span>
+                                                </h3>
+                                                <p class="font-weight-bold">
+                                                    <br />
+                                                </p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </section>
+                                <section class="s_info_block_2 tp-editor-snippet-valign o_colored_level" data-snippet="s_info_block_2" data-name="Info Block - 2" style="background-image: none;">
+                                    <div class="px-0 container-fluid">
+                                        <div class="row no-gutters s_nb_column_fixed align-items-center" />
+                                    </div>
+                                </section>
+                                <section class="s_call_to_action_3 o_colored_level pb168 pt128" data-snippet="s_call_to_action_3" data-name="Call To Action - 3" style="background-image: linear-gradient(145.18deg, rgb(155, 178, 169) 17.39%, rgb(64, 96, 59) 181.86%) !important;">
+                                    <div class="container">
+                                        <div class="row align-items-center s_col_no_bgcolor s_nb_column_fixed">
+                                            <div class="col-12 text-center">
+                                                <h2>
+                                                    <font class="text-200">Sie suchen einen Job?</font>
+                                                    <br />
+                                                </h2>
+                                                <p class="lead">
+                                                    <br />
+                                                </p>
+                                                <p class="lead">
+                                                    <font class="text-200">Wir suchen Talente – schauen Sie von Zeit zu Zeit in unsere aktuell vakanten Stellen. </font>
+                                                    <br />
+                                                    <font class="text-200">Über Empfehlungen und Weiterleitungen freuen wir uns sehr.</font>
+                                                    <br />
+                                                    <br />
+                                                </p>
+                                                <p class="lead">
+                                                    <br />
+                                                </p>
+                                            </div>
+                                            <div class="col-12 text-center">
+                                                <a href="/jobs" class="btn btn-custom text-o-color-1 bg-o-color-4 btn-lg" data-original-title="" title="" style="border-width: 1px; border-style: solid;">Zu den Stelleninseraten</a>
+                                                <br />
+                                            </div>
+                                        </div>
+                                    </div>
+                                </section>
+                                <section class="s_title o_colored_level pt96 pb48" data-vcss="001" data-snippet="s_title" data-name="Title" style="background-image: none;">
+                                    <div class="s_allow_columns container" data-original-title="" title="" aria-describedby="tooltip700325">
+                                        <h2 style="text-align: left;">
+                                            <span style="font-size: 24px">
+                                                <span style="font-size: 36px;">
+                                                    <font style="background-image: linear-gradient(148.49deg, rgb(209, 196, 234) 11.41%, rgb(118, 87, 146) 126.62%);" class="text-gradient">Köpfe</font>
+                                                </span>
+                                            </span>
+                                            <br />
+                                        </h2>
+                                        <h2>Das komplette Team</h2>
+                                        <h2 style="text-align: left;">
+                                            <span style="font-size: 24px">
+                                                <span style="font-size: 36px;">
+                                                    <font style="background-image: linear-gradient(148.49deg, rgb(209, 196, 234) 11.41%, rgb(118, 87, 146) 126.62%);" class="text-gradient" />
+                                                </span>
+                                            </span>
+                                        </h2>
+                                        <p>Im Jahr 1983 hat Erwin Durrer, Vater von Yves und Stéphanie, Dynco AG im Jahr 1983 gegründet. Das Familienunternehmen wird heute in der zweiten Generation geführt.</p>
+                                        <p>Den Verwaltungsrat bilden Erwin (Präsidium) und Yves.</p>
+                                        <p>
+                                            <br />
+                                        </p>
+                                        <p>Unser Team heute, sortiert nach alphabetischer Reihenfolge des Nachnamens:</p>
+                                    </div>
+                                </section>
+                                <section class="s_team_1 pb16 pt16 o_colored_level" data-snippet="s_team_1" data-name="Team - 1" style="background-image: none;">
+                                    <div class="container">
+                                        <div class="row">
+                                            <div class="col-12 col-sm-6 py-2 o_colored_level col-lg-3">
+                                                <div class="card border-0 h-100 bg-transparent">
+                                                    <img class="card-img-top" src="/dynco_base/static/src/img/dynco_homepage/wir/teams/1.png" alt="" loading="lazy" data-original-title="" title="" aria-describedby="tooltip576424" data-original-id="17038" data-original-src="/web/image/17038-ee36db4c/Portrait%20Laura.png" data-mimetype="image/png" data-resize-width="400" />
+                                                    <div class="py-4">
+                                                        <p>
+                                                            <span style="font-weight: bolder;">Laura Ast</span>
+                                                            <br />
+                                                        </p>
+                                                        <div class="text-o-color-1 text-uppercase mt-1">
+                                                            <font style="font-size: 24px;">
+                                                                <span style="font-size: 24px;">Marketing</span>
+                                                                <br />
+                                                                <br />
+                                                            </font>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="col-12 col-sm-6 py-2 o_colored_level col-lg-3">
+                                                <div class="card border-0 h-100 bg-transparent">
+                                                    <img class="card-img-top" src="/dynco_base/static/src/img/dynco_homepage/wir/teams/2.png" alt="" loading="lazy" data-original-title="" title="" aria-describedby="tooltip576424" data-original-id="82951" data-original-src="/web/image/82951-57aa3551/Portrait%20Mediha_Portrait%20Beige.png" data-mimetype="image/png" data-resize-width="400" />
+                                                    <div class="py-4">
+                                                        <p>
+                                                            <span style="font-weight: bolder;">Mediha Ballazhi</span>
+                                                        </p>
+                                                        <div class="text-o-color-1 text-uppercase mt-1">
+                                                            <font style="font-size: 24px;">
+                                                                <span style="font-size: 24px;">supply chain Management</span>
+                                                                <br />
+                                                            </font>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="col-12 col-sm-6 py-2 o_colored_level col-lg-3">
+                                                <div class="card border-0 h-100 bg-transparent">
+                                                    <img class="card-img-top" src="/dynco_base/static/src/img/dynco_homepage/wir/teams/3.png" alt="" loading="lazy" data-original-title="" title="" aria-describedby="tooltip576424" data-original-id="82952" data-original-src="/web/image/82952-3f0d90c7/Portrait%20Mergim_Portrait%20Green.png" data-mimetype="image/png" data-resize-width="400" />
+                                                    <div class="py-4">
+                                                        <p>
+                                                            <span style="font-weight: bolder;">Mergim Berisha</span>
+                                                            <br />
+                                                        </p>
+                                                        <div class="text-o-color-1 text-uppercase mt-1">
+                                                            <font style="font-size: 24px;">jr. key account mgmt &amp;amp;&amp;nbsp;b2c care<br /></font>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="col-12 col-sm-6 py-2 o_colored_level col-lg-3" style="">
+                                                <div class="card border-0 h-100 bg-transparent">
+                                                    <img class="card-img-top" src="/dynco_base/static/src/img/dynco_homepage/wir/teams/4.png" alt="" loading="lazy" data-original-title="" title="" aria-describedby="tooltip853882" data-original-id="2295" data-original-src="/web/image/2295-7e051125/Portrait%20Yves.png" data-mimetype="image/png" data-resize-width="400" />
+                                                    <div class="py-4">
+                                                        <p>
+                                                            <span style="font-weight: bolder; font-size: 24px;">Yves Durrer</span>
+                                                            <br />
+                                                        </p>
+                                                        <div class="text-o-color-1 text-uppercase mt-1">general <br />management<br /></div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="col-12 col-sm-6 py-2 o_colored_level col-lg-3" style="">
+                                                <div class="card border-0 h-100 bg-transparent">
+                                                    <img class="card-img-top" src="/dynco_base/static/src/img/dynco_homepage/wir/teams/5.png" alt="" loading="lazy" data-original-title="" title="" aria-describedby="tooltip576424" data-original-id="82953" data-original-src="/web/image/82953-33a9c458/Portrait%20Vanessa_Portrait%20Beige.png" data-mimetype="image/png" data-resize-width="400" />
+                                                    <div class="py-4">
+                                                        <p>
+                                                            <span style="font-weight: bolder;">Vanessa Hellinger</span>
+                                                            <br />
+                                                        </p>
+                                                        <div class="text-o-color-1 text-uppercase mt-1">
+                                                            <font style="font-size: 24px;">POS MANAGEMENT<br /><br /></font>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="col-12 col-sm-6 py-2 o_colored_level col-lg-3">
+                                                <div class="card border-0 h-100 bg-transparent">
+                                                    <img class="card-img-top" src="/dynco_base/static/src/img/dynco_homepage/wir/teams/6.png" alt="" loading="lazy" data-original-title="" title="" aria-describedby="tooltip438302" data-original-id="82954" data-original-src="/web/image/82954-ac0e4c4b/Portrait%20Simon_Portrait%20Green.png" data-mimetype="image/png" data-resize-width="401" />
+                                                    <div class="py-4">
+                                                        <p>
+                                                            <span style="font-weight: bolder;">Simon Hirschi</span>
+                                                        </p>
+                                                        <div class="text-o-color-1 text-uppercase mt-1">
+                                                            <font style="font-size: 12px;">
+                                                                <span style="font-size: 24px">Sales digital<br /><br /></span>
+                                                            </font>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="col-12 col-sm-6 py-2 o_colored_level col-lg-3">
+                                                <div class="card border-0 h-100 bg-transparent">
+                                                    <img class="card-img-top" src="/dynco_base/static/src/img/dynco_homepage/wir/teams/7.png" alt="" loading="lazy" data-original-title="" title="" aria-describedby="tooltip26385" data-original-id="2299" data-original-src="/web/image/2299-888bd058/Portrait%20Stephanie.png" data-mimetype="image/png" data-resize-width="400" />
+                                                    <div class="py-4">
+                                                        <p>
+                                                            <span style="font-weight: bolder;">Stéphanie Hoppe</span>
+                                                        </p>
+                                                        <div class="text-o-color-1 text-uppercase mt-1">
+                                                            <font style="font-size: 24px;">Sales Stationär<br /><br /></font>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="col-12 col-sm-6 py-2 o_colored_level col-lg-3">
+                                                <div class="card border-0 h-100 bg-transparent">
+                                                    <img class="card-img-top" src="/dynco_base/static/src/img/dynco_homepage/wir/teams/8.png" alt="" loading="lazy" data-original-title="" title="" aria-describedby="tooltip576424" data-original-id="82955" data-original-src="/web/image/82955-32026b5a/Portrait%20Mai_Portrait%20Beige.png" data-mimetype="image/png" data-resize-width="400" />
+                                                    <div class="py-4">
+                                                        <p>
+                                                            <span style="font-weight: bolder;">Mai Ly</span>
+                                                        </p>
+                                                        <div class="text-o-color-1 text-uppercase mt-1">
+                                                            <font style="font-size: 24px;">jr. product management (I.A.)<br /><br /></font>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="col-12 col-sm-6 py-2 o_colored_level col-lg-3">
+                                                <div class="card border-0 h-100 bg-transparent">
+                                                    <img class="card-img-top" src="/dynco_base/static/src/img/dynco_homepage/wir/teams/9.png" alt="" loading="lazy" data-original-title="" title="" aria-describedby="tooltip576424" data-original-id="2300" data-original-src="/web/image/2300-1fe9784b/Portrait%20Paola.png" data-mimetype="image/png" data-resize-width="400" />
+                                                    <div class="py-4">
+                                                        <p>
+                                                            <span style="font-weight: bolder;">Paola Mader</span>
+                                                            <br />
+                                                        </p>
+                                                        <div class="text-o-color-1 text-uppercase mt-1">
+                                                            <font style="font-size: 24px;">finance &amp;amp;&amp;nbsp;hr<br /><br /></font>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="col-12 col-sm-6 py-2 o_colored_level col-lg-3">
+                                                <div class="card border-0 h-100 bg-transparent">
+                                                    <img class="card-img-top" src="/dynco_base/static/src/img/dynco_homepage/wir/teams/10.png" alt="" loading="lazy" data-original-title="" title="" aria-describedby="tooltip576424" data-original-id="82956" data-original-src="/web/image/82956-651a7f29/Portrait%20Diego_Portrait%20Green.png" data-mimetype="image/png" data-resize-width="400" />
+                                                    <div class="py-4">
+                                                        <p><span style="font-weight: bolder;">Diego Oliveira</span>&amp;nbsp;<br /></p>
+                                                        <div class="text-o-color-1 text-uppercase mt-1">
+                                                            <font style="font-size: 24px;">Art director<br /><br /></font>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="col-12 col-sm-6 py-2 o_colored_level col-lg-3" style="">
+                                                <div class="card border-0 h-100 bg-transparent">
+                                                    <img class="card-img-top" src="/dynco_base/static/src/img/dynco_homepage/wir/teams/11.png" alt="" loading="lazy" data-original-title="" title="" aria-describedby="tooltip576424" data-original-id="82957" data-original-src="/web/image/82957-1ddda980/Portrait%20Ursula_Portrait%20Beige.png" data-mimetype="image/png" data-resize-width="400" />
+                                                    <div class="py-4">
+                                                        <p>
+                                                            <span style="font-weight: bolder;">Ursula Zürcher</span>
+                                                            <br />
+                                                        </p>
+                                                        <div class="text-o-color-1 text-uppercase mt-1">
+                                                            <font style="font-size: 24px;">POS MANAGEMENT<br /><br /></font>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </section>
+                                <section class="s_team_1 pb16 pt16 o_colored_level" data-snippet="s_team_1" data-name="Team - 1" style="background-image: none;">
+                                    <div class="container">
+                                        <div class="row">
+                                        </div>
+                                    </div>
+                                </section>
+                                <section class="s_text_block o_colored_level pt80 pb64" data-snippet="s_text_block" data-name="Text" style="background-image: linear-gradient(145.18deg, rgb(155, 178, 169) 17.39%, rgb(64, 96, 59) 181.86%);">
+                                    <div class="s_allow_columns o_container_small">
+                                        <h2>Postanschrift</h2>
+                                        <p>
+                                            <br />
+                                        </p>
+                                        <p>DYNCO AG</p>
+                                        <p>Bolligenstrasse 90</p>
+                                        <p>CH-3065 Bolligen</p>
+                                        <p>Schweiz</p>
+                                        <p>T:&amp;nbsp; +41 555 79 10<br />F:&amp;nbsp; +41 921 6088<br />E:&amp;nbsp; office(at)dynco.ch</p>
+                                    </div>
+                                </section>
+                                <section class="s_title o_colored_level pt112 pb112" data-vcss="001" data-snippet="s_title" data-name="Title" style="background-image: none;" data-original-title="" title="" aria-describedby="tooltip653769">
+                                    <div class="s_allow_columns container">
+                                        <h2 style="text-align: left;">
+                                            <font style="background-color: inherit;">Schreiben Sie uns</font>
+                                            <br />
+                                        </h2>
+                                        <section class="s_website_form pt16 pb16" data-vcss="001" data-snippet="s_website_form" data-name="Form">
+                                            <div class="container">
+                                                <form action="/website/form/" method="post" enctype="multipart/form-data" class="o_mark_required" data-mark="*" data-pre-fill="true" data-success-mode="redirect" data-success-page="/contactus-thank-you" data-model_name="mail.mail">
+                                                    <div class="s_website_form_rows row s_col_no_bgcolor">
+                                                        <div class="form-group s_website_form_field col-12 s_website_form_custom s_website_form_required" data-type="char" data-name="Field" data-visibility-condition="" data-visibility-between="">
+                                                            <div class="row s_col_no_resize s_col_no_bgcolor">
+                                                                <label class="col-form-label col-sm-auto s_website_form_label" style="width: 200px" for="oix3l4axcs1">
+                                                                    <span class="s_website_form_label_content">Ihr Name</span>
+                                                                    <span class="s_website_form_mark"> *</span>
+                                                                </label>
+                                                                <div class="col-sm">
+                                                                    <input type="text" class="form-control s_website_form_input" name="Ihr Name" required="1" data-fill-with="name" id="oix3l4axcs1" />
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                        <div class="form-group s_website_form_field col-12 s_website_form_custom" data-type="char" data-name="Field" data-visibility-condition="" data-visibility-between="">
+                                                            <div class="row s_col_no_resize s_col_no_bgcolor">
+                                                                <label class="col-form-label col-sm-auto s_website_form_label " style="width: 200px" for="ova9vmglp3o">
+                                                                    <span class="s_website_form_label_content">Firma</span>
+                                                                </label>
+                                                                <div class="col-sm">
+                                                                    <input type="text" class="form-control s_website_form_input" name="Firma" data-fill-with="commercial_company_name" id="ova9vmglp3o" />
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                        <div data-visibility-condition="" data-visibility-between="" class="form-group s_website_form_field col-12 s_website_form_model_required" data-type="char" data-name="Field">
+                                                            <div class="row s_col_no_resize s_col_no_bgcolor">
+                                                                <label class="col-form-label col-sm-auto s_website_form_label " style="width: 200px" for="onu0ajdfwat">
+                                                                    <span class="s_website_form_label_content">E-Mail</span>
+                                                                    <span class="s_website_form_mark"> *</span>
+                                                                </label>
+                                                                <div class="col-sm">
+                                                                    <input type="text" class="form-control s_website_form_input" name="email_from" required="true" placeholder="" id="onu0ajdfwat" data-fill-with="email" />
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                        <div data-visibility-condition="" data-visibility-between="" class="form-group s_website_form_field col-12 s_website_form_custom" data-type="tel" data-name="Field">
+                                                            <div class="row s_col_no_resize s_col_no_bgcolor">
+                                                                <label class="col-form-label col-sm-auto s_website_form_label " style="width: 200px" for="ovjh9789v9n">
+                                                                    <span class="s_website_form_label_content">Telefon</span>
+                                                                </label>
+                                                                <div class="col-sm">
+                                                                    <input type="tel" class="form-control s_website_form_input" name="Telefon" value="" placeholder="" id="ovjh9789v9n" data-fill-with="phone" />
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                        <div class="form-group s_website_form_field col-12 s_website_form_model_required" data-type="char" data-name="Field" data-visibility-condition="" data-visibility-between="">
+                                                            <div class="row s_col_no_resize s_col_no_bgcolor">
+                                                                <label class="col-form-label col-sm-auto s_website_form_label " style="width: 200px" for="ov9v40mp6as9">
+                                                                    <span class="s_website_form_label_content">Thema</span>
+                                                                    <span class="s_website_form_mark"> *</span>
+                                                                </label>
+                                                                <div class="col-sm">
+                                                                    <input type="text" class="form-control s_website_form_input" name="subject" required="true" id="ov9v40mp6as9" />
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                        <div class="form-group s_website_form_field col-12 s_website_form_custom s_website_form_required" data-type="text" data-name="Field" data-visibility-condition="" data-visibility-between="">
+                                                            <div class="row s_col_no_resize s_col_no_bgcolor">
+                                                                <label class="col-form-label col-sm-auto s_website_form_label " style="width: 200px" for="onmqjxwrtavl">
+                                                                    <span class="s_website_form_label_content">Ihre Nachricht</span>
+                                                                    <span class="s_website_form_mark"> *</span>
+                                                                </label>
+                                                                <div class="col-sm">
+                                                                    <textarea class="form-control s_website_form_input" name="Ihre Nachricht" required="1" id="onmqjxwrtavl" rows="3" />
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                        <div class="form-group s_website_form_field col-12    s_website_form_dnone" data-name="Field">
+                                                            <div class="row s_col_no_resize s_col_no_bgcolor">
+                                                                <label class="col-form-label col-sm-auto s_website_form_label " style="width: 200px">
+                                                                    <span class="s_website_form_label_content"/>
+                                                                </label>
+                                                                <div class="col-sm">
+                                                                    <input type="hidden" class="form-control s_website_form_input" name="email_to" value="info@yourcompany.example.com"/>
+                                                                    <div class="s_website_form_field_description small form-text text-muted">
+                                                                                    E-Mail-Adressen durch ein Komma trennen.
+                                                                                </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                        <div class="form-group col-12 s_website_form_field" data-name="Field">
+                                                            <div class="row s_col_no_resize s_col_no_bgcolor">
+                                                                <label class="col-form-label col-sm-auto s_website_form_label" style="width: 200px">
+                                                                    <span class="s_website_form_label_content">Attachments</span>
+                                                                </label>
+                                                                <div class="col-sm dynco_upload_btn_wrapper">
+                                                                    <button class="btnr" title="No file chosen">Choose files</button>
+                                                                    <span>No file chosen</span>
+                                                                    <input type="file" widget="many2many_binary" multiple="true" class="form-control s_website_form_input" name="attachments" id="helpdesk5" data-fill-with="undefined" title="No file chosen">
+                                                                        <!-- <t t-esc="request.params.get('attachment', '')"/> -->
+                                                                    </input>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                        <div class="form-group col-12 s_website_form_submit" data-name="Submit Button" data-original-title="" title="" aria-describedby="tooltip557904">
+                                                            <div style="width: 200px;" class="s_website_form_label"/>
+                                                            <a href="#" role="button" class="s_website_form_send btn btn-fill-primary btn-lg" data-original-title="" title="">Jetzt absenden</a>
+                                                            <span id="s_website_form_result"/>
+                                                        </div>
+                                                    </div>
+                                                </form>
+                                            </div>
+                                        </section>
+                                    </div>
+                                </section>
+                                <!-- main footer activated -->
+                                <!-- <section class="oe_structure s_text_block pt64 pb32 dynco_homepage o_colored_level section_dynco_footer" data-name="Dynco wir Footer" data-snippet="s_dynco_wir_footer" style="background-image: linear-gradient(145.18deg, rgb(155, 178, 169) 17.39%, rgb(64, 96, 59) 181.86%);">
+                                    <div class="container">
+                                        <div class="row">
+                                            <div class="col-md-2 o_colored_level mb-3 pb0 pt0 col-lg-2" data-original-title="" title="" aria-describedby="tooltip832474" style="">
+                                                <a href="/" class="o_footer_logo logo" data-original-title="" title="">
+                                                    <img clas="img-fluid" src="/dynco_base/static/src/img/dynco_footer_logo.png" alt="" loading="lazy" data-original-title="" title="" aria-describedby="tooltip287345" data-original-id="428" data-original-src="/dynco_base/static/src/img/dynco_footer_logo.png" data-mimetype="image/svg+xml" data-resize-width="undefined" style="animation-play-state: paused; transition: none 0s ease 0s; transform: translateX(-21.6%) translateY(-19.3%) scaleX(0.58) scaleY(0.58) !important;" class="float-left"/>
+                                                </a>
+                                            </div>
+                                            <div class="col-md-3 f_heading col-6 o_colored_level mb-3">
+                                                <p class="p_small">Adresse</p>
+                                                <p class="p_regular">dynco ag
+                                                    <br/>Bolligenstrasse 90
+                                                    <br/>3065 Bolligen
+                                                    <br/>Schweiz
+                                                </p>
+                                            </div>
+                                            <div class="col-md-3 f_heading col-6 o_colored_level mb-3">
+                                                <p class="p_small">Portfolio</p>
+                                                <ul class="list-unstyled mb-0">
+                                                    <li class="my-1">
+                                                        <p><a href="/climaqua">CLIMAQUA</a><span style="font-size: 14px"><font class="text-800">&amp;nbsp; by dynco</font></span></p>
+                                                    </li>
+                                                    <li class="my-1">
+                                                        <p><a href="/lechuza">Lechuza</a></p>
+                                                    </li>
+                                                    <li class="my-1">
+                                                        <p><a href="/ndt">Passion for Pottery - NDT</a></p>
+                                                    </li>
+                                                    <li class="my-1">
+                                                        <p><a href="/keramik">Keramik</a><span style="font-size: 14px"><font class="text-800">&amp;nbsp; by dynco</font></span></p>
+                                                    </li>
+                                                    <li class="my-1">
+                                                        <p><a href="/fellhof">Fellhof</a></p>
+                                                    </li>
+                                                    <li class="my-1">
+                                                        <p><a href="/poetic">Poétic</a></p>
+                                                    </li>
+                                                    <li class="my-1">
+                                                        <p><a href="/esteras">Esteras</a></p>
+                                                    </li>
+                                                    <li class="my-1">
+                                                        <p><a href="/urbalive">Urbalive - Plastia</a></p>
+                                                    </li>
+                                                    <li class="my-1">
+                                                        <p><a href="/pelletray">Pelletray</a><span style="font-size: 14px"><font class="text-800">&amp;nbsp; by dynco</font></span></p>
+                                                    </li>
+                                                    <li class="my-1">
+                                                        <p><a href="/qflame">Q-Flame</a></p>
+                                                    </li>
+                                                </ul>
+                                            </div>
+                                            <div class="col-md-2 f_heading col-6 o_colored_level mb-3">
+                                                <p class="p_small">E-Mail
+                                                    <br/>office@dynco.ch
+                                                    <br/>
+                                                    <br/>Telefon
+                                                    <br/>+41 31 921 88 44
+                                                                      
+                                                </p>
+                                                <p class="p_small">Fax
+                                                    <br/>+41 31 921 60 88
+                                                </p>
+                                            </div>
+                                            <div class="col-md-2 f_heading col-6 o_colored_level mb-3" data-original-title="" title="" aria-describedby="tooltip678741">
+                                                <p class="p_small">Follow Us</p>
+                                                <a href="/website/social/facebook" target="_blank" data-original-title="" title="">
+                                                    <img class="img-fluid o_we_custom_image" src="/dynco_base/static/src/img/Facebook - Negative.svg" alt="" loading="lazy" data-original-id="461" data-original-src="/dynco_base/static/src/img/Facebook - Negative.svg" data-mimetype="image/svg+xml" data-original-title="" title="" aria-describedby="tooltip448352" style="transform: translateX(-12.1%) translateY(-3.4%) scaleX(0.76) scaleY(0.76); animation-play-state: paused; transition: none 0s ease 0s; padding: 5px !important;"/>
+                                                </a>
+                                                <a href="/website/social/twitter" target="_blank" data-original-title="" title="">
+                                                    <img class="img-fluid o_we_custom_image" src="/dynco_base/static/src/img/Group.svg" alt="" loading="lazy" data-original-id="462" data-original-src="/dynco_base/static/src/img/Group.svg" data-mimetype="image/svg+xml" data-original-title="" title="" aria-describedby="tooltip910564" style="transform: translateX(-16.7%) scaleX(0.82) scaleY(0.82); animation-play-state: paused; transition: none 0s ease 0s;"/>
+                                                </a>
+                                            </div>
+                                        </div>
+                                        <div class="o_footer_copyright tp-custom-copyright dynco_copyright" data-name="Copyright">
+                                            <div class="container">
+                                                <div class="row justify-content-between">
+                                                    <div class="col-12 col-md-auto text-center text-md-left">
+                                                      <div class="my-2"><a href="/agb">AGB</a> | <a href="/datenschutz">Datenschutz |</a><a href="/impressum">&amp;nbsp;Impressum</a></div>
+                                                    </div>
+                                                    
+                                                    <div class="col-12 col-md-auto text-center text-md-right">
+                                                      <div class="my-2">©dynco AG 2022</div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </section> -->
+                            </div>
+                        </t>
+                    </t>
+                </t>
+            </field>
+        </record>
+        <record id="dynco_wir_page" model="website.page">
+            <field name="name">Wir</field>
+            <field name="url">/wir</field>
+            <field name="website_published">True</field>
+            <field name="track">True</field>
+            <field name="cache_time">0</field>
+            <field name="view_id" ref="dynco_wir_page_view" />
+        </record>
+    </data>
+</odoo>

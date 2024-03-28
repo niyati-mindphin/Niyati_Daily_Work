@@ -3,3 +3,4 @@
 # © 2023 Mindphin Technologies.
 
 from . import portal_wizard
+from . import schedule_date_wizard

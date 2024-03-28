@@ -1,0 +1,789 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<odoo>
+    <data>
+        <record id="product_category_inherit_view_bottom_descript" model="ir.ui.view">
+            <field name="name">product.public.category.bottom.descript.form</field>
+            <field name="model">product.public.category</field>
+            <field name="inherit_id" ref="website_sale.product_public_category_form_view"></field>
+            <field name="arch" type="xml">
+                <xpath expr="//div" position="after">
+                    <notebook>
+                        <page string="Category Description">
+                            <field name="website_description" nolabel="1"/>
+                        </page>
+                        <page string="Meta Info">
+                            <group>
+                                <field name="website_meta_title" string="Meta Title"/>
+                                <field name="website_meta_keywords" string="Meta Keyword"/>
+                                <field name="website_meta_description" string="Meta Description"/>
+                                <field name="product_tmpl_ids">
+                                    <tree>
+                                        <field name="sequence" widget="handle"/>
+                                        <field name="name" />
+                                        <field name="default_code" />
+                                        <field name="barcode" />
+                                    </tree>
+                                </field>
+                            </group>
+                        </page>
+                        <page string="Category Bottom Description">
+                            <field name="categ_bottom_description" nolabel="1"/>
+                        </page>
+                    </notebook>
+                </xpath>
+            </field>
+        </record>
+
+        <record model="ir.ui.view" id="product_video_form_vew_spt">
+            <field name="name">product.video.form.vew.spt</field>
+            <field name="model">product.video</field>
+            <field name="arch" type="xml">
+                <form string="Product Videos">
+                    <field name="sequence" invisible="1"/>
+                    <div class="row o_website_sale_image_modal">
+                        <div class="col-md-6 col-xl-5">
+                            <label for="name" string="Image Name"/>
+                            <h2><field name="name" placeholder="Image Name"/></h2>
+                            <label for="video_url" string="Video URL"/><br/>
+                            <field name="video_url"/><br/>
+                            <field name="image" widget="image" invisible="1"/><br/>
+                        </div>
+                        <div class="col-md-6 col-xl-7 text-center o_website_sale_image_modal_container">
+                            <div class="row">
+                                <div class="col-6" attrs="{'invisible': [('video_url', 'in', ['', False])]}">
+                                    <div class="o_video_container p-2">
+                                        <span>Video Preview</span>
+                                        <field name="embed_code" class="mt-2" widget="video_preview"/>
+                                        <h4 class="o_invalid_warning text-muted text-center" attrs="{'invisible': [('embed_code', '!=', False)]}">
+                                            Please enter a valid Video URL.
+                                        </h4>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </form>
+            </field>
+        </record>
+
+        <record id="product_template_form_view_product_customer_cod" model="ir.ui.view">
+            <field name="name">product.template.form.customer.code</field>
+            <field name="model">product.template</field>
+            <field name="inherit_id" ref="product.product_template_form_view"/>
+            <field name="arch" type="xml">
+                <xpath expr="//group[@name='product_template_images']" position="before">
+                    <group class="col-12"> 
+                        <field name="media_visibility" widget="radio" style="display: -webkit-inline-box!important;"/> 
+                    </group>
+                    <group>
+                    </group>
+                </xpath>
+                <xpath expr="//group[@name='product_template_images']" position="after">
+
+                    <group name="extra_images_copyright" string="Extra Images With Copyright" attrs="{'invisible': [('sale_ok','=',False)]}">
+                        <field name="cproduct_image_ids" class="o_website_sale_image_list" context="{'default_name': name}" mode="kanban" add-label="Add a Media" nolabel="1"/>
+                    </group>
+                </xpath>
+                <page name="sales" position="after">
+                    <page string="Customer Code">
+                         <field name="product_customer_code_ids"
+                                context="{'default_product_tmpl_id': context.get('product_tmpl_id', active_id)}"
+                                widget="one2many_list">
+                            <tree string="Product Customer Code" editable="bottom">
+                                <field name="sequence" widget="handle"/>
+                                <field name="product_code"/>
+                                <field name="partner_id"/>
+                                <field name="company_id"
+                                       groups="base.group_multi_company"
+                                       options="{'no_create': True}"/>
+                                <field name="product_tmpl_id"
+                                       string="Product"
+                                       invisible="context.get('visible_product_tmpl_id', True)"/>
+                                <field name="product_id"
+                                       invisible="1"/>
+                            </tree>
+                            <form string="Product Customer Code">
+                                <group>
+                                    <group>
+                                        <field name="product_code"/>
+                                    </group>
+                                    <group>
+                                        <field name="partner_id"/>
+                                        <field name="product_tmpl_id"
+                                               string="Product"
+                                               invisible="context.get('visible_product_tmpl_id', True)"/>
+                                        <field name="product_id"
+                                               domain="[('product_tmpl_id', '=', product_tmpl_id)]"
+                                               invisible="1"/>
+                                        <field name="company_id"
+                                               options="{'no_create': True}"
+                                               groups="base.group_multi_company"/>
+                                    </group>
+                                </group>
+                            </form>
+                        </field>
+                    </page>
+                </page>
+                <xpath expr="//label[@for='standard_price']" position="attributes">
+                    <attribute name="invisible">1</attribute>
+                </xpath>
+                <xpath expr="//div[@name='standard_price_uom']" position="attributes">
+                    <attribute name="invisible">1</attribute>
+                </xpath>
+            </field>
+        </record>
+
+        <record id="product_template_form_view_product_sale_delay" model="ir.ui.view">
+            <field name="name">product.template.form.sale.delay</field>
+            <field name="model">product.template</field>
+            <field name="inherit_id" ref="stock.view_template_property_form"/>
+            <field name="arch" type="xml">
+                <xpath expr="//group[@name='operations']/div" position="after">
+                  <label for="sale_delay_b2b" attrs="{'invisible': [('sale_ok', '=', False)]}"/>
+                        <div attrs="{'invisible': [('sale_ok', '=', False)]}">
+                            <field name="sale_delay_b2b" class="oe_inline" style="vertical-align:baseline"/> days
+                        </div>
+                </xpath> 
+              </field>
+        </record>
+
+        <record id="product_template_form_view_inherited" model="ir.ui.view">
+            <field name="name">product.template.product.website.form.inherited</field>
+            <field name="model">product.template</field>
+            <field name="type">form</field>
+            <field name="inherit_id" ref="product.product_template_only_form_view"/>
+            <field name="arch" type="xml">
+                <xpath expr="//field[@name='categ_id']" position="before">
+                    <field name="product_brand_lead" string="Product Brand"/>
+                </xpath>
+                <xpath expr="//field[@name='default_code']" position="before">
+                    <field name="curr_location" invisible="0"/>
+                </xpath>
+                <xpath expr="//page[@name='sales']" position="inside">
+                    <h4>Webshop Product Name</h4>
+                    <field name="webshop_product_name"/>
+                    <br/>
+                    <h4>Webshop Marketing Text</h4>
+                    <field name="webshop_marketing_text" widget="html" options="{'codeview': true}"/>
+                    <br/>
+                    <h4>Additional Information</h4>
+                    <field name="additional_info" widget="html" options="{'codeview': true}"/>
+                    <br/>
+                    <h4>Dimensions - filling quantities</h4>
+                    <field name="masse_info" widget="html" options="{'codeview': true}"/>
+                    <br/>
+                    <h4>Characteristics</h4>
+                    <field name="product_icon_ids" mode="kanban" context="{'default_name': name, 'default_product_tmpl_id': active_id}">
+                        <!-- <kanban>
+                            <field name="name"/>
+                            <field name="icon"/>
+                            <templates>
+                                <t t-name="kanban-box">
+                                    <div class="oe_kanban_global_click o_website_sale_image_card">
+                                        <a t-if="!read_only_mode" type="delete" class="fa fa-times pull-right" title="right"/>
+                                        <div class="o_kanban_image">
+                                            <alt t-if="record.icon.raw_value" t-att-src="'data:icon/png;base64,'+record.icon.raw_value"/>
+                                        </div>
+                                        <div class="oe_kanban_details">
+                                            <field name="name"/>
+                                        </div>
+                                    </div>
+                                </t>
+                            </templates>
+                        </kanban> -->
+                    </field>
+                    <br/>
+                    <h4>Videos</h4>
+                    <div class="alert alert-info ml8 mr8 fa fa-info-circle" role="alert">
+                        Vimeo/YouTube supported.To add YouTube video, please enter embeded url.
+                    </div>
+                    <field name="product_video_ids" mode="kanban" context="{'default_name': name, 'default_product_tmpl_id': active_id}">
+                        <!-- <kanban string="Product Videos">
+                            <field name="name"/>
+                            <field name="image"/>
+                            <field name="video_url"/>
+                            <templates>
+                                <t t-name="kanban-box">
+                                    <div class="oe_kanban_global_click">
+                                        <a t-if="!read_only_mode" type="delete" class="fa fa-times pull-right"/>
+                                        <div class="o_kanban_image">
+                                            <img t-if="record.image.raw_value" t-att-src="'data:image/png;base64,'+record.image.raw_value"/>
+                                        </div>
+                                        <div class="oe_kanban_details">
+                                            <field name="name"/>
+                                        </div>
+                                    </div>
+                                </t>
+                            </templates>
+                        </kanban> -->
+                    </field>
+                </xpath>
+                <xpath expr="//field[@name='barcode']" position="after">
+                    <field name="product_img_url" widget="url"/>
+                </xpath>
+                <xpath expr="//div[@name='options']" position="inside">
+                    <div>
+                        <field name="is_my_dynco" />
+                        <label for="is_my_dynco" />
+                    </div>
+                </xpath>
+            </field>
+        </record>
+
+        <record model="ir.ui.view" id="view_product_icon_form">
+            <field name="name">product.icon.form</field>
+            <field name="model">product.icon</field>
+            <field name="arch" type="xml">
+                <form string="Product Icons">
+                    <sheet>
+                        <field name="icon" widget="image" class="oe_avatar" options="{'size': [90, 90]}"/>
+                        <div class="oe_title">
+                            <label class="oe_edit_only" for="name" string="Icon Name"/>
+                            <h1><field name="name" placeholder="Icon Name" required="True"/></h1>
+                            <field name="product_tmpl_id" invisible="1"/>
+                        </div>
+                    </sheet>
+                </form>
+            </field>
+        </record>
+
+        <record model="ir.ui.view" id="view_product_customer_code_form">
+            <field name="name">view.product.customer.code.form</field>
+            <field name="model">product.customer.code</field>
+            <field name="arch" type="xml">
+                <form string="Product Customer Code">
+                    <sheet>
+                        <group>
+                            <group>
+                                <field name="product_code"/>
+                            </group>
+                            <group>
+                                <field name="partner_id"/>
+                                <field name="product_tmpl_id"
+                                       string="Product"
+                                       invisible="context.get('visible_product_tmpl_id', True)"/>
+                                <field name="product_id"
+                                       domain="[('product_tmpl_id', '=', product_tmpl_id)]"
+                                       invisible="1"/>
+                                <field name="company_id"
+                                       options="{'no_create': True}"
+                                       groups="base.group_multi_company"/>
+                            </group>
+                        </group>
+                    </sheet>
+                </form>
+            </field>
+        </record>
+
+        <record model="ir.ui.view" id="view_product_customer_code_tree">
+            <field name="name">view.product.customer.code.tree</field>
+            <field name="model">product.customer.code</field>
+            <field name="arch" type="xml">
+                <tree string="Product Customer Code">
+                    <field name="sequence" widget="handle"/>
+                    <field name="product_code"/>
+                    <field name="partner_id"/>
+                    <field name="company_id"
+                           groups="base.group_multi_company"
+                           options="{'no_create': True}"/>
+                    <field name="product_tmpl_id"
+                           string="Product"/>
+                    <field name="product_id"
+                           invisible="1"/>
+                </tree>
+            </field>
+        </record>
+
+        <record id="action_product_customer_code_tree" model="ir.actions.act_window">
+            <field name="name">Product Customer Code</field>
+            <field name="res_model">product.customer.code</field>
+            <field name="view_id" ref="view_product_customer_code_tree"/>
+        </record>
+
+        <menuitem action="action_product_customer_code_tree"
+                   id="menu_product_customer_code"
+                   sequence="6"
+                   parent="sale.prod_config_main"/>
+
+        <record model="ir.ui.view" id="view_product_supplierinfo_form_custom">
+            <field name="name">product.supplierinfo.form.view.custom</field>
+            <field name="model">product.supplierinfo</field>
+            <field name="inherit_id" ref="product.product_supplierinfo_form_view" />
+            <field name="priority">99</field>
+            <field name="arch" type="xml">
+                <xpath expr="//group/group[2]" position="inside">
+                    <field name="default_code" string="Art-Nr"/>
+                    <label for="cost_price" />
+                    <div>
+                        <field name="cost_price" class="oe_inline" /><field name="cost_currency_id" class="oe_inline"/>
+                    </div>
+                </xpath>
+            </field>
+        </record>
+
+        <record model="ir.ui.view" id="view_product_supplierinfo_tree_custom">
+            <field name="name">product.supplierinfo.tree.view.custom</field>
+            <field name="model">product.supplierinfo</field>
+            <field name="inherit_id" ref="product.product_supplierinfo_tree_view" />
+            <field name="priority">99</field>
+            <field name="arch" type="xml">
+                <xpath expr="//field[@name='price']" position="replace">
+                    <field name="price" string="Purchase"/>
+                </xpath>
+                <xpath expr="//field[@name='price']" position="after">
+                    <field name="cost_price" />
+                </xpath>
+                <xpath expr="//field[@name='product_tmpl_id']" position="before">
+                    <field name="default_code" string="Art-Nr"/>
+                </xpath>
+                <!-- <xpath expr="//tree" position="attributes">
+                    <attribute name="default_order">id desc</attribute>
+                </xpath> -->
+            </field>
+        </record>
+
+        <menuitem id="knk_main_menu_products_app" name="Products" sequence="11" web_icon="dynco_base,static/description/product_menu_icon.png"/>
+
+        <menuitem id="knk_menu_product_templ" parent="knk_main_menu_products_app" action="product.product_template_action" sequence="1"/>
+
+        <menuitem id="knkmenu_product_product" parent="knk_main_menu_products_app" action="product.product_normal_action_sell" sequence="2"/>
+
+        <record id="product_form_view_knk_cust" model="ir.ui.view">
+            <field name="name">product.form.view.knk</field>
+            <field name="model">product.product</field>
+            <field name="inherit_id" ref="product.product_normal_form_view"/>
+            <field name="arch" type="xml">
+                <xpath expr="//button[@name='action_view_sales']" position="replace">
+                    <button class="oe_stat_button" name="action_view_sales"
+                        type="object" icon="fa-signal" groups="sales_team.group_sale_salesman" help="Sold in the last 365 days">
+                        <div class="o_field_widget o_stat_info">
+                            <span class="o_stat_value">
+                                <field name="sales_count_cnt" widget="statinfo" nolabel="1" class="mr4"/>
+                                <field name="uom_name"/>
+                            </span>
+                            <span class="o_stat_text">Sold</span>
+                        </div>
+                    </button>
+                </xpath>
+            </field>
+        </record>
+
+        <record model="ir.ui.view" id="product_template_form_view_knk_cust">
+            <field name="name">product.template.form.view.knk</field>
+            <field name="model">product.template</field>
+            <field name="inherit_id" ref="sale.product_template_form_view_sale_order_button"/>
+            <field name="arch" type="xml">
+                <xpath expr="//button[@name='action_view_sales']" position="replace">
+                    <button class="oe_stat_button" name="action_view_sales"
+                        type="object" icon="fa-signal" groups="sales_team.group_sale_salesman" help="Sold in the last 365 days">
+                        <div class="o_field_widget o_stat_info">
+                            <span class="o_stat_value">
+                                <field name="sales_count_cnt" widget="statinfo" nolabel="1" class="mr4"/>
+                                <field name="uom_name"/>
+                            </span>
+                            <span class="o_stat_text">Sold</span>
+                        </div>
+                    </button>
+                </xpath>
+            </field>
+        </record>
+
+        <record id="view_product_image_form_extra_img_url_inherit" model="ir.ui.view">
+            <field name="name">product.image.form.extra.image.url.inherit</field>
+            <field name="model">product.image</field>
+            <field name="inherit_id" ref="website_sale.view_product_image_form"/>
+            <field name="arch" type="xml">
+                <field name="video_url" position="after">
+                    <label for="product_extra_img_url"/>
+                    <field name="product_extra_img_url" widget="url"/>
+                </field>
+            </field>
+        </record>
+
+        <record id="product_template_kanban_stock_view" model="ir.ui.view">
+            <field name="name">Product Template Kanban Stock Inherit</field>
+            <field name="model">product.template</field>
+            <field name="inherit_id" ref="stock.product_template_kanban_stock_view"/>
+            <field name="arch" type="xml">
+                <field name="type" position="after">
+                    <field name="curr_location"/>
+                    <field name="show_on_hand_qty_status_button"/>
+                </field>
+                <xpath expr="//field[@name='qty_available']//.." position="replace">
+                    <div t-if="record.show_on_hand_qty_status_button.raw_value">
+                        <t t-raw="record.curr_location.value"/> 
+                    </div>
+                </xpath>
+            </field>
+        </record>
+        <record model="ir.ui.view" id="view_assemble_product_price_purchase">
+            <field name="name">product.template.form.view.custom</field>
+            <field name="model">product.template</field>
+            <field name="inherit_id" ref="purchase.view_product_supplier_inherit" />
+            <field name="priority">99</field>
+            <field name="arch" type="xml">
+                <xpath expr="//field[@name='seller_ids']" position="before">
+                    <field name="bom_ids" invisible="1"/>
+                    <button name="action_assemble_product_price" string="Compute BOM Cost" type="object" class="btn-primary" attrs="{'invisible': [('bom_ids', '&lt;=', 0)]}"/>
+                </xpath>
+            </field>
+        </record>
+        <record id="product_pricelist_view_inherit_ecc_categ" model="ir.ui.view">
+            <field name="name">product.pricelist.form.inherit.ecc.categ</field>
+            <field name="model">product.pricelist</field>
+            <field name="inherit_id" ref="website_sale.website_sale_pricelist_form_view"/>
+            <field name="arch" type="xml">
+                <xpath expr="//page[@name='pricelist_config']//group[@name='pricelist_website']" position="inside">
+                    <field name="ecommerce_category"/>
+                </xpath>
+            </field>
+        </record>
+        <record id="product_pricelist_item_form_view_inherit" model="ir.ui.view">
+            <field name="name">product.pricelist.item.form.inherit</field>
+            <field name="model">product.pricelist.item</field>
+            <field name="inherit_id" ref="product.product_pricelist_item_form_view"/>
+            <field name="arch" type="xml">
+                <xpath expr="//field[@name='date_end']/.." position="after">
+                    <field name="cm_label_id"/>
+                    <field name="show_discount_on_label" attrs="{'invisible': [('applied_on', 'not in', ['1_product', '0_product_variant'])]}"/>
+                </xpath>
+            </field>
+        </record>
+        <record id="product_item_2_inherit_label_disc" model="ir.ui.view">
+            <field name="name">Theme Prime Product Item 2 - Label Disc</field>
+            <field name="inherit_id" search="[('key', '=', 'theme_prime.product_item_2'), ('website_id', '=', 20)]"/>
+            <field name="website_id" search="[('id', '=', 20)]"/>
+            <field name="type">qweb</field>
+            <field name="priority">20</field>
+            <field name="key">dynco_base.product_item_2</field>
+            <field name="arch" type="xml">
+                <xpath expr="//t[@t-call='theme_prime.product_label']" position="replace">
+                    <t t-set="price_rule" t-value="pricelist.get_product_price_rule(product, 1, request.env.user.partner_id)[1]"/>
+                    <t t-set="disc" t-value="False" />
+                    <t t-if="price_rule">
+                        <t t-set="price_rule" t-value="request.env['product.pricelist.item'].browse(price_rule)"/>
+                        <t t-if="price_rule and price_rule.cm_label_id">
+                            <t t-if="price_rule.show_discount_on_label">
+                                <t t-set="disc" t-value="price_rule.discountPercentage()" />
+                            </t>
+                            <t t-set="label" t-value="price_rule.cm_label_id"/>
+                        </t>
+                    </t>
+                    <t t-if="disc and int(disc.replace('%', '')) > 0">
+                        <t t-call="theme_prime.product_label">
+                            <t t-set="disc" t-value="disc"/>
+                            <t t-set="label" t-value="label"/>
+                        </t>
+                    </t>
+                </xpath>
+                <xpath expr="//form" position="inside">
+                    <t t-set="availability_check"  t-value="website.get_product_stock_available(product)" />
+                    <t t-if="availability_check.get('is_out_of_stock') and not product.allow_out_of_stock_order and not product.sudo().avail_only_specific_countries">
+                        <span class="o_ribbon bg-danger o_ribbon_left" style="">OUT OF STOCK</span>
+                    </t>
+                    <t t-if="product.sudo().avail_only_specific_countries">
+                        <t t-if="product.check_available_country()">
+                            <t t-if="product.sudo().stock_availability_for_warehouse">
+                                <t t-set="availability_check" t-value="website.check_add_to_cart_product_stock(product)" />
+                                <t t-set="available_threshold" t-value="website.check_available_threshold(product)" />
+
+                                <t t-if="available_threshold.get('available_threshold')">
+                                </t>
+                                <t t-elif="available_threshold.get('prevent_inventory_out')">
+                                    <span class="o_ribbon bg-danger o_ribbon_left" style="">OUT OF STOCK</span>
+                                </t>
+                                <t t-elif="available_threshold.get('prevent_inventory_in')">
+                                </t>
+                                <t t-else="">
+                                    <t t-if="availability_check.get('is_out_of_stock')">
+                                        <span class="o_ribbon bg-danger o_ribbon_left" style="">OUT OF STOCK</span>
+                                    </t>
+                                </t>
+                            </t>
+                        </t>
+                        <t t-else="">
+                            <span class="o_ribbon bg-danger o_ribbon_left not_avail_in_you_country" style="">NOT AVAILABLE</span>
+                        </t>
+                    </t>
+                </xpath>
+            </field>
+        </record>
+        <record id="product_item_2_inherit_label_disc_pelletray" model="ir.ui.view">
+            <field name="name">Theme Prime Product Item 2 - Label Disc pelletray</field>
+            <field name="inherit_id" search="[('key', '=', 'theme_prime.product_item_2'), ('website_id', '=', 24)]"/>
+            <field name="website_id" search="[('id', '=', 24)]"/>
+            <field name="type">qweb</field>
+            <field name="priority">20</field>
+            <field name="key">dynco_base.product_item_2</field>
+            <field name="arch" type="xml">
+                <xpath expr="//form" position="inside">
+                    <t t-set="availability_check"  t-value="website.get_product_stock_available(product)" />
+                    <t t-if="availability_check.get('is_out_of_stock') and not product.allow_out_of_stock_order and not product.sudo().avail_only_specific_countries">
+                        <span class="o_ribbon bg-danger o_ribbon_left" style="">OUT OF STOCK</span>
+                    </t>
+                    <t t-if="product.sudo().avail_only_specific_countries">
+                        <t t-if="product.check_available_country()">
+                            <t t-if="product.sudo().stock_availability_for_warehouse">
+                                <t t-set="availability_check" t-value="website.check_add_to_cart_product_stock(product)" />
+                                <t t-set="available_threshold" t-value="website.check_available_threshold(product)" />
+
+                                <t t-if="available_threshold.get('available_threshold')">
+                                </t>
+                                <t t-elif="available_threshold.get('prevent_inventory_out')">
+                                    <span class="o_ribbon bg-danger o_ribbon_left" style="">OUT OF STOCK</span>
+                                </t>
+                                <t t-elif="available_threshold.get('prevent_inventory_in')">
+                                </t>
+                                <t t-else="">
+                                    <t t-if="availability_check.get('is_out_of_stock')">
+                                        <span class="o_ribbon bg-danger o_ribbon_left" style="">OUT OF STOCK</span>
+                                    </t>
+                                </t>
+                            </t>
+                        </t>
+                        <t t-else="">
+                            <span class="o_ribbon bg-danger o_ribbon_left not_avail_in_you_country" style="">NOT AVAILABLE</span>
+                        </t>
+                    </t>
+                </xpath>
+            </field>
+        </record>
+
+        <record id="product_inherit_label_disc" model="ir.ui.view">
+            <field name="name">Theme Prime - Product Label Disc</field>
+            <field name="inherit_id" search="[('key', '=', 'theme_prime.product'), ('website_id', '=', 20)]"/>
+            <field name="website_id" search="[('id', '=', 20)]"/>
+            <field name="type">qweb</field>
+            <field name="priority">20</field>
+            <field name="key">dynco_base.product</field>
+            <field name="arch" type="xml">
+                <xpath expr="//t[@t-call='theme_prime.product_label']" position="before">
+                    <t t-set="price_rule" t-value="pricelist.get_product_price_rule(product, 1, request.env.user.partner_id)[1]"/>
+                    <t t-set="disc" t-value="False" />
+                    <t t-if="price_rule">
+                        <t t-set="price_rule" t-value="request.env['product.pricelist.item'].browse(price_rule)"/>
+                        <t t-if="price_rule and price_rule.cm_label_id">
+                            <t t-if="price_rule.show_discount_on_label">
+                                <t t-set="disc" t-value="price_rule.discountPercentage()" />
+                            </t>
+                            <t t-set="label" t-value="price_rule.cm_label_id"/>
+                        </t>
+                    </t>
+                </xpath>
+                <xpath expr="//t[@t-call='theme_prime.product_label']" position="replace">
+                    <t t-if="disc and int(disc.replace('%', '')) > 0">
+                        <t t-call="theme_prime.product_label">
+                            <t t-set="disc" t-value="disc"/>
+                            <t t-set="label" t-value="label"/>
+                            <t t-set="style" t-value="'1'"/>
+                            <t t-set="_classes" t-value="'mb-3 flat'"/>
+                        </t>
+                    </t>
+                </xpath>
+            </field>
+        </record>
+        <record id="product_inherit_label_disc_change" model="ir.ui.view">
+            <field name="name">Theme Prime - Product Label Discount lechuza</field>
+            <field name="inherit_id" search="[('key', '=', 'theme_prime.product'), ('website_id', '=', 9)]"/>
+            <field name="website_id" search="[('id', '=', 9)]"/>
+            <field name="type">qweb</field>
+            <field name="priority">20</field>
+            <field name="key">dynco_base.product</field>
+            <field name="arch" type="xml">
+                <xpath expr="//div[@t-if='product_pricelist_offer']" position="replace"/>
+            </field>
+        </record>
+        <record id="product_label_inherit_label_disc" model="ir.ui.view">
+            <field name="name">Label Discount</field>
+            <field name="inherit_id" search="[('key', '=', 'theme_prime.product_label'), ('website_id', '=', 20)]"/>
+            <field name="website_id" search="[('id', '=', 20)]"/>
+            <field name="type">qweb</field>
+            <field name="priority">20</field>
+            <field name="key">dynco_base.product_label</field>
+            <field name="arch" type="xml">
+                <xpath expr="//t[@t-if='label']" position="replace">
+                    <t t-if="label">
+                        <t t-set="style" t-value="style or label.style"/>
+                        <span t-if="style == '1'" t-attf-class="tp-product-label-style-1 #{_classes}" t-attf-style="background-color: rgba(#{label.background_color_rgb}, .8); color: #{label.text_color};">
+                            <t t-if="disc">
+                                <span t-esc="'%s - %s' % (label.name,disc)"/>
+                            </t>
+                            <t t-else="">
+                                <span t-field="label.name"/>
+                            </t>
+                            <div class="after" t-attf-style="border-color: rgba(#{label.background_color_rgb},.5) transparent rgba(#{label.background_color_rgb},.5) rgba(#{label.background_color_rgb},.8);"/>
+                        </span>
+                        <span t-elif="style in ['2', '3', '4', '5']" t-attf-class="tp-product-label-style-#{style} #{_classes}" t-attf-style="background-color: rgba(#{label.background_color_rgb}, .8); color: #{label.text_color};">
+                            <t t-if="disc">
+                                <span t-esc="'%s - %s' % (label.name,disc)"/>
+                            </t>
+                            <t t-else="">
+                                <span t-field="label.name"/>
+                            </t>
+                        </span>
+                    </t>
+                </xpath>
+            </field>
+        </record>
+
+        <record id="product_quick_view_inherit_label_disc" model="ir.ui.view">
+            <field name="name">Theme Prime - Product Quick View Label Disc</field>
+            <field name="inherit_id" search="[('key', '=', 'theme_prime.tp_product_quick_view'), ('website_id', '=', 20)]"/>
+            <field name="website_id" search="[('id', '=', 20)]"/>
+            <field name="type">qweb</field>
+            <field name="priority">20</field>
+            <field name="key">dynco_base.tp_product_quick_view</field>
+            <field name="arch" type="xml">
+                <xpath expr="//t[@t-call='theme_prime.product_label']" position="before">
+                    <t t-set="price_rule" t-value="pricelist.get_product_price_rule(product, 1, request.env.user.partner_id)[1]"/>
+                    <t t-set="disc" t-value="False" />
+                    <t t-if="price_rule">
+                        <t t-set="price_rule" t-value="request.env['product.pricelist.item'].browse(price_rule)"/>
+                        <t t-if="price_rule and price_rule.cm_label_id">
+                            <t t-if="price_rule.show_discount_on_label">
+                                <t t-set="disc" t-value="price_rule.discountPercentage()" />
+                            </t>
+                            <t t-set="label" t-value="price_rule.cm_label_id"/>
+                        </t>
+                    </t>
+                </xpath>
+                <xpath expr="//t[@t-call='theme_prime.product_label']" position="replace">
+                    <t t-if="disc and int(disc.replace('%', '')) > 0">
+                        <t t-call="theme_prime.product_label">
+                            <t t-set="disc" t-value="disc"/>
+                            <t t-set="label" t-value="label"/>
+                        </t>
+                    </t>
+                </xpath>
+            </field>
+        </record>
+
+        <record id="wishlist_page_inherit_label_disc" model="ir.ui.view">
+            <field name="name">Theme Prime - Wishlist Page Label Disc</field>
+            <field name="inherit_id" search="[('key', '=', 'theme_prime.product_wishlist'), ('website_id', '=', 20)]"/>
+            <field name="website_id" search="[('id', '=', 20)]"/>
+            <field name="type">qweb</field>
+            <field name="priority">20</field>
+            <field name="key">dynco_base.product_wishlist</field>
+            <field name="arch" type="xml">
+                <xpath expr="//t[@t-call='theme_prime.product_label']" position="replace">
+                    <t t-set="pricelist" t-value="website.get_current_pricelist()"/>
+                    <t t-set="price_rule" t-value="pricelist.get_product_price_rule(wish.product_id, 1, request.env.user.partner_id)[1]"/>
+                    <t t-set="disc" t-value="False" />
+                    <t t-if="price_rule">
+                        <t t-set="price_rule" t-value="request.env['product.pricelist.item'].browse(price_rule)"/>
+                        <t t-if="price_rule and price_rule.cm_label_id">
+                            <t t-if="price_rule.show_discount_on_label">
+                                <t t-set="disc" t-value="price_rule.discountPercentage()" />
+                            </t>
+                            <t t-set="label" t-value="price_rule.cm_label_id"/>
+                        </t>
+                    </t>
+                    <t t-if="disc and int(disc.replace('%', '')) > 0">
+                        <t t-call="theme_prime.product_label">
+                            <t t-set="disc" t-value="disc"/>
+                            <t t-set="label" t-value="label"/>
+                        </t>
+                    </t>
+                </xpath>
+                <xpath expr="//small[contains(@t-attf-class, 'oe_default_price')]" position="replace">
+                    <t t-if="wish.product_id.is_product_multi_price">
+                        <t t-if="price_rule">
+                            <t t-set="has_discounted_price" t-value="website.pricelist_id.currency_id.compare_amounts(price_rule.md_fixed_price, combination_info['price']) == 1"/>
+                            <small t-attf-class="ml-1 {{'' if has_discounted_price else 'd-none'}}" style="text-decoration: line-through; white-space: nowrap;" t-out="price_rule.md_fixed_price" t-options="{'widget': 'monetary', 'display_currency': website.pricelist_id.currency_id}"/>
+                        </t>
+                    </t>
+                    <t t-else="">
+                        <small t-attf-class="oe_default_price ml-1 {{'' if combination_info['has_discounted_price'] else 'd-none'}}" style="text-decoration: line-through; white-space: nowrap;" t-out="combination_info['list_price']" t-options="{'widget': 'monetary', 'display_currency': website.pricelist_id.currency_id}"/>
+                    </t>
+                </xpath>
+            </field>
+        </record>
+        <record id="similar_products_sidebar_inherit_label_disc" model="ir.ui.view">
+            <field name="name">Theme Prime - Similar Products Sidebar Label Disc</field>
+            <field name="inherit_id" search="[('key', '=', 'theme_prime.similar_products_sidebar'), ('website_id', '=', 20)]"/>
+            <field name="website_id" search="[('id', '=', 20)]"/>
+            <field name="type">qweb</field>
+            <field name="priority">20</field>
+            <field name="key">dynco_base.similar_products_sidebar</field>
+            <field name="arch" type="xml">
+                <xpath expr="//t[@t-call='theme_prime.product_label']" position="before">
+                    <t t-set="pricelist" t-value="website.get_current_pricelist()"/>
+                    <t t-set="price_rule" t-value="pricelist.get_product_price_rule(wish.product_id, 1, request.env.user.partner_id)[1]"/>
+                    <t t-set="disc" t-value="False" />
+                    <t t-if="price_rule">
+                        <t t-set="price_rule" t-value="request.env['product.pricelist.item'].browse(price_rule)"/>
+                        <t t-if="price_rule and price_rule.cm_label_id">
+                            <t t-if="price_rule.show_discount_on_label">
+                                <t t-set="disc" t-value="price_rule.discountPercentage()" />
+                            </t>
+                            <t t-set="label" t-value="price_rule.cm_label_id"/>
+                        </t>
+                    </t>
+                </xpath>
+                <xpath expr="//t[@t-call='theme_prime.product_label']" position="replace">
+                    <t t-if="disc and int(disc.replace('%', '')) > 0">
+                        <t t-call="theme_prime.product_label">
+                            <t t-set="disc" t-value="disc"/>
+                            <t t-set="label" t-value="label"/>
+                        </t>
+                    </t>
+                </xpath>
+            </field>
+        </record>
+
+        <record id="product_compare_inherit_label_disc" model="ir.ui.view">
+            <field name="name">Theme Prime - Product Compare Label Disc</field>
+            <field name="inherit_id" search="[('key', '=', 'theme_prime.product_compare'), ('website_id', '=', 20)]"/>
+            <field name="website_id" search="[('id', '=', 20)]"/>
+            <field name="type">qweb</field>
+            <field name="priority">20</field>
+            <field name="key">dynco_base.product_compare</field>
+            <field name="arch" type="xml">
+                <xpath expr="//t[@t-call='theme_prime.product_label']" position="replace">
+                    <t t-set="pricelist" t-value="website.get_current_pricelist()"/>
+                    <t t-set="price_rule" t-value="pricelist.get_product_price_rule(wish.product_id, 1, request.env.user.partner_id)[1]"/>
+                    <t t-set="disc" t-value="False" />
+                    <t t-if="price_rule">
+                        <t t-set="price_rule" t-value="request.env['product.pricelist.item'].browse(price_rule)"/>
+                        <t t-if="price_rule and price_rule.cm_label_id">
+                            <t t-if="price_rule.show_discount_on_label">
+                                <t t-set="disc" t-value="price_rule.discountPercentage()" />
+                            </t>
+                            <t t-set="label" t-value="price_rule.cm_label_id"/>
+                        </t>
+                    </t>
+                    <t t-if="disc and int(disc.replace('%', '')) > 0">
+                        <t t-call="theme_prime.product_label">
+                            <t t-set="disc" t-value="disc"/>
+                            <t t-set="label" t-value="label"/>
+                        </t>
+                    </t>
+                    <field name="show_discount_on_label" attrs="{'invisible': [('appiend_on', 'not in', ['1_product', '0_product_variant'])]}"/>
+                </xpath>
+            </field>
+        </record>
+        <record model="ir.ui.view" id="product_attribute_view_form_inherit">
+            <field name="inherit_id" ref="product.product_attribute_view_form" />
+            <field name="model">product.attribute</field>
+            <field name="arch" type="xml">
+                <xpath expr="//field[@name='visibility']" position="after">
+                    <field name="website_id" />
+                </xpath>
+            </field>
+        </record>
+        <record id="view_product_temp_media_visibility_tree" model="ir.ui.view">
+            <field name="name">product.template.tree.inherit</field>
+            <field name="model">product.template</field>
+            <field name="inherit_id" ref="product.product_template_tree_view"/>
+            <field name="arch" type="xml">
+                <field name="uom_id" position="after">
+                    <field name="media_visibility" optional="hide"/>
+                </field>
+                <field name="website_id" position="after">
+                    <field name="is_my_dynco" optional="show"/>
+                </field>
+            </field>
+        </record>
+    </data>
+</odoo>

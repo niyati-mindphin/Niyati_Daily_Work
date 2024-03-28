@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+        <record id="climaqua_about_us_page_view" model="ir.ui.view">
+            <field name="name">Climaqua about us</field>
+            <field name="type">qweb</field>
+            <field name="key">website.climaqua_about_us_page</field>
+            <field name="arch" type="xml">
+                <t name="Home" t-name="website.climaqua_about_us_page">
+                    <t t-name="website.download">
+                        <t t-call="website.layout">
+                            <div id="wrap" class="oe_structure oe_empty oe_website_sale carlos_danger_5">
+                                <div class="container">
+                                    <div class="row justify-content-center">
+                                        <div class="col-md-10">
+                                            <div class="row s_nb_column_fixed">
+                                                <div class="col-lg-12 s_title pt16 pb16 text-center header2">
+                                                    <br />
+                                                    <h1 class="s_title_default">
+                                                        <font>UNSERE GESCHICHTE</font>
+                                                    </h1>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <section class="s_text_block pb32 pt0">
+                                            <div class="container">
+                                                <div class="row justify-content-center">
+                                                    <div class="col-md-10 pb32 pt24">
+                                                        <p class="lead">Das Familienunternehmen Dynco AG&amp;nbsp;ist seit 1983 auf Produkte für Garten und Wohnen spezialisiert. </p>
+                                                        <p class="lead">Die Eigenmarke CLIMAQUA – eine Produktepallette rund um «Natur zu Hause» - entwickeln Erwin und Sohn Yves aus Bern (Schweiz) zusammen mit dem chinesischen Ehepaar Winnie und Evan aus Zhangzhou City (China).<br /></p>
+                                                        <p class="lead">Yves (BA Management, MA Design) ist zuständig für CLIMAQUA® Produktedesign und -entwicklung. 2018 übernahm er von Vater Erwin die Geschäftsführung der Dynco AG. Seit 2016 ist auch Schwester Stéphanie mit an Bord.</p>
+                                                        <p class="lead">Winnie und Evan bringen die nötige Erfahrung in der Verarbeitung von Naturmaterialen Stein, Holz und Metall mit. In einer verhältnismässig kleinen chinesischen Stadt entstand 2010 unter Leitung von Winnie und Evan die Produktionsstätte von CLIMAQUA.</p>
+                                                        <p class="lead">In enger Zusammenarbeit engagiert sich das junge Team in der Schweiz und China seither um die Kreation von CLIMAQUA® Fountains (seit Beginn), CLIMAQUA® Flames (seit 2011), den CLIMAQUA® Planters (seit 2014) und CLIMAQUA Boutique (seit 2015). </p>
+                                                        <p class="lead">Die meisten Produkte sind aus Naturschiefer, der auf 200 - 400 Mio Jahre alt geschätzt wird. Erfahre <u><a href="/faq-s" target="_blank">hier</a></u><a href="/faq-s" target="_blank" /> mehr zur Produktion.<br /></p>
+                                                        <p class="lead">Heute sind rund 40 Personen in die vielen spannenden Aufgaben rund um CLIMAQUA® eingebunden.<br /></p>
+                                                        <p class="lead">Die schweizerisch-chinesischen Beziehungen sind längst viel mehr als nur geschäftlicher Art. Es hat sich eine sehr enge und wertvolle Freundschaft entwickelt. So ist Yves Pate von Winnie und Evans erstem Sohn Weizhuo (eine in China sehr angesehene Ehre), was die beiden Familien auch privat verschweisst hat. CLIMAQUA - It's a family business.&amp;nbsp; <br /></p>
+                                                        <br/>
+                                                        <p class="lead text-center">
+                                                            <font style="font-size: 18px;">Erfahre mehr über die Tätigkeiten der DYNCO AG unter</font>
+                                                        </p><br/>
+                                                        <p class="lead text-center">
+                                                            <a href="http://www.dynco.ch" class="btn btn-outline-dark btn-lg" data-original-title="" title="" aria-describedby="tooltip323228" target="_blank">WWW.dynco.ch</a>
+                                                            <br />
+                                                        </p>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </section>
+                                    </div>
+                                </div>
+                            </div>
+                        </t>
+                    </t>
+                </t>
+            </field>
+        </record>
+        <record id="climaqua_about_us_page" model="website.page">
+            <field name="url">/aboutus</field>
+            <field name="website_published">True</field>
+            <field name="view_id" ref="climaqua_about_us_page_view" />
+        </record>
+    </data>
+</odoo>

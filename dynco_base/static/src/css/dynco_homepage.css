@@ -1,0 +1,278 @@
+.header_svg {
+    position: static;
+    width: 140px;
+    height: 90px;
+    left: 72px;
+    top: 32px;
+    flex: none;
+    order: 0;
+    flex-grow: 0;
+    margin: 0px 10px;
+}
+
+.header_svg_group {
+    position: absolute;
+    width: 140px;
+    height: 90px;
+}
+
+.header_svg_letter_d {
+    position: absolute;
+    left: 0%;
+    right: 81.44%;
+    top: 0%;
+    bottom: 36.85%;
+}
+
+
+.header_svg_letter_y {
+    position: absolute;
+    left: 16.23%;
+    right: 60.28%;
+    top: 38.29%;
+    bottom: 0%;
+
+}
+
+
+.header_svg_letter_n {
+    position: absolute;
+    left: 40.5%;
+    right: 40.9%;
+    top: 37.64%;
+    bottom: 37.52%;
+}
+
+
+.header_svg_letter_c {
+    position: absolute;
+    left: 59.87%;
+    right: 20.67%;
+    top: 37.62%;
+    bottom: 36.86%;
+}
+
+.header_svg_letter_o {
+    position: absolute;
+    left: 77.58%;
+    right: -0.01%;
+    top: 37.62%;
+    bottom: 36.89%;
+
+}
+
+.centered {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -60%);
+}
+
+.o_header_affixed.o_header_is_scrolled .navbar-brand .header_svg {
+    display: block !important;
+}
+
+.rectangle_img {
+    margin-top: 40px;
+    margin-left: auto;
+    margin-right: auto;
+    display: block;
+}
+
+.s-6 {
+    background: #c0afa8;
+}
+
+.container-fluid.home-wrappe-inside img {
+    width: 513px;
+    height: 359px;
+}
+
+.home-wrapper p {
+    padding-top: 260px;
+}
+
+#wir {
+    background-image: url(/dynco_base/static/src/img/banner_circle.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+    padding-top: 200px;
+    padding-bottom: 200px;
+}
+
+#wir h1 {
+    margin-left: 0;
+    font-weight: 900;
+    font-size: 60px;
+    line-height: 110%;
+    letter-spacing: 0.02em;
+    text-transform: uppercase;
+}
+
+#wir p {
+    margin-top: 24px;
+    font-weight: 400;
+    font-size: 21px;
+    line-height: 28px;
+    color: #121321;
+}
+
+#wir button {
+    margin-top: 64px;
+    font-weight: 900;
+    font-size: 16px;
+    line-height: 24px;
+    letter-spacing: 0.05em;
+    color: #FF5A4D;
+}
+
+/*#unsere_brands {
+    margin-left: 0;
+    margin-right: 0;
+}
+
+#unsere_brands div {
+    padding-left: 0;
+    padding-right: 0;
+}*/
+
+#unsere_brands div .unsere_first_sec {
+    background: linear-gradient(141.56deg, #D1C4EA 5.27%, #765792 96.14%);
+    height: 100vh;
+    position: sticky;
+    top: 0;
+    padding: 0 2% 0 10%;
+    margin: 0;
+}
+
+.pt100 {
+    padding-top: 100px;
+}
+
+.pb100 {
+    padding-bottom: 100px;
+}
+
+.s-5 {
+    background: #ECE8E6;
+}
+
+.color-black {
+    color: black;
+}
+
+.pd20 {
+    padding: 20px;
+}
+
+#unsere_brands div .unsere_first_sec p {
+    font-weight: 400;
+    font-size: 21px;
+    line-height: 28px;
+    color: #121321;
+}
+
+.ptb {
+    padding: 50px 0;
+}
+
+.w-fill-img {
+    width: -webkit-fill-available;
+}
+
+.produkted {
+    padding: 100px 0;
+}
+
+.produkted div {
+    margin-bottom: 50px;
+}
+
+.produkted div h1 {
+    font-weight: 900;
+    font-size: 50px;
+    line-height: 110%;
+    letter-spacing: 0.02em;
+    text-transform: uppercase;
+    color: #121321;
+}
+
+.dynco_footer_cl {
+    background: #ECE8E6;
+}
+
+.produkted div p {
+    font-weight: 400;
+    font-size: 21px;
+    line-height: 28px;
+    color: #121321;
+}
+
+.produkted div button {
+    font-weight: 900;
+    font-size: 16px;
+    line-height: 24px;
+    letter-spacing: 0.05em;
+    color: #FF5A4D;
+}
+
+.footer_dynco {
+    background-color: #ECE8E6 !important;
+    padding-top: 5%;
+
+}
+
+.footer_dynco .container {
+    padding-bottom: 3%;
+
+}
+
+.footer_dynco .f_heading p {
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 18px;
+    color: #121321;
+}
+
+.footer_dynco .f_heading h5 {
+    font-weight: 400;
+    font-size: 21px;
+    line-height: 28px;
+    color: #121321;
+}
+
+.dynco_copyright {
+    border-top: 1px solid #121321;
+    margin-top: 43px;
+    padding-top: 43px;
+}
+
+.dynco_copyright div {
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 18px;
+    color: #121321;
+}
+
+.header_12 ul li a span {
+    font-weight: 900;
+    font-size: 20px;
+    letter-spacing: 0.02em;
+    text-transform: uppercase;
+    color: #121321;
+    display: inline-block;
+    max-width: min-content;
+    margin: 0px 20px;
+    ;
+}
+
+.header_12 .nav-link {
+    white-space: unset;
+}
+
+.navbar {
+    padding: 32px 50px 24px !important;
+}
+h1 {
+    font-weight: 800 !important;
+}

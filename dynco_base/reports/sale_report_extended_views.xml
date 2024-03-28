@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+        <record id="view_order_product_search_inherit_knk" model="ir.ui.view">
+            <field name="name">view.order.product.search.inherit.knk</field>
+            <field name="model">sale.report</field>
+            <field name="inherit_id" ref="sale.view_order_product_search"/>
+            <field name="arch" type="xml">
+                <xpath expr="//filter[@name='filter_date']" position="after">
+                    <filter name="filter_invoice_date" date="invoice_date" default_period="this_month"/>
+                </xpath>
+                <xpath expr="//filter[@name='Category']" position="after">
+                    <filter string="Product Brand" name="product_brand" context="{'group_by':'product_brand_lead'}"/>
+                </xpath>
+                <xpath expr="//filter[@name='date']" position="after">
+                    <filter string="Invoice Date" name="invoice_date" context="{'group_by':'invoice_date'}"/>
+                </xpath>
+                <xpath expr="//field[@name='industry_id']" position="replace" />
+                <xpath expr="//field[@name='categ_id']" position="replace" />
+                <xpath expr="//field[@name='company_id']" position="replace" />
+                <xpath expr="//field[@name='country_id']" position="after">
+                    <field name="website_id"/>
+                    <field name="product_brand_lead"/>
+                </xpath>
+                <xpath expr="//field[@name='user_id']" position="before">
+                    <xpath expr="//field[@name='partner_id']" position="move"/>
+                </xpath>
+                <xpath expr="//field[@name='product_id']" position="after">
+                    <xpath expr="//field[@name='categ_id']" position="move"/>
+                </xpath>
+            </field>
+        </record>
+        <record id="sale_report_view_dashboard_inherit" model="ir.ui.view">
+            <field name="name">sale.report.view.dashboard</field>
+            <field name="model">sale.report</field>
+            <field name="inherit_id" ref="sale_enterprise.sale_report_view_dashboard"/>
+            <field name="arch" type="xml">
+                <!-- <xpath expr="//aggregate[@name='price_subtotal_confirmed_orders']" position="replace" />
+                <xpath expr="//aggregate[@name='avg_days_to_confirm']" position="replace" /> -->
+                <xpath expr="//aggregate[@name='price_subtotal_all_orders']" position="before">
+                    <!-- <aggregate name="invoice_total" string="Untaxed Invoiced Total" field="untaxed_amount_invoiced" group_operator="sum" widget="monetary"/> -->
+                    <aggregate name="margin" string="Untaxed Margin" field="margin" group_operator="sum" widget="monetary"/>
+                    <aggregate name="margin_percent" string="Untaxed Margin(%)" field="l_margin_percent" group_operator="avg" />
+                </xpath>
+               <!--  <xpath expr="//aggregate[@name='lines']" position="after">
+                    <aggregate name="credit_note_usd" string="Credit Notes(USD)" field="credit_note_usd" group_operator="min" />
+                    <aggregate name="credit_note_chf" string="Credit Notes(CHF)" field="credit_note_chf" group_operator="min" />
+                    <aggregate name="credit_note_eur" string="Credit Notes(EUR)" field="credit_note_eur" group_operator="min" />
+                    <aggregate name="to_invoice_usd" string="To Invoice(USD)" field="to_invoice_usd" group_operator="min" />
+                    <aggregate name="to_invoice_chf" string="To Invoice(CHF)" field="to_invoice_chf" group_operator="min" />
+                    <aggregate name="to_invoice_eur" string="To Invoice(EUR)" field="to_invoice_eur" group_operator="min" />
+                    <aggregate name="total_overdue" string="Overdue" field="total_overdue" group_operator="max" />
+                    <aggregate name="product_count" string="Ordered Products count" field="product_count" group_operator="sum" />
+                    <aggregate name="invoice_product_count" string="Invoiced Products count" field="invoice_product_count" group_operator="sum" />
+                    <aggregate name="days_of_develiry" string="Average Days of Delivery" field="days_of_develiry" group_operator="avg" value_label="days" clickable="False"/>
+                </xpath>
+                <xpath expr="//widget[@name='pie_chart']" position="replace">
+                    <widget name="pie_chart" title="Product Brand" attrs="{'groupby': 'product_brand_lead'}"/>
+                </xpath> -->
+            </field>
+        </record>
+    </data>
+</odoo>

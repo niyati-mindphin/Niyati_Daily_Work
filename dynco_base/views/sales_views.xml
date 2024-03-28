@@ -1,0 +1,237 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+    <record id="knk_view_sales_order_filter_inh" model="ir.ui.view">
+        <field name="name">knk.view.sales.order.filter.inh</field>
+        <field name="model">sale.order</field>
+        <field name="inherit_id" ref="sale.view_sales_order_filter"/>
+        <field name="arch" type="xml">
+            <xpath expr="//field[@name='name']" position="after">
+                <field name="delivery_detail"/>
+            </xpath>
+            <xpath expr="//field[@name='name']" position="attributes">
+                <attribute name="filter_domain">['|','|','|',('name','ilike',self),('client_order_ref','ilike',self),('partner_id','child_of',self),('delivery_detail','ilike',self)]</attribute>
+            </xpath>
+            <xpath expr="//group" position="inside">
+                <filter string="Expected Date" name="expected_date"  context="{'group_by': 'expected_date'}"/>
+            </xpath>
+            <xpath expr="//filter[@name='my_sale_orders_filter']" position="after">
+                <field name="message_needaction" invisible="1" />
+                <filter string="Unread Messages" domain="[('message_needaction', '=', True)]" name="unread_messages"/>
+            </xpath>
+        </field>
+    </record>
+
+    <record id="knk_view_order_form_inh" model="ir.ui.view">
+        <field name="name">knk.view.order.form.inh</field>
+        <field name="model">sale.order</field>
+        <field name="inherit_id" ref="sale.view_order_form"/>
+        <field name="arch" type="xml">
+            <xpath expr="." position="inside">
+                <link rel="stylesheet" href="/dynco_base/static/src/scss/invoice_view.scss" />
+            </xpath>
+            <xpath expr="//page[last()]" position="after">
+                <page string="Swiss QR Code">
+                    <group>
+                        <field name="partner_bank_id" />
+                        <field name="account_holder_id"/>
+                        <field attrs="{'invisible':[('qrcode_status', '=', False)]}" name="qrcode_status" />
+                        <field name="qr_reference" />
+                        <field attrs="{'invisible':[('qrcode_qrbill', '=', False)]}" name="qrcode_qrbill" widget="image" class="qrinv-img" />
+                    </group>
+                </page>
+            </xpath>
+            <xpath expr="//form//header" position="inside">
+                <button name="knk_print_ch_qr_code" string="Print QR-Code" type="object" attrs="{'invisible':[('qrcode_qrbill', '=', False)]}" groups="base.group_user" class="oe_highlight" />
+            </xpath>
+            <xpath expr="//page[@name='other_information']" position="inside">
+                <group>
+                    <label for="free_delivery_message"/>
+                    <field name="free_delivery_message" nolabel='1'/>
+                </group>
+            </xpath>
+            <xpath expr="//field[@name='payment_term_id']" position="after">
+                <field name="delivery_detail"/>
+                <field name="is_delivered" invisible="1"/>
+                <field name="transport_cost" invisible="1"/>
+            </xpath>
+            <xpath expr="//header/button[@name='action_quotation_send']" position="after">
+                <button name="action_view_sale_delivery_lead" string="Delivered" type="object" class="btn-primary" attrs="{'invisible': ['|', ('is_delivered', '=', True), ('state', 'not in', ['sale', 'delivered'])]}"/>
+                    <button name="action_view_sale_delivery_lead" string="Transport Cost" type="object" class="btn-primary" attrs="{'invisible': ['|', ('is_delivered', '=', False), ('state', 'not in', ['sale', 'delivered'])]}"/>
+            </xpath>
+            <xpath expr="//field[@name='show_update_pricelist']" position="after">
+                <field name="schedule_date"/>
+                <field name="actual_delivery_date" attrs="{'invisible': [('state', 'in', ['draft', 'sent', 'cancel'])], 'readonly': [('state', '=', 'sale')]}"/>
+                <field name="days_of_develiry"/>
+            </xpath>
+            <xpath expr="//field[@name='order_line']/tree/field[@name='product_uom_qty']" position="before">
+                <field name="sd_on_hand" readonly="1"/>
+            </xpath>
+            <xpath expr="//field[@name='order_line']/tree/field[@name='product_template_id']" position="attributes">
+                <attribute name="class">o_knk_multi_line</attribute>
+            </xpath>
+            <xpath expr="//field[@name='order_line']/tree/field[@name='product_uom_qty']" position="attributes">
+                <attribute name="string">Qty</attribute>
+            </xpath>
+            <xpath expr="//field[@name='order_line']/tree/field[@name='qty_delivered']" position="attributes">
+                <attribute name="string">Delv</attribute>
+            </xpath>
+            <xpath expr="//field[@name='order_line']/tree/field[@name='qty_invoiced']" position="attributes">
+                <attribute name="string">Inv</attribute>
+            </xpath>
+            <!-- already available fields -->
+            <!-- <xpath expr="//field[@name='order_line']/tree//field[@name='price_total']" position="before">
+                <field name="price_subtotal" invisible="1"/>
+                <field name="margin" invisible="1"/>
+                <field name="l_margin_percent" invisible="1"/>
+            </xpath> -->
+            <xpath expr="//header" position="after">
+                <field name="show_note_warning" invisible='1'/>
+                <div class="alert alert-danger my-0 d-flex" role="alert" attrs="{'invisible': [('show_note_warning', '!=', True)]}">
+                    <strong style="color: red;">Note:</strong>
+                    <field name="note" readonly="1" class="my-0"/>
+                </div>
+            </xpath>
+        </field>
+    </record>
+
+    <record id="knk_view_order_tree_inh" model="ir.ui.view">
+        <field name="name">knk.view.order.tree.inh</field>
+        <field name="model">sale.order</field>
+        <field name="inherit_id" ref="sale.view_order_tree"/>
+        <field name="arch" type="xml">
+            <xpath expr="//field[@name='partner_id']" position="before">
+                <field name="delivery_detail"/>
+            </xpath>
+            <xpath expr="//field[@name='amount_total']" position="after">
+                <field name="margin" optional="show" sum="Total Margin"/>
+                <field name="margin_after_transport" optional="show" sum="Total Margin AT"/>
+                <field name="margin_after_transpor_per" class="my_class_percentage" optional="show"/>
+            </xpath>
+        </field>
+    </record>
+
+    <record id="knk_view_quotation_tree_inh" model="ir.ui.view">
+        <field name="name">knk.view.quotation.tree.inh</field>
+        <field name="model">sale.order</field>
+        <field name="inherit_id" ref="sale.view_quotation_tree"/>
+        <field name="arch" type="xml">
+            <xpath expr="//field[@name='partner_id']" position="before">
+                <field name="delivery_detail"/>
+            </xpath>
+            <xpath expr="//tree" position="attributes">
+                <attribute name="decoration-warning">message_needaction == True</attribute>
+            </xpath>
+            <xpath expr="//field[@name='amount_total']" position="after">
+                <field name="margin" optional="show" sum="Total Margin"/>
+                <field name="margin_after_transport" optional="show" sum="Total Margin AT"/>
+                <field name="margin_after_transpor_per" class="my_class_percentage" optional="show"/>
+            </xpath>
+        </field>
+    </record>
+    <record model="ir.ui.view" id="view_sale_margin_sale_order_custom">
+        <field name="name">sale.order.margin.view.form.custom</field>
+        <field name="model">sale.order</field>
+        <field name="inherit_id" ref="sale_margin.sale_margin_sale_order" />
+        <field name="priority">99</field>
+        <field name="arch" type="xml">
+            <xpath expr="//label[@for='margin']" position="before">
+                <div class="oe_inline">
+                    <label for="action_update_margin" />
+                </div>
+                <button type="object" name="action_update_margin" string="Update Margin" icon="fa-refresh"/>
+                <field name="vendors_ids" widget="many2many_tags" invisible="1"/>
+                <field name="vendor" />
+            </xpath>
+            <xpath expr="//div[hasclass('text-nowrap')]" position="after">
+                <field name="margin_after_transport"/>
+                <field name="margin_after_transpor_per" class="my_class_percentage"/>
+            </xpath>
+            <!-- already available fields -->
+            <!-- <xpath expr="//field[@name='margin']" position="after">
+                <field name="margin_percent" class="my_class_percentage"/>
+            </xpath> -->
+        </field>
+    </record>
+
+    <!-- sale kanban -->
+
+    <record id="sale_stage_search" model="ir.ui.view">
+        <field name="name">sale.stage.search</field>
+        <field name="model">sale.stage</field>
+        <field name="arch" type="xml">
+            <search string="Stage Search">
+                <field name="name"/>
+                <field name="sequence"/>
+            </search>
+        </field>
+    </record>
+
+    <record id="sale_stage_tree" model="ir.ui.view">
+        <field name="name">sale.stage.tree</field>
+        <field name="model">sale.stage</field>
+        <field name="arch" type="xml">
+            <tree string="Stages">
+                <field name="sequence" widget="handle"/>
+                <field name="name"/>
+            </tree>
+        </field>
+    </record>
+
+    <record id="sale_stage_form" model="ir.ui.view">
+        <field name="name">sale.stage.form</field>
+        <field name="model">sale.stage</field>
+        <field name="priority" eval="1"/>
+        <field name="arch" type="xml">
+            <form string="Stage">
+                <group>
+                    <group>
+                        <field name="name"/>
+                        <field name="fold"/>
+                    </group>
+                </group>
+            </form>
+        </field>
+    </record>
+
+    <record id="sale_stage_action" model="ir.actions.act_window">
+        <field name="name">Sale Stages</field>
+        <field name="res_model">sale.stage</field>
+        <field name="view_id" ref="dynco_base.sale_stage_tree"/>
+    </record>
+
+    <menuitem
+        id="menu_sale_stage_act"
+        action="sale_stage_action"
+        parent="sale.menu_sale_config"
+        groups="sales_team.group_sale_manager"/>
+
+    <record id="view_sale_order_kanban_inh" model="ir.ui.view">
+        <field name="name">sale.order.kanban.inherit</field>
+        <field name="model">sale.order</field>
+        <field name="inherit_id" ref="sale.view_sale_order_kanban" />
+        <field name="arch" type="xml">
+            <xpath expr="//kanban[hasclass('o_kanban_mobile')]" position="attributes">
+                <attribute name="default_group_by">stage_id</attribute>
+            </xpath>
+            <xpath expr="//field[@name='currency_id']" position="after">
+                <field name="stage_id"/>
+            </xpath>
+        </field>
+    </record>
+
+    <record id="view_delivery_carrier_form_dynco" model="ir.ui.view">
+        <field name="name">view.delivery.carrier.form.dynco</field>
+        <field name="model">delivery.carrier</field>
+        <field name="inherit_id" ref="delivery.view_delivery_carrier_form" />
+        <field name="arch" type="xml">
+            <xpath expr="//group[@name='delivery_details']" position="after">
+                <group name="handling_details">
+                    <field name="is_handling_charge" />
+                    <field name="handling_amount_limit" />
+                    <field name="handling_product_id" attrs="{'required':[('is_handling_charge', '=', True)]}" domain="[('detailed_type', '=', 'service')]" />
+                    <field name="handling_charges" />
+                </group>
+            </xpath>
+        </field>
+    </record>
+</odoo>

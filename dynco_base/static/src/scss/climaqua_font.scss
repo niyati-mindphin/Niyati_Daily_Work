@@ -1,0 +1,412 @@
+@font-face {
+    font-family: "Soleil W01 Regular";
+    src: url("/dynco_base/static/src/fonts/Soleil.otf") format("opentype"),
+    // src: url("/dynco_base/static/src/fonts/soleil.ttf") format("truetype"),
+    // chrome、firefox、opera、Safari, Android, iOS 4.2+
+}
+
+@font-face {
+    font-family: "Soleil W01 Light";
+    src: url("/dynco_base/static/src/fonts/SoleilLt.otf") format("opentype"),
+    // src: url("/dynco_base/static/src/fonts/soleil-light.ttf") format("truetype"),
+    // chrome、firefox、opera、Safari, Android, iOS 4.2+
+}
+
+body, h2, h3, h4, h5, h6, .h1, .h2, .h3, .h4, .h5, .h6 {
+    font-family:"Soleil W01 Light";
+}
+
+h1 {
+    font-family: "Soleil W01 Regular";
+    font-size: 36px !important;
+    // text-transform: uppercase !important;
+    // letter-spacing: 0.4rem !important;
+    font-weight: 400 !important;
+    line-height: 50px !important;
+}
+h2 {
+    font-family: "Soleil W01 Regular" !important;
+    font-size: 28px !important;
+    font-weight: 500 !important;
+    line-height: 35px !important;
+}
+h3 {
+    font-family: "Soleil W01 Regular" !important;
+    font-size: 24px !important;
+    font-weight: 400 !important;
+    line-height: 34px !important;
+}
+h4 {
+    font-size: 18px !important;
+    font-weight: 700 !important;
+    line-height: 21.6px !important;
+}
+h5 {
+    font-size: 14px !important;
+    font-weight: 700 !important;
+    line-height: 16.8px !important;
+}
+p {
+    font-size: 18px !important;
+    font-weight: 400 !important;
+    line-height: 27px !important;
+}
+
+* {
+ font-family:"Soleil W01 Regular";
+}
+
+h2:not(.h2notapply) {
+    // background-color: #ffc69c !important;
+    // font-size: 14px !important;
+    // font-family: "Soleil W01 Regular" !important;
+    // padding: 8px 8px 8px !important;
+    // text-transform: uppercase !important;
+    // letter-spacing: 0.4rem !important;
+    // color: #000 !important;
+    // font-weight: 500 !important;
+    // line-height: 1.2 !important;
+    // margin: 8px auto !important;
+    // width: fit-content !important;
+}
+
+.climaqua_homepage h3 {
+    // background-color: #fff;
+    // font-family: "Soleil W01 Regular";
+    // font-size: 1.09375rem !important;
+    // text-transform: uppercase !important;
+    // letter-spacing: 0.4rem !important;
+    // padding: 1rem 1.5rem !important;
+}
+
+@media(max-width:768px){
+    h1 > font[style^='font-size: 24px;'], h2 > font[style^='font-size: 24px;']{
+            font-size: 18px !important;
+    }
+    h1 span > font[style^='font-size: 18px;'], h2 span > font[style^='font-size: 18px;']{
+            font-size: 16px !important;
+    }
+    h2 > font[style^='font-size: 14px;'], h2 > font[style^='font-size: 14px;']{
+            font-size: 12px !important;
+    }
+    .climaqua_homepage h3 > font[style^='font-size: 24px;'], .climaqua_homepage h3 > font[style^='font-size: 24px;'] {
+        font-size: 12px !important;
+    }
+    h1 {
+        // font-size: 18px !important;
+    }
+    h2, h2 span {
+        letter-spacing: 0.2rem !important;
+    }
+    #top_menu_container .dropdown-menu {
+        left: inherit !important;
+        right: 5px !important;
+        top: auto !important;
+    }
+    .climaqua_homepage img.img-fluid.o_we_custom_image {
+        width: 100% !important;
+    }
+}
+
+@media(min-width:768px){
+    .desktop_menu .js_language_selector {
+        display: none;
+    }
+}
+
+// re-design overay header
+
+.o_header_affixed.o_header_is_scrolled .d-flex.flex-lg-row.justify-content-between.w-100.align-items-center.flex-wrap.flex-lg-nowrap {
+    display: none !important;
+}
+
+#wrapwrap > header .search-query{
+    background-color: transparent !important;
+    border-color: transparent;
+}
+
+.climaqua_search_box button.btn.oe_search_button.btn-primary{
+    background-color: transparent !important;
+    border-color: transparent !important;
+}
+
+.o_header_affixed.o_header_is_scrolled .clima_pre_header {
+    display: none !important;
+}
+
+.clima_pre_header {
+    width: 100%;
+}
+
+.o_header_overlay .custom_climaqua_menu .nav-link {
+    white-space: nowrap !important;
+}
+
+.o_header_overlay .custom_climaqua_menu ul li a span{
+    font-weight: 500 !important;
+    font-size: 0.875rem !important;
+}
+
+// .o_header_overlay .climaqua_icon_header a.dropdown-toggle {
+//     color: white !important;
+// }
+
+// .o_header_overlay .climaqua_icon_header sup.my_wish_quantity, .o_header_overlay .climaqua_icon_header sup.my_cart_quantity {
+//     color: black !important;
+//     background-color: white !important;
+// }
+
+// .o_header_overlay .climaqua_icon_header i.dri.dri-cart {
+//     color: white !important;
+// }
+
+// .o_header_overlay .climaqua_icon_header i.dri.dri-wishlist {
+//     color: white !important;
+// }
+
+// desktop
+
+@media(min-width:3948px) and (max-width:5264px){
+    .climaqua_homepage div#myCarousel1663755533821 {
+        height: 2900px !important;
+    }
+}
+
+@media(min-width:2632px) and (max-width:3948px){
+    .climaqua_homepage div#myCarousel1663755533821 {
+        height: 2200px !important;
+    }
+}
+
+@media(min-width:1974px) and (max-width:2632px){
+    .climaqua_homepage div#myCarousel1663755533821 {
+        height: 1500px !important;
+    }
+}
+
+@media(min-width:1645px) and (max-width:1974px){
+    .climaqua_homepage div#myCarousel1663755533821 {
+        height: 1000px !important;
+    }
+}
+
+@media(min-width:1574px) and (max-width:1645px){
+    .climaqua_homepage div#myCarousel1663755533821 {
+        height: 900px !important;
+    }
+}
+@media(min-width:1120px) and (max-width:1574px){
+    .climaqua_homepage div#myCarousel1663755533821 {
+        height: 750px !important;
+    }
+}
+.o_half_screen_height {
+    @extend .o_full_screen_height;
+    min-height: 100vh !important;
+}
+@media(min-width:764px) and (max-width:1120px){
+    .o_half_screen_height {
+      min-height: 100vh !important;
+    }
+}
+
+@media(min-width:1024.98px){
+    .clima_mobile_toggle_logo_menu {
+        display: none !important;
+    }
+    .o_header_overlay header nav.navbar{
+        box-shadow: unset !important;
+    }
+}
+
+// @media(min-width: 764px) and (max-width:992px){
+//     .climaqua_homepage div#myCarousel1663755533821 {
+//         height: 500px !important;
+//     }
+// }
+
+@media(min-width: 576px) and (max-width:764px){
+    .climaqua_homepage div#myCarousel1663755533821 {
+        height: 450px !important;
+    }
+}
+
+@media (min-width: 481px) and (max-width: 576px){
+    .climaqua_homepage div#myCarousel1663755533821 {
+        height: 330px !important;
+    }
+}
+@media (max-width: 481px){
+    .climaqua_homepage div#myCarousel1663755533821 {
+        height: 237px !important;
+    }
+}
+
+// mobile
+@media (max-width: 1024.98px){
+    .clima_desktop_toggle_logo_menu{
+        display: none !important;
+    }
+    .desktop_middle_menu{
+        display: none !important;
+    }
+    .clima_mobile_toggle_logo_menu #top_menu.o_menu_loading {
+        opacity: 1 !important;
+    }
+    .climaqua_homepage {
+        .s_icon_block_5 {
+            .col-2 {
+                flex: 0 0 20%;
+                max-width: 20%;
+            }
+        }
+    }
+}
+
+// hamburger menu for 1024px screen size
+@media (min-width: 991px) and (max-width:1024.98px) {
+    #wrapwrap > header > .navbar {
+        padding: 0.5rem 1rem !important;
+    }
+    .clima_mobile_toggle_logo_menu {
+        flex-wrap: wrap !important;
+
+        .collapse:not(.show) {
+            display: none !important;
+        }
+        .navbar-brand.logo {
+            display: block !important;
+        }
+        .navbar-toggler {
+            display: block;
+        }
+        // .custom_climaqua_menu:not(.show) {
+        //     display: none !important;
+        // }
+        #top_menu > .nav-item > a.nav-link:before {
+            height: 0px !important;
+        }
+
+        .collapsing {
+            position: relative !important;
+            height: 0 !important;
+            overflow: hidden !important;
+            transition: height 0.2s ease !important;
+        }
+        .tp-navbar-toggler {
+            border: none;
+            background: transparent !important;
+        }
+
+        .tp-navbar-toggler:focus {
+            outline: none;
+        }
+
+        .tp-navbar-toggler .icon-bar {
+            width: 25px;
+            height: 2px;
+            background-color: #0da9ef;
+            display: block;
+            transition: all 0.2s;
+            margin: 5px 2px;
+        }
+
+        .tp-navbar-toggler .top-bar {
+            transform: rotate(45deg);
+            transform-origin: 10% 10%;
+        }
+
+        .tp-navbar-toggler .middle-bar {
+            opacity: 0;
+        }
+
+        .tp-navbar-toggler .bottom-bar {
+            transform: rotate(-45deg);
+            transform-origin: 10% 90%;
+        }
+
+        .tp-navbar-toggler.collapsed .icon-bar {
+            background-color: #171a1c;
+        }
+
+        .tp-navbar-toggler.collapsed .top-bar,
+        .tp-navbar-toggler.collapsed .bottom-bar {
+            transform: rotate(0);
+        }
+
+        .tp-navbar-toggler.collapsed .middle-bar {
+            opacity: 1;
+        }
+        #top_menu_collapse.custom_climaqua_menu {
+            flex-basis: 100% !important;
+        }
+
+        #top_menu_collapse {
+            margin-top: 0.5rem;
+            margin-left: -1rem;
+            margin-bottom: -0.5rem;
+            margin-right: -1rem;
+            border-top: 1px solid #CED4DA;
+        }
+        #top_menu_collapse #top_menu>.nav-item>.nav-link {
+            font-weight: 500;
+            position: relative;
+            padding: 1rem 2rem;
+            border-bottom: 1px solid #CED4DA;
+        }
+        #top_menu_collapse #top_menu>.nav-item.tp-primary-bg>.nav-link>.dri {
+            position: absolute;
+            top: 18px;
+            left: 10px;
+            bottom: auto;
+            right: auto;
+        }
+
+        .navbar-nav {
+            flex-direction: column !important;
+            -webkit-flex-direction: column;
+            width: 100%;
+            .dropdown-menu {
+                position: static !important;
+            }
+        }
+
+    }
+}
+
+
+.clima_desktop_toggle_logo_menu{
+    .climaqua_icon_header{
+        .dropdown-menu {
+            right: 0;
+            left: auto;
+        }
+    }
+}
+
+.climaqua_icon_header {
+    .js_language_selector {
+        a.js_change_lang:hover {
+            span{
+                color: #ffffff !important;
+            }
+        }
+    }
+}
+
+.climaqua_search_box {
+    .search-query {
+        &::placeholder {
+            color: #000000 !important;
+        }
+        color: #000000 !important;
+    }
+}
+
+.clima_3block_icons {
+    padding-right: 5px;
+    padding-left: 5px;
+}
+.b2b_login_superuser{
+    font-size:0.85rem !important;
+}

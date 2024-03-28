@@ -1,0 +1,266 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+	<data>
+		<template id="report_saleorder_qrcode">
+		    <t t-call="web.html_container">
+		        <t t-foreach="docs" t-as="o">
+		            <t t-call="dynco_base.report_saleorder_qrcode_document" t-lang="o.partner_id.lang"/>
+		        </t>
+		    </t>
+		</template>
+	
+		<template id="report_saleorder_qrcode_nohead">
+		    <t t-call="web.html_container">
+		        <t t-foreach="docs" t-as="o">
+		        	<div class="header"></div>
+		        	<div class="footer"></div>
+		            <t t-call="dynco_base.report_saleorder_qrcode_document" t-lang="o.partner_id.lang"/>
+		        </t>
+		    </t>
+		</template>
+		
+		<!-- Template containing the QR-bill -->
+		<template id="report_saleorder_qrcode_document">
+				<div class="page article">
+					<style>
+
+					    /* Disable custom bakground */
+					    .o_report_layout_background {
+					        background: none;
+					        min-height: 0;
+					    }
+
+					    .swissqr_title {
+					        position: absolute;
+					        padding: 15px;
+					        padding-top: 150px;
+					    }
+
+					    .swissqr_content {
+					        position: static;
+					    }
+
+					    .swissqr_receipt {
+					        position: absolute;
+					        background-color: white;
+					        border-color:black;
+					        border-width: 1pt 1pt 1pt 1pt;
+					        border-style: dotted;
+					        height: 131mm;    /* 105 * 1.25 - 0.25 mm to cope for rendering issues due to header (probably a rounding issue) */
+					        width: 77.5mm;    /* 62 * 1.25 */
+					        top: 150mm;       /* 192 * 1.25 */
+					        left: 0mm;
+					        /*These measures are multiplied by 1.25 here to fit the canvas size used by our reporting engine (1.25 times bigger than A4)*/
+					    }
+
+					    .swissqr_body {
+					        position: absolute;
+					        background-color: white;
+					        border-color:black;
+					        border-width: 1pt 1pt 1pt 1pt;
+					        border-style: dotted;
+					        height: 131mm;    /* 105 * 1.25 - 0.25mm to cope for rendering issues due to header (probably a rounding issue)*/
+					        width: 185mm;     /* 148 * 1.25 */
+					        top: 150mm;       /* 192 * 1.25 */
+					        left: 77.5mm;     /* 62 * 1.25 */
+					        /*These measures are multiplied by 1.25 here to fit the canvas size used by our reporting engine (1.25 times bigger than A4)*/
+
+					    }
+
+					    .swissqr {
+					        position: absolute;
+					        height: 57.5mm; /* 46 * 1.25 */
+					        width: 57.5mm; /* 46 * 1.25 */
+					        top: 20mm; /* 16 * 1.25 */
+					        left: 6.25mm;  /* 5 * 1.25 min readability margin for QR */
+					        /*These measures are multiplied by 1.25 here to fit the canvas size used by our reporting engine (1.25 times bigger than A4)*/
+					    }
+
+					    .ch_cross {
+					        position: absolute;
+					        background-color: white;
+					        height: 8.75mm; /* 7 * 1.25 */
+					        width: 8.75mm; /* 7 * 1.25 */
+					        top: 44.375mm;  /* (16 + 23 - 7/2) * 1.25 = 41.5 * 1.25 */
+					        left: 30.625mm; /* (5 + 23 - 7/2) * 1.25 = 24.5 * 1.25 */
+					        /*These measures are multiplied by 1.25 here to fit the canvas size used by our reporting engine (1.25 times bigger than A4)*/
+					    }
+
+					    .swissqr_text {
+					        font-family: Arial, Frutiger, Helvetica;
+					        color: black;
+					        line-height: 1;
+					        padding-top: 1em;
+					    }
+
+					    .swissqr_text .title {
+					    	font-size: 8pt;
+				            font-weight: bold;
+				            margin-top: 2mm;
+					    }
+
+					    .swissqr_text .content {
+					    	font-size: 10pt;
+					    }
+
+					    .main_title {
+					        margin-top: 5mm;
+					        font-size: 11pt;
+					        font-weight: bold;
+					    }
+
+					    .swissqr_column_left {
+					        position: absolute;
+					        left: 5mm;
+					    }
+
+					    .swissqr_column_right {
+					        position: absolute;
+					        left: 70mm; /* (5 + 46 + 5) * 1.25 */
+					        max-width: 90mm;
+					    }
+
+					    .procedure_zone {
+					        top: 15mm;
+					    }
+
+					    .receipt_indication_zone {
+					        top: 10mm;
+					    }
+
+					    .receipt_amount_zone {
+					        position: absolute;
+					        top: 86mm;
+					    }
+
+					    .receipt_amount_zone .column{
+					    	margin-right: 5mm;
+				            float: left;
+					    }
+
+					    .receipt_acceptance_point_zone {
+					        position: relative;
+					        top: 100mm;
+					    }
+
+					    .receipt_acceptance_point_zone .content {
+				            float: right;
+				            padding-right: 1em;
+				        }
+
+					    .amount_zone {
+					        position: absolute;
+					        top: 86mm;
+					    }
+
+					    .amount_zone .column {
+					    	margin-right: 5mm;
+				            float: left;
+					    }
+					</style>
+					<div class="row" t-if="o.qrcode_qrbill">
+						<div class="swissqr_content">
+		                    <div class="swissqr_receipt">
+		                        <div id="receipt_title_zone" class="main_title swissqr_column_left">
+		                            <span>Receipt</span>
+		                        </div>
+		                        <div id="receipt_indication_zone" class="swissqr_column_left receipt_indication_zone">
+		                            <div class="swissqr_text">
+		                              <span class="title">Account / Payable to</span><br/>
+		                              <span class="content" t-field="o.partner_bank_id.acc_number"/><br/>
+		                              <span class="content" t-field="o.company_id.name"/><br/>
+		                              <span class="content" t-field="o.company_id.street"/><br/>
+		                              <span class="content" t-field="o.company_id.country_id.code"/>
+		                              <span class="content" t-field="o.company_id.zip"/>
+		                              <span class="content" t-field="o.company_id.city"/><br/>
+		                            </div>
+		                            <t t-if="o.qr_reference">
+		                                <div class="swissqr_text">
+		                                    <span class="title">Reference</span><br/>
+		                                    <span class="content" t-esc="o.qr_reference"/><br/>
+		                                </div>
+		                            </t>
+		                            <div class="swissqr_text">
+		                                <span class="title">Payable by</span><br/>
+		                                <span class="content" t-field="o.partner_id.commercial_partner_id.name"/><br/>
+		                                <span class="content" t-field="o.partner_id.street"> </span>
+		                                <span class="content" t-field="o.partner_id.street2"/><br/>
+		                                <span class="content" t-field="o.partner_id.country_id.code"/>
+		                                <span class="content" t-field="o.partner_id.zip"/>
+		                                <span class="content" t-field="o.partner_id.city"/><br/>
+		                            </div>
+		                        </div>
+		                        <div id="receipt_amount_zone" class="swissqr_column_left receipt_amount_zone">
+		                            <div class="swissqr_text">
+		                                <div class="column">
+		                                    <span class="title">Currency</span><br/>
+		                                    <span class="content" t-field="o.currency_id.name"/>
+		                                </div>
+		                                <div class="column">
+		                                    <span class="title">Amount</span><br/>
+		                                    <span class="content" t-esc="'{0:.2f}'.format(float(o.amount_total)).replace(',', ' ')"/>
+		                                </div>
+		                            </div>
+		                        </div>
+		                        <div id="receipt_acceptance_point_zone" class="receipt_acceptance_point_zone">
+		                            <div class="swissqr_text content">
+		                                <span class="title">Acceptance point</span>
+		                            </div>
+		                        </div>
+		                    </div>
+		                    <div class="swissqr_body">
+		                        <div class="main_title swissqr_column_left">
+		                            <span>Payment Part</span>
+		                        </div>
+		                        <img class="swissqr" t-attf-src="data:image/png;base64,{{o.qrcode_qrbill}}" alt="QR-Code" />
+		                        <div id="indications_zone" class="swissqr_column_right indication_zone">
+		                            <div class="swissqr_text">
+		                                <span class="title">Account / Payable to</span><br/>
+		                                <span class="content" t-field="o.partner_bank_id.acc_number"/><br/>
+		                                <span class="content" t-field="o.company_id.name"/><br/>
+		                                <span class="content" t-field="o.company_id.street"/><br/>
+		                                <span class="content" t-field="o.company_id.country_id.code"/>
+		                                <span class="content" t-field="o.company_id.zip"/>
+		                                <span class="content" t-field="o.company_id.city"/><br/>
+		                            </div>
+		                            <t t-if="o.qr_reference">
+		                                <div class="swissqr_text">
+		                                    <span class="title">Reference</span><br/>
+		                                    <span class="content" t-esc="o.qr_reference"/><br/>
+		                                </div>
+		                            </t>
+		                            <t t-if="o.bvr_reference">
+		                                <div class="swissqr_text">
+		                                    <span class="title">Additional information</span><br/>
+		                                    <span class="content" t-esc="o.bvr_reference"/>
+		                                </div>
+		                            </t>
+		                            <div class="swissqr_text">
+		                                <span class="title">Payable by</span><br/>
+		                                <span class="content" t-field="o.partner_id.commercial_partner_id.name"/><br/>
+		                                <span class="content" t-field="o.partner_id.street"> </span>
+		                                <span class="content" t-field="o.partner_id.street2"/><br/>
+		                                <span class="content" t-field="o.partner_id.country_id.code"/>
+		                                <span class="content" t-field="o.partner_id.zip"/>
+		                                <span class="content" t-field="o.partner_id.city"/><br/>
+		                            </div>
+		                        </div>
+		                        <div id="amount_zone" class="swissqr_column_left amount_zone">
+		                            <div class="swissqr_text">
+		                                <div class="column">
+		                                    <span class="title">Currency</span><br/>
+		                                    <span class="content" t-field="o.currency_id.name"/>
+		                                </div>
+		                                <div class="column">
+		                                    <span class="title">Amount</span><br/>
+		                                    <span class="content" t-esc="'{0:.2f}'.format(float(o.amount_total)).replace(',', ' ')"/>
+		                                </div>
+		                            </div>
+		                        </div>
+		                    </div>
+		                </div>
+					</div>
+				</div>
+		</template>
+	</data>
+</odoo>

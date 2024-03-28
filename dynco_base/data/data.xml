@@ -1,0 +1,1620 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+    <data noupdate="1">
+        <record id="brand_total" model="dr.product.brand">
+            <field name="name">TOTAL</field>
+        </record>
+        <record id="dynco_multi_website.lechuza_website_spt" model="website">
+            <field name="name">Lechuza</field>
+            <!-- <field name="domain">lechuza-o15.dynco.ch</field> -->
+            <field name="company_id" ref="base.main_company"/>
+            <field name="user_id" ref="base.public_user"/>
+            <field name="sequence">3</field>
+            <field name="logo" type="base64" file="dynco_base/static/src/img/lechuza_img/lechuza_logo.png"/>
+        </record>
+    </data>
+    <data noupdate="1">
+        <record id="menu_themenwelten" model="website.menu">
+            <field name="name">Nach Thema</field>
+            <field name="url">#</field>
+            <field name="is_mega_menu">True</field>
+            <field name="sequence" type="int">20</field>
+            <field name="website_id" ref="dynco_multi_website.lechuza_website_spt"/>
+            <field name="mega_menu_content" type="html">
+                <section class="s_mega_menu_thumbnails pt24 o_colored_level o_cc o_cc1">
+                    <div class="container">
+                        <div class="row justify-content-center">
+                            <div class="col-12 col-sm col-md-12 col-lg px-0">
+                                <div class="container">
+                                    <div class="row oe_structure">
+                                        <div class="col-md-3 col-6 text-center py-2 ">
+                                            <a href="/shop/category/nach-thema-balkon-233" class="nav-link o_default_snippet_text p-0 tp-animation-scale" data-name="Menu Item">
+                                                <img class="img-fluid rounded" src="/dynco_base/static/src/img/lechuza_img/mega_menu/image.jpg" alt=""/>
+                                                <br/>
+                                                <span class="d-block p-2 mt-2">
+                                                    <font style="font-size:14px;">BALKON</font>
+                                                </span>
+                                            </a>
+                                        </div>
+                                        <div class="col-md-3 col-6 text-center py-2 ">
+                                            <a href="/shop/category/nach-thema-grossgefasse-68" class="nav-link o_default_snippet_text p-0 tp-animation-scale" data-name="Menu Item">
+                                                <img class="img-fluid rounded" src="/dynco_base/static/src/img/lechuza_img/mega_menu/image(1).jpg" alt=""/>
+                                                <br/>
+                                                <span class="d-block p-2 mt-2">
+                                                    <font style="font-size:14px;">GROSSGEFÄSSE</font>
+                                                </span>
+                                            </a>
+                                        </div>
+                                        <div class="col-md-3 col-6 text-center py-2 ">
+                                            <a href="/shop/category/nach-thema-kinder-46" class="nav-link o_default_snippet_text p-0 tp-animation-scale" data-name="Menu Item">
+                                                <img class="img-fluid rounded" src="/dynco_base/static/src/img/lechuza_img/mega_menu/image (2).jpg" alt=""/>
+                                                <br/>
+                                                <span class="d-block p-2 mt-2">
+                                                    <font style="font-size:14px;">KINDER</font>
+                                                </span>
+                                            </a>
+                                        </div>
+                                        <div class="col-md-3 col-6 text-center py-2 ">
+                                            <a href="/shop/category/nach-thema-klassiker-244" class="nav-link o_default_snippet_text p-0 tp-animation-scale" data-name="Menu Item">
+                                                <img class="img-fluid rounded" src="/dynco_base/static/src/img/lechuza_img/mega_menu/image (3).jpg" alt=""/>
+                                                <br/>
+                                                <span class="d-block p-2 mt-2">
+                                                    <font style="font-size:14px;">KLASSIKER</font>
+                                                </span>
+                                            </a>
+                                        </div>
+                                        <div class="col-md-3 col-6 text-center py-2 ">
+                                            <a href="/shop/category/nach-thema-krauter-45" class="nav-link o_default_snippet_text p-0 tp-animation-scale" data-name="Menu Item">
+                                                <img class="img-fluid rounded" src="/dynco_base/static/src/img/lechuza_img/mega_menu/image (4).jpg" alt=""/>
+                                                <br/>
+                                                <span class="d-block p-2 mt-2">
+                                                    <font style="font-size:14px;">KRÄUTER</font>
+                                                </span>
+                                            </a>
+                                        </div>
+                                        <div class="col-md-3 col-6 text-center py-2 ">
+                                            <a href="/shop/category/nach-thema-orchideen-44" class="nav-link o_default_snippet_text p-0 tp-animation-scale" data-name="Menu Item">
+                                                <img class="img-fluid rounded" src="/dynco_base/static/src/img/lechuza_img/mega_menu/image (5).jpg" alt=""/>
+                                                <br/>
+                                                <span class="d-block p-2 mt-2">
+                                                    <font style="font-size:14px;">ORCHIDEEN</font>
+                                                </span>
+                                            </a>
+                                        </div>
+                                        <div class="col-md-3 col-6 text-center py-2 ">
+                                            <a href="/shop/category/nach-thema-pon-52" class="nav-link o_default_snippet_text p-0 tp-animation-scale" data-name="Menu Item">
+                                                <img class="img-fluid rounded" src="/dynco_base/static/src/img/lechuza_img/mega_menu/image (6).jpg" alt=""/>
+                                                <br/>
+                                                <span class="d-block p-2 mt-2">
+                                                    <font style="font-size:14px;">PON</font>
+                                                </span>
+                                            </a>
+                                        </div>
+                                        <div class="col-md-3 col-6 text-center py-2 ">
+                                            <a href="/shop/category/nach-thema-tischgefasse-208" class="nav-link o_default_snippet_text p-0 tp-animation-scale" data-name="Menu Item">
+                                                <img class="img-fluid rounded" src="/dynco_base/static/src/img/lechuza_img/mega_menu/image (7).jpg" alt=""/>
+                                                <br/>
+                                                <span class="d-block p-2 mt-2">
+                                                    <font style="font-size:14px;">TISCHGEFÄSSE</font>
+                                                </span>
+                                            </a>
+                                        </div>
+                                        <div class="col-md-3 col-6 text-center py-2 ">
+                                            <a href="/shop/category/nach-thema-wand-67" class="nav-link o_default_snippet_text p-0 tp-animation-scale" data-name="Menu Item">
+                                                <img class="img-fluid rounded" src="/dynco_base/static/src/img/lechuza_img/mega_menu/image (8).jpg" alt=""/>
+                                                <br/>
+                                                <span class="d-block p-2 mt-2">
+                                                    <font style="font-size:14px;">WAND</font>
+                                                </span>
+                                            </a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+            </field>
+        </record>
+        <record id="menu_gartenmöbel" model="website.menu">
+            <field name="name">Gartenmöbel</field>
+            <field name="sequence" type="int">21</field>
+            <field name="url">#</field>
+            <field name="is_mega_menu">True</field>
+            <field name="website_id" ref="dynco_multi_website.lechuza_website_spt"/>
+            <field name="mega_menu_content" type="html">
+                <section class="s_mega_menu_thumbnails pt24 o_colored_level o_cc o_cc1">
+                    <div class="container">
+                        <div class="row justify-content-center">
+                            <div class="col-12 col-sm col-md-12 col-lg px-0">
+                                <div class="container">
+                                    <div class="row oe_structure">
+                                        <div class="col-md-3 col-6 text-center py-2 ">
+                                            <a href="/shop/category/gartenmobel-stuhle" class="nav-link o_default_snippet_text p-0 tp-animation-scale" data-name="Menu Item">
+                                                <img class="img-fluid rounded" src="/dynco_base/static/src/img/lechuza_img/mega_menu1/image (9).jpg" alt=""/>
+                                                <br/>
+                                                <span class="d-block p-2 mt-2">
+                                                    <font style="font-size:14px;">STÜHLE</font>
+                                                </span>
+                                            </a>
+                                        </div>
+                                        <div class="col-md-3 col-6 text-center py-2 ">
+                                            <a href="/shop/category/gartenmobel-tische-40" class="nav-link o_default_snippet_text p-0 tp-animation-scale" data-name="Menu Item">
+                                                <img class="img-fluid rounded" src="/dynco_base/static/src/img/lechuza_img/mega_menu1/image (10).jpg" alt=""/>
+                                                <br/>
+                                                <span class="d-block p-2 mt-2">
+                                                    <font style="font-size:14px;">TISCHE</font>
+                                                </span>
+                                            </a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+            </field>
+        </record>
+        <record id="menu_pflanzgefäße" model="website.menu">
+            <field name="name">Pflanzgefäße</field>
+            <field name="url">#</field>
+            <field name="is_mega_menu">True</field>
+            <field name="sequence" type="int">22</field>
+            <field name="website_id" ref="dynco_multi_website.lechuza_website_spt"/>
+            <field name="mega_menu_content" type="html">
+                <section class="s_mega_menu_thumbnails pt24 o_colored_level o_cc o_cc1">
+                    <div class="container">
+                        <div class="row justify-content-center">
+                            <div class="col-12 col-sm col-md-12 col-lg px-0">
+                                <div class="container">
+                                    <div class="row oe_structure">
+                                        <div class="col-md-3 col-6 text-center py-2 ">
+                                            <a href="/shop/category/pflanzgefasse-balconera-color-122" class="nav-link o_default_snippet_text p-0 tp-animation-scale" data-name="Menu Item">
+                                                <img class="img-fluid rounded" src="/dynco_base/static/src/img/lechuza_img/mega_menu3/image" alt=""/>
+                                                <br/>
+                                                <span class="d-block p-2 mt-2">
+                                                    <font style="font-size:14px;">BALCONERA Color</font>
+                                                </span>
+                                            </a>
+                                        </div>
+                                        <div class="col-md-3 col-6 text-center py-2 ">
+                                            <a href="/shop/category/pflanzgefasse-balconera-cottage-98" class="nav-link o_default_snippet_text p-0 tp-animation-scale" data-name="Menu Item">
+                                                <img class="img-fluid rounded" src="/dynco_base/static/src/img/lechuza_img/mega_menu3/image (1)" alt=""/>
+                                                <br/>
+                                                <span class="d-block p-2 mt-2">
+                                                    <font style="font-size:14px;">BALCONERA Cottage</font>
+                                                </span>
+                                            </a>
+                                        </div>
+                                        <div class="col-md-3 col-6 text-center py-2 ">
+                                            <a href="/shop/category/pflanzgefasse-balconera-stone-89" class="nav-link o_default_snippet_text p-0 tp-animation-scale" data-name="Menu Item">
+                                                <img class="img-fluid rounded" src="/dynco_base/static/src/img/lechuza_img/mega_menu3/image (2)" alt=""/>
+                                                <br/>
+                                                <span class="d-block p-2 mt-2">
+                                                    <font style="font-size:14px;">BALCONERA Stone</font>
+                                                </span>
+                                            </a>
+                                        </div>
+                                        <div class="col-md-3 col-6 text-center py-2 ">
+                                            <a href="/shop/category/pflanzgefasse-bola-color-299" class="nav-link o_default_snippet_text p-0 tp-animation-scale" data-name="Menu Item">
+                                                <img class="img-fluid rounded" src="/dynco_base/static/src/img/lechuza_img/mega_menu3/image.jpeg" alt=""/>
+                                                <br/>
+                                                <span class="d-block p-2 mt-2">
+                                                    <font style="font-size:14px;">BOLA Color</font>
+                                                </span>
+                                            </a>
+                                        </div>
+                                        <div class="col-md-3 col-6 text-center py-2 ">
+                                            <a href="/shop/category/pflanzgefasse-canto-stone-14-106" class="nav-link o_default_snippet_text p-0 tp-animation-scale" data-name="Menu Item">
+                                                <img class="img-fluid rounded" src="/dynco_base/static/src/img/lechuza_img/mega_menu3/image (3)" alt=""/>
+                                                <br/>
+                                                <span class="d-block p-2 mt-2">
+                                                    <font style="font-size:14px;">CANTO Stone 14</font>
+                                                </span>
+                                            </a>
+                                        </div>
+                                        <div class="col-md-3 col-6 text-center py-2 ">
+                                            <a href="/shop/category/lechuza-canto-stone-high" class="nav-link o_default_snippet_text p-0 tp-animation-scale" data-name="Menu Item">
+                                                <img class="img-fluid rounded" src="/dynco_base/static/src/img/lechuza_img/mega_menu3/image (4)" alt=""/>
+                                                <br/>
+                                                <span class="d-block p-2 mt-2">
+                                                    <font style="font-size:14px;">CANTO Stone High</font>
+                                                </span>
+                                            </a>
+                                        </div>
+                                        <div class="col-md-3 col-6 text-center py-2 ">
+                                            <a href="/shop/category/pflanzgefasse-canto-stone-low-102" class="nav-link o_default_snippet_text p-0 tp-animation-scale" data-name="Menu Item">
+                                                <img class="img-fluid rounded" src="/dynco_base/static/src/img/lechuza_img/mega_menu3/image (5)" alt=""/>
+                                                <br/>
+                                                <span class="d-block p-2 mt-2">
+                                                    <font style="font-size:14px;">CANTO Stone Low</font>
+                                                </span>
+                                            </a>
+                                        </div>
+                                        <div class="col-md-3 col-6 text-center py-2 ">
+                                            <a href="/shop/category/pflanzgefasse-cararo-209" class="nav-link o_default_snippet_text p-0 tp-animation-scale" data-name="Menu Item">
+                                                <img class="img-fluid rounded" src="/dynco_base/static/src/img/lechuza_img/mega_menu3/image (6)" alt=""/>
+                                                <br/>
+                                                <span class="d-block p-2 mt-2">
+                                                    <font style="font-size:14px;">CARARO</font>
+                                                </span>
+                                            </a>
+                                        </div>
+                                        <div class="col-md-3 col-6 text-center py-2 ">
+                                            <a href="/shop/category/pflanzgefasse-cilindro-color-118" class="nav-link o_default_snippet_text p-0 tp-animation-scale" data-name="Menu Item">
+                                                <img class="img-fluid rounded" src="/dynco_base/static/src/img/lechuza_img/mega_menu3/image (7)" alt=""/>
+                                                <br/>
+                                                <span class="d-block p-2 mt-2">
+                                                    <font style="font-size:14px;">CILINDRO Color</font>
+                                                </span>
+                                            </a>
+                                        </div>
+                                        <div class="col-md-3 col-6 text-center py-2 ">
+                                            <a href="/shop/category/pflanzgefasse-classico-81" class="nav-link o_default_snippet_text p-0 tp-animation-scale" data-name="Menu Item">
+                                                <img class="img-fluid rounded" src="/dynco_base/static/src/img/lechuza_img/mega_menu3/image (8)" alt=""/>
+                                                <br/>
+                                                <span class="d-block p-2 mt-2">
+                                                    <font style="font-size:14px;">CLASSICO</font>
+                                                </span>
+                                            </a>
+                                        </div>
+                                        <div class="col-md-3 col-6 text-center py-2 ">
+                                            <a href="/shop/category/pflanzgefasse-classico-color-90" class="nav-link o_default_snippet_text p-0 tp-animation-scale" data-name="Menu Item">
+                                                <img class="img-fluid rounded" src="/dynco_base/static/src/img/lechuza_img/mega_menu3/image (9)" alt=""/>
+                                                <br/>
+                                                <span class="d-block p-2 mt-2">
+                                                    <font style="font-size:14px;">CLASSICO Color</font>
+                                                </span>
+                                            </a>
+                                        </div>
+                                        <div class="col-md-3 col-6 text-center py-2 ">
+                                            <a href="/shop/category/pflanzgefasse-classico-ls-125" class="nav-link o_default_snippet_text p-0 tp-animation-scale" data-name="Menu Item">
+                                                <img class="img-fluid rounded" src="/dynco_base/static/src/img/lechuza_img/mega_menu3/image (10)" alt=""/>
+                                                <br/>
+                                                <span class="d-block p-2 mt-2">
+                                                    <font style="font-size:14px;">CLASSICO LS</font>
+                                                </span>
+                                            </a>
+                                        </div>
+                                        <div class="col-md-3 col-6 text-center py-2 ">
+                                            <a href="/shop/category/pflanzgefasse-cube-color-121" class="nav-link o_default_snippet_text p-0 tp-animation-scale" data-name="Menu Item">
+                                                <img class="img-fluid rounded" src="/dynco_base/static/src/img/lechuza_img/mega_menu3/image (11)" alt=""/>
+                                                <br/>
+                                                <span class="d-block p-2 mt-2">
+                                                    <font style="font-size:14px;">CUBE Color</font>
+                                                </span>
+                                            </a>
+                                        </div>
+                                        <div class="col-md-3 col-6 text-center py-2 ">
+                                            <a href="/shop/category/pflanzgefasse-cube-color-triple-87" class="nav-link o_default_snippet_text p-0 tp-animation-scale" data-name="Menu Item">
+                                                <img class="img-fluid rounded" src="/dynco_base/static/src/img/lechuza_img/mega_menu3/image (12)" alt=""/>
+                                                <br/>
+                                                <span class="d-block p-2 mt-2">
+                                                    <font style="font-size:14px;">CUBE Color Triple</font>
+                                                </span>
+                                            </a>
+                                        </div>
+                                        <div class="col-md-3 col-6 text-center py-2 ">
+                                            <a href="/shop/category/pflanzgefasse-cube-cottage-100" class="nav-link o_default_snippet_text p-0 tp-animation-scale" data-name="Menu Item">
+                                                <img class="img-fluid rounded" src="/dynco_base/static/src/img/lechuza_img/mega_menu3/image (13)" alt=""/>
+                                                <br/>
+                                                <span class="d-block p-2 mt-2">
+                                                    <font style="font-size:14px;">CUBE Cottage</font>
+                                                </span>
+                                            </a>
+                                        </div>
+                                        <div class="col-md-3 col-6 text-center py-2 ">
+                                            <a href="/shop/category/pflanzgefasse-cube-glossy-kiss-117" class="nav-link o_default_snippet_text p-0 tp-animation-scale" data-name="Menu Item">
+                                                <img class="img-fluid rounded" src="/dynco_base/static/src/img/lechuza_img/mega_menu3/image (14)" alt=""/>
+                                                <br/>
+                                                <span class="d-block p-2 mt-2">
+                                                    <font style="font-size:14px;">CUBE Glossy Kiss</font>
+                                                </span>
+                                            </a>
+                                        </div>
+                                        <div class="col-md-3 col-6 text-center py-2 ">
+                                            <a href="/shop/category/pflanzgefasse-cube-premium-112" class="nav-link o_default_snippet_text p-0 tp-animation-scale" data-name="Menu Item">
+                                                <img class="img-fluid rounded" src="/dynco_base/static/src/img/lechuza_img/mega_menu3/image (15)" alt=""/>
+                                                <br/>
+                                                <span class="d-block p-2 mt-2">
+                                                    <font style="font-size:14px;">CUBE Premium</font>
+                                                </span>
+                                            </a>
+                                        </div>
+                                        <div class="col-md-3 col-6 text-center py-2 ">
+                                            <a href="/shop/category/pflanzgefasse-cubeto-stone-83" class="nav-link o_default_snippet_text p-0 tp-animation-scale" data-name="Menu Item">
+                                                <img class="img-fluid rounded" src="/dynco_base/static/src/img/lechuza_img/mega_menu3/image (16)" alt=""/>
+                                                <br/>
+                                                <span class="d-block p-2 mt-2">
+                                                    <font style="font-size:14px;">CUBETO Stone</font>
+                                                </span>
+                                            </a>
+                                        </div>
+                                        <div class="col-md-3 col-6 text-center py-2 ">
+                                            <a href="/shop/category/pflanzgefasse-cubico-216" class="nav-link o_default_snippet_text p-0 tp-animation-scale" data-name="Menu Item">
+                                                <img class="img-fluid rounded" src="/dynco_base/static/src/img/lechuza_img/mega_menu3/image (17)" alt=""/>
+                                                <br/>
+                                                <span class="d-block p-2 mt-2">
+                                                    <font style="font-size:14px;">CUBICO</font>
+                                                </span>
+                                            </a>
+                                        </div>
+                                        <div class="col-md-3 col-6 text-center py-2 ">
+                                            <a href="/shop/category/pflanzgefasse-cubico-alto-116" class="nav-link o_default_snippet_text p-0 tp-animation-scale" data-name="Menu Item">
+                                                <img class="img-fluid rounded" src="/dynco_base/static/src/img/lechuza_img/mega_menu3/image (18)" alt=""/>
+                                                <br/>
+                                                <span class="d-block p-2 mt-2">
+                                                    <font style="font-size:14px;">CUBICO Alto</font>
+                                                </span>
+                                            </a>
+                                        </div>
+                                        <div class="col-md-3 col-6 text-center py-2 ">
+                                            <a href="/shop/category/pflanzgefasse-cubico-color-97" class="nav-link o_default_snippet_text p-0 tp-animation-scale" data-name="Menu Item">
+                                                <img class="img-fluid rounded" src="/dynco_base/static/src/img/lechuza_img/mega_menu3/image (19)" alt=""/>
+                                                <br/>
+                                                <span class="d-block p-2 mt-2">
+                                                    <font style="font-size:14px;">CUBICO Color</font>
+                                                </span>
+                                            </a>
+                                        </div>
+                                        <div class="col-md-3 col-6 text-center py-2 ">
+                                            <a href="/shop/category/pflanzgefasse-cubico-cottage-79" class="nav-link o_default_snippet_text p-0 tp-animation-scale" data-name="Menu Item">
+                                                <img class="img-fluid rounded" src="/dynco_base/static/src/img/lechuza_img/mega_menu3/image (20)" alt=""/>
+                                                <br/>
+                                                <span class="d-block p-2 mt-2">
+                                                    <font style="font-size:14px;">CUBICO Cottage</font>
+                                                </span>
+                                            </a>
+                                        </div>
+                                        <div class="col-md-3 col-6 text-center py-2 ">
+                                            <a href="/shop/category/pflanzgefasse-cubico-premium-263" class="nav-link o_default_snippet_text p-0 tp-animation-scale" data-name="Menu Item">
+                                                <img class="img-fluid rounded" src="/dynco_base/static/src/img/lechuza_img/mega_menu3/image (21)" alt=""/>
+                                                <br/>
+                                                <span class="d-block p-2 mt-2">
+                                                    <font style="font-size:14px;">CUBICO Premium</font>
+                                                </span>
+                                            </a>
+                                        </div>
+                                        <div class="col-md-3 col-6 text-center py-2 ">
+                                            <a href="/shop/category/pflanzgefasse-cursivo-75" class="nav-link o_default_snippet_text p-0 tp-animation-scale" data-name="Menu Item">
+                                                <img class="img-fluid rounded" src="/dynco_base/static/src/img/lechuza_img/mega_menu3/image (22)" alt=""/>
+                                                <br/>
+                                                <span class="d-block p-2 mt-2">
+                                                    <font style="font-size:14px;">CURSIVO</font>
+                                                </span>
+                                            </a>
+                                        </div>
+                                        <div class="col-md-3 col-6 text-center py-2 ">
+                                            <a href="/shop/category/pflanzgefasse-cube-glossy-55" class="nav-link o_default_snippet_text p-0 tp-animation-scale" data-name="Menu Item">
+                                                <img class="img-fluid rounded" src="/dynco_base/static/src/img/lechuza_img/mega_menu3/image (23)" alt=""/>
+                                                <br/>
+                                                <span class="d-block p-2 mt-2">
+                                                    <font style="font-size:14px;">Cube Glossy</font>
+                                                </span>
+                                            </a>
+                                        </div>
+                                        <div class="col-md-3 col-6 text-center py-2 ">
+                                            <a href="/shop/category/pflanzgefasse-delta-214" class="nav-link o_default_snippet_text p-0 tp-animation-scale" data-name="Menu Item">
+                                                <img class="img-fluid rounded" src="/dynco_base/static/src/img/lechuza_img/mega_menu3/image (24)" alt=""/>
+                                                <br/>
+                                                <span class="d-block p-2 mt-2">
+                                                    <font style="font-size:14px;">DELTA</font>
+                                                </span>
+                                            </a>
+                                        </div>
+                                        <div class="col-md-3 col-6 text-center py-2 ">
+                                            <a href="/shop/category/pflanzgefasse-delta-10-und-20-74" class="nav-link o_default_snippet_text p-0 tp-animation-scale" data-name="Menu Item">
+                                                <img class="img-fluid rounded" src="/dynco_base/static/src/img/lechuza_img/mega_menu3/image (25)" alt=""/>
+                                                <br/>
+                                                <span class="d-block p-2 mt-2">
+                                                    <font style="font-size:14px;">DELTA 10 und 20</font>
+                                                </span>
+                                            </a>
+                                        </div>
+                                        <div class="col-md-3 col-6 text-center py-2 ">
+                                            <a href="/shop/category/pflanzgefasse-green-wall-color-119" class="nav-link o_default_snippet_text p-0 tp-animation-scale" data-name="Menu Item">
+                                                <img class="img-fluid rounded" src="/dynco_base/static/src/img/lechuza_img/mega_menu3/image (26)" alt=""/>
+                                                <br/>
+                                                <span class="d-block p-2 mt-2">
+                                                    <font style="font-size:14px;">Green Wall Color</font>
+                                                </span>
+                                            </a>
+                                        </div>
+                                        <div class="col-md-3 col-6 text-center py-2 ">
+                                            <a href="/shop/category/pflanzgefasse-green-wall-glossy-85" class="nav-link o_default_snippet_text p-0 tp-animation-scale" data-name="Menu Item">
+                                                <img class="img-fluid rounded" src="/dynco_base/static/src/img/lechuza_img/mega_menu3/image (27)" alt=""/>
+                                                <br/>
+                                                <span class="d-block p-2 mt-2">
+                                                    <font style="font-size:14px;">Green Wall Glossy</font>
+                                                </span>
+                                            </a>
+                                        </div>
+                                        <div class="col-md-3 col-6 text-center py-2 ">
+                                            <a href="/shop/category/pflanzgefasse-green-wall-glossy-kiss-72" class="nav-link o_default_snippet_text p-0 tp-animation-scale" data-name="Menu Item">
+                                                <img class="img-fluid rounded" src="/dynco_base/static/src/img/lechuza_img/mega_menu3/image (28)" alt=""/>
+                                                <br/>
+                                                <span class="d-block p-2 mt-2">
+                                                    <font style="font-size:14px;">Green Wall Glossy Kiss</font>
+                                                </span>
+                                            </a>
+                                        </div>
+                                        <div class="col-md-3 col-6 text-center py-2 ">
+                                            <a href="/shop/category/pflanzgefasse-havalo-262" class="nav-link o_default_snippet_text p-0 tp-animation-scale" data-name="Menu Item">
+                                                <img class="img-fluid rounded" src="/dynco_base/static/src/img/lechuza_img/mega_menu3/image (29)" alt=""/>
+                                                <br/>
+                                                <span class="d-block p-2 mt-2">
+                                                    <font style="font-size:14px;">HAVALO</font>
+                                                </span>
+                                            </a>
+                                        </div>
+                                        <div class="col-md-3 col-6 text-center py-2 ">
+                                            <a href="/shop/category/pflanzgefasse-kinder-set-94" class="nav-link o_default_snippet_text p-0 tp-animation-scale" data-name="Menu Item">
+                                                <img class="img-fluid rounded" src="/dynco_base/static/src/img/lechuza_img/mega_menu3/image (30)" alt=""/>
+                                                <br/>
+                                                <span class="d-block p-2 mt-2">
+                                                    <font style="font-size:14px;">Kinder-Set</font>
+                                                </span>
+                                            </a>
+                                        </div>
+                                        <div class="col-md-3 col-6 text-center py-2 ">
+                                            <a href="/shop/category/pflanzgefasse-mini-cubi-und-maxi-cubi-123" class="nav-link o_default_snippet_text p-0 tp-animation-scale" data-name="Menu Item">
+                                                <img class="img-fluid rounded" src="/dynco_base/static/src/img/lechuza_img/mega_menu3/image (31)" alt=""/>
+                                                <br/>
+                                                <span class="d-block p-2 mt-2">
+                                                    <font style="font-size:14px;">MINI-CUBI und MAXI-CUBI</font>
+                                                </span>
+                                            </a>
+                                        </div>
+                                        <div class="col-md-3 col-6 text-center py-2 ">
+                                            <a href="/shop/category/pflanzgefasse-mini-deltini-und-deltini-78" class="nav-link o_default_snippet_text p-0 tp-animation-scale" data-name="Menu Item">
+                                                <img class="img-fluid rounded" src="/dynco_base/static/src/img/lechuza_img/mega_menu3/image (32)" alt=""/>
+                                                <br/>
+                                                <span class="d-block p-2 mt-2">
+                                                    <font style="font-size:14px;">MINI-DELTINI und DELTINI</font>
+                                                </span>
+                                            </a>
+                                        </div>
+                                        <div class="col-md-3 col-6 text-center py-2 ">
+                                            <a href="/shop/category/pflanzgefasse-nido-cottage-91" class="nav-link o_default_snippet_text p-0 tp-animation-scale" data-name="Menu Item">
+                                                <img class="img-fluid rounded" src="/dynco_base/static/src/img/lechuza_img/mega_menu3/image (33)" alt=""/>
+                                                <br/>
+                                                <span class="d-block p-2 mt-2">
+                                                    <font style="font-size:14px;">NIDO Cottage</font>
+                                                </span>
+                                            </a>
+                                        </div>
+                                        <div class="col-md-3 col-6 text-center py-2 ">
+                                            <a href="/shop/category/pflanzgefasse-ojo-136" class="nav-link o_default_snippet_text p-0 tp-animation-scale" data-name="Menu Item">
+                                                <img class="img-fluid rounded" src="/dynco_base/static/src/img/lechuza_img/mega_menu3/image (34)" alt=""/>
+                                                <br/>
+                                                <span class="d-block p-2 mt-2">
+                                                    <font style="font-size:14px;">OJO</font>
+                                                </span>
+                                            </a>
+                                        </div>
+                                        <div class="col-md-3 col-6 text-center py-2 ">
+                                            <a href="/shop/category/pflanzgefasse-orchidea-70" class="nav-link o_default_snippet_text p-0 tp-animation-scale" data-name="Menu Item">
+                                                <img class="img-fluid rounded" src="/dynco_base/static/src/img/lechuza_img/mega_menu3/image (35)" alt=""/>
+                                                <br/>
+                                                <span class="d-block p-2 mt-2">
+                                                    <font style="font-size:14px;">ORCHIDEA</font>
+                                                </span>
+                                            </a>
+                                        </div>
+                                        <div class="col-md-3 col-6 text-center py-2 ">
+                                            <a href="/shop/category/pflanzgefasse-pila-color-264" class="nav-link o_default_snippet_text p-0 tp-animation-scale" data-name="Menu Item">
+                                                <img class="img-fluid rounded" src="/dynco_base/static/src/img/lechuza_img/mega_menu3/image (36)" alt=""/>
+                                                <br/>
+                                                <span class="d-block p-2 mt-2">
+                                                    <font style="font-size:14px;">PILA Color</font>
+                                                </span>
+                                            </a>
+                                        </div>
+                                        <div class="col-md-3 col-6 text-center py-2 ">
+                                            <a href="/shop/category/pflanzgefasse-quadro-ls-215" class="nav-link o_default_snippet_text p-0 tp-animation-scale" data-name="Menu Item">
+                                                <img class="img-fluid rounded" src="/dynco_base/static/src/img/lechuza_img/mega_menu3/image (37)" alt=""/>
+                                                <br/>
+                                                <span class="d-block p-2 mt-2">
+                                                    <font style="font-size:14px;">QUADRO LS</font>
+                                                </span>
+                                            </a>
+                                        </div>
+                                        <div class="col-md-3 col-6 text-center py-2 ">
+                                            <a href="/shop/category/pflanzgefasse-rondo-103" class="nav-link o_default_snippet_text p-0 tp-animation-scale" data-name="Menu Item">
+                                                <img class="img-fluid rounded" src="/dynco_base/static/src/img/lechuza_img/mega_menu3/image (38)" alt=""/>
+                                                <br/>
+                                                <span class="d-block p-2 mt-2">
+                                                    <font style="font-size:14px;">RONDO</font>
+                                                </span>
+                                            </a>
+                                        </div>
+                                        <div class="col-md-3 col-6 text-center py-2 ">
+                                            <a href="/shop/category/pflanzgefasse-trendcover-294" class="nav-link o_default_snippet_text p-0 tp-animation-scale" data-name="Menu Item">
+                                                <img class="img-fluid rounded" src="/dynco_base/static/src/img/lechuza_img/mega_menu3/image (39)" alt=""/>
+                                                <br/>
+                                                <span class="d-block p-2 mt-2">
+                                                    <font style="font-size:14px;">TRENDCOVER</font>
+                                                </span>
+                                            </a>
+                                        </div>
+                                        <div class="col-md-3 col-6 text-center py-2 ">
+                                            <a href="/shop/category/pflanzgefasse-trio-cottage-96" class="nav-link o_default_snippet_text p-0 tp-animation-scale" data-name="Menu Item">
+                                                <img class="img-fluid rounded" src="/dynco_base/static/src/img/lechuza_img/mega_menu3/image (40)" alt=""/>
+                                                <br/>
+                                                <span class="d-block p-2 mt-2">
+                                                    <font style="font-size:14px;">TRIO Cottage</font>
+                                                </span>
+                                            </a>
+                                        </div>
+                                        <div class="col-md-3 col-6 text-center py-2 ">
+                                            <a href="/shop/category/pflanzgefasse-trio-stone-295" class="nav-link o_default_snippet_text p-0 tp-animation-scale" data-name="Menu Item">
+                                                <img class="img-fluid rounded" src="/dynco_base/static/src/img/lechuza_img/mega_menu3/image (41)" alt=""/>
+                                                <br/>
+                                                <span class="d-block p-2 mt-2">
+                                                    <font style="font-size:14px;">TRIO Stone</font>
+                                                </span>
+                                            </a>
+                                        </div>
+                                        <div class="col-md-3 col-6 text-center py-2 ">
+                                            <a href="/shop/category/pflanzgefasse-yula-pflanzgefass-107" class="nav-link o_default_snippet_text p-0 tp-animation-scale" data-name="Menu Item">
+                                                <img class="img-fluid rounded" src="/dynco_base/static/src/img/lechuza_img/mega_menu3/image (42)" alt=""/>
+                                                <br/>
+                                                <span class="d-block p-2 mt-2">
+                                                    <font style="font-size:14px;">YULA Pflanzgefäss</font>
+                                                </span>
+                                            </a>
+                                        </div>
+                                        <div class="col-md-3 col-6 text-center py-2 ">
+                                            <a href="/shop/category/pflanzgefasse-yula-pflanztasche-113" class="nav-link o_default_snippet_text p-0 tp-animation-scale" data-name="Menu Item">
+                                                <img class="img-fluid rounded" src="/dynco_base/static/src/img/lechuza_img/mega_menu3/image (43)" alt=""/>
+                                                <br/>
+                                                <span class="d-block p-2 mt-2">
+                                                    <font style="font-size:14px;">YULA Pflanztasche</font>
+                                                </span>
+                                            </a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+            </field>
+        </record>
+        <record id="menu_Oberflächen" model="website.menu">
+            <field name="name">Oberflächen</field>
+            <field name="sequence" type="int">23</field>
+            <field name="url">#</field>
+            <field name="is_mega_menu">True</field>
+            <field name="website_id" ref="dynco_multi_website.lechuza_website_spt"/>
+            <field name="mega_menu_content" type="html">
+                <section class="s_mega_menu_thumbnails pt24 o_colored_level o_cc o_cc1">
+                    <div class="container">
+                        <div class="row justify-content-center">
+                            <div class="col-12 col-sm col-md-12 col-lg px-0">
+                                <div class="container">
+                                    <div class="row oe_structure">
+                                        <div class="col-md-3 col-6 text-center py-2 ">
+                                            <a href="/shop/category/nach-oberflache-color-61" class="nav-link o_default_snippet_text p-0 tp-animation-scale" data-name="Menu Item">
+                                                <img class="img-fluid rounded" src="/dynco_base/static/src/img/lechuza_img/mega_menu4/image (11).jpg" alt=""/>
+                                                <br/>
+                                                <span class="d-block p-2 mt-2">
+                                                    <font style="font-size:14px;">COLOR</font>
+                                                </span>
+                                            </a>
+                                        </div>
+                                        <div class="col-md-3 col-6 text-center py-2 ">
+                                            <a href="/shop/category/nach-oberflache-cottage-59" class="nav-link o_default_snippet_text p-0 tp-animation-scale" data-name="Menu Item">
+                                                <img class="img-fluid rounded" src="/dynco_base/static/src/img/lechuza_img/mega_menu4/image (12).jpg" alt=""/>
+                                                <br/>
+                                                <span class="d-block p-2 mt-2">
+                                                    <font style="font-size:14px;">COTTAGE</font>
+                                                </span>
+                                            </a>
+                                        </div>
+                                        <div class="col-md-3 col-6 text-center py-2 ">
+                                            <a href="/shop/category/nach-oberflache-glossy-62" class="nav-link o_default_snippet_text p-0 tp-animation-scale" data-name="Menu Item">
+                                                <img class="img-fluid rounded" src="/dynco_base/static/src/img/lechuza_img/mega_menu4/image (13).jpg" alt=""/>
+                                                <br/>
+                                                <span class="d-block p-2 mt-2">
+                                                    <font style="font-size:14px;">GLOSSY</font>
+                                                </span>
+                                            </a>
+                                        </div>
+                                        <div class="col-md-3 col-6 text-center py-2 ">
+                                            <a href="/shop/category/nach-oberflache-havalo-252" class="nav-link o_default_snippet_text p-0 tp-animation-scale" data-name="Menu Item">
+                                                <img class="img-fluid rounded" src="/dynco_base/static/src/img/lechuza_img/mega_menu4/image.jpg" alt=""/>
+                                                <br/>
+                                                <span class="d-block p-2 mt-2">
+                                                    <font style="font-size:14px;">HAVALO</font>
+                                                </span>
+                                            </a>
+                                        </div>
+                                        <div class="col-md-3 col-6 text-center py-2 ">
+                                            <a href="/shop/category/nach-oberflache-premium-60" class="nav-link o_default_snippet_text p-0 tp-animation-scale" data-name="Menu Item">
+                                                <img class="img-fluid rounded" src="/dynco_base/static/src/img/lechuza_img/mega_menu4/image (14).jpg" alt=""/>
+                                                <br/>
+                                                <span class="d-block p-2 mt-2">
+                                                    <font style="font-size:14px;">PREMIUM</font>
+                                                </span>
+                                            </a>
+                                        </div>
+                                        <div class="col-md-3 col-6 text-center py-2 ">
+                                            <a href="/shop/category/nach-oberflache-stone-63" class="nav-link o_default_snippet_text p-0 tp-animation-scale" data-name="Menu Item">
+                                                <img class="img-fluid rounded" src="/dynco_base/static/src/img/lechuza_img/mega_menu4/image (15).jpg" alt=""/>
+                                                <br/>
+                                                <span class="d-block p-2 mt-2">
+                                                    <font style="font-size:14px;">STONE</font>
+                                                </span>
+                                            </a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+            </field>
+        </record>
+        <record id="menu_zubehör" model="website.menu">
+            <field name="name">Zubehör + Ersatzteile</field>
+            <field name="url">#</field>
+            <field name="is_mega_menu">True</field>
+            <field name="sequence" type="int">24</field>
+            <field name="website_id" ref="dynco_multi_website.lechuza_website_spt"/>
+            <field name="mega_menu_content" type="html">
+                <section class="s_mega_menu_thumbnails pt24 o_colored_level o_cc o_cc1">
+                    <div class="container">
+                        <div class="row justify-content-center">
+                            <div class="col-12 col-sm col-md-12 col-lg px-0">
+                                <div class="container">
+                                    <div class="row oe_structure">
+                                        <div class="col-md-3 col-6 text-center py-2 ">
+                                            <a href="/shop/category/zubehor-und-ersatzteile-balconera-176" class="nav-link o_default_snippet_text p-0 tp-animation-scale" data-name="Menu Item">
+                                                <img class="img-fluid rounded" src="/dynco_base/static/src/img/lechuza_img/mega_menu5/image.webp" alt=""/>
+                                                <br/>
+                                                <span class="d-block p-2 mt-2">
+                                                    <font style="font-size:14px;">BALCONERA</font>
+                                                </span>
+                                            </a>
+                                        </div>
+                                        <div class="col-md-3 col-6 text-center py-2 ">
+                                            <a href="/shop/category/zubehor-und-ersatzteile-canto-stone-high-177" class="nav-link o_default_snippet_text p-0 tp-animation-scale" data-name="Menu Item">
+                                                <img class="img-fluid rounded" src="/dynco_base/static/src/img/lechuza_img/mega_menu5/image (1).webp" alt=""/>
+                                                <br/>
+                                                <span class="d-block p-2 mt-2">
+                                                    <font style="font-size:14px;">CANTO Stone high</font>
+                                                </span>
+                                            </a>
+                                        </div>
+                                        <div class="col-md-3 col-6 text-center py-2 ">
+                                            <a href="/shop/category/zubehor-und-ersatzteile-canto-stone-low-178" class="nav-link o_default_snippet_text p-0 tp-animation-scale" data-name="Menu Item">
+                                                <img class="img-fluid rounded" src="/dynco_base/static/src/img/lechuza_img/mega_menu5/image (2).webp" alt=""/>
+                                                <br/>
+                                                <span class="d-block p-2 mt-2">
+                                                    <font style="font-size:14px;">CANTO Stone low</font>
+                                                </span>
+                                            </a>
+                                        </div>
+                                        <div class="col-md-3 col-6 text-center py-2 ">
+                                            <a href="/shop/category/zubehor-und-ersatzteile-cararo-179" class="nav-link o_default_snippet_text p-0 tp-animation-scale" data-name="Menu Item">
+                                                <img class="img-fluid rounded" src="/dynco_base/static/src/img/lechuza_img/mega_menu5/image (3).webp" alt=""/>
+                                                <br/>
+                                                <span class="d-block p-2 mt-2">
+                                                    <font style="font-size:14px;">CARARO</font>
+                                                </span>
+                                            </a>
+                                        </div>
+                                        <div class="col-md-3 col-6 text-center py-2 ">
+                                            <a href="/shop/category/zubehor-und-ersatzteile-cilindro-182" class="nav-link o_default_snippet_text p-0 tp-animation-scale" data-name="Menu Item">
+                                                <img class="img-fluid rounded" src="/dynco_base/static/src/img/lechuza_img/mega_menu5/image (4).webp" alt=""/>
+                                                <br/>
+                                                <span class="d-block p-2 mt-2">
+                                                    <font style="font-size:14px;">CILINDRO</font>
+                                                </span>
+                                            </a>
+                                        </div>
+                                        <div class="col-md-3 col-6 text-center py-2 ">
+                                            <a href="/shop/category/zubehor-und-ersatzteile-classico-kein-ls-183" class="nav-link o_default_snippet_text p-0 tp-animation-scale" data-name="Menu Item">
+                                                <img class="img-fluid rounded" src="/dynco_base/static/src/img/lechuza_img/mega_menu5/image (5).webp" alt=""/>
+                                                <br/>
+                                                <span class="d-block p-2 mt-2">
+                                                    <font style="font-size:14px;">CLASSICO (kein LS)</font>
+                                                </span>
+                                            </a>
+                                        </div>
+                                        <div class="col-md-3 col-6 text-center py-2 ">
+                                            <a href="/shop/category/zubehor-und-ersatzteile-classico-ls-184" class="nav-link o_default_snippet_text p-0 tp-animation-scale" data-name="Menu Item">
+                                                <img class="img-fluid rounded" src="/dynco_base/static/src/img/lechuza_img/mega_menu5/image (6).webp" alt=""/>
+                                                <br/>
+                                                <span class="d-block p-2 mt-2">
+                                                    <font style="font-size:14px;">CLASSICO LS</font>
+                                                </span>
+                                            </a>
+                                        </div>
+                                        <div class="col-md-3 col-6 text-center py-2 ">
+                                            <a href="/shop/category/zubehor-und-ersatzteile-cube-185" class="nav-link o_default_snippet_text p-0 tp-animation-scale" data-name="Menu Item">
+                                                <img class="img-fluid rounded" src="/dynco_base/static/src/img/lechuza_img/mega_menu5/image (7).webp" alt=""/>
+                                                <br/>
+                                                <span class="d-block p-2 mt-2">
+                                                    <font style="font-size:14px;">CUBE</font>
+                                                </span>
+                                            </a>
+                                        </div>
+                                        <div class="col-md-3 col-6 text-center py-2 ">
+                                            <a href="/shop/category/zubehor-und-ersatzteile-cube-14-16-186" class="nav-link o_default_snippet_text p-0 tp-animation-scale" data-name="Menu Item">
+                                                <img class="img-fluid rounded" src="/dynco_base/static/src/img/lechuza_img/mega_menu5/image (8).webp" alt=""/>
+                                                <br/>
+                                                <span class="d-block p-2 mt-2">
+                                                    <font style="font-size:14px;">CUBE 14 | 16</font>
+                                                </span>
+                                            </a>
+                                        </div>
+                                        <div class="col-md-3 col-6 text-center py-2 ">
+                                            <a href="/shop/category/zubehor-und-ersatzteile-cubico-190" class="nav-link o_default_snippet_text p-0 tp-animation-scale" data-name="Menu Item">
+                                                <img class="img-fluid rounded" src="/dynco_base/static/src/img/lechuza_img/mega_menu5/image (9).webp" alt=""/>
+                                                <br/>
+                                                <span class="d-block p-2 mt-2">
+                                                    <font style="font-size:14px;">CUBICO</font>
+                                                </span>
+                                            </a>
+                                        </div>
+                                        <div class="col-md-3 col-6 text-center py-2 ">
+                                            <a href="/shop/category/zubehor-und-ersatzteile-delta-191" class="nav-link o_default_snippet_text p-0 tp-animation-scale" data-name="Menu Item">
+                                                <img class="img-fluid rounded" src="/dynco_base/static/src/img/lechuza_img/mega_menu5/image (10).webp" alt=""/>
+                                                <br/>
+                                                <span class="d-block p-2 mt-2">
+                                                    <font style="font-size:14px;">DELTA</font>
+                                                </span>
+                                            </a>
+                                        </div>
+                                        <div class="col-md-3 col-6 text-center py-2 ">
+                                            <a href="/shop/category/zubehor-und-ersatzteile-delta-10-20-192" class="nav-link o_default_snippet_text p-0 tp-animation-scale" data-name="Menu Item">
+                                                <img class="img-fluid rounded" src="/dynco_base/static/src/img/lechuza_img/mega_menu5/image (11).webp" alt=""/>
+                                                <br/>
+                                                <span class="d-block p-2 mt-2">
+                                                    <font style="font-size:14px;">DELTA 10 | 20</font>
+                                                </span>
+                                            </a>
+                                        </div>
+                                        <div class="col-md-3 col-6 text-center py-2 ">
+                                            <a href="/shop/category/zubehor-und-ersatzteile-deltini-mini-deltini-193" class="nav-link o_default_snippet_text p-0 tp-animation-scale" data-name="Menu Item">
+                                                <img class="img-fluid rounded" src="/dynco_base/static/src/img/lechuza_img/mega_menu5/image (12).webp" alt=""/>
+                                                <br/>
+                                                <span class="d-block p-2 mt-2">
+                                                    <font style="font-size:14px;">DELTINI | MINI-DELTINI</font>
+                                                </span>
+                                            </a>
+                                        </div>
+                                        <div class="col-md-3 col-6 text-center py-2 ">
+                                            <a href="/shop/category/zubehor-und-ersatzteile-diamante-194" class="nav-link o_default_snippet_text p-0 tp-animation-scale" data-name="Menu Item">
+                                                <img class="img-fluid rounded" src="/dynco_base/static/src/img/lechuza_img/mega_menu5/image (13).webp" alt=""/>
+                                                <br/>
+                                                <span class="d-block p-2 mt-2">
+                                                    <font style="font-size:14px;">DIAMANTE</font>
+                                                </span>
+                                            </a>
+                                        </div>
+                                        <div class="col-md-3 col-6 text-center py-2 ">
+                                            <a href="/shop/category/zubehor-und-ersatzteile-giesser-49" class="nav-link o_default_snippet_text p-0 tp-animation-scale" data-name="Menu Item">
+                                                <img class="img-fluid rounded" src="/dynco_base/static/src/img/lechuza_img/mega_menu5/image (14).webp" alt=""/>
+                                                <br/>
+                                                <span class="d-block p-2 mt-2">
+                                                    <font style="font-size:14px;">GIESSER</font>
+                                                </span>
+                                            </a>
+                                        </div>
+                                        <div class="col-md-3 col-6 text-center py-2 ">
+                                            <a href="/shop/category/zubehor-und-ersatzteile-giehilfe-pico-163" class="nav-link o_default_snippet_text p-0 tp-animation-scale" data-name="Menu Item">
+                                                <img class="img-fluid rounded" src="/dynco_base/static/src/img/lechuza_img/mega_menu5/image (15).webp" alt=""/>
+                                                <br/>
+                                                <span class="d-block p-2 mt-2">
+                                                    <font style="font-size:14px;">Gießhilfe PICO</font>
+                                                </span>
+                                            </a>
+                                        </div>
+                                        <div class="col-md-3 col-6 text-center py-2 ">
+                                            <a href="/shop/category/zubehor-und-ersatzteile-lechuza-balkonkastenhalter-erganzung-164" class="nav-link o_default_snippet_text p-0 tp-animation-scale" data-name="Menu Item">
+                                                <img class="img-fluid rounded" src="/dynco_base/static/src/img/lechuza_img/mega_menu5/image (16).webp" alt=""/>
+                                                <br/>
+                                                <span class="d-block p-2 mt-2">
+                                                    <font style="font-size:14px;">LECHUZA Balkonkastenhalter-Ergänzung</font>
+                                                </span>
+                                            </a>
+                                        </div>
+                                        <div class="col-md-3 col-6 text-center py-2 ">
+                                            <a href="/shop/category/zubehor-und-ersatzteile-lechuza-sticks-160" class="nav-link o_default_snippet_text p-0 tp-animation-scale" data-name="Menu Item">
+                                                <img class="img-fluid rounded" src="/dynco_base/static/src/img/lechuza_img/mega_menu5/image (17).webp" alt=""/>
+                                                <br/>
+                                                <span class="d-block p-2 mt-2">
+                                                    <font style="font-size:14px;">LECHUZA Sticks</font>
+                                                </span>
+                                            </a>
+                                        </div>
+                                        <div class="col-md-3 col-6 text-center py-2 ">
+                                            <a href="/shop/category/zubehor-und-ersatzteile-lechuza-balkonkastenhalter-155" class="nav-link o_default_snippet_text p-0 tp-animation-scale" data-name="Menu Item">
+                                                <img class="img-fluid rounded" src="/dynco_base/static/src/img/lechuza_img/mega_menu5/image (18).webp" alt=""/>
+                                                <br/>
+                                                <span class="d-block p-2 mt-2">
+                                                    <font style="font-size:14px;">LECHUZA-Balkonkastenhalter</font>
+                                                </span>
+                                            </a>
+                                        </div>
+                                        <div class="col-md-3 col-6 text-center py-2 ">
+                                            <a href="/shop/category/zubehor-und-ersatzteile-lechuza-pon-154" class="nav-link o_default_snippet_text p-0 tp-animation-scale" data-name="Menu Item">
+                                                <img class="img-fluid rounded" src="/dynco_base/static/src/img/lechuza_img/mega_menu5/image (19).webp" alt=""/>
+                                                <br/>
+                                                <span class="d-block p-2 mt-2">
+                                                    <font style="font-size:14px;">LECHUZA-PON</font>
+                                                </span>
+                                            </a>
+                                        </div>
+                                        <div class="col-md-3 col-6 text-center py-2 ">
+                                            <a href="/shop/category/zubehor-und-ersatzteile-lechuza-terrapon-158" class="nav-link o_default_snippet_text p-0 tp-animation-scale" data-name="Menu Item">
+                                                <img class="img-fluid rounded" src="/dynco_base/static/src/img/lechuza_img/mega_menu5/image (20).webp" alt=""/>
+                                                <br/>
+                                                <span class="d-block p-2 mt-2">
+                                                    <font style="font-size:14px;">LECHUZA-TERRAPON</font>
+                                                </span>
+                                            </a>
+                                        </div>
+                                        <div class="col-md-3 col-6 text-center py-2 ">
+                                            <a href="/shop/category/zubehor-und-ersatzteile-maxi-cubi-195" class="nav-link o_default_snippet_text p-0 tp-animation-scale" data-name="Menu Item">
+                                                <img class="img-fluid rounded" src="/dynco_base/static/src/img/lechuza_img/mega_menu5/image (21).webp" alt=""/>
+                                                <br/>
+                                                <span class="d-block p-2 mt-2">
+                                                    <font style="font-size:14px;">MAXI-CUBI</font>
+                                                </span>
+                                            </a>
+                                        </div>
+                                        <div class="col-md-3 col-6 text-center py-2 ">
+                                            <a href="/shop/category/zubehor-und-ersatzteile-mini-cubi-196" class="nav-link o_default_snippet_text p-0 tp-animation-scale" data-name="Menu Item">
+                                                <img class="img-fluid rounded" src="/dynco_base/static/src/img/lechuza_img/mega_menu5/image (22).webp" alt=""/>
+                                                <br/>
+                                                <span class="d-block p-2 mt-2">
+                                                    <font style="font-size:14px;">MINI-CUBI</font>
+                                                </span>
+                                            </a>
+                                        </div>
+                                        <div class="col-md-3 col-6 text-center py-2 ">
+                                            <a href="/shop/category/zubehor-und-ersatzteile-magnethalter-fur-green-wall-168" class="nav-link o_default_snippet_text p-0 tp-animation-scale" data-name="Menu Item">
+                                                <img class="img-fluid rounded" src="/dynco_base/static/src/img/lechuza_img/mega_menu5/image (23).webp" alt=""/>
+                                                <br/>
+                                                <span class="d-block p-2 mt-2">
+                                                    <font style="font-size:14px;">Magnethalter für Green Wall</font>
+                                                </span>
+                                            </a>
+                                        </div>
+                                        <div class="col-md-3 col-6 text-center py-2 ">
+                                            <a href="/shop/category/zubehor-und-ersatzteile-metallleiste-fur-green-wall-173" class="nav-link o_default_snippet_text p-0 tp-animation-scale" data-name="Menu Item">
+                                                <img class="img-fluid rounded" src="/dynco_base/static/src/img/lechuza_img/mega_menu5/image (24).webp" alt=""/>
+                                                <br/>
+                                                <span class="d-block p-2 mt-2">
+                                                    <font style="font-size:14px;">Metallleiste für Green Wall</font>
+                                                </span>
+                                            </a>
+                                        </div>
+                                        <div class="col-md-3 col-6 text-center py-2 ">
+                                            <a href="/shop/category/zubehor-und-ersatzteile-nido-197" class="nav-link o_default_snippet_text p-0 tp-animation-scale" data-name="Menu Item">
+                                                <img class="img-fluid rounded" src="/dynco_base/static/src/img/lechuza_img/mega_menu5/image (25).webp" alt=""/>
+                                                <br/>
+                                                <span class="d-block p-2 mt-2">
+                                                    <font style="font-size:14px;">NIDO</font>
+                                                </span>
+                                            </a>
+                                        </div>
+                                        <div class="col-md-3 col-6 text-center py-2 ">
+                                            <a href="/shop/category/zubehor-und-ersatzteile-pon-schutte-gro-165" class="nav-link o_default_snippet_text p-0 tp-animation-scale" data-name="Menu Item">
+                                                <img class="img-fluid rounded" src="/dynco_base/static/src/img/lechuza_img/mega_menu5/image (26).webp" alt=""/>
+                                                <br/>
+                                                <span class="d-block p-2 mt-2">
+                                                    <font style="font-size:14px;">PON Schütte groß</font>
+                                                </span>
+                                            </a>
+                                        </div>
+                                        <div class="col-md-3 col-6 text-center py-2 ">
+                                            <a href="/shop/category/zubehor-und-ersatzteile-pflanzplatte-fur-sticksysteme-exkl-yula-pflanztasche-157" class="nav-link o_default_snippet_text p-0 tp-animation-scale" data-name="Menu Item">
+                                                <img class="img-fluid rounded" src="/dynco_base/static/src/img/lechuza_img/mega_menu5/image (27).webp" alt=""/>
+                                                <br/>
+                                                <span class="d-block p-2 mt-2">
+                                                    <font style="font-size:14px;">Pflanzplatte für Sticksysteme (exkl. YULA Pflanztasche)</font>
+                                                </span>
+                                            </a>
+                                        </div>
+                                        <div class="col-md-3 col-6 text-center py-2 ">
+                                            <a href="/shop/category/zubehor-und-ersatzteile-quadro-kein-ls-198" class="nav-link o_default_snippet_text p-0 tp-animation-scale" data-name="Menu Item">
+                                                <img class="img-fluid rounded" src="/dynco_base/static/src/img/lechuza_img/mega_menu5/image (28).webp" alt=""/>
+                                                <br/>
+                                                <span class="d-block p-2 mt-2">
+                                                    <font style="font-size:14px;">QUADRO (kein LS)</font>
+                                                </span>
+                                            </a>
+                                        </div>
+                                        <div class="col-md-3 col-6 text-center py-2 ">
+                                            <a href="/shop/category/zubehor-und-ersatzteile-quadro-ls-199" class="nav-link o_default_snippet_text p-0 tp-animation-scale" data-name="Menu Item">
+                                                <img class="img-fluid rounded" src="/dynco_base/static/src/img/lechuza_img/mega_menu5/image (29).webp" alt=""/>
+                                                <br/>
+                                                <span class="d-block p-2 mt-2">
+                                                    <font style="font-size:14px;">QUADRO LS</font>
+                                                </span>
+                                            </a>
+                                        </div>
+                                        <div class="col-md-3 col-6 text-center py-2 ">
+                                            <a href="/shop/category/zubehor-und-ersatzteile-rolluntersetzer-47" class="nav-link o_default_snippet_text p-0 tp-animation-scale" data-name="Menu Item">
+                                                <img class="img-fluid rounded" src="/dynco_base/static/src/img/lechuza_img/mega_menu5/image (30).webp" alt=""/>
+                                                <br/>
+                                                <span class="d-block p-2 mt-2">
+                                                    <font style="font-size:14px;">ROLLUNTERSETZER</font>
+                                                </span>
+                                            </a>
+                                        </div>
+                                        <div class="col-md-3 col-6 text-center py-2 ">
+                                            <a href="/shop/category/zubehor-und-ersatzteile-rondo-201" class="nav-link o_default_snippet_text p-0 tp-animation-scale" data-name="Menu Item">
+                                                <img class="img-fluid rounded" src="/dynco_base/static/src/img/lechuza_img/mega_menu5/image (31).webp" alt=""/>
+                                                <br/>
+                                                <span class="d-block p-2 mt-2">
+                                                    <font style="font-size:14px;">RONDO</font>
+                                                </span>
+                                            </a>
+                                        </div>
+                                        <div class="col-md-3 col-6 text-center py-2 ">
+                                            <a href="/shop/category/zubehor-und-ersatzteile-rankgitter-fur-trio-167" class="nav-link o_default_snippet_text p-0 tp-animation-scale" data-name="Menu Item">
+                                                <img class="img-fluid rounded" src="/dynco_base/static/src/img/lechuza_img/mega_menu5/image (32).webp" alt=""/>
+                                                <br/>
+                                                <span class="d-block p-2 mt-2">
+                                                    <font style="font-size:14px;">Rankgitter für TRIO</font>
+                                                </span>
+                                            </a>
+                                        </div>
+                                        <div class="col-md-3 col-6 text-center py-2 ">
+                                            <a href="/shop/category/zubehor-und-ersatzteile-rolluntersetzer-159" class="nav-link o_default_snippet_text p-0 tp-animation-scale" data-name="Menu Item">
+                                                <img class="img-fluid rounded" src="/dynco_base/static/src/img/lechuza_img/mega_menu5/image (33).webp" alt=""/>
+                                                <br/>
+                                                <span class="d-block p-2 mt-2">
+                                                    <font style="font-size:14px;">Rolluntersetzer</font>
+                                                </span>
+                                            </a>
+                                        </div>
+                                        <div class="col-md-3 col-6 text-center py-2 ">
+                                            <a href="/shop/category/zubehor-und-ersatzteile-sockel-fur-trio-166" class="nav-link o_default_snippet_text p-0 tp-animation-scale" data-name="Menu Item">
+                                                <img class="img-fluid rounded" src="/dynco_base/static/src/img/lechuza_img/mega_menu5/image (34).webp" alt=""/>
+                                                <br/>
+                                                <span class="d-block p-2 mt-2">
+                                                    <font style="font-size:14px;">Sockel für TRIO</font>
+                                                </span>
+                                            </a>
+                                        </div>
+                                        <div class="col-md-3 col-6 text-center py-2 ">
+                                            <a href="/shop/category/zubehor-und-ersatzteile-trio-203" class="nav-link o_default_snippet_text p-0 tp-animation-scale" data-name="Menu Item">
+                                                <img class="img-fluid rounded" src="/dynco_base/static/src/img/lechuza_img/mega_menu5/image (35).webp" alt=""/>
+                                                <br/>
+                                                <span class="d-block p-2 mt-2">
+                                                    <font style="font-size:14px;">TRIO</font>
+                                                </span>
+                                            </a>
+                                        </div>
+                                        <div class="col-md-3 col-6 text-center py-2 ">
+                                            <a href="/shop/category/zubehor-und-ersatzteile-yula-flower-153" class="nav-link o_default_snippet_text p-0 tp-animation-scale" data-name="Menu Item">
+                                                <img class="img-fluid rounded" src="/dynco_base/static/src/img/lechuza_img/mega_menu5/image (36).webp" alt=""/>
+                                                <br/>
+                                                <span class="d-block p-2 mt-2">
+                                                    <font style="font-size:14px;">YULA Flower</font>
+                                                </span>
+                                            </a>
+                                        </div>
+                                        <div class="col-md-3 col-6 text-center py-2 ">
+                                            <a href="/shop/category/zubehor-und-ersatzteile-yula-giekanne-152" class="nav-link o_default_snippet_text p-0 tp-animation-scale" data-name="Menu Item">
+                                                <img class="img-fluid rounded" src="/dynco_base/static/src/img/lechuza_img/mega_menu5/image (37).webp" alt=""/>
+                                                <br/>
+                                                <span class="d-block p-2 mt-2">
+                                                    <font style="font-size:14px;">YULA Gießkanne</font>
+                                                </span>
+                                            </a>
+                                        </div>
+                                        <div class="col-md-3 col-6 text-center py-2 ">
+                                            <a href="/shop/category/zubehor-und-ersatzteile-yula-makramee-172" class="nav-link o_default_snippet_text p-0 tp-animation-scale" data-name="Menu Item">
+                                                <img class="img-fluid rounded" src="/dynco_base/static/src/img/lechuza_img/mega_menu5/image (38).webp" alt=""/>
+                                                <br/>
+                                                <span class="d-block p-2 mt-2">
+                                                    <font style="font-size:14px;">YULA Makramee</font>
+                                                </span>
+                                            </a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+            </field>
+        </record>
+        <record id="menu_topf_pflanze" model="website.menu">
+            <field name="name">Topf + Pflanze</field>
+            <field name="url">#</field>
+            <field name="is_mega_menu">True</field>
+            <field name="sequence" type="int">25</field>
+            <field name="website_id" ref="dynco_multi_website.lechuza_website_spt"/>
+            <field name="mega_menu_content" type="html">
+                <section class="s_mega_menu_thumbnails pt24 o_colored_level o_cc o_cc1">
+                    <div class="container">
+                        <div class="row justify-content-center">
+                            <div class="col-12 col-sm col-md-12 col-lg px-0">
+                                <div class="container">
+                                    <div class="row oe_structure">
+                                        <div class="col-md-3 col-6 text-center py-2 ">
+                                            <a href="/shop/category/topf-pflanze-canto-pflanze-276" class="nav-link o_default_snippet_text p-0 tp-animation-scale" data-name="Menu Item">
+                                                <img class="img-fluid rounded" src="/dynco_base/static/src/img/lechuza_img/mega_menu6/image (39).webp" alt=""/>
+                                                <br/>
+                                                <span class="d-block p-2 mt-2">
+                                                    <font style="font-size:14px;">CANTO + Pflanze</font>
+                                                </span>
+                                            </a>
+                                        </div>
+                                        <div class="col-md-3 col-6 text-center py-2 ">
+                                            <a href="/shop/category/topf-pflanze-cilindro-pflanze-270" class="nav-link o_default_snippet_text p-0 tp-animation-scale" data-name="Menu Item">
+                                                <img class="img-fluid rounded" src="/dynco_base/static/src/img/lechuza_img/mega_menu6/image.webp" alt=""/>
+                                                <br/>
+                                                <span class="d-block p-2 mt-2">
+                                                    <font style="font-size:14px;">CILINDRO + Pflanze</font>
+                                                </span>
+                                            </a>
+                                        </div>
+                                        <div class="col-md-3 col-6 text-center py-2 ">
+                                            <a href="/shop/category/topf-pflanze-classico-pflanze-272" class="nav-link o_default_snippet_text p-0 tp-animation-scale" data-name="Menu Item">
+                                                <img class="img-fluid rounded" src="/dynco_base/static/src/img/lechuza_img/mega_menu6/image (1).webp" alt=""/>
+                                                <br/>
+                                                <span class="d-block p-2 mt-2">
+                                                    <font style="font-size:14px;">CLASSICO + Pflanze</font>
+                                                </span>
+                                            </a>
+                                        </div>
+                                        <div class="col-md-3 col-6 text-center py-2 ">
+                                            <a href="/shop/category/topf-pflanze-cube-pflanze-269" class="nav-link o_default_snippet_text p-0 tp-animation-scale" data-name="Menu Item">
+                                                <img class="img-fluid rounded" src="/dynco_base/static/src/img/lechuza_img/mega_menu6/image (2).webp" alt=""/>
+                                                <br/>
+                                                <span class="d-block p-2 mt-2">
+                                                    <font style="font-size:14px;">CUBE + Pflanze</font>
+                                                </span>
+                                            </a>
+                                        </div>
+
+                                        <div class="col-md-3 col-6 text-center py-2 ">
+                                            <a href="/shop/category/topf-pflanze-cubico-pflanze-268" class="nav-link o_default_snippet_text p-0 tp-animation-scale" data-name="Menu Item">
+                                                <img class="img-fluid rounded" src="/dynco_base/static/src/img/lechuza_img/mega_menu6/image (3).webp" alt=""/>
+                                                <br/>
+                                                <span class="d-block p-2 mt-2">
+                                                    <font style="font-size:14px;">CUBICO + Pflanze</font>
+                                                </span>
+                                            </a>
+                                        </div>
+                                        <div class="col-md-3 col-6 text-center py-2 ">
+                                            <a href="/shop/category/topf-pflanze-cursivo-pflanze-278" class="nav-link o_default_snippet_text p-0 tp-animation-scale" data-name="Menu Item">
+                                                <img class="img-fluid rounded" src="/dynco_base/static/src/img/lechuza_img/mega_menu6/image (4).webp" alt=""/>
+                                                <br/>
+                                                <span class="d-block p-2 mt-2">
+                                                    <font style="font-size:14px;">CURSIVO + Pflanze</font>
+                                                </span>
+                                            </a>
+                                        </div>
+                                        <div class="col-md-3 col-6 text-center py-2 ">
+                                            <a href="/shop/category/topf-pflanze-delta-pflanze-275" class="nav-link o_default_snippet_text p-0 tp-animation-scale" data-name="Menu Item">
+                                                <img class="img-fluid rounded" src="/dynco_base/static/src/img/lechuza_img/mega_menu6/image (5).webp" alt=""/>
+                                                <br/>
+                                                <span class="d-block p-2 mt-2">
+                                                    <font style="font-size:14px;">DELTA + Pflanze</font>
+                                                </span>
+                                            </a>
+                                        </div>
+                                        <div class="col-md-3 col-6 text-center py-2 ">
+                                            <a href="/shop/category/topf-pflanze-havalo-pflanze-273" class="nav-link o_default_snippet_text p-0 tp-animation-scale" data-name="Menu Item">
+                                                <img class="img-fluid rounded" src="/dynco_base/static/src/img/lechuza_img/mega_menu6/image (6).webp" alt=""/>
+                                                <br/>
+                                                <span class="d-block p-2 mt-2">
+                                                    <font style="font-size:14px;">HAVALO + Pflanze</font>
+                                                </span>
+                                            </a>
+                                        </div>
+
+                                        <div class="col-md-3 col-6 text-center py-2 ">
+                                            <a href="/shop/category/topf-pflanze-pila-pflanze-274" class="nav-link o_default_snippet_text p-0 tp-animation-scale" data-name="Menu Item">
+                                                <img class="img-fluid rounded" src="/dynco_base/static/src/img/lechuza_img/mega_menu6/image (7).webp" alt=""/>
+                                                <br/>
+                                                <span class="d-block p-2 mt-2">
+                                                    <font style="font-size:14px;">PILA + Pflanze</font>
+                                                </span>
+                                            </a>
+                                        </div>
+                                        <div class="col-md-3 col-6 text-center py-2 ">
+                                            <a href="/shop/category/topf-pflanze-quadro-pflanze-277" class="nav-link o_default_snippet_text p-0 tp-animation-scale" data-name="Menu Item">
+                                                <img class="img-fluid rounded" src="/dynco_base/static/src/img/lechuza_img/mega_menu6/image (8).webp" alt=""/>
+                                                <br/>
+                                                <span class="d-block p-2 mt-2">
+                                                    <font style="font-size:14px;">QUADRO + Pflanze</font>
+                                                </span>
+                                            </a>
+                                        </div>
+                                        <div class="col-md-3 col-6 text-center py-2 ">
+                                            <a href="/shop/category/topf-pflanze-rondo-pflanze-271" class="nav-link o_default_snippet_text p-0 tp-animation-scale" data-name="Menu Item">
+                                                <img class="img-fluid rounded" src="/dynco_base/static/src/img/lechuza_img/mega_menu6/image (9).webp" alt=""/>
+                                                <br/>
+                                                <span class="d-block p-2 mt-2">
+                                                    <font style="font-size:14px;">RONDO + Pflanze</font>
+                                                </span>
+                                            </a>
+                                        </div>
+
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+            </field>
+        </record>
+        <record id="menu_neu" model="website.menu">
+            <field name="name">NEU</field>
+            <field name="url">#</field>
+            <field name="is_mega_menu">True</field>
+            <field name="sequence" type="int">26</field>
+            <field name="website_id" ref="dynco_multi_website.lechuza_website_spt"/>
+            <field name="mega_menu_content" type="html">
+                <section class="s_mega_menu_thumbnails pt24 o_colored_level o_cc o_cc1">
+                    <div class="container">
+                        <div class="row justify-content-center">
+                            <div class="col-12 col-sm col-md-12 col-lg px-0">
+                                <div class="container">
+                                    <div class="row oe_structure">
+                                        <div class="col-md-3 col-6 text-center py-2 ">
+                                            <a href="/shop/product/15948-lechuza-pila-growpot-korallrot-76479" class="nav-link o_default_snippet_text p-0 tp-animation-scale" data-name="Menu Item">
+                                                <img class="img-fluid rounded" src="/dynco_base/static/src/img/lechuza_img/mega_menu7/image (16).webp" alt=""/>
+                                                <br/>
+                                                <span class="d-block p-2 mt-2">
+                                                    <h2 class="mb-0 text-muted">
+                                                        <font style="font-size:14px;">PILA Growpot korallrot</font>
+                                                    </h2>
+                                                    <font style="font-size:14px;">44.90 CHF</font>
+                                                </span>
+                                            </a>
+                                        </div>
+                                        <div class="col-md-3 col-6 text-center py-2 ">
+                                            <a href="/shop/product/15944-lechuza-pila-growpot-lichtgrau-76482" class="nav-link o_default_snippet_text p-0 tp-animation-scale" data-name="Menu Item">
+                                                <img class="img-fluid rounded" src="/dynco_base/static/src/img/lechuza_img/mega_menu7/image.webp" alt=""/>
+                                                <br/>
+                                                <span class="d-block p-2 mt-2">
+                                                    <h2 class="mb-0 text-muted">
+                                                        <font style="font-size:14px;">PILA Color Stick Lichtgrau</font>
+                                                    </h2>
+                                                    <font style="font-size:14px;">44.90 CHF</font>
+                                                </span>
+                                            </a>
+                                        </div>
+                                        <div class="col-md-3 col-6 text-center py-2 ">
+                                            <a href="/shop/product/15941-lechuza-pila-growpot-pastellgrun-76483" class="nav-link o_default_snippet_text p-0 tp-animation-scale" data-name="Menu Item">
+                                                <img class="img-fluid rounded" src="/dynco_base/static/src/img/lechuza_img/mega_menu7/image (1).webp" alt=""/>
+                                                <br/>
+                                                <span class="d-block p-2 mt-2">
+                                                    <h2 class="mb-0 text-muted">
+                                                        <font style="font-size:14px;">PILA Color Stick Pastellgrün</font>
+                                                    </h2>
+                                                    <font style="font-size:14px;">44.90 CHF</font>
+                                                </span>
+                                            </a>
+                                        </div>
+                                        <div class="col-md-3 col-6 text-center py-2 ">
+                                            <a href="/shop/product/15942-lechuza-pila-growpot-petrolblau-76484" class="nav-link o_default_snippet_text p-0 tp-animation-scale" data-name="Menu Item">
+                                                <img class="img-fluid rounded" src="/dynco_base/static/src/img/lechuza_img/mega_menu7/image (2).webp" alt=""/>
+                                                <br/>
+                                                <span class="d-block p-2 mt-2">
+                                                    <h2 class="mb-0 text-muted">
+                                                        <font style="font-size:14px;">PILA Color Stick Pastellgrün</font>
+                                                    </h2>
+                                                    <font style="font-size:14px;">44.90 CHF</font>
+                                                </span>
+                                            </a>
+                                        </div>
+                                        <div class="col-md-3 col-6 text-center py-2 ">
+                                            <a href="/shop/product/15947-lechuza-pila-growpot-sandbraun-76480" class="nav-link o_default_snippet_text p-0 tp-animation-scale" data-name="Menu Item">
+                                                <img class="img-fluid rounded" src="/dynco_base/static/src/img/lechuza_img/mega_menu7/image (3).webp" alt=""/>
+                                                <br/>
+                                                <span class="d-block p-2 mt-2">
+                                                    <h2 class="mb-0 text-muted">
+                                                        <font style="font-size:14px;">PILA Color Stick Sandbraun</font>
+                                                    </h2>
+                                                    <font style="font-size:14px;">44.90 CHF</font>
+                                                </span>
+                                            </a>
+                                        </div>
+                                        <div class="col-md-3 col-6 text-center py-2 ">
+                                            <a href="/shop/product/15946-lechuza-pila-growpot-schiefergrau-76481" class="nav-link o_default_snippet_text p-0 tp-animation-scale" data-name="Menu Item">
+                                                <img class="img-fluid rounded" src="/dynco_base/static/src/img/lechuza_img/mega_menu7/image (4).webp" alt=""/>
+                                                <br/>
+                                                <span class="d-block p-2 mt-2">
+                                                    <h2 class="mb-0 text-muted">
+                                                        <font style="font-size:14px;">PILA Color Stick Schiefergrau</font>
+                                                    </h2>
+                                                    <font style="font-size:14px;">44.90 CHF</font>
+                                                </span>
+                                            </a>
+                                        </div>
+                                        <div class="col-md-3 col-6 text-center py-2 ">
+                                            <a href="/shop/product/15908-lechuza-pila-planter-35-korallrot-76466" class="nav-link o_default_snippet_text p-0 tp-animation-scale" data-name="Menu Item">
+                                                <img class="img-fluid rounded" src="/dynco_base/static/src/img/lechuza_img/mega_menu7/image (5).webp" alt=""/>
+                                                <br/>
+                                                <span class="d-block p-2 mt-2">
+                                                    <h2 class="mb-0 text-muted">
+                                                        <font style="font-size:14px;">PILA Color Planter Korallrot</font>
+                                                    </h2>
+                                                    <font style="font-size:14px;">84.90 CHF</font>
+                                                </span>
+                                            </a>
+                                        </div>
+                                        <div class="col-md-3 col-6 text-center py-2 ">
+                                            <a href="/shop/product/15904-lechuza-pila-planter-35-lichtgrau-76470" class="nav-link o_default_snippet_text p-0 tp-animation-scale" data-name="Menu Item">
+                                                <img class="img-fluid rounded" src="/dynco_base/static/src/img/lechuza_img/mega_menu7/image (6).webp" alt=""/>
+                                                <br/>
+                                                <span class="d-block p-2 mt-2">
+                                                    <h2 class="mb-0 text-muted">
+                                                        <font style="font-size:14px;">PILA Color Planter Lichtgrau</font>
+                                                    </h2>
+                                                    <font style="font-size:14px;">84.90 CHF</font>
+                                                </span>
+                                            </a>
+                                        </div>
+                                        <div class="col-md-3 col-6 text-center py-2 ">
+                                            <a href="/shop/product/15901-lechuza-pila-planter-35-pastellgrun-76471" class="nav-link o_default_snippet_text p-0 tp-animation-scale" data-name="Menu Item">
+                                                <img class="img-fluid rounded" src="/dynco_base/static/src/img/lechuza_img/mega_menu7/image (7).webp" alt=""/>
+                                                <br/>
+                                                <span class="d-block p-2 mt-2">
+                                                    <h2 class="mb-0 text-muted">
+                                                        <font style="font-size:14px;">PILA Color Planter pastellgrün</font>
+                                                    </h2>
+                                                    <font style="font-size:14px;">84.90 CHF</font>
+                                                </span>
+                                            </a>
+                                        </div>
+                                        <div class="col-md-3 col-6 text-center py-2 ">
+                                            <a href="/shop/product/15902-lechuza-pila-planter-35-petrolblau-76472" class="nav-link o_default_snippet_text p-0 tp-animation-scale" data-name="Menu Item">
+                                                <img class="img-fluid rounded" src="/dynco_base/static/src/img/lechuza_img/mega_menu7/image (8).webp" alt=""/>
+                                                <br/>
+                                                <span class="d-block p-2 mt-2">
+                                                    <h2 class="mb-0 text-muted">
+                                                        <font style="font-size:14px;">PILA Color Planter petrolblau</font>
+                                                    </h2>
+                                                    <font style="font-size:14px;">84.90 CHF</font>
+                                                </span>
+                                            </a>
+                                        </div>
+                                        <div class="col-md-3 col-6 text-center py-2 ">
+                                            <a href="/shop/product/15907-lechuza-pila-planter-35-sandbraun-76467" class="nav-link o_default_snippet_text p-0 tp-animation-scale" data-name="Menu Item">
+                                                <img class="img-fluid rounded" src="/dynco_base/static/src/img/lechuza_img/mega_menu7/image (9).webp" alt=""/>
+                                                <br/>
+                                                <span class="d-block p-2 mt-2">
+                                                    <h2 class="mb-0 text-muted">
+                                                        <font style="font-size:14px;">PILA Color Planter sandbraun</font>
+                                                    </h2>
+                                                    <font style="font-size:14px;">84.90 CHF</font>
+                                                </span>
+                                            </a>
+                                        </div>
+                                        <div class="col-md-3 col-6 text-center py-2 ">
+                                            <a href="/shop/product/15906-lechuza-pila-planter-schiefergrau-76468" class="nav-link o_default_snippet_text p-0 tp-animation-scale" data-name="Menu Item">
+                                                <img class="img-fluid rounded" src="/dynco_base/static/src/img/lechuza_img/mega_menu7/image (10).webp" alt=""/>
+                                                <br/>
+                                                <span class="d-block p-2 mt-2">
+                                                    <h2 class="mb-0 text-muted">
+                                                        <font style="font-size:14px;">PILA Color Planter schiefergrau</font>
+                                                    </h2>
+                                                    <font style="font-size:14px;">84.90 CHF</font>
+                                                </span>
+                                            </a>
+                                        </div>
+                                        <div class="col-md-3 col-6 text-center py-2 ">
+                                            <a href="/shop/product/15928-lechuza-pila-storage-korallrot-76473" class="nav-link o_default_snippet_text p-0 tp-animation-scale" data-name="Menu Item">
+                                                <img class="img-fluid rounded" src="/dynco_base/static/src/img/lechuza_img/mega_menu7/image (11).webp" alt=""/>
+                                                <br/>
+                                                <span class="d-block p-2 mt-2">
+                                                    <h2 class="mb-0 text-muted">
+                                                        <font style="font-size:14px;">PILA Color Storage korallrot</font>
+                                                    </h2>
+                                                    <font style="font-size:14px;">79.90 CHF</font>
+                                                </span>
+                                            </a>
+                                        </div>
+                                        <div class="col-md-3 col-6 text-center py-2 ">
+                                            <a href="/shop/product/15924-lechuza-pila-storage-lichtgrau-76476" class="nav-link o_default_snippet_text p-0 tp-animation-scale" data-name="Menu Item">
+                                                <img class="img-fluid rounded" src="/dynco_base/static/src/img/lechuza_img/mega_menu7/image (12).webp" alt=""/>
+                                                <br/>
+                                                <span class="d-block p-2 mt-2">
+                                                    <h2 class="mb-0 text-muted">
+                                                        <font style="font-size:14px;">PILA Color Storage lichtgrau</font>
+                                                    </h2>
+                                                    <font style="font-size:14px;">79.90 CHF</font>
+                                                </span>
+                                            </a>
+                                        </div>
+                                        <div class="col-md-3 col-6 text-center py-2 ">
+                                            <a href="/shop/product/15921-lechuza-pila-storage-pastellgrun-76477" class="nav-link o_default_snippet_text p-0 tp-animation-scale" data-name="Menu Item">
+                                                <img class="img-fluid rounded" src="/dynco_base/static/src/img/lechuza_img/mega_menu7/image (13).webp" alt=""/>
+                                                <br/>
+                                                <span class="d-block p-2 mt-2">
+                                                    <h2 class="mb-0 text-muted">
+                                                        <font style="font-size:14px;">PILA Storage pastellgrün</font>
+                                                    </h2>
+                                                    <font style="font-size:14px;">79.90 CHF</font>
+                                                </span>
+                                            </a>
+                                        </div>
+                                        <div class="col-md-3 col-6 text-center py-2 ">
+                                            <a href="/shop/product/15922-lechuza-pila-storage-petrolblau-76478" class="nav-link o_default_snippet_text p-0 tp-animation-scale" data-name="Menu Item">
+                                                <img class="img-fluid rounded" src="/dynco_base/static/src/img/lechuza_img/mega_menu7/image (14).webp" alt=""/>
+                                                <br/>
+                                                <span class="d-block p-2 mt-2">
+                                                    <h2 class="mb-0 text-muted">
+                                                        <font style="font-size:14px;">PILA Color Storage petrolblau</font>
+                                                    </h2>
+                                                    <font style="font-size:14px;">79.90 CHF</font>
+                                                </span>
+                                            </a>
+                                        </div>
+                                        <div class="col-md-3 col-6 text-center py-2 ">
+                                            <a href="/shop/product/15927-lechuza-pila-storage-sandbraun-76474" class="nav-link o_default_snippet_text p-0 tp-animation-scale" data-name="Menu Item">
+                                                <img class="img-fluid rounded" src="/dynco_base/static/src/img/lechuza_img/mega_menu7/image (15).webp" alt=""/>
+                                                <br/>
+                                                <span class="d-block p-2 mt-2">
+                                                    <h2 class="mb-0 text-muted">
+                                                        <font style="font-size:14px;">PILA Color Storage sandbraun</font>
+                                                    </h2>
+                                                    <font style="font-size:14px;">79.90 CHF</font>
+                                                </span>
+                                            </a>
+                                        </div>
+                                        <div class="col-md-3 col-6 text-center py-2 ">
+                                            <a href="/shop/product/15926-lechuza-pila-storage-schiefergrau-76475" class="nav-link o_default_snippet_text p-0 tp-animation-scale" data-name="Menu Item">
+                                                <img class="img-fluid rounded" src="/dynco_base/static/src/img/lechuza_img/mega_menu7/image (17).webp" alt=""/>
+                                                <br/>
+                                                <span class="d-block p-2 mt-2">
+                                                    <h2 class="mb-0 text-muted">
+                                                        <font style="font-size:14px;">PILA Color Storage schiefergrau</font>
+                                                    </h2>
+                                                    <font style="font-size:14px;">79.90 CHF</font>
+                                                </span>
+                                            </a>
+                                        </div>
+                                        <div class="col-md-3 col-6 text-center py-2 ">
+                                            <a href="/shop/product/13405-lechuza-pila-coaster-76485" class="nav-link o_default_snippet_text p-0 tp-animation-scale" data-name="Menu Item">
+                                                <img class="img-fluid rounded" src="/dynco_base/static/src/img/lechuza_img/mega_menu7/image (18).webp" alt=""/>
+                                                <br/>
+                                                <span class="d-block p-2 mt-2">
+                                                    <h2 class="mb-0 text-muted">
+                                                        <font style="font-size:14px;">PILA Rolluntersetzer</font>
+                                                    </h2>
+                                                    <font style="font-size:14px;">25.90 CHF</font>
+                                                </span>
+                                            </a>
+                                        </div>  
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+            </field>
+        </record>
+        <record id="menu_aktionen" model="website.menu">
+            <field name="name">Aktionen</field>
+            <field name="url">#</field>
+            <field name="is_mega_menu">True</field>
+            <field name="sequence" type="int">27</field>
+            <field name="website_id" ref="dynco_multi_website.lechuza_website_spt"/>
+            <field name="mega_menu_content" type="html">
+                <section class="s_mega_menu_thumbnails pt24 o_colored_level o_cc o_cc1">
+                    <div class="container">
+                        <div class="row justify-content-center">
+                            <div class="col-12 col-sm col-md-12 col-lg px-0">
+                                <div class="container">
+                                    <div class="row oe_structure">
+                                        <div class="col-md-3 col-6 text-center py-2 ">
+                                            <a href="/shop/product/13962-lechuza-tischgefasse-orchidea-scarlet-rot-matt-50106" class="nav-link o_default_snippet_text p-0 tp-animation-scale" data-name="Menu Item">
+                                                <img class="img-fluid rounded" src="/dynco_base/static/src/img/lechuza_img/mega_menu8/image.webp" alt=""/>
+                                                <br/>
+                                                <span class="d-block p-2 mt-2">
+                                                    <h2 class="mb-0 text-muted">
+                                                        <font style="font-size:14px;">ORCHIDEA scarlet rot matt</font>
+                                                    </h2>
+                                                    <font style="font-size:14px;">20.33 CHF</font>
+                                                </span>
+                                            </a>
+                                        </div>
+                                        <div class="col-md-3 col-6 text-center py-2 ">
+                                            <a href="/shop/product/13961-lechuza-tischgefasse-orchidea-scheifergrau-matt-50105" class="nav-link o_default_snippet_text p-0 tp-animation-scale" data-name="Menu Item">
+                                                <img class="img-fluid rounded" src="/dynco_base/static/src/img/lechuza_img/mega_menu8/image (1).webp" alt=""/>
+                                                <br/>
+                                                <span class="d-block p-2 mt-2">
+                                                    <h2 class="mb-0 text-muted">
+                                                        <font style="font-size:14px;">ORCHIDEA schiefergrau matt</font>
+                                                    </h2>
+                                                    <font style="font-size:14px;">20.33 CHF</font>
+                                                </span>
+                                            </a>
+                                        </div>
+                                        <div class="col-md-3 col-6 text-center py-2 ">
+                                            <a href="/shop/product/13960-lechuza-tischgefasse-orchidea-weiss-matt-50104" class="nav-link o_default_snippet_text p-0 tp-animation-scale" data-name="Menu Item">
+                                                <img class="img-fluid rounded" src="/dynco_base/static/src/img/lechuza_img/mega_menu8/image (2).webp" alt=""/>
+                                                <br/>
+                                                <span class="d-block p-2 mt-2">
+                                                    <h2 class="mb-0 text-muted">
+                                                        <font style="font-size:14px;">ORCHIDEA weiß matt</font>
+                                                    </h2>
+                                                    <font style="font-size:14px;">20.33 CHF</font>
+                                                </span>
+                                            </a>
+                                        </div>
+                                        <div class="col-md-3 col-6 text-center py-2 ">
+                                            <a href="/shop/product/15193-lechuza-trend-collection-nido-cottage-28-all-in-one-granit-50178" class="nav-link o_default_snippet_text p-0 tp-animation-scale" data-name="Menu Item">
+                                                <img class="img-fluid rounded" src="/dynco_base/static/src/img/lechuza_img/mega_menu8/image (3).webp" alt=""/>
+                                                <br/>
+                                                <span class="d-block p-2 mt-2">
+                                                    <h2 class="mb-0 text-muted">
+                                                        <font style="font-size:14px;">NIDO Cottage 28 granit</font>
+                                                    </h2>
+                                                    <font style="font-size:14px;">29.62 CHF</font>
+                                                </span>
+                                            </a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+            </field>
+        </record>
+    </data>
+    <data noupdate="1">
+        <!-- Dynco menu's -->
+        <record id="menu_fur_hersteller" model="website.menu">
+            <field name="name">FÜR HERSTELLER</field>
+            <field name="url">/hersteller</field>
+            <field name="sequence" type="int">1</field>
+            <field name="website_id" ref="website.default_website"/>
+        </record>
+        <record id="menu_fur_fachmarkte" model="website.menu">
+            <field name="name">FÜR FACHHÄNDLER</field>
+            <field name="url">/b2b</field>
+            <field name="sequence" type="int">2</field>
+            <field name="website_id" ref="website.default_website"/>
+        </record>
+        <record id="menu_fur_shopper" model="website.menu">
+            <field name="name">FÜR ENDKUNDEN</field>
+            <field name="url">/b2c</field>
+            <field name="sequence" type="int">3</field>
+            <field name="website_id" ref="website.default_website"/>
+        </record>
+        <record id="menu_fur_das_sind_wir" model="website.menu">
+            <field name="name">das sind wir</field>
+            <field name="url">/wir</field>
+            <field name="sequence" type="int">4</field>
+            <field name="website_id" ref="website.default_website"/>
+        </record>
+        <!-- Climaqua menu's -->
+        <!-- 2 -->
+        <record id="menu_planters" model="website.menu">
+            <field name="name">PLANTERS</field>
+            <field name="url">#</field>
+            <field name="sequence" type="int">1</field>
+            <field name="website_id" ref="__export__.website_20_e3037958"/>
+        </record>
+        <record id="menu_planters_indoor" model="website.menu">
+            <field name="name">INDOOR</field>
+            <field name="url">/category/climaqua-uebertoepfe</field>
+            <field name="sequence" type="int">2</field>
+            <field name="parent_id" ref="menu_planters"/>
+            <field name="website_id" ref="__export__.website_20_e3037958"/>
+        </record>
+        <record id="menu_planters_outdoor" model="website.menu">
+            <field name="name">OUTDOOR</field>
+            <field name="url">/category/climaqua-pflanzgefaess</field>
+            <field name="sequence" type="int">3</field>
+            <field name="parent_id" ref="menu_planters"/>
+            <field name="website_id" ref="__export__.website_20_e3037958"/>
+        </record>
+        <record id="menu_planters_pylo" model="website.menu">
+            <field name="name">PYLO</field>
+            <field name="url">/category/climaqua-schiefertopf</field>
+            <field name="sequence" type="int">4</field>
+            <field name="parent_id" ref="menu_planters"/>
+            <field name="website_id" ref="__export__.website_20_e3037958"/>
+        </record>
+        <record id="menu_planters_jardi" model="website.menu">
+            <field name="name">JARDI</field>
+            <field name="url">/category/climaqua-kraetetertopf</field>
+            <field name="sequence" type="int">5</field>
+            <field name="parent_id" ref="menu_planters"/>
+            <field name="website_id" ref="__export__.website_20_e3037958"/>
+        </record>
+        <record id="menu_planters_bol" model="website.menu">
+            <field name="name">BOL</field>
+            <field name="url">/category/climaqua-schale</field>
+            <field name="sequence" type="int">6</field>
+            <field name="parent_id" ref="menu_planters"/>
+            <field name="website_id" ref="__export__.website_20_e3037958"/>
+        </record>
+        <record id="menu_planters_tray" model="website.menu">
+            <field name="name">TRAY</field>
+            <field name="url">/category/climaqua-untersetzer</field>
+            <field name="sequence" type="int">7</field>
+            <field name="parent_id" ref="menu_planters"/>
+            <field name="website_id" ref="__export__.website_20_e3037958"/>
+        </record>
+        <!-- 3 -->
+        <record id="menu_flames" model="website.menu">
+            <field name="name">FLAMES</field>
+            <field name="url">#</field>
+            <field name="sequence" type="int">8</field>
+            <field name="website_id" ref="__export__.website_20_e3037958"/>
+        </record>
+        <record id="menu_flames_medium_400ml" model="website.menu">
+            <field name="name">MEDIUM (400ml)</field>
+            <field name="url">/shop/category/flames-medium-400ml-33</field>
+            <field name="sequence" type="int">9</field>
+            <field name="parent_id" ref="menu_flames"/>
+            <field name="website_id" ref="__export__.website_20_e3037958"/>
+        </record>
+        <record id="menu_flames_fackel" model="website.menu">
+            <field name="name">FACKEL</field>
+            <field name="url">/category/climaqua-flambo</field>
+            <field name="sequence" type="int">10</field>
+            <field name="parent_id" ref="menu_flames"/>
+            <field name="website_id" ref="__export__.website_20_e3037958"/>
+        </record>
+        <record id="menu_flames_ersatzteile" model="website.menu">
+            <field name="name">ERSATZTEILE</field>
+            <field name="url">/category/CLIMAQUA FLAMES ERSATZTEILE</field>
+            <field name="sequence" type="int">11</field>
+            <field name="parent_id" ref="menu_flames"/>
+            <field name="website_id" ref="__export__.website_20_e3037958"/>
+        </record>
+        <!-- 4 -->
+        <record id="menu_boutique" model="website.menu">
+            <field name="name">BOUTIQUE</field>
+            <field name="url">#</field>
+            <field name="sequence" type="int">12</field>
+            <field name="website_id" ref="__export__.website_20_e3037958"/>
+        </record>
+        <record id="menu_boutique_plate" model="website.menu">
+            <field name="name">PLATE</field>
+            <field name="url">/category/climaqua-schieferplatte</field>
+            <field name="sequence" type="int">13</field>
+            <field name="parent_id" ref="menu_boutique"/>
+            <field name="website_id" ref="__export__.website_20_e3037958"/>
+        </record>
+        <record id="menu_boutique_sign" model="website.menu">
+            <field name="name">SIGN</field>
+            <field name="url">/category/climaqua-schieferstecker</field>
+            <field name="sequence" type="int">14</field>
+            <field name="parent_id" ref="menu_boutique"/>
+            <field name="website_id" ref="__export__.website_20_e3037958"/>
+        </record>
+        <record id="menu_boutique_candle" model="website.menu">
+            <field name="name">CANDLE</field>
+            <field name="url">/category/climaqua-kerzenhalter</field>
+            <field name="sequence" type="int">15</field>
+            <field name="parent_id" ref="menu_boutique"/>
+            <field name="website_id" ref="__export__.website_20_e3037958"/>
+        </record>
+        <record id="menu_boutique_birdhouse" model="website.menu">
+            <field name="name">BIRDHOUSE</field>
+            <field name="url">/category/climaqua-vogelhaus</field>
+            <field name="sequence" type="int">16</field>
+            <field name="parent_id" ref="menu_boutique"/>
+            <field name="website_id" ref="__export__.website_20_e3037958"/>
+        </record>
+        <record id="menu_boutique_rolo" model="website.menu">
+            <field name="name">ROLO</field>
+            <field name="url">/category/climaqua-schale</field>
+            <field name="sequence" type="int">17</field>
+            <field name="parent_id" ref="menu_boutique"/>
+            <field name="website_id" ref="__export__.website_20_e3037958"/>
+        </record>
+    </data>
+</odoo>

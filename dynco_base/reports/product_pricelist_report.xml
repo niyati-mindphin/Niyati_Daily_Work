@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <template id="report_pricelist_page_inherit" inherit_id="product.report_pricelist_page">
+        <xpath expr="//div[2]" position="replace">
+            <div class="row">
+                <div class="col-md-6">
+                    <div class="w-100" t-if="not is_html_type">
+                      <br/>
+                      <t t-out="pricelist.dynamic_text_1" />
+                      <br/>
+                      </div>
+                    <form class="o_wysiwyg_textarea_wrapper w-100" t-if="is_html_type">
+                        <textarea name="dynamic_text_1" class="o_product_description_pricelistwidget o_wysiwyg_loading" t-att-pricelist="pricelist.id" t-esc="pricelist.dynamic_text_1">
+                        </textarea>
+                    </form>
+                </div>
+                <div class="col-md-6" style="display: inline-grid;align-items: center;text-align: right !important;width: 100%;">
+                        <strong>Sales Order Line Quantities (price per unit)</strong>
+                </div>
+            </div>
+        </xpath>
+        <xpath expr="//div[hasclass('my-3')]" position="before">
+            <div class="header">
+                <img t-att-src="'data:image/png;base64,%s' % to_text(company_logo)" style="max-height: 75px; vertical-align: top:"/>
+            </div>
+        </xpath>
+        
+        <xpath expr="//th" position="before">
+            <th></th>
+            <th>Internal Ref.</th>
+        </xpath>
+        <xpath expr="//th[4]" position="before">
+            <th>TU Qty of Products</th>
+        </xpath>
+        <xpath expr="//t/th" position="replace">
+            <th class="text-right">Price</th>
+        </xpath>
+        <xpath expr="//td" position="before">
+            <td>
+                <img t-att-src="'data:image/png;base64,%s' % to_text(product['image'])" style="max-height: 200px; vertical-align: top:"/>
+            </td>
+            <td><t t-esc="product['default_code']"/></td>
+        </xpath>
+        <xpath expr="//td[4]" position="before">
+            <td><t t-esc="product['trade_unit']"/></td>
+        </xpath>
+        <xpath expr="//div[hasclass('row')][last()]" position="after">
+            <div class="row">
+                <div class="col-md-6">
+                    <div class="w-100" t-if="not is_html_type">
+                      <br/>
+                      <t t-out="pricelist.dynamic_text_2" />
+                      <br/>
+                      </div>
+                    <form class="o_wysiwyg_textarea_wrapper w-100" t-if="is_html_type">
+                        <textarea name="dynamic_text_2" class="o_product_description_pricelistwidget o_wysiwyg_loading" t-att-pricelist="pricelist.id" t-esc="pricelist.dynamic_text_2">
+                        </textarea>
+                    </form>
+                </div>
+            </div>
+        </xpath>
+        <xpath expr="//div//tbody/t/tr/td//t[@t-esc=&quot;product['name']&quot;]/../.." position="replace">
+            <td t-att-class="is_product_tmpl and 'font-weight-bold' or None">
+                <a t-if="is_html_type" href="#" class="o_action" t-att-data-model="is_product_tmpl and 'product.template' or 'product.product'" t-att-data-res-id="product['id']">
+                    <t t-esc="product['name']"/>
+                    <p t-if="is_visible_description" class="small mb-1"><t t-esc="product['description']"/></p>
+                    <t t-if="is_visible_warehouse" t-esc="product['curr_location']"/>
+                </a>
+                <t t-else="">
+                    <t t-esc="product['name']"/>
+                    <p t-if="is_visible_description" class="small mb-1"><t t-esc="product['description']"/></p>
+                    <t t-if="is_visible_warehouse" t-esc="product['curr_location']"/>
+                </t>
+            </td>
+        </xpath>
+    </template>
+</odoo>

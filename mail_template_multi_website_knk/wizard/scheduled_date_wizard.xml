@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+        <record id="schedule_date_wizard" model="ir.ui.view">
+            <field name="name">Schedule Date Wizard</field>
+            <field name="model">planned.date.wizard</field>
+            <field name="arch" type="xml">
+                <form>
+                    <sheet>
+                        <group class="col-6">
+                            <field name="schedule_date"/>
+                            <field name="send_mail"/>
+                        </group>
+                    </sheet>
+                    <footer>
+                        <button name="button_validate_picking" string="Confirm" type="object" class="oe_highlight" data-hotkey="q"/>
+                        <button string="Cancel" class="btn-secondary" special="cancel" data-hotkey="z"/>
+                    </footer>
+                </form>
+            </field>
+        </record>
+
+        <!-- <record id="plan_wizard_action" model="ir.actions.act_window">
+            <field name="name">Launch Plan</field>
+            <field name="res_model">hr.plan.wizard</field>
+            <field name="view_mode">form</field>
+            <field name="target">new</field>
+        </record> -->
+    </data>
+</odoo>

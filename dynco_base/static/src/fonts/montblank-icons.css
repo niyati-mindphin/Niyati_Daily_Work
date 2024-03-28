@@ -1,0 +1,7 @@
+
+@font-face {
+    font-family: 'mb-iconsV2';
+    font-style: normal;
+    font-weight: 400;
+    src: local('mb-iconsV2'), url(mb-iconsV2.woff2) format('woff2');
+}

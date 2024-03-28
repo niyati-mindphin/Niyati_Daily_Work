@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+    <data>
+        <record id="lechuza_impressum_page_view" model="ir.ui.view">
+            <field name="name">Lechuza impressum</field>
+            <field name="type">qweb</field>
+            <field name="key">website.lechuza_impressum_page</field>
+            <field name="arch" type="xml">
+                <t name="Home" t-name="website.lechuza_impressum_page">
+                    <t t-name="website.impressum">
+                        <t t-call="website.layout">
+                            <div id="wrap" class="oe_structure oe_empty oe_website_sale lechuza-impressum">
+                                <div class="container">
+                                    <div class="row justify-content-center s_nb_column_fixed">
+                                        <div class="col-md-12">
+                                            <section class="pt32 pb32">
+                                                <div class="col-md-12 s_title pb16 pt40 text-center">
+                                                    <font class="main-header fontweight">
+                                                        <h1>Impressum</h1>
+                                                    </font>
+                                                </div>
+                                            </section>
+                                            <section class="s_text_block pt32 pb32">
+                                                <div class="container">
+                                                    <div class="row justify-content-center">
+                                                        <div class="pt32 pb32 col-md-9">
+                                                            <div class="registration fontsize">
+                                                                <div class="heading-5">
+                                                                    <font class="font-weight-bold">Kundenservice:</font><br />
+                                                                    <font>DYNCO AG</font><br />
+                                                                    <font>Bolligenstrasse 90</font><br />
+                                                                    <font>3065 Bolligen</font><br />
+                                                                    <font>Schweiz</font><br />
+                                                                    <font>Telefon: +41 31 921 88 44</font><br />
+                                                                    <font>Fax: +41 31 921 60 88</font><br />
+                                                                    <font>E-Mail:&amp;nbsp;</font>&amp;nbsp;<a href="mailto:lechuza_support@dynco.ch" class="offerlink">lechuza_support@dynco.ch</a><br /><br />
+                                                                </div>
+                                                                <div class="mt-3">
+                                                                    <font>Alle Rechte vorbehalten der Dynco AG (2020). Alle Texte, Bilder, Grafiken, Sound-, Animations- und Videodateien sowie ihre Anordnung unterliegen dem Urheberrecht und anderen Gesetzen zum Schutz des geistigen Eigentums. Der Inhalt dieser Website darf weder für Handelszwecke noch zur Weitergabe kopiert, verändert, verbreitet oder sonst Dritten zugänglich gemacht werden. Auch eine Nutzung auf anderen Websites ist unzulässig. Diese Webseite und alle Inhalte sind nach schweizerischem Gesetz geschützt. Sie dürfen sich den Inhalt der Website ausschließlich für Ihren persönlichen, nicht kommerziellen privaten Gebrauch herunterladen, vorausgesetzt, dass Sie alle Urheberrechts-, Marken- und andere Schutzrechtshinweise unberührt lassen, insbesondere diese Hinweise nicht löschen oder sonst unkenntlich machen. Alle Änderungen oder der Gebrauch des Inhaltes unserer Website für irgendeinen anderen Zweck stellt eine Verletzung unserer Rechte dar und ist strengstens untersagt.</font>
+                                                                    <br />
+                                                                    <font>
+                                                                        <br />
+                                                                    </font>
+                                                                    <b>
+                                                                        <font>Gewährleistung</font>
+                                                                    </b>
+                                                                    <br />
+                                                                    <font>Unser Webshop wurde mit grösstmöglicher Sorgfalt zusammengestellt. Auch wenn wir davon ausgehen, dass die von uns gegebenen Informationen zutreffend sind, können sie dennoch Fehler oder Ungenauigkeiten enthalten. Wir stellen die Informationen daher ohne jegliche Zusicherung oder Gewährleistung jeglicher Art, sei sie ausdrücklich oder stillschweigend, zur Verfügung. Ausgeschlossen sind auch alle stillschweigenden Gewährleistungen betreffend die Handelsfähigkeit, die Eignung für bestimmte Zwecke oder den Nichtverstoss gegen Gesetze und Patente. Wir schliessen jegliche Haftung für Schäden, die direkt oder indirekt aus der Benutzung dieser Website entstehen, aus, soweit diese nicht auf Vorsatz oder grober Fahrlässigkeit von uns beruhen. Insbesondere übernehmen wir auch keine Garantie dafür, dass unsere Website, deren Inhalt und/oder der Server, auf dem sie hinterlegt ist, frei von Viren sind. Ausserdem weisen wir darauf hin, dass wir andere Websites, die einen Link zu unserer Website besitzen, nicht überwachen und nicht verantwortlich für deren Inhalt sind.</font>
+                                                                    <br />
+                                                                    <font>
+                                                                        <br />
+                                                                    </font>
+                                                                    <b>
+                                                                        <font>Lizenzrechte</font>
+                                                                    </b>
+                                                                    <br />
+                                                                    <font>lechuza.dynco.ch möchte sich Ihnen mit einem innovativen und informativen Internet-Programm präsentieren. Wir hoffen deshalb, dass Ihnen der Besuch unserer Website Freude bereitet. Das darin enthaltene geistige Eigentum wie Patente, Marken und Urheberrechte ist geschützt, und durch diese Website wird keine Lizenz zur Nutzung des geistigen Eigentums von lechuza.dynco.ch oder Dritten erteilt.</font>
+                                                                    <br />
+                                                                    <br />
+                                                                    <b>
+                                                                        <font>Ihre Meinung </font>
+                                                                    </b>
+                                                                    <font>
+                                                                        <br />
+                                                                    </font>
+                                                                    <font>Gerne lernen wir Ihre Meinung über unsere Produkte und unsere Website kennen. Wir weisen jedoch darauf hin, dass wir alle von Ihnen erhaltenen Mitteilungen als nichtvertraulich betrachten. Ferner sind wir berechtigt, Ihre Informationen in jeder Weise und ohne jede Verpflichtung Ihnen gegenüber zu nutzen. Die Informationen gehen mit der Übermittlung in das Eigentum von der Dynco AG über und wir sind berechtigt, alle Ideen, Konzepte, Know-how oder technische Informationen für jedwede Zwecke zu nutzen einschliesslich der Entwicklung, der Herstellung und des Vertriebs von Produkten, ohne dass hierfür eine Vergütung an Sie zu bezahlen ist.</font>
+                                                                    <br />
+                                                                    <br />
+                                                                    <br />
+                                                                    <font>Design und Konzept dieser Website von Dynco AG.</font>
+                                                                </div>
+                                                                <div class="mt-3">&amp;nbsp;</div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </section>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </t>
+                    </t>
+                </t>
+            </field>
+        </record>
+        <record id="lechuza_impressum_page" model="website.page">
+            <field name="url">/impressum</field>
+            <field name="website_published">True</field>
+            <field name="view_id" ref="lechuza_impressum_page_view" />
+        </record>
+    </data>
+</odoo>

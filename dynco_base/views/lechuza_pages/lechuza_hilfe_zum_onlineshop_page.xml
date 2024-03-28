@@ -1,0 +1,153 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+    <data>
+        <record id="lechuza_hilfe_zum_onlineshop_page_view" model="ir.ui.view">
+            <field name="name">Lechuza hilfe zum onlineshop</field>
+            <field name="type">qweb</field>
+            <field name="key">website.lechuza_hilfe_zum_onlineshop_page</field>
+            <field name="arch" type="xml">
+                <t name="Home" t-name="website.lechuza_hilfe_zum_onlineshop_page">
+                    <t t-name="website.hilfe-zum-onlineshop">
+                        <t t-call="website.layout">
+                            <div id="wrap" class="oe_structure oe_empty oe_website_sale hilfe">
+                                <div class="container">
+                                    <div class="row justify-content-center s_nb_column_fixed">
+                                        <div class="col-md-12">
+                                            <section class="pt32 pb32">
+                                                <div class="col-md-12 s_title pt16 pb16 text-center">
+                                                    <font class="main-header fontweight">
+                                                        <h1>Hilfe</h1>
+                                                    </font>
+                                                </div>
+                                            </section>
+                                            <section class="s_faq_collapse pt48 pb32">
+                                                <div class="container">
+                                                    <div class="row justify-content-center s_nb_column_fixed">
+                                                        <div class="col-md-10 s_title pb16 pt0">
+                                                            <h1 class="heading-2 font-weight-normal mt-4">Fragen zum Online-Shop</h1>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </section>
+                                            <section class="s_faq_collapse pb32 pt0">
+                                                <div class="container">
+                                                    <div class="row justify-content-center s_nb_column_fixed">
+                                                        <div class="col-md-10 pb-2 ">
+                                                            <div class="panel">
+                                                                <div class="panel-group" id="accordion">
+                                                                    <div class="panel panel-default">
+                                                                        <div class="panel-heading">
+                                                                            <h4 class="panel-title">
+                                                                                <a href="#collapse1" data-toggle="collapse" class="accordion-toggle collapsed" data-parent="#accordion">Kundenkonto und Gastzugang</a>
+                                                                            </h4>
+                                                                        </div>
+                                                                        <div id="collapse1" class="panel-collapse collapse in">
+                                                                            <div class="panel-body">
+                                                                                <ul class="accordion-sub pl-2">
+                                                                                    <li class="mt-2">
+                                                                                        <a>Muss ich ein Kundenkonto anlegen?</a>
+                                                                                    </li>
+                                                                                    <div id="faq01">
+                                                                                        <div class="bg-off-white p-3"> Nein, ein Kundenkonto ist nicht zwingend notwendig. Sie können Bestellungen auch über einen Gastaccount absenden. Dazu klicken Sie in Ihrem Warenkorb auf „Kasse“ und wählen anschließend „Bestellen ohne Registrierung“.</div>
+                                                                                    </div>
+                                                                                    <li class="mt-2">
+                                                                                        <a>Welche Vorteile hat ein Kundenkonto?</a>
+                                                                                    </li>
+                                                                                    <div id="faq02">
+                                                                                        <div class="bg-off-white p-3"> Mit einem Online-Kundenkonto genießen Sie viele Vorteile. Registrierte Kunden haben die Möglichkeit Ihre Kundendaten (u. a. Mailadresse und Passwort) zu ändern oder abgeschlossene Bestellungen, gespeicherte Wunschzettel oder Geschenkgutscheine einzusehen sowie Ihre Adressen im Adressbuch oder Erinnerungen zu verwalten. Mit einem Gastzugang haben Sie diese Möglichkeiten nicht.<br /><br /> Ihr Kundenkonto können Sie im Online-Shop jederzeit löschen. Loggen Sie sich dazu einfach in Ihr Kundenkonto ein.</div>
+                                                                                    </div>
+                                                                                    <li class="mt-2">
+                                                                                        <a>Wie registriere ich mich?</a>
+                                                                                    </li>
+                                                                                    <div id="faq03">
+                                                                                        <div class="bg-off-white p-3"> Melden Sie sich ganz bequem während des Bestellvorgangs an, indem Sie auf „Kasse“ und anschließend auf „Jetzt Konto erstellen“ klicken. Dazu geben Sie bitte Vorname, Nachname, E-Mail-Adresse und ein sicheres Passwort (nach den Richtlinien unter Punkt 2) ein. Es ist notwendig die <a href="https://www.lechuza.ch/de/allgemeine-geschaeftsbedingungen/terms.html" target="_blank" class="link-primary">Geschäftsbedingungen (AGBs)</a> sowie die <a href="https://www.lechuza.ch/de/datenschutzerklaerung/privacy-policy.html" target="_blank" class="link-primary">Datenschutzrichtlinen</a> zu bestätigen. Sie können sich ebenfalls bequem mit Ihrem Facebook oder Googlekonto registieren.<br />Hinweis: Ihre privaten Daten auf Sozialen Medien sowie Ihre Passwörter sind jederzeit geschützt und für uns nicht einsehbar.</div>
+                                                                                    </div>
+                                                                                    <li class="mt-2">
+                                                                                        <a>Wie kann ich die Wunschzettel-Funktion nutzen?</a>
+                                                                                    </li>
+                                                                                    <div id="faq04">
+                                                                                        <div class="bg-off-white p-3"> Die Wunschzettel-Funktion können Sie nutzen, indem Sie ganz einfach bei den Artikeln die Ihnen gefallen auf das Herz Symbol klicken. Alle geherzten Produkte finden Sie dann auf Ihrer <b>Wishlist</b> (Icon oben rechts im Hauptmenu).&amp;nbsp;</div>
+                                                                                    </div>
+                                                                                </ul>
+                                                                            </div>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                                <div class="panel">
+                                                                    <div class="panel-group" id="accordion">
+                                                                        <div class="panel panel-default">
+                                                                            <div class="panel-heading">
+                                                                                <h4 class="panel-title mt-3">
+                                                                                    <a href="#collapse2" data-toggle="collapse" class="accordion-toggle collapsed" data-parent="#accordion">Passwort</a>
+                                                                                </h4>
+                                                                            </div>
+                                                                            <div id="collapse2" class="panel-collapse collapse">
+                                                                                <div class="panel-body">
+                                                                                    <ul class="accordion-sub pl-2">
+                                                                                        <li class="mt-2">
+                                                                                            <a>Wie muss ich mein Passwort wählen?</a>
+                                                                                        </li>
+                                                                                        <div id="faq05">
+                                                                                            <div class="bg-off-white p-3"> Bitte beachten Sie: Ihr Passwort sollte zwischen 8 und 20 Zeichen lang sein, mindestens 1 Großbuchstaben, 1 Zahl und 1 Sonderzeichen enthalten. Zulässige Sonderzeichen sind folgende Zeichen: .,-_%# (Punkt, Komma, Bindestrich, Unterstrich, Prozent, Raute).</div>
+                                                                                        </div>
+                                                                                        <li class="mt-2">
+                                                                                            <a>Was kann ich tun, wenn ich mein Passwort vergessen habe?</a>
+                                                                                        </li>
+                                                                                        <div id="faq06">
+                                                                                            <div class="bg-off-white p-3"> Sollten Sie Ihr Passwort vergessen haben, klicken Sie bei der Anmeldung Ihres Kontos einfach auf „Passwort vergessen?“. Tragen Sie auf der Seite „Passwort zurücksetzen“ Ihre Mailadresse ein. Anschließend erhalten Sie eine E-Mail mit einem Link, um Ihr Passwort zurückzusetzen. Bitte hinterlegen Sie anschließend ein neues Passwort im Online-Shop, um Zugriff auf Ihr Kundenkonto zu erhalten.</div>
+                                                                                        </div>
+                                                                                    </ul>
+                                                                                </div>
+                                                                            </div>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                                <div class="panel">
+                                                                    <div class="panel-group" id="accordion">
+                                                                        <div class="panel panel-default">
+                                                                            <div class="panel-heading">
+                                                                                <h4 class="panel-title mt-3">
+                                                                                    <a href="#collapse3" data-toggle="collapse" class="accordion-toggle collapsed" data-parent="#accordion">Kontakt</a>
+                                                                                </h4>
+                                                                            </div>
+                                                                            <div id="collapse3" class="panel-collapse collapse">
+                                                                                <div class="panel-body">
+                                                                                    <p class="panel-text">
+                                                                                        <ul class="accordion-sub pl-2">
+                                                                                            <li class="mt-2">
+                                                                                                <a>Wie kann ich den Kundenservice kontaktieren?</a>
+                                                                                            </li>
+                                                                                            <div id="faq07">
+                                                                                                <div class="bg-off-white p-3">
+                                                                                                    <a>Rufen Sie unsere Service-Nummer an, unter +41 31 921 8844 oder schreiben Sie uns eine E-Mail. &amp;nbsp; </a>
+                                                                                                    <a href="/helpdesk/lechuza-support-3" target="_blank" class="link-primary btn btn-outline-dark" data-original-title="" title="" aria-describedby="tooltip985428">Zum Kontaktformular.</a>
+                                                                                                </div>
+                                                                                            </div>
+                                                                                        </ul>
+                                                                                    </p>
+                                                                                </div>
+                                                                            </div>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </section>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </t>
+                    </t>
+                </t>
+            </field>
+        </record>
+        <record id="lechuza_hilfe_zum_onlineshop_page" model="website.page">
+            <field name="url">/hilfe-zum-onlineshop</field>
+            <field name="website_published">True</field>
+            <field name="view_id" ref="lechuza_hilfe_zum_onlineshop_page_view" />
+        </record>
+    </data>
+</odoo>

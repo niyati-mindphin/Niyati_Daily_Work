@@ -1,0 +1,239 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+        <record id="climaqua_idea_page_view" model="ir.ui.view">
+            <field name="name">Climaqua idea</field>
+            <field name="type">qweb</field>
+            <field name="key">website.climaqua_idea_page</field>
+            <field name="arch" type="xml">
+                <t name="Home" t-name="website.climaqua_idea_page">
+                    <t t-name="website.idea">
+                        <t t-call="website.layout">
+                            <div id="wrap" class="oe_structure oe_empty oe_website_sale idea">
+                                <div class="container">
+                                    <div class="row justify-content-center">
+                                        <div class="col-md-11">
+                                            <section class="s_text_block pt32 pb32">
+                                                <div class="container">
+                                                    <div class="row justify-content-center">
+                                                        <div class="col-md-10 pt32 pb32 heading header2">
+                                                            <h1 class="lead text-center">
+                                                                <font class="font-weight-normal" style="font-size: 62px;">DIE IDEE</font>
+                                                                <br />
+                                                            </h1>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </section>
+                                            <section class="s_text_block pb24 pt0">
+                                                <div class="container">
+                                                    <div class="row justify-content-center">
+                                                        <div class="col-md-10 pt0 pb4">
+                                                            <p class="lead">&amp;nbsp;</p>
+                                                            <h4 style="text-align: left;">
+                                                                <font>In der Natur sind wir frei, geniessen die Ruhe und fühlen uns wohl. Sie gibt uns Kraft und Energie. </font>
+                                                                <span>Zur Erholung joggen wir im Park, spazieren im Wald, geniessen die Weite und Stille am See, setzen uns ans Feuer ...&amp;nbsp;&amp;nbsp;</span>
+                                                            </h4>
+                                                            <p>
+                                                                <img class="img-fluid o_we_custom_image" src="dynco_base/static/src/img/climaqua_img/climaqua_footer_imgs/idea.webp" data-original-title="" title="" aria-describedby="tooltip6056" style="width: 100%;" />
+                                                                <i>
+                                                                    <font style="color: rgb(156, 156, 148);">Bild: getty images.</font>
+                                                                </i>
+                                                                <br />
+                                                            </p>
+                                                            <p class="lead" />
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </section>
+                                            <section class="s_text_block pt32 pb88">
+                                                <div class="container">
+                                                    <div class="row justify-content-center">
+                                                        <div class="pb8 col-md-10 pt0">
+                                                            <div id="panel-8455-0-0-2" class="so-panel widget widget_sow-editor panel-last-child" data-index="2">
+                                                                <div class="so-widget-sow-editor so-widget-sow-editor-base">
+                                                                    <div class="siteorigin-widget-tinymce textwidget">
+                                                                        <h4 class="font-weight-normal">
+                                                                            <span style="font-size: 13.5pt;">CLIMAQUA® bringt Dir die Natur nach Hause - ins Wohnzimmer, Arbeitszimmer, Schlafzimmer, in die Küche, auf Balkon/Terrasse oder in den Garten. Mit CLIMAQUA® kannst Du Wasser, Feuer, Pflanzen und Stein </span>
+                                                                            <span>gefahrlos</span>
+                                                                            <span style="font-size: 13.5pt;">&amp;nbsp;in engster Umgebung erleben.</span>
+                                                                        </h4>
+                                                                        <h4>
+                                                                            <span>CLIMAQUA® steht für Natur, Wohlbefinden, Qualität, handgemachte Unikate, Nachhaltigkeit und&amp;nbsp;Swiss Design. </span>
+                                                                            <br /><br />
+                                                                            <font>Wir verwenden für unsere Produkte hochwertige Materialien. Die Produkte sind so konzipiert, dass abgenutzte oder defekte Teile problemlos ersetzt werden können. Im Design steht die einzigartige Beschaffenheit des Materials im Vordergrund.<br /><br />Das Ergebnis: Produkte, die großartig aussehen und deren Verwendung Freude macht.<br /><br />Für den täglichen Einsatz gemacht. Designt und produziert, um mindestens ein Leben lang zu halten.<br />Schiefer stammt übrigens, aus dem Paläoszoikum, ist also rund 200-400 Millionen Jahre alt.<br /></font>
+                                                                        </h4>
+                                                                        <br />
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </section>
+                                            <section class="pt32 pb4">
+                                                <div class="container">
+                                                    <div class="row justify-content-center s_nb_column_fixed">
+                                                        <div class="col-md-10 s_title pt16 pb40 text-center header2">
+                                                            <h1 class="s_title_default">
+                                                                <font class="font-weight-normal" style="font-size: 48px;">BRUNNEN</font>
+                                                            </h1>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </section>
+                                            <section class="s_three_columns oe_custom_bg pb64 pt0">
+                                                <div class="container">
+                                                    <div class="row justify-content-center d-flex align-items-stretch">
+                                                        <div class="s_col_no_bgcolor pt16 pb16 col-md-10">
+                                                            <div class="card bg-white">
+                                                                <div class="card-body">
+                                                                    <h4 class="card-text">
+                                                                        <br />
+                                                                        <br />
+                                                                        <font>„Fliessendes Wasser bereichert und inspiriert“ besagt ein Grundsatz des Feng-Shui. Der Brunnen ist eine Art „Maskottchen“ der uralten traditionellen Lebensphilosophie, aus welcher klare Regeln über die Anordnung von Dingen in Räumen hervorgeht. „Ohne Inspiration kein Erfolg“&amp;nbsp; – sagen wir.<br /><br />Die positive Wirkung des Brunnens im Wohnraum wird in westlichen Ländern noch immer unterbewertet. Nebst der effektiven und natürlichen Luftbefeuchtung und -reinigung (ein grosses Thema in kalten Ländern wie der Schweiz) besteht ein wissenschaftlich erwiesener Nutzen: Fliessendes Wasser beruhigt Geist und Seele und regt zugleich die Phantasie an. <br /><br />CLIMAQUA® Fountains vereinen Ästhetik, Natur und Technizität und tragen zu einem gesunden Raumklima bei.<br /></font>
+                                                                        <font />
+                                                                    </h4>
+                                                                    <h4 class="card-text">
+                                                                        <br />
+                                                                    </h4>
+                                                                    <h4 class="card-text" style="text-align: center;">
+                                                                        <a href="/shop/category/fountains-7" class="btn btn-lg btn-outline-primary" data-original-title="" title="" aria-describedby="tooltip751922">
+                                                                            <font style="font-size: 24px;" data-original-title="" title="" aria-describedby="tooltip776159">Brunnen&amp;nbsp;<br data-original-title="" title="" aria-describedby="tooltip353988" /></font>
+                                                                        </a>
+                                                                    </h4>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </section>
+                                            <section class="pt32 pb4">
+                                                <div class="container">
+                                                    <div class="row justify-content-center s_nb_column_fixed">
+                                                        <div class="col-md-10 s_title pt16 pb16 text-center header2">
+                                                            <h1 class="s_title_default">
+                                                                <font class="font-weight-normal" style="font-size: 48px;">PFLANZGEFÄSSE<br /></font>
+                                                            </h1>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </section>
+                                            <section class="s_three_columns pt32 oe_custom_bg pb24">
+                                                <div class="container">
+                                                    <div class="row justify-content-center d-flex align-items-stretch">
+                                                        <div class="s_col_no_bgcolor pt16 pb16 col-md-10">
+                                                            <div class="card bg-white">
+                                                                <img class="card-img-top" src="/dynco_base/static/src/img/climaqua_img/climaqua_footer_imgs/Katalog_CLIMAQUA_2019_2_web_Page_19.webp" alt="Odoo - Sample 1 for three columns" data-original-title="" title="" aria-describedby="tooltip442835" />
+                                                                <div class="card-body">
+                                                                    <div class="card-body">
+                                                                        <h4 class="card-text">
+                                                                            <br />
+                                                                            <br />
+                                                                            <font>Pflanzgefässe aus echt Schieferstein. In erster Linie fasziniert die Dünnwandigkeit. Dabei ist das Gewicht zur Grösse ideal; nicht zu schwer zu transportieren und nicht zu leicht. Bei Wind besteht keine Kippgefahr. <br /><br />Stein und Pflanze harmonieren optisch und materiell perfekt: die natürliche, feinporöse Stein-Mantelung bietet der Pflanze optimale Voraussetzungen für prachtvolles Gedeihen.<br /></font>
+                                                                        </h4>
+                                                                        <h4 class="card-text">
+                                                                            <font>
+                                                                                <br />
+                                                                            </font>
+                                                                        </h4>
+                                                                        <h4 class="card-text">
+                                                                            <font>CLIMAQUA® Planters sind sehr robust und extrem langlebig. Der Stein verändert sich nicht, nicht in den nächsten 100 Jahren... UV und Witterung sind daher keine Feinde von CLIMAQUA® Planters. Einen CLIMAQUA® Planters kaufen Sie fürs Leben.<br /></font>
+                                                                            <font />
+                                                                        </h4>
+                                                                        <h4 class="card-text">
+                                                                            <br />
+                                                                        </h4>
+                                                                        <h4 class="card-text"> </h4>
+                                                                        <h4 class="card-text"> </h4>
+                                                                        <h4 class="card-text"> </h4>
+                                                                        <h4 class="card-text" style="text-align: center;">
+                                                                            <a href="https://shop.climaqua.swiss/shop/category/planters-8" class="btn btn-lg btn-outline-primary" data-original-title="" title="" aria-describedby="tooltip922043">
+                                                                                <font style="font-size: 24px;" data-original-title="" title="" aria-describedby="tooltip966741">Pflanzgefässe&amp;nbsp;<br /></font>
+                                                                            </a>
+                                                                        </h4>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                        <div class="col-md-10 s_title pb24 pt96 text-center header2">
+                                                            <h1 class="s_title_default">
+                                                                <font class="font-weight-normal" style="font-size: 48px;">DEKOFEUER</font>
+                                                            </h1>
+                                                        </div>
+                                                        <div class="s_col_no_bgcolor pt16 pb16 col-md-10">
+                                                            <div class="card bg-white">
+                                                                <img class="card-img-top" src="/dynco_base/static/src/img/climaqua_img/climaqua_footer_imgs/CLIMAQUA-Flame-PINO-77625-SIenaS-77623-SienaM-77624-mood-1-72x-srgb.webp" alt="Odoo - Sample 1 for three columns" data-original-title="" title="" aria-describedby="tooltip442835" />
+                                                                <div class="card-body">
+                                                                    <div class="card-body">
+                                                                        <h4 class="card-text">
+                                                                            <br />
+                                                                            <br />
+                                                                            <font>Ein flackerndes aber gebändigtes Feuer auf dem Tisch – ohne Russ, ohne Geruch, ohne sonstige Emissionen, geeignet für den Innenraum, ohne Notwendigkeit einer Abluftinstallation.<br /><br />Als die neuen DIN-Sicherheitsnormen 2015 in der EU eingeführt wurden, waren CLIMAQUA® Flames die ersten und damals einzigen offiziell nach DIN gebauten mit Bioethanol betriebenen Dekofeuer auf dem Markt. Schnell wurde aus den CLIMAQUA® Flames ein eigenes Standbein, das die CLIMAQUA® Fountains und CLIMAQUA® Planters optimal ergänzt. <br />Nature at Home!<br /></font>
+                                                                            <font />
+                                                                        </h4>
+                                                                        <h4 class="card-text">
+                                                                            <br />
+                                                                        </h4>
+                                                                        <h4 class="card-text" style="text-align: center;">
+                                                                            <a href="https://shop.climaqua.swiss/shop/category/flames-9" class="btn btn-outline-primary btn-lg" data-original-title="" title="" aria-describedby="tooltip901802">
+                                                                                <font style="font-size: 24px;" data-original-title="" title="" aria-describedby="tooltip6222">Dekofeuer | also the CTA<br data-original-title="" title="" aria-describedby="tooltip449448" /></font>
+                                                                            </a>
+                                                                        </h4>
+                                                                        <h4 class="card-text"> </h4>
+                                                                        <h4 class="card-text"> </h4>
+                                                                        <h4 class="card-text"> </h4>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                        <div class="col-md-10 s_title pb4 pt176 text-center header2">
+                                                            <h1 class="s_title_default">
+                                                                <font class="font-weight-normal" style="font-size: 48px;">BOUTIQUE</font>
+                                                            </h1>
+                                                        </div>
+                                                        <div class="s_col_no_bgcolor pt16 col-md-10 pb72">
+                                                            <div class="card bg-white">
+                                                                <img class="card-img-top" src="dynco_base/static/src/img/climaqua_img/climaqua_footer_imgs/CLIMAQUA-Boutique-Plate-Karent-A-6002-mood%201-72x-srgb.webp" alt="Odoo - Sample 1 for three columns" data-original-title="" title="" aria-describedby="tooltip442835" />
+                                                                <div class="card-body">
+                                                                    <div class="card-body">
+                                                                        <h4 class="card-text">
+                                                                            <br />
+                                                                            <font>CLIMAQUA® Boutique umfasst diverse hübsche und praktische Artikel aus echt Stein - Schiefer oder Marmor - zum Eigengebrauch oder als Geschenk. Untersetzer, Kerzenhalter, Beschriftungstafeln, Vogelhäuschen, etc.</font>
+                                                                            <font />
+                                                                            <br />
+                                                                        </h4>
+                                                                        <div class="card-body">
+                                                                            <h4 class="card-text">
+                                                                                <br />
+                                                                            </h4>
+                                                                            <h4 class="card-text" style="text-align: center;">
+                                                                                <a href="https://shop.climaqua.swiss/shop/category/boutique-10" class="btn btn-lg btn-outline-primary" data-original-title="" title="" aria-describedby="tooltip70904">
+                                                                                    <font style="font-size: 24px;" data-original-title="" title="" aria-describedby="tooltip270515">BOUTIQUE<br data-original-title="" title="" aria-describedby="tooltip677944" /></font>
+                                                                                </a>
+                                                                            </h4>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </section>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </t>
+                    </t>
+                </t>
+            </field>
+        </record>
+        <record id="climaqua_idea_page" model="website.page">
+            <field name="url">/idea</field>
+            <field name="website_published">True</field>
+            <field name="view_id" ref="climaqua_idea_page_view" />
+            <field name="website_id" ref="__export__.website_20_e3037958"/>
+        </record>
+    </data>
+</odoo>

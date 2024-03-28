@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+        <record id="custom_inventory_localization" model="ir.ui.view">
+            <field name="name">custom_inventory_localization_form</field>
+            <field name="model">stock.location</field>
+            <field name="inherit_id" ref="stock.view_location_form"/>
+            <field name="arch" type="xml">
+                <xpath expr="//field[@name='return_location']" position="after">
+                    <field name="warehouse_sector"/>
+                </xpath>
+            </field>
+        </record>
+        <record id="view_picking_form_inherit_knk" model="ir.ui.view">
+            <field name="name">stock.picking.form.inherit.knk</field>
+            <field name="model">stock.picking</field>
+            <field name="inherit_id" ref="stock.view_picking_form"/>
+            <field name="arch" type="xml">
+                <xpath expr="//label[@for='scheduled_date']" position="before">
+                  <label for="planned_date"/>
+                    <div class="o_row">
+                        <field name="planned_date"/>
+                    </div>
+                </xpath>
+                <xpath expr="//label[@for='scheduled_date']" position="replace">
+                    <label for="planned_date" string="Validation Date"/>
+                </xpath>
+                <xpath expr="//field[@name='date_done']" position="attributes">
+                    <attribute name="string">Delivery Date</attribute>
+                </xpath>
+                <xpath expr="//group[@name='other_infos']//field[@name='company_id']" position="after">
+                    <field name="customer_phone"/>
+                </xpath>
+                <xpath expr="//header//button[@name='action_confirm']" position="before">
+                    <button name="action_send_mail" string="Send By Mail" type="object" class="oe_highlight"/>
+                </xpath>
+            </field>
+        </record>
+    </data>
+</odoo>

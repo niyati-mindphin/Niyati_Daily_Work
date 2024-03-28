@@ -1,0 +1,145 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+    <data>
+        <record id="lechuza_zahlung_und_versand_page_view" model="ir.ui.view">
+            <field name="name">Lechuza zahlung und versand</field>
+            <field name="type">qweb</field>
+            <field name="key">website.lechuza_zahlung_und_versand_page</field>
+            <field name="arch" type="xml">
+                <t name="Home" t-name="website.lechuza_zahlung_und_versand_page">
+                    <t t-name="website.zahlung-und-versand">
+                        <t t-call="website.layout">
+                            <div id="wrap" class="oe_structure oe_empty zahlung">
+                                <div class="container">
+                                    <div class="row justify-content-center s_nb_column_fixed">
+                                        <div class="col-md-12">
+                                            <section class="pt32 pb32">
+                                                <div class="col-md-12 s_title pt16 pb16 text-center">
+                                                    <font class="main-header fontweight">
+                                                        <h1>Zahlung und Versand</h1>
+                                                    </font>
+                                                </div>
+                                            </section>
+                                            <section class="s_text_block pt32 pb32">
+                                                <div class="container">
+                                                    <div class="row justify-content-center fontweight">
+                                                        <div class="col-md-9 pt32 pb32">
+                                                            <p class="lead"> </p>
+                                                            <div id="faq07">
+                                                                <div class="bg-off-white p-3">
+                                                                    <h2>VERSANDKOSTEN</h2>
+                                                                </div>
+                                                                <div class="bg-off-white p-3">
+                                                                    <font class="fontsize">Die Versandkosten betragen bei einem Warenwert bis CHF 19.95: CHF 5.00</font>
+                                                                    <br />
+                                                                    <font class="fontsize">&amp;nbsp;Bei einem Warenwert von CHF 20 bis 59.95: CHF 10.00</font>
+                                                                    <br />
+                                                                    <font class="fontsize">&amp;nbsp;Bei einem Warenwert von CHF 60 bis 199.95: CHF 15.00</font>
+                                                                    <br />
+                                                                    <font class="fontsize">&amp;nbsp;Bei einem Warenwert von CHF 120 bis 299.95: CHF 30.00</font>
+                                                                    <br />
+                                                                    <font class="fontsize">&amp;nbsp;Bei einem Warenwert von CHF 300 bis 599.95: CHF 39.00</font>
+                                                                    <br />
+                                                                    <font class="fontsize">&amp;nbsp;Bei einem Warenwert ab CHF 600: gratis, frei Haus</font>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                        <div class="pb32 col-md-9 pt0">
+                                                            <p class="lead"> </p>
+                                                            <div id="faq07">
+                                                                <div class="bg-off-white p-3">
+                                                                    <h2>LIEFERUNG</h2>
+                                                                </div>
+                                                                <div class="bg-off-white p-3">
+                                                                    <font class="fontsize">Die Lieferung erfolgt mit der Schweizerischen Post. Bei grösseren Mengen (Ganze Palette) erfolgt die Lieferung nach Absprache. Abholung ist möglich, in diesem Fall werden keine Versandkosten berechnet.</font>
+                                                                    <br />
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                        <div class="pb32 col-md-9 pt0">
+                                                            <p class="lead"> </p>
+                                                            <div id="faq07">
+                                                                <div class="bg-off-white p-3">
+                                                                    <h2>ZAHLUNGSMITTEL UND GEBÜHREN</h2>
+                                                                </div>
+                                                                <table class="table table-bordered">
+                                                                    <tbody>
+                                                                        <tr>
+                                                                            <td>
+                                                                                <span class="font-weight-bold">ZAHLUNGSMITTEL</span>
+                                                                                <br />
+                                                                            </td>
+                                                                            <td>
+                                                                                <span class="font-weight-bold">GEBÜHR</span>
+                                                                                <br />
+                                                                            </td>
+                                                                        </tr>
+                                                                        <tr>
+                                                                            <td>
+                                                                                <span class="fontsize">Banküberweisung</span>
+                                                                                <br />
+                                                                            </td>
+                                                                            <td>0.0%</td>
+                                                                        </tr>
+                                                                        <tr>
+                                                                            <td>
+                                                                                <span class="fontsize">Paypal</span>
+                                                                                <br />
+                                                                            </td>
+                                                                            <td>2.5%</td>
+                                                                        </tr>
+                                                                        <tr>
+                                                                            <td>
+                                                                                <span class="fontsize">Mastercard</span>
+                                                                                <br />
+                                                                            </td>
+                                                                            <td>2.0%</td>
+                                                                        </tr>
+                                                                        <tr>
+                                                                            <td>
+                                                                                <span class="fontsize">VISA</span>
+                                                                                <br />
+                                                                            </td>
+                                                                            <td>2.0%<br /></td>
+                                                                        </tr>
+                                                                        <tr>
+                                                                            <td>
+                                                                                <span class="fontsize">Postcard</span>
+                                                                                <br />
+                                                                            </td>
+                                                                            <td>2.0%<br /></td>
+                                                                        </tr>
+                                                                        <tr>
+                                                                            <td>
+                                                                                <span class="fontsize">Post E-Finance</span>
+                                                                                <br />
+                                                                            </td>
+                                                                            <td>2.0%<br /></td>
+                                                                        </tr>
+                                                                        <tr>
+                                                                            <td>TWINT</td>
+                                                                            <td>2.0%<br /></td>
+                                                                        </tr>
+                                                                    </tbody>
+                                                                </table>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </section>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </t>
+                    </t>
+                </t>
+            </field>
+        </record>
+        <record id="lechuza_zahlung_und_versand_page" model="website.page">
+            <field name="url">/zahlung-und-versand</field>
+            <field name="website_published">True</field>
+            <field name="view_id" ref="lechuza_zahlung_und_versand_page_view" />
+        </record>
+    </data>
+</odoo>

@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+    <record id="forecasting_details_actions_views" model="ir.actions.server">
+        <field name="name">Create Forecast Lead</field>
+        <field name="state">code</field>
+        <field name="type">ir.actions.server</field>
+        <field name="model_id" ref="dynco_base.model_product_brand_lead" />
+        <field name="binding_model_id" ref="dynco_base.model_product_brand_lead" />
+        <field name="binding_view_types">list</field>
+        <field name="code">
+
+action = records.action_forecasted_leads()
+        </field>
+    </record>
+</odoo>

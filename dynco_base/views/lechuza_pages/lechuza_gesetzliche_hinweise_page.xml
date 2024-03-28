@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+    <data>
+        <record id="lechuza_gesetzliche_hinweise_page_view" model="ir.ui.view">
+            <field name="name">Lechuza gesetzliche hinweise</field>
+            <field name="type">qweb</field>
+            <field name="key">website.lechuza_gesetzliche_hinweise_page</field>
+            <field name="arch" type="xml">
+                <t name="Home" t-name="website.lechuza_gesetzliche_hinweise_page">
+                    <t t-name="website.gesetzliche-hinweise">
+                        <t t-call="website.layout">
+                            <div id="wrap" class="oe_structure oe_empty oe_website_sale about_us">
+                                <div class="container">
+                                    <div class="row justify-content-center">
+                                        <div class="col-md-10">
+                                            <section class="s_text_block pt32 pb32">
+                                                <div class="col-md-12 s_title pt16 pb16 fontweight">
+                                                    <font>
+                                                        <h1>Gesetzliche Hinweise</h1>
+                                                    </font><br />
+                                                    <p><b>Urheberrecht</b><br />
+                                                        Copyright 2015 geobra Brandstätter Stiftung &amp;amp; Co. KG, Zirndorf, Deutschland
+                                                    </p>
+                                                    <p>
+                                                        Alle Rechte vorbehalten. Alle Texte, Bilder, Graphiken, Sound-,
+                                                        Animations- und Videodateien sowie ihre Anordnung unterliegen dem
+                                                        Urheberrecht und anderen Gesetzen zum Schutz des geistigen Eigentums.
+                                                        Der Inhalt dieser Website darf weder für Handelszwecke noch zur
+                                                        Weitergabe kopiert, verändert, verbreitet oder sonst Dritten zugänglich
+                                                        gemacht werden. Auch eine Nutzung auf anderen Websites ist unzulässig.
+                                                    </p>
+                                                    <p>
+                                                        Sie dürfen sich den Inhalt der Website ausschließlich für Ihren
+                                                        persönlichen, nicht kommerziellen privaten Gebrauch herunterladen,
+                                                        vorausgesetzt, dass Sie alle Urheberrechts-, Marken- und andere
+                                                        Schutzrechtshinweise unberührt lassen, insbesondere diese Hinweise nicht
+                                                        löschen oder sonst unkenntlich machen. Alle Änderungen oder der
+                                                        Gebrauch des Inhaltes unserer Website für irgendeinen anderen Zweck
+                                                        stellt eine Verletzung unserer Rechte dar und ist strengstens untersagt.
+                                                    </p>
+                                                    <p>
+                                                        <b>Handelsmarken</b>
+                                                        Soweit nicht anders angegeben, sind alle auf der LECHUZA Website
+                                                        genannten Handelsmarken gesetzlich geschützte Marken der geobra
+                                                        Brandstätter Stiftung &amp;amp; Co. KG. Diese Marken sind national und
+                                                        international geschützt und dürfen weder wiedergegeben, noch kopiert,
+                                                        verändert oder sonst in irgendeiner Form ohne vorheriges schriftliches
+                                                        Einverständnis der geobra Brandstätter Stiftung &amp;amp; Co. KG verwendet
+                                                        werden.
+                                                    </p>
+                                                    <p>
+                                                        <b>Gewährleistung</b><br />
+                                                        Unsere Website wurde mit größtmöglicher Sorgfalt zusammengestellt. Auch
+                                                        wenn wir davon ausgehen, dass die von uns gegebenen Informationen
+                                                        zutreffend sind, können sie dennoch Fehler oder Ungenauigkeiten
+                                                        enthalten. Wir stellen die Informationen daher ohne jegliche Zusicherung
+                                                        oder Gewährleistung jeglicher Art, sei sie ausdrücklich oder
+                                                        stillschweigend, zur Verfügung. Ausgeschlossen sind auch alle
+                                                        stillschweigenden Gewährleistungen betreffend die Handelsfähigkeit, die
+                                                        Eignung für bestimmte Zwecke oder den Nichtverstoß gegen Gesetze und
+                                                        Patente. Wir schließen jegliche Haftung für Schäden, die direkt oder
+                                                        indirekt aus der Benutzung dieser Website entstehen, aus, soweit diese
+                                                        nicht auf Vorsatz oder grober Fahrlässigkeit von uns beruhen.
+                                                        Insbesondere übernehmen wir auch keine Garantie dafür, dass unsere
+                                                        Website, deren Inhalt und/oder der Server, auf dem sie hinterlegt ist,
+                                                        frei von Viren sind. Außerdem weisen wir darauf hin, dass wir andere
+                                                        Websites, die einen Link zu unserer Website besitzen, nicht überwachen
+                                                        und nicht verantwortlich für deren Inhalt sind.
+                                                    </p>
+                                                    <p>
+                                                        <b>Lizenzrechte</b><br />
+                                                        LECHUZA möchte sich Ihnen mit einem innovativen und informativen
+                                                        Internet-Programm präsentieren. Wir hoffen deshalb, dass Ihnen der
+                                                        Besuch unserer Website Freude bereitet. Das darin enthaltene geistige
+                                                        Eigentum wie Patente, Marken und Urheberrechte ist geschützt, und durch
+                                                        diese Website wird keine Lizenz zur Nutzung des geistigen Eigentums von
+                                                        LECHUZA oder Dritten erteilt.
+                                                    </p>
+                                                    <p>
+                                                        <b>Ihre Meinung</b><br />
+                                                        Gerne lernen wir Ihre Meinung über unsere Produkte und unsere Website
+                                                        kennen. Wir weisen jedoch darauf hin, dass wir alle von Ihnen erhaltenen
+                                                        Mitteilungen als nichtvertraulich betrachten. Ferner sind wir
+                                                        berechtigt, Ihre Informationen in jeder Weise und ohne jede
+                                                        Verpflichtung Ihnen gegenüber zu nutzen. Die Informationen gehen mit der
+                                                        Übermittlung in das Eigentum von LECHUZA über und wir sind berechtigt,
+                                                        alle Ideen, Konzepte, Know-how oder technische Informationen für jedwede
+                                                        Zwecke zu nutzen einschließlich der Entwicklung, der Herstellung und
+                                                        des Vertriebs von Produkten, ohne dass hierfür eine Vergütung an Sie zu
+                                                        bezahlen ist.
+                                                    </p>
+                                                    <p>
+                                                        <b>Angabe von Maßen</b><br />
+                                                        Bitte beachten Sie: Alle auf dieser Website angegebenen Maße sind circa-Maße und ohne Gewähr.
+                                                    </p>
+                                                </div>
+                                            </section>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </t>
+                    </t>
+                </t>
+            </field>
+        </record>
+        <record id="lechuza_gesetzliche_hinweise_page" model="website.page">
+            <field name="url">/gesetzliche-hinweise</field>
+            <field name="website_published">True</field>
+            <field name="view_id" ref="lechuza_gesetzliche_hinweise_page_view" />
+        </record>
+    </data>
+</odoo>

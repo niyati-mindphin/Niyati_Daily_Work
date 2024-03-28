@@ -1,0 +1,13 @@
+id,name,model_id:id,group_id:id,perm_create,perm_unlink,perm_write,perm_read
+access_product_customer_code_manager,product.customer.code.manager,model_product_customer_code,base.group_user,1,1,1,1
+access_output_list,access_output_list,model_output_list,,1,1,1,1
+access_account_move_xls_list,access_account_move_xls_list,model_account_move_xls_list,base.group_user,1,1,1,1
+access_output,access_output,dynco_base.model_output,base.group_user,1,1,1,1
+access_product_icon,access_product_icon,model_product_icon,,1,1,1,1
+access_product_video,product.video,model_product_video,,1,1,1,1
+access_sale_stage,access_sale_stage,model_sale_stage,base.group_user,1,1,1,1
+access_product_brand_lead,access_product_brand_lead,dynco_base.model_product_brand_lead,base.group_user,1,1,1,1
+access_sale_delivery_lead_advance,access_sale_delivery_lead_advance,dynco_base.model_sale_delivery_lead_advance,base.group_user,1,1,1,1
+access_update_contact,access_update_contact,dynco_base.model_update_contact,base.group_user,1,1,1,1
+access_partner_shipping_method,access_partner_shipping_method,dynco_base.model_partner_shipping_method,,1,1,1,1
+access_add_discount,access_add_discount,dynco_base.model_add_discount,,1,1,1,1

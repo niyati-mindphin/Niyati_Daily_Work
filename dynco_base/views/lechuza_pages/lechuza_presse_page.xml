@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+    <data>
+        <record id="lechuza_presse_page_view" model="ir.ui.view">
+            <field name="name">Lechuza presse</field>
+            <field name="type">qweb</field>
+            <field name="key">website.lechuza_presse_page</field>
+            <field name="arch" type="xml">
+                <t name="Home" t-name="website.lechuza_presse_page">
+                    <t t-name="website.presse">
+                        <t t-call="website.layout">
+                            <div id="wrap" class="oe_structure oe_empty oe_website_sale presse">
+                                <div class="container">
+                                    <div class="row justify-content-center s_nb_column_fixed">
+                                        <div class="col-md-10">
+                                            <section class="pt32 pb32">
+                                                <div class="col-lg-12 s_title pt16 pb16 text-center">
+                                                    <div class="container">
+                                                        <div class="row justify-content-center">
+                                                            <font class="main-header">
+                                                                <h1 class="s_title_default font-weight-normal">Pressebereich</h1>
+                                                            </font>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </section>
+                                            <section class="s_text_block pt32 pb32">
+                                                <div class="container">
+                                                    <div class="row justify-content-center fontsize">
+                                                        <div class="col-md-11 pt32 pb32">
+                                                            <div class="spc-xxl-left spc-xxl-top col-xs-12 col-m-12 gutter-xxl">
+                                                                <h2 class="heading-2">Pressekontakt Schweiz<br /></h2>
+                                                                <div class="content spc-l-left spc-m-bottom spc-m-top">
+                                                                    <div class="text-bold">DYNCO AG<br />LECHUZA PRESSE<br />Bolligenstrasse 90<br /></div>3065 Bolligen<br /><br />
+                                                                </div>
+                                                                <div class="content spc-l-left spc-m-top spc-xxl-bottom">
+                                                                    <div class="text-bold">Kontakt für Produktthemen:
+                                                                    </div>Telefon: +41 (0)31 921 8844<br />E-Mail: <a class="offerlink" href="mailto:pr@lechuza.com">lechuza_support@dynco.ch<br /><br />
+                                                                    </a><a class="offerlink" href="mailto:pr@lechuza.com"><br /></a>
+                                                                </div>
+                                                                <h2 class="heading-2">Presseinformation Produkte</h2>
+                                                                <div class="content spc-l-left spc-m-top spc-xxl-bottom"> Aktuelle Pressemitteilungen rund um die LECHUZA-Neuheiten finden Sie im allgemeinen&amp;nbsp;<a class="btn btn-outline-primary offer-link" href="http://www.mynewsdesk.com/de/lechuza" data-original-title="" title="" aria-describedby="tooltip940798">Newsroom.</a><br /><br />
+                                                                    Möchten Sie regelmäßig unsere Presseinformationen über Highlights und Produktneuheiten per E-Mail erhalten?<br /> Bitte klicken Sie hierfür auf "LECHUZA folgen" im allgemeinen Newsroom: <a class="btn btn-outline-primary offer-link" href="http://www.mynewsdesk.com/de/lechuza">Mynewsdesk</a><br />
+                                                                    <br />Eine Abmeldung ist jederzeit möglich.
+                                                                </div>
+                                                                <div class="content spc-xxl-right">
+                                                                    <hr />
+                                                                    <br />
+                                                                </div>
+                                                                <h2 class="heading-2">Presseinformation Unternehmen</h2>
+                                                                <div class="content spc-l-left spc-m-top spc-xxl-bottom">
+                                                                    <div class="text-bold">Kontakt für Unternehmensthemen
+                                                                    </div>Björn Seeger<br />Telefon: +49 911 9666 13 81<br />E-Mail: bjoern_seeger@lechuza.com
+                                                                </div>
+                                                                <div class="content spc-xxl-right">
+                                                                    <hr />
+                                                                    <br />
+                                                                </div>
+                                                                <h2 class="heading-2">Presseinformation Marke</h2>
+                                                                <div class="content spc-l-left spc-m-top spc-m-bottom"><br />2018 <a href="http://media.lechuza.com/PR/LECHUZA_Pressemitteilung_Ihre Urlaubsvertretung.pdf" class="link-primary" target="_blank" title="LECHUZA_Pressemitteilung_Ihre Urlaubsvertretung"><b>Ihre Urlaubsvertretung - Pflanzen auch an heißen Tagen optimal versorgt</b><br /><br /></a></div>
+                                                                <div class="content spc-l-left spc-m-top spc-m-bottom">2017 <a href="http://media.lechuza.com/PR/170601_LECHUZA Erd-Bewässerungssystem_Stiftung Warentest.pdf" class="link-primary" target="_blank" title="170601_LECHUZA Erd-Bewässerungssystem_Stiftung Warentest"><b>Von Stiftung Warentest getestet: Das LECHUZA Erd-Bewässerungs-System</b><br /><br /></a></div>
+                                                                <div class="content spc-l-left spc-m-top spc-m-bottom">2016 <b><a href="http://media.lechuza.com/PR/Presseinformation LECHUZA_Superbrands.pdf" class="link-primary" target="_blank" title="LECHUZA ausgezeichnet als Superbrand Germany">LECHUZA ausgezeichnet als Superbrand Germany</a></b></div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </section>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </t>
+                    </t>
+                </t>
+            </field>
+        </record>
+        <record id="lechuza_presse_page" model="website.page">
+            <field name="url">/presse</field>
+            <field name="website_published">True</field>
+            <field name="view_id" ref="lechuza_presse_page_view" />
+        </record>
+    </data>
+</odoo>

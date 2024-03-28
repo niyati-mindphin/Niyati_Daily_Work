@@ -1,0 +1,115 @@
+<odoo>
+    <record id="view_account_invoice_report_pivot_inherit_knk" model="ir.ui.view">
+        <field name="name">account.invoice.report.search.inherit</field>
+        <field name="model">account.invoice.report</field>
+        <field name="inherit_id" ref="account.view_account_invoice_report_pivot"/>
+        <field name="arch" type="xml">
+            <xpath expr="//field[@name='product_categ_id']" position="after">
+                <field name="product_brand_lead" type="row"/>
+            </xpath>
+        </field>
+    </record>
+    <record model="ir.ui.view" id="view_account_invoice_report_search_knk">
+        <field name="name">account.invoice.report.search</field>
+        <field name="model">account.invoice.report</field>
+        <field name="inherit_id" ref="account.view_account_invoice_report_search"/>
+        <field name="arch" type="xml">
+            <search>
+                <field name="product_brand_lead"/>
+                <field name="product_id"/>
+            </search>
+            <field name="product_categ_id" position="after">
+                <!-- overdue -->
+                <filter name="late" string="Overdue" domain="[('invoice_date_due', '&lt;', time.strftime('%Y-%m-%d')),('state', '=', 'posted'),('payment_state', 'in', ('not_paid', 'partial'))]" help="Overdue invoices, maturity date passed"/>
+            </field>
+            <filter name="user" position="after">
+                <filter domain="[]" string="Product Brand" name="product_brand_lead" context="{'group_by':'product_brand_lead'}"/>
+                <filter domain="[]" string="Product" name="product_id" context="{'group_by':'product_id'}"/>
+            </filter>
+        </field>
+    </record>
+
+    <!-- Invoice Dashboard For KPI -->
+    <record id="invoice_report_view_pivot" model="ir.ui.view">
+         <field name="name">account.invoice.report.pivot</field>
+         <field name="model">account.invoice.report</field>
+         <field name="arch" type="xml">
+             <pivot string="Invoice Analysis" display_quantity="1" sample="1">
+                 <field name="product_brand_lead" type="row"/>
+                 <field name="del_price_subtotal" type="measure"/>
+                 <field name="credit_notes" type="measure"/>
+                 <field name="total_turnover" type="measure"/>
+                 <field name="climaqua_target" type="measure"/>
+                 <field name="lechuza_target" type="measure"/>
+                 <field name="coop_target" type="measure"/>
+             </pivot>
+         </field>
+    </record>
+
+    <record id="invoice_report_view_dashboard" model="ir.ui.view">
+        <field name="name">account.invoice.report.view.dashboard</field>
+        <field name="model">account.invoice.report</field>
+        <field name="mode">primary</field>
+        <field name="arch" type="xml">
+            <dashboard sample="1">
+                <view type="graph" ref="account.view_account_invoice_report_graph"/>
+                <group>
+                    <group>
+                        <aggregate name="move_id_confirmed_invoices" field="move_id" string="Records"/>
+                        <aggregate name="customers" string="# Customers" field="partner_id" clickable="False"/>
+                        <aggregate name="price_subtotal_all_invoices" string="Untaxed Total" field="price_subtotal"/>
+                        <aggregate name="price_total_all_invoices" string="Total" field="price_total" />
+                        <aggregate name="del_price_subtotal_all_invoices" string="Del.Untaxed Total" field="del_price_subtotal"/>
+                        <aggregate name="credit_notes_all_invoices" string="Credit Notes" field="credit_notes"/>
+
+                        <formula name="total_turnover" string="Total Turnover" value="record.del_price_subtotal_all_invoices - record.credit_notes_all_invoices"/>
+
+                        <aggregate name="climaqua_target_all_invoices" string="Climaqua Target" field="climaqua_target"/>
+                        <formula name="climaqua_percentage" string="Climaqua%" value="((record.del_price_subtotal_all_invoices - record.credit_notes_all_invoices)*100)/record.climaqua_target_all_invoices"/>
+
+                        <aggregate name="lechuza_target_all_invoices" string="Lechuza Target" field="lechuza_target"/>
+                        <formula name="lechuza_percentage" string="Lechuza%" value="((record.del_price_subtotal_all_invoices - record.credit_notes_all_invoices)*100)/record.lechuza_target_all_invoices"/>
+
+                        <aggregate name="coop_target_all_invoices" string="Coop Target" field="coop_target"/>
+                        <formula name="coop_percentage" string="Coop%" value="((record.del_price_subtotal_all_invoices - record.credit_notes_all_invoices)*100)/record.coop_target_all_invoices"/>
+                    </group>
+                </group>
+                <view type="pivot" ref="dynco_base.invoice_report_view_pivot"/>
+            </dashboard>
+        </field>
+    </record>
+
+     <record id="invoice_report_action_dashboard" model="ir.actions.act_window">
+        <field name="name">Dashboard</field>
+        <field name="res_model">account.invoice.report</field>
+        <field name="view_mode">dashboard</field>
+        <field name="search_view_id" ref="account.view_account_invoice_report_search"/>
+        <field name="help" type="html">
+            <p class="o_view_nocontent_smiling_face">
+                No data yet!
+            </p><p>
+                Create a new sales order
+            </p>
+        </field>
+    </record>
+
+    <record id="invoice_report_action_dashboard_dashboard" model="ir.actions.act_window.view">
+        <field name="sequence" eval="1"/>
+        <field name="view_mode">dashboard</field>
+        <field name="view_id" ref="invoice_report_view_dashboard"/>
+        <field name="act_window_id" ref="invoice_report_action_dashboard"/>
+    </record>
+    <record id="invoice_report_action_dashboard_pivot" model="ir.actions.act_window.view">
+        <field name="sequence" eval="2"/>
+        <field name="view_mode">pivot</field>
+        <field name="view_id" ref="dynco_base.invoice_report_view_pivot"/>
+        <field name="act_window_id" ref="invoice_report_action_dashboard"/>
+    </record>
+
+    <menuitem
+            id="menu_invoice_report_dashboard"
+            name="Dashboard"
+            action="invoice_report_action_dashboard"
+            parent="account.account_reports_management_menu"
+            sequence="0"/>
+</odoo>

@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <record id='view_product_brand_lead_tree' model='ir.ui.view'>
+        <field name='name'>product.brand.lead.tree</field>
+        <field name='model'>product.brand.lead</field>
+        <field name='arch' type='xml'>
+            <tree string='Forecasting'>
+                <field name='fc_year'/>
+                <field name='partner_id'/>
+                <field name='product_brand_lead'/>
+                <field name='target_value'/>
+                <field name='total_amount'/>
+                <field name='untaxed_amnt_total'/>
+                <field name='credit_note_total'/>
+                <field name='percentage_value'/>
+                <field name="opportunity_id" invisible="1"/>
+                <button name="action_view_opportunity" type="object" string="Opportunity" class="oe_highlight" attrs="{'invisible': [('opportunity_id', '=', False)]}"/>
+            </tree>
+        </field>
+    </record>
+    <record id='view_product_brand_lead_form' model='ir.ui.view' >
+        <field name='name'>product.brand.lead.form</field>
+        <field name='model'>product.brand.lead</field>
+        <field name='arch' type='xml'>
+            <form string='Forecasting'>
+                <field name='fc_year'/>
+                <field name='partner_id'/>
+                <field name='product_brand_lead'/>
+                <field name='target_value'/>
+                <field name='total_amount'/>
+                <field name='untaxed_amnt_total'/>
+                <field name='credit_note_total'/>
+                <field name='percentage_value'/>
+            </form>
+        </field>
+    </record>
+    <record id="view_product_brand_lead_pivot" model="ir.ui.view">
+        <field name="name">product.brand.lead.pivot</field>
+        <field name="model">product.brand.lead</field>
+        <field name="arch" type="xml">
+            <pivot string="Forecasting" sample="1">
+                <field name="product_brand_lead" type="col"/>
+                <field name="partner_id" type="row"/>
+                <field name="delivery_lead_time" type="measure"/>
+                <field name="delivered_untaxed_amt" type="measure"/>
+                <field name="credit_note_total" type="measure"/>
+                <field name="total_amount" type="measure"/>
+                <field name="target_value" type="measure"/>
+                <field name="compute_margin" type="measure"/>
+                <field name="target_margin" type="measure"/>
+            </pivot>
+        </field>
+    </record>
+    <record id="view_product_brand_lead_search" model="ir.ui.view">
+        <field name="name">product.brand.lead.search</field>
+        <field name="model">product.brand.lead</field>
+        <field name="arch" type="xml">
+            <search string="Forecasting">
+                <field name="partner_id"/>
+                <field name="product_brand_lead"/>
+                <field name="partner_tags"/>
+            </search>
+        </field>
+    </record>
+    <record id="action_product_brand_lead" model="ir.actions.act_window">
+        <field name="name">Forecasting</field>
+        <field name="res_model">product.brand.lead</field>
+        <field name="view_mode">tree,pivot</field>
+        <field name="view_id" ref="view_product_brand_lead_tree"/>
+        <field name="search_view_id" ref="view_product_brand_lead_search"/>
+        <field name="domain">[('partner_id','!=',False)]</field>
+    </record>
+    <record id="action_product_brand_leads" model="ir.actions.act_window">
+        <field name="name">Forecast</field>
+        <field name="res_model">product.brand.lead</field>
+        <field name="view_mode">form</field>
+        <field name="view_id" ref="view_product_brand_lead_form"/>
+        <field name="search_view_id" ref="view_product_brand_lead_search"/>
+    </record>
+    <record id="crm.crm_menu_forecast" model="ir.ui.menu">
+        <field name="name">Forecasting</field>
+        <field name="action" ref="dynco_base.action_product_brand_lead"/>
+    </record>
+</odoo>

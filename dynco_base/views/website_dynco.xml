@@ -1,0 +1,929 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+    <data noupdate="1">
+        <template id="dynco_header_visibility_custom" inherit_id="website.layout" name="Dynco Header Visibility Custom" website_id="website.default_website">
+            <xpath expr="//header" position="attributes">
+                <attribute name="t-attf-class" add="knk_dynco_header_custom" separator=" "/>
+            </xpath>
+        </template>
+        <template id="component_language_selector_dynco" name="Component Language Dynco">
+            <t t-set="language_selector_visible" t-value="len(languages) &gt; 1 or (website and (editable or translatable))"/>
+            <t t-set="active_lang" t-value="list(filter(lambda lg : lg[0] == lang, languages))[0]"/>
+            <t t-set="hide_country_flag" t-value="request.website._get_dr_theme_config('json_general_language_pricelist_selector')['hide_country_flag']"/>
+
+            <div t-if="language_selector_visible" t-attf-class="list-inline-item o_not_editable #{language_selector_visible and 'js_language_selector' or None} #{_classes} o_not_editable">
+                <a t-attf-class="dropdown-toggle d-flex align-items-center #{_dropdown_classes}" href="#" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
+                    <t t-if="not only_symbols">
+                        <t t-if="language_selector_visible and active_lang">
+                            <t t-if="hide_country_flag">
+                                <t t-out="active_lang[2].split('/').pop()"/>
+                            </t>
+                            <!-- <t t-else="">
+                                <img class="o_lang_flag" src="/base/static/img/country_flags/ch.png?height=25" loading="lazy"/>
+                            </t> -->
+                            <span class="ml-1" t-out="active_lang[2].split('/').pop()"/>
+                        </t>
+                    </t>
+                    <t t-else="">
+                        <!-- <t t-if="not hide_country_flag" t-call="website.lang_flag">
+                            <img class="o_lang_flag" src="/base/static/img/country_flags/ch.png?height=25" loading="lazy"/>
+                        </t>
+                        <t t-else=""> -->
+                        <i class="tp-action-btn-icon fa fa-language"></i>
+                        <!-- </t> -->
+                        <span class="ml-1" t-out="active_lang[2].split('/').pop()"/>
+                    </t>
+                </a>
+                <div class="dropdown-menu" role="menu">
+                    <t t-if="language_selector_visible">
+                        <t t-foreach="languages" t-as="lg">
+                            <a t-att-href="url_for(request.httprequest.path + '?' + keep_query(), lang_code=lg[0])" t-attf-class="dropdown-item js_change_lang #{'active' if lg[0] == active_lang[0] else ''}" t-att-data-url_code="lg[1]">
+                                <!-- <t t-if="not hide_country_flag">
+                                    <img class="o_lang_flag" src="/base/static/img/country_flags/ch.png?height=25" loading="lazy"/>
+                                </t> -->
+                                <span t-out="lg[2].split('/').pop()"/>
+                            </a>
+                            <li class="dropdown-divider"/>
+                        </t>
+                    </t>
+                    <t t-call="website.language_selector_add_language">
+                        <t t-set="dropdown" t-value="True"/>
+                    </t>
+                </div>
+            </div>
+        </template>
+        <record id="dynco_homepage_view" model="ir.ui.view">
+            <field name="name">Home - Dynco</field>
+            <field name="type">qweb</field>
+            <field name="key">website.dynco_homepage_view_page</field>
+            <field name="arch" type="xml">
+                <t name="Home" t-name="website.dynco_homepage_view_page">
+                    <t t-call="website.layout">
+                        <t t-set="pageName" t-value="'homepage'" />
+                        <div id="wrap" class="oe_structure dynco_homepage" style="background: transparent; position: relative;">
+                            <section class="s_parallax o_colored_level pb0 s_parallax_no_overflow_hidden oe_img_bg o_bg_img_center o_full_screen_height" data-scroll-background-ratio="0" data-snippet="s_parallax" data-name="Parallax" style="background-image: url(&quot;/dynco_base/static/src/img/dynco_homepage/banner_1.png&quot;); background-color: rgba(253, 253, 252, 0) !important;" data-resize-width="1920" data-original-src="/web/image/426-3e2f8db9/geo_lilas_RZ.png" data-original-id="426" data-mimetype="image/png">
+                                <div class="oe_structure oe_empty">
+                                    <section class="s_call_to_action_3 o_colored_level pt24 pb16" data-snippet="s_call_to_action_3" data-name="Call To Action - 3" style="background-image: none;">
+                                        <div class="o_container_small">
+                                            <div class="row align-items-center s_col_no_bgcolor s_nb_column_fixed">
+                                                <div class="col-12 text-center col-lg-10 offset-lg-1 pb112 pt104">
+                                                    <h2>&amp;nbsp;<img class="img-fluid o_we_custom_image dynco_banner_logo" src="/dynco_base/static/src/img/dynco_homepage/01.png" alt="" data-original-title="" title="" aria-describedby="tooltip732239" style="animation-play-state: paused; transition: none 0s ease 0s;" loading="lazy" data-original-id="83144" data-original-src="/web/image/83144-bb8055d1/dynco_logo_claim_Black.png" data-mimetype="image/png" data-resize-width="636" />
+                                                    </h2>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </section>
+                                </div>
+                            </section>
+                            <section class="s_cover o_colored_level parallax o_full_screen_height pb112 pt120" data-scroll-background-ratio="1.5" data-snippet="s_cover" data-name="Cover" data-original-title="" title="" aria-describedby="tooltip318660" style="background-image: none;">
+                                <span class="s_parallax_bg oe_img_bg o_bg_img_center" style="background-image: url(&quot;/dynco_base/static/src/img/dynco_homepage/02.jpg&quot;); top: -168.6px; bottom: -168.6px; transform: translateY(-168px);" data-scroll-background-ratio="0" data-snippet="s_cover" data-name="Cover" data-original-title="" data-original-id="2191" data-original-src="/web/image/2191-1c736974/Visit%20Card_BG_Gradient%201.jpg" data-mimetype="image/jpeg" data-resize-width="1920" data-gl-filter="blur" />
+                                <div class="s_allow_columns o_container_small" data-original-title="" title="" aria-describedby="tooltip495135">
+                                    <h1 style="text-align: left;">
+                                        <span class="o_animated_text o_animate o_visible o_anim_fade_in" style="">
+                                            <font style="background-image: radial-gradient(circle farthest-side at 25% 25%, rgb(118, 87, 146) 0%, rgba(138, 111, 166, 0.73) 23%, rgb(154, 130, 181) 40%, rgb(178, 159, 204) 66%, rgb(192, 176, 218) 81%, rgb(209, 196, 234) 100%); font-size: 62px;" class="text-gradient">Für Hersteller,<br />Fachhändler, <br />Endkunden.</font>
+                                        </span>
+                                    </h1>
+                                    <p class="lead" style="text-align: center;">
+                                        <br />
+                                    </p>
+                                    <p class="lead" style="text-align: center;">
+                                        <br />
+                                    </p>
+                                    <p class="lead" style="text-align: center;">
+                                        <br />
+                                    </p>
+                                    <p>
+                                        <span style="font-size: 24px; font-weight: normal;">Wir entwickeln und vermarkten&amp;nbsp;weltweit Produkte unter Eigenmarken und<br />kümmern uns um den Vertrieb ausgewählter Markenprodukte in der Schweiz.</span>
+                                        <br />
+                                    </p>
+                                    <p class="lead" style="">
+                                        <span style="font-size: 36px; font-weight: bolder;">
+                                            <span class="o_animated_text o_animate o_anim_fade_in o_visible" style="font-weight: 400; font-size: 24px;">Wir sind ein familiengeführtes&amp;nbsp;Grosshandelsunternehmen seit 1983.</span>
+                                        </span>
+                                    </p>
+                                    <p class="lead" style="text-align: left;">
+                                        <br />
+                                    </p>
+                                </div>
+                            </section>
+                            <section id="unsere_brands" class="oe_structure o_colored_level pt0 pb0 o_cc o_cc5 tp-gradient-animation" style="background-position: 0% 0%; background-repeat: repeat; background-attachment: scroll; background-size: auto; background-origin: padding-box; background-clip: border-box; background-color: rgba(0, 0, 0, 0) !important; background-image: linear-gradient(145.18deg, rgb(155, 178, 169) 17.39%, rgb(64, 96, 59) 181.86%);" data-original-title="" title="" aria-describedby="tooltip138847" data-scroll-background-ratio="1.5">
+                                <span class="s_parallax_bg oe_img_bg o_bg_img_center" style="background-image: url(&quot;/dynco_base/static/src/img/dynco_homepage/03.jpg&quot;); top: -168.45px; bottom: -168.45px; transform: translateY(97px);" data-original-title="" data-original-id="2191" data-original-src="/web/image/2191-1c736974/Visit%20Card_BG_Gradient%201.jpg" data-mimetype="image/jpeg" data-resize-width="1920" data-gl-filter="blur" />
+                                <div style="" class="container">
+                                    <div class="row" style="">
+                                        <div class="col-md-6 px-0 o_colored_level col-lg-6">
+                                            <div class="row unsere_first_sec" style="">
+                                                <div class="align-self-center ptb o_colored_level">
+                                                    <p style="">
+                                                        <span style="font-size: 24px;">
+                                                        </span>
+                                                        <span style="font-size: 24px;">Outstanding Products</span>
+                                                    </p>
+                                                    <h2 style="">Die herausragenden Produkte von dynco<br />&amp;nbsp;<br /></h2>
+                                                    <p>
+                                                        <span style="font-size: 24px;">
+                                                            <font class="text-black">Das dynco Produkte-Portfolio umfasst nationale wie internationale
+                                                                etablierte Marken, hauptsächlich im Bereich Garten und Living. Unsere Ansprüche gelten nicht nur der Produkt-Qualität und
+                                                                dem Design,
+                                                                hoher Stellenwert gilt ebenso dem Markenkonzept und dem Markenauftritt. <br /></font>
+                                                        </span>
+                                                    </p>
+                                                    <p>
+                                                        <span style="font-size: 24px;">
+                                                            <font class="text-black">Bei uns finden Sie gute Produkte, aktuelle Trends und langanhaltende Innovationen.</font>
+                                                            <font class="text-400">
+                                                                <br />
+                                                            </font>
+                                                        </span>
+                                                    </p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-md-6 px-0 o_colored_level col-lg-6" style="background-color: initial;">
+                                            <div class="row mx-0">
+                                                <div class="col-md-12 oe_structure o_colored_level" style="" data-original-title="" title="" aria-describedby="tooltip614489">
+                                                    <a href="/climaqua" data-original-title="" title="">
+                                                        <img class="img-fluid w-fill-img" src="/dynco_base/static/src/img/dynco_homepage/b4_1.jpg" alt="" loading="lazy" data-original-title="" title="" aria-describedby="tooltip322286" style="width: 100% !important;" data-original-id="1987" data-original-src="/web/image/1987-e21ac4c5/Card%20Climaqua.jpg" data-mimetype="image/jpeg" data-resize-width="690" />
+                                                    </a>
+                                                </div>
+                                                <div class="col-md-12 oe_structure o_colored_level" style="">
+                                                    <a href="/lechuza" data-original-title="" title="">
+                                                        <img class="img-fluid w-fill-img" src="/dynco_base/static/src/img/dynco_homepage/b4_2.jpg" alt="" loading="lazy" data-original-title="" title="" aria-describedby="tooltip316046" style="width: 100% !important;" data-original-id="1988" data-original-src="/web/image/1988-6df86735/Card%20Lechuza.jpg" data-mimetype="image/jpeg" data-resize-width="690" />
+                                                    </a>
+                                                </div>
+                                                <div class="col-md-12 oe_structure o_colored_level" style="">
+                                                    <a href="/ndt" data-original-title="" title="">
+                                                        <img class="img-fluid w-fill-img" src="/dynco_base/static/src/img/dynco_homepage/b4_3.jpg" alt="" loading="lazy" data-original-title="" title="" aria-describedby="tooltip386538" style="width: 100% !important;" data-original-id="1990" data-original-src="/web/image/1990-e1810e38/Card%20NDT.jpg" data-mimetype="image/jpeg" data-resize-width="690" />
+                                                    </a>
+                                                </div>
+                                                <div class="col-md-12 oe_structure o_colored_level">
+                                                    <a href="/keramik" data-original-title="" title="">
+                                                        <img class="img-fluid w-fill-img" src="/dynco_base/static/src/img/dynco_homepage/b4_4.jpg" alt="" loading="lazy" data-original-title="" title="" aria-describedby="tooltip386538" style="width: 100% !important;" data-original-id="83059" data-original-src="/web/image/83059-6d340a82/Card%20Keramik.jpg" data-mimetype="image/jpeg" data-resize-width="690" />
+                                                    </a>
+                                                </div>
+                                                <div class="col-md-12 oe_structure o_colored_level">
+                                                    <a href="/fellhof" data-original-title="" title="">
+                                                        <img class="img-fluid w-fill-img" src="/dynco_base/static/src/img/dynco_homepage/b4_5.jpg" alt="" loading="lazy" data-original-title="" title="" aria-describedby="tooltip386538" style="width: 100% !important;" data-original-id="1991" data-original-src="/web/image/1991-d0fc7f6e/Card%20Fellhof.jpg" data-mimetype="image/jpeg" data-resize-width="690" />
+                                                    </a>
+                                                </div>
+                                                <div class="col-md-12 oe_structure o_colored_level" style="">
+                                                    <a href="/poetic" data-original-title="" title="">
+                                                        <img class="img-fluid w-fill-img" src="/dynco_base/static/src/img/dynco_homepage/b4_6.jpg" alt="" loading="lazy" data-original-title="" title="" aria-describedby="tooltip316046" style="width: 100% !important;" data-original-id="17043" data-original-src="/web/image/17043-89b63fb7/Card%20Poetic.jpg" data-mimetype="image/jpeg" data-resize-width="690" />
+                                                    </a>
+                                                </div>
+                                                <div class="col-md-12 oe_structure o_colored_level">
+                                                    <a href="/esteras" data-original-title="" title="">
+                                                        <img class="img-fluid w-fill-img" src="/dynco_base/static/src/img/dynco_homepage/b4_7.jpg" alt="" loading="lazy" data-original-title="" title="" aria-describedby="tooltip386538" style="width: 100% !important;" data-original-id="83053" data-original-src="/web/image/83053-db8b0092/Card%20Esteras.jpg" data-mimetype="image/jpeg" data-resize-width="690" />
+                                                    </a>
+                                                </div>
+                                                <div class="col-md-12 oe_structure o_colored_level" style="">
+                                                    <a href="/urbalive" data-original-title="" title="">
+                                                        <img class="img-fluid w-fill-img" src="/dynco_base/static/src/img/dynco_homepage/b4_8.jpg" alt="" loading="lazy" data-original-title="" title="" aria-describedby="tooltip386538" style="width: 100% !important;" data-original-id="82519" data-original-src="/web/image/82519-b4befef9/Card%20Plastia.jpg" data-mimetype="image/jpeg" data-resize-width="690" />
+                                                    </a>
+                                                </div>
+                                                <div class="col-md-12 oe_structure o_colored_level">
+                                                    <a href="/pelletray" data-original-title="" title="">
+                                                        <img class="img-fluid w-fill-img" src="/dynco_base/static/src/img/dynco_homepage/b4_9.jpg" alt="" loading="lazy" data-original-title="" title="" aria-describedby="tooltip386538" style="width: 100% !important;" data-original-id="1992" data-original-src="/web/image/1992-17b86a8d/Card%20Pelletray.jpg" data-mimetype="image/jpeg" data-resize-width="690" />
+                                                    </a>
+                                                </div>
+                                                <div class="col-md-12 oe_structure o_colored_level">
+                                                    <a href="/qflame">
+                                                        <img class="img-fluid w-fill-img" src="/dynco_base/static/src/img/dynco_homepage/b4_10.jpg" alt="" loading="lazy" data-original-title="" title="" aria-describedby="tooltip386538" style="width: 100% !important;" data-original-id="83054" data-original-src="/web/image/83054-23b6290a/Card%20Q-Flame.jpg" data-mimetype="image/jpeg" data-resize-width="690" />
+                                                    </a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </section>
+                            <section class="s_icon_block_8 o_colored_level s_parallax_no_overflow_hidden pb152 pt120" data-snippet="s_icon_block_8" data-name="Icon Block - 8" data-original-title="" title="" aria-describedby="tooltip986499" data-scroll-background-ratio="0" style="background-image: none;">
+                                <div class="container-fluid">
+                                    <div class="row s_col_no_bgcolor s_nb_column_fixed align-items-stretch" data-original-title="" title="" aria-describedby="tooltip751498">
+                                        <div class="col-12 col-md-6 py-3 pt16 col-lg-4 pb0" data-original-title="" title="" aria-describedby="tooltip329086">
+                                            <div class="card tp-editor-bg-color-n-shadow p-4 h-100 border shadow bg-o-color-3" data-original-title="" title="" aria-describedby="tooltip38763" style="border-color: rgb(155, 178, 169) !important; border-width: 0px !important;background-color: #f2f2f3 !important;">
+                                                <font style="" class="text-600">
+                                                </font>
+                                                <font style="" class="text-o-color-5">
+                                                </font>
+                                                <p>
+                                                    <span style="font-weight: bolder; font-size: 24px;">Für&amp;nbsp;Hersteller<br /><br /></span>
+                                                </p>
+                                                <p>
+                                                    <a href="/hersteller">
+                                                        <img class="img-fluid o_we_custom_image" src="/dynco_base/static/src/img/dynco_homepage/s4_1.png" alt="" data-original-title="" title="" aria-describedby="tooltip119492" loading="lazy" data-original-id="82702" data-original-src="/web/image/82702-dc9ae310/Dynco_geo_Fuer_Fachmaerkte.png" data-mimetype="image/png" data-resize-width="962" style="animation-play-state: paused; transition: none 0s ease 0s;-webkit-transform: translateX(-1.4%)  translateY(5.2%)  scaleX(1.13)  scaleY(1.13);-moz-transform: translateX(-1.4%)  translateY(5.2%)  scaleX(1.13)  scaleY(1.13);-ms-transform: translateX(-1.4%)  translateY(5.2%)  scaleX(1.13)  scaleY(1.13);-o-transform: translateX(-1.4%)  translateY(5.2%)  scaleX(1.13)  scaleY(1.13);transform: translateX(-1.4%)  translateY(5.2%)  scaleX(1.13)  scaleY(1.13)" />
+                                                    </a>
+                                                </p>
+                                                <font style="" class="text-o-color-5">
+                                                </font>
+                                                <p>
+                                                    <br />
+                                                </p>
+                                                <p>
+                                                    <br />
+                                                </p>
+                                                <p>
+                                                    <br />
+                                                </p>
+                                                <p>
+                                                    <span style="font-size: 24px">
+                                                        <span style="font-size: 24px;">
+                                                            <span style="font-size: 18px;">Wir vertreiben Ihre Produkte in der Schweiz</span>
+                                                        </span>
+                                                    </span>
+                                                </p>
+                                                <div class="s_donation" data-name="Donation Button" data-donation-email="info@yourcompany.example.com" data-custom-amount="freeAmount" data-prefilled-options="true" data-descriptions="true" data-donation-amounts="[&quot;10&quot;, &quot;25&quot;, &quot;50&quot;, &quot;100&quot;]" data-minimum-amount="5" data-maximum-amount="100" data-slider-step="5" data-default-amount="25" data-snippet="s_donation_button">
+                                                    <form class="s_donation_form" action="/donation/pay" method="post" enctype="multipart/form-data" data-original-title="" title="" aria-describedby="tooltip61761">
+                                                        <span id="s_donation_description_inputs">
+                                                            <input type="hidden" class="o_translatable_input_hidden d-block mb-1 w-100" name="donation_descriptions" value="Ein Jahr des kulturellen Bewusstseins." />
+                                                            <input type="hidden" class="o_translatable_input_hidden d-block mb-1 w-100" name="donation_descriptions" value="Für einen Monat ein Baby versorgen." />
+                                                            <input type="hidden" class="o_translatable_input_hidden d-block mb-1 w-100" name="donation_descriptions" value="Ein Jahr in der Grundschule." />
+                                                            <input type="hidden" class="o_translatable_input_hidden d-block mb-1 w-100" name="donation_descriptions" value="Ein Jahr Highschool" />
+                                                        </span>
+                                                        <a href="/hersteller" type="button" class="s_donation_donate_btn mb-2" data-original-title="" title="" style="">
+                                                            <span style="font-size: 18px; font-style: normal; font-weight: bolder;" data-original-title="" title="" aria-describedby="tooltip406086">Mehr erfahren</span>
+                                                        </a>
+                                                        <span style="font-size: 18px; font-style: normal; font-weight: bolder;" data-original-title="" title="" aria-describedby="tooltip406086" />
+                                                    </form>
+                                                </div>
+                                                <a href="/" data-original-title="" title="">
+                                                </a>
+                                                <br />
+                                            </div>
+                                        </div>
+                                        <div class="col-12 col-md-6 py-3 pt16 col-lg-4 pb0" data-original-title="" title="" aria-describedby="tooltip329086">
+                                            <div class="card tp-editor-bg-color-n-shadow p-4 h-100 bg-o-color-3 border shadow" data-original-title="" title="" aria-describedby="tooltip38763" style="border-color: rgb(155, 178, 169) !important; border-width: 0px !important;background-color: #f2f2f3 !important;">
+                                                <font style="" class="text-600">
+                                                </font>
+                                                <font style="" class="text-o-color-5">
+                                                </font>
+                                                <p>
+                                                    <span style="font-size: 24px; font-weight: bolder;">Für&amp;nbsp;Fachhändler<br /><br /></span>
+                                                </p>
+                                                <p>
+                                                    <br />
+                                                </p>
+                                                <font style="" class="text-o-color-5">
+                                                </font>
+                                                <p>
+                                                    <a href="/b2b">
+                                                        <img class="img-fluid o_we_custom_image" src="/dynco_base/static/src/img/dynco_homepage/s4_2.png" alt="" data-original-title="" title="" aria-describedby="tooltip487113" loading="lazy" style="animation-play-state: paused; transition: none 0s ease 0s; translateY(-9.6%) scaleX(0.74) scaleY(0.74); scaleX(0.83)  scaleY(0.83); scaleX(0.83)  scaleY(0.83); scaleX(0.83)  scaleY(0.83); scaleX(0.83)  scaleY(0.83); scaleX(0.83)  scaleY(0.83); translateX(1.7%)  translateY(8.7%)  scaleX(1.2)  scaleY(1.2); translateX(1.7%)  translateY(8.7%)  scaleX(1.2)  scaleY(1.2); translateX(1.7%)  translateY(8.7%)  scaleX(1.2)  scaleY(1.2); translateX(1.7%)  translateY(8.7%)  scaleX(1.2)  scaleY(1.2); translateX(1.7%)  translateY(8.7%)  scaleX(1.2)  scaleY(1.2);-webkit-transform: scaleX(1.25)  scaleY(1.25);-moz-transform: scaleX(1.25)  scaleY(1.25);-ms-transform: scaleX(1.25)  scaleY(1.25);-o-transform: scaleX(1.25)  scaleY(1.25);transform: scaleX(1.25)  scaleY(1.25)" data-original-id="82869" data-original-src="/web/image/82869-a290e32e/Dynco_geo_Fuer_Fachmaerkte.png" data-mimetype="image/png" data-resize-width="962" />
+                                                    </a>
+                                                </p>
+                                                <p>
+                                                    <br />
+                                                </p>
+                                                <p>
+                                                    <br />
+                                                </p>
+                                                <p>
+                                                    <span style="font-size: 24px">
+                                                        <span style="font-size: 24px;">
+                                                            <span style="font-size: 18px;">Erfolgreiche Produkte aus einer Hand. Einfach und direkt.</span>
+                                                        </span>
+                                                    </span>
+                                                </p>
+                                                <div class="s_donation" data-name="Donation Button" data-donation-email="info@yourcompany.example.com" data-custom-amount="freeAmount" data-prefilled-options="true" data-descriptions="true" data-donation-amounts="[&quot;10&quot;, &quot;25&quot;, &quot;50&quot;, &quot;100&quot;]" data-minimum-amount="5" data-maximum-amount="100" data-slider-step="5" data-default-amount="25" data-snippet="s_donation_button">
+                                                    <form class="s_donation_form" action="/donation/pay" method="post" enctype="multipart/form-data" data-original-title="" title="" aria-describedby="tooltip246458">
+                                                        <span id="s_donation_description_inputs">
+                                                            <input type="hidden" class="o_translatable_input_hidden d-block mb-1 w-100" name="donation_descriptions" value="Ein Jahr des kulturellen Bewusstseins." />
+                                                            <input type="hidden" class="o_translatable_input_hidden d-block mb-1 w-100" name="donation_descriptions" value="Für einen Monat ein Baby versorgen." />
+                                                            <input type="hidden" class="o_translatable_input_hidden d-block mb-1 w-100" name="donation_descriptions" value="Ein Jahr in der Grundschule." />
+                                                            <input type="hidden" class="o_translatable_input_hidden d-block mb-1 w-100" name="donation_descriptions" value="Ein Jahr Highschool" />
+                                                        </span>
+                                                        <a href="/b2b" type="button" class="s_donation_donate_btn mb-2 o_animating" data-original-title="" title="" style="">
+                                                            <span style="font-size: 18px; font-weight: bolder;" data-original-title="" title="" aria-describedby="tooltip130935">Mehr erfahren</span>
+                                                        </a>
+                                                    </form>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-12 col-md-6 py-3 pt16 col-lg-4 pb0" data-original-title="" title="" aria-describedby="tooltip329086">
+                                            <div class="card tp-editor-bg-color-n-shadow p-4 h-100 bg-o-color-3 shadow border" data-original-title="" title="" aria-describedby="tooltip38763" style="border-color: rgb(155, 178, 169) !important; border-width: 0px !important;background-color: #f2f2f3 !important;">
+                                                <font style="" class="text-600">
+                                                </font>
+                                                <font style="" class="text-o-color-5">
+                                                </font>
+                                                <p>
+                                                    <span style="font-size: 24px; font-weight: bolder;">Für Endkunden<br /><br /></span>
+                                                </p>
+                                                <p>
+                                                    <br />
+                                                </p>
+                                                <font style="" class="text-o-color-5">
+                                                </font>
+                                                <p>
+                                                    <a href="/b2c">
+                                                        <img class="img-fluid o_we_custom_image" src="/dynco_base/static/src/img/dynco_homepage/s4_3.png" alt="" loading="lazy" data-original-title="" title="" aria-describedby="tooltip383752" style="animation-play-state: paused; transition: none 0s ease 0s; scaleX(0.83)  scaleY(0.83); scaleX(0.83)  scaleY(0.83); scaleX(0.83)  scaleY(0.83); scaleX(0.83)  scaleY(0.83); scaleX(0.83)  scaleY(0.83)" data-original-id="82870" data-original-src="/web/image/82870-255dfe71/Dynco_geo_Fuer_Shopper.png" data-mimetype="image/png" data-resize-width="962" />
+                                                    </a>
+                                                    <br />
+                                                </p>
+                                                <p>
+                                                    <br />
+                                                </p>
+                                                <p>
+                                                    <br />
+                                                </p>
+                                                <p>
+                                                    <span style="font-size: 24px">
+                                                        <span style="font-size: 18px;">Wir bringen gute, schöne und faire Produkte auf den Markt.</span>
+                                                    </span>
+                                                </p>
+                                                <div class="s_donation" data-name="Donation Button" data-donation-email="info@yourcompany.example.com" data-custom-amount="freeAmount" data-prefilled-options="true" data-descriptions="true" data-donation-amounts="[&quot;10&quot;, &quot;25&quot;, &quot;50&quot;, &quot;100&quot;]" data-minimum-amount="5" data-maximum-amount="100" data-slider-step="5" data-default-amount="25" data-snippet="s_donation_button">
+                                                    <form class="s_donation_form" action="/donation/pay" method="post" enctype="multipart/form-data">
+                                                        <span id="s_donation_description_inputs">
+                                                            <input type="hidden" class="o_translatable_input_hidden d-block mb-1 w-100" name="donation_descriptions" value="Ein Jahr des kulturellen Bewusstseins." />
+                                                            <input type="hidden" class="o_translatable_input_hidden d-block mb-1 w-100" name="donation_descriptions" value="Für einen Monat ein Baby versorgen." />
+                                                            <input type="hidden" class="o_translatable_input_hidden d-block mb-1 w-100" name="donation_descriptions" value="Ein Jahr in der Grundschule." />
+                                                            <input type="hidden" class="o_translatable_input_hidden d-block mb-1 w-100" name="donation_descriptions" value="Ein Jahr Highschool" />
+                                                        </span>
+                                                        <a href="/b2c" type="button" class="s_donation_donate_btn mb-2" data-original-title="" title="" style="">
+                                                            <span style="font-size: 18px; font-weight: bolder;" data-original-title="" title="" aria-describedby="tooltip783650">Mehr erfahren</span>
+                                                        </a>
+                                                    </form>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </section>
+                            <section class="s_testimonial_4 o_colored_level" data-snippet="s_testimonial_4" data-name="Testimonial - 4" style="background-image: linear-gradient(145.18deg, rgb(155, 178, 169) 17.39%, rgb(64, 96, 59) 181.86%);">
+                                <div class="s_carousel tp-custom-carousel s_carousel_bordered carousel slide" data-interval="10000" id="myCarousel1651851051016" style="background-image: none;">
+                                    <ol class="carousel-indicators o_we_no_overlay d-none">
+                                        <li data-slide-to="0" class="active" data-target="#myCarousel1651851051016" />
+                                    </ol>
+                                    <div class="carousel-inner">
+                                        <div class="carousel-item o_colored_level pb80 pt32 active" data-name="Slide" style="background-image: none;">
+                                            <div class="container">
+                                                <div class="row content justify-content-center s_col_no_bgcolor s_nb_column_fixed">
+                                                    <div class="carousel-content col-12 col-lg-7 pb32 o_animate o_anim_fade_in o_visible pt40" style="">
+                                                        <p>
+                                                        </p>
+                                                        <h2>
+                                                            <font class="text-white" style="background-color: inherit;">Unsere Mission</font>
+                                                            <br />
+                                                        </h2>
+                                                        <p class="lead font-italic border-white">
+                                                            <br />
+                                                        </p>
+                                                        <p class="lead font-italic border-white">
+                                                            <span style="font-size: 36px; font-style: normal;">
+                                                                <font class="text-white">Trotz rasender Globalisierung mit immer einfacheren Wegen glauben wir,&amp;nbsp;es wird immer einen Übersetzer, Katalysator<span style="font-size: 36px"> und Treiber</span> im Handel brauchen, der die Dinge für Hersteller, Fachhändler und Endkunden vereinfachen und verbessern kann. <br />In
+                                                                    welcher Form auch immer.</font>
+                                                            </span>
+                                                        </p>
+                                                        <p class="lead font-italic border-white">
+                                                            <br />
+                                                        </p>
+                                                        <div class="media align-items-center">
+                                                            <img class="img img-fluid o_image_64_contain mr-3 shadow" src="/dynco_base/static/src/img/dynco_homepage/yves_photo.png" alt="" loading="lazy" data-original-title="" title="" aria-describedby="tooltip324424" style="" data-original-id="82697" data-original-src="/web/image/82697-2cb03326/Portrait%20YvesSquare.png" data-mimetype="image/png" data-resize-width="690" />
+                                                            <div class="media-body">
+                                                                <h5 class="mb-1">
+                                                                    <font class="text-100">
+                                                                        <span style="font-weight: bolder;">Yves Durrer</span>
+                                                                    </font>
+                                                                    <br />
+                                                                </h5>
+                                                                <font class="text-100">
+                                                                    <b style="font-weight: normal;">Geschäftsleiter</b>
+                                                                </font>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <a class="carousel-control-prev o_not_editable o_we_no_overlay d-none" data-slide="prev" role="img" aria-label="Previous" title="Previous" href="#myCarousel1651851051016">
+                                        <span class="fa fa-chevron-left" />
+                                        <span class="sr-only o_default_snippet_text">Previous</span>
+                                    </a>
+                                    <a class="carousel-control-next o_not_editable o_we_no_overlay d-none" data-slide="next" role="img" aria-label="Next" title="Next" href="#myCarousel1651851051016">
+                                        <span class="fa fa-chevron-right" data-original-title="" title="" aria-describedby="tooltip68834" />
+                                        <span class="sr-only o_default_snippet_text">Next</span>
+                                    </a>
+                                </div>
+                            </section>
+                            <section class="oe_structure s_info_block_1 tp-editor-snippet-valign s-6 o_colored_level pb96 pt80" style="background-position: 0% 0%; background-repeat: repeat; background-attachment: scroll; background-size: auto; background-origin: padding-box; background-clip: border-box; background-color: rgba(0, 0, 0, 0) !important; background-image: linear-gradient(148.49deg, rgb(209, 196, 234) 11.41%, rgb(118, 87, 146) 126.62%);" data-name="Info Block - 1">
+                                <div class="container">
+                                    <div class="no-gutters s_nb_column_fixed align-items-center">
+                                        <div class="col-lg-12 p-4">
+                                            <h2>
+                                                <span style="background-color: inherit;" class="text-o-color-4">
+                                                    <span class="o_animated_text o_animate o_anim_fade_in o_visible" style="">Familiär</span>
+                                                </span>
+                                                <br />
+                                            </h2>
+                                            <p class="color-black p_Xlarge">
+                                                <span style="font-size: 24px; font-weight: bolder;">Wir, die dynco AG, ist ein familiengeführtes Unternehmen in der zweiten Generation. Wir legen Wert auf persönlichen, direkten und unkomplizierten Kontakt.</span>
+                                                <br />
+                                            </p>
+                                        </div>
+                                        <div class="col-lg-12 p-4">
+                                            <h2>
+                                                <span class="text-o-color-4" style="background-color: inherit">Mutig</span>
+                                            </h2>
+                                            <p class="color-black p_Xlarge">
+                                                <span style="font-size: 24px; font-weight: bolder;">Neuland treibt uns. Wir sind Erfinder und Entdecker. <br />Wir challengen den Status Quo. Wo ein Wille ist, ist ein Weg.</span>
+                                                <br />
+                                            </p>
+                                            <p class="color-black p_Xlarge">
+                                                <br />
+                                            </p>
+                                            <h2 class="color-black p_Xlarge">
+                                                <span style="background-color: inherit;" class="text-o-color-4">Leidenschaftlich</span>
+                                            </h2>
+                                            <p class="color-black p_Xlarge">
+                                                <span style="font-size: 24px; font-weight: bolder;">Echtes Engagement. Jeden Tag vollgas versteht sich von allein. <br />Ab und zu leiden wir, um es zu schaffen.</span>
+                                                <br />
+                                            </p>
+                                        </div>
+                                        <div class="col-lg-12 p-4">
+                                            <h2 class="color-black p_Xlarge">
+                                                <span style="font-style: normal;">
+                                                    <span style="background-color: inherit;" class="text-o-color-4">Effektiv</span>
+                                                </span>
+                                            </h2>
+                                            <p class="color-black p_Xlarge">
+                                                <span style="font-size: 24px; font-weight: bolder;">Zielgerichtet effizient = effektiv. Nachhaltig, zukunftsorientiert, fokussiert. <br />Wir messen In- und Output.</span>
+                                            </p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <section style="background-image: none;" data-filter-by-blog-id="-1" data-number-of-elements="3" data-number-of-records="3" data-number-of-elements-small-devices="1" data-snippet="s_blog_1" class="s_blog_posts s_dynamic_snippet_blog_posts s_dynamic pt16 pb16 o_colored_level s_blog_post_prime_layout_1 d-none" data-name="Blog - 1" data-template-key="theme_prime.dynamic_filter_template_blog_post_prime_layout_1">
+                                    <div class="container o_not_editable">
+                                        <div class="css_non_editable_mode_hidden">
+                                            <div class="missing_option_warning alert alert-info rounded-0 fade show d-none d-print-none o_default_snippet_text">
+                                                Your Dynamic Snippet will be displayed here... This message is displayed because you did not provided both a filter and a template to use.<br />
+                                            </div>
+                                        </div>
+                                        <div class="dynamic_snippet_template" />
+                                    </div>
+                                </section>
+                            </section>
+                            <section style="background-image: none;" data-filter-by-blog-id="-1" data-number-of-elements="3" data-number-of-records="3" data-number-of-elements-small-devices="1" data-snippet="s_blog_4" class="s_blog_posts s_dynamic_snippet_blog_posts s_dynamic pt16 pb16 o_colored_level s_blog_post_prime_layout_4 d-none" data-name="Blog - 4" data-template-key="theme_prime.dynamic_filter_template_blog_post_prime_layout_4">
+                                <div class="container o_not_editable">
+                                    <div class="css_non_editable_mode_hidden">
+                                        <div class="missing_option_warning alert alert-info rounded-0 fade show d-none d-print-none o_default_snippet_text">
+                                            Your Dynamic Snippet will be displayed here... This message is displayed because you did not provided both a filter and a template to use.<br />
+                                        </div>
+                                    </div>
+                                    <div class="dynamic_snippet_template" />
+                                </div>
+                            </section>
+                            <section style="background-image: none;" data-filter-by-blog-id="-1" data-number-of-elements="3" data-number-of-records="3" data-number-of-elements-small-devices="1" data-snippet="s_blog_2" class="s_blog_posts s_dynamic_snippet_blog_posts s_dynamic pt16 pb16 o_colored_level s_blog_post_prime_layout_2 d-none" data-name="Blog - 2" data-template-key="theme_prime.dynamic_filter_template_blog_post_prime_layout_2">
+                                <div class="container o_not_editable">
+                                    <div class="css_non_editable_mode_hidden">
+                                        <div class="missing_option_warning alert alert-info rounded-0 fade show d-none d-print-none o_default_snippet_text">
+                                            Your Dynamic Snippet will be displayed here... This message is displayed because you did not provided both a filter and a template to use.<br />
+                                        </div>
+                                    </div>
+                                    <div class="dynamic_snippet_template" />
+                                </div>
+                            </section>
+                            <section class="s_title o_colored_level pt80 pb24" data-vcss="001" data-snippet="s_title" data-name="Title" style="background-image: none;">
+                                <div class="container s_allow_columns">
+                                    <h2 style="text-align: center;">Kontaktieren Sie uns<font style="font-size: 62px;"><br /></font>
+                                    </h2>
+                                </div>
+                            </section>
+                            <section style="background-image: none;" data-filter-by-blog-id="-1" data-number-of-elements="3" data-number-of-records="3" data-number-of-elements-small-devices="1" data-snippet="s_blog_1" class="s_blog_posts s_dynamic_snippet_blog_posts s_dynamic pt16 pb16 o_colored_level s_blog_post_prime_layout_1 d-none" data-name="Blog - 1" data-template-key="theme_prime.dynamic_filter_template_blog_post_prime_layout_1">
+                                <div class="container o_not_editable">
+                                    <div class="css_non_editable_mode_hidden">
+                                        <div class="missing_option_warning alert alert-info rounded-0 fade show d-none d-print-none o_default_snippet_text">
+                                            Your Dynamic Snippet will be displayed here... This message is displayed because you did not provided both a filter and a template to use.<br />
+                                        </div>
+                                    </div>
+                                    <div class="dynamic_snippet_template" />
+                                </div>
+                            </section>
+                            <section class="s_website_form pt16 o_colored_level pb80" data-vcss="001" data-snippet="s_website_form" data-name="Form" style="background-image: none;" data-original-title="" title="" aria-describedby="tooltip95588">
+                                <div class="container">
+                                    <form action="/website/form/" method="post" enctype="multipart/form-data" class="o_mark_required" data-mark="*" data-pre-fill="true" data-success-mode="redirect" data-success-page="/contactus-thank-you" data-model_name="mail.mail">
+                                        <div class="s_website_form_rows row s_col_no_bgcolor">
+                                            <div data-visibility-condition="" data-visibility-between="" class="form-group s_website_form_field col-12 s_website_form_custom s_website_form_required" data-type="char" data-name="Field">
+                                                <div class="row s_col_no_resize s_col_no_bgcolor">
+                                                    <label class="col-form-label col-sm-auto s_website_form_label" style="width: 200px" for="ogf16gitany">
+                                                        <span class="s_website_form_label_content">Name</span>
+                                                        <span class="s_website_form_mark"> *</span>
+                                                    </label>
+                                                    <div class="col-sm">
+                                                        <input type="text" class="form-control s_website_form_input" name="Name" required="1" placeholder="" id="ogf16gitany" data-fill-with="name" />
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div data-visibility-condition="" data-visibility-between="" class="form-group s_website_form_field col-12 s_website_form_custom" data-type="tel" data-name="Field">
+                                                <div class="row s_col_no_resize s_col_no_bgcolor">
+                                                    <label class="col-form-label col-sm-auto s_website_form_label " style="width: 200px" for="orkz5j7pxa9s">
+                                                        <span class="s_website_form_label_content">Telefon</span>
+                                                    </label>
+                                                    <div class="col-sm">
+                                                        <input type="tel" class="form-control s_website_form_input" name="Telefon" value="" placeholder="" id="orkz5j7pxa9s" data-fill-with="phone" />
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div data-visibility-condition="" data-visibility-between="" class="form-group s_website_form_field col-12 s_website_form_model_required" data-type="char" data-name="Field">
+                                                <div class="row s_col_no_resize s_col_no_bgcolor">
+                                                    <label class="col-form-label col-sm-auto s_website_form_label " style="width: 200px" for="o2w0pdklguk5">
+                                                        <span class="s_website_form_label_content">E-Mail</span>
+                                                        <span class="s_website_form_mark"> *</span>
+                                                    </label>
+                                                    <div class="col-sm">
+                                                        <input type="text" class="form-control s_website_form_input" name="email_from" required="true" placeholder="" id="o2w0pdklguk5" data-fill-with="email" />
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="form-group s_website_form_field col-12 s_website_form_custom" data-type="char" data-name="Field" data-visibility-condition="" data-visibility-between="">
+                                                <div class="row s_col_no_resize s_col_no_bgcolor">
+                                                    <label class="col-form-label col-sm-auto s_website_form_label " style="width: 200px" for="ozwslgntxprf">
+                                                        <span class="s_website_form_label_content">Firma</span>
+                                                    </label>
+                                                    <div class="col-sm">
+                                                        <input type="text" class="form-control s_website_form_input" name="Firma" data-fill-with="commercial_company_name" id="ozwslgntxprf" />
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div data-visibility-condition="" data-visibility-between="" class="form-group s_website_form_field col-12 s_website_form_model_required" data-type="char" data-name="Field">
+                                                <div class="row s_col_no_resize s_col_no_bgcolor">
+                                                    <label class="col-form-label col-sm-auto s_website_form_label " style="width: 200px" for="ocd99ik3bbhi">
+                                                        <span class="s_website_form_label_content">Betreff</span>
+                                                        <span class="s_website_form_mark"> *</span>
+                                                    </label>
+                                                    <div class="col-sm">
+                                                        <input type="text" class="form-control s_website_form_input" name="subject" required="true" value="" placeholder="" id="ocd99ik3bbhi" data-fill-with="undefined" />
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div data-visibility-condition="" data-visibility-between="" class="form-group s_website_form_field col-12 s_website_form_custom s_website_form_required" data-type="text" data-name="Field">
+                                                <div class="row s_col_no_resize s_col_no_bgcolor">
+                                                    <label class="col-form-label col-sm-auto s_website_form_label " style="width: 200px" for="oe3iiii69ahr">
+                                                        <span class="s_website_form_label_content">Ihre Nachricht</span>
+                                                        <span class="s_website_form_mark"> *</span>
+                                                    </label>
+                                                    <div class="col-sm">
+                                                        <textarea class="form-control s_website_form_input" name="Ihre Nachricht" required="1" placeholder="" id="oe3iiii69ahr" rows="3" />
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="form-group s_website_form_field col-12    s_website_form_dnone" data-name="Field">
+                                                <div class="row s_col_no_resize s_col_no_bgcolor">
+                                                  <label class="col-form-label col-sm-auto s_website_form_label " style="width: 200px">
+                                                    <span class="s_website_form_label_content"/>
+                                                  </label>
+                                                  <div class="col-sm">
+                                                    <input type="hidden" class="form-control s_website_form_input" name="email_to" value="info@yourcompany.example.com"/>
+                                                    <div class="s_website_form_field_description small form-text text-muted">
+                                                        E-Mail-Adressen durch ein Komma trennen.
+                                                    </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="form-group col-12 s_website_form_field" data-name="Field">
+                                                <div class="row s_col_no_resize s_col_no_bgcolor">
+                                                    <label class="col-form-label col-sm-auto s_website_form_label" style="width: 200px">
+                                                        <span class="s_website_form_label_content">Attachments</span>
+                                                    </label>
+                                                    <div class="col-sm dynco_upload_btn_wrapper">
+                                                        <button class="btnr" title="No file chosen">Choose files</button>
+                                                        <span>No file chosen</span>
+                                                        <input type="file" widget="many2many_binary" multiple="true" class="form-control s_website_form_input" name="attachments" id="helpdesk5" data-fill-with="undefined" title="No file chosen">
+                                                            <!-- <t t-esc="request.params.get('attachment', '')"/> -->
+                                                        </input>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="form-group col-12 s_website_form_submit pt40" data-name="Submit Button" data-original-title="" title="" aria-describedby="tooltip878265">
+                                                <div style="width: 200px;" class="s_website_form_label"/>
+                                                <a href="#" role="button" class="s_website_form_send btn btn-primary btn-lg" data-original-title="" title="">Absenden</a>
+                                                <span id="s_website_form_result"/>
+                                            </div>
+                                        </div>
+                                    </form>
+                                </div>
+                            </section>
+                            <!-- main footer activated -->
+                            <!-- <section class="oe_structure s_text_block pt64 pb32 o_colored_level section_dynco_footer" data-name="Dynco Homepage Footer" data-snippet="s_dynco_hmpage_footer" style="background-image: linear-gradient(148.49deg, rgb(209, 196, 234) 11.41%, rgb(118, 87, 146) 126.62%);">
+                                <div class="container">
+                                    <div class="row">
+                                        <div class="col-md-2 o_colored_level mb-3 pb0 pt0 col-lg-2" data-original-title="" title="" aria-describedby="tooltip832474" style="">
+                                            <a href="/" class="o_footer_logo logo" data-original-title="" title="">
+                                                <img clas="img-fluid" src="/dynco_base/static/src/img/dynco_footer_logo.png" alt="" loading="lazy" data-original-title="" title="" aria-describedby="tooltip287345" data-original-id="428" data-original-src="/dynco_base/static/src/img/dynco_footer_logo.png" data-mimetype="image/svg+xml" data-resize-width="undefined" style="animation-play-state: paused; transition: none 0s ease 0s; transform: translateX(-21.6%) translateY(-19.3%) scaleX(0.58) scaleY(0.58) !important;" class="float-left" />
+                                            </a>
+                                        </div>
+                                        <div class="col-md-3 col-6 f_heading o_colored_level mb-3">
+                                            <p class="p_small">Postadresse</p>
+                                            <p class="p_regular">Dynco ag<br />Bolligenstrasse 90<br />3065 Bolligen<br />Schweiz</p>
+                                        </div>
+                                        <div class="col-md-3 col-6 f_heading o_colored_level mb-3">
+                                            <p class="p_small">Portfolio</p>
+                                            <ul class="list-unstyled mb-0">
+                                                <li class="my-1">
+                                                    <p><a href="/climaqua">CLIMAQUA</a><span style="font-size: 14px"><font class="text-800">&amp;nbsp; by dynco</font></span></p>
+                                                </li>
+                                                <li class="my-1">
+                                                    <p><a href="/lechuza">Lechuza</a></p>
+                                                </li>
+                                                <li class="my-1">
+                                                    <p><a href="/ndt">Passion for Pottery - NDT</a></p>
+                                                </li>
+                                                <li class="my-1">
+                                                    <p><a href="/keramik">Keramik</a><span style="font-size: 14px"><font class="text-800">&amp;nbsp; by dynco</font></span></p>
+                                                </li>
+                                                <li class="my-1">
+                                                    <p><a href="/fellhof">Fellhof</a></p>
+                                                </li>
+                                                <li class="my-1">
+                                                    <p><a href="/poetic">Poétic</a></p>
+                                                </li>
+                                                <li class="my-1">
+                                                    <p><a href="/esteras">Esteras</a></p>
+                                                </li>
+                                                <li class="my-1">
+                                                    <p><a href="/urbalive">Urbalive - Plastia</a></p>
+                                                </li>
+                                                <li class="my-1">
+                                                    <p><a href="/pelletray">Pelletray</a><span style="font-size: 14px"><font class="text-800">&amp;nbsp; by dynco</font></span></p>
+                                                </li>
+                                                <li class="my-1">
+                                                    <p><a href="/qflame">Q-Flame</a></p>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                        <div class="col-md-2 col-6 f_heading o_colored_level mb-3">
+                                            <p class="p_small">E-Mail<br />office@dynco.ch<br /><br />Telefon<br />+41 31 921 88 44<br /><br />Fax<br />+41 31 921 60 88<br /></p>
+                                        </div>
+                                        <div class="col-md-2 col-6 f_heading o_colored_level mb-3" data-original-title="" title="" aria-describedby="tooltip678741">
+                                            <p class="p_small">Follow Us</p>
+                                            <a href="/website/social/facebook" target="_blank" data-original-title="" title="">
+                                                <img class="img-fluid o_we_custom_image" src="/dynco_base/static/src/img/Facebook - Negative.svg" alt="" loading="lazy" data-original-id="461" data-original-src="/dynco_base/static/src/img/Facebook - Negative.svg" data-mimetype="image/svg+xml" data-original-title="" title="" aria-describedby="tooltip448352" style="transform: translateX(-12.1%) translateY(-3.4%) scaleX(0.76) scaleY(0.76); animation-play-state: paused; transition: none 0s ease 0s; padding: 5px !important;" />
+                                            </a>
+                                            <a href="/website/social/twitter" target="_blank" data-original-title="" title="">
+                                                <img class="img-fluid o_we_custom_image" src="/dynco_base/static/src/img/Group.svg" alt="" loading="lazy" data-original-id="462" data-original-src="/dynco_base/static/src/img/Group.svg" data-mimetype="image/svg+xml" data-original-title="" title="" aria-describedby="tooltip910564" style="transform: translateX(-16.7%) scaleX(0.82) scaleY(0.82); animation-play-state: paused; transition: none 0s ease 0s;" />
+                                            </a>
+                                        </div>
+                                    </div>
+                                    <div class="o_footer_copyright tp-custom-copyright dynco_copyright" data-name="Copyright">
+                                        <div class="container">
+                                            <div class="row justify-content-between">
+                                                <div class="col-12 col-md-auto text-center text-md-left">
+                                                  <div class="my-2"><a href="/agb">AGB</a> | <a href="/datenschutz">Datenschutz |</a><a href="/impressum">&amp;nbsp;Impressum</a></div>
+                                                </div>
+                                                <div class="col-12 col-md-auto text-center text-md-right">
+                                                  <div class="my-2">©dynco AG 2022</div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </section> -->
+                        </div>
+                    </t>
+                </t>
+            </field>
+        </record>
+        <record id="dynco_homepage" model="website.page">
+            <field name="url">/dynco_homepage</field>
+            <field name="website_published">True</field>
+            <field name="view_id" ref="dynco_homepage_view" />
+            <field name="website_id" ref="website.default_website"/>
+        </record>
+        <record id="website.default_website" model="website">
+            <field name="name">Dynco</field>
+            <field name="homepage_id" ref="dynco_homepage" />
+            <field name="logo" type="base64" file="dynco_base/static/src/img/dynco_img/dynco_logo.png"/>
+        </record>
+        <record id="dynco_scss" model="ir.asset">
+            <field name="name">Dynco effect SCSS</field>
+            <field name="bundle">web.assets_frontend</field>
+            <field name="path">/dynco_base/static/src/scss/dynco_font.scss</field>
+            <field name="website_id" ref="website.default_website"/>
+        </record>
+        <record id="dynco_website_scss" model="ir.asset">
+            <field name="name">Dynco website SCSS</field>
+            <field name="bundle">web.assets_frontend</field>
+            <field name="path">/dynco_base/static/src/scss/dynco_homepage.scss</field>
+            <field name="website_id" ref="website.default_website"/>
+        </record>
+        <record id="dynco_js" model="ir.asset">
+            <field name="name">Dynco effect JS</field>
+            <field name="bundle">web.assets_frontend</field>
+            <field name="path">/dynco_base/static/src/js/dynco_website.js</field>
+            <field name="website_id" ref="website.default_website"/>
+        </record>
+        <!-- Header -->
+        <template id="template_header_style_11" inherit_id="website.layout" name="Header Style - 11" active="False">
+            <xpath expr="//header//nav" position="replace">
+                <t t-call="website.navbar">
+                    <t t-set="_navbar_classes" t-valuef="shadow-sm" />
+                    <div id="top_menu_container" class="container-fluid justify-content-between dynco_header">
+                        <a href="/" class="navbar-brand logo">
+                            <div class="">
+                                <div class="">
+                                    <span t-field="website.logo" t-options="{'widget': 'image', 'class': 'header_image_logo'}" role="img" t-att-aria-label="'Logo of %s' % website.name" t-att-title="website.name"/>
+                                </div>
+                            </div>
+                        </a>
+                        <!-- Navbar Toggler -->
+                        <t t-call="theme_prime.component_navbar_toggler" />
+                        <div id="top_menu_collapse" class="collapse navbar-collapse order-last order-lg-0 header_12">
+                            <t t-call="website.navbar_nav">
+                                <t t-set="_nav_class" t-value="'flex-grow-1 justify-content-end'" />
+                                <!-- Menu -->
+                                <t t-foreach="website.menu_id.child_id" t-as="submenu">
+                                    <t t-call="website.submenu">
+                                        <t t-set="item_class" t-value="'nav-item'" />
+                                        <t t-set="link_class" t-value="'nav-link'" />
+                                    </t>
+                                </t>
+                            </t>
+                        </div>
+                    </div>
+                </t>
+            </xpath>
+        </template>
+        <!-- Footer -->
+        <template id="template_footer_style_11" inherit_id="website.layout" name="Footer Style - 11" active="False">
+            <xpath expr="//div[@id='footer']" position="replace">
+                <div id="footer" class="oe_structure oe_structure_solo dynco_footer" t-ignore="true" t-if="not no_footer">
+                    <section class="oe_structure s_text_block pt64 pb32 o_colored_level section_dynco_footer" data-snippet="s_dynco_hmpage_footer" data-name="Dynco Homepage Footer" style="background-image: linear-gradient(148.49deg, rgb(209, 196, 234) 11.41%, rgb(118, 87, 146) 126.62%);" data-original-title="" title="" aria-describedby="tooltip312105" t-if="not no_footer">
+                        <div class="container" data-original-title="" title="" aria-describedby="tooltip585566">
+                            <div class="row" data-original-title="" title="" aria-describedby="tooltip681033">
+                                <div class="col-md-2 o_colored_level mb-3 pb0 pt0 col-lg-2" data-original-title="" title="" aria-describedby="tooltip832474" style="">
+                                  <a href="/" class="o_footer_logo logo" data-original-title="" title="">
+                                    <img clas="img-fluid" src="/dynco_base/static/src/img/dynco_footer_logo.png" alt="" loading="lazy" data-original-title="" title="" aria-describedby="tooltip287345" data-original-id="428" data-original-src="/dynco_base/static/src/img/dynco_footer_logo.png" data-mimetype="image/svg+xml" data-resize-width="undefined" style="animation-play-state: paused; transition: none 0s ease 0s; transform: translateX(-21.6%) translateY(-19.3%) scaleX(0.58) scaleY(0.58) !important;" class="float-left"/>
+                                  </a>
+                                </div>
+                                <div class="col-md-3 f_heading col-6 o_colored_level mb-3" data-original-title="" title="" aria-describedby="tooltip479700">
+                                  <p class="p_small">
+                                    <strong>Postadresse</strong>
+                                  </p>
+                                  <p class="p_regular">Dynco AG<br/>Bolligenstrasse 90<br/>3065 Bolligen<br/>Schweiz</p>
+                                  <p class="p_regular">
+                                    <br/>
+                                  </p>
+                                  <p class="p_regular" data-original-title="" title="" aria-describedby="tooltip903686">
+                                    <a href="/jobs">Jobs</a>
+                                    <br/>
+                                    <a href="/agb">AGB's</a>
+                                    <br/>
+                                    <a href="/datenschutz">Datenschutz</a>
+                                    <br/>
+                                    <a href="/impressum">Impressum<br/></a>
+                                  </p>
+                                  <p class="p_regular" data-original-title="" title="" aria-describedby="tooltip903686">
+                                    <br/>
+                                    <font class="bg-900">B2B LOGIN Webshop</font>
+                                    <br/>
+                                  </p>
+                                </div>
+                                <div class="col-md-3 f_heading col-6 o_colored_level mb-3" data-original-title="" title="" aria-describedby="tooltip330589">
+                                  <p class="p_small">
+                                    <font class="text-black"><strong>Outstanding Products</strong>&amp;nbsp;</font>
+                                    <br/>
+                                  </p>
+                                  <ul class="list-unstyled mb-0" data-original-title="" title="" aria-describedby="tooltip856413">
+                                    <li class="my-1">
+                                      <p>
+                                        <a href="/climaqua">
+                                          <font class="text-black">CLIMAQUA</font>
+                                        </a>
+                                        <span style="font-size: 14px">
+                                          <font class="text-black">&amp;nbsp; by dynco</font>
+                                        </span>
+                                      </p>
+                                    </li>
+                                    <li class="my-1">
+                                      <p>
+                                        <a href="/lechuza">
+                                          <font class="text-black">Lechuza</font>
+                                        </a>
+                                      </p>
+                                    </li>
+                                    <li class="my-1">
+                                      <p><a href="/ndt"><font class="text-black">Passion for Pottery - NDT</font></a>&amp;nbsp;<br/></p>
+                                    </li>
+                                    <li class="my-1">
+                                      <p>
+                                        <a href="/fellhof">
+                                          <font class="text-black">Fellhof</font>
+                                        </a>
+                                      </p>
+                                    </li>
+                                    <li class="my-1">
+                                      <p data-original-title="" title="" aria-describedby="tooltip396041">
+                                        <a href="/poetic">
+                                          <font class="text-black">Poétic</font>
+                                        </a>
+                                      </p>
+                                    </li>
+                                    <li class="my-1">
+                                      <p>
+                                        <a href="/esteras">
+                                          <font class="text-black">Esteras</font>
+                                        </a>
+                                      </p>
+                                    </li>
+                                    <li class="my-1">
+                                      <p data-original-title="" title="" aria-describedby="tooltip208732">
+                                        <a href="/urbalive" data-original-title="" title="">
+                                          <font class="text-black">Urbalive - Plastia<br/></font>
+                                        </a>
+                                        <font class="text-black">
+                                          <a href="/singing-friend" data-original-title="" title="">
+                                            <font class="text-o-color-5" data-original-title="" title="" aria-describedby="tooltip924843" style="">Singing Friend<br/></font>
+                                          </a>
+                                          <font class="text-o-color-5" data-original-title="" title="" aria-describedby="tooltip924843" style="">
+                                            <a href="/betolz" data-original-title="" title="">
+                                              <font class="text-o-color-5" data-original-title="" title="" aria-describedby="tooltip286950" style="">Betolz</font>
+                                            </a>
+                                          </font>
+                                          <br/>
+                                        </font>
+                                      </p>
+                                    </li>
+                                    <li class="my-1">
+                                      <p>
+                                        <a href="/pelletray" data-original-title="" title="">
+                                          <font class="text-black" data-original-title="" title="" aria-describedby="tooltip917582">Pelletray</font>
+                                        </a>
+                                        <span style="font-size: 14px">
+                                          <font class="text-black">&amp;nbsp; by dynco</font>
+                                        </span>
+                                      </p>
+                                    </li>
+                                    <li class="my-1">
+                                      <p data-original-title="" title="" aria-describedby="tooltip764975">
+                                        <a href="/qflame" data-original-title="" title="">
+                                          <font class="text-black" data-original-title="" title="" aria-describedby="tooltip620868">Q-Flame<br/><br/></font>
+                                        </a>
+                                      </p>
+                                    </li>
+                                    <p data-original-title="" title="" aria-describedby="tooltip420520">
+                                      <a href="/keramik" data-original-title="" title="">
+                                        <font data-original-title="" title="" aria-describedby="tooltip340531" class="text-black">Die Dynco Cachepot Kompetenz</font>
+                                      </a>
+                                    </p>
+                                  </ul>
+                                </div>
+                                <div class="col-md-2 f_heading col-6 o_colored_level mb-3" data-original-title="" title="" aria-describedby="tooltip388368">
+                                  <p class="p_small"><strong>E-Mail</strong><br/>office@dynco.ch<br/><br/><strong>Telefon</strong><br/>+41 31&amp;nbsp;555 79 10<br/><br/><strong>Fax</strong><br/>+41 31 921 60 88<br/></p>
+                                </div>
+                                <div class="col-md-2 f_heading col-6 o_colored_level mb-3" data-original-title="" title="" aria-describedby="tooltip678741">
+                                  <p class="p_small">Follow Us</p>
+                                  <a href="/website/social/facebook" target="_blank" data-original-title="" title="">
+                                    <img class="img-fluid o_we_custom_image" src="/dynco_base/static/src/img/Facebook - Negative.svg" alt="" loading="lazy" data-original-id="461" data-original-src="/dynco_base/static/src/img/Facebook - Negative.svg" data-mimetype="image/svg+xml" data-original-title="" title="" aria-describedby="tooltip448352" style="transform: translateX(-12.1%) translateY(-3.4%) scaleX(0.76) scaleY(0.76); animation-play-state: paused; transition: none 0s ease 0s; padding: 5px !important;"/>
+                                  </a>
+                                  <a href="/website/social/twitter" target="_blank" data-original-title="" title="">
+                                    <img class="img-fluid o_we_custom_image" src="/dynco_base/static/src/img/Group.svg" alt="" loading="lazy" data-original-id="462" data-original-src="/dynco_base/static/src/img/Group.svg" data-mimetype="image/svg+xml" data-original-title="" title="" aria-describedby="tooltip910564" style="transform: translateX(-16.7%) scaleX(0.82) scaleY(0.82); animation-play-state: paused; transition: none 0s ease 0s;"/>
+                                  </a>
+                                </div>
+                            </div>
+                            <div class="o_footer_copyright tp-custom-copyright dynco_copyright" data-name="Copyright" data-original-title="" title="" aria-describedby="tooltip444835">
+                                <div class="container">
+                                  <div class="row justify-content-between" data-original-title="" title="" aria-describedby="tooltip469502">
+                                    <div class="col-12 col-md-auto text-center text-md-left o_colored_level">
+                                      <div class="my-2" data-original-title="" title="" aria-describedby="tooltip449181"/>
+                                    </div>
+                                    <div class="col-12 col-md-auto text-center text-md-right">
+                                      <div class="my-2">©dynco AG 2022</div>
+                                    </div>
+                                  </div>
+                                </div>
+                            </div>
+                        </div>
+                    </section>
+                </div>
+                <div class="col-12 col-md-auto text-center dynco_footer" style="background-image: none;">
+                    <div class="my-2 o_not_editable">
+                        <t t-call="dynco_base.component_language_selector_dynco"/>
+                    </div>
+                </div>
+            </xpath>
+        </template>
+        <record id="my_dynco_contactus_thanks_custom" model="ir.ui.view">
+            <field name="name">my.dynco.contactus.thanks.custom</field>
+            <field name="name">qweb</field>
+            <field name="key">dynco_base.contactus_thanks</field>
+            <field name="inherit_id" search="[('key', '=', 'website.contactus_thanks')]" />
+            <field name="arch" type="xml">
+                <xpath expr="//div[hasclass('container')]" position="replace">
+                    <div class="container s_allow_columns">
+                        <div class="row justify-content-center">
+                            <div class="col-lg-auto col-xl-auto">
+                                <span class="d-block fa fa-4x fa-thumbs-up mx-auto rounded-circle bg-primary"/><br/>
+                                <h1 class="text-center">Thank You!</h1>
+                                <div class="pb16 pt16 s_hr" data-snippet="s_hr" data-name="Separator">
+                                    <hr class="mx-auto border-top w-50 border-dark text-center"/>
+                                </div>
+                                <h5 class="text-center">
+                                    <span class="fa fa-check-circle"/>
+                                    <span>Your message has been sent <b>successfully</b></span>
+                                </h5>
+                                <p class="text-center">We will get back to you shortly.</p>
+                            </div>
+                        </div>
+                    </div>
+                </xpath>
+            </field>
+        </record>
+
+    </data>
+</odoo>

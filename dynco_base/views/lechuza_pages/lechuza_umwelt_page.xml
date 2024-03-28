@@ -1,0 +1,175 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+    <data>
+        <record id="lechuza_environmental_page_view" model="ir.ui.view">
+            <field name="name">Lechuza environmental</field>
+            <field name="type">qweb</field>
+            <field name="key">website.lechuza_environmental_page</field>
+            <field name="arch" type="xml">
+                <t name="Home" t-name="website.lechuza_environmental_page">
+                    <t t-name="website.umwelt-und-energie">
+                        <t t-call="website.layout">
+                            <div id="wrap" class="oe_structure oe_empty oe_website_sale environmental">
+                                <div class="container">
+                                    <div class="row justify-content-center">
+                                        <div class="col-md-10">
+                                            <section class="pt32 pb32">
+                                                <div class="col-lg-12 s_title pt16 pb16 text-center">
+                                                    <div class="container">
+                                                        <div class="row justify-content-center s_nb_column_fixed">
+                                                            <font class="etitle">
+                                                                <h1 class="s_title_default font-weight-normal">Umwelt- und Energiepolitik
+                                                                </h1>
+                                                            </font>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </section>
+                                            <section class="s_text_block pb32 pt0">
+                                                <div class="container">
+                                                    <div class="row justify-content-center lineheight">
+                                                        <div class="col-md-11 pt32 pb32 font-weight">
+                                                            <div class="spc-xxl-left spc-xxl-top">
+                                                                <h2 class="heading-2 mt-20">bei LECHUZA und PLAYMOBIL</h2>
+                                                                <div class="spc-xxl-top">
+                                                                    Wir, die geobra Brandstätter Stiftung &amp;amp; Co. KG, sind als Hersteller
+                                                                    des System-Spielzeug PLAYMOBIL und der hochwertigen LECHUZA-Pflanzgefäße
+                                                                    und -Möbel weltweit bekannt. Bei der Herstellung all unserer Produkte
+                                                                    verpflichten wir uns zu einem verantwortungsvollen Umgang mit der für
+                                                                    den Herstellungsprozess benötigten Ressourcen und den Auswirkungen auf
+                                                                    die Umwelt.
+                                                                </div>
+                                                                <div class="grid-row spc-xl-top">
+                                                                    <div class="col-xs-12 col-s-6 col-m-3">
+                                                                        <div class="panel panel-vertical">
+                                                                            <div class="panel-image">
+                                                                                <a href="http://media.lechuza.com/Zertifikat_UMS_de.pdf" title="Zertifikat Umweltmanagementsystem" target="_blank">
+                                                                                    <br />
+                                                                                    <img src="https://www.lechuza.ch/on/demandware.static/-/Library-Sites-Default/de_CH/dw224b9b13/static/images/content/Zertifikat-UMS.jpg" alt="Zertifikat Umweltmanagementsystem" />
+                                                                                </a>
+                                                                            </div>
+                                                                            <div class="panel-text">
+                                                                                <h5 class="heading-5"><br />Zertifikat zur Prüfungsnorm ISO 14001:2015
+                                                                                </h5>
+                                                                                <p>
+                                                                                    <a class="link-primary btn btn-outline-primary" href="http://media.lechuza.com/Zertifikat_UMS_de.pdf" title="Zertifikat Umweltmanagementsystem" target="_blank">HIER HERUNTERLADEN</a>
+                                                                                </p>
+                                                                            </div>
+                                                                        </div>
+                                                                    </div>
+                                                                    <div class="col-xs-12 col-s-6 col-m-3">
+                                                                        <div class="panel panel-vertical">
+                                                                            <div class="panel-image">
+                                                                                <a href="http://media.lechuza.com/Zertifikat_EnMS_de.pdf" title="Zertifikat Energiemanagementsystem" target="_blank">
+                                                                                    <img alt="Zertifikat Energiemanagementsystem" src="https://www.lechuza.ch/on/demandware.static/-/Library-Sites-Default/de_CH/dw35ef2b2e/static/images/content/Zertifikat-EnMS.jpg" />
+                                                                                </a>
+                                                                            </div>
+                                                                            <div class="panel-text">
+                                                                                <h5 class="heading-5"><br />Zertifikat zur Prüfungsnorm ISO 50001:2018
+                                                                                </h5>
+                                                                                <p>
+                                                                                    <a class="link-primary btn btn-outline-primary" href="http://media.lechuza.com/Zertifikat_EnMS_de.pdf" title="Zertifikat Energiemanagementsystem" target="_blank">HIER HERUNTERLADEN</a>
+                                                                                </p>
+                                                                            </div>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                                <div class="spc-l-top"><br />Mit der erfolgreichen Zertifizierung nach DIN EN ISO 14001 haben wir ein
+                                                                    gemeinsames Umweltmanagementsystem für die Marken PLAYMOBIL und LECHUZA
+                                                                    eingeführt. Mit Blick auf unsere Verantwortung zur Ressourcenschonung
+                                                                    und effiziente Nutzung von Energie haben wir unser
+                                                                    Umweltmanagementsystem um ein Energiemangementsystem nach DIN EN ISO
+                                                                    50001 ergänzt.<br />
+                                                                    <br />Die folgenden Grundsätze unserer Umwelt- und Energiepolitik sind die
+                                                                    Basis für den fortlaufenden Prozess des Umwelt- und
+                                                                    Energiemanagementsystems:
+                                                                </div>
+                                                                <div class="spc-l-top bullet-list" style="padding-left: 20px;">
+                                                                    <ol>
+                                                                        <li>
+                                                                            <p style="margin-buttom: 15px;">Die selbstverständliche und
+                                                                                verpflichtende Einhaltung von rechtlichen Anforderungen und bindenden
+                                                                                Verpflichtungen, sind unser Mindeststandard. Eine Übererfüllung - soweit
+                                                                                möglich - wird von uns angestrebt.</p>
+                                                                        </li>
+                                                                        <li>
+                                                                            <p style="margin-buttom: 15px;">Die kontinuierliche, an konkreten
+                                                                                Zielen ausgerichtete Verbesserung der Umweltauswirkungen unserer
+                                                                                Produktion dient dem Schutz natürlicher Ressourcen und der Vermeidung
+                                                                                von Umweltbelastungen. Dies berücksichtigt auch die langfristige
+                                                                                Reduzierung unseres Energieverbrauchs und Steigerung unserer
+                                                                                Energieeffizienz.</p>
+                                                                        </li>
+                                                                        <li>
+                                                                            <p style="margin-buttom: 15px;">Wir berücksichtigen die
+                                                                                Energieeffizienz beim Beschaffungsprozess von neuen Anlagen, Produkten
+                                                                                und Dienstleistungen, die zur Verbesserung der energiebezogenen Leistung
+                                                                                bestimmt sind.</p>
+                                                                        </li>
+                                                                        <li>Wir schulen und sensibilisieren unsere Mitarbeiter/innen bzgl.
+                                                                            Umweltauswirkungen und verantwortungsbewusstem Umgang mit Energie in
+                                                                            Bezug auf ihre Tätigkeiten.</li>
+                                                                        <li>
+                                                                            <p style="margin-buttom: 15px;">Wir beziehen unsere Lieferanten und
+                                                                                Sub-Unternehmer in unser Umweltmanagement-Konzept mit ein, damit diese
+                                                                                ebenfalls sparsam mit den benötigten Ressourcen umgehen sowie Potentiale
+                                                                                zur Einsparung und Wiederverwertbarkeit nutzen.</p>
+                                                                        </li>
+                                                                    </ol>
+                                                                </div>
+                                                                <div class="spc-l-top">
+                                                                    Geschäftsführung und Mitarbeiter unseres Unternehmens befürworten diese
+                                                                    Umwelt- und Energiepolitik. Die Unternehmensleitung und alle Mitarbeiter
+                                                                    verpflichten sich aktiv die Vorgaben des Umwelt- und
+                                                                    Energiemanagementsystems anzuwenden mit dem Ziel einer stetigen
+                                                                    Verbesserung der Umweltleistung einschließlich der Energieeffizienz. Wir
+                                                                    setzen uns gemeinsam dafür ein, damit Kinder auch morgen in einer
+                                                                    gesunden und lebenswerten Umwelt aufwachsen und spielen können.<br /> <br />30. Januar 2018
+                                                                </div>
+                                                                <div class="grid-row spc-xl-top">
+                                                                    <div class="col-xs-12 col-s-6 col-m-3">
+                                                                        <div class="panel panel-vertical">
+                                                                            <div class="panel-text"><b>Steffen Höpfner</b><br />
+                                                                                geobra Brandstätter Stiftung &amp;amp; Co. KG<br />
+                                                                                Vorstand (Vorstandsvorsitzender)<br /><br /><span style="font-weight: bolder;">René Feser</span><br />geobra Brandstätter Stiftung &amp;amp; Co. KG<br />Vorstand<br /><br /><span style="font-weight: bolder;">Robert Benker</span><br />geobra Brandstätter Stiftung &amp;amp; Co. KG<br />Vorstand<br /> </div>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                                <div class="grid-row spc-s-top">
+                                                                    <div class="col-xs-12 col-s-6 col-m-3">
+                                                                        <div class="panel panel-vertical">
+                                                                            <div class="panel-text"><br /><b>Roger Balser</b><br /> geobra Brandstätter Stiftung &amp;amp; Co. KG<br /> Vorstand </div>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                                <div class="grid-row spc-s-top">
+                                                                    <div class="col-xs-12 col-s-6 col-m-3">
+                                                                        <div class="panel panel-vertical">
+                                                                            <div class="panel-text"><br /><b>Wolfgang Höger</b><br />
+                                                                                geobra Brandstätter Stiftung &amp;amp; Co. KG<br />
+                                                                                Vorstand
+                                                                            </div>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </section>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </t>
+                    </t>
+                </t>
+            </field>
+        </record>
+        <record id="lechuza_environmental_page" model="website.page">
+            <field name="url">/umwelt-und-energie</field>
+            <field name="website_published">True</field>
+            <field name="view_id" ref="lechuza_environmental_page_view" />
+        </record>
+    </data>
+</odoo>

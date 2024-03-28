@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<templates>
+    <t t-extend="product.report_pricelist_search">
+        <t t-jquery="form.o_pricelist_report_form" t-operation="append">
+            <div class="row col-12">
+                <div class="form-group">
+                    <div class="form-check">
+                        <input class="form-check-input o_is_visible_description ml-2" type="checkbox"/>
+                        <label class="form-check-label">Display Description</label>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <div class="form-check">
+                        <input class="form-check-input o_is_visible_warehouse ml-2" type="checkbox"/>
+                        <label class="form-check-label">Display Warehouse</label>
+                    </div>
+                </div>
+            </div>
+        </t>
+    </t>
+</templates>

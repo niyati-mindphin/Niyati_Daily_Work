@@ -1,0 +1,1579 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data noupdate="1">
+        <!-- <record id="climaqua_shop_website" model="website">
+            <field name="name">Climaqua</field>
+            <field name="domain"></field>
+            <field name="company_id" ref="base.main_company"/>
+            <field name="user_id" ref="base.public_user"/>
+            <field name="sequence">2</field>
+            <field name="logo" type="base64" file="dynco_base/static/src/img/climaqua_img/climaqua_logo.png"/>
+        </record> -->
+        <record id="climaqua_homepage_view" model="ir.ui.view">
+            <field name="name">Home - Climaqua</field>
+            <field name="type">qweb</field>
+            <field name="key">website.climaqua_homepage_view_page</field>
+            <field name="arch" type="xml">
+                <t name="Home" t-name="website.climaqua_homepage_view_page">
+                    <t t-call="website.layout">
+                        <t t-set="pageName" t-value="'homepage'" />
+                        <div id="wrap" class="position-relative oe_structure climaqua_homepage" style="background: transparent;">
+                            <div class="oe_structure" data-original-title="" title="" aria-describedby="tooltip435401">
+                                <div class="clearfix" />
+                                <div class="oe_structure">
+                                    <section class="s_text_image pb32 o_colored_level pt40 bg-900 o_snippet_invisible o_conditional_hidden" data-snippet="s_image_text" data-name="Image - Text" style="background-image: none;" data-original-title="" title="" aria-describedby="tooltip498376" data-visibility="conditional" data-visibility-value-country="[{&quot;id&quot;:3,&quot;name&quot;:&quot;Afghanistan&quot;,&quot;display_name&quot;:&quot;Afghanistan&quot;,&quot;code&quot;:&quot;AF&quot;}]" data-visibility-selectors="html:not([data-country=&quot;AF&quot;]) body:not(.editor_enable) [data-visibility-id=&quot;country_o_3&quot;]" data-visibility-id="country_o_3">
+                                        <div class="container">
+                                            <div class="row align-items-center">
+                                                <div class="pt16 pb16 o_colored_level col-lg-6">
+                                                    <img src="/web/image/1745247-1ffc2df2/LIV%20L.jpg" class="img img-fluid mx-auto shadow" alt="" loading="lazy" data-original-title="" title="" aria-describedby="tooltip853926" data-original-id="1745246" data-original-src="/web/image/1745246-7cfcd1a2/LIV%20L.jpg" data-mimetype="image/jpeg" data-resize-width="690" />
+                                                </div>
+                                                <div class="pb16 o_colored_level pt24 col-lg-5 offset-lg-1" data-original-title="" title="" aria-describedby="tooltip105988">
+                                                    <h3><span style="color: rgb(255, 198, 156);font-size: 18px;font-style: normal;font-weight: 400;background-color: rgb(33, 37, 41)">Black WeekEND – von 24.11. (11:00h) bis 27.11. (23:59.59h)</span><br />Von Black Friday 11.00h bis Cyber Monday wird es&amp;nbsp;auf ausgewählte Produkte und Set-Kombinationen maximale&amp;nbsp;Spezial-Angebote geben.<br /><br /></h3>
+                                                    <p>Hier gehts zum</p>
+                                                    <p data-original-title="" title="" aria-describedby="tooltip6140" style="text-align: left;">
+                                                        <a href="/shop/category/climaqua-sale-329" class="btn btn-fill-custom text-black bg-white" data-original-title="" title="" style="border-width: 1px; border-style: solid;">
+                                                            <span data-original-title="" title="" aria-describedby="tooltip531995" style="font-size: 24px;">% Sale</span>
+                                                        </a>
+                                                    </p>
+                                                    <h3>
+                                                        <span style="color: rgb(255, 198, 156); font-size: 18px; font-style: normal; font-weight: 400; background-color: rgb(33, 37, 41);">
+                                                            <br />
+                                                        </span>
+                                                    </h3>
+                                                    <p data-original-title="" title="" aria-describedby="tooltip317144">
+                                                        Oder suche dein Lieblingsprodukt gleich hier:</p>
+                                                    <form method="get" class="o_searchbar_form s_searchbar_input" action="/de_CH/website/search" data-snippet="s_searchbar_input" data-name="Search">
+                                                        <div role="search" class="input-group " data-original-title="" title="" aria-describedby="tooltip540261">
+                                                            <input type="search" name="search" class="search-query form-control oe_search_box None" placeholder="Suchen..." data-search-type="all" data-limit="100" data-display-image="true" data-display-extra-link="true" data-display-detail="true" data-order-by="name asc" data-display-description="true" autocomplete="off" />
+                                                            <div class="input-group-append">
+                                                                <button type="submit" aria-label="Suchen" title="Suchen" class="btn oe_search_button btn-primary">
+                                                                    <i class="fa fa-search" />
+                                                                </button>
+                                                            </div>
+                                                        </div>
+                                                    </form>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </section>
+                                    <section class="s_cover_3 o_colored_level bg-black-15 s_parallax_no_overflow_hidden pt152 pb152 oe_img_bg o_bg_img_center" data-scroll-background-ratio="0" style="background-image: url(&quot;/web/image/1746561-f2aa56d0/myo_mood_stories_Inv.jpg&quot;); background-position: 56.9444% 50%;" data-snippet="s_cover_3" data-name="Cover - 3" data-original-title="" title="" aria-describedby="tooltip137258" data-original-id="1737192" data-original-src="/web/image/1737192-55ac5ee3/myo_mood_stories_Inv.jpg" data-mimetype="image/jpeg" data-resize-width="1800" data-quality="54">
+                                        <div class="tp-cover-container container">
+                                            <div class="row s_nb_column_fixed" data-original-title="" title="" aria-describedby="tooltip786503">
+                                                <div class="jumbotron pb32 o_colored_level rounded col-lg-5 pt48" data-name="Box" data-original-title="" title="" aria-describedby="tooltip306914" style="border-radius: 2px !important; border-color: rgb(242, 242, 243) !important; background-color: rgba(255, 0, 0, 0) !important;">
+                                                    <h3>Schön, dass du da bist.<br /></h3>
+                                                    <h2 class="display-4 font-weight-bold h2notapply">
+                                                        <span style="font-weight: normal;">Lass dich von uns inspirieren.</span>
+                                                    </h2>
+                                                    <p class="display-4 font-weight-bold h2notapply">
+                                                        <br />
+                                                    </p>
+                                                    <p class="display-4 font-weight-bold h2notapply oe-hint oe-command-temporary-hint" placeholder="Geben Sie &quot;/&quot; für Befehle ein">
+                                                        <br />
+                                                    </p>
+                                                    <p class="display-4 font-weight-bold h2notapply">
+                                                        <br />
+                                                    </p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </section>
+                                    <section class="s_icon_block_12 o_colored_level bg-900" data-snippet="s_icon_block_12" data-name="Icon Block - 12" style="background-image: none;">
+                                        <div class="container">
+                                            <div class="row s_nb_column_fixed text-lg-center">
+                                                <div class="col-12 col-lg-4 o_colored_level">
+                                                    <h6 class="my-2"><i class="fa mr-2 fa-rocket" data-original-title="" title="" aria-describedby="tooltip979287" />In 2-4 Tagen ab Lager EU oder Schweiz bei dir!</h6>
+                                                </div>
+                                                <div class="col-12 col-lg-4 o_colored_level">
+                                                    <h6 class="my-2"><i class="fa fa-truck mr-2" />Gratis Versand ab&amp;nbsp;100.-</h6>
+                                                </div>
+                                                <div class="col-12 col-lg-4 o_colored_level">
+                                                    <h6 class="my-2"><i class="fa fa-life-ring mr-2" />2 Jahre Garantie</h6>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </section>
+                                    <section class="s_text_block o_colored_level pb0 pt32" data-snippet="s_text_block" data-name="Text" style="background-image: none;">
+                                        <div class="container s_allow_columns">
+                                            <h3>Bekannt aus</h3>
+                                        </div>
+                                    </section>
+                                    <section class="s_clients_1 pt16 pb16 o_colored_level" data-snippet="s_clients_1" data-name="Clients - 1" style="background-image: none;">
+                                        <div class="container">
+                                            <div class="row tp-client-list s_nb_column_fixed">
+                                                <div class="col-6 col-sm-4 col-md-3 col-lg-2 tp-client-box o_colored_level">
+                                                    <div class="p-4 text-center tp-animation-scale">
+                                                        <img class="img img-fluid tp-cursor-pointer" src="/web/image/1742177-50a569f5/schoener-wohnen-logo-vector.png" alt="" loading="lazy" data-original-title="" title="" aria-describedby="tooltip336508" data-original-id="1740647" data-original-src="/web/image/1740647-96a20684/schoener-wohnen-logo-vector.png" data-mimetype="image/png" data-resize-width="690" />
+                                                    </div>
+                                                </div>
+                                                <div class="col-6 col-sm-4 col-md-3 col-lg-2 tp-client-box o_colored_level">
+                                                    <div class="p-4 text-center tp-animation-scale">
+                                                        <img class="img img-fluid tp-cursor-pointer o_we_image_cropped" src="/web/image/1742176-0461fc61/images%20%281%29.png" alt="" loading="lazy" data-original-title="" title="" aria-describedby="tooltip829068" data-original-id="1740648" data-original-src="/web/image/1740648-2b12d6f8/images%20%281%29.png" data-mimetype="image/png" data-y="49.21875" data-width="225" data-height="126.5625" data-scale-x="1" data-scale-y="1" data-aspect-ratio="16/9" />
+                                                    </div>
+                                                </div>
+                                                <div class="col-6 col-sm-4 col-md-3 col-lg-2 tp-client-box o_colored_level">
+                                                    <div class="p-4 text-center tp-animation-scale">
+                                                        <img class="img img-fluid tp-cursor-pointer o_we_image_cropped" src="/web/image/1742178-9499c557/Design%20ohne%20Titel.png" alt="" loading="lazy" data-original-title="" title="" aria-describedby="tooltip177141" data-original-id="1740649" data-original-src="/web/image/1740649-1744520b/Design%20ohne%20Titel.png" data-mimetype="image/png" data-y="236.25" data-width="1080" data-height="607.5" data-scale-x="1" data-scale-y="1" data-aspect-ratio="16/9" />
+                                                    </div>
+                                                </div>
+                                                <div class="col-6 col-sm-4 col-md-3 col-lg-2 tp-client-box o_colored_level">
+                                                    <div class="p-4 text-center tp-animation-scale">
+                                                        <img class="img img-fluid tp-cursor-pointer" src="/web/image/1740613-76f69d87/maisons_et_ambiances_schwarz_200.svg" alt="" loading="lazy" data-original-title="" title="" aria-describedby="tooltip908659" data-original-id="1740613" data-original-src="/web/image/1740613-76f69d87/maisons_et_ambiances_schwarz_200.svg" data-mimetype="image/svg+xml" data-resize-width="200" />
+                                                    </div>
+                                                </div>
+                                                <div class="col-6 col-sm-4 col-md-3 col-lg-2 tp-client-box o_colored_level">
+                                                    <div class="p-4 text-center tp-animation-scale">
+                                                        <img class="img img-fluid tp-cursor-pointer" src="/web/image/1740614-aa5d4d4e/haeuser_modernisieren_schwarz_200.svg" alt="" loading="lazy" data-original-title="" title="" aria-describedby="tooltip147113" data-original-id="1740614" data-original-src="/web/image/1740614-aa5d4d4e/haeuser_modernisieren_schwarz_200.svg" data-mimetype="image/svg+xml" data-resize-width="200" />
+                                                    </div>
+                                                </div>
+                                                <div class="col-6 col-sm-4 col-md-3 col-lg-2 tp-client-box o_colored_level">
+                                                    <div class="p-4 text-center tp-animation-scale">
+                                                        <img class="img img-fluid tp-cursor-pointer" src="/web/image/1740616-e5716bec/das_einfamilienhaus_schwarz_200.svg" alt="" loading="lazy" data-original-title="" title="" aria-describedby="tooltip844011" data-original-id="1740616" data-original-src="/web/image/1740616-e5716bec/das_einfamilienhaus_schwarz_200.svg" data-mimetype="image/svg+xml" data-resize-width="200" />
+                                                    </div>
+                                                </div>
+                                                <div class="col-6 col-sm-4 col-md-3 col-lg-2 tp-client-box o_colored_level">
+                                                    <div class="p-4 text-center tp-animation-scale">
+                                                        <img class="img img-fluid tp-cursor-pointer" src="/web/image/1740615-11da8f5b/raum_und_wohnen_schwarz_200.svg" alt="" loading="lazy" data-original-title="" title="" aria-describedby="tooltip494312" data-original-id="1740615" data-original-src="/web/image/1740615-11da8f5b/raum_und_wohnen_schwarz_200.svg" data-mimetype="image/svg+xml" data-resize-width="200" />
+                                                    </div>
+                                                </div>
+                                                <div class="col-6 col-sm-4 col-md-3 col-lg-2 tp-client-box o_colored_level">
+                                                    <div class="p-4 text-center tp-animation-scale">
+                                                        <img class="img img-fluid tp-cursor-pointer" src="/web/image/1742174-68156eea/SG_Logo_new_2021_rendered_bw.png" alt="" loading="lazy" data-original-title="" title="" aria-describedby="tooltip835663" data-original-id="1740660" data-original-src="/web/image/1740660-ca6b3774/SG_Logo_new_2021_rendered_bw.png" data-mimetype="image/png" data-resize-width="365" style="width: 100% !important;" />
+                                                    </div>
+                                                </div>
+                                                <div class="col-6 col-sm-4 col-md-3 col-lg-2 tp-client-box o_colored_level">
+                                                    <div class="p-4 text-center tp-animation-scale">
+                                                        <img class="img img-fluid tp-cursor-pointer" src="/web/image/1742175-c6016f7b/logo_11454.jpg" alt="" loading="lazy" data-original-title="" title="" aria-describedby="tooltip990373" data-original-id="1740618" data-original-src="/web/image/1740618-3bc7568a/logo_11454.jpg" data-mimetype="image/jpeg" data-resize-width="690" style="transform: scaleX(1.34) scaleY(1.34); padding: 13px !important; width: 100% !important;" data-quality="100" />
+                                                    </div>
+                                                </div>
+                                                <div class="col-6 col-sm-4 col-md-3 col-lg-2 tp-client-box o_colored_level">
+                                                    <div class="p-4 text-center tp-animation-scale">
+                                                        <img class="img img-fluid tp-cursor-pointer" src="/web/image/1744159-1498556a/Ktipp%20Wohnen.svg" alt="" loading="lazy" data-original-title="" title="" aria-describedby="tooltip990373" style="transform: scaleX(1.38) scaleY(1.38); padding: 13px !important; width: 100% !important;" data-original-id="1744159" data-original-src="/web/image/1744159-1498556a/Ktipp%20Wohnen.svg" data-mimetype="image/svg+xml" data-resize-width="690" />
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </section>
+                                    <section class="s_text_block pb40 o_colored_level pt32" data-snippet="s_text_block" data-name="Text" style="background-image: none;">
+                                        <div class="s_allow_columns container">
+                                            <h2 class="h2notapply">
+                                                <br />
+                                            </h2>
+                                            <h2 class="h2notapply">
+                                                <span style="font-size: 36px;">Jetzt im Sale bei CLIMAQUA: Set Angebote</span>
+                                                <br />
+                                            </h2>
+                                        </div>
+                                    </section>
+                                </div>
+                                <div class="clearfix" />
+                                <div class="oe_structure" />
+                                <div class="clearfix" />
+                                <div class="oe_structure" />
+                                <section class="s_text_block o_colored_level pb0 pt0" data-name="Text" style="background-image: none;">
+                                    <div class="container">
+                                        <div class="row">
+                                            <span style="font-size: 18px;">
+                                            </span>
+                                        </div>
+                                        <span style="font-size: 18px;">
+                                        </span>
+                                    </div>
+                                    <span style="font-size: 18px;">
+                                    </span>
+                                </section>
+                                <div class="clearfix" />
+                                <div class="oe_structure">
+                                    <section class="s_text_block pb40 o_colored_level pt32 o_snippet_invisible o_conditional_hidden" data-snippet="s_text_block" data-name="Text" style="background-image: none;">
+                                        <div class="s_allow_columns container">
+                                            <h2 class="h2notapply">
+                                                <br />
+                                            </h2>
+                                            <h2 class="h2notapply">
+                                                <span style="font-size: 36px;">Jetzt im SALE&amp;nbsp;bei CLIMAQUA®</span>
+                                            </h2>
+                                            <p>
+                                                Schnell sein lohnt sich!&amp;nbsp;Die Mengen und Zeitfenster unserer Sonderangebote sind&amp;nbsp;begrenzt. Schnapp dir jetzt bereits dein originelles Weihnachtsgeschenk!
+                                                <br />
+                                            </p>
+                                        </div>
+                                    </section>
+                                    <section class="tp-dynamic-snippet dr_not_editable s_d_products_snippet_wrapper text-center o_colored_level pb0 pt0 o_snippet_invisible mt32 mb32 category_slider">
+                                        <div class="s_d_products_snippet o_not_editable container">
+                                            <t t-set="ecommerce_categ_id" t-value="request.website.pricelist_id.ecommerce_category" />
+                                            <t t-set="products" t-value="ecommerce_categ_id.product_tmpl_ids.sorted(lambda x:x._get_combination_info()['price'], reverse=True)" />
+                                            <div class="owl-carousel owl-theme ecommerce_categ_product droggol_product_slider">
+                                                <t t-foreach="products" t-as="product">
+                                                    <div class="item">
+                                                        <t t-set="combination_info" t-value="product._get_combination_info()" />
+                                                        <div class="card h-100 s_card_style_6 shadow-sm tp_product_card">
+                                                            <div class="d_product_box d-flex justify-content-center position-relative">
+                                                                <div class="tp-actions d-flex">
+                                                                    <i t-att-data-product-template-id="product.id" data-toggle="tooltip" data-placement="bottom" class="dri mt-2 dri-eye tp-action-icon tp-cursor-pointer text-center border rounded-circle d_product_quick_view" title="" data-original-title="Quick View" />
+                                                                    <!--<i t-att-data-product-template-id="product.id" data-toggle="tooltip" data-placement="bottom" class="fa fa-clone tp-action-icon tp-cursor-pointer mt-2 text-center border rounded-circle tp_show_similar_products" title="" data-original-title="Show Similar Products"/>-->
+                                                                </div>
+                                                                <div class="d_img_block position-relative">
+                                                                    <a t-att-href="product.website_url" t-att-class="hasTimer and 'h-100'">
+                                                                        <t t-set="image_holder" t-value="product._get_image_holder()" />
+                                                                        <span t-field="image_holder.image_1920" t-options="{'widget': 'image', 'preview_image': 'image_1920' if product_image_big else 'image_1024', 'itemprop': 'image'}" class="d-flex h-100 justify-content-center align-items-center" />
+                                                                        <t t-set="pricelist" t-value="website.get_current_pricelist()" />
+                                                                        <t t-set="price_rule" t-value="pricelist.get_product_price_rule(product, 1, request.env.user.partner_id)[1]" />
+                                                                        <t t-set="disc" t-value="False" />
+                                                                        <t t-if="price_rule">
+                                                                            <t t-set="price_rule" t-value="request.env['product.pricelist.item'].browse(price_rule)" />
+                                                                            <t t-if="price_rule and price_rule.cm_label_id">
+                                                                                <t t-if="price_rule.show_discount_on_label">
+                                                                                    <t t-set="disc" t-value="price_rule.discountPercentage()" />
+                                                                                </t>
+                                                                                <t t-set="label" t-value="price_rule.cm_label_id" />
+                                                                            </t>
+                                                                        </t>
+                                                                        <t t-if="disc and int(disc.replace('%', '')) &gt; 0">
+                                                                            <t t-call="theme_prime.product_label">
+                                                                                <t t-set="disc" t-value="disc" />
+                                                                                <t t-set="label" t-value="label" />
+                                                                            </t>
+                                                                        </t>
+                                                                    </a>
+                                                                </div>
+                                                            </div>
+                                                            <div class="card-body position-relative">
+                                                                <div class="text-left">
+                                                                    <h5 class="card-title mt-0 mb-2 text-truncate font-weight-light d-product-name">
+                                                                        <a t-att-href="product.website_url">
+                                                                            <t t-esc="product.name" />
+                                                                        </a>
+                                                                    </h5>
+                                                                </div>
+                                                                <!--<button t-att-data-product-product-id="product.product_variant_id" data-toggle="tooltip" data-placement="bottom" class="d_action_btn p-0 btn btn-lg btn-primary d_add_to_cart_btn" title="" data-original-title="Add to Cart">-->
+                                                                <!--  <i class="d_action_btn_icon dri dri-cart"/>-->
+                                                                <!--</button>-->
+                                                                <div class="row no-gutters mb-2">
+                                                                    <div class="col-12 text-left">
+                                                                        <div class="d-product-price h6">
+                                                                            <h6 class="css_editable_mode_hidden toggle_hide_show_product_price">
+                                                                                <t t-set="pricelist" t-value="website.get_current_pricelist()" />
+                                                                                <span class="oe_price d-inline-block mb-0 font-weight-light text-primary" style="white-space: nowrap;" t-esc="combination_info['price']" t-options="{'widget': 'monetary', 'display_currency': pricelist.currency_id}" />
+                                                                                <span itemprop="price" style="display:none;" t-esc="combination_info['price']" />
+                                                                                <span itemprop="priceCurrency" style="display:none;" t-esc="pricelist.currency_id.name" />
+                                                                                <t t-if="product.is_product_multi_price">
+                                                                                    <t t-set="price_rule" t-value="pricelist.get_product_price_rule(product, 1, request.env.user.partner_id)[1]" />
+                                                                                    <t t-if="price_rule">
+                                                                                        <t t-set="price_rule" t-value="request.env['product.pricelist.item'].browse(price_rule)" />
+                                                                                        <t t-if="price_rule and price_rule.md_fixed_price">
+                                                                                            <t t-set="has_discounted_price" t-value="pricelist.currency_id.compare_amounts(price_rule.md_fixed_price, combination_info['price']) == 1" />
+                                                                                            <del t-attf-class="text-muted mb-0 small oe_default_price ml-1 {{'' if has_discounted_price else 'd-none'}}" style="white-space: nowrap;" t-esc="price_rule.md_fixed_price" t-options="{'widget': 'monetary', 'display_currency': website.currency_id}" />
+                                                                                        </t>
+                                                                                    </t>
+                                                                                </t>
+                                                                                <t t-else="">
+                                                                                    <del t-attf-class="text-muted mb-0 d-inline-block small oe_default_price ml-1 {{'' if combination_info['has_discounted_price'] else 'd-none'}}" style="white-space: nowrap; display: none;" t-esc="combination_info['list_price']" t-options="{'widget': 'monetary', 'display_currency': pricelist.currency_id}" />
+                                                                                </t>
+                                                                            </h6>
+                                                                        </div>
+                                                                    </div>
+                                                                    <div class="col-4 text-right small">
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                            <t t-set="availability_check"  t-value="website.get_product_stock_available(product)" />
+                                                                <t t-if="availability_check.get('is_out_of_stock') and not product.allow_out_of_stock_order">
+                                                                    <span class="o_ribbon bg-danger o_ribbon_left" style="">OUT OF STOCK</span>
+                                                            </t>
+                                                        </div>
+                                                    </div>
+                                                </t>
+                                            </div>
+                                        </div>
+                                    </section>
+                                </div>
+                                <span style="font-size: 18px;">
+                                </span>
+                                <div class="oe_structure">
+                                </div>
+                                <div class="oe_structure" />
+                                <section class="s_text_block o_colored_level o_snippet_invisible pb0 pt0 o_conditional_hidden" data-snippet="s_text_block" data-name="Text" style="background-image: none; background-color: rgb(214, 239, 214) !important;" data-visibility="conditional" data-visibility-value-country="[{&quot;id&quot;:3,&quot;name&quot;:&quot;Afghanistan&quot;,&quot;display_name&quot;:&quot;Afghanistan&quot;,&quot;code&quot;:&quot;AF&quot;}]" data-visibility-selectors="html:not([data-country=&quot;AF&quot;]) body:not(.editor_enable) [data-visibility-id=&quot;country_o_3&quot;]" data-visibility-id="country_o_3">
+                                </section>
+                                <section class="main_heading pb0 pt0 oe_structure o_colored_level" style="background-image: none;">
+                                    <div class="container">
+                                        <div class="row s_nb_column_fixed">
+                                        </div>
+                                    </div>
+                                </section>
+                                <div class="clearfix" />
+                                <div class="oe_structure" />
+                                <section class="main_heading pb0 pt0 oe_structure o_colored_level" style="background-image: none;" />
+                                <div class="oe_structure" />
+                                <div class="oe_structure" />
+                                <div class="oe_structure">
+                                    <section class="s_text_image pb32 o_colored_level pt40 bg-200" data-snippet="s_image_text" data-name="Image - Text" style="background-image: none;">
+                                        <div class="container">
+                                            <div class="row align-items-center">
+                                                <div class="pt16 pb16 o_colored_level col-lg-6">
+                                                    <img src="/web/image/1733523-7d038340/5003-CLIMAQUA-Planter-CUBI%2013-anthracite-72x-mood-20.jpg" class="img img-fluid mx-auto shadow" alt="" loading="lazy" data-original-id="1733522" data-original-src="/web/image/1733522-b50ead6c/5003-CLIMAQUA-Planter-CUBI%2013-anthracite-72x-mood-20.jpg" data-mimetype="image/jpeg" data-resize-width="690" data-original-title="" title="" aria-describedby="tooltip853926" />
+                                                </div>
+                                                <div class="pb16 o_colored_level pt24 offset-lg-1 col-lg-5">
+                                                    <h1>Hier bist du richtig. CLIMAQUA®&amp;nbsp;online im Webshop direkt vom Hersteller kaufen.</h1>
+                                                    <h2>
+                                                        <br />
+                                                    </h2>
+                                                    <p data-original-title="" title="" aria-describedby="tooltip317144">Erschaffe dir mit CLIMAQUA deine persönliche Wohlfühloase.&amp;nbsp;Bei CLIMAQUA findest du schöne, langlebige und nachhaltige Produkte aus Naturmaterial, wie Schiefer, Marmor, Beton oder Metall. Entdecke stilvolles und natürliches Design aus der Schweiz.<br /><br />Bist du auf der Suche nach etwas Bestimmtem? Dann gib einfach deine Suchanfrage hier ein:</p>
+                                                    <p data-original-title="" title="" aria-describedby="tooltip317144">
+                                                        <br />
+                                                    </p>
+                                                    <form method="get" class="o_searchbar_form s_searchbar_input" action="/de_CH/website/search" data-snippet="s_searchbar_input" data-name="Search">
+                                                        <div role="search" class="input-group " data-original-title="" title="" aria-describedby="tooltip540261">
+                                                            <input type="search" name="search" class="search-query form-control oe_search_box None" placeholder="Suchen..." data-search-type="all" data-limit="100" data-display-image="true" data-display-extra-link="true" data-display-detail="true" data-order-by="name asc" data-display-description="true" autocomplete="off" />
+                                                            <div class="input-group-append">
+                                                                <button type="submit" aria-label="Suchen" title="Suchen" class="btn oe_search_button btn-primary">
+                                                                    <i class="fa fa-search" contenteditable="false" />
+                                                                </button>
+                                                            </div>
+                                                        </div>
+                                                    </form>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </section>
+                                    <section class="s_text_block o_colored_level pt32 pb24" data-snippet="s_text_block" data-name="Text" style="background-image: none;">
+                                        <div class="s_allow_columns container">
+                                            <h2 class="h2notapply">
+                                                <br />
+                                            </h2>
+                                            <h3 class="h2notapply">
+                                                <span style="font-size: 36px;">Neu: Traumhafte CLIMAQUA «Harmonie - Sets» </span>
+                                                <br />
+                                            </h3>
+                                            <p data-original-title="" title="" aria-describedby="tooltip116972">
+                                                <b>Unsere Profis stellen für dich die perfekte Kombination von CLIMAQUA Artikeln in einem harmonischen Ensemble zusammen 😍. Jetzt zum Sonderpreis.</b>
+                                                <br />
+                                            </p>
+                                        </div>
+                                    </section>
+                                    <section class="s_two_column_card_wrapper tp-dynamic-snippet pt32 pb32 o_colored_level" data-tp-snippet-id="s_two_column_card" data-snippet="s_two_column_cards" data-name="Two Column Cards" data-selection-info="{&quot;selectionType&quot;:&quot;manual&quot;,&quot;recordsIDs&quot;:[129945,129942,129943,129941]}" data-ui-config-info="{&quot;style&quot;:&quot;tp_two_column_card_style_1&quot;,&quot;mode&quot;:&quot;slider&quot;,&quot;activeActions&quot;:[&quot;wishlist&quot;,&quot;comparison&quot;,&quot;label&quot;,&quot;rating&quot;,&quot;description_sale&quot;],&quot;model&quot;:&quot;product.template&quot;}">
+                                        <div class="s_two_column_cards dr_not_editable container" data-original-title="" title="" aria-describedby="tooltip251579" />
+                                    </section>
+                                    <section class="s_text_image pb32 o_colored_level bg-100 pt40" data-snippet="s_image_text" data-name="Image - Text" style="background-image: none;">
+                                        <div class="container">
+                                            <div class="row align-items-center">
+                                                <div class="pb16 o_colored_level pt24 offset-lg-1 col-lg-5" data-original-title="" title="" aria-describedby="tooltip876992">
+                                                    <h1>
+                                                        <span style="font-size: 36px">Wir von CLIMAQUA</span>
+                                                        <br />
+                                                    </h1>
+                                                    <p data-original-title="" title="" aria-describedby="tooltip379486">&amp;nbsp;<span style="color: rgb(33, 37, 41);font-size: 18px"><br /></span>Mit viel Elan entwickeln wir bei CLIMAQUA täglich Produkte, die Menschen für Natur im Lebensraum begeistern. Unsere Mission: Ruhe, Wohlfühlen und Inspiration durch&amp;nbsp;Natur im Haus.<br /><br />CLIMAQUA ist ein Schweizer Familienunternehmen in 2. Generation.</p>
+                                                    <p data-original-title="" title="" aria-describedby="tooltip379486">Schreib uns wenn es Fragen gibt.</p>
+                                                    <p>Wir freuen uns, für dich da zu sein!</p>
+                                                    <p>
+                                                        <span style="color: rgb(33, 37, 41)" />
+                                                    </p>
+                                                    <p data-original-title="" title="" aria-describedby="tooltip317144">
+                                                        <a href="https://www.climaqua.com/kontakt" class="btn btn-primary">Kontakt aufnehmen</a>
+                                                        <br />
+                                                    </p>
+                                                </div>
+                                                <div class="pt16 pb16 o_colored_level col-lg-6">
+                                                    <img src="/web/image/1741205-47050b76/polaroid-mockup-by-PhotoshopSupply%20copy.png" class="img img-fluid mx-auto" alt="" loading="lazy" data-original-title="" title="" aria-describedby="tooltip853926" data-original-id="1741205" data-original-src="/web/image/1741205-47050b76/polaroid-mockup-by-PhotoshopSupply%20copy.png" data-mimetype="image/png" />
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </section>
+                                </div>
+                                <div class="clearfix" />
+                                <div class="oe_structure" />
+                                <section class="s_product_slider o_colored_level pb0 pt0" data-snippet_type="single" data-collection_id="4" data-collection_name="Angesagte Produkte" data-snippet_layout="grid" style="background-image: none;">
+                                    <div>
+                                        <div class="seaction-head">
+                                            <h5>
+                                                <br />
+                                            </h5>
+                                        </div>
+                                    </div>
+                                </section>
+                                <div class="clearfix" />
+                                <div class="oe_structure" />
+                                <div class="oe_structure">
+                                    <div class="clearfix" />
+                                    <div class="oe_structure" />
+                                    <section class="s_text_block pb40 o_colored_level pt32" data-snippet="s_text_block" data-name="Text" style="background-image: none;">
+                                        <div class="s_allow_columns container">
+                                            <h2 class="h2notapply">
+                                                <br />
+                                            </h2>
+                                            <h2 class="h2notapply">
+                                                <span style="font-size: 36px;">Zurzeit unsere Bestseller</span>
+                                            </h2>
+                                            <p><b />Erfahre hier, welche Produkte derzeit&amp;nbsp;gerade&amp;nbsp;häufig nachgefragt werden</p>
+                                        </div>
+                                    </section>
+                                    <div class="clearfix" />
+                                    <div class="oe_structure" />
+                                    <section class="tp-dynamic-snippet dr_not_editable s_d_products_snippet_wrapper text-center o_colored_level pb0 pt0" data-tp-snippet-id="d_products_snippet" data-snippet="s_d_products_snippet" data-name="Products Cards" style="background-image: none;" data-selection-info="{&quot;selectionType&quot;:&quot;manual&quot;,&quot;recordsIDs&quot;:[75869,87213,86352,10398,75898,10364,86348,10375,75896]}" data-ui-config-info="{&quot;style&quot;:&quot;s_card_style_6&quot;,&quot;mode&quot;:&quot;slider&quot;,&quot;ppr&quot;:5,&quot;activeActions&quot;:[&quot;rating&quot;,&quot;quick_view&quot;,&quot;add_to_cart&quot;,&quot;comparison&quot;,&quot;wishlist&quot;,&quot;label&quot;,&quot;show_similar&quot;],&quot;model&quot;:&quot;product.template&quot;}" data-original-title="" title="" aria-describedby="tooltip628755">
+                                        <div class="s_d_products_snippet o_not_editable container" contenteditable="false" />
+                                    </section>
+                                    <div class="clearfix" />
+                                    <div class="oe_structure" />
+                                </div>
+                                <div class="clearfix" />
+                                <div class="oe_structure" />
+                                <section class="s_title o_colored_level pb0 bg-100 pt48 o_snippet_invisible o_conditional_hidden" data-vcss="001" data-snippet="s_title" data-name="Title" style="background-image: none;">
+                                    <div class="s_allow_columns container">
+                                        <div class="row">
+                                            <div class="o_colored_level col-lg-12 pt24">
+                                                <h2 style="text-align: left;" class="h2notapply">
+                                                    <span style="font-size: 36px;">Die Sortimente im Überblick</span>
+                                                </h2>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </section>
+                                <div class="clearfix" />
+                                <div class="oe_structure" />
+                                <section class="s_banner_3 pt16 pb16 o_colored_level bg-100 o_snippet_invisible o_conditional_hidden" style="background-image: none;" data-name="Banner - 3">
+                                    <div class="container">
+                                        <div class="row s_col_no_bgcolor">
+                                            <div class="col-12 col-lg-6 py-3">
+                                                <div>
+                                                    <img src="/dynco_base/static/src/img/001.gif" class="w-100 image_size img-fluid shadow" alt="Banner image 01" loading="lazy" data-original-title="" title="" aria-describedby="tooltip974842" />
+                                                    <div class="tp-banner-content tp-editor-bg-color-n-shadow rounded o_colored_level o_cc o_cc1" data-original-title="" title="" aria-describedby="tooltip564368">
+                                                        <h4 class="text-center mb-0" data-original-title="" title="" aria-describedby="tooltip750110">&amp;nbsp;<span style="font-weight: normal;" data-original-title="" title="" aria-describedby="tooltip211269"><a href="/category/brunnen" data-original-title="" title=""><span data-o-link-zws="start" contenteditable="false">​</span>BRUNNEN</a></span></h4>
+                                                        <h4 class="text-center mb-0" data-original-title="" title="" aria-describedby="tooltip750110">
+                                                            <span style="font-weight: normal;" data-original-title="" title="" aria-describedby="tooltip211269">kaufen</span>
+                                                        </h4>
+                                                        <a href="/category/brunnen" data-original-title="" title="" aria-describedby="popover326838">
+                                                        </a>
+                                                    </div>
+                                                    <a href="/category/brunnen" data-original-title="" title="" aria-describedby="popover326838">
+                                                        <strong>
+                                                        </strong>
+                                                    </a>
+                                                </div>
+                                            </div>
+                                            <div class="col-12 col-lg-6 py-3" data-original-title="" title="" aria-describedby="tooltip837825">
+                                                <div>
+                                                    <img src="/dynco_base/static/src/img/002.jpg" class="w-100 image_size img-fluid shadow" alt="Banner image 02" loading="lazy" data-original-title="" title="" aria-describedby="tooltip481839" />
+                                                    <div class="tp-banner-content tp-editor-bg-color-n-shadow o_cc o_cc1 rounded o_colored_level" data-original-title="" title="" aria-describedby="tooltip779578">
+                                                        <h4 class="text-center mb-0" data-original-title="" title="" aria-describedby="tooltip726874">
+                                                            <span style="font-weight: normal;" data-original-title="" title="" aria-describedby="tooltip552409"><a href="/category/pflanzgefaesse" data-original-title="" title=""><span data-o-link-zws="start" contenteditable="false">​</span>BLUMENTOPF<br /></a>kaufen</span>
+                                                        </h4>
+                                                        <a href="/category/pflanzgefaesse" data-original-title="" title="" aria-describedby="popover828932">
+                                                        </a>
+                                                    </div>
+                                                    <a href="/category/pflanzgefaesse" data-original-title="" title="" aria-describedby="popover828932">
+                                                        <strong>
+                                                        </strong>
+                                                    </a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </section>
+                                <div class="clearfix" />
+                                <div class="oe_structure" />
+                                <section class="s_banner_3 pt16 o_colored_level bg-100 pb40 o_snippet_invisible o_conditional_hidden" style="background-image: none;" data-name="Banner - 3" data-original-title="" title="" aria-describedby="tooltip408331">
+                                    <div class="container">
+                                        <div class="row s_col_no_bgcolor">
+                                            <div class="col-12 col-lg-6 py-3">
+                                                <div>
+                                                    <img src="/dynco_base/static/src/img/003.gif" class="w-100 image_size img-fluid shadow" alt="Banner image 01" loading="lazy" data-original-title="" title="" aria-describedby="tooltip699390" />
+                                                    <div class="tp-banner-content tp-editor-bg-color-n-shadow o_cc o_cc1 rounded o_colored_level" data-original-title="" title="" aria-describedby="tooltip657415">
+                                                        <h4 class="text-center mb-0" data-original-title="" title="" aria-describedby="tooltip250198">
+                                                            <span style="font-weight: normal;" data-original-title="" title="" aria-describedby="tooltip77377"><a href="/category/dekofeuer" data-original-title="" title=""><span data-o-link-zws="start" contenteditable="false">​</span>DEKOFEUER<br /></a>kaufen</span>
+                                                            <a href="/category/dekofeuer" data-original-title="" title="" aria-describedby="popover549644">
+                                                                <br />
+                                                            </a>
+                                                        </h4>
+                                                        <a href="/category/dekofeuer" data-original-title="" title="" aria-describedby="popover549644">
+                                                        </a>
+                                                    </div>
+                                                    <a href="/category/dekofeuer" data-original-title="" title="" aria-describedby="popover549644">
+                                                    </a>
+                                                    <a href="/category/dekofeuer" data-original-title="" title="" aria-describedby="popover856208">
+                                                        <strong>
+                                                        </strong>
+                                                    </a>
+                                                </div>
+                                            </div>
+                                            <div class="col-12 col-lg-6 py-3">
+                                                <div>
+                                                    <img src="/web/image/1633535-7b113e56/Birdhouse_Cinemagraph-2.gif" class="w-100 image_size img-fluid shadow" alt="" loading="lazy" data-original-title="" title="" aria-describedby="tooltip934119" data-original-id="1633535" data-original-src="/web/image/1633535-7b113e56/Birdhouse_Cinemagraph-2.gif" data-mimetype="image/gif" data-resize-width="undefined" />
+                                                    <div class="tp-banner-content tp-editor-bg-color-n-shadow o_cc o_cc1 rounded o_colored_level" data-original-title="" title="" aria-describedby="tooltip152523">
+                                                        <h4 class="text-center mb-0" data-original-title="" title="" aria-describedby="tooltip568881">
+                                                            <span style="font-weight: normal;" data-original-title="" title="" aria-describedby="tooltip784374"><a href="/shop/category/boutique-climaqua-boutique-241" data-original-title="" title="" aria-describedby="popover597232" />ACCESSOIRE<br />kaufen</span>
+                                                            <a href="/shop/category/boutique-climaqua-boutique-241" data-original-title="" title="" aria-describedby="popover597232">
+                                                                <br />
+                                                                <span style="font-weight: normal;">
+                                                                </span>
+                                                            </a>
+                                                        </h4>
+                                                        <a href="/shop/category/boutique-climaqua-boutique-241" data-original-title="" title="" aria-describedby="popover597232">
+                                                        </a>
+                                                    </div>
+                                                    <a href="/shop/category/boutique-climaqua-boutique-241" data-original-title="" title="" aria-describedby="popover597232">
+                                                    </a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </section>
+                                <div class="clearfix" />
+                                <div class="oe_structure" />
+                                <section class="s_text_block o_colored_level bg-100 pb8 pt8" data-snippet="s_text_block" data-name="Text" style="background-image: none;">
+                                    <div class="s_allow_columns container">
+                                        <p>
+                                            <span style="font-size: 18px;">
+                                                <br />
+                                            </span>
+                                        </p>
+                                        <h3>
+                                            <span style="font-size: 36px;">Was unsere Kundinnen und Kunden sagen</span>
+                                            <br />
+                                        </h3>
+                                        <p><span style="font-size: 18px;"><br /></span>
+                                            Kundenfeedback ist für einen Hersteller das wertvollste Geschenk. Es liefert uns wichtige Informationen darüber, was wir gut machen und was wir verbessern müssen, um sicherzustellen, dass unsere Kund:innen glücklich sind. Herzlichen Dank für Eure Kommentare.
+                                        </p>
+                                    </div>
+                                </section>
+                                <div class="clearfix" />
+                                <div class="oe_structure" />
+                                <section class="dynamic_rating_homepage s_testimonial_5 pb16 pt16 o_colored_level bg-100" data-snippet="s_testimonial_5" data-name="Testimonial - 5" style="background-image: none;" data-original-title="" title="" aria-describedby="tooltip479225">
+                                    <t t-set="rating_ids" t-value="website.get_rating_from_all_products()" />
+                                    <div class="container">
+                                        <div class="row s_col_no_bgcolor">
+                                            <t t-foreach="rating_ids" t-as="rating_id">
+                                                <div class="py-3 col-lg-4">
+                                                    <blockquote class="lead font-weight-light p-4 position-relative shadow border-primary">
+                                                        <img t-attf-src="data:image/jpg;base64,{{ rating_id.resource_ref.image_1920 }}" class="o_user_avatar review_product_image_climaqua" />
+                                                        <a class="btn btn-outline-primary mb-1" t-att-href="rating_id.resource_ref.website_url" title="">
+                                                            <t t-esc="rating_id.resource_ref.name" />
+                                                        </a>
+                                                        <div class="mt-2">
+                                                            <span style="color: black; font-size: 18px;">
+                                                                <t t-esc="rating_id.feedback" />
+                                                            </span>
+                                                        </div>
+                                                    </blockquote>
+                                                    <div class="media align-items-center mt-5">
+                                                        <div class="media-body">
+                                                            <h5>
+                                                                <span>
+                                                                    <div class="small o_website_rating_static">
+                                                                        <t t-foreach="range(0, int(rating_id.priority))" t-as="num">
+                                                                            <span class="fa fa-star o_default_snippet_text" />
+                                                                        </t>
+                                                                    </div>
+                                                                </span>
+                                                            </h5>
+                                                            <h5>
+                                                                <strong>
+                                                                    <span style="font-size: 18px;">
+                                                                        <img t-if="rating_id.partner_id.image_1920" t-attf-src="data:image/jpg;base64,{{ rating_id.partner_id.image_1920 }}" class="rounded-circle o_user_avatar review_image_climaqua" />
+                                                                        <span t-else="" class="fa fa-github-alt o_default_snippet_text" />
+                                                                        <!--<t t-esc="rating_id.partner_id.name"/>-->
+                                                                        <t t-esc="rating_id.partner_id.name if ' ' not in rating_id.partner_id.name else ' '.join([rating_id.partner_id.name.split()[:-1][0], rating_id.partner_id.name.split()[-1][0] + '.'])" />
+                                                                    </span>
+                                                                </strong>
+                                                            </h5>
+                                                            <span style="font-size: 18px;">
+                                                                <t t-esc="rating_id.partner_id.city" />
+                                                                <t t-if="rating_id.partner_id.city">,</t>
+                                                                <t t-esc="rating_id.partner_id.country_id.name" />
+                                                            </span>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </t>
+                                        </div>
+                                    </div>
+                                </section>
+                                <div class="clearfix" />
+                                <div class="oe_structure" />
+                                <div class="oe_structure">
+                                    <section class="s_text_block o_colored_level pt48 pb0" data-snippet="s_text_block" data-name="Text" style="background-image: none;">
+                                        <div class="s_allow_columns container">
+                                            <h2 class="h2notapply">
+                                                <span style="color: rgb(33, 37, 41); font-style: normal; font-weight: 400; background-color: rgb(255, 255, 255); font-size: 36px;">Hier der Überblick. Wonach suchst du?</span>
+                                                <br />
+                                            </h2>
+                                        </div>
+                                    </section>
+                                    <section class="s_banner_7 pt16 pb16 o_colored_level" data-snippet="s_banner_7" data-name="Banner - 7" style="background-image: none;" data-original-title="" title="" aria-describedby="tooltip24571">
+                                        <div class="container">
+                                            <div class="row s_col_no_bgcolor s_nb_column_fixed">
+                                                <div class="col-12 col-md-6 col-lg-4 py-3" data-original-title="" title="" aria-describedby="tooltip229750">
+                                                    <div class="card">&amp;nbsp;<br /><span style="font-size: 18px;"><span style="font-size: 24px;"><strong>&amp;nbsp;</strong> &amp;nbsp;Für</span></span><span style="font-size: 18px;"><span style="font-size: 24px;">&amp;nbsp; &amp;nbsp;natürliche</span></span><span style="font-size: 18px;"><span style="font-size: 24px;">&amp;nbsp; &amp;nbsp;Innenräume</span><br /><br /></span><img src="/web/image/1733512-e04e3800/77859-CLIMAQUA-Fountains-VIDA%2011%20SET-72x-mood-5.jpg" class="img img-fluid o_we_image_cropped" alt="" loading="lazy" data-original-title="" title="" aria-describedby="tooltip125724" data-original-id="1733511" data-original-src="/web/image/1733511-0959b19f/77859-CLIMAQUA-Fountains-VIDA%2011%20SET-72x-mood-5.jpg" data-mimetype="image/jpeg" data-resize-width="690" />
+                                                        <div class="card-body" data-original-title="" title="" aria-describedby="tooltip360613">
+                                                            <p style="text-align: left;" data-original-title="" title="" aria-describedby="tooltip368631">Entdecke stilvolle</p>
+                                                            <p style="text-align: left;" data-original-title="" title="" aria-describedby="tooltip368631"><a class="btn btn-outline-primary" href="/category/brunnen" data-original-title="" title="">Zimmerbrunnen</a></p>
+                                                            <p style="text-align: left;" data-original-title="" title="" aria-describedby="tooltip368631"><a class="btn btn-outline-primary" href="/category/wasserwaende-schiefer">Wasserwände</a></p>
+                                                            <p style="text-align: left;" data-original-title="" title="" aria-describedby="tooltip368631"><a class="btn btn-outline-primary" href="/category/pflanzgefaesse" data-original-title="" title="">Pflanzgefässe</a></p>
+                                                            <p style="text-align: left;" data-original-title="" title="" aria-describedby="tooltip368631"><a class="btn btn-outline-primary" href="/category/dekofeue" data-original-title="" title="">Ethanolfeuer</a></p>
+                                                            <p style="text-align: left;" data-original-title="" title="" aria-describedby="tooltip368631"><a class="btn btn-outline-primary" href="/shop/category/boutique-accessoires-241" data-original-title="" title="">Schieferplatten</a>&amp;nbsp;</p>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="col-12 col-md-6 col-lg-4 py-3" data-original-title="" title="" aria-describedby="tooltip229750">
+                                                    <div class="card">&amp;nbsp;<br /><span style="font-size: 18px;"><span style="font-size: 24px;"><strong>&amp;nbsp;</strong> &amp;nbsp;Für</span></span><span style="font-size: 18px;"><span style="font-size: 24px;">&amp;nbsp; &amp;nbsp;natürliche</span></span><span style="font-size: 18px;"><span style="font-size: 24px;">&amp;nbsp; &amp;nbsp;Aussenräume</span><br /><br /></span><img src="/web/image/1738021-b67e09a1/77843-CLIMAQUA-Fountains-AVA%20L-72x-mood-4.jpg" class="img img-fluid o_we_image_cropped" alt="" loading="lazy" data-original-title="" title="" aria-describedby="tooltip125724" data-original-id="1733510" data-original-src="/web/image/1733510-0e64f35e/77843-CLIMAQUA-Fountains-AVA%20L-72x-mood-4.jpg" data-mimetype="image/jpeg" data-resize-width="690" />
+                                                        <div class="card-body" data-original-title="" title="" aria-describedby="tooltip360613">
+                                                            <p style="text-align: left;" data-original-title="" title="" aria-describedby="tooltip368631">Entdecke stilvolle</p>
+                                                            <p style="text-align: left;" data-original-title="" title="" aria-describedby="tooltip368631"><a class="btn btn-outline-primary" href="https://www.climaqua.com/category/outdoorbrunnen">Gartenbrunnen</a></p>
+                                                            <p><a class="btn btn-outline-primary" href="https://www.climaqua.com/category/pflanzkuebel-schiefer">Outdoor Pflanzgefässe</a></p>
+                                                            <p><a class="btn btn-outline-primary" href="https://www.climaqua.com/category/blumenkasten">Blumen- und Balkonkästen</a></p>
+                                                            <p><a class="btn btn-outline-primary" href="https://www.climaqua.com/category/gartenfackeln-ethanol">Russfreie Gartenfackeln</a></p>
+                                                            <p><a class="btn btn-outline-primary" href="https://www.climaqua.com/category/vogelhaeuser">Vogelhäuschen / Nistkasten</a></p>
+                                                            <p style="text-align: left;" data-original-title="" title="" aria-describedby="tooltip368631"><a class="btn btn-outline-primary" href="https://www.climaqua.com/category/climaqua-rolluntersetzer">Rolluntersetzer aus Schiefer</a><br /></p>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="col-12 col-md-6 col-lg-4 py-3" data-original-title="" title="" aria-describedby="tooltip307354">
+                                                    <div class="card">
+                                                        <span style="color: rgb(33, 37, 41);font-style: normal;font-weight: 400;font-size: 18px">
+                                                            <br />
+                                                        </span>
+                                                        <span style="color: rgb(33, 37, 41);font-style: normal;font-weight: 400;font-size: 18px">
+                                                            <span style="font-size: 24px">
+                                                                &amp;nbsp; &amp;nbsp;Für
+                                                            </span>
+                                                        </span>
+                                                        <span style="color: rgb(33, 37, 41);font-style: normal;font-weight: 400;font-size: 18px">
+                                                            <span style="font-size: 24px">
+                                                                &amp;nbsp; &amp;nbsp;das gewisse
+                                                            </span>
+                                                        </span>
+                                                        <span style="color: rgb(33, 37, 41);font-style: normal;font-weight: 400;font-size: 18px">
+                                                            <span style="font-size: 24px">
+                                                                &amp;nbsp; &amp;nbsp;Etwas
+                                                            </span>
+                                                        </span>
+                                                        <br />
+                                                        <img src="/web/image/1733220-4b699e84/background_CLIMAQUA-Flame-PINO-77625-SIenaS-77623-SienaM-77624-mood-1-72x-srgb.png" class="img img-fluid o_we_image_cropped" alt="" loading="lazy" data-original-title="" title="" aria-describedby="tooltip947621" data-original-id="34870" data-original-src="/web/image/34870-f3225c81/background_CLIMAQUA-Flame-PINO-77625-SIenaS-77623-SienaM-77624-mood-1-72x-srgb.png" data-mimetype="image/png" data-x="116.48266225961542" data-width="718" data-height="718" data-scale-x="1" data-scale-y="1" data-aspect-ratio="1/1" />
+                                                        <div class="card-body" data-original-title="" title="" aria-describedby="tooltip201867">
+                                                            <p data-original-title="" title="" aria-describedby="tooltip285384">
+                                                                Entdecke stilvolle</p>
+                                                            <p data-original-title="" title="" aria-describedby="tooltip285384">
+                                                                <a class="btn btn-outline-primary" href="/category/climaqua-rolluntersetzer">Dekofeuer</a>
+                                                            </p>
+                                                            <p data-original-title="" title="" aria-describedby="tooltip285384">
+                                                                <a class="btn btn-outline-primary" href="/category/untersetzer-schiefer">Untersetzer</a>
+                                                            </p>
+                                                            <p data-original-title="" title="" aria-describedby="tooltip285384">
+                                                                <a class="btn btn-outline-primary" href="/category/pflanzenstecker-schiefer">Pflanzenstecker</a>
+                                                            </p>
+                                                            <p data-original-title="" title="" aria-describedby="tooltip285384">
+                                                                <a class="btn btn-outline-primary" href="/category/kerzenhalter-schieferstein">Kerzenhalter</a>
+                                                            </p>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </section>
+                                    <section class="s_text_block o_colored_level pb0 pt56" data-snippet="s_text_block" data-name="Text" style="background-image: none;">
+                                        <div class="container s_allow_columns">
+                                            <h2 class="h2notapply">
+                                                <span style="font-size: 36px;">Themenblog – Lerne, Erkunde, Tauche ein</span>
+                                            </h2>
+                                        </div>
+                                    </section>
+                                    <section style="background-image: none;" data-filter-by-blog-id="-1" data-number-of-elements="3" data-number-of-records="3" data-number-of-elements-small-devices="1" data-snippet="s_blog_posts" class="s_blog_posts s_dynamic_snippet_blog_posts s_dynamic pb16 o_colored_level s_blog_post_prime_layout_3 pt0 o_dynamic_empty" data-name="Blog - 3" data-template-key="theme_prime.dynamic_filter_template_blog_post_prime_layout_3" data-filter-id="3">
+                                        <div class="container o_not_editable" contenteditable="false">
+                                            <div class="css_non_editable_mode_hidden">
+                                                <div class="missing_option_warning alert alert-info rounded-0 fade show d-none d-print-none o_default_snippet_text">
+                                                    Your Dynamic Snippet will be displayed here... This message is displayed because you did not provided both a filter and a template to use.<br />
+                                                </div>
+                                            </div>
+                                            <div class="dynamic_snippet_template" />
+                                        </div>
+                                    </section>
+                                </div>
+                                <div class="clearfix" />
+                                <div class="oe_structure" />
+                                <section class="s_text_block pt32 o_colored_level pb0" style="background-image: none;" data-name="Text" data-original-title="" title="" aria-describedby="tooltip957718">
+                                </section>
+                                <div class="clearfix" />
+                                <div class="oe_structure" />
+                                <section class="s_text_block pt16 pb16 o_colored_level bg-100" style="background-image: none;" data-name="Text">
+                                    <div class="container">
+                                        <div class="row">
+                                            <div class="pb0 o_colored_level col-lg-5 pt0">
+                                                <h4 class="s_title_default text-center mb-4" data-original-title="" title="" aria-describedby="tooltip60817" style="text-align: left;">
+                                                    <br />
+                                                </h4>
+                                                <h2 class="s_title_default mb-4 h2notapply" data-original-title="" title="" aria-describedby="tooltip60817" style="text-align: left;">
+                                                    <span style="font-size: 36px;">Unsere Mission: <br />Menschen inspirieren mit Natur zu leben.</span>
+                                                    <br />
+                                                </h2>
+                                            </div>
+                                            <div class="pb0 o_colored_level pt0 col-lg-7" data-original-title="" title="" aria-describedby="tooltip756938">
+                                                <p class="s_title_default text-center mb-4" data-original-title="" title="" aria-describedby="tooltip60817">
+                                                    <br />
+                                                </p>
+                                                <p>
+                                                    CLIMAQUA®
+                                                    hat es sich zur Aufgabe gemacht, die Natur in und rund um dein Zuhause, dein Büro,
+                                                    dein Yogastudio und viele weitere urbane Lebensräume zu bringen.<br />Das CLIMAQUA® Sortiment umfasst Brunnen,
+                                                    dekorative Feuerstellen, Pflanzgefässe, Schieferuntersetzer&amp;nbsp;und diverse Accessoires. Wir bauen stilvolle Naturobjekte, welche die Kraft des
+                                                    Wassers, der Flora, des Feuers und des Steins in deiner persönlichen
+                                                    Umgebung zusammenbringen
+                                                    &amp;nbsp;–&amp;nbsp;
+                                                    sicher und hautnah.&amp;nbsp;
+                                                </p>
+                                                <span style="font-size: 24px;">
+                                                </span>
+                                                <p>
+                                                    Mit CLIMAQUA® schaffst du dir deine persönliche Wohlfühloase und geniesst diese mit allen Sinnen: Lausche dem sanften Plätschern des Wassers, rieche den frischen Duft der Pflanzen,&amp;nbsp;beobachte den lebendigen Tanz des Feuers,
+                                                    spüre die Kraft der Steine.<span style="font-size: 18px;">
+                                                    </span></p>
+                                                <span style="font-size: 24px;">
+                                                </span>
+                                                <p>
+                                                    <br />
+                                                </p>
+                                                <p>
+                                                    <img class="img-fluid o_we_custom_image shadow" src="/web/image/1700727-3107049b/CLIMAQUA_Mood_Indoor_Schoengruen_2021-53%2072x-2.jpg" alt="" data-original-id="1696349" data-original-src="/web/image/1696349-ab98f46b/CLIMAQUA_Mood_Indoor_Schoengruen_2021-53%2072x-2.jpg" data-mimetype="image/jpeg" data-resize-width="786" loading="lazy" style="" data-original-title="" title="" aria-describedby="tooltip377200" />
+                                                    <br />
+                                                </p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </section>
+                                <div class="clearfix" />
+                                <div class="oe_structure" />
+                                <section class="s_text_block pt16 pb16 o_colored_level" style="background-image: none;" data-name="Text">
+                                    <div class="container">
+                                        <div class="row">
+                                            <div class="pb0 o_colored_level col-lg-5 pt0">
+                                                <h4 class="s_title_default text-center mb-4" data-original-title="" title="" aria-describedby="tooltip60817" style="text-align: left;">
+                                                    <br />
+                                                </h4>
+                                                <h2 class="s_title_default mb-4 h2notapply" data-original-title="" title="" aria-describedby="tooltip60817" style="text-align: left;">
+                                                    <span style="font-size: 36px;">Unsere Aufgabe:<br />Nachhaltige und schöne&amp;nbsp;</span>
+                                                    <br />
+                                                    <span style="font-size: 36px;">Objekte designen.</span>
+                                                    <br />
+                                                </h2>
+                                            </div>
+                                            <div class="pb0 o_colored_level pt0 col-lg-7" data-original-title="" title="" aria-describedby="tooltip914368">
+                                                <p class="s_title_default text-center mb-4" data-original-title="" title="" aria-describedby="tooltip60817">
+                                                    <br />
+                                                </p>
+                                                <p>
+                                                    CLIMAQUA® steht für Nachhaltigkeit, Qualität und
+                                                    Engagement. Unsere Produkte werden aus hochwertigen, natürlichen
+                                                    Materialien hergestellt und sind extrem langlebig. Wir achten auf sehr
+                                                    gute Arbeitsbedingungen in den Produktionsstätten, legen grossen Wert
+                                                    auf Transparenz und eine direkte Lieferkette.&amp;nbsp;&amp;nbsp;
+                                                    <br />
+                                                    &amp;nbsp;Unser Umweltengagement zeigt sich darin, dass wir seit vielen Jahren regelmässig Bäume pflanzen. Unser "CLIMAQUA
+                                                    ®
+                                                    Wald" umfasst bereits 10.000 Bäume in verschiedenen Projekten rund um
+                                                    den Globus. Erfahre hier mehr über das schöne Projekt und wenn du magst,
+                                                    kannst du dich selbst auch direkt mit weiteren Bäumen beteiligen.<br /><br />
+                                                </p>
+                                                <p data-original-title="" title="" aria-describedby="tooltip127718">
+                                                    <a href="https://tree-nation.com/profile/dynco-ag" target="_blank" class="btn btn-fill-primary btn-lg" data-original-title="" title=""><span data-o-link-zws="start" contenteditable="false">​</span>Unser Waldprojekt</a>
+                                                    <br />
+                                                </p>
+                                                <p>
+                                                    <br />
+                                                </p>
+                                                <p>
+                                                    <img class="img-fluid o_we_custom_image o_we_image_cropped shadow" src="/web/image/1700730-a0f3707d/77829-CLIMAQUA-Fountains-VIDA%2040-72x-mood-1-hoch.jpg" alt="" loading="lazy" data-original-id="1699144" data-original-src="/web/image/1699144-31c05003/77829-CLIMAQUA-Fountains-VIDA%2040-72x-mood-1-hoch.jpg" data-mimetype="image/jpeg" data-original-title="" title="" aria-describedby="tooltip760127" data-x="56.18320610687023" data-y="473.3282442748095" data-width="1473.7913486005089" data-height="1105.3435114503818" data-scale-x="1" data-scale-y="1" data-aspect-ratio="4/3" />
+                                                    <br />
+                                                </p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </section>
+                                <div class="clearfix" />
+                                <div class="oe_structure" />
+                                <section class="s_text_block pt16 pb16 o_colored_level bg-100" style="background-image: none;" data-name="Text">
+                                    <div class="container">
+                                        <div class="row">
+                                            <div class="pb0 o_colored_level col-lg-5 pt4">
+                                                <h4 class="s_title_default text-center mb-4" data-original-title="" title="" aria-describedby="tooltip60817" style="text-align: left;">
+                                                    <br />
+                                                </h4>
+                                                <h2 class="s_title_default mb-4 h2notapply" data-original-title="" title="" aria-describedby="tooltip60817" style="text-align: left;"><span style="font-size: 36px;">Die Aufforderung an dich:&amp;nbsp;<br />Hol dir die Natur ins Haus!</span>&amp;nbsp;<br /></h2>
+                                            </div>
+                                            <div class="pb0 o_colored_level pt0 col-lg-7">
+                                                <p class="s_title_default text-center mb-4" data-original-title="" title="" aria-describedby="tooltip60817">
+                                                    <br />
+                                                </p>
+                                                <p>
+                                                    Das CLIMAQUA®&amp;nbsp;Sortiment&amp;nbsp;reicht von zeitlos modernen Blumentöpfen und Gartenbrunnen über spektakuläre Dekofeuer und Gartenfackeln bis zu praktischen Schieferplatten als Untersetzer. Hochwertige Brunnen, Pflanzgefässe, Dekofeuer und Boutique-Artikel sind so designt, dass sie sich perfekt miteinander kombinieren lassen. Veredle dein Zuhause mit deiner ganz persönlichen Wohlfühloase. Lass dich von den unzähligen Kombinationsmöglichkeiten über unsere Social-Media-Kanäle inspirieren. Die Definition des klassischen Home Designs erweitern wir für dich – Stichwort: Urban Jungle.<br /><br />
+                                                </p>
+                                                <p>
+                                                    <img class="img-fluid o_we_custom_image" src="/web/image/1700728-46d350f8/20635-CLIMAQUA-Fountains-MODO-72x-mood-8.jpg" alt="" data-original-id="1669499" data-original-src="/web/image/1669499-b3a7bfb1/20635-CLIMAQUA-Fountains-MODO-72x-mood-8.jpg" data-mimetype="image/jpeg" data-resize-width="786" loading="lazy" style="" data-original-title="" title="" aria-describedby="tooltip427988" />
+                                                    <br />
+                                                </p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </section>
+                                <div class="clearfix" />
+                                <div class="oe_structure" />
+                                <section class="s_text_block pt16 pb16 o_colored_level" style="background-image: none;" data-name="Text">
+                                    <div class="container">
+                                        <div class="row">
+                                            <div class="o_colored_level pt0 pb4 col-lg-10">
+                                                <p class="s_title_default text-center mb-4" data-original-title="" title="" aria-describedby="tooltip60817">
+                                                    <br />
+                                                </p>
+                                                <p>
+                                                    <span style="font-size: 36px">Was du von CLIMAQUA erwarten darfst</span>
+                                                </p>
+                                                <h3><br />Du kaufst direkt vom Hersteller.</h3>
+                                                <p>
+                                                    <span style="color: rgb(33, 37, 41);font-size: 18px;font-style: normal;font-weight: 400;background-color: rgb(255, 255, 255)">Wenn du hier kaufst, schonst du&amp;nbsp;Ressourcen, denn es gibt weniger Schritte bis das Produkt von der Produktion bei dir angelangt ist. Zudem erhältst du hier den direkten Service mit dem maximalen Sortiments-Knowhow. In der Regel erhältst Du deine Bestellung europaweit innert 2-4 Tagen. Wir setzten alles daran, dass wir dieses Versprechen einhalten können.</span>
+                                                    <br />
+                                                    <br />
+                                                </p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </section>
+                                <div class="clearfix" />
+                                <div class="oe_structure" />
+                                <section class="s_text_block o_colored_level pb0 pt0" style="background-image: none;" data-name="Text" data-original-title="" title="" aria-describedby="tooltip957718">
+                                    <div class="container">
+                                        <div class="row" data-original-title="" title="" aria-describedby="tooltip988367">
+                                        </div>
+                                    </div>
+                                </section>
+                                <div class="clearfix" />
+                                <div class="oe_structure" />
+                                <section class="s_icon_block_11 pt16 pb16 o_colored_level" data-snippet="s_icon_block_11" data-name="Icon Block - 11" style="background-image: none;">
+                                    <div class="container">
+                                        <div class="row justify-content-center p-3 s_nb_column_fixed">
+                                            <div class="col-12 col-sm-6 col-lg-3 tp-icon-block text-center o_colored_level">
+                                                <span class="fa fa-2x bg-o-color-1 m-3 fa-star-o rounded-circle" data-original-title="" title="" aria-describedby="tooltip508189" />
+                                                <h5 style="text-align: center;">Qualität<br /></h5>
+                                                <p style="text-align: center;">
+                                                    <span style="font-size: 18px">Robuste und langlebige Produkte</span>
+                                                    <br />
+                                                </p>
+                                            </div>
+                                            <div class="col-12 col-sm-6 col-lg-3 tp-icon-block text-center o_colored_level" style="text-align: left;">
+                                                <span class="fa fa-2x fa-thumbs-up bg-o-color-1 m-3 rounded-circle" data-original-title="" title="" aria-describedby="tooltip748960" />
+                                                <h5 style="text-align: center;">Transparenz</h5>
+                                                <p style="text-align: center;">
+                                                    <span style="font-size: 18px">Transparente Lieferkette</span>
+                                                    <br />
+                                                </p>
+                                            </div>
+                                            <div class="col-12 col-sm-6 col-lg-3 tp-icon-block text-center o_colored_level">
+                                                <span class="fa fa-phone bg-o-color-1 m-3 fa-2x rounded-circle" data-original-title="" title="" aria-describedby="tooltip959548" />
+                                                <h5>Support<br /></h5>
+                                                <p>
+                                                    <span style="font-size: 18px">Persönliche Beratung</span>
+                                                    <br />
+                                                </p>
+                                            </div>
+                                            <div class="col-12 col-sm-6 col-lg-3 tp-icon-block text-center o_colored_level">
+                                                <span class="fa fa-2x fa-undo rounded-circle bg-o-color-1 m-3" />
+                                                <h5>einfache Retouren<br /></h5>
+                                                <p>unkompliziert bei Retouren<br /></p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </section>
+                                <div class="clearfix" />
+                                <div class="oe_structure" />
+                                <section class="s_icon_block_11 pt16 o_colored_level pb24" data-snippet="s_icon_block_11" data-name="Icon Block - 11" style="background-image: none;">
+                                    <div class="container">
+                                        <div class="row justify-content-center p-3 s_nb_column_fixed">
+                                            <div class="col-12 col-sm-6 col-lg-3 tp-icon-block text-center o_colored_level">
+                                                <span class="fa fa-2x rounded-circle bg-o-color-1 m-3 fa-truck" contenteditable="false">​</span>
+                                                <h5>schnelle Lieferung<br /></h5>
+                                                <p>
+                                                    <span style="font-size: 18px">
+                                                        <span style="font-size: 18px">Europaweit in 2-4 Tagen geliefert</span>
+                                                    </span>
+                                                    <br />
+                                                </p>
+                                            </div>
+                                            <div class="col-12 col-sm-6 col-lg-3 tp-icon-block text-center o_colored_level">
+                                                <span class="fa fa-2x rounded-circle bg-o-color-1 m-3 fa-credit-card" data-original-title="" title="" aria-describedby="tooltip798932" contenteditable="false">​</span>
+                                                <h5>einfache Zahlung</h5>
+                                                <p>
+                                                    <span style="font-size: 18px">Viele Zahlungsmöglichkeiten</span>
+                                                    <br />
+                                                </p>
+                                            </div>
+                                            <div class="col-12 col-sm-6 col-lg-3 tp-icon-block text-center o_colored_level">
+                                                <span class="fa fa-2x rounded-circle bg-o-color-1 m-3 fa-hand-peace-o" contenteditable="false">​</span>
+                                                <h5>Garantie<br /></h5>
+                                                <p>
+                                                    <span style="font-size: 18px">2 Jahre Garantie</span>
+                                                    <br />
+                                                </p>
+                                            </div>
+                                            <div class="col-12 col-sm-6 col-lg-3 tp-icon-block text-center o_colored_level">
+                                                <span class="fa fa-2x rounded-circle bg-o-color-1 m-3 fa-leaf" contenteditable="false">​</span>
+                                                <h5>Engagement<br /></h5>
+                                                <p>Umweltfreundliches Handeln<br /></p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </section>
+                                <div class="clearfix" />
+                                <div class="oe_structure" />
+                                <section class="s_newsletter_block bg-200 pt32 pb32 o_colored_level" data-snippet="s_newsletter_block" data-name="Newsletter block" style="background-image: none;">
+                                    <div class="container">
+                                        <div class="row" data-original-title="" title="" aria-describedby="tooltip906496">
+                                            <div class="col-lg-8 offset-lg-2 o_colored_level pt48 pb40" data-original-title="" title="" aria-describedby="tooltip769151">
+                                                <h3>
+                                                    <span style="font-weight: normal;">Jetzt Newsletter anmelden und nichts mehr verpassen</span>
+                                                </h3>
+                                                <p>
+                                                    <br />
+                                                </p>
+                                                <div class="s_newsletter_subscribe_form js_subscribe" data-vxml="001" data-list-id="8" data-name="Newsletter Form" data-snippet="s_newsletter_subscribe_form">
+                                                    <div class="input-group" data-original-title="" title="" aria-describedby="tooltip502709">
+                                                        <span style="font-size: 24px;">
+                                                        </span>
+                                                        <input type="email" name="email" class="js_subscribe_email form-control fbc-has-badge fbc-UID_1" placeholder="Ihre E-Mail..." />
+                                                        <br />
+                                                        <br />
+                                                        <span style="font-size: 24px;">
+                                                        </span>
+                                                        <span class="input-group-append">
+                                                            <span style="font-size: 24px;">
+                                                            </span>
+                                                            <a role="button" href="#" class="btn btn-primary js_subscribe_btn o_submit" data-original-title="" title="">
+                                                                <span data-original-title="" title="" aria-describedby="tooltip492476" style="font-size: 18px;">Abonnieren</span>
+                                                            </a>
+                                                            <span style="font-size: 24px;">
+                                                            </span>
+                                                            <a role="button" href="#" class="btn btn-success js_subscribed_btn o_submit d-none" disabled="disabled" data-original-title="" title="">
+                                                                <span data-original-title="" title="" aria-describedby="tooltip148509" style="font-size: 18px;">Dankeschön</span>
+                                                            </a>
+                                                            <span style="font-size: 24px;">
+                                                            </span>
+                                                        </span>
+                                                        <span style="font-size: 24px;">
+                                                        </span>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </section>
+                                <div class="clearfix" />
+                                <div class="oe_structure" />
+                                <section class="s_text_image pt32 o_colored_level pb4 o_snippet_invisible o_conditional_hidden" data-snippet="s_image_text" style="background-image: none;" data-name="Benutzerdef. Image - Text">
+                                    <div class="container">
+                                        <div class="row align-items-center" data-original-title="" title="" aria-describedby="tooltip815422">
+                                            <div class="col-lg-6 pt16 pb16 o_colored_level">
+                                                <img src="/web/image/1741206-456abd3b/polaroid-mockup-by-PhotoshopSupply%20copy.png" class="img img-fluid mx-auto" alt="" loading="lazy" data-original-title="" title="" aria-describedby="tooltip472604" data-original-id="1741205" data-original-src="/web/image/1741205-47050b76/polaroid-mockup-by-PhotoshopSupply%20copy.png" data-mimetype="image/png" data-resize-width="690" />
+                                            </div>
+                                            <div class="col-lg-6 pt16 pb16 o_colored_level" data-original-title="" title="" aria-describedby="tooltip416724">
+                                                <p>
+                                                    HI&amp;nbsp;</p>
+                                                <p data-original-title="" title="" aria-describedby="tooltip12219">
+                                                    <span style="font-size: 36px">Das Team von CLIMAQUA</span>
+                                                    <br />
+                                                </p>
+                                                <p data-original-title="" title="" aria-describedby="tooltip12219">&amp;nbsp;<span style="color: rgb(33, 37, 41);font-size: 18px" data-original-title="" title="" aria-describedby="tooltip715518"><br /></span><span style="color: rgb(33, 37, 41);" data-original-title="" title="" aria-describedby="tooltip715518">Mit viel Elan und Engagement entwickeln und bauen wir tagtäglich an den Produkten von CLIMAQUA. Wir möchten&amp;nbsp;Menschen davon begeistern, dass es sich mit Natur in den eigenen Lebensräumen einfach besser leben lässt.&amp;nbsp;Ruhe, Gelassenheit, Wohlfühlen, Ambiente, Inspiration, Frische.... die Positivity-Liste ist lang,&amp;nbsp;der wertvolle Impact <span style="color: rgb(33, 37, 41);">auf unsere Gesundheit und unser&amp;nbsp;Wohlbefinden</span>&amp;nbsp;ist unbestritten. CLIMAQUA® bzw. die Inhaberin des Brands&amp;nbsp;<a href="https://www.dynco.swiss" data-original-title="" title="" class="btn btn-outline-primary"><span data-o-link-zws="start" contenteditable="false">​</span><span aria-describedby="tooltip971769" title="" data-original-title="">dynco AG</span></a>&amp;nbsp;ist ein Familienunternehmen.&amp;nbsp;</span><span style="color: rgb(33, 37, 41);font-size: 18px" data-original-title="" title="" aria-describedby="tooltip715518"><br /></span><span style="color: rgb(33, 37, 41);" data-original-title="" title="" aria-describedby="tooltip715518">Wir leben und arbeiten alle im Raum&amp;nbsp;Bern, Schweiz.</span>
+                                                    <br />
+                                                    <span style="color: rgb(33, 37, 41);font-size: 18px" class="o_default_snippet_text">&amp;nbsp;​</span>
+                                                </p>
+                                                <p data-original-title="" title="" aria-describedby="tooltip251093">
+                                                    <a href="/kontakt" class="mb-2 btn btn-primary o_default_snippet_text" data-original-title="" title=""><span data-o-link-zws="start" contenteditable="false">​</span>Kontakt aufnehmen</a>
+                                                </p>
+                                                <p data-original-title="" title="" aria-describedby="tooltip251093">Wenn du noch Fragen hast, zöge bitte nicht, uns zu kontaktieren.&amp;nbsp;&amp;nbsp;<span style="font-size: 18px"><br /></span>
+                                                    Ausserdem&amp;nbsp;findest du in unseren&amp;nbsp;<a href="/faq-s" target="_blank" data-original-title="" title="" class="btn btn-outline-primary"><span data-o-link-zws="start" contenteditable="false">​</span>FAQ's</a>&amp;nbsp;einige Antworten und Tipps auf Fragen, die uns häufig gestellt werden.&amp;nbsp;
+                                                    <br />
+                                                    <br />
+                                                    Wir freuen uns, für dich da zu sein.<br /></p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </section>
+                                <div class="clearfix" />
+                                <div class="oe_structure" />
+                                <section class="s_text_block o_colored_level" style="background-image: none;" data-name="Text">
+                                    <div class="container">
+                                        <div class="row">
+                                            <span style="font-size: 18px;">
+                                            </span>
+                                        </div>
+                                        <span style="font-size: 18px;">
+                                        </span>
+                                    </div>
+                                    <span style="font-size: 18px;">
+                                    </span>
+                                </section>
+                                <span style="font-size: 18px;">
+                                </span>
+                                <div class="clearfix" />
+                                <div class="oe_structure" />
+                                <section class="s_instagram_feed mt32 mb32 o_colored_level" style="background-image: none;" data-original-title="" title="" aria-describedby="tooltip602060">
+                                    <div class="pt16 pb0 container">
+                                        <div class="row s_nb_column_fixed">
+                                            <div class="o_colored_level pt0 pb4 border col-lg-6 offset-lg-3" style="border-width: 0.5px !important; border-color: rgb(52, 58, 64) !important;" data-original-title="" title="" aria-describedby="tooltip324668">
+                                                <p>
+                                                    <br />
+                                                </p>
+                                                <p class="lead" style="text-align: left;">
+                                                    <span style="font-size: 36px"><span class="fa fa-instagram" />&amp;nbsp;Folge uns auf Instagram</span>
+                                                    <br />
+                                                </p>
+                                                <p class="lead" style="text-align: left;" data-original-title="" title="" aria-describedby="tooltip514950">
+                                                    <span data-original-title="" title="" aria-describedby="tooltip893760" style="font-size: 18px;">
+                                                        <font style="vertical-align: inherit;">
+                                                        </font>
+                                                    </span>
+                                                    <span data-original-title="" title="" aria-describedby="tooltip893760">
+                                                        <font style="vertical-align: inherit;">
+                                                            <font style="vertical-align: inherit;" data-original-title="" title="" aria-describedby="tooltip241527">Teile Deine Kreationen auf Instagram&amp;nbsp;</font>
+                                                        </font>
+                                                    </span>
+                                                    <span data-original-title="" title="" aria-describedby="tooltip893760" style="font-size: 24px;">
+                                                        <font style="vertical-align: inherit;">
+                                                            <font style="vertical-align: inherit;" data-original-title="" title="" aria-describedby="tooltip241527"><br /><br />@<a href="https://www.instagram.com/climaqua.swiss/" target="_blank"><span data-o-link-zws="start" contenteditable="false">​</span>climaqua.swiss</a><br />#climaqua</font>
+                                                        </font>
+                                                    </span>
+                                                </p>
+                                                <h1 class="s_title_default" style="text-align: center;" data-original-title="" title="" aria-describedby="tooltip535934">
+                                                    <img class="img-fluid o_we_custom_image" src="/web/image/1633532-6c1dea04/climaqua%2520instagram.svg" alt="Climaqua Instagram" data-original-id="1633459" data-original-src="/web/image/1633459-67610083/climaqua%20instagram.png" data-mimetype="image/svg+xml" data-original-title="" title="Climaqua Instagram" aria-describedby="tooltip665658" data-shape="web_editor/basic/bsc_organic_3" data-file-name="climaqua%20instagram.svg" data-shape-colors=";;;;" data-original-mimetype="image/png" loading="lazy" />
+                                                </h1>
+                                                <h1 class="s_title_default" style="text-align: center;" data-original-title="" title="" aria-describedby="tooltip535934">&amp;nbsp;<br />
+                                                    <a href="https://www.instagram.com/climaqua.swiss" class="btn btn-fill-primary btn-lg" target="_blank" data-original-title="" title="" style="background-position: initial; background-size: initial; background-repeat: initial; background-attachment: initial; background-origin: initial; background-clip: initial; letter-spacing: 0.4rem;"><span data-o-link-zws="start" contenteditable="false">​</span>
+                                                        <font style="vertical-align: inherit;">
+                                                            <font style="vertical-align: inherit;">
+                                                                <font style="vertical-align: inherit;">
+                                                                    <font style="vertical-align: inherit;" data-original-title="" title="" aria-describedby="tooltip856319">#CLIMAQUA</font>
+                                                                </font>
+                                                            </font>
+                                                        </font>
+                                                    </a>
+                                                </h1>
+                                                <p class="lead">
+                                                    <br />
+                                                </p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </section>
+                                <div class="clearfix" />
+                                <div class="oe_structure" />
+                            </div>
+                        </div>
+                    </t>
+                </t>
+            </field>
+        </record>
+
+        <record id="climaqua_homepage" model="website.page">
+          <field name="url">/climaqua_homepage</field>
+          <field name="website_published">True</field>
+          <field name="view_id" ref="climaqua_homepage_view" />
+          <field name="website_id" ref="__export__.website_20_e3037958"/>
+        </record>
+        <!-- <record id="__export__.website_20_e3037958" model="website">
+          <field name="homepage_id" ref="climaqua_homepage" />
+        </record> -->
+
+        <record id="climaqua_scss" model="ir.asset">
+            <field name="name">Climaqua effect SCSS</field>
+            <field name="bundle">web.assets_frontend</field>
+            <field name="path">/dynco_base/static/src/scss/climaqua_font.scss</field>
+            <field name="website_id" ref="__export__.website_20_e3037958"/>
+        </record>
+
+        <!--language-->
+        <template id="component_language_selector_clima" name="Component Language Climaqua">
+            <t t-set="language_selector_visible" t-value="len(languages) &gt; 1 or (website and (editable or translatable))"/>
+            <t t-set="active_lang" t-value="list(filter(lambda lg : lg[0] == lang, languages))[0]"/>
+            <t t-set="hide_country_flag" t-value="request.website._get_dr_theme_config('json_general_language_pricelist_selector')['hide_country_flag']"/>
+
+            <div t-if="language_selector_visible" t-attf-class="list-inline-item o_not_editable #{language_selector_visible and 'js_language_selector' or None} #{_classes} o_not_editable">
+                <a t-attf-class="dropdown-toggle d-flex align-items-center #{_dropdown_classes}" href="#" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
+                    <t t-if="not only_symbols">
+                        <t t-if="language_selector_visible and active_lang">
+                            <t t-if="hide_country_flag">
+                                <t t-out="active_lang[2].split('/').pop()"/>
+                            </t>
+                            <t t-else="">
+                                <t t-if="active_lang[0] == 'en_US'">
+                                    <i class="fa fa-globe"></i>
+                                </t>
+                                <t t-else="" t-call="website.lang_flag">
+                                    <t t-set="flag_image_src" t-value="active_lang[4]"/>
+                                </t>
+                            </t>
+                        </t>
+                    </t>
+                    <t t-else="">
+                        <t t-if="not hide_country_flag" t-call="website.lang_flag">
+                            <t t-if="active_lang[0] == 'en_US'">
+                                <i class="fa fa-globe"></i>
+                            </t>
+                            <t t-else="">
+                                <t t-set="flag_image_src" t-value="active_lang[4]"/>
+                            </t>
+                        </t>
+                        <t t-else="">
+                            <i class="tp-action-btn-icon fa fa-language"></i>
+                        </t>
+                    </t>
+                </a>
+                <div class="dropdown-menu" role="menu">
+                    <t t-if="language_selector_visible">
+                        <t t-foreach="languages" t-as="lg">
+                            <a t-att-href="url_for(request.httprequest.path + '?' + keep_query(), lang_code=lg[0])" t-attf-class="dropdown-item js_change_lang #{'active' if lg[0] == active_lang[0] else ''}" t-att-data-url_code="lg[1]">
+                                <t t-if="not hide_country_flag">
+                                    <t t-if="lg[0] == 'en_US'">
+                                        <i class="fa fa-globe" style="margin-right: 0.2em;"></i>
+                                    </t>
+                                    <t t-else="" t-call="website.lang_flag">
+                                        <t t-set="flag_image_src" t-value="lg[4]" />
+                                    </t>
+                                </t>
+                                <span t-out="lg[2].split('/').pop()"/>
+                            </a>
+                            <li class="dropdown-divider"/>
+                        </t>
+                    </t>
+                    <t t-call="website.language_selector_add_language">
+                        <t t-set="dropdown" t-value="True"/>
+                    </t>
+                </div>
+            </div>
+        </template>
+
+        <!-- header -->
+        <template id ="climaqua_header_style_14" inherit_id="website.layout" name="climaqua Header Style - 14" active="False">
+            <!-- <xpath expr="//header/*" position="before">
+            </xpath> -->
+            <xpath expr="//header[@id='top']/nav" position="replace">
+                <t t-call="website.navbar">
+                    <t t-set="_navbar_classes" t-valuef="shadow-sm"/>
+                    <!-- desktop -->
+                    <div id="top_menu_container" class="clima_desktop_toggle_logo_menu container align-items-center flex-lg-column flex-wrap">
+                        <!--Dynamic Pre header-->
+                        <t t-if="website.is_top_header">
+                            <t t-raw="website.top_header_content"/>
+                        </t>
+                        <div class="d-flex flex-lg-row justify-content-between w-100 align-items-center flex-wrap flex-lg-nowrap desktop_middle_menu" style=" display: none !important; ">
+                            <div class="container">
+                                <div class="row justify-content-center justify-content-lg-between align-items-center">
+                                    <div class="col-4 py-3 climaqua_search_box">
+                                        <t t-call="website.website_search_box_input">
+                                            <t t-set="_form_classes" t-valuef="mx-auto w-100 o_wsale_products_searchbar_form o_not_editable"/>
+                                            <t t-set="_classes" t-valuef=" "/>
+                                            <t t-set="search_type" t-valuef="products"/>
+                                            <t t-set="action" t-value="'/shop'"/>
+                                        </t>
+                                    </div>
+                                    <div class="col-4 text-center py-3 climaqua_logo">
+                                        <!-- Brand -->
+                                        <t t-call="website.placeholder_header_brand">
+                                            <t t-set="_link_class" t-value="'d-none d-lg-inline-block mx-auto'"/>
+                                        </t>
+                                    </div>
+                                    <div class="col-4 py-3 text-right climaqua_icon_header">
+                                        <ul class="list-inline m-0 tp-account-info">
+                                            <t t-call="dynco_base.component_language_selector_clima"/>
+                                            <t t-set="website_sale_order" t-value="website.sale_get_order()" />
+                                            <t t-call="theme_prime.tp_login_dropdown_component"></t>
+
+                                            <t t-set="wishcount" t-value="len(request.env['product.wishlist'].current())"/>
+                                            <li t-attf-class="list-inline-item o_not_editable #{item_class or ''}">
+                                                <a class="o_wsale_my_wish" href="/shop/wishlist">
+                                                    <i class="dri dri-wishlist"/>
+                                                    <sup t-out="wishcount" t-attf-class="my_wish_quantity o_animate_blink badge badge-primary"/>
+                                                </a>
+                                                <div t-if="show_title" class="mt-1 small">Wishlist</div>
+                                            </li>
+                                            <!-- language -->
+                                            <!-- <li></li> -->
+                                            <li t-attf-class="list-inline-item o_not_editable #{item_class or ''}">
+                                                <a class="o_wsale_my_cart tp-cart-sidebar-action" href="/shop/cart">
+                                                    <i class="dri dri-cart"/>
+                                                    <sup class="my_cart_quantity badge badge-primary mb-0 font-weight-bold" t-out="website_sale_order and website_sale_order.cart_quantity or '0'" t-att-data-order-id="website_sale_order and website_sale_order.id or ''"/>
+                                                </a>
+                                                <div t-if="show_title" class="mt-1 small">My Cart</div>
+                                            </li>
+
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="d-lg-flex flex-lg-row align-items-center w-100 desktop_menu">
+                            <!-- Navbar Toggler -->
+                            <t t-call="theme_prime.component_navbar_toggler"/>
+                            <!-- Brand -->
+                            <a href="/" t-attf-class="navbar-brand logo d-lg-none o_offcanvas_logo_container mx-auto">
+                                <img t-attf-src="/website/image/website/#{request.website.id}/logo" role="img" t-att-aria-label="'Logo of %s' % website.name" t-att-title="website.name"/>
+                            </a>
+                            <!-- Mobile Language Selection -->
+                            <t t-call="dynco_base.component_language_selector_clima"/>
+                            <!-- Account Info -->
+                            <!-- <t t-call="theme_prime.component_navbar_mobile_account_info"/> -->
+                            <!-- Navbar Collapse -->
+                            <div id="top_menu_collapse" class="collapse navbar-collapse order-last order-lg-0 custom_climaqua_menu">
+                                <div class="text-center climaqua_logo">
+                                    <!-- Brand -->
+                                    <t t-call="website.placeholder_header_brand">
+                                        <t t-set="_link_class" t-value="'d-none d-lg-inline-block mx-auto'"/>
+                                    </t>
+                                </div>
+                                <t t-call="website.navbar_nav">
+                                    <t t-set="_nav_class" t-value="'mx-auto'"/>
+                                    <!-- Menu -->
+                                    <t t-foreach="website.menu_id.child_id" t-as="submenu">
+                                        <t t-call="website.submenu">
+                                            <t t-set="item_class" t-value="'nav-item'"/>
+                                            <t t-set="link_class" t-value="'nav-link'"/>
+                                        </t>
+                                    </t>
+                                </t>
+                                <div class="climaqua_search_box">
+                                    <t t-call="website.website_search_box_input">
+                                        <t t-set="_form_classes" t-valuef="mx-auto w-100 o_wsale_products_searchbar_form o_not_editable"/>
+                                        <t t-set="_classes" t-valuef=" "/>
+                                        <t t-set="search_type" t-valuef="products"/>
+                                        <t t-set="action" t-value="'/shop'"/>
+                                    </t>
+                                </div>
+                                <div class="climaqua_icon_header">
+                                    <ul class="list-inline m-0 tp-account-info">
+                                        <t t-call="dynco_base.component_language_selector_clima" />
+                                        <t t-set="website_sale_order" t-value="website.sale_get_order()" />
+                                        <t t-call="theme_prime.tp_login_dropdown_component" />
+                                        <t t-set="wishcount" t-value="len(request.env['product.wishlist'].current())" />
+                                        <li t-attf-class="list-inline-item o_not_editable #{item_class or ''}">
+                                            <a class="o_wsale_my_wish" href="/shop/wishlist">
+                                                <i class="dri dri-wishlist" />
+                                                <sup t-out="wishcount" t-attf-class="my_wish_quantity o_animate_blink badge badge-primary" />
+                                            </a>
+                                            <div t-if="show_title" class="mt-1 small">Wishlist</div>
+                                        </li>
+                                        <!-- language -->
+                                        <!-- <li></li> -->
+                                        <li t-attf-class="list-inline-item o_not_editable #{item_class or ''}">
+                                            <a class="o_wsale_my_cart tp-cart-sidebar-action" href="/shop/cart">
+                                                <i class="dri dri-cart" />
+                                                <sup class="my_cart_quantity badge badge-primary mb-0 font-weight-bold" t-out="website_sale_order and website_sale_order.cart_quantity or '0'" t-att-data-order-id="website_sale_order and website_sale_order.id or ''" />
+                                            </a>
+                                            <div t-if="show_title" class="mt-1 small">My Cart</div>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- mobile view -->
+                    <div id="top_menu_container" class="clima_mobile_toggle_logo_menu container justify-content-between">
+                        <!--Dynamic Pre header-->
+                        <t t-if="website.is_top_header">
+                            <t t-raw="website.top_header_content"/>
+                        </t>
+                        <!-- Navbar Toggler -->
+                        <li class="list-inline-item text-center o_not_editable">
+                            <t t-call="theme_prime.component_navbar_toggler"/>
+                            <div class="small">MENU</div>
+                        </li>
+                        <!-- Brand -->
+                        <a href="/" t-attf-class="navbar-brand logo d-lg-none o_offcanvas_logo_container mx-auto">
+                            <img t-attf-src="/website/image/website/#{request.website.id}/logo" role="img" t-att-aria-label="'Logo of %s' % website.name" t-att-title="website.name"/>
+                        </a>
+
+                        <li t-if="not no_search" t-attf-class="list-inline-item text-center o_not_editable #{item_class or ''}">
+                            <a href="#" class="tp-search-sidebar-action" t-att-data-search="search" data-placement="bottom" aria-label="Search">
+                                <i class="dri dri-search"/>
+                            </a>
+                            <a href="#" class="tp-search-sidebar-action" t-att-data-search="search" data-placement="bottom" aria-label="Search">
+                                <div class="small">Search</div>
+                            </a>
+                        </li>
+                        <t t-set="wishcount" t-value="len(request.env['product.wishlist'].current())" />
+                        <li t-attf-class="list-inline-item text-center o_not_editable #{item_class or ''}">
+                            <a class="o_wsale_my_wish" href="/shop/wishlist">
+                                <i class="dri dri-wishlist" />
+                                <sup t-out="wishcount" t-attf-class="my_wish_quantity o_animate_blink badge badge-primary" />
+                            </a>
+                            <a class="o_wsale_my_wish" href="/shop/wishlist">
+                                <div class="small">Wishlist</div>
+                            </a>
+                        </li>
+                        <li t-attf-class="list-inline-item text-center o_not_editable #{item_class or ''}">
+                            <a class="o_wsale_my_cart tp-cart-sidebar-action" href="/shop/cart">
+                                <i class="dri dri-cart" />
+                                <sup class="my_cart_quantity badge badge-primary mb-0 font-weight-bold" t-out="website_sale_order and website_sale_order.cart_quantity or '0'" t-att-data-order-id="website_sale_order and website_sale_order.id or ''" />
+                            </a>
+                            <a class="o_wsale_my_cart tp-cart-sidebar-action" href="/shop/cart">
+                              <div class="small">My Cart</div>
+                            </a>
+                        </li>
+
+                        <!-- Mobile Language Selection -->
+                        <!-- <t t-call="dynco_base.component_language_selector_clima"/> -->
+                        <!-- Account Info -->
+                        <!-- <t t-call="theme_prime.component_navbar_mobile_account_info"/> -->
+                        <!-- Navbar Collapse -->
+                        <div id="top_menu_collapse" class="collapse navbar-collapse order-last order-lg-0 custom_climaqua_menu">
+                            <t t-call="website.navbar_nav">
+                                <t t-set="_nav_class" t-value="'mx-auto'"/>
+                                <!-- Menu -->
+                                <t t-foreach="website.menu_id.child_id" t-as="submenu">
+                                    <t t-call="website.submenu">
+                                        <t t-set="item_class" t-value="'nav-item'"/>
+                                        <t t-set="link_class" t-value="'nav-link'"/>
+                                    </t>
+                                </t>
+                            </t>
+                            <li t-if="request.website.viewref('portal.user_sign_in').active" t-attf-class="mobile_account_list list-inline-item o_not_editable #{_btn_classes} #{item_class or ''} w-100 py-3" style="padding: 1rem 2rem;">
+                                <div class="dropdown" t-ignore="true" t-if="not user_id._is_public()">
+                                    <a href="#" class="dropdown-toggle" data-toggle="collapse" data-target="#accountmobilenavbar1" aria-controls="accountmobilenavbar1" aria-expanded="false" aria-label="Account Info">
+                                        <i t-attf-class="dri dri-user #{_icon_classes}" />
+                                        <span>Mein Profil</span>
+                                    </a>
+                                    <div t-if="action_label" class="tp-action-btn-label">Account</div>
+                                    <div class="collapse pt-2" id="accountmobilenavbar1">
+                                        <div class="dropdown-item py-1">
+                                            <t t-out="user_id.name" />
+                                        </div>
+                                        <a href="/my" role="menuitem" class="dropdown-item">My Account</a>
+                                        <a href="/my/orders" role="menuitem" class="dropdown-item">Orders</a>
+                                        <a href="/shop/wishlist" role="menuitem" class="dropdown-item">Wishlist (<span class="tp-wishlist-counter">
+                                                <t t-out="wishcount" /></span>)</a>
+                                        <div class="dropdown-divider" />
+                                        <a href="/web/session/logout?redirect=/" role="menuitem" class="dropdown-item">Logout</a>
+                                    </div>
+                                </div>
+                                <div class="dropdown" t-else="">
+                                    <a href="#" class="dropdown-toggle" data-toggle="collapse" data-target="#accountmobilenavbar2" aria-controls="accountmobilenavbar2" aria-expanded="false" aria-label="Account Info">
+                                        <i t-attf-class="dri dri-user #{_icon_classes}" />
+                                        <span>Mein Profil</span>
+                                    </a>
+                                    <div t-if="action_label" class="tp-action-btn-label">Account</div>
+                                    <div class="collapse pt-2" id="accountmobilenavbar2">
+                                        <!--<div class="dropdown-item py-1">Guest</div>-->
+                                        <a href="/web/login" role="menuitem" class="dropdown-item">Login</a>
+                                        <div class="dropdown-divider" />
+                                        <a href="/shop/cart" role="menuitem" class="dropdown-item">My Cart</a>
+                                        <a href="/shop/wishlist" role="menuitem" class="dropdown-item">Wishlist (<span class="tp-wishlist-counter">
+                                                <t t-out="wishcount" /></span>)</a>
+                                    </div>
+                                </div>
+                                <div t-if="show_title" class="mt-1 small">Account</div>
+                            </li>
+                        </div>
+                    </div>
+                </t>
+            </xpath>
+        </template>
+        <!-- footer -->
+        <template id="climaqua_footer_style_14" inherit_id="website.layout" name="climaqua Footer Style - 14" active="False">
+            <xpath expr="//div[@id='footer']" position="replace">
+                <div id="footer" class="oe_structure oe_structure_solo" t-ignore="true" t-if="not no_footer" style="">
+                    <section class="s_text_block pb36 pt24" data-snippet="s_text_block" data-name="Text" style="background-image: none;" data-original-title="" title="" aria-describedby="tooltip355273">
+                        <div class="climaqua_footer pt48 container" data-original-title="" title="" aria-describedby="tooltip350260">
+                            <div class="row" data-original-title="" title="" aria-describedby="tooltip861527">
+                                <div class="col-12 col-sm-6 col-md-6 col-lg-2 mb-4 o_colored_level" data-original-title="" title="" aria-describedby="tooltip779701">
+                                    <h5 class="mb-3">
+                                        <font style="vertical-align: inherit;">
+                                            SERVICE
+                                        </font>
+                                    </h5>
+                                    <ul class="list-unstyled tp-list-arrow line_height_1_8">
+                                        <li class="my-2">
+                                            <a href="/retouren-1" data-original-title="" title="">
+                                                <font style="vertical-align: inherit;">Retouren</font>
+                                            </a>
+                                            <br />
+                                        </li>
+                                        <li class="my-2">
+                                            <a href="/shipping">
+                                                <font style="vertical-align: inherit;">Zahlung und Versand</font>
+                                            </a>
+                                            <br />
+                                        </li>
+                                        <li class="my-2">
+                                            <a href="/agb">
+                                                <font style="vertical-align: inherit;">AGB's</font>
+                                            </a>
+                                            <br />
+                                        </li>
+                                        <li class="my-2">
+                                            <a href="/datenschutz">
+                                                <font style="vertical-align: inherit;">Datenschutz</font>
+                                            </a>
+                                            <br />
+                                        </li>
+                                        <li class="my-2">
+                                            <a href="/faq-s">
+                                                <font style="vertical-align: inherit;">FAQ's | Häufig gestellte Fragen</font>
+                                            </a>
+                                        </li>
+                                        <p class="mt-4">
+                                            <span class="fa fa-phone" />
+                                            <a data-original-title="" title="" href="tel://41315557977">
+                                                <span style="font-size: 14px;" data-original-title="" title="" aria-describedby="tooltip48038">
+                                                    <strong data-original-title="" title="" aria-describedby="tooltip670670">+41 31 555 79 77
+                                                    </strong>
+                                                </span>
+                                            </a>
+                                        </p>
+                                        <p class="mt-4" data-original-title="" title="" aria-describedby="tooltip147687">
+                                            <span style="color: rgb(33, 37, 41);font-size: 14px">Copyright © 2022 dynco AG.</span>
+                                        </p>
+                                        <p class="mt-4" data-original-title="" title="" aria-describedby="tooltip147687">
+                                            <span style="color: rgb(33, 37, 41);font-size: 14px">All rights reserved.</span>
+                                            <br />
+                                        </p>
+                                    </ul>
+                                </div>
+                                <div class="col-12 col-sm-6 col-md-6 col-lg-2 mb-4 o_colored_level pt32">
+                                    <ul class="list-unstyled tp-list-arrow line_height_1_8">
+                                        <li class="my-2">
+                                            <a href="/idea">
+                                                <font style="vertical-align: inherit;">Unsere Idee</font>
+                                            </a>
+                                            <br />
+                                        </li>
+                                        <li class="my-2">
+                                            <a href="/download">
+                                                <font style="vertical-align: inherit;">Download</font>
+                                            </a>
+                                            <br />
+                                        </li>
+                                        <li class="my-2">
+                                            <a href="/aboutus">
+                                                <font style="vertical-align: inherit;">Über uns</font>
+                                            </a>
+                                            <br />
+                                        </li>
+                                        <li class="my-2">
+                                            <a href="/impressum">
+                                                <font style="vertical-align: inherit;">Impressum</font>
+                                            </a>
+                                        </li>
+                                    </ul>
+                                </div>
+                                <div class="col-12 col-sm-6 col-md-6 col-lg-3 mb-4 o_colored_level pt0">
+                                    <h5>
+                                        &amp;nbsp;</h5>
+                                    <p><a class="btn btn-fill-primary btn-lg" href="/kontakt">KONTAKT</a>&amp;nbsp;<br /></p>
+                                    <address class="m-0px d-none" itemscope="itemscope" itemtype="http://schema.org/Organization">
+                                        <div t-field="res_company.partner_id" />
+                                    </address>
+                                </div>
+                                <div class="col-12 col-sm-6 col-md-6 col-lg-5 mb-4 social_media_footer o_colored_level">
+                                    <p />
+                                    <h5>
+                                    </h5>
+                                    <h5 class="mb-4">
+                                        <font style="vertical-align: inherit;"><span style="font-weight: normal;">Newsletter Anmeldung</span></font>
+                                    </h5>
+                                    <div class="s_newsletter_subscribe_form js_subscribe w-75" data-vxml="001" data-list-id="8" data-name="Newsletter Form">
+                                        <div class="input-group">
+                                            <input type="email" name="email" class="js_subscribe_email form-control fbc-has-badge fbc-UID_1" placeholder="your email..." />
+                                            <span class="input-group-append">
+                                                <a role="button" href="#" class="js_subscribe_btn o_submit btn btn-primary" data-original-title="" title="">
+                                                    <i class="fa fa-send-o" />
+                                                </a>
+                                                <a role="button" href="#" class="btn btn-success js_subscribed_btn o_submit o_default_snippet_text d-none" disabled="disabled" data-original-title="" title="">Thanks</a>
+                                            </span>
+                                        </div>
+                                    </div>
+                                    <h5 class="mt-4 mb-4">
+                                        <font style="vertical-align: inherit;"><span style="font-size: 14px; font-weight: normal;">Social Media</span></font>
+                                    </h5>
+                                    <a href="https://www.facebook.com/climaqua.swiss" class="s_share_facebook" target="_blank">
+                                        <i class="fa fa-facebook" />
+                                    </a>
+                                    <a href="https://www.instagram.com/climaqua.swiss" class="s_share_instagram" target="_blank">
+                                        <i class="fa fa-instagram" />
+                                    </a>
+                                    <br />
+                                    <span style="font-size: 14px;"><br />CLIMAQUA bietet dir viele&amp;nbsp;<strong>Zahlungsmöglichkeiten</strong></span>
+                                    <strong style="font-weight: bolder"><br /><strong style="font-weight: bolder;color: rgb(33, 37, 41);font-size: 14px;font-style: normal;background-color: rgb(255, 255, 255)">Vorauskasse</strong>
+                                        <img class="img-fluid o_we_custom_image" src="/dynco_base/static/src/img/payment_icon/prepayment-logo.png" alt="" data-mimetype="image/png" loading="lazy" style="" />&amp;nbsp;</strong>
+                                    <span style="color: rgb(33, 37, 41);font-size: 14px">
+                                        <br />Kreditkarten
+                                        <img class="img-fluid o_we_custom_image" src="/dynco_base/static/src/img/payment_icon/card_mastercard.png" alt="" title="" loading="lazy" style="" />
+                                        <img class="img-fluid o_we_custom_image" src="/dynco_base/static/src/img/payment_icon/card_visa.png" alt="" loading="lazy" style="" />&amp;nbsp;
+                                        <img class="img-fluid o_we_custom_image" src="/dynco_base/static/src/img/payment_icon/card_diners-club.png" alt="" loading="lazy" style="" />
+                                        <br />
+                                        <br />
+                                        Mobile&amp;nbsp;&amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;
+                                    </span>&amp;nbsp;&amp;nbsp;
+                                    <img class="img-fluid o_we_custom_image img-thumbnail" src="/dynco_base/static/src/img/payment_icon/card_apple-pay.png" alt="" title="" loading="lazy" style="" />&amp;nbsp;
+                                    <img class="img-fluid o_we_custom_image img-thumbnail" src="/dynco_base/static/src/img/payment_icon/card_google-pay.png" alt="" title="" loading="lazy" style="" />&amp;nbsp;
+                                    <img class="img-fluid" src="/dynco_base/static/src/img/payment_icon/card_samsung-pay.png" loading="lazy" style="" />&amp;nbsp;
+                                    <img class="img-fluid" src="/dynco_base/static/src/img/payment_icon/paypal-logo.png" loading="lazy" style="" />
+                                    <br />
+                                    <br />
+                                    <span style="font-size: 14px;">Schweiz&amp;nbsp;&amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp;&amp;nbsp;</span>
+                                    <img class="img-fluid" src="/dynco_base/static/src/img/payment_icon/card_twint.png" loading="lazy" style="" />
+                                    <span style="font-size: 14px;">&amp;nbsp;</span>
+                                    <img class="img-fluid" src="/dynco_base/static/src/img/payment_icon/card_post-finance-e-finance.png" loading="lazy" style="" />
+                                    <span style="font-size: 14px;">&amp;nbsp;</span>
+                                    <img class="img-fluid" src="/dynco_base/static/src/img/payment_icon/card_post-finance-card.png" loading="lazy" style="" />
+                                    <br />
+                                    <br />
+                                    <span style="font-size: 14px;">Weitere&amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;</span>
+                                    <img class="img-fluid o_we_custom_image" src="/dynco_base/static/src/img/payment_icon/card_sofort.png" alt="" loading="lazy" style="" />
+                                    <span style="font-size: 14px;">&amp;nbsp;</span>
+                                    <img class="img-fluid o_we_custom_image" src="/dynco_base/static/src/img/payment_icon/card_ideal.png" alt="" loading="lazy" style="" />
+                                    <span style="font-size: 14px;">&amp;nbsp;</span>
+                                    <img class="img-fluid o_we_custom_image" src="/dynco_base/static/src/img/payment_icon/card_discover.png" alt="" loading="lazy" style="" />
+                                    <span style="font-size: 14px;">&amp;nbsp;</span>
+                                    <img class="img-fluid o_we_custom_image" src="/dynco_base/static/src/img/payment_icon/card_bancontact.png" alt="" loading="lazy" style="" />
+                                    <span style="font-size: 14px;">&amp;nbsp;</span>
+                                    <img class="img-fluid o_we_custom_image" src="/dynco_base/static/src/img/payment_icon/card_eps.png" alt="" loading="lazy" style="" />
+                                    <br />
+                                    <font style="color: rgb(33, 37, 41);">
+                                        <span style="font-size: 14px;"><br /><br />CLIMAQUA® Listing Partners</span>&amp;nbsp;
+                                    </font>
+                                    <span style="color: rgb(33, 37, 41);font-size: 14px" /><br />
+                                    <a href="https://www.lionshome.de/" title="">
+                                        <img class="img-fluid" src="https://www.climaqua.com/web/image/1661865-efae672b/LionsHome%20Listed%20Partner%203.png" data-original-title="" title="" aria-describedby="tooltip703234" style="transform: translateX(-18%) translateY(-8.5%) scaleX(0.61) scaleY(0.61);" loading="lazy" />
+                                        <br />
+                                    </a>
+                                    <br />
+                                    <span style="font-size: 14px;">
+                                        <a href="https://climaqua.com">climaqua.com</a>
+                                        &amp;nbsp;ist klimaneutral
+                                    </span>
+                                    <br />
+                                    <br />
+                                    <img class="img-fluid o_we_custom_image" src="/web/image/1694425-30bee6ea/label-co2-website-white-en.png" alt="" data-original-id="1694425" data-original-src="/web/image/1694425-30bee6ea/label-co2-website-white-en.png" data-mimetype="image/png" data-original-title="" title="" aria-describedby="tooltip680396" style="transform: translateX(-20.5%) translateY(-40.9%) scaleX(0.59) scaleY(0.59); width: 50% !important;" loading="lazy" />
+                                </div>
+                                <div class="weglot-container" data-switcher-id="3" id="weglot-switcher-3" data-switcher-style-opt="{&quot;with_name&quot;:true,&quot;full_name&quot;:true,&quot;is_dropdown&quot;:true,&quot;with_flags&quot;:false,&quot;flag_type&quot;:&quot;circle&quot;,&quot;custom_css&quot;:&quot;.coutry-selector {\r\n  margin-bottom: 20px\r\n}&quot;}">
+                                    <aside data-wg-notranslate="true" aria-expanded="false" tabindex="0" aria-label="Language selected: Deutsch" class="weglot_switcher wg-drop wg-mouse-click country-selector closed">
+                                        <ul role="none" style="display: none;">
+                                            <li data-l="fr" role="none" id="wg-fr" class="wg-li fr">
+                                                <a role="option" href="https://fr.climaqua.com/#scrollTop=0" id="weglot-language-fr">Français</a>
+                                            </li>
+                                            <li data-l="it" role="none" id="wg-it" class="wg-li it">
+                                                <a role="option" href="https://it.climaqua.com/#scrollTop=0" id="weglot-language-it">Italiano</a>
+                                            </li>
+                                            <li data-l="nl" role="none" id="wg-nl" class="wg-li nl">
+                                                <a role="option" href="https://nl.climaqua.com/#scrollTop=0" id="weglot-language-nl">Nederlands</a>
+                                            </li>
+                                            <li data-l="en" role="none" id="wg-en" class="wg-li en">
+                                                <a role="option" href="https://en.climaqua.com/#scrollTop=0" id="weglot-language-en">English</a>
+                                            </li>
+                                        </ul>
+                                    </aside>
+                                </div>
+                            </div>
+                        </div>
+                    </section>
+                </div>
+            </xpath>
+            <xpath expr="//div[hasclass('o_footer_copyright')]" position="attributes">
+                <attribute name="class" add="tp-custom-copyright" separator=" "/>
+            </xpath>
+            <xpath expr="//div[hasclass('o_footer_copyright')]/div[hasclass('container')]" position="attributes">
+                <attribute name="t-if">False</attribute>
+            </xpath>
+        </template>
+    </data>
+</odoo>

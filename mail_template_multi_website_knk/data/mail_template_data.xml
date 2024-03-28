@@ -155,12 +155,12 @@
 
                         <t t-set="order_schedule_date" t-value="object.sale_id.schedule_date"/>
                         <!-- for on time -->
-                        <t t-if="order_schedule_date and object.sale_id.schedule_date &lt; object.date_done">
+                        <t t-if="order_schedule_date and order_schedule_date &lt; object.date_done">
                             <span style="font-size:13px;font-family:&quot;Lucida Grande&quot;, Helvetica, Verdana, Arial, sans-serif;margin: 0px; padding: 0px;"><span style="color: #444b5a;font-size: 13px;font-style: normal;font-weight: 400;background-color: #ffffff">The delivery date of your order <t t-out="object.name or ''"/> from <t t-out="object.sale_id.brand_id.name or ''"/> has been confirmed.</span><br/><span style="color: #444b5a;font-size: 13px;font-style: normal;font-weight: 400;background-color: #ffffff">Your order will be dispatched on time: <t t-out="object.sale_id.schedule_date.strftime('%d-%m-%Y') or ''"/></span></span>
                         </t>
 
                         <!-- for delay -->
-                        <t t-elif="order_schedule_date and object.sale_id.schedule_date &gt; object.date_done">
+                        <t t-elif="order_schedule_date and order_schedule_date &gt; object.date_done">
                             <span style="font-size:13px;font-family:&quot;Lucida Grande&quot;, Helvetica, Verdana, Arial, sans-serif;margin: 0px; padding: 0px;"><span style="color: #444b5a;font-size: 13px;font-style: normal;font-weight: 400;background-color: #ffffff">The delivery date of your order <t t-out="object.name or ''"/> from <t t-out="object.sale_id.brand_id.name or ''"/> has been confirmed.</span><br/><span style="color: #444b5a;font-size: 13px;font-style: normal;font-weight: 400;background-color: #ffffff">Please be aware: we need to update the delivery date of your order: <t t-out="object.date_done.strftime('%d-%m-%Y') or ''"/></span></span>
                         </t>
 
