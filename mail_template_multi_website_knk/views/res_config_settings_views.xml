@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <record id="res_config_settings_view_form" model="ir.ui.view">
+        <field name="name">res.config.settings.view.form.inherit.multi.website.email</field>
+        <field name="model">res.config.settings</field>
+        <field name="inherit_id" ref="website.res_config_settings_view_form"/>
+        <field name="arch" type="xml">
+            <div id="webmaster_settings" position="after">
+                <h2>Email Templates</h2>
+                <div class="row mt16 o_settings_container" id="email_templates_settings">
+                    <div class="col-12 col-lg-6 o_setting_box" id="signup_email_setting">
+                        <div class="o_setting_right_pane">
+                            <span class="o_form_label">Signup Email</span>
+                            <div class="text-muted">
+                                Email sent to the user after the signup
+                            </div>
+                            <div class="row mt16">
+                                <label for="signup_mail_template" class="col-lg-4 o_light_label"/>
+                                <field name="signup_mail_template" class="oe_inline"/>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-12 col-lg-6 o_setting_box" id="reset_password_email_setting">
+                        <div class="o_setting_right_pane">
+                            <span class="o_form_label">Reset Password Email</span>
+                            <div class="text-muted">
+                                Email sent to the user on reset password action
+                            </div>
+                            <div class="row mt16">
+                                <label for="reset_password_mail_template" class="col-lg-4 o_light_label"/>
+                                <field name="reset_password_mail_template" class="oe_inline"/>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-12 col-lg-6 o_setting_box" id="sale_order_email_setting">
+                        <div class="o_setting_right_pane">
+                            <span class="o_form_label">Sale Order Email</span>
+                            <div class="text-muted">
+                                Email sent to the customer on Sale Order
+                            </div>
+                            <div class="row mt16">
+                                <label for="sale_order_mail_template" class="col-lg-4 o_light_label"/>
+                                <field name="sale_order_mail_template" class="oe_inline"/>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-12 col-lg-6 o_setting_box" id="invoice_email_setting">
+                        <div class="o_setting_right_pane">
+                            <span class="o_form_label">Invoice Email</span>
+                            <div class="text-muted">
+                                Email sent to the customer on Invoice
+                            </div>
+                            <div class="row mt16">
+                                <label for="invoice_mail_template" class="col-lg-4 o_light_label"/>
+                                <field name="invoice_mail_template" class="oe_inline"/>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-12 col-lg-6 o_setting_box" id="delivery_confirm_email_setting">
+                        <div class="o_setting_right_pane">
+                            <span class="o_form_label">Delivery Confirmation Email</span>
+                            <div class="text-muted">
+                                Email sent to the customer on delivery confirmation
+                            </div>
+                            <div class="row mt16">
+                                <label for="delivery_confirmation_mail_template" class="col-lg-4 o_light_label"/>
+                                <field name="delivery_confirmation_mail_template" class="oe_inline"/>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-12 col-lg-6 o_setting_box" id="delivery_confirm_email_setting">
+                        <div class="o_setting_right_pane">
+                            <span class="o_form_label">Portal Access Email</span>
+                            <div class="text-muted">
+                                Email sent to the customer on Grant of Portal Access
+                            </div>
+                            <div class="row mt16">
+                                <label for="portal_access_mail_template" class="col-lg-4 o_light_label"/>
+                                <field name="portal_access_mail_template" class="oe_inline"/>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </field>
+    </record>
+</odoo>
