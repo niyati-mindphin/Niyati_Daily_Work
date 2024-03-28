@@ -140,12 +140,12 @@
     </data>
     <data>
         <record id="my_dynco_sale_order_confirm_mail" model="mail.template">
-            <field name="name">Sales Order: Send by Confirm (my.dynco)-new</field>
-            <field name="model_id" ref="sale.model_sale_order" />
+            <field name="name">Delivery Slip: Send by Conform(my.dynco)</field>
+            <field name="model_id" ref="stock.model_stock_picking" />
             <field name="subject">Your my.dynco order - order confirmation</field>
             <field name="email_to">{{ object.partner_id.id }}</field>
             <field name="partner_to">{{ object.partner_id.id }}</field>
-            <field name="email_cc">{{ object.website_id.name == 'my.dynco' and 'dispo@dynco.ch' or '' }}</field>
+            <field name="email_cc">{{ object.sale_id.website_id.name == 'my.dynco' and 'dispo@dynco.ch' or '' }}</field>
             <field name="body_html" type="html">
                 <div style="font-size:13px;font-family:&quot;Lucida Grande&quot;, Helvetica, Verdana, Arial, sans-serif;text-align: center;">
                     <img style="max-width: 25%; height: auto;" class="o_we_custom_image o_modified_image_to_save o_we_image_cropped o_img_fluid_fixed_width" src="https://www.climaqua.com/web/image/1776268-80b4794c/my_dynco_lilas_1-1.png?access_token=8eed61f6-badb-47c8-bc17-45ecbdd47f49"/>
@@ -153,20 +153,20 @@
                 <div style="font-size:13px;font-family:&quot;Lucida Grande&quot;, Helvetica, Verdana, Arial, sans-serif;"><span style="color: #444b5a;font-size: 13px;font-style: normal;font-weight: 400;background-color: #ffffff"><br/>Dear ,</span> <t t-out="object.sudo().partner_id.name" contenteditable="false" data-oe-t-inline="true"></t>,<br/><br/>
                     <div style="font-size:13px;font-family:&quot;Lucida Grande&quot;, Helvetica, Verdana, Arial, sans-serif;margin: 0px; padding: 0px;">
 
-                        <t t-set="delivery_date_done" t-value="object.picking_ids[0].date_done"/>
+                        <t t-set="order_schedule_date" t-value="object.sale_id.schedule_date"/>
                         <!-- for on time -->
-                        <t t-if="delivery_date_done and delivery_date_done &lt; object.schedule_date">
-                            <span style="font-size:13px;font-family:&quot;Lucida Grande&quot;, Helvetica, Verdana, Arial, sans-serif;margin: 0px; padding: 0px;"><span style="color: #444b5a;font-size: 13px;font-style: normal;font-weight: 400;background-color: #ffffff">The delivery date of your order <t t-out="object.name or ''"/> from <t t-out="object.brand_id.name or ''"/> has been confirmed.</span><br/><span style="color: #444b5a;font-size: 13px;font-style: normal;font-weight: 400;background-color: #ffffff">Your order will be dispatched on time: <t t-out="object.schedule_date or ''"/>&amp;</span></span>
+                        <t t-if="order_schedule_date and object.sale_id.schedule_date &lt; object.date_done">
+                            <span style="font-size:13px;font-family:&quot;Lucida Grande&quot;, Helvetica, Verdana, Arial, sans-serif;margin: 0px; padding: 0px;"><span style="color: #444b5a;font-size: 13px;font-style: normal;font-weight: 400;background-color: #ffffff">The delivery date of your order <t t-out="object.name or ''"/> from <t t-out="object.sale_id.brand_id.name or ''"/> has been confirmed.</span><br/><span style="color: #444b5a;font-size: 13px;font-style: normal;font-weight: 400;background-color: #ffffff">Your order will be dispatched on time: <t t-out="object.sale_id.schedule_date.strftime('%d-%m-%Y') or ''"/></span></span>
                         </t>
 
                         <!-- for delay -->
-                        <t t-elif="delivery_date_done and delivery_date_done &gt; object.schedule_date">
-                            <span style="font-size:13px;font-family:&quot;Lucida Grande&quot;, Helvetica, Verdana, Arial, sans-serif;margin: 0px; padding: 0px;"><span style="color: #444b5a;font-size: 13px;font-style: normal;font-weight: 400;background-color: #ffffff">The delivery date of your order <t t-out="object.name or ''"/> from <t t-out="object.brand_id.name or ''"/> has been confirmed.</span><br/><span style="color: #444b5a;font-size: 13px;font-style: normal;font-weight: 400;background-color: #ffffff">Please be aware: we need to update the delivery date of your order: <t t-out="delivery_date_done or ''"/>&amp;</span></span>
+                        <t t-elif="order_schedule_date and object.sale_id.schedule_date &gt; object.date_done">
+                            <span style="font-size:13px;font-family:&quot;Lucida Grande&quot;, Helvetica, Verdana, Arial, sans-serif;margin: 0px; padding: 0px;"><span style="color: #444b5a;font-size: 13px;font-style: normal;font-weight: 400;background-color: #ffffff">The delivery date of your order <t t-out="object.name or ''"/> from <t t-out="object.sale_id.brand_id.name or ''"/> has been confirmed.</span><br/><span style="color: #444b5a;font-size: 13px;font-style: normal;font-weight: 400;background-color: #ffffff">Please be aware: we need to update the delivery date of your order: <t t-out="object.date_done.strftime('%d-%m-%Y') or ''"/></span></span>
                         </t>
 
                         <!-- for schedule date is not set -->
-                        <t t-else="not delivery_date_done">
-                            <span style="font-size:13px;font-family:&quot;Lucida Grande&quot;, Helvetica, Verdana, Arial, sans-serif;margin: 0px; padding: 0px;"><span style="color: #444b5a;font-size: 13px;font-style: normal;font-weight: 400;background-color: #ffffff">The delivery date of your order <t t-out="object.name or ''"/> from <t t-out="object.brand_id.name or ''"/> has been confirmed.</span><br/><span style="color: #444b5a;font-size: 13px;font-style: normal;font-weight: 400;background-color: #ffffff">Your order will be dispatched on time: <t t-out="object.schedule_date or ''"/>&amp;</span></span>
+                        <t t-else="">
+                            <span style="font-size:13px;font-family:&quot;Lucida Grande&quot;, Helvetica, Verdana, Arial, sans-serif;margin: 0px; padding: 0px;"><span style="color: #444b5a;font-size: 13px;font-style: normal;font-weight: 400;background-color: #ffffff">The delivery date of your order <t t-out="object.name or ''"/> from <t t-out="object.sale_id.brand_id.name or ''"/> has been confirmed.</span><br/><span style="color: #444b5a;font-size: 13px;font-style: normal;font-weight: 400;background-color: #ffffff">Your order will be dispatched on time: <t t-out="object.sale_id.schedule_date.strftime('%d-%m-%Y') or ''"/></span></span>
                         </t>
 
                     </div>
