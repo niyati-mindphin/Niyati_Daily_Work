@@ -1,0 +1,536 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <template id="b2b_portal_breadcrumbs" inherit_id="portal.portal_breadcrumbs">
+        <xpath expr="//ol" position="replace">
+            <ol t-if="page_name != 'home'" class="o_portal_submenu breadcrumb mb-0 py-2 flex-grow-1 row">
+                <li class="breadcrumb-item ml-1" t-if="website.get_is_b2b_website_or_not()"><a href="/b2b/dashbord" aria-label="Home" title="Home"><i class="fa fa-home"/></a></li>
+                <li class="breadcrumb-item ml-1" t-if="not website.get_is_b2b_website_or_not()"><a href="/my/home" aria-label="Home" title="Home"><i class="fa fa-home"/></a></li>
+                <li t-if="page_name == 'my_details'" class="breadcrumb-item">Details</li>
+            </ol>
+        </xpath>
+    </template>
+    <template id="b2b_address_kanban" name="b2b Kanban address">
+            <form t-att-action="redirect_uri_b2b" method="POST" class="d-none">
+                <input type="hidden" name="csrf_token" t-att-value="request.csrf_token()" />
+                <input type="hidden" name="partner_id" t-att-value="contact.id" />
+                <t t-if='edit_billing'>
+                    <input type="hidden" name="callback" t-attf-value="#{redirect_uri_b2b}?use_billing" />
+                </t>
+                <input type='submit'/>
+            </form>
+            <div t-attf-class="card #{selected and 'border border-primary' or 'js_change_shipping'}">
+                <div class='card-body' style='min-height: 130px;'>
+                    <a t-if="allow_edit" href="#" class="btn btn-link float-right p-0 js_edit_address no-decoration" role="button" title="Edit this address" aria-label="Edit this address"><i class='fa fa-edit'/></a>
+                    <t t-esc="contact" t-options="dict(widget='contact', fields=['name', 'address'], no_marker=True)"/>
+                </div>
+                <div class='card-footer' t-if='not readonly and shippings and len(shippings.filtered(lambda x:x.id != order.partner_id.id)) > 1'>
+                    <span class='btn-ship' t-att-style="'' if selected else 'display:none;'">
+                        <a role="button" href='#' class="btn btn-block btn-primary">
+                            <i class='fa fa-check'></i> Ship to this address
+                        </a>
+                    </span>
+                    <span class='btn-ship' t-att-style="'' if not selected else 'display:none;'">
+                        <a role="button" href='#' class="btn btn-block btn-secondary">
+                            Select this address
+                        </a>
+                    </span>
+                </div>
+            </div>
+    </template>
+
+    <template id="b2bsearch" name="B2b Search Box">
+        <t t-call="website.website_search_box_input">
+            <t t-set="_form_classes" t-valuef="w-100 w-md-auto mr-auto mb-2"/>
+            <t t-set="action" t-value="'/b2b/%s' %(slug(brand))"/>
+        </t>
+    </template>
+    <template id="b2b_order_total" name="Order Total">
+        <h3>
+            <strong>Total :</strong>
+            <strong t-field="website_sale_order.amount_untaxed" class="monetary_field"
+            t-options='{"widget": "monetary", "display_currency": website_sale_order.pricelist_id.currency_id}'/>
+        </h3>
+    </template>
+
+    <template id="b2b_short_cart_summary" name="Short Cart right column">
+        <div class="card js_cart_summary" t-if="website_sale_order and website_sale_order.website_order_line" >
+            <div class="card-body">
+                <h4 class="d-none d-xl-block">Order Total</h4>
+                <hr class="d-none d-xl-block"/>
+                <div>
+                    <t t-call="website_sale.total">
+                        <t t-set="no_rowspan" t-value="1"/>
+                    </t>
+                    <div class="form-group terms_b2b_cart_page_cl">
+                        <!-- <input id="enable" type="checkbox" name="is_b2b" value="is_b2b" required="required" /> <span class="checkbox_mssg">By clicking on check-box, you agree to the <a href="/agb" target="_blank">Terms and Conditions</a>.</span> -->
+                        <input id="enable" type="checkbox" name="is_b2b" value="is_b2b" required="required" /> <span class="checkbox_mssgg">Please Accept Our <a href="/agb" target="_blank">Terms and Conditions</a>.</span>
+                    </div>
+                    <a role="button" t-if="website_sale_order and website_sale_order.website_order_line" class="btn btn-primary float-right d-none d-xl-inline-block b2b_placeorder_btn disabled" href="/b2b/placeorder">
+                        <span>Place Order</span>
+                    </a>
+                    <div class="placeorder_event_elment disable_placeholder"/>
+                </div>
+            </div>
+        </div>
+    </template>
+
+    <template id="b2b_order_lines_tr" name="b2b order lines">
+        <!-- <div class="col-md-12 mt32 o_not_editable o_wsale_b2b_products_table_wrapper"> -->
+            <table class="mb16 table product_view_b2b table-bordered" id="b2b_products" t-if="products">
+                <thead>
+                    <th class="td_b2b_image">#</th>
+                    <th>Product</th>
+                    <th t-if="not brand.is_hide_in_stock_filter">Availability</th>
+                    <th>Unit Price (Incl. Tax)</th>
+                    <th class="text-center">Your Order In TU</th>
+                    <th class="text-center" style="width: 86px;">Total Units</th>
+                    <th class="text-center" style="width: 129px;">Total Price</th>
+                </thead>
+                <tbody>
+                    <t t-foreach="products" t-as="product">
+                        <tr t-attf-id="b2b_product_item_id_#{product.id}">
+                            <td align="center" t-if="product.product_tmpl_id" class='td-img'>
+                                <a href="#" class="tp-action-toggle btn-quick-view-b2b b2b-product-quick-view-action" t-att-data-variant-id="product.id">
+                                    <i class="dri dri-eye"></i>
+                                </a>
+                                <a href="#" class="b2b-product-quick-view-action" t-att-data-variant-id="product.id">
+                                    <span t-if="product.image_128">
+                                        <img t-att-src="image_data_uri(product.image_128)" class="img o_image_64_max rounded" t-att-alt="product.name"/>
+                                    </span>
+                                    <span t-else=""
+                                        t-field="product.image_128"
+                                        t-options="{'widget': 'image', 'qweb_img_responsive': False, 'class': 'rounded o_image_64_max'}"
+                                    />
+                                </a>
+                            </td>
+                            <td t-if="product.product_tmpl_id" class='td-product_name'>
+                                <!-- /b2b/product/#{slug(product)} -->
+                                <a href="#" class="b2b-product-quick-view-action" t-att-data-variant-id="product.id">
+                                    <strong t-field="product.display_name"/>
+                                </a>
+                            </td>
+                            <td class="td_product_stock" t-if="brand and not brand.is_hide_in_stock_filter">
+                                <span t-esc="website.get_product_stock_avail(product)"/>
+                            </td>
+                            <td>
+                                <t t-set="combination_info" t-value="product._get_combination_info_variant()"/>
+                                <t t-set="computed_qty" t-value="pricelist._get_product_price(product, 1, partner)"/>
+                                <div class="product_price mb-1" itemprop="offers" itemscope="itemscope" itemtype="http://schema.org/Offer">
+                                    <span class="toggle_hide_show_product_price" t-if="computed_qty" t-esc="computed_qty" t-options="{'widget': 'monetary', 'display_currency': website.currency_id}"/>
+                                    <!-- <span t-if="combination_info['price']" t-esc="combination_info['price']" t-options="{'widget': 'monetary', 'display_currency': website.currency_id}"/> -->
+                                    <span itemprop="price" style="display:none;" t-esc="combination_info['price']" />
+                                    <span itemprop="priceCurrency" style="display:none;" t-esc="website.currency_id.name" />
+                                    <t t-set="pricelist" t-value="website._get_current_pricelist()" />
+                                    <t t-set="price_rule" t-value="pricelist._get_product_price_rule(product, 1, request.env.user.partner_id)[1]" />
+                                    <div class="toggle_hide_show_rrp" t-if="price_rule">
+                                        <b>RRP :</b> 
+                                        <t t-if="product.is_product_multi_price">
+                                            <t t-if="price_rule">
+                                                <t t-set="price_rule" t-value="request.env['product.pricelist.item'].browse(price_rule)" />
+                                                <t t-if="price_rule and price_rule.applied_on == '3_global'">
+                                                    <span t-if="combination_info['price']" t-esc="product.list_price" t-options="{'widget': 'monetary', 'display_currency': website.currency_id}" />
+                                                </t>
+                                                <t t-elif="price_rule and price_rule.applied_on == '2_product_category' and price_rule.base == 'pricelist'">
+                                                    <t t-set="other_pricelist_price_rule" t-value="price_rule.base_pricelist_id._get_product_price_rule(product, 1, request.env.user.partner_id)[1]" />
+                                                    <t t-set="other_price_rule_id" t-value="request.env['product.pricelist.item'].browse(other_pricelist_price_rule)" />
+                                                    <t t-if="other_price_rule_id.md_fixed_price">
+                                                        <span t-esc="other_price_rule_id.md_fixed_price" t-options="{'widget': 'monetary', 'display_currency': website.currency_id}" />
+                                                    </t>
+                                                    <t t-else="">
+                                                        <span t-esc="product.list_price" t-options="{'widget': 'monetary', 'display_currency': website.currency_id}" />
+                                                    </t>
+                                                </t>
+                                                <t t-else="">
+                                                    <span t-if="combination_info['price']" t-esc="product.list_price" t-options="{'widget': 'monetary', 'display_currency': website.currency_id}" />
+                                                </t>
+                                            </t>
+                                        </t>
+                                        <t t-else="">
+                                            <span t-if="combination_info['price']" t-esc="product.list_price" t-options="{'widget': 'monetary', 'display_currency': website.currency_id}" />
+                                        </t>
+                                    </div>
+                                </div>
+                            </td>
+                            <td class="td-qty">
+                                <div class="input-group">
+                                    <span class="input-group-btn">
+                                        <button type="button" class="btn btn-default btn-number" data-type="minus" data-field="quantity">
+                                            <span class="fa fa-minus"></span>
+                                        </button>
+                                    </span>
+                                    <input type="text" name="quantity" class="form-control input-number text-center quantity" t-att-value="website.get_b2b_product_qty(product, website_sale_order)" min="0" max="1000" t-att-data-product-id="product.id" t-att-data-line-id="website.get_b2b_product_line_id(product, website_sale_order)"/>
+                                    <span class="input-group-btn">
+                                        <button type="button" class="btn btn-default btn-number" data-type="plus" data-field="quantity">
+                                            <span class="fa fa-plus"></span>
+                                        </button>
+                                    </span>
+                                </div>
+                                <div class="text-center pt8">
+                                    <span t-if="product.trade_unit_of_product"><b>TU: </b>
+                                        <span t-esc="product.trade_unit_of_product"/> <span t-esc="product.trade_unit_of_pro_uom_id.name"/>
+                                    </span>
+                                    <span t-if="not product.trade_unit_of_product"><b>TU: </b>
+                                        <span>1</span> <span t-esc="product.trade_unit_of_pro_uom_id.name"/>
+                                    </span>
+                                </div>
+                            </td>
+                            <td class="text-center">
+                                <t t-set="ordered_qty_unit" t-value="website.get_b2b_product_qty(product, website_sale_order)"/>
+                                <t t-set="total_ordered_qty" t-value="(int(ordered_qty_unit) * (product.trade_unit_of_product or 1))"/>
+                                <span t-esc="total_ordered_qty" class="d-block pt8"/>
+                            </td>
+                            <td class="td-b2b_total text-right">
+                                <div id="b2b_product_line_total" class="d-block pt8" t-att-data-product_line_id="product.id">
+                                    <span t-esc="website.get_b2b_product_price_total(product, website_sale_order)" t-options='{"widget": "monetary", "display_currency": website_sale_order.currency_id}'/>
+                                </div>
+                            </td>
+                        </tr>
+                    </t>
+                </tbody>
+            </table>
+             <div t-if="not products"> 
+                <h3 class="mt8">No results</h3>
+                <p>No results for "<strong t-esc='search'/>"</p>
+            </div>
+            <div class="products_pager form-inline justify-content-center py-3">
+                <t t-call="website.pager"/>
+            </div>
+            <!-- <a href="/b2b/cart" class="btn btn-primary text-uppercase pull-right"> Checkout <i class="fa fa-shopping-cart" style="font-size:17px;"></i>
+            </a> -->
+            <!-- template not available in theme -->
+            <!-- <t t-if="products" t-call="theme_prime.tp_load_more_products_template"/> -->
+        <!-- </div> -->
+       <!--  <tbody class="product_lines">
+            <t t-foreach="products" t-as="product">
+                <t t-call="b2b_portal.b2b_order_line_tr"/>
+            </t>
+        </tbody> -->
+    </template>
+    <template id="b2b_order_line_tr" name="b2b order line">
+        <tr t-attf-id="b2b_product_item_id_#{product.id}">
+            <td align="center" t-if="product.product_tmpl_id" class='td-img'>
+                <a href="#" class="tp-action-toggle btn-quick-view-b2b b2b-product-quick-view-action" t-att-data-variant-id="product.id">
+                    <i class="dri dri-eye"></i>
+                </a>
+                <a href="#" class="b2b-product-quick-view-action" t-att-data-variant-id="product.id">
+                    <span t-if="product.image_128">
+                        <img t-att-src="image_data_uri(product.image_128)" class="img o_image_64_max rounded" t-att-alt="product.name"/>
+                    </span>
+                    <span t-else=""
+                        t-field="product.image_128"
+                        t-options="{'widget': 'image', 'qweb_img_responsive': False, 'class': 'rounded o_image_64_max'}"
+                    />
+                </a>
+            </td>
+            <td t-if="product.product_tmpl_id" class='td-product_name'>
+                <!-- /b2b/product/#{slug(product)} -->
+                <a href="#" class="b2b-product-quick-view-action" t-att-data-variant-id="product.id">
+                    <strong t-field="product.display_name"/>
+                </a>
+            </td>
+            <td class="td_product_stock" t-if="brand and not brand.is_hide_in_stock_filter">
+                <span t-esc="website.get_product_stock_avail(product)"/>
+            </td>
+            <td>
+                <t t-set="combination_info" t-value="product._get_combination_info_variant()"/>
+                <t t-set="computed_qty" t-value="pricelist._get_product_price(product, 1, partner)"/>
+                <div class="product_price mb-1" itemprop="offers" itemscope="itemscope" itemtype="http://schema.org/Offer">
+                    <span class="toggle_hide_show_product_price" t-if="computed_qty" t-esc="computed_qty" t-options="{'widget': 'monetary', 'display_currency': website.currency_id}"/>
+                    <span itemprop="price" style="display:none;" t-esc="combination_info['price']" />
+                    <span itemprop="priceCurrency" style="display:none;" t-esc="website.currency_id.name" />
+                    <t t-set="pricelist" t-value="website._get_current_pricelist()" />
+                    <t t-set="price_rule" t-value="pricelist._get_product_price_rule(product, 1, request.env.user.partner_id)[1]" />
+                    <div class="toggle_hide_show_rrp" t-if="price_rule">
+                        <b>RRP :</b> 
+                        <t t-if="product.is_product_multi_price">
+                            <t t-if="price_rule">
+                                <t t-set="price_rule" t-value="request.env['product.pricelist.item'].browse(price_rule)" />
+                                <t t-if="price_rule and price_rule.applied_on == '3_global'">
+                                    <span t-if="combination_info['price']" t-esc="product.list_price" t-options="{'widget': 'monetary', 'display_currency': website.currency_id}" />
+                                </t>
+                                <t t-elif="price_rule and price_rule.applied_on == '2_product_category' and price_rule.base == 'pricelist'">
+                                    <t t-set="other_pricelist_price_rule" t-value="price_rule.base_pricelist_id._get_product_price_rule(product, 1, request.env.user.partner_id)[1]" />
+                                    <t t-set="other_price_rule_id" t-value="request.env['product.pricelist.item'].browse(other_pricelist_price_rule)" />
+                                    <t t-if="other_price_rule_id.md_fixed_price">
+                                        <span t-esc="other_price_rule_id.md_fixed_price" t-options="{'widget': 'monetary', 'display_currency': website.currency_id}" />
+                                    </t>
+                                    <t t-else="">
+                                        <span t-esc="product.list_price" t-options="{'widget': 'monetary', 'display_currency': website.currency_id}" />
+                                    </t>
+                                </t>
+                                <t t-else="">
+                                    <span t-if="combination_info['price']" t-esc="product.list_price" t-options="{'widget': 'monetary', 'display_currency': website.currency_id}" />
+                                </t>
+                            </t>
+                        </t>
+                        <t t-else="">
+                            <span t-if="combination_info['price']" t-esc="product.list_price" t-options="{'widget': 'monetary', 'display_currency': website.currency_id}" />
+                        </t>
+                    </div>
+                </div>
+            </td>
+            <td class="td-qty">
+                <div class="input-group">
+                    <span class="input-group-btn">
+                        <button type="button" class="btn btn-default btn-number" data-type="minus" data-field="quantity">
+                            <span class="fa fa-minus"></span>
+                        </button>
+                    </span>
+                    <input type="text" name="quantity" class="form-control input-number text-center quantity" t-att-value="website.get_b2b_product_qty(product, website_sale_order)" min="0" max="1000" t-att-data-qty-available="product.qty_available" t-att-data-product-id="product.id" t-att-data-line-id="website.get_b2b_product_line_id(product, website_sale_order)"/>
+                    <span class="input-group-btn">
+                        <button type="button" class="btn btn-default btn-number" data-type="plus" data-field="quantity">
+                            <span class="fa fa-plus"></span>
+                        </button>
+                    </span>
+                </div>
+                <div class="text-center pt8">
+                    <span t-if="product.trade_unit_of_product"><b>TU: </b>
+                        <span t-esc="product.trade_unit_of_product"/> <span t-esc="product.trade_unit_of_pro_uom_id.name"/>
+                    </span>
+                    <span t-if="not product.trade_unit_of_product"><b>TU: </b>
+                        <span>1</span> <span t-esc="product.trade_unit_of_pro_uom_id.name"/>
+                    </span>
+                </div>
+            </td>
+            <td class="text-center total_unit_b2b">
+                <t t-set="ordered_qty_unit" t-value="website.get_b2b_product_qty(product, website_sale_order)"/>
+                <t t-set="total_ordered_qty" t-value="(int(ordered_qty_unit) * (product.trade_unit_of_product or 1))"/>
+                <span t-if="website.check_qty_availablity(product, total_ordered_qty)" class="popover_warning" role="button" data-toggle="popover" data-trigger="hover" title="QTY Availability" data-content="There is not enough stock Availabile"><i class="fa fa-exclamation-triangle color_red"></i></span>
+                <span t-esc="total_ordered_qty" class="pt8"/>
+            </td>
+            <td class="td-b2b_total text-right">
+                <div id="b2b_product_line_total" class="d-block pt8" t-att-data-product_line_id="product.id">
+                    <span t-esc="website.get_b2b_product_price_total(product, website_sale_order)" t-options='{"widget": "monetary", "display_currency": website_sale_order.currency_id}' t-if="website_sale_order"/>
+                    <span t-esc="website.get_b2b_product_price_total(product, website_sale_order)" t-options='{"widget": "monetary", "display_currency": website.currency_id}' t-if="not website_sale_order"/>
+                </div>
+            </td>
+        </tr>
+    </template>
+    <template id="b2b_cart_order_lines_tr" name="b2b order lines">
+        <tbody t-attf-id="b2b_order_id_#{website_sale_order.id}">
+            <t t-foreach="website_sale_order.order_line" t-as="line">
+                <tr t-att-class="'optional_product info' if line.linked_line_id else None" t-attf-id="b2b_cart_item_id_#{line.id}">
+                    <td colspan="2" t-if="not line.product_id.product_tmpl_id" class='td-img'></td>
+                    <td align="center" t-if="line.product_id.product_tmpl_id" class='td-img'>
+                        <span t-if="line._is_not_sellable_line() and line.product_id.image_128">
+                            <img t-att-src="image_data_uri(line.product_id.image_128)" class="img o_image_64_max rounded" t-att-alt="line.name_short"/>
+                        </span>
+                        <span t-else=""
+                            t-field="line.product_id.image_128"
+                            t-options="{'widget': 'image', 'qweb_img_responsive': False, 'class': 'rounded o_image_64_max'}"
+                        />
+                    </td>
+                    <td t-if="line.product_id.product_tmpl_id" class='td-product_name'>
+                        <div>
+                            <a href="#" class="tp-link-dark" t-att-data-variant-id="line.product_id.id">
+                                <span t-field="line.product_id.display_name" />
+                            </a>
+                        </div>
+                        <t t-call="website_sale.cart_line_description_following_lines">
+                            <t t-set="div_class" t-value="'d-none'"/>
+                        </t>
+                        <ul class="list-inline mt-2 mb-0 d-none d-md-block">
+                            <t t-foreach="line.product_id.product_template_variant_value_ids" t-as="att">
+                                <li class="list-inline-item mb-1">
+                                    <span class="badge badge-light border text-body"><t t-out="att.attribute_id.name"/>: <t t-out="att.name"/></span>
+                                </li>
+                            </t>
+                        </ul>
+                    </td>
+                    <td class="text-center td-qty">
+                        <div class="input-group">
+                            <input type="text" name="b2bcart_quantity" class="js_quantity form-control input-number text-center quantity" t-att-value="website.get_b2b_product_qty(line.product_id, website_sale_order)" min="0" max="1000" t-att-data-product-id="line.product_id.id" t-att-data-line-id="website.get_b2b_product_line_id(line.product_id, website_sale_order)"/>
+                        </div>
+                        <div class="text-center pt8">
+                            <span t-if="line.product_id.trade_unit_of_product"><b>TU: </b>
+                                <span t-esc="line.product_id.trade_unit_of_product"/> <span t-esc="line.product_id.trade_unit_of_pro_uom_id.name"/>
+                            </span>
+                            <span t-if="not line.product_id.trade_unit_of_product"><b>TU: </b>
+                                <span>1</span> <span t-esc="line.product_id.trade_unit_of_pro_uom_id.name"/>
+                            </span>
+                        </div>
+                    </td>
+                    <td class="text-center">
+                        <t t-set="ordered_qty_unit" t-value="website.get_b2b_product_qty(line.product_id, website_sale_order)"/>
+                        <span t-esc="(int(ordered_qty_unit) * (line.product_id.trade_unit_of_product or 1))" class="d-block pt8"/>
+                    </td>
+                    <td class="text-center td-price" name="price">
+                        <t t-set="combination" t-value="line.product_id.product_template_attribute_value_ids + line.product_no_variant_attribute_value_ids"/>
+                        <t t-set="combination_info" t-value="line.product_id.product_tmpl_id._get_combination_info(combination, add_qty=line.product_uom_qty)"/>
+
+                        <t t-set="list_price_converted" t-value="website.currency_id._convert(combination_info['list_price'], website_sale_order.currency_id, website_sale_order.company_id, date)"/>
+                        <t t-if="(website_sale_order.pricelist_id.discount_policy == 'without_discount' and website_sale_order.currency_id.compare_amounts(list_price_converted, line.price_reduce_taxexcl) == 1) or website_sale_order.currency_id.compare_amounts(line.price_unit, line.price_unit * (1 - (line.discount or 0.0) / 100.0)) == 1" name="order_line_discount">
+                            <del t-attf-class="#{'text-danger mr8'}" style="white-space: nowrap;" t-esc="list_price_converted" t-options="{'widget': 'monetary', 'display_currency': website_sale_order.currency_id}" />
+                        </t>
+                        <span t-field="line.price_reduce_taxexcl" style="white-space: nowrap;" t-options="{'widget': 'monetary', 'display_currency': website_sale_order.currency_id}" />
+                        <!-- <t groups="account.group_show_line_subtotals_tax_included" t-if="(website_sale_order.pricelist_id.discount_policy == 'without_discount' and website_sale_order.currency_id.compare_amounts(list_price_converted, line.price_reduce_taxinc) == 1) or website_sale_order.currency_id.compare_amounts(line.price_unit, line.price_reduce) == 1" name="order_line_discount">
+                            <del t-attf-class="#{'text-danger mr8'}" style="white-space: nowrap;" t-esc="list_price_converted" t-options="{'widget': 'monetary', 'display_currency': website_sale_order.currency_id}" />
+                        </t>
+                        <span t-field="line.price_reduce_taxinc" style="white-space: nowrap;" t-options="{'widget': 'monetary', 'display_currency': website_sale_order.currency_id}" groups="account.group_show_line_subtotals_tax_included" /> -->
+                        <small t-if="not line._is_not_sellable_line() and line.product_id.base_unit_price" class="cart_product_base_unit_price d-block text-muted" groups="website_sale.group_show_uom_price">
+                            <t t-call='website_sale.base_unit_price'><t t-set='product' t-value='line.product_id' /></t>
+                        </small>
+                    </td>
+                    <td class="text-center td-subtotal">
+                        <b t-field="line.price_subtotal" style="white-space: nowrap;" t-options="{'widget': 'monetary', 'display_currency': website_sale_order.currency_id}"/>
+                    </td>
+                    <td class="td-action">
+                        <a href="#" aria-label="Remove from cart" title="Remove from cart" class="js_delete_product no-decoration text-danger">
+                        <i class="dri dri-cross-l"></i></a>
+                    </td>
+                </tr>
+            </t>
+        </tbody>
+                
+    </template>
+    <template id="b2b_cart_lines_tr" name="b2b cart lines">
+        <tr t-att-class="'optional_product info' if line.linked_line_id else None" t-attf-id="b2b_cart_item_id_#{line.id}">
+            <td colspan="2" t-if="not line.product_id.product_tmpl_id" class='td-img'></td>
+            <td align="center" t-if="line.product_id.product_tmpl_id" class='td-img'>
+                <span t-if="line._is_not_sellable_line() and line.product_id.image_128">
+                    <img t-att-src="image_data_uri(line.product_id.image_128)" class="img o_image_64_max rounded" t-att-alt="line.name_short"/>
+                </span>
+                <span t-else=""
+                    t-field="line.product_id.image_128"
+                    t-options="{'widget': 'image', 'qweb_img_responsive': False, 'class': 'rounded o_image_64_max'}"
+                />
+            </td>
+            <td t-if="line.product_id.product_tmpl_id" class='td-product_name'>
+                <div>
+                    <a href="#" class="tp-link-dark b2b-product-quick-view-action" t-att-data-variant-id="line.product_id.id">
+                        <span t-field="line.product_id.display_name" />
+                    </a>
+                </div>
+                <t t-call="website_sale.cart_line_description_following_lines">
+                    <t t-set="div_class" t-value="'d-none'"/>
+                </t>
+                <ul class="list-inline mt-2 mb-0 d-none d-md-block">
+                    <t t-foreach="line.product_id.product_template_variant_value_ids" t-as="att">
+                        <li class="list-inline-item mb-1">
+                            <span class="badge badge-light border text-body"><t t-out="att.attribute_id.name"/>: <t t-out="att.name"/></span>
+                        </li>
+                    </t>
+                </ul>
+            </td>
+            <td class="text-center td-qty">
+                <div class="input-group">
+                    <input type="text" name="b2bcart_quantity" class="js_quantity form-control input-number text-center quantity" t-att-value="website.get_b2b_product_qty(line.product_id, website_sale_order)" min="0" max="1000" t-att-data-product-id="line.product_id.id" t-att-data-line-id="website.get_b2b_product_line_id(line.product_id, website_sale_order)"/>
+                </div>
+                <div class="text-center pt8">
+                    <span t-if="line.product_id.trade_unit_of_product"><b>TU: </b>
+                        <span t-esc="line.product_id.trade_unit_of_product"/> <span t-esc="line.product_id.trade_unit_of_pro_uom_id.name"/>
+                    </span>
+                    <span t-if="not line.product_id.trade_unit_of_product"><b>TU: </b>
+                        <span>1</span> <span t-esc="line.product_id.trade_unit_of_pro_uom_id.name"/>
+                    </span>
+                </div>
+            </td>
+            <td class="text-center">
+                <t t-set="ordered_qty_unit" t-value="website.get_b2b_product_qty(line.product_id, website_sale_order)"/>
+                <span t-esc="(int(ordered_qty_unit) * (line.product_id.trade_unit_of_product or 1))" class="d-block pt8"/>
+            </td>
+            <td class="text-center td-price" name="price">
+                <t t-set="combination" t-value="line.product_id.product_template_attribute_value_ids + line.product_no_variant_attribute_value_ids"/>
+                <t t-set="combination_info" t-value="line.product_id.product_tmpl_id._get_combination_info(combination, add_qty=line.product_uom_qty)"/>
+
+                <t t-set="list_price_converted" t-value="website.currency_id._convert(combination_info['list_price'], website_sale_order.currency_id, website_sale_order.company_id, date)"/>
+                <t t-if="(website_sale_order.pricelist_id.discount_policy == 'without_discount' and website_sale_order.currency_id.compare_amounts(list_price_converted, line.price_reduce_taxexcl) == 1) or website_sale_order.currency_id.compare_amounts(line.price_unit, line.price_unit * (1 - (line.discount or 0.0) / 100.0)) == 1" name="order_line_discount">
+                    <del t-attf-class="#{'text-danger mr8'}" style="white-space: nowrap;" t-esc="list_price_converted" t-options="{'widget': 'monetary', 'display_currency': website_sale_order.currency_id}" />
+                </t>
+                <span t-field="line.price_reduce_taxexcl" style="white-space: nowrap;" t-options="{'widget': 'monetary', 'display_currency': website_sale_order.currency_id}" />
+                <!-- <t groups="account.group_show_line_subtotals_tax_included" t-if="(website_sale_order.pricelist_id.discount_policy == 'without_discount' and website_sale_order.currency_id.compare_amounts(list_price_converted, line.price_reduce_taxinc) == 1) or website_sale_order.currency_id.compare_amounts(line.price_unit, line.price_reduce) == 1" name="order_line_discount">
+                    <del t-attf-class="#{'text-danger mr8'}" style="white-space: nowrap;" t-esc="list_price_converted" t-options="{'widget': 'monetary', 'display_currency': website_sale_order.currency_id}" />
+                </t>
+                <span t-field="line.price_reduce_taxinc" style="white-space: nowrap;" t-options="{'widget': 'monetary', 'display_currency': website_sale_order.currency_id}" groups="account.group_show_line_subtotals_tax_included" /> -->
+                <small t-if="not line._is_not_sellable_line() and line.product_id.base_unit_price" class="cart_product_base_unit_price d-block text-muted" groups="website_sale.group_show_uom_price">
+                    <t t-call='website_sale.base_unit_price'><t t-set='product' t-value='line.product_id' /></t>
+                </small>
+            </td>
+            <td class="text-center td-subtotal">
+                <b t-field="line.price_subtotal" style="white-space: nowrap;" t-options="{'widget': 'monetary', 'display_currency': website_sale_order.currency_id}"/>
+            </td>
+            <td class="td-action">
+                <a href="#" aria-label="Remove from cart" title="Remove from cart" class="js_delete_product no-decoration text-danger">
+                <i class="dri dri-cross-l"></i></a>
+            </td>
+        </tr>
+    </template>
+
+    <template id="b2b_order_line_tr_mobile_view" name="b2b order line mobile view">
+        <tr t-attf-id="b2b_product_item_id_#{product.id}">
+            <td>
+                <t t-call="b2b_portal.products_item_b2b"/>
+            </td>
+        </tr>
+    </template>
+    <template id="b2b_order_lines_tr_mobile_view" name="b2b order lines mobile view">
+        <t t-foreach="products" t-as="product">
+            <tr t-attf-id="b2b_product_item_id_#{product.id}">
+                <td>
+                    <t t-call="b2b_portal.products_item_b2b"/>
+                </td>
+            </tr>
+        </t>
+    </template>
+
+
+    <record id="loginpage" model="ir.ui.view">
+        <field name="name">B2B Login Page</field>
+        <field name="inherit_id" search="[('key', '=', 'auth_signup.login')]"/>
+        <field name="website_id" search="[('is_b2b_website', '=', True)]"/>
+        <field name="type">qweb</field>
+        <field name="priority">20</field>
+        <field name="key">b2b_portal.loginpage</field>
+        <field name="arch" type="xml">
+            <xpath expr="//div[hasclass('justify-content-between')]" position="replace">
+                <div class="justify-content-between mt-2 d-flex small align-items-center flex-row-reverse b2b_reset_password">
+                    <a t-if="reset_password_enabled" t-attf-href="/web/reset_password?{{ keep_query() }}">Reset Password</a>
+                </div>
+                <div class="justify-content-between mt-2 d-flex small align-items-center float-right">
+                    <a href="/b2b_signup" class="btn btn-primary">New Here? get access now</a>
+                </div>
+            </xpath>
+        </field>
+    </record>
+
+    <record id="login_layout" model="ir.ui.view">
+        <field name="name">B2B Login layout Page</field>
+        <field name="inherit_id" search="[('key', '=', 'website.login_layout')]"/>
+        <field name="website_id" search="[('is_b2b_website', '=', True)]"/>
+        <field name="type">qweb</field>
+        <field name="priority">20</field>
+        <field name="key">b2b_portal.login_layout</field>
+        <field name="arch" type="xml">
+            <xpath expr="//t[@t-call='website.layout']" position="replace">
+                <t t-if="request.website.login_background_image">
+                    <div class="background" t-attf-style="background-image: url('#{image_data_uri(request.website.login_background_image)}');">
+                        <t t-call="website.layout">
+                            <div class="container">
+                                <div class="col-md-6 offset-md-3 logo_b2b_img_cl">
+                                     <span t-field="website.logo" t-options="{'widget': 'image'}" role="img" t-att-aria-label="'Logo of %s' % website.name" t-att-title="website.name" />
+                                     <p>
+                                         Willkommen bei my.dynco <br/>Ihr Zugang zu den outstanding products von dynco
+                                     </p>
+                                </div>
+                            </div>
+                            <div class="oe_website_login_container" t-out="0"/>
+                        </t>
+                    </div>
+                </t>
+                <t t-else="">
+                    <t t-call="website.layout">
+                        <div class="container">
+                            <div class="col-md-6 offset-md-3 logo_b2b_img_cl">
+                                 <span t-field="website.logo" t-options="{'widget': 'image'}" role="img" t-att-aria-label="'Logo of %s' % website.name" t-att-title="website.name" />
+                                 <p>
+                                    Ihr Zugang zu outstanding Products
+                                 </p>
+                            </div>
+                        </div>
+                        <div class="oe_website_login_container" t-out="0"/>
+                    </t>
+                </t>
+            </xpath>
+        </field>
+    </record>
+</odoo>

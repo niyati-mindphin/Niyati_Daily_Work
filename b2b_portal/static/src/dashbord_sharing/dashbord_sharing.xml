@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<templates xml:space="preserve">
+
+    <t t-name="b2b_portal.dashbord_sharing" owl="1">
+        <body class="o_b2b_sahre_sharing">
+            <NotUpdatable>
+                <ActionContainer/>
+            </NotUpdatable>
+            <MainComponentsContainer/>
+        </body>
+    </t>
+
+</templates>

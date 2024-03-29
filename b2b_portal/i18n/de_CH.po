@@ -1,0 +1,781 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# 	* b2b_portal
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 15.0+e\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2023-02-08 08:44+0000\n"
+"PO-Revision-Date: 2023-02-08 08:44+0000\n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Plural-Forms: \n"
+
+#. module: b2b_portal
+#. openerp-web
+#: code:addons/b2b_portal/static/src/dashbord_sharing12/components/chatter.xml:0
+#, python-format
+msgid "!!widget.options.res_id && widget.get('messages') || []"
+msgstr ""
+
+#. module: b2b_portal
+#: model_terms:ir.ui.view,arch_db:b2b_portal.b2b_order_line_tr
+#: model_terms:ir.ui.view,arch_db:b2b_portal.b2b_portal_shop
+msgid "<b>RRP :</b>"
+msgstr "<b>UVP :</b>"
+
+#. module: b2b_portal
+#: model_terms:ir.ui.view,arch_db:b2b_portal.b2b_order_line_tr
+#: model_terms:ir.ui.view,arch_db:b2b_portal.b2b_portal_shop
+msgid "<b>TU: </b>"
+msgstr "<b>VE / Colin</b>"
+
+#. module: b2b_portal
+#: model_terms:ir.ui.view,arch_db:b2b_portal.b2b_portal_shop
+msgid ""
+"<b>TU: </b>\n"
+"                                                                <span>1</span>"
+msgstr ""
+"<b>VE / Colin </b>\n"
+"                                                                <span>1</span>"
+
+#. module: b2b_portal
+#: model_terms:ir.ui.view,arch_db:b2b_portal.b2b_order_line_tr
+msgid ""
+"<b>TU: </b>\n"
+"                        <span>1</span>"
+msgstr ""
+"<b>VE / Colis </b>\n"
+"                        <span>1</span>"
+
+#. module: b2b_portal
+#: model_terms:ir.ui.view,arch_db:b2b_portal.b2b_product_details
+msgid ""
+"<i class=\"fa fa-angle-left\" onclick=\"window.history.go(-1); return "
+"false;\"/> Product Details"
+msgstr ""
+"<i class=\"fa fa-angle-left\" onclick=\"window.history.go(-1); return false;\"/>"
+" Produkt Details"
+
+#. module: b2b_portal
+#: model_terms:ir.ui.view,arch_db:b2b_portal.b2b_address_kanban
+msgid "<i class=\"fa fa-check\"/> Ship to this address"
+msgstr "<i class=\"fa fa-check\"/> Versand an diese Adresse"
+
+#. module: b2b_portal
+#: model_terms:ir.ui.view,arch_db:b2b_portal.b2baddress
+msgid ""
+"<i class=\"fa fa-chevron-left\"/>\n"
+"                                                    <span>Back</span>"
+msgstr ""
+"<i class=\"fa fa-chevron-left\"/>\n"
+"                                                    <span>Zurück</span>"
+
+#. module: b2b_portal
+#: model_terms:ir.ui.view,arch_db:b2b_portal.b2b_portal_sidebar
+msgid "<i class=\"fa fa-comment\"/> Submit Ticket"
+msgstr "<i class=\"fa fa-comment\"/> Ticket einreichen"
+
+#. module: b2b_portal
+#: model_terms:ir.ui.view,arch_db:b2b_portal.b2b_portal_shop
+msgid ""
+"<i class=\"fa fa-plus-square\"/>\n"
+"                                                                            <span>Add an address</span>"
+msgstr ""
+"<i class=\"fa fa-plus-square\"/>\n"
+"                                                                            <span>Adresse hinzufügen</span>"
+
+#. module: b2b_portal
+#: model_terms:ir.ui.view,arch_db:b2b_portal.b2b_portal_shop
+#: model_terms:ir.ui.view,arch_db:b2b_portal.b2bcart
+#: model_terms:ir.ui.view,arch_db:b2b_portal.b2bplaceorder
+msgid "<i class=\"fa fa-print\"/> Print"
+msgstr "<i class=\"fa fa-print\"/> Angebot drucken"
+
+#. module: b2b_portal
+#: model_terms:ir.ui.view,arch_db:b2b_portal.b2bcart
+msgid ""
+"<span class=\"\">Place Order</span>\n"
+"                                                <span class=\"fa fa-chevron-right\"/>"
+msgstr ""
+"<span class=\"\">Bestellung abschicken</span>\n"
+"                                                <span class=\"fa fa-chevron-right\"/>"
+
+#. module: b2b_portal
+#: model_terms:ir.ui.view,arch_db:b2b_portal.b2bcart
+msgid ""
+"<span class=\"\">Place Order</span>\n"
+"                                            <span class=\"fa fa-chevron-right\"/>"
+msgstr ""
+"<span class=\"\">Bestellung abschicken</span>\n"
+"                                            <span class=\"fa fa-chevron-right\"/>"
+
+#. module: b2b_portal
+#: model_terms:ir.ui.view,arch_db:b2b_portal.b2b_portal_sidebar
+msgid "<span class=\"b2barrow\">Confirm</span>"
+msgstr "<span class=\"b2barrow\">Bestätigt</span>"
+
+#. module: b2b_portal
+#: model_terms:ir.ui.view,arch_db:b2b_portal.b2b_portal_sidebar
+msgid "<span class=\"b2barrow\">Credit Notes</span>"
+msgstr "<span class=\"b2barrow\">Gutschriften</span>"
+
+#. module: b2b_portal
+#: model_terms:ir.ui.view,arch_db:b2b_portal.b2b_portal_sidebar
+msgid "<span class=\"b2barrow\">Draft</span>"
+msgstr "<span class=\"b2barrow\">Entwurf</span>"
+
+#. module: b2b_portal
+#: model_terms:ir.ui.view,arch_db:b2b_portal.b2b_portal_sidebar
+msgid "<span class=\"b2barrow\">Helpdesk</span>"
+msgstr "<span class=\"b2barrow\">Nachricht senden</span>"
+
+#. module: b2b_portal
+#: model_terms:ir.ui.view,arch_db:b2b_portal.b2b_portal_sidebar
+msgid "<span class=\"b2barrow\">Invoices</span>"
+msgstr "<span class=\"b2barrow\">Rechnungen</span>"
+
+#. module: b2b_portal
+#: model_terms:ir.ui.view,arch_db:b2b_portal.b2b_portal_sidebar
+msgid "<span class=\"b2barrow\">Open</span>"
+msgstr "<span class=\"b2barrow\">Öffnen</span>"
+
+#. module: b2b_portal
+#: model_terms:ir.ui.view,arch_db:b2b_portal.b2b_portal_sidebar
+msgid "<span class=\"b2barrow\">Orders</span>"
+msgstr "<span class=\"b2barrow\">Bestellungen</span>"
+
+#. module: b2b_portal
+#: model_terms:ir.ui.view,arch_db:b2b_portal.b2b_portal_sidebar
+msgid "<span class=\"b2barrow\">Paid</span>"
+msgstr "<span class=\"b2barrow\">Bezahlt</span>"
+
+#. module: b2b_portal
+#: model_terms:ir.ui.view,arch_db:b2b_portal.b2b_portal_sidebar
+msgid "<span class=\"b2barrow\">Shipped</span>"
+msgstr "<span class=\"b2barrow\">Versendet</span>"
+
+#. module: b2b_portal
+#: model_terms:ir.ui.view,arch_db:b2b_portal.b2b_portal_sidebar
+msgid "<span class=\"b2barrow\">Terms &amp; Conditions</span>"
+msgstr "<span class=\"b2barrow\">AGBs</span>"
+
+#. module: b2b_portal
+#: model_terms:ir.ui.view,arch_db:b2b_portal.b2bcart
+msgid ""
+"<span class=\"fa fa-chevron-left\"/>\n"
+"                                                <span class=\"\">Continue Shopping</span>"
+msgstr ""
+"<span class=\"fa fa-chevron-left\"/>\n"
+"                                                <span class=\"\">Weiter einkaufen</span>"
+
+#. module: b2b_portal
+#: model_terms:ir.ui.view,arch_db:b2b_portal.b2bcart
+msgid ""
+"<span class=\"fa fa-chevron-left\"/>\n"
+"                                            Continue<span class=\"d-none d-md-inline\"> Shopping</span>"
+msgstr ""
+"<span class=\"fa fa-chevron-left\"/>\n"
+"                                            Weiter<span class=\"d-none d-md-inline\"> einkaufen</span>"
+
+#. module: b2b_portal
+#: model_terms:ir.ui.view,arch_db:b2b_portal.b2bplaceorder
+msgid "<span>Confirmed</span>"
+msgstr "<span>Bestätigt</span>"
+
+#. module: b2b_portal
+#: model_terms:ir.ui.view,arch_db:b2b_portal.b2baddress
+msgid ""
+"<span>Next</span>\n"
+"                                                    <i class=\"fa fa-chevron-right\"/>"
+msgstr ""
+"<span>Weitere</span>\n"
+"                                                    <i class=\"fa fa-chevron-right\"/>"
+
+#. module: b2b_portal
+#: model_terms:ir.ui.view,arch_db:b2b_portal.b2bplaceorder
+msgid "<span>Order</span>"
+msgstr "<span>Bestellung</span>"
+
+#. module: b2b_portal
+#: model_terms:ir.ui.view,arch_db:b2b_portal.b2b_short_cart_summary
+msgid "<span>Place Order</span>"
+msgstr "<span>Bestellung abschicken</span>"
+
+#. module: b2b_portal
+#: model_terms:ir.ui.view,arch_db:b2b_portal.template_header_style_17
+msgid "<span>outstanding products</span>"
+msgstr ""
+
+#. module: b2b_portal
+#: model_terms:ir.ui.view,arch_db:b2b_portal.b2b_portal_sidebar
+msgid "<strong class=\"text-muted\">Salesperson</strong>"
+msgstr "<strong class=\"text-muted\">Für Sie zuständig</strong>"
+
+#. module: b2b_portal
+#: model_terms:ir.ui.view,arch_db:b2b_portal.b2b_portal_shop
+msgid "<strong>Payment Term: </strong>"
+msgstr ""
+
+#. module: b2b_portal
+#: model_terms:ir.ui.view,arch_db:b2b_portal.b2b_order_total
+msgid "<strong>Total :</strong>"
+msgstr "<strong>Summe :</strong>"
+
+#. module: b2b_portal
+#: model_terms:ir.ui.view,arch_db:b2b_portal.b2b_portal_shop
+msgid "<strong>Your Fiscal Position: </strong>"
+msgstr ""
+
+#. module: b2b_portal
+#: model_terms:ir.ui.view,arch_db:b2b_portal.b2b_portal_shop
+msgid "<strong>Your Pricelist: </strong>"
+msgstr ""
+
+#. module: b2b_portal
+#: model_terms:ir.ui.view,arch_db:b2b_portal.b2bdashbord
+msgid ""
+"<strong>outstanding products</strong> are to be discovered and ordered right"
+" here. Have fun!"
+msgstr ""
+"<strong>outstanding products</strong> gibt es hier zu entdecken und zu "
+"bestellen. Viel Spaß!"
+
+#. module: b2b_portal
+#: model_terms:ir.ui.view,arch_db:b2b_portal.b2b_product_details
+msgid "Add to Cart"
+msgstr "Zum Warenkorb hinzufügen"
+
+#. module: b2b_portal
+#: model_terms:ir.ui.view,arch_db:b2b_portal.b2b_portal_shop
+#: model_terms:ir.ui.view,arch_db:b2b_portal.b2b_product_details
+msgid "Availability"
+msgstr "Verfügbarkeit"
+
+#. module: b2b_portal
+#: model_terms:ir.ui.view,arch_db:b2b_portal.b2b_portal_sidebar
+#: model_terms:ir.ui.view,arch_db:b2b_portal.template_header_style_17
+msgid "B2B Dashbord"
+msgstr ""
+
+#. module: b2b_portal
+#: model:ir.model.fields,field_description:b2b_portal.field_res_partner__is_b2b_portal
+#: model:ir.model.fields,field_description:b2b_portal.field_res_users__is_b2b_portal
+msgid "B2B Portal"
+msgstr ""
+
+#. module: b2b_portal
+#: model_terms:ir.ui.view,arch_db:b2b_portal.b2b_portal_shop
+msgid "B2B Shop"
+msgstr ""
+
+#. module: b2b_portal
+#: model:ir.model.fields,field_description:b2b_portal.field_website__is_b2b_website
+msgid "B2B Website"
+msgstr ""
+
+#. module: b2b_portal
+#: model_terms:ir.ui.view,arch_db:b2b_portal.b2b_portal_shop
+msgid "Back"
+msgstr "Zurück"
+
+#. module: b2b_portal
+#: model_terms:ir.ui.view,arch_db:b2b_portal.b2baddress
+msgid "Be aware!"
+msgstr "Achtung!"
+
+#. module: b2b_portal
+#: model:ir.model.fields,field_description:b2b_portal.field_sale_order__brand_id
+msgid "Brand"
+msgstr "Marke"
+
+#. module: b2b_portal
+#: model:ir.model.fields,field_description:b2b_portal.field_dr_product_brand__b2b_brand_catalog
+msgid "Brand Catalog"
+msgstr ""
+
+#. module: b2b_portal
+#: model_terms:ir.ui.view,arch_db:b2b_portal.b2b_brands_form
+#: model_terms:ir.ui.view,arch_db:b2b_portal.b2b_brands_tree
+msgid "Brands"
+msgstr ""
+
+#. module: b2b_portal
+#: model_terms:ir.ui.view,arch_db:b2b_portal.b2bcart
+msgid "By clicking on check-box, you agree to the"
+msgstr "Durch Anklicken des Kontrollkästchens erklären Sie sich mit den"
+
+#. module: b2b_portal
+#: model_terms:ir.ui.view,arch_db:b2b_portal.b2bdashbord
+msgid "CLICK ON WHAT YOU ARE INTERESTED TO ORDER:"
+msgstr "KLICKEN SIE AUF DIE PRODUKTE, DIE SIE BESTELLEN MÖCHTEN:"
+
+#. module: b2b_portal
+#: model:ir.model.fields,field_description:b2b_portal.field_product_template__can_publish
+msgid "Can Publish"
+msgstr "Kann veröffentlichen"
+
+#. module: b2b_portal
+#: model:ir.model.fields,field_description:b2b_portal.field_dr_product_brand__catalog_url
+msgid "Catalog Url"
+msgstr ""
+
+#. module: b2b_portal
+#: model_terms:ir.ui.view,arch_db:b2b_portal.b2b_portal_shop
+msgid "Checkout <i class=\"fa fa-shopping-cart\" style=\"font-size:17px;\"/>"
+msgstr ""
+"Bestellung überprüfen <i class=\"fa fa-shopping-cart\" style=\"font-"
+"size:17px;\"/>"
+
+#. module: b2b_portal
+#: model_terms:ir.ui.view,arch_db:b2b_portal.b2baddress
+msgid "City"
+msgstr "Stadt"
+
+#. module: b2b_portal
+#: model_terms:ir.ui.view,arch_db:b2b_portal.b2bcart
+msgid "Click here"
+msgstr "Hier klicken"
+
+#. module: b2b_portal
+#: model:ir.model,name:b2b_portal.model_res_partner
+#: model_terms:ir.ui.view,arch_db:b2b_portal.b2b_portal_sidebar
+msgid "Contact"
+msgstr "Kontakt"
+
+#. module: b2b_portal
+#: model_terms:ir.ui.view,arch_db:b2b_portal.b2baddress
+msgid "Country"
+msgstr "Land"
+
+#. module: b2b_portal
+#: model_terms:ir.ui.view,arch_db:b2b_portal.b2baddress
+msgid "Country..."
+msgstr "Land…"
+
+#. module: b2b_portal
+#: model_terms:ir.ui.view,arch_db:b2b_portal.b2b_product_details
+msgid "Description"
+msgstr "Beschreibung"
+
+#. module: b2b_portal
+#: model_terms:ir.ui.view,arch_db:b2b_portal.b2b_portal_breadcrumbs
+msgid "Details"
+msgstr ""
+
+#. module: b2b_portal
+#: model_terms:ir.ui.view,arch_db:b2b_portal.b2b_address_kanban
+msgid "Edit this address"
+msgstr "Diese Adresse bearbeiten"
+
+#. module: b2b_portal
+#: model_terms:ir.ui.view,arch_db:b2b_portal.b2baddress
+msgid "Email"
+msgstr "E-Mail"
+
+#. module: b2b_portal
+#: model:ir.model,name:b2b_portal.model_ir_http
+msgid "HTTP Routing"
+msgstr ""
+
+#. module: b2b_portal
+#: model_terms:ir.ui.view,arch_db:b2b_portal.snippet_options
+msgid "Header B2B"
+msgstr ""
+
+#. module: b2b_portal
+#: model:ir.model.fields,field_description:b2b_portal.field_dr_product_brand__is_hide_in_stock_filter
+msgid "Hide In Stock Filter"
+msgstr "\"In Stock Filter\" deaktivieren"
+
+#. module: b2b_portal
+#: model_terms:ir.ui.view,arch_db:b2b_portal.b2b_portal_breadcrumbs
+msgid "Home"
+msgstr ""
+
+#. module: b2b_portal
+#: model_terms:ir.ui.view,arch_db:b2b_portal.b2b_portal_shop
+msgid "In Stock"
+msgstr "Auf Lager"
+
+#. module: b2b_portal
+#: model_terms:ir.ui.view,arch_db:b2b_portal.b2b_portal_shop
+msgid "Invoice Address"
+msgstr "Rechnungsadresse"
+
+#. module: b2b_portal
+#: model:ir.model.fields,field_description:b2b_portal.field_product_template__is_published
+msgid "Is Published"
+msgstr "Ist veröffentlicht"
+
+#. module: b2b_portal
+#: model_terms:ir.ui.view,arch_db:b2b_portal.b2baddress
+msgid "Log In"
+msgstr "Einloggen"
+
+#. module: b2b_portal
+#: model_terms:ir.ui.view,arch_db:b2b_portal.b2b_portal_sidebar
+#: model_terms:ir.ui.view,arch_db:b2b_portal.template_header_style_17
+msgid "Login"
+msgstr "Einloggen"
+
+#. module: b2b_portal
+#: model_terms:ir.ui.view,arch_db:b2b_portal.b2b_portal_sidebar
+#: model_terms:ir.ui.view,arch_db:b2b_portal.template_header_style_17
+msgid "Logout"
+msgstr "Ausloggen"
+
+#. module: b2b_portal
+#: model_terms:ir.ui.view,arch_db:b2b_portal.b2b_portal_sidebar
+msgid "Menu"
+msgstr ""
+
+#. module: b2b_portal
+#: model_terms:ir.ui.view,arch_db:b2b_portal.b2b_portal_sidebar
+#: model_terms:ir.ui.view,arch_db:b2b_portal.template_header_style_17
+msgid "My Accounts"
+msgstr "Mein Profil"
+
+#. module: b2b_portal
+#: model_terms:ir.ui.view,arch_db:b2b_portal.b2baddress
+msgid "Name"
+msgstr ""
+
+#. module: b2b_portal
+#: model_terms:ir.ui.view,arch_db:b2b_portal.b2b_portal_shop
+msgid "No results"
+msgstr "Kein Treffer"
+
+#. module: b2b_portal
+#: model_terms:ir.ui.view,arch_db:b2b_portal.b2b_portal_shop
+msgid "No results for \""
+msgstr "Kein Treffer für"
+
+#. module: b2b_portal
+#: model_terms:ir.ui.view,arch_db:b2b_portal.b2b_short_cart_summary
+msgid "Order Total"
+msgstr "Bestellwert Summe"
+
+#. module: b2b_portal
+#: model_terms:ir.ui.view,arch_db:b2b_portal.b2baddress
+msgid "Phone"
+msgstr "Telefon"
+
+#. module: b2b_portal
+#: model_terms:ir.ui.view,arch_db:b2b_portal.b2b_portal_shop
+msgid "Planned Delivery Date"
+msgstr "Geplantes Lieferdatum"
+
+#. module: b2b_portal
+#: model_terms:ir.ui.view,arch_db:b2b_portal.b2bcart
+msgid "Please proceed your current cart."
+msgstr "Bitte fahren Sie mit Ihrer aktuellen Bestellung fort."
+
+#. module: b2b_portal
+#: model_terms:ir.ui.view,arch_db:b2b_portal.b2b_product_details
+msgid "Price"
+msgstr "Preis"
+
+#. module: b2b_portal
+#: model_terms:ir.ui.view,arch_db:b2b_portal.b2b_portal_shop
+#: model_terms:ir.ui.view,arch_db:b2b_portal.b2bcart
+#: model_terms:ir.ui.view,arch_db:b2b_portal.b2bplaceorder
+msgid "Print"
+msgstr "Drucken"
+
+#. module: b2b_portal
+#: model_terms:ir.ui.view,arch_db:b2b_portal.b2b_portal_shop
+#: model_terms:ir.ui.view,arch_db:b2b_portal.b2b_sale_order_containt_sk
+msgid "Product"
+msgstr "Produkt"
+
+#. module: b2b_portal
+#: model:ir.model,name:b2b_portal.model_dr_product_brand
+msgid "Product Brand"
+msgstr "Marke"
+
+#. module: b2b_portal
+#: model_terms:ir.ui.view,arch_db:b2b_portal.b2b_product_details
+msgid "Product Code"
+msgstr "Artikelnummer"
+
+#. module: b2b_portal
+#: model:ir.model,name:b2b_portal.model_product_template
+msgid "Product Template"
+msgstr "Produktvorlage"
+
+#. module: b2b_portal
+#: model:ir.model.fields,field_description:b2b_portal.field_product_template__rating_ids
+msgid "Rating"
+msgstr "Bewertung"
+
+#. module: b2b_portal
+#: model:ir.model.fields,field_description:b2b_portal.field_product_template__rating_avg
+msgid "Rating Average"
+msgstr "Durchschnittliche Bewertung"
+
+#. module: b2b_portal
+#: model:ir.model.fields,field_description:b2b_portal.field_product_template__rating_last_feedback
+msgid "Rating Last Feedback"
+msgstr "Bewertung letztes Feedback"
+
+#. module: b2b_portal
+#: model:ir.model.fields,field_description:b2b_portal.field_product_template__rating_last_image
+msgid "Rating Last Image"
+msgstr "Bewertung letztes Bild"
+
+#. module: b2b_portal
+#: model:ir.model.fields,field_description:b2b_portal.field_product_template__rating_last_value
+msgid "Rating Last Value"
+msgstr "Bewertung letzten Werte"
+
+#. module: b2b_portal
+#: model:ir.model.fields,field_description:b2b_portal.field_product_template__rating_count
+msgid "Rating count"
+msgstr "Bewertung Anzahl"
+
+#. module: b2b_portal
+#. openerp-web
+#: code:addons/b2b_portal/static/src/js/script.js:0
+#, python-format
+msgid "Read Less"
+msgstr "Weniger lesen"
+
+#. module: b2b_portal
+#. openerp-web
+#: code:addons/b2b_portal/static/src/js/script.js:0
+#, python-format
+msgid "Read More"
+msgstr "Mehr lesen"
+
+#. module: b2b_portal
+#: model:ir.model.fields,help:b2b_portal.field_product_template__rating_last_feedback
+msgid "Reason of the rating"
+msgstr "Begründung der Bewertung"
+
+#. module: b2b_portal
+#: model_terms:ir.ui.view,arch_db:b2b_portal.b2b_portal_shop
+msgid "Recent Order"
+msgstr "Zuletzt bestellt"
+
+#. module: b2b_portal
+#: model_terms:ir.ui.view,arch_db:b2b_portal.b2b_portal_shop
+msgid "Reset Filters"
+msgstr "Filter zurücksetzen"
+
+#. module: b2b_portal
+#: model:ir.model.fields,help:b2b_portal.field_dr_product_brand__website_id
+#: model:ir.model.fields,help:b2b_portal.field_product_template__website_id
+msgid "Restrict publishing to this website."
+msgstr "Beschränken Sie die Veröffentlichung auf dieser Website."
+
+#. module: b2b_portal
+#: model:ir.model.fields,field_description:b2b_portal.field_product_template__is_seo_optimized
+msgid "SEO optimized"
+msgstr "SEO-optimiert"
+
+#. module: b2b_portal
+#: model:ir.model,name:b2b_portal.model_sale_order
+msgid "Sales Order"
+msgstr ""
+
+#. module: b2b_portal
+#: model:ir.model,name:b2b_portal.model_sale_order_line
+msgid "Sales Order Line"
+msgstr "Auftragsposition"
+
+#. module: b2b_portal
+#: model_terms:ir.ui.view,arch_db:b2b_portal.b2b_portal_shop
+msgid "Select Category"
+msgstr "Kategorie"
+
+#. module: b2b_portal
+#: model_terms:ir.ui.view,arch_db:b2b_portal.b2b_address_kanban
+msgid "Select this address"
+msgstr "Diese Adresse auswählen"
+
+#. module: b2b_portal
+#: model:ir.model.fields,field_description:b2b_portal.field_product_template__seo_name
+msgid "Seo name"
+msgstr "Seo-Name"
+
+#. module: b2b_portal
+#: model_terms:ir.ui.view,arch_db:b2b_portal.b2baddress
+msgid ""
+"Ship to the same address\n"
+"                                                            <span class=\"ship_to_other text-muted\" style=\"display: none\">&amp;nbsp;(<i>Your shipping address will be requested later) </i></span>"
+msgstr ""
+"An diese Adresse versenden\n"
+"                                                            <span class=\"ship_to_other text-muted\" style=\"display: none\">&amp;nbsp;(<i>Your shipping address will be requested later) </i></span>"
+
+#. module: b2b_portal
+#: model_terms:ir.ui.view,arch_db:b2b_portal.b2b_portal_shop
+#: model_terms:ir.ui.view,arch_db:b2b_portal.b2baddress
+msgid "Shipping Address"
+msgstr "Lieferadresse"
+
+#. module: b2b_portal
+#: model_terms:ir.ui.view,arch_db:b2b_portal.b2bcart
+msgid "Shopping Cart"
+msgstr "Bestellübersicht"
+
+#. module: b2b_portal
+#: model_terms:ir.ui.view,arch_db:b2b_portal.b2baddress
+msgid "State / Province"
+msgstr "Kanton"
+
+#. module: b2b_portal
+#: model_terms:ir.ui.view,arch_db:b2b_portal.b2baddress
+msgid "State / Province..."
+msgstr "Kanton"
+
+#. module: b2b_portal
+#: model_terms:ir.ui.view,arch_db:b2b_portal.b2baddress
+msgid "Street 2"
+msgstr "Adresszusatz"
+
+#. module: b2b_portal
+#: model_terms:ir.ui.view,arch_db:b2b_portal.b2baddress
+msgid "Street <span class=\"d-none d-md-inline\"> and Number</span>"
+msgstr "Strasse <span class=\"d-none d-md-inline\"> und Nummer</span>"
+
+#. module: b2b_portal
+#: model:ir.model.fields,field_description:b2b_portal.field_dr_product_brand__brand_tag_ids
+msgid "Tags"
+msgstr "Stichwörter"
+
+#. module: b2b_portal
+#: model_terms:ir.ui.view,arch_db:b2b_portal.b2bcart
+msgid "Terms and Conditions"
+msgstr "AGB’s"
+
+#. module: b2b_portal
+#: model_terms:ir.ui.view,arch_db:b2b_portal.b2bplaceorder
+msgid "Thank you for your order."
+msgstr "Vielen Dank für Ihre Bestellung."
+
+#. module: b2b_portal
+#: model:ir.model.fields,help:b2b_portal.field_product_template__website_url
+msgid "The full URL to access the document through the website."
+msgstr ""
+"Die vollständige URL mit der das Dokument überall aufgerufen werden kann."
+
+#. module: b2b_portal
+#: model_terms:ir.ui.view,arch_db:b2b_portal.b2bcart
+msgid "This is your current cart."
+msgstr "Das ist Ihre aktuelle Bestellung."
+
+#. module: b2b_portal
+#: model_terms:ir.ui.view,arch_db:b2b_portal.b2b_portal_shop
+msgid "Total Price"
+msgstr "Total Bestellsumme"
+
+#. module: b2b_portal
+#: model_terms:ir.ui.view,arch_db:b2b_portal.b2b_portal_shop
+msgid "Total Units"
+msgstr "Anzahl Artikel"
+
+#. module: b2b_portal
+#: model_terms:ir.ui.view,arch_db:b2b_portal.b2b_portal_shop
+msgid "Unit Price"
+msgstr "Artikelpreis"
+
+#. module: b2b_portal
+#: model:ir.model.fields,field_description:b2b_portal.field_product_template__website_published
+msgid "Visible on current website"
+msgstr "Auf der aktuellen Website sichtbar"
+
+#. module: b2b_portal
+#: model:ir.model,name:b2b_portal.model_website
+#: model:ir.model.fields,field_description:b2b_portal.field_dr_product_brand__website_id
+#: model:ir.model.fields,field_description:b2b_portal.field_product_template__website_id
+msgid "Website"
+msgstr "Webseite"
+
+#. module: b2b_portal
+#: model:ir.model.fields,field_description:b2b_portal.field_product_template__website_url
+msgid "Website URL"
+msgstr "Website-URL"
+
+#. module: b2b_portal
+#: model:ir.model.fields,field_description:b2b_portal.field_product_template__website_meta_description
+msgid "Website meta description"
+msgstr "Website Meta-Beschreibung"
+
+#. module: b2b_portal
+#: model:ir.model.fields,field_description:b2b_portal.field_product_template__website_meta_keywords
+msgid "Website meta keywords"
+msgstr "Website Schlüsselwörter"
+
+#. module: b2b_portal
+#: model:ir.model.fields,field_description:b2b_portal.field_product_template__website_meta_title
+msgid "Website meta title"
+msgstr "Website Meta-Titel"
+
+#. module: b2b_portal
+#: model:ir.model.fields,field_description:b2b_portal.field_product_template__website_meta_og_img
+msgid "Website opengraph image"
+msgstr "Website Opengraph-Bild"
+
+#. module: b2b_portal
+#: model_terms:ir.ui.view,arch_db:b2b_portal.b2baddress
+msgid ""
+"You are editing your <b>billing and shipping</b> addresses at the same time!<br/>\n"
+"                                                    If you want to modify your shipping address, create a"
+msgstr ""
+"Sie bearbeiten Ihre <b>Rechnungs- und Lieferadresse</b> zusammen!<br/>\n"
+"                                                    Möchten Sie nur Ihre Lieferadresse bearbeiten, erstellen Sie"
+
+#. module: b2b_portal
+#: model_terms:ir.ui.view,arch_db:b2b_portal.b2baddress
+msgid "Your Address"
+msgstr "Ihre Adresse"
+
+#. module: b2b_portal
+#: model_terms:ir.ui.view,arch_db:b2b_portal.b2baddress
+msgid ""
+"Your Address\n"
+"                                                <small> or </small>"
+msgstr ""
+"Ihre Adresse\n"
+"                                                <small> or </small>"
+
+#. module: b2b_portal
+#: model_terms:ir.ui.view,arch_db:b2b_portal.b2b_portal_shop
+msgid "Your Order In TU"
+msgstr "Ihre Bestellung in VE / Colin"
+
+#. module: b2b_portal
+#: model_terms:ir.ui.view,arch_db:b2b_portal.b2bcart
+msgid "Your previous cart has already been completed."
+msgstr "Ihre getätigte Bestellung wurde bereits erfolgreich eingegeben."
+
+#. module: b2b_portal
+#: model_terms:ir.ui.view,arch_db:b2b_portal.b2baddress
+msgid "Zip Code"
+msgstr "PLZ"
+
+#. module: b2b_portal
+#: model_terms:ir.ui.view,arch_db:b2b_portal.b2bcart
+msgid "if you want to merge your previous cart into current cart."
+msgstr ""
+"wenn Sie Ihre bisherige Bestellung mit der aktuellen Bestellung "
+"zusammenführen möchten."
+
+#. module: b2b_portal
+#: model_terms:ir.ui.view,arch_db:b2b_portal.b2bcart
+msgid ""
+"if you want to restore your previous cart. Your current cart will be "
+"replaced with your previous cart."
+msgstr ""
+"wenn Sie Ihre vorherige Bestellung wiederherstellen möchten. Ihre aktuelle "
+"Bestellung wird durch Ihre vorherige Bestellung ersetzt."
+
+#. module: b2b_portal
+#: model_terms:ir.ui.view,arch_db:b2b_portal.b2baddress
+msgid "new address"
+msgstr "Neue Adresse"

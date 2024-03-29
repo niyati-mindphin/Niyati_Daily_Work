@@ -1,0 +1,4 @@
+id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink
+access_dr_product_brand_portal,dr.product.brand.portal,droggol_theme_common.model_dr_product_brand,,1,0,0,0
+b2b_portal.access_catalog_url,access_catalog_url,b2b_portal.model_catalog_url,base.group_user,1,1,1,1
+b2b_portal.portal_access_catalog_url,access_portal_catalog_url,b2b_portal.model_catalog_url,base.group_portal,1,0,0,0

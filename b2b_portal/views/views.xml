@@ -1,0 +1,183 @@
+<?xml version="1.0"?>
+<odoo>
+    <record id="b2b_res_partner_view_buttons" model="ir.ui.view">
+        <field name="name">b2b.res.partner.view.buttons</field>
+        <field name="model">res.partner</field>
+        <field name="inherit_id" ref="base.view_partner_form" />
+        <field name="arch" type="xml">
+            <field name="vat" position="after">
+                <field name="is_b2b_portal" invisible="1" />
+            </field>
+        </field>
+    </record>
+    <record id="b2b_brands_tree" model="ir.ui.view">
+        <field name="name">b2b.brand.tree</field>
+        <field name="model">dr.product.brand</field>
+        <field name="arch" type="xml">
+            <tree string="Brands">
+                <field name="sequence" widget="handle"/>
+                <field name="name"/>
+                <field name="brand_tag_ids" widget="many2many_tags"/>
+            </tree>
+        </field>
+    </record>
+    <record id="b2b_brands_form" model="ir.ui.view">
+        <field name="name">b2b.brand.form</field>
+        <field name="model">dr.product.brand</field>
+        <field name="arch" type="xml">
+            <form string="Brands">
+                <sheet>
+                    <group>
+                        <group>
+                            <field name="website_id"/>
+                            <field name="description"/>
+                            <field name="sequence"/>
+                            <!-- remove due to this filed is added by studio -->
+                            <!-- <field name="x_knk_sync_id"/> -->
+                            <field name="is_hide_in_stock_filter"/>
+                            <field name="b2b_show_rrp_price"/>
+                            <field name="b2b_show_product_price"/>
+                            <field name="b2b_show_novelty_only"/>
+                            <field name="b2b_tag_ids" widget="many2many_tags" invisible="not b2b_show_novelty_only" required="b2b_show_novelty_only != False"/>
+                            <field name="video_url"/>
+                            <field name="catalog_url_ids" colspan="4" nolabel="1">
+                                <tree editable="bottom">
+                                    <field name="name"/>
+                                    <field name="catalog_url" widget="url"/>
+                                </tree>
+                            </field>
+                        </group>
+                        <group>
+                            <field name="name"/>
+                            <field name="image" widget="image"/>
+                            <field name="active"/>
+                            <field name="brand_tag_ids" widget="many2many_tags"/>
+                        </group>
+                    </group>
+                </sheet>
+            </form>
+        </field>
+    </record>
+    <record id="b2b_crm_lead_view_form" model="ir.ui.view">
+        <field name="name">b2b_crm_lead_view_form</field>
+        <field name="model">crm.lead</field>
+        <field name="priority">1</field>
+        <field name="inherit_id" ref="crm.crm_lead_view_form"/>
+        <field name="arch" type="xml">
+            <xpath expr="//page[@name='extra']//group[@name='categorization']" position="inside">
+                <field name="website_id"/>
+            </xpath>
+            <xpath expr="//header" position="inside">
+                <button name="action_b2b_customer" string="Grant portal access" type="object" class="oe_highlight" title="Customer" invisible="type == 'lead'"/>
+            </xpath>
+        </field>
+    </record>
+    <record id="view_res_partner_form_mdpn" model="ir.ui.view">
+        <field name="name">res.partner.form.mdpn</field>
+        <field name="model">res.partner</field>
+        <field name="arch" type="xml">
+            <form>
+                <sheet>
+                    <div class="oe_button_box" name="button_box"/>
+                    <widget name="web_ribbon" title="Archived" bg_color="bg-danger" invisible="active == True"/>
+                    <field name="avatar_128" invisible="1"/>
+                    <field name="image_1920" widget="image" class="oe_avatar" options="{&quot;preview_image&quot;: &quot;avatar_128&quot;}"/>
+                    <div class="oe_title mb24">
+                        <field name="is_company" invisible="1"/>
+                        <field name="commercial_partner_id" invisible="1"/>
+                        <field name="active" invisible="1"/>
+                        <field name="country_code" invisible="1"/>
+                        <field name="company_type" widget="radio" options="{'horizontal': true}"/>
+                        <h1>
+                            <field id="company" class="text-break" name="name" default_focus="1" placeholder="e.g. Lumber Inc"
+                            required="type == 'contact' or is_company == True"
+                            invisible="not is_company"/>
+                            <field id="individual" class="text-break" name="name" default_focus="1" placeholder="e.g. Brandom Freeman" 
+                            required="type == 'contact' or not is_company"
+                            invisible="is_company == True"/>
+                        </h1>
+                        <div class="o_row">
+                            <field name="parent_id" widget="res_partner_many2one" placeholder="Company Name..." domain="[('is_company', '=', True)]" context="{'default_is_company': True, 'show_vat': True}" 
+                                invisible="is_company == True or not parent_id or company_name != False or company_name != ''"/>
+                                <field name="company_name" 
+                                    invisible="not company_name or company_name == '' or is_company == True"/>
+                                <button name="create_company" icon="fa-plus-square" string="Create company" type="object" class="oe_edit_only btn-link" invisible="is_company == True or not company_name"/>
+                        </div>
+                    </div>
+
+                    <group>
+                        <group>
+                            <span class="o_form_label o_td_label" name="address_name">
+                                <field name="type" 
+                                    invisible="is_company == True"
+                                    required="is_company != True"
+                                    readonly="user_ids != []" class="font-weight-bold"/>
+                                <b invisible="not is_company">Address</b>
+                            </span>
+                            <div class="o_address_format">
+                                <field name="street" placeholder="Street..." class="o_address_street" readonly="type == 'contact' or parent_id != False"/>
+                                <field name="street2" placeholder="Street 2..." class="o_address_street" readonly="type == 'contact' or parent_id != False"/>
+                                <field name="city" placeholder="City" class="o_address_city" readonly="type == 'contact' or parent_id != False"/>
+                                <field name="state_id" class="o_address_state" placeholder="State" options="{'no_open': True, 'no_quick_create': True}" readonly="type == 'contact' or parent_id != False" context="{'country_id': country_id, 'default_country_id': country_id, 'zip': zip}"/>
+                                <field name="zip" placeholder="ZIP" class="o_address_zip" readonly="type == 'contact' or parent_id != False"/>
+                                <field name="country_id" placeholder="Country" class="o_address_country" options="{&quot;no_open&quot;: True, &quot;no_create&quot;: True}" readonly="type == 'contact' or parent_id != False"/>
+                            </div>
+                            <field name="vat" placeholder="e.g. BE0477472701" readonly="parent_id != False"/>
+                            <field name="is_b2b_portal"/>
+                            <field name="property_product_pricelist" groups="product.group_product_pricelist" 
+                                invisible="not is_company or parent_id != False"
+                                required="is_b2b_portal == True"
+                                />
+                            <field name='gln' />
+                            <field name="eori_no" placeholder="EORI"/>
+                            <field name="supplier_no" placeholder="0000A0"/>
+                        </group>
+                        <group>
+                            <field name="function" placeholder="e.g. Sales Director" 
+                                invisible="is_company == True"/>
+                            <field name="phone" widget="phone"/>
+                            <field name="mobile" widget="phone"/>
+                            <field name="user_ids" invisible="1"/>
+                            <field name="email" widget="email" context="{'gravatar_image': True}" 
+                                required="user_ids != []"/>
+                            <field name="website" string="Website" widget="url" placeholder="e.g. https://www.odoo.com"/>
+                            <field name="title" options="{&quot;no_open&quot;: True}" placeholder="e.g. Mister" invisible="is_company == True"/>
+                            <field name="active_lang_count" invisible="1"/>
+                            <label for="lang" invisible="active_lang_count &lt;= 1"/>
+                            <div class="o_row" invisible="active_lang_count &lt;= 1">
+                                <field name="lang"/>
+                                <button type="action" name="49" class="btn-sm btn-link mb4 fa fa-globe" aria-label="More languages" groups="base.group_system" title="More languages"/>
+                            </div>
+                            <field name="category_id" widget="many2many_tags" options="{'color_field': 'color', 'no_create_edit': True}" placeholder="Tags..." required="is_b2b_portal == True"/>
+                            <field name="survey_id" />
+                            <field name="property_account_position_id" groups="account.group_account_invoice,account.group_account_readonly" options="{'no_create': True, 'no_open': True}" required="is_b2b_portal == True"/>
+                        </group>
+                    </group>
+                    <group string="B2B Delivery Method">
+                        <field name="b2b_delivery_method_id" nolabel="1">
+                            <tree editable="bottom">
+                                <field name="available_carrier_ids" invisible="1"/>
+                                <field name="brand_id"/>
+                                <field name="delivery_id" domain="[('id', 'in', available_carrier_ids)]"/>
+                            </tree>
+                        </field>
+                    </group>
+                </sheet>
+                <footer>
+                    <button name="action_b2b_customer_grant_portal_access" string="Grant portal access" type="object" class="oe_highlight" title="Grant portal access"/>
+                </footer>
+            </form>
+        </field>
+    </record>
+    <record id="b2b_view_order_form_inh" model="ir.ui.view">
+        <field name="name">b2b.view.order.form.inh</field>
+        <field name="model">sale.order</field>
+        <field name="inherit_id" ref="sale.view_order_form"/>
+        <field name="arch" type="xml">
+            <xpath expr="//field[@name='delivery_detail']" position="after">
+                <field name="show_description"/>
+            </xpath>
+        </field>
+    </record>
+
+</odoo>

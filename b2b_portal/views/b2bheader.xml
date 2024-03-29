@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <template id="template_header_style_17" inherit_id="website.layout" name="Header B2B" active="False">
+        <xpath expr="//header//nav" position="replace">
+            <t t-call="website.navbar">
+                <t t-set="_navbar_classes" t-valuef="shadow-sm"/>
+                <div id="top_menu_container" class="container-fluid px-0">
+                    <!-- Navbar Toggler -->
+                    <t t-call="theme_prime.component_navbar_toggler"/>
+                    <!-- Brand -->
+                    <t t-call="website.placeholder_header_brand"/>
+                    <!-- Navbar Collapse -->
+                    <div class="b2b_header_tag_line">
+                        <span>outstanding products</span>
+                    </div>
+                    <div id="top_menu_collapse" class="collapse navbar-collapse">
+                        <t t-call="website.navbar_nav">
+                            <!-- Menu -->
+                            <t t-foreach="website.menu_id.child_id" t-as="submenu">
+                                <t t-call="website.submenu">
+                                    <t t-set="item_class" t-value="'nav-item'"/>
+                                    <t t-set="link_class" t-value="'nav-link'"/>
+                                </t>
+                            </t>
+                        </t>
+                        <!-- Account Info -->
+                        <ul class="list-inline mb-0 d-block d-lg-block tp-account-info b2b_portal_header_main_cl_list mx-2">
+                            <li t-attf-class="list-inline-item o_not_editable ml-2 #{item_class or ''}" t-if="not user_id._is_public()">
+                                <a class="" href="/b2b/dashbord">
+                                    B2B Dashboard
+                                </a>
+                            </li>
+                            <li t-attf-class="list-inline-item o_not_editable #{item_class or ''}" t-if="not user_id._is_public()">
+                                <a class="" href="/my">
+                                    My Accounts
+                                </a>
+                            </li>
+                        </ul>
+                        <ul class="list-inline mb-0 ml-auto d-block d-lg-block tp-account-info b2b_portal_header_main_cl_list mx-2">
+                            <li t-attf-class="list-inline-item o_not_editable #{item_class or ''}" t-if="not user_id._is_public()">
+                                <a class="" href="/web/session/logout?redirect=/">
+                                    Logout
+                                </a>
+                            </li>
+                            <li t-attf-class="list-inline-item o_not_editable #{item_class or ''}" t-if="user_id._is_public()">
+                                <a class="" href="/web/login">
+                                    Login
+                                </a>
+                            </li>
+                            <!-- <t t-call="dynco_base.component_language_selector_clima"/> -->
+                        </ul>
+                    </div>
+                </div>
+            </t>
+        </xpath>
+    </template>
+
+    <record id="snippet_options" model="ir.ui.view">
+        <field name="name">B2b snippet_options</field>
+        <field name="inherit_id" search="[('key', '=', 'theme_prime.snippet_options')]"/>
+        <field name="type">qweb</field>
+        <field name="priority">100</field>
+        <field name="key">b2b_portal.snippet_options</field>
+        <field name="arch" type="xml">
+            <xpath expr="//we-select[@data-variable='header-template']/we-button[last()]" position="after">
+                <we-button title="Header B2B" data-name="tp_header_style_17_opt" data-customize-website-views="b2b_portal.template_header_style_17" data-customize-website-variable="'prime_style_7'" data-img="/b2b_portal/static/src/img/b2bheader.png"/>
+            </xpath>
+        </field>
+    </record>
+</odoo>

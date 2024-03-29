@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data noupdate="1">
+        <record id="b2b_my_dynco_mail_template_data_lead_create" model="mail.template">
+            <field name="name">B2B Reception Mail: Lead Create</field>
+            <field name="model_id" ref="crm.model_crm_lead" />
+            <field name="subject">Your {{ object.user_id.partner_id.website_id.name or object.user_id.company_id.name}} Account</field>
+            <field name="email_to">{{ object.user_id.email_formatted }}</field>
+            <field name="body_html" type="html">
+                <table style="box-sizing:border-box;border-collapse:collapse;padding-top: 16px; background-color: #F1F1F1; font-family:Verdana, Arial,sans-serif; color: #454748; width: 100%; border-collapse:separate;" width="100%" cellspacing="0" cellpadding="0" border="0">
+                    <tbody>
+                        <tr>
+                            <td align="center">
+                                <table style="box-sizing:border-box;border-collapse:collapse;padding: 16px; background-color: white; color: #454748; border-collapse:separate;" width="590" cellspacing="0" cellpadding="0" border="0">
+                                    <tbody>
+                                        <!-- HEADER -->
+                                        <tr>
+                                            <td style="min-width: 590px;" align="center">
+                                                <table style="box-sizing:border-box;border-collapse:collapse;min-width: 590px; background-color: white; padding: 0px 8px 0px 8px; border-collapse:separate;" width="590" cellspacing="0" cellpadding="0" border="0">
+                                                    <tbody>
+                                                        <tr>
+                                                            <td valign="middle">
+                                                                <span style="font-size: 10px;">Your
+                                                                    <t t-out="object.user_id.partner_id.website_id.name" /> Account</span><br/>
+                                                                <span style="font-size: 20px; font-weight: bold;">
+                                                                    <t t-out="object.user_id.name" contenteditable="false" data-oe-t-inline="true"></t>
+                                                                </span>
+                                                            </td>
+                                                            <td valign="middle" align="right">
+                                                                <img style="box-sizing: border-box; border-style: none; vertical-align: middle; padding: 0px; margin: 0px; width: 80px;" t-attf-src="/logo.png?company={{ object.user_id.company_id.id }}" t-attf-alt="{{ object.user_id.company_id.name }}" width="80px"/>
+                                                            </td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td colspan="2" style="text-align:center;">
+                                                                <hr style="border-style:none;border-image-width:1;border-image-source:none;border-image-slice:100%;border-image-repeat:stretch;border-image-outset:0;border-left-color:currentcolor;border-bottom-color:currentcolor;border-right-color:currentcolor;margin:12px 0 12px 0;border-top-color:rgba(0, 0, 0, 0.1);border-top-style:solid;border-top-width:1px;border-left-width:0px;border-bottom-width:0px;border-right-width:0px;overflow-y:visible;overflow-x:visible;height:0px;box-sizing:content-box;background-color:#cccccc;border:medium none;clear:both;display:block;font-size:0px;min-height:1px;line-height:0; margin:16px 0px 16px 0px;" width="100%" contenteditable="false"/>
+                                                            </td>
+                                                        </tr>
+                                                    </tbody>
+                                                </table>
+                                            </td>
+                                        </tr>
+                                        <!-- CONTENT -->
+                                        <tr>
+                                            <td style="min-width: 590px;" align="center">
+                                                <table style="box-sizing:border-box;border-collapse:collapse;min-width: 590px; background-color: white; padding: 0px 8px 0px 8px; border-collapse:separate;" width="590" cellspacing="0" cellpadding="0" border="0">
+                                                    <tbody>
+                                                        <tr>
+                                                            <td style="font-size: 13px;" valign="top">
+                                                                <div style="font-size:13px;font-family:&quot;Lucida Grande&quot;, Helvetica, Verdana, Arial, sans-serif;">
+                                                                    Dear <t t-out="object.user_id.name or ''" contenteditable="false" data-oe-t-inline="true"></t>,<br/> <br/>
+																	A new lead has just been created and assigned to you from my.dynco.swiss.<br/> <br/> 
+                                                                    <t t-set="base_url" t-value="object.env['ir.config_parameter'].sudo().get_param('web.base.url')"/>
+                                                                    <t t-set="menu_id" t-value="object.env.ref('crm.crm_menu_root').sudo()"/>
+                                                                    <t t-set="action_id" t-value="object.env.ref('crm.crm_lead_action_pipeline').sudo()"/>
+                                                                    <t t-if="base_url and menu_id and action_id">
+																		Get in touch with your new lead right now, right here:
+	                                                                    <br/>
+	                                                                    <br/>
+	                                                                    <div style="margin: 16px 0px 16px 0px;">
+		                                                                    <a style="background-color: #875A7B; padding: 8px 16px 8px 16px; text-decoration: none; color: #fff; border-radius: 5px; font-size:13px;" t-attf-href="{{ base_url }}web#id= {{ object.id }}&amp;menu_id= {{ menu_id.id }}&amp;cids=1&amp;action= {{ action_id.id }}&amp;model=crm.lead&amp;view_type=form">
+		                                                                    	View Lead
+		                                                                    </a>
+		                                                                </div>
+	                                                                </t>
+                                                                    <br/>
+                                                                    Your dynco Team
+                                                                </div>
+                                                            </td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td style="text-align:center;">
+                                                                <hr style="border-style:none;border-image-width:1;border-image-source:none;border-image-slice:100%;border-image-repeat:stretch;border-image-outset:0;border-left-color:currentcolor;border-bottom-color:currentcolor;border-right-color:currentcolor;margin:12px 0 12px 0;border-top-color:rgba(0, 0, 0, 0.1);border-top-style:solid;border-top-width:1px;border-left-width:0px;border-bottom-width:0px;border-right-width:0px;overflow-y:visible;overflow-x:visible;height:0px;box-sizing:content-box;background-color:#cccccc;border:medium none;clear:both;display:block;font-size:0px;min-height:1px;line-height:0; margin: 16px 0px 16px 0px;" width="100%" contenteditable="false"/>
+                                                            </td>
+                                                        </tr>
+                                                    </tbody>
+                                                </table>
+                                            </td>
+                                        </tr><!-- FOOTER -->
+                                        <tr>
+                                            <td style="min-width: 590px;" align="center">
+                                                <table style="box-sizing:border-box;border-collapse:collapse;min-width: 590px; background-color: white; font-size: 11px; padding: 0px 8px 0px 8px; border-collapse:separate;" width="590" cellspacing="0" cellpadding="0" border="0">
+                                                    <tbody>
+                                                        <tr>
+                                                            <td valign="middle" align="left">
+                                                                <t t-out="object.user_id.company_id.name" contenteditable="false" data-oe-t-inline="true"></t>
+                                                            </td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td style="opacity: 0.7;" valign="middle" align="left">
+                                                                <t t-if="object.user_id.company_id.email" data-oe-t-group="0" data-oe-t-group-active="true" data-oe-t-inline="true">
+                                                                    <a style="box-sizing:border-box;text-decoration:none;background-color:transparent;color:#008784; color: #454748;" t-attf-href="'mailto:%s' % {{ object.user_id.company_id.email }}">
+                                                                        <t t-out="object.user_id.company_id.email" contenteditable="false" data-oe-t-inline="true"></t>
+                                                                    </a>
+                                                                </t>
+                                                                <t t-if="object.user_id.company_id.website" data-oe-t-group="1" data-oe-t-group-active="true" data-oe-t-inline="true">
+                                                                    <a style="box-sizing:border-box;text-decoration:none;background-color:transparent;color:#008784; color: #454748;" t-attf-href="'%s' % {{ object.user_id.company_id.website }}">
+                                                                        <t t-out="object.user_id.company_id.website" contenteditable="false" data-oe-t-inline="true"></t>
+                                                                    </a>
+                                                                </t>
+                                                            </td>
+                                                        </tr>
+                                                    </tbody>
+                                                </table>
+                                            </td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </field>
+            <field name="lang">{{ object.user_id.partner_id.lang }}</field>
+            <field name="auto_delete" eval="True" />
+        </record>
+    </data>
+</odoo>
