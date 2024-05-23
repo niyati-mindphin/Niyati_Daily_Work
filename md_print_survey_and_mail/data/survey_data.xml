@@ -1,0 +1,143 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+    <data>
+
+        <record id="survey_view_id" model="ir.ui.view">
+            <field name="name">.survey.user_input.view.form</field>
+            <field name="model">survey.user_input</field>
+            <field name="inherit_id" ref="survey.survey_user_input_view_form"/>
+            <field name="arch" type="xml">
+                <xpath expr="//button[@name='action_print_answers']" position="replace">
+                    <!-- <attribute name="string">Print Survey Answers</attribute> -->
+                    <button name="action_print_answers" invisible="state != 'done'" string="Print Survey Answers AA" type="object"  class="oe_highlight"/>
+                </xpath>
+            </field>
+        </record>
+
+        <template id="report_pdf">
+            <t t-call="web.html_container">
+                <t t-foreach="docs" t-as="o">
+                    <t t-call="web.external_layout">
+                        <h1>
+                            <t t-esc="o.survey_id.title"/>
+                        </h1>
+                        <t t-if="o.survey_id.id ==1 ">
+                            <p>This survey allows you to give a feedback about your experience with our products. Filling it helps us improving your experience.</p>
+                        </t>
+                        <t t-if="o.survey_id.id ==2 ">
+                            <p>Test your vendor skills!</p>
+                        </t>
+                        <t t-if="o.survey_id.id ==3 ">
+                            <p>This small quiz will test your knowledge about our Company. Be prepared !</p>
+                        </t>
+                        <br/>
+                        <table style="border:none;">
+                            <tr>
+                                <th style="font-size:20px;">
+                                    <strong>
+                                           Created On  
+                                        </strong>
+                                </th>
+                                <td style="padding:10px;">
+                                    <span t-esc="o.create_date" t-options="{&quot;widget&quot;: &quot;date&quot;,&quot;format&quot;: &quot;dd-MM-yyyy&quot;}"/>
+                                </td>
+                            </tr>
+                            <tr>
+                                <th style="font-size:20px;">
+                                    <strong>
+                                           Partner 
+                                        </strong>
+                                </th>
+                                <td style="padding:10px;">
+                                    <span t-esc="o.partner_id.name"/>
+                                </td>
+                            </tr>
+                        </table>
+                        <t t-set="line_list_ids" t-value="o.user_input_line_ids"/>
+                        <br/>                        
+                        <t t-foreach="line_list_ids" t-as="vals">
+                            <div style="font-size:20px;font-weight:bold;">
+                                <t t-esc="vals.question_id.title" t-if="not(vals.matrix_row_id)"/> 
+                            </div>
+                            <t t-if="vals.answer_type=='char_box' ">
+                                <t t-esc="vals.value_char_box"/>
+                            </t>
+                            <t t-if="vals.answer_type=='date' ">
+                                <span t-field="vals.value_date" t-field-options="{&quot;format&quot;: &quot;dd-MM-yyyy&quot;}"/> C
+                            </t>
+                            <t t-if="vals.answer_type=='numerical_box' ">
+                                <t t-esc="vals.value_numerical_box"/>
+                            </t>
+                            <t t-if="vals.answer_type=='text_box' ">
+                                <t t-esc="vals.value_text_box"/>
+                            </t>
+                            <t t-if="vals.answer_type=='datetime' ">
+                                <t t-esc="vals.value_datetime"/>
+                            </t>
+                            <br/>
+                            <t t-if="vals.question_id.title in line_list_ids[1]">
+                                <t t-if="'/' in line_list_ids[1][vals.question_id.title] ">
+                                    <t t-set="list_ids" t-value="line_list_ids[1][vals.question_id.title].split('/')"/>
+                                </t>
+
+                                <t t-else="">
+                                    <t t-set="list_ids" t-value="line_list_ids[1][vals.question_id.title]"/>
+                                </t>
+                            </t>
+
+                            <t t-if="vals.answer_type=='suggestion'">
+                                <t t-if="not(vals.matrix_row_id)">
+                                    <div id="wrapper" style=" display: flex;                                     flex-wrap: wrap;justify-content: space-between;                                     align-items: center;width: 98%;margin: 1% 0 1% 0%;flex-direction: row;">
+                                        <t t-foreach="vals.question_id.suggested_answer_ids" t-as="ans">
+                                            <div id="card" style="height:20%;font-size:14px;padding: 1%;width: 33%;margin-bottom:2px;display: inline-block;flex-wrap: wrap;justify-content: space-between;align-items: center;flex-direction: row;border: 1px solid black;                                             border-radius:5px;                                             background-color:#C2E5D3">
+                                                <t t-esc="ans.value"/>
+                                                <t t-if="ans.value in [data.display_name for data in vals]">
+                                                    <input style="float:right;" type="checkbox" id="oe_import_tracking" checked="checked"/>
+                                                </t>
+                                                <t t-else="">
+                                                    <input style="float:right;" type="checkbox" id="oe_import_tracking"/>
+                                                </t>
+                                                
+                                            </div>
+                                        </t>
+
+                                    </div>
+                                </t>
+                            </t>
+                            <br/>
+                        </t>
+                    </t>
+                </t>
+            </t>
+        </template>
+
+        <record model='ir.actions.report' id='report_survey_detail'>
+            <field name="name">Survey Answers </field>
+            <field name="print_report_name">(object.survey_id.title)</field>
+            <field name="model">survey.user_input</field>
+            <field name="report_type">qweb-pdf</field>
+            <field name="report_name">md_print_survey_and_mail.report_pdf</field>
+            <field name="report_file">md_print_survey_and_mail.report_pdf</field>
+            <field name="binding_model_id" ref="survey.model_survey_user_input" />
+            <field name="binding_type">report</field>
+        </record>
+
+        <!-- mail template -->
+        <record id="mail_template_survey_ans" model="mail.template">
+            <field name="name">Survey Answer</field>
+            <field name="model_id" ref="survey.model_survey_user_input" />
+            <field name="subject">Your Survey Answer</field>
+            <field name="email_to">{{ object.survey_id.user_id.email }}</field>
+            <field name="email_from">surveys@varec.leidos.com</field>
+            <field name="lang">{{ object.survey_id.user_id.lang }}</field>
+            <field name="auto_delete" eval="True"/>
+            <field name="body_html" type="html">
+                <div style="margin: 0px; padding: 0px; font-size: 13px;">
+                    Dear <t t-out="object.survey_id.user_id.name or ''"></t><br/><br/>
+                    <p>Your Sunmitted Survey Answer is attached in PDF please find attachment.</p>
+                </div>
+            </field>
+            <field name="report_template_ids" eval="[(4, ref('md_print_survey_and_mail.report_survey_detail'))]"/>
+        </record>
+    </data>
+</odoo>
